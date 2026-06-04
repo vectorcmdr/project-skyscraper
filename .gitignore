@@ -1,0 +1,6 @@
+# Secrets — each user provides their own
+config.json
+
+# Python cache
+__pycache__/
+*.pyc

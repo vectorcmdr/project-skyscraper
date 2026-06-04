@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-06-03 16:53:41 UTC",
+  "category": "json_endpoint_changed",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "json_endpoint_changed",
+        "endpoint": "/wp-json/jetpack/v4",
+        "old_hash": "0581e68c6b643461c5134bb8f2bcb9ea",
+        "new_hash": "6740a96150311bacd0a7c565ae5b2012",
+        "detail": "/wp-json/jetpack/v4 content changed",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/wp-json/jetpack/v4",
+            "diff": "@@ -253,34 +253,6 @@\n         {\n           \"methods\": [\n             \"POST\"\n-          ],\n-          \"args\": []\n-        }\n-      ]\n-    },\n-    \"/jetpack/v4/connection/test\": {\n-      \"namespace\": \"jetpack/v4\",\n-      \"methods\": [\n-        \"GET\"\n-      ],\n-      \"endpoints\": [\n-        {\n-          \"methods\": [\n-            \"GET\"\n-          ],\n-          \"args\": []\n-        }\n-      ]\n-    },\n-    \"/jetpack/v4/connection/test-wpcom\": {\n-      \"namespace\": \"jetpack/v4\",\n-      \"methods\": [\n-        \"GET\"\n-      ],\n-      \"endpoints\": [\n-        {\n... (1 more lines)"
+          }
+        ]
+      }
+    ]
+  }
+}

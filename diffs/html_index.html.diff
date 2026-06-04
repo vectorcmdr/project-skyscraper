@@ -1,0 +1,37 @@
+# Diff: https://project-skyscraper.com
+# File: html/index.html
+# Timestamp: 2026-06-01 13:19:31 UTC
+# Lines: 696 old -> 696 new
+# Beautified: yes
+--- old/html/index.html
++++ new/html/index.html
+@@ -510,7 +510,7 @@
+     "is_logged_in": "",
+     "lang": "en",
+     "ajaxurl": "https://project-skyscraper.com/wp-admin/admin-ajax.php",
+-    "nonce": "3e576d9b65",
++    "nonce": "ea67bf09e9",
+     "display_exif": "1",
+     "display_comments": "1",
+     "single_image_gallery": "1",
+@@ -565,7 +565,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=24dd7c97a8",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "home",
+@@ -689,8 +689,8 @@
+ </body>
+ </html>
+ <!--
+-	generated 66 seconds ago
+-	generated in 0.340 seconds
++	generated 14 seconds ago
++	generated in 0.391 seconds
+ 	served from batcache in 0.003 seconds
+-	expires in 234 seconds
++	expires in 286 seconds
+ -->

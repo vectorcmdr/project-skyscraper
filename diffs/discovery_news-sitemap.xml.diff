@@ -1,0 +1,45 @@
+# Diff: https://project-skyscraper.com/news-sitemap.xml
+# File: discovery/news-sitemap.xml
+# Timestamp: 2026-06-01 08:13:08 UTC
+# Lines: 58 old -> 58 new
+# Beautified: yes
+--- old/discovery/news-sitemap.xml
++++ new/discovery/news-sitemap.xml
+@@ -3,6 +3,19 @@
+ <!--Jetpack_Sitemap_Buffer_News_XMLWriter-->
+ <?xml-stylesheet type="text/xsl" href="//project-skyscraper.com/news-sitemap.xsl"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
++ <url>
++  <loc>https://project-skyscraper.com/2026/05/31/sec-log-193727/</loc>
++  <lastmod>2026-05-31T18:35:48Z</lastmod>
++  <news:news>
++   <news:publication>
++    <news:name>project-skyscraper</news:name>
++    <news:language>en</news:language>
++   </news:publication>
++   <news:title>SECURITY LOG</news:title>
++   <news:publication_date>2026-05-31T18:37:00Z</news:publication_date>
++   <news:genres>Blog</news:genres>
++  </news:news>
++ </url>
+  <url>
+   <loc>https://project-skyscraper.com/sec-log-094316-full/</loc>
+   <lastmod>2026-05-30T07:41:53Z</lastmod>
+@@ -42,17 +55,4 @@
+    <news:genres>Blog</news:genres>
+   </news:news>
+  </url>
+- <url>
+-  <loc>https://project-skyscraper.com/2026/05/29/sec-log-114327/</loc>
+-  <lastmod>2026-05-29T09:17:39Z</lastmod>
+-  <news:news>
+-   <news:publication>
+-    <news:name>project-skyscraper</news:name>
+-    <news:language>en</news:language>
+-   </news:publication>
+-   <news:title>SECURITY LOG</news:title>
+-   <news:publication_date>2026-05-29T10:43:00Z</news:publication_date>
+-   <news:genres>Blog</news:genres>
+-  </news:news>
+- </url>
+ </urlset>

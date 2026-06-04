@@ -1,0 +1,27 @@
+# Diff: https://project-skyscraper.com/image-sitemap-1.xml
+# File: discovery/image-sitemap-1.xml
+# Timestamp: 2026-05-29 14:08:01 UTC
+# Lines: 55 old -> 69 new
+# Beautified: yes
+--- old/discovery/image-sitemap-1.xml
++++ new/discovery/image-sitemap-1.xml
+@@ -52,4 +52,18 @@
+    <image:loc>https://project-skyscraper.com/wp-content/uploads/2005/04/IMG_00004_1.jpg</image:loc>
+   </image:image>
+  </url>
+-</urlset>
++ <url>
++  <loc>https://project-skyscraper.com/2002/05/12/code/</loc>
++  <lastmod>2026-05-29T10:24:19Z</lastmod>
++  <image:image>
++   <image:loc>https://project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg</image:loc>
++  </image:image>
++ </url>
++ <url>
++  <loc>https://project-skyscraper.com/2002/05/12/code/</loc>
++  <lastmod>2026-05-29T10:25:34Z</lastmod>
++  <image:image>
++   <image:loc>https://project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png</image:loc>
++  </image:image>
++ </url>
++</urlset>

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-03 17:16:31 UTC",
+  "category": "asset_changed",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/robots.txt",
+        "old_hash": "7a2bee052a7e1bac94582c754e419c0b",
+        "new_hash": "a6b8cdc801d366c6d88d1cf31b92b24e",
+        "subdir": "discovery",
+        "detail": "Asset changed: https://project-skyscraper.com/robots.txt"
+      }
+    ]
+  }
+}

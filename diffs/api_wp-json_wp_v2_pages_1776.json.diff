@@ -1,0 +1,147 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/pages/1776
+# File: api/wp-json/wp/v2/pages/1776.json
+# Timestamp: 2026-05-31 06:31:21 UTC
+# Lines: 7 old -> 135 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/pages/1776.json
++++ new/api/wp-json/wp/v2/pages/1776.json
+@@ -1,7 +1,135 @@
+ {
+-  "code": "rest_forbidden",
+-  "message": "Sorry, you are not allowed to do that.",
+-  "data": {
+-    "status": 401
++  "id": 1776,
++  "date": "2026-05-30T09:43:00",
++  "date_gmt": "2026-05-30T08:43:00",
++  "guid": {
++    "rendered": "https://project-skyscraper.com/?page_id=1776"
++  },
++  "modified": "2026-05-30T08:42:26",
++  "modified_gmt": "2026-05-30T07:42:26",
++  "slug": "request-memory-timestamp-094317",
++  "status": "publish",
++  "type": "page",
++  "link": "https://project-skyscraper.com/request-memory-timestamp-094317/",
++  "title": {
++    "rendered": "Request Memory Timestamp"
++  },
++  "content": {
++    "rendered": "",
++    "protected": true
++  },
++  "excerpt": {
++    "rendered": "",
++    "protected": true
++  },
++  "author": 279180095,
++  "featured_media": 0,
++  "parent": 0,
++  "menu_order": 0,
++  "comment_status": "closed",
++  "ping_status": "closed",
++  "template": "memory-reconstruction-engine",
++  "meta": {
++    "advanced_seo_description": "",
++    "jetpack_seo_html_title": "",
++    "jetpack_seo_noindex": false,
++    "footnotes": ""
++  },
++  "class_list": [
++    "post-1776",
++    "page",
++    "type-page",
++    "status-publish",
++    "post-password-required",
++    "hentry"
++  ],
++  "jetpack_likes_enabled": true,
++  "jetpack_sharing_enabled": true,
++  "jetpack_shortlink": "https://wp.me/PhdnFZ-sE",
++  "jetpack-related-posts": [
++    {
++      "id": 288,
++      "url": "https://project-skyscraper.com/sec-log-094316-full/",
++      "url_meta": {
++        "origin": 1776,
++        "position": 0
++      },
++      "title": "Security Log",
++      "author": "The Architect",
++      "date": "30 May 2026",
++      "format": false,
++      "excerpt": "[30/5/2026 09:43:16 AM] Event ID 5156 - System Diagnostic Protocol Application Information: Process ID: 16 Application Name: System Diagnostic Information: Archive: Redacted Fragment: ERROR Operator_Auth_Level: MB-A Protocol Information: Memory_reconstruction_engine: Active (Deprecated) Status: Memory bloc addition authorized Warning: Risk of unstable memory anchoring increased Cycle continues █ v=xPG-VM__mwU",
++      "rel": "",
++      "context": "Similar post",
++      "block_context": {
++        "text": "Similar post",
++        "link": ""
++      },
++      "img": {
++        "alt_text": "",
++        "src": "",
++        "width": 0,
++        "height": 0
++      },
++      "classes": []
++    }
++  ],
++  "_links": {
++    "self": [
++      {
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1776",
++        "targetHints": {
++          "allow": [
++            "GET"
++          ]
++        }
++      }
++    ],
++    "collection": [
++      {
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/pages"
++      }
++    ],
++    "about": [
++      {
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/types/page"
++      }
++    ],
++    "author": [
++      {
++        "embeddable": true,
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
++      }
++    ],
++    "replies": [
++      {
++        "embeddable": true,
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1776"
++      }
++    ],
++    "version-history": [
++      {
++        "count": 6,
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1776/revisions"
++      }
++    ],
++    "predecessor-version": [
++      {
++        "id": 1847,
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1776/revisions/1847"
++      }
++    ],
++    "wp:attachment": [
++      {
++        "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1776"
++      }
++    ],
++    "curies": [
++      {
++        "name": "wp",
++        "href": "https://api.w.org/{rel}",
++        "templated": true
++      }
++    ]
+   }
+ }

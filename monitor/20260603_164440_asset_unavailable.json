@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-06-03 16:44:40 UTC",
+  "category": "asset_unavailable",
+  "data": {
+    "count": 19,
+    "changes": [
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/functions.php",
+        "status": 500,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/functions.php (HTTP 500)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/header.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/header.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/index.php",
+        "status": 403,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/index.php (HTTP 403)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/page.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/page.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/single.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/single.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/footer.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/footer.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/404.php",
+        "status": 428,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/404.php (HTTP 428)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/archive.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/archive.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/search.php",
+        "status": 428,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/search.php (HTTP 428)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/assets/css/main.css",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/assets/css/main.css (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/assets/js/navigation.js",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/assets/js/navigation.js (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/assets/js/script.js",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/assets/js/script.js (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/assets/css/blocks.css",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/assets/css/blocks.css (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/plugins/jetpack/modules/stats/gravatar-hovercards.css",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/plugins/jetpack/modules/stats/gravatar-hovercards.css (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/plugins/jetpack/modules/theme-tools/compat/perenne.css",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/plugins/jetpack/modules/theme-tools/compat/perenne.css (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/front-page.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/front-page.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/sidebar.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/sidebar.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/wp-content/themes/perenne/comments.php",
+        "status": 404,
+        "subdir": "assets",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/wp-content/themes/perenne/comments.php (HTTP 404)"
+      },
+      {
+        "type": "asset_unavailable",
+        "url": "https://project-skyscraper.com/xmlrpc.php",
+        "status": 405,
+        "subdir": "extras",
+        "detail": "Asset became unavailable: https://project-skyscraper.com/xmlrpc.php (HTTP 405)"
+      }
+    ]
+  }
+}

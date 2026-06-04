@@ -1,0 +1,12 @@
+# Diff: https://project-skyscraper.com/image-sitemap.xsl
+# File: discovery/image-sitemap.xsl
+# Timestamp: 2026-05-28 10:26:23 UTC
+# Lines: 148 old -> 148 new
+--- old/discovery/image-sitemap.xsl
++++ new/discovery/image-sitemap.xsl
+@@ -145,4 +145,4 @@
+ </body>
+ </html>
+ </xsl:template>
+-</xsl:stylesheet>
++</xsl:stylesheet>

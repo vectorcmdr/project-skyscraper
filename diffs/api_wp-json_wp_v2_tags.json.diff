@@ -1,0 +1,16 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/tags
+# File: api/wp-json/wp/v2/tags.json
+# Timestamp: 2026-05-29 14:09:30 UTC
+# Lines: 134 old -> 134 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/tags.json
++++ new/api/wp-json/wp/v2/tags.json
+@@ -1,7 +1,7 @@
+ [
+   {
+     "id": 16091,
+-    "count": 1,
++    "count": 2,
+     "description": "",
+     "link": "https://project-skyscraper.com/tag/stable/",
+     "name": "stable",

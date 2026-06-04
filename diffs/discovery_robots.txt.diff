@@ -1,0 +1,13 @@
+# Diff: https://project-skyscraper.com/robots.txt
+# File: discovery/robots.txt
+# Timestamp: 2026-05-28 14:15:39 UTC
+# Lines: 5 old -> 5 new
+# Beautified: yes
+--- old/discovery/robots.txt
++++ new/discovery/robots.txt
+@@ -2,4 +2,4 @@
+ Sitemap: https://project-skyscraper.com/news-sitemap.xml
+ User-agent: *
+ Disallow: /wp-admin/
+-Allow: /wp-admin/admin-ajax.php+Allow: /wp-admin/admin-ajax.php
++Allow: /wp-admin/admin-ajax.php

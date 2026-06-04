@@ -1,0 +1,87 @@
+[2026-06-03 18:11:31 UTC] [INFO] Starting initial check cycle...
+[2026-06-03 18:11:31 UTC] [FAST] === Fast check ===
+[2026-06-03 18:11:31 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-03 18:11:31 UTC] [MEDIUM] === Medium check ===
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/media: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/users: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-03 18:11:31 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-03 18:11:31 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-03 18:11:31 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-03 18:11:32 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-03 18:11:33 UTC] [DEEP] === Deep check ===
+[2026-06-03 18:11:41 UTC] [DEEP] Probe: checked IDs 2652-2681 (next: 2682, ceiling: 2741)
+[2026-06-03 18:11:43 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap.xsl
+[2026-06-03 18:11:48 UTC] [FETCH] === Fetching content for 1 change(s) ===
+[2026-06-03 18:11:48 UTC] [FETCH]   FETCH SKIP (unchanged): https://project-skyscraper.com/sitemap.xsl
+[2026-06-03 18:11:48 UTC] [FILE] Report written: 20260603_181148_asset_changed.json
+[2026-06-03 18:11:48 UTC] [INFO] Initial check complete
+[2026-06-03 18:11:48 UTC] [FAST] === Fast check ===
+[2026-06-03 18:11:48 UTC] [FAST] Sitemap: hash changed but no URL diff (metadata only) — content diff available
+[2026-06-03 18:11:48 UTC] [FAST] Sitemap: change detected, mirror file at C:\stack\arg\site_mirror\discovery\sitemap.xml exists=True size=542
+[2026-06-03 18:11:48 UTC] [MEDIUM] === Medium check ===
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/media: 10 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/posts: 45 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-03 18:11:49 UTC] [DEBUG] API /wp-json/wp/v2/search: 55 items across 1 page(s)
+[2026-06-03 18:11:49 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-03 18:11:50 UTC] [DEEP] === Deep check ===
+[2026-06-03 18:11:58 UTC] [DEEP] Probe: checked IDs 2682-2711 (next: 2712, ceiling: 2741)
+[2026-06-03 18:11:59 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap-1.xml
+[2026-06-03 18:12:00 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/image-sitemap-1.xml
+[2026-06-03 18:12:00 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/news-sitemap.xml
+[2026-06-03 18:12:00 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap.xsl
+[2026-06-03 18:12:00 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap-index.xsl
+[2026-06-03 18:12:00 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/image-sitemap.xsl
+[2026-06-03 18:12:01 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/news-sitemap.xsl
+[2026-06-03 18:12:04 UTC] [FETCH] === Fetching content for 8 change(s) ===
+[2026-06-03 18:12:05 UTC] [FETCH] sitemap_content_changed: old_bytes=542 new_bytes=541 file_exists=True
+[2026-06-03 18:12:05 UTC] [FETCH] sitemap_content_changed: diff computed (0 chars)
+[2026-06-03 18:12:05 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/sitemap-1.xml -> discovery\sitemap-1.xml
+[2026-06-03 18:12:05 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/image-sitemap-1.xml -> discovery\image-sitemap-1.xml
+[2026-06-03 18:12:06 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/news-sitemap.xml -> discovery\news-sitemap.xml
+[2026-06-03 18:12:06 UTC] [FETCH]   FETCH SKIP (unchanged): https://project-skyscraper.com/sitemap.xsl
+[2026-06-03 18:12:06 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/sitemap-index.xsl -> discovery\sitemap-index.xsl
+[2026-06-03 18:12:07 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/image-sitemap.xsl -> discovery\image-sitemap.xsl
+[2026-06-03 18:12:07 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/news-sitemap.xsl -> discovery\news-sitemap.xsl
+[2026-06-03 18:12:07 UTC] [FILE] Report written: 20260603_181207_sitemap_content_changed.json
+[2026-06-03 18:12:07 UTC] [FILE] Report written: 20260603_181207_asset_changed.json
+[2026-06-03 18:12:08 UTC] [DISCORD] Discord notification sent: Sitemap Changed: XML content
+[2026-06-03 18:12:08 UTC] [DISCORD] Discord ping sent
+[2026-06-03 18:12:19 UTC] [FAST] === Fast check ===
+[2026-06-03 18:12:19 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-03 18:12:19 UTC] [CHECK] No changes detected
+[2026-06-03 18:12:26 UTC] [INFO] Shutting down (Ctrl+C)
+[2026-06-03 18:12:26 UTC] [INFO] Monitor stopped

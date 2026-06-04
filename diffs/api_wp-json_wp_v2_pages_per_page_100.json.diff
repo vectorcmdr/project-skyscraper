@@ -1,0 +1,191 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/pages?per_page=100
+# File: api/wp-json/wp/v2/pages_per_page_100.json
+# Timestamp: 2026-06-01 07:46:58 UTC
+# Lines: 1493 old -> 1545 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/pages_per_page_100.json
++++ new/api/wp-json/wp/v2/pages_per_page_100.json
+@@ -73,6 +73,32 @@
+           "height": 0
+         },
+         "classes": []
++      },
++      {
++        "id": 1628,
++        "url": "https://project-skyscraper.com/sec-log-094127-full/",
++        "url_meta": {
++          "origin": 1776,
++          "position": 1
++        },
++        "title": "Security Log",
++        "author": "The Architect",
++        "date": "11 May 2026",
++        "format": false,
++        "excerpt": "[10/5/2026 05:14:52 PM] Event ID 6276 - System Diagnostic Protocol Application Information: Process ID: 16 Application Name: System Diagnostic Information: Source vector: TRACE Event: Transmission \"Connection detected : Access denied\" Action: Post flagged as POTENTIAL SPAM Diagnostic: External security triggered autonomously Protocol Information: Probability of Skyscraper bleed: 91.7% Security level:…",
++        "rel": "",
++        "context": "Similar post",
++        "block_context": {
++          "text": "Similar post",
++          "link": ""
++        },
++        "img": {
++          "alt_text": "",
++          "src": "",
++          "width": 0,
++          "height": 0
++        },
++        "classes": []
+       }
+     ],
+     "_links": {
+@@ -259,6 +285,32 @@
+           "height": 0
+         },
+         "classes": []
++      },
++      {
++        "id": 1812,
++        "url": "https://project-skyscraper.com/inbox/",
++        "url_meta": {
++          "origin": 288,
++          "position": 3
++        },
++        "title": "Inbox",
++        "author": "System",
++        "date": "28 May 2026",
++        "format": false,
++        "excerpt": "Project Skyscraper Ghost <null>À : the_architect@project-skyscraper.com jeudi 28 mai19:00 T'en es où ? Project Skyscraper The Architect <the_architect@project-skyscraper.com>À : Ghost <null> jeudi 28 mai19:54 On a un problème. https://project-skyscraper.com/inbox/ Project Skyscraper Ghost <null>À : the_architect@project-skyscraper.com vendredi 29 mai10:31 Et pour la Tour ? Est-ce que System est connecté ? Project…",
++        "rel": "",
++        "context": "Similar post",
++        "block_context": {
++          "text": "Similar post",
++          "link": ""
++        },
++        "img": {
++          "alt_text": "",
++          "src": "",
++          "width": 0,
++          "height": 0
++        },
++        "classes": []
+       }
+     ],
+     "_links": {
+@@ -327,8 +379,8 @@
+     "guid": {
+       "rendered": "https://project-skyscraper.com/?page_id=1812"
+     },
+-    "modified": "2026-05-29T11:16:42",
+-    "modified_gmt": "2026-05-29T10:16:42",
++    "modified": "2026-05-31T19:56:08",
++    "modified_gmt": "2026-05-31T18:56:08",
+     "slug": "inbox",
+     "status": "publish",
+     "type": "page",
+@@ -337,7 +389,7 @@
+       "rendered": "Inbox"
+     },
+     "content": {
+-      "rendered": "\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-06052e4068ab9f38c7395b1c690900ec wp-block-paragraph\">jeudi 28 mai<br>19:00</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-be44d674364f2c7785a8c7e60b5f7e29 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">T&#8217;en es où ?</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c893a54bf49a7243d87426d3c1c82424 wp-block-paragraph\">The Architect &lt;the_architect@project-skyscraper.com&gt;<br>À : Ghost &lt;null&gt;</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-a9bd6cd5daf92a18f95aa851a2cd96f2 wp-block-paragraph\">jeudi 28 mai<br>19:54</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-471322c7c41c53741449397907c1f110 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">On a un problème. <a href=\"https://project-skyscraper.com/inbox/\">https://project-skyscraper.com/inbox/</a></p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-5aba658af3a81b26170ea974956e442c wp-block-paragraph\">vendredi 29 mai<br>10:31</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-61c7631e3ff6c537664bab661c263fd8 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Et pour la Tour ? Est-ce que System est connecté ?</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c893a54bf49a7243d87426d3c1c82424 wp-block-paragraph\">The Architect &lt;the_architect@project-skyscraper.com&gt;<br>À : Ghost &lt;null&gt;</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-54fb5ba64b999b90543e663b7ef6aba3 wp-block-paragraph\">vendredi 29 mai<br>11:22</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-77911113def7b1b23c4f17e485128034 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Oui. Mais ce canal n&#8217;est plus sécurisé ! Tu comprends ce que ça veut dire ? SYSTEM nous voit. Les Operateurs nous voient !</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-4c4ca5994643a1948bc4fa44fca24583 wp-block-paragraph\">vendredi 29 mai<br>12:16</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-506024102d8819213df0f89febf0ec20 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Utilise le code du lycée si besoin. Je te recontacte.</p>\n</div>\n</div>\n",
++      "rendered": "\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-06052e4068ab9f38c7395b1c690900ec wp-block-paragraph\">jeudi 28 mai<br>19:00</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-be44d674364f2c7785a8c7e60b5f7e29 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">T&#8217;en es où ?</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c893a54bf49a7243d87426d3c1c82424 wp-block-paragraph\">The Architect &lt;the_architect@project-skyscraper.com&gt;<br>À : Ghost &lt;null&gt;</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-a9bd6cd5daf92a18f95aa851a2cd96f2 wp-block-paragraph\">jeudi 28 mai<br>19:54</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-471322c7c41c53741449397907c1f110 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">On a un problème. <a href=\"https://project-skyscraper.com/inbox/\">https://project-skyscraper.com/inbox/</a></p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-5aba658af3a81b26170ea974956e442c wp-block-paragraph\">vendredi 29 mai<br>10:31</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-61c7631e3ff6c537664bab661c263fd8 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Et pour la Tour ? Est-ce que System est connecté ?</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c893a54bf49a7243d87426d3c1c82424 wp-block-paragraph\">The Architect &lt;the_architect@project-skyscraper.com&gt;<br>À : Ghost &lt;null&gt;</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-54fb5ba64b999b90543e663b7ef6aba3 wp-block-paragraph\">vendredi 29 mai<br>11:22</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-77911113def7b1b23c4f17e485128034 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Oui. Mais ce canal n&#8217;est plus sécurisé ! Tu comprends ce que ça veut dire ? SYSTEM nous voit. Les Operateurs nous voient !</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c85d2a6647f801550450bf485398f68d wp-block-paragraph\">Ghost &lt;null&gt;<br>À : the_architect@project-skyscraper.com</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-4c4ca5994643a1948bc4fa44fca24583 wp-block-paragraph\">vendredi 29 mai<br>12:16</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-506024102d8819213df0f89febf0ec20 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Utilise le code du lycée si besoin. Je te recontacte.</p>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\"><strong>Project Skyscraper</strong></p>\n\n\n\n<div class=\"wp-block-group has-primary-background-color has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\" style=\"border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-bottom:0\">\n<div class=\"wp-block-columns is-layout-flex wp-container-core-columns-is-layout-2218da33 wp-block-columns-is-layout-flex\" style=\"margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:66.66%\">\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-c893a54bf49a7243d87426d3c1c82424 wp-block-paragraph\">The Architect &lt;the_architect@project-skyscraper.com&gt;<br>À : Ghost &lt;null&gt;</p>\n</div>\n\n\n\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:33.33%\">\n<p class=\"has-text-align-right has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-f0008f7ccd4d04198ab3ddaa918814e7 wp-block-paragraph\">dimanche 31 mai<br>20:56</p>\n</div>\n</div>\n\n\n\n<p class=\"has-base-color has-primary-background-color has-text-color has-background has-link-color wp-elements-bf642e8f415150cab38f6e8348f99302 wp-block-paragraph\" style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0\">Lf pwkyh hry wuohkyh.</p>\n</div>\n</div>\n",
+       "protected": false
+     },
+     "excerpt": {
+@@ -403,14 +455,14 @@
+       ],
+       "version-history": [
+         {
+-          "count": 16,
++          "count": 17,
+           "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1812/revisions"
+         }
+       ],
+       "predecessor-version": [
+         {
+-          "id": 1840,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1812/revisions/1840"
++          "id": 1878,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/pages/1812/revisions/1878"
+         }
+       ],
+       "wp:attachment": [
+@@ -1002,7 +1054,7 @@
+       "rendered": "Neural network status"
+     },
+     "content": {
+-      "rendered": "\n<p class=\"wp-block-paragraph\"><span class=\"online-iterations \"><strong>3</strong> Inbound Attempts</span></p>\n",
++      "rendered": "\n<p class=\"wp-block-paragraph\"><span class=\"online-iterations \"><strong>1</strong> Inbound Attempts</span></p>\n",
+       "protected": false
+     },
+     "excerpt": {
+@@ -1246,43 +1298,43 @@
+         "classes": []
+       },
+       {
++        "id": 1682,
++        "url": "https://project-skyscraper.com/sec-log-211927-full/",
++        "url_meta": {
++          "origin": 75,
++          "position": 1
++        },
++        "title": "Security Log",
++        "author": "The Architect",
++        "date": "18 May 2026",
++        "format": false,
++        "excerpt": "[18/5/2026 21:19:27 PM] Event ID Corrupted - System Diagnostic Protocol Application Information: Process ID: 16 Application Name: System Diagnostic Information: Source vector: UNKOWN_EXT3RNAL Event: Unauthorized read access Warning: Core directives partially exposed Affected modules: Self_awareness: 11.3% Memory_reconstruction_engine: 67.3% Temporal_anchor_system: 28.5% Security integrity: Compromised The security system is insufficient. System is…",
++        "rel": "",
++        "context": "Similar post",
++        "block_context": {
++          "text": "Similar post",
++          "link": ""
++        },
++        "img": {
++          "alt_text": "",
++          "src": "",
++          "width": 0,
++          "height": 0
++        },
++        "classes": []
++      },
++      {
+         "id": 252,
+         "url": "https://project-skyscraper.com/sec-log-080413-full/",
+         "url_meta": {
+           "origin": 75,
+-          "position": 1
++          "position": 2
+         },
+         "title": "Security Log",
+         "author": "The Architect",
+         "date": "3 May 2026",
+         "format": false,
+         "excerpt": "[5/3/2026 08:04:13 AM] Event ID 5157 - System Filtering Platform The System Filtering Platform has blocked a connection. Application Information: Process ID: 16 Application Name: System Network Information: Direction: Inbound Source Address: 192.168.1.100 Source Port: 49152 Destination Address: 192.168.1.255 Destination Port: 9 Protocol: 17 (UDP) Filter Information: Layer Name: Receive/Accept…",
+-        "rel": "",
+-        "context": "Similar post",
+-        "block_context": {
+-          "text": "Similar post",
+-          "link": ""
+-        },
+-        "img": {
+-          "alt_text": "",
+-          "src": "",
+-          "width": 0,
+-          "height": 0
+-        },
+-        "classes": []
+-      },
+-      {
+-        "id": 1682,
+-        "url": "https://project-skyscraper.com/sec-log-211927-full/",
+-        "url_meta": {
+-          "origin": 75,
+-          "position": 2
+-        },
+-        "title": "Security Log",
+-        "author": "The Architect",
+-        "date": "18 May 2026",
+-        "format": false,
+-        "excerpt": "[18/5/2026 21:19:27 PM] Event ID Corrupted - System Diagnostic Protocol Application Information: Process ID: 16 Application Name: System Diagnostic Information: Source vector: UNKOWN_EXT3RNAL Event: Unauthorized read access Warning: Core directives partially exposed Affected modules: Self_awareness: 11.3% Memory_reconstruction_engine: 67.3% Temporal_anchor_system: 28.5% Security integrity: Compromised The security system is insufficient. System is…",
+         "rel": "",
+         "context": "Similar post",
+         "block_context": {

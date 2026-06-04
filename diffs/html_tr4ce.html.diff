@@ -1,0 +1,34 @@
+# Diff: https://project-skyscraper.com/tr4ce/
+# File: html/tr4ce.html
+# Timestamp: 2026-06-01 13:19:31 UTC
+# Lines: 455 old -> 455 new
+# Beautified: yes
+--- old/html/tr4ce.html
++++ new/html/tr4ce.html
+@@ -307,7 +307,7 @@
+     }]
+ }</script>
+ <meta id="bilmur" property="bilmur:data" content="" data-customproperties="{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;perenne&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}" data-provider="wordpress.com" data-service="atomic"  data-site-tz="Europe/London" >
+-<script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202622"></script>
++<script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202623"></script>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-default-filter"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><script id="wp-statistics-tracker-js-extra">var WP_Statistics_Tracker_Object = {
+     "requestUrl": "https://project-skyscraper.com/wp-json/wp-statistics/v2",
+     "ajaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php",
+@@ -331,7 +331,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=75e0bb2978",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "post_type_attachment",
+@@ -358,7 +358,7 @@
+ }]);
+ _stq.push(["clickTrackerInit", "254386991", "1633"]);
+ //# sourceURL=jetpack-stats-js-before</script>
+-<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202622.js"></script>
++<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202623.js"></script>
+ <script id="wp-emoji-settings" type="application/json">
+ {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+ </script>

@@ -1,0 +1,18 @@
+# Diff: https://project-skyscraper.com/wp-json/
+# File: api/wp-json.json
+# Timestamp: 2026-05-31 06:29:58 UTC
+# Lines: 38411 old -> 38411 new
+# Beautified: yes
+--- old/api/wp-json.json
++++ new/api/wp-json.json
+@@ -6,8 +6,8 @@
+   "gmt_offset": 1,
+   "timezone_string": "Europe/London",
+   "page_for_posts": 0,
+-  "page_on_front": 551,
+-  "show_on_front": "page",
++  "page_on_front": 0,
++  "show_on_front": "posts",
+   "namespaces": [
+     "oembed/1.0",
+     "jetpack/v4",

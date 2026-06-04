@@ -1,0 +1,10 @@
+{
+  "base_url": "https://example.com",
+  "discord_webhook": "https://discord.com/api/webhooks/your_webhook_id/your_webhook_token",
+  "discord_ping_id": "your_discord_user_id",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 my-monitor/1.0",
+  "git_branch": "main",
+  "git_user_name": "Your Monitor Bot",
+  "git_user_email": "monitor@example.com",
+  "github_token": "github_pat_xxxxxxxxxxxx"
+}

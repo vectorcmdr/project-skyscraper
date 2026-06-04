@@ -1,0 +1,30 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/posts/259
+# File: api/wp-json/wp/v2/posts/259.json
+# Timestamp: 2026-05-31 06:30:58 UTC
+# Lines: 290 old -> 290 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/posts/259.json
++++ new/api/wp-json/wp/v2/posts/259.json
+@@ -191,17 +191,17 @@
+       "classes": []
+     },
+     {
+-      "id": 1626,
+-      "url": "https://project-skyscraper.com/2026/05/10/security-log-171453/",
++      "id": 291,
++      "url": "https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/",
+       "url_meta": {
+         "origin": 259,
+         "position": 5
+       },
+       "title": "SECURITY LOG",
+       "author": "The Architect",
+-      "date": "10 May 2026",
+-      "format": false,
+-      "excerpt": "memory bloc TRACE on holdUpdate: Full log",
++      "date": "30 May 2026",
++      "format": false,
++      "excerpt": "memory bloc : Memory_reconstruction_engine activatedFull log",
+       "rel": "",
+       "context": "In &quot;Non classé&quot;",
+       "block_context": {

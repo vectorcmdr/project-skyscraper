@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-06-03 18:11:48 UTC",
+  "category": "asset_changed",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/sitemap.xsl",
+        "old_hash": "f890d39fdbc1644e1c016653864b1298",
+        "new_hash": "428731d4287a56f9130cd428510e7922",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Server": "nginx",
+  "Date": "Wed, 27 May 2026 12:44:23 GMT",
+  "Content-Type": "image/jpeg",
+  "Content-Length": "800678",
+  "Connection": "close",
+  "Strict-Transport-Security": "max-age=31536000",
+  "Last-Modified": "Mon, 25 May 2026 17:55:20 GMT",
+  "ETag": "\"6a148d08-c37a6\"",
+  "Expires": "Thu, 27 May 2027 12:44:23 GMT",
+  "Cache-Control": "max-age=31536000",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, HEAD",
+  "X-ac": "2.syd _atomic_bur MISS",
+  "Accept-Ranges": "bytes",
+  "Alt-Svc": "clear",
+  "Server-Timing": "a8c-cdn, dc;desc=syd, cache;desc=MISS;dur=413.0"
+}

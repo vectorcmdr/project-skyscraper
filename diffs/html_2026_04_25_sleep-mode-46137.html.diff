@@ -1,0 +1,51 @@
+# Diff: https://project-skyscraper.com/2026/04/25/sleep-mode-46137/
+# File: html/2026/04/25/sleep-mode-46137.html
+# Timestamp: 2026-06-01 13:19:12 UTC
+# Lines: 544 old -> 540 new
+# Beautified: yes
+--- old/html/2026/04/25/sleep-mode-46137.html
++++ new/html/2026/04/25/sleep-mode-46137.html
+@@ -310,7 +310,7 @@
+     }]
+ }</script>
+ <meta id="bilmur" property="bilmur:data" content="" data-customproperties="{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;perenne&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}" data-provider="wordpress.com" data-service="atomic"  data-site-tz="Europe/London" >
+-<script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202622"></script>
++<script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202623"></script>
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-default-filter"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>					<div class="jetpack-subscription-modal">
+ 						<div class="jetpack-subscription-modal__modal-content">
+ 								
+@@ -364,7 +364,7 @@
+ 							<input type="hidden" name="app_source" value="atomic-subscription-modal-lo"/>
+ 							<input type="hidden" name="redirect_fragment" value="subscribe-blog"/>
+ 							<input type="hidden" name="lang" value="en_US"/>
+-							<input type="hidden" id="_wpnonce" name="_wpnonce" value="59788c17ab" /><input type="hidden" name="_wp_http_referer" value="/2026/04/25/sleep-mode-46137/" /><input type="hidden" name="post_id" value="156"/>							<button type="submit"
++							<input type="hidden" id="_wpnonce" name="_wpnonce" value="eb60a1acae" /><input type="hidden" name="_wp_http_referer" value="/2026/04/25/sleep-mode-46137/" /><input type="hidden" name="post_id" value="156"/>							<button type="submit"
+ 																	class="wp-block-button__link"
+ 																									style="font-size: 16px;padding: 15px 23px 15px 23px;margin: 0; margin-left: 10px;border-radius: 50px;border-width: 1px;"
+ 																name="jetpack_subscriptions_widget"
+@@ -412,7 +412,7 @@
+         "isWpConsentApiActive": false
+     },
+     "isLegacyEventLoaded": "",
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=75e0bb2978",
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee",
+     "onlineParams": {
+         "wp_statistics_hit": 1,
+         "source_type": "post",
+@@ -439,7 +439,7 @@
+ }]);
+ _stq.push(["clickTrackerInit", "254386991", "156"]);
+ //# sourceURL=jetpack-stats-js-before</script>
+-<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202622.js"></script>
++<script data-wp-strategy="defer" defer id="jetpack-stats-js" src="https://stats.wp.com/e-202623.js"></script>
+ <script id="jetpack-blocks-assets-base-url-js-before">var Jetpack_Block_Assets_Base_Url = "https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/";
+ //# sourceURL=jetpack-blocks-assets-base-url-js-before</script>
+ <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?m=1767615370'></script>
+@@ -538,7 +538,3 @@
+ //# sourceURL=https://project-skyscraper.com/wp-includes/js/wp-emoji-loader.min.js</script>
+ </body>
+ </html>
+-<!--
+-	generated in 0.350 seconds
+-	66104 bytes batcached for 300 seconds
+--->

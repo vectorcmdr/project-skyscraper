@@ -1,0 +1,13 @@
+# Diff: https://project-skyscraper.com/news-sitemap.xsl
+# File: discovery/news-sitemap.xsl
+# Timestamp: 2026-05-28 14:15:39 UTC
+# Lines: 139 old -> 139 new
+# Beautified: yes
+--- old/discovery/news-sitemap.xsl
++++ new/discovery/news-sitemap.xsl
+@@ -136,4 +136,4 @@
+ </body>
+ </html>
+ </xsl:template>
+-</xsl:stylesheet>+</xsl:stylesheet>
++</xsl:stylesheet>

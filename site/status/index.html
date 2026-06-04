@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS | STATUS FEED</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="../" class="topbar-brand">
+      <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/OPS
+    </a>
+    <span class="topbar-status" id="statusBadge">&#9679; OFFLINE</span>
+  </header>
+
+  <div class="container">
+    <!-- LEFT: Changes feed -->
+    <section class="feed" id="feed">
+      <h2>&#9654; CHANGE LOG</h2>
+      <div id="feedEntries"></div>
+    </section>
+
+    <!-- RIGHT: Manifest (all known pages/posts) -->
+    <section class="manifest" id="manifest">
+      <h2>&#9654; KNOWN PAGES</h2>
+      <div class="manifest-controls">
+        <input type="text" id="manifestSearch" placeholder="search title or url…" class="search-input">
+        <select id="manifestFilter" class="search-input">
+          <option value="all">all types</option>
+          <option value="page">pages</option>
+          <option value="post">posts</option>
+          <option value="attachment">media</option>
+        </select>
+      </div>
+      <div id="manifestEntries"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

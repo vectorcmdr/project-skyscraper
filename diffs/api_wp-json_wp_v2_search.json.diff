@@ -1,0 +1,78 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/search
+# File: api/wp-json/wp/v2/search.json
+# Timestamp: 2026-06-01 13:19:43 UTC
+# Lines: 302 old -> 302 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/search.json
++++ new/api/wp-json/wp/v2/search.json
+@@ -1,4 +1,34 @@
+ [
++  {
++    "id": 1852,
++    "title": "SECURITY LOG",
++    "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
++    "type": "post",
++    "subtype": "post",
++    "_links": {
++      "self": [
++        {
++          "embeddable": true,
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1852",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "about": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/search"
++        }
++      ]
++    }
++  },
+   {
+     "id": 288,
+     "title": "Security Log",
+@@ -268,35 +298,5 @@
+         }
+       ]
+     }
+-  },
+-  {
+-    "id": 279,
+-    "title": "SECURITY LOG",
+-    "url": "https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+-    "type": "post",
+-    "subtype": "post",
+-    "_links": {
+-      "self": [
+-        {
+-          "embeddable": true,
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/279",
+-          "targetHints": {
+-            "allow": [
+-              "GET"
+-            ]
+-          }
+-        }
+-      ],
+-      "about": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
+-        }
+-      ],
+-      "collection": [
+-        {
+-          "href": "https://project-skyscraper.com/wp-json/wp/v2/search"
+-        }
+-      ]
+-    }
+   }
+ ]

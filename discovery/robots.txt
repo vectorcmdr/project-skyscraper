@@ -1,0 +1,5 @@
+Sitemap: https://project-skyscraper.com/sitemap.xml
+Sitemap: https://project-skyscraper.com/news-sitemap.xml
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php

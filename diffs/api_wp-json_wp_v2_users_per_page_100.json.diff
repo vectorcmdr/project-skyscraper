@@ -1,0 +1,45 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/users?per_page=100
+# File: api/wp-json/wp/v2/users_per_page_100.json
+# Timestamp: 2026-05-29 14:09:37 UTC
+# Lines: 35 old -> 68 new
+# Beautified: yes
+--- old/api/wp-json/wp/v2/users_per_page_100.json
++++ new/api/wp-json/wp/v2/users_per_page_100.json
+@@ -1,4 +1,37 @@
+ [
++  {
++    "id": 279180096,
++    "name": "System",
++    "url": "https://project-skyscraper.com/",
++    "description": "",
++    "link": "https://project-skyscraper.com/author/system26da6be6a6/",
++    "slug": "system26da6be6a6",
++    "avatar_urls": {
++      "24": "https://secure.gravatar.com/avatar/e7020988c404bde81c109b4a7ff2260aae27c083db43a13b6ec06f928dd03578?s=24&d=identicon&r=g",
++      "48": "https://secure.gravatar.com/avatar/e7020988c404bde81c109b4a7ff2260aae27c083db43a13b6ec06f928dd03578?s=48&d=identicon&r=g",
++      "96": "https://secure.gravatar.com/avatar/e7020988c404bde81c109b4a7ff2260aae27c083db43a13b6ec06f928dd03578?s=96&d=identicon&r=g"
++    },
++    "meta": {
++      "jetpack_donation_warning_dismissed": false
++    },
++    "_links": {
++      "self": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180096",
++          "targetHints": {
++            "allow": [
++              "GET"
++            ]
++          }
++        }
++      ],
++      "collection": [
++        {
++          "href": "https://project-skyscraper.com/wp-json/wp/v2/users"
++        }
++      ]
++    }
++  },
+   {
+     "id": 279180095,
+     "name": "The Architect",
