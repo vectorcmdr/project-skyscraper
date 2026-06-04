@@ -5212,3 +5212,41 @@
 [2026-06-04 04:19:28 UTC] [FAST] === Fast check ===
 [2026-06-04 04:19:28 UTC] [FAST] Sitemap: unchanged (304)
 [2026-06-04 04:19:28 UTC] [CHECK] No changes detected
+[2026-06-04 04:19:58 UTC] [FAST] === Fast check ===
+[2026-06-04 04:19:58 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-04 04:19:58 UTC] [CHECK] No changes detected
+[2026-06-04 04:20:28 UTC] [FAST] === Fast check ===
+[2026-06-04 04:20:29 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 04:20:29 UTC] [CHECK] No changes detected
+[2026-06-04 04:20:59 UTC] [FAST] === Fast check ===
+[2026-06-04 04:20:59 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 04:20:59 UTC] [CHECK] No changes detected
+[2026-06-04 04:21:26 UTC] [MEDIUM] === Medium check ===
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/media: unchanged (304)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-04 04:21:26 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-04 04:21:27 UTC] [CHECK] No changes detected
+[2026-06-04 04:21:29 UTC] [FAST] === Fast check ===
+[2026-06-04 04:21:29 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 04:21:29 UTC] [CHECK] No changes detected
+[2026-06-04 04:21:59 UTC] [FAST] === Fast check ===
+[2026-06-04 04:21:59 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 04:21:59 UTC] [CHECK] No changes detected
+[2026-06-04 04:22:22 UTC] [INFO] Shutting down (Ctrl+C)
+[2026-06-04 04:22:22 UTC] [INFO] Monitor stopped

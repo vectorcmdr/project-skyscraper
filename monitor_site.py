@@ -1903,8 +1903,8 @@ def _update_manifest(manifest: dict, c: dict):
 
 def generate_page_data(state: dict, changes: list):
     """Generate feed.json (change log) and manifest.json (known pages)
-    for the GitHub Pages static site under site/."""
-    SITE_DIR = MIRROR_DIR / "site"
+    for the GitHub Pages static site under docs/."""
+    SITE_DIR = MIRROR_DIR / "docs"
     DATA_DIR = SITE_DIR / "data"
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -1972,7 +1972,7 @@ def generate_page_data(state: dict, changes: list):
 def seed_feed_from_mirror(state: dict):
     """One-time seed: populate feed.json and manifest.json from existing
     state data (pages, posts, media) so the site doesn't start empty."""
-    feed_path = MIRROR_DIR / "site" / "data" / "feed.json"
+    feed_path = MIRROR_DIR / "docs" / "data" / "feed.json"
     if feed_path.is_file():
         try:
             existing = json.loads(feed_path.read_text(encoding="utf-8"))
@@ -2021,17 +2021,17 @@ def seed_feed_from_mirror(state: dict):
 
 
 def git_push_site():
-    """git add / commit / push the site/ directory if anything changed."""
+    """git add / commit / push the docs/ directory if anything changed."""
     import subprocess
 
     repo_dir = MIRROR_DIR
-    site_dir = repo_dir / "site"
+    site_dir = repo_dir / "docs"
     if not site_dir.is_dir():
-        log("git push skipped — site/ directory not found", "FILE")
+        log("git push skipped — docs/ directory not found", "FILE")
         return
 
     try:
-        # Stage all site/ changes
+        # Stage all docs/ changes
         r = subprocess.run(
             ["git", "add", "--all", str(site_dir)],
             cwd=str(repo_dir), capture_output=True, text=True, timeout=30,
