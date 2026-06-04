@@ -1,10 +1,15 @@
-# project-skyscraper.com — Local Mirror & Change Monitor
+<div align="center" ><img src="https://github.com/vectorcmdr/project-skyscraper/blob/main/docs/favicon.jpg" width="160"></div>
+<h1 align="center">Project Skyscraper Change Monitor & Site Mirror<br/>for project-skyscraper.com</h1>
 
-Offline mirror of the Project Skyscraper ARG website. Fully self-discovering — no hardcoded IDs or URL lists.
+### Serves the site monitor for External Operators at: [project-skyscraper.vectorcmdr.xyz](https://project-skyscraper.vectorcmdr.xyz/)
 
-**7,285 files / 37.3 MB** (see `MIRROR_MANIFEST.md` for full listing).
+<br/>
+
+_Static mirror of the Project Skyscraper ARG website. Fully self-discovering builder - no hardcoded IDs or URL lists._
 
 ---
+
+> see `MIRROR_MANIFEST.md` for full listing
 
 ## Scripts
 
