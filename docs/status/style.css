@@ -48,6 +48,11 @@ body.landing {
   caret-color: #d00;
 }
 .prompt-input::placeholder { color: #444; }
+.brain-icon { animation: pulse-green 3s ease-in-out infinite; }
+@keyframes pulse-green {
+  0%, 100% { stroke: #2a2; }
+  50%      { stroke: #eee; }
+}
 
 /* -- BUTTONS -- */
 .btn {
