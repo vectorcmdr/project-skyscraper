@@ -11,8 +11,9 @@ body {
 /* -- LANDING -- */
 body.landing {
   display: flex; align-items: center; justify-content: center;
+  overflow-x: hidden;
 }
-.landing-centre { text-align: center; }
+.landing-centre { text-align: center; padding: 0 1rem; }
 .landing-avatar {
   width: 96px; height: 96px; border-radius: 50%;
   border: 2px solid #d00; margin-bottom: 1rem;
@@ -33,6 +34,15 @@ body.landing {
   padding: .65rem 1.2rem;
   background: #0d0d0d; border: 1px solid #222; border-left: 3px solid #d00;
   font-size: .85rem; color: #aaa; text-align: left;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .terminal-prompt { flex-wrap: wrap; padding: .5rem .8rem; }
+  .prompt-flavour {
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    flex-shrink: 1; min-width: 0;
+  }
+  .prompt-input { width: 12ch; }
 }
 .terminal-prompt .cursor {
   animation: blink 1s step-end infinite;
@@ -84,6 +94,25 @@ body.landing {
   gap: 1.5rem; padding: 1.5rem; max-width: 1600px; margin: 0 auto;
 }
 @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+
+/* -- TABS (mobile) -- */
+.tabs { display: none; }
+@media (max-width: 900px) {
+  .tabs {
+    display: flex; border-bottom: 1px solid #222; margin-bottom: 1rem;
+  }
+  .tab {
+    flex: 1; background: #0d0d0d; border: none; border-bottom: 2px solid transparent;
+    padding: .6rem 1rem; color: #666; font-family: inherit; font-size: .7rem;
+    letter-spacing: .2em; cursor: pointer; text-transform: uppercase;
+    transition: color .15s, border-color .15s;
+  }
+  .tab:hover { color: #aaa; }
+  .tab.active { color: #d00; border-bottom-color: #d00; }
+  .feed, .manifest { display: none; }
+  #feed.active, #manifest.active { display: block; }
+  .feed h2, .manifest h2 { display: none; }
+}
 
 /* -- SECTIONS -- */
 .feed, .manifest { min-width: 0; }

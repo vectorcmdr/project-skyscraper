@@ -19,8 +19,13 @@
   </header>
 
   <div class="container">
+    <div class="tabs">
+      <button class="tab active" data-tab="feed">Change Log</button>
+      <button class="tab" data-tab="manifest">Known Pages</button>
+    </div>
+
     <!-- LEFT: Changes feed -->
-    <section class="feed" id="feed">
+    <section class="feed active" id="feed">
       <h2>&#9654; CHANGE LOG</h2>
       <div id="feedEntries"></div>
     </section>

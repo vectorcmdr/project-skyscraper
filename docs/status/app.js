@@ -143,5 +143,16 @@ async function load() {
 document.getElementById('manifestSearch').addEventListener('input', filterManifest);
 document.getElementById('manifestFilter').addEventListener('change', filterManifest);
 
+/* Tab switching (mobile) */
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#feed, #manifest').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(btn.dataset.tab);
+    if (target) target.classList.add('active');
+  });
+});
+
 load();
 setOperator();
