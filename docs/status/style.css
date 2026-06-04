@@ -107,7 +107,7 @@ h2 {
 .card-title--no-link { color: #888; font-weight: normal; }
 .card-meta {
   font-size: .7rem; color: #666; margin-top: .2rem;
-  display: flex; flex-wrap: wrap; gap: .3rem 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: center;
 }
 .card-meta span { white-space: nowrap; }
 .card-meta .tag {
