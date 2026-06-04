@@ -37,6 +37,10 @@
     inp.addEventListener('input', () => {
       localStorage.setItem('operator', inp.value.trim());
     });
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { location.href = 'status/'; }
+    });
+    inp.focus();
   </script>
 </body>
 </html>
