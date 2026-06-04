@@ -1792,12 +1792,12 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
         log(f"=== Fetching content for {len(all_changes)} change(s) ===", "FETCH")
         apply_changes(all_changes)
         notify_changes(all_changes)
+        generate_page_data(state, all_changes)
         meaningful_changes = [c for c in all_changes if c.get("type") in MEANINGFUL_CHANGE_TYPES]
         if meaningful_changes:
-            generate_page_data(state, meaningful_changes)
             git_push_site()
         else:
-            log(f"All {len(all_changes)} change(s) are noise-only — skipping site update", "CHECK")
+            log(f"All {len(all_changes)} change(s) are noise-only — skipping git commit", "CHECK")
     else:
         log("No changes detected", "CHECK")
 
