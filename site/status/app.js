@@ -43,7 +43,7 @@ function renderFeed(entries) {
     return;
   }
   el.innerHTML = entries.map(e => {
-    const icon = e.type === 'added' ? '+' : e.type === 'removed' ? '−' : '~';
+    const icon = e.type === 'added' || e.type.endsWith('_added') ? '+' : e.type === 'removed' || e.type.endsWith('_removed') ? '−' : '~';
     const tagCls = `tag tag-${e.type}`;
     return `
       <div class="card">
