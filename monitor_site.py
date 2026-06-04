@@ -1998,12 +1998,35 @@ def generate_page_data(state: dict, changes: list):
         aid = p.get("author", 0)
         p["author"] = user_map.get(aid, "") if aid else ""
 
-    # Write
-    feed_path.write_text(json.dumps(feed, indent=2, ensure_ascii=False), encoding="utf-8")
-    manifest["updated"] = datetime.now(timezone.utc).isoformat()
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    # Write feed only if entries actually changed (skip mere timestamp bumps)
+    feed_written = False
+    if feed_path.is_file():
+        try:
+            old_feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            if old_feed.get("entries") == feed["entries"]:
+                feed_written = True  # already identical, no need to write
+        except Exception:
+            pass
+    if not feed_written:
+        feed_path.write_text(json.dumps(feed, indent=2, ensure_ascii=False), encoding="utf-8")
+        feed_written = True
 
-    log(f"Site data written: {len(feed['entries'])} feed entries, {len(manifest['pages'])} manifest pages", "FILE")
+    # Write manifest only if pages list actually changed
+    manifest_written = False
+    manifest["updated"] = datetime.now(timezone.utc).isoformat()
+    if manifest_path.is_file():
+        try:
+            old_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if old_manifest.get("pages") == manifest["pages"]:
+                manifest_written = True
+        except Exception:
+            pass
+    if not manifest_written:
+        manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+        manifest_written = True
+
+    if feed_written or manifest_written:
+        log(f"Site data written: {len(feed['entries'])} feed entries, {len(manifest['pages'])} manifest pages", "FILE")
 
 
 def seed_feed_from_mirror(state: dict):
