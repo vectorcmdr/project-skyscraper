@@ -629,7 +629,25 @@
       "endpoint": "asset",
       "diff": "",
       "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:45:06.649139+00:00",
+      "title": "news-sitemap.xml",
+      "link": "https://project-skyscraper.com/news-sitemap.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:45:06.649170+00:00",
+      "title": "image-sitemap.xsl",
+      "link": "https://project-skyscraper.com/image-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl"
     }
   ],
-  "updated": "2026-06-04T05:44:47.739392+00:00"
+  "updated": "2026-06-04T05:45:06.649186+00:00"
 }
