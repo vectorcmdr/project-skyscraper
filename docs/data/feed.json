@@ -710,7 +710,70 @@
       "endpoint": "asset",
       "diff": "",
       "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984596+00:00",
+      "title": "robots.txt",
+      "link": "https://project-skyscraper.com/robots.txt",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/robots.txt"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984665+00:00",
+      "title": "sitemap-1.xml",
+      "link": "https://project-skyscraper.com/sitemap-1.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-1.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984696+00:00",
+      "title": "news-sitemap.xml",
+      "link": "https://project-skyscraper.com/news-sitemap.xml",
+      "endpoint": "asset",
+      "diff": "@@ -19,39 +18,0 @@\n- <url>\n-  <loc>https://project-skyscraper.com/report-lon-reality-glitch/</loc>\n-  <lastmod>2026-06-01T19:12:35Z</lastmod>\n-  <news:news>\n-   <news:publication>\n-    <news:name>project-skyscraper</news:name>\n-    <news:language>en</news:language>\n-   </news:publication>\n-   <news:title>Report: LONDON</news:title>\n-   <news:publication_date>2026-06-01T19:46:00Z</news:publication_date>\n-   <news:genres>Blog</news:genres>\n-  </news:news>\n- </url>\n- <url>\n-  <loc>https://project-skyscraper.com/2026/06/01/structural-analysis-204649/</loc>\n-  <lastmod>2026-06-01T19:15:32Z</lastmod>\n-  <news:news>\n-   <news:publication>\n-    <news:name>project-skyscraper</news:name>\n-    <news:language>en</news:language>\n-   </news:publication>\n-   <news:title>STRUCTURAL ANALYSIS</news:title>\n-   <news:publication_date>2026-06-01T19:46:00Z</news:publication_date>\n-   <news:genres>Blog</news:genres>\n-  </news:news>\n- </url>\n- <url>\n-  <loc>https://project-skyscraper.com/2026/06/01/diagnos...",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984717+00:00",
+      "title": "sitemap.xsl",
+      "link": "https://project-skyscraper.com/sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984735+00:00",
+      "title": "sitemap-index.xsl",
+      "link": "https://project-skyscraper.com/sitemap-index.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984753+00:00",
+      "title": "image-sitemap.xsl",
+      "link": "https://project-skyscraper.com/image-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:10:14.984770+00:00",
+      "title": "news-sitemap.xsl",
+      "link": "https://project-skyscraper.com/news-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
     }
   ],
-  "updated": "2026-06-04T04:15:44.560820+00:00"
+  "updated": "2026-06-04T05:10:14.984797+00:00"
 }
