@@ -36,12 +36,13 @@ body.landing {
 }
 .terminal-prompt .cursor {
   animation: blink 1s step-end infinite;
-  color: #d00; font-weight: bold;
+  color: #d00; font-weight: bold; user-select: none;
 }
 .prompt-sym { color: #d00; font-weight: bold; user-select: none; }
 .terminal-input {
-  all: unset; display: inline; min-width: 12ch; color: #c0c0c0;
-  font-family: inherit; font-size: inherit; background: transparent;
+  flex: 1; min-width: 18ch;
+  background: transparent; border: none; outline: none; padding: 0;
+  color: #c0c0c0; font-family: inherit; font-size: inherit;
   caret-color: #d00;
 }
 .terminal-input::placeholder { color: #555; font-style: italic; }
