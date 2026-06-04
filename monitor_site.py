@@ -1630,6 +1630,21 @@ def apply_changes(changes: list):
                 jitter(0.2, 0.1)
 
 
+# Change types that warrant a feed entry and git commit (vs. ephemeral metadata noise)
+MEANINGFUL_CHANGE_TYPES = {
+    "api_items_added",
+    "api_items_modified",
+    "api_items_removed",
+    "media_orphan_upload",
+    "media_replaced",
+    "media_thumbnail_changed",
+    "page_content_changed",
+    "sitemap_added",
+    "sitemap_removed",
+    "unpublished_detected",
+}
+
+
 # ---------------------------------------------------------------------------
 # Check cycle orchestrator
 # ---------------------------------------------------------------------------
@@ -1777,8 +1792,12 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
         log(f"=== Fetching content for {len(all_changes)} change(s) ===", "FETCH")
         apply_changes(all_changes)
         notify_changes(all_changes)
-        generate_page_data(state, all_changes)
-        git_push_site()
+        meaningful_changes = [c for c in all_changes if c.get("type") in MEANINGFUL_CHANGE_TYPES]
+        if meaningful_changes:
+            generate_page_data(state, meaningful_changes)
+            git_push_site()
+        else:
+            log(f"All {len(all_changes)} change(s) are noise-only — skipping site update", "CHECK")
     else:
         log("No changes detected", "CHECK")
 
