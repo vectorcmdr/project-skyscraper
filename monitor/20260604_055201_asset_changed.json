@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-06-04 05:52:01 UTC",
+  "category": "asset_changed",
+  "data": {
+    "count": 6,
+    "changes": [
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/sitemap-1.xml",
+        "old_hash": "9a64474592d42132490c6af99c16ea61",
+        "new_hash": "e8a9e8264c346d58602a1fd09e211857",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/sitemap-1.xml"
+      },
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/news-sitemap.xml",
+        "old_hash": "f5b53655bf313f5e8b39203d73671502",
+        "new_hash": "2a971928b357990411bff5d5b7370274",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xml"
+      },
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/sitemap.xsl",
+        "old_hash": "f890d39fdbc1644e1c016653864b1298",
+        "new_hash": "428731d4287a56f9130cd428510e7922",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl"
+      },
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/sitemap-index.xsl",
+        "old_hash": "184453db48a032b0b3e34f8775434c33",
+        "new_hash": "d04460a26d3e2b1b84062ae08d4e51b2",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl"
+      },
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/image-sitemap.xsl",
+        "old_hash": "040bcf515153f149b53b88b71d23149f",
+        "new_hash": "de2347404ba31c2423327e05351283b5",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl"
+      },
+      {
+        "type": "asset_changed",
+        "url": "https://project-skyscraper.com/news-sitemap.xsl",
+        "old_hash": "fad4c85574afafd566a0809d87c8ce07",
+        "new_hash": "a3ad9a9daa07e4c4a3d329dcc8708dcd",
+        "subdir": "discovery",
+        "diff": "",
+        "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
+      }
+    ]
+  }
+}
