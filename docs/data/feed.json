@@ -773,7 +773,16 @@
       "endpoint": "asset",
       "diff": "",
       "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
+    },
+    {
+      "type": "sitemap_content_changed",
+      "timestamp": "2026-06-04T05:15:06.297896+00:00",
+      "title": "Sitemap XML",
+      "link": "",
+      "endpoint": "sitemap",
+      "diff": "",
+      "detail": "Sitemap XML content changed"
     }
   ],
-  "updated": "2026-06-04T05:10:14.984797+00:00"
+  "updated": "2026-06-04T05:15:06.297959+00:00"
 }
