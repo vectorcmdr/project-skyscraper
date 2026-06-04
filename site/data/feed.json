@@ -584,7 +584,61 @@
       "endpoint": "media",
       "diff": "",
       "detail": "Only [dust] Remain"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.663418+00:00",
+      "title": "sitemap-1.xml",
+      "link": "https://project-skyscraper.com/sitemap-1.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-1.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.677548+00:00",
+      "title": "news-sitemap.xml",
+      "link": "https://project-skyscraper.com/news-sitemap.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.677625+00:00",
+      "title": "sitemap.xsl",
+      "link": "https://project-skyscraper.com/sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.677648+00:00",
+      "title": "sitemap-index.xsl",
+      "link": "https://project-skyscraper.com/sitemap-index.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.677668+00:00",
+      "title": "image-sitemap.xsl",
+      "link": "https://project-skyscraper.com/image-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T04:15:07.677686+00:00",
+      "title": "news-sitemap.xsl",
+      "link": "https://project-skyscraper.com/news-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
     }
   ],
-  "updated": "2026-06-04T03:48:17.436447+00:00"
+  "updated": "2026-06-04T04:15:07.677723+00:00"
 }
