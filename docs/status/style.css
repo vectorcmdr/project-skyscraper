@@ -1,4 +1,4 @@
-/* ── RESET ────────────────────────────────────────────── */
+/* -- RESET -- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 14px; scroll-behavior: smooth; }
 body {
@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── LANDING ──────────────────────────────────────────── */
+/* -- LANDING -- */
 body.landing {
   display: flex; align-items: center; justify-content: center;
 }
@@ -49,7 +49,7 @@ body.landing {
 }
 .prompt-input::placeholder { color: #444; }
 
-/* ── BUTTONS ──────────────────────────────────────────── */
+/* -- BUTTONS -- */
 .btn {
   display: inline-block; padding: .75rem 2rem;
   border: 1px solid #d00; color: #d00; text-decoration: none;
@@ -58,7 +58,7 @@ body.landing {
 }
 .btn:hover { background: #d00; color: #0a0a0a; box-shadow: 0 0 20px rgba(221,0,0,.4); }
 
-/* ── TOPBAR ───────────────────────────────────────────── */
+/* -- TOPBAR -- */
 .topbar {
   display: flex; align-items: center; justify-content: space-between;
   padding: .6rem 1.5rem; border-bottom: 1px solid #222;
@@ -73,21 +73,21 @@ body.landing {
 .topbar-status { font-size: .8rem; letter-spacing: .1em; color: #d00; }
 .operator-label { font-size: .75rem; color: #666; letter-spacing: .05em; }
 
-/* ── LAYOUT ───────────────────────────────────────────── */
+/* -- LAYOUT -- */
 .container {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 1.5rem; padding: 1.5rem; max-width: 1600px; margin: 0 auto;
 }
 @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
 
-/* ── SECTIONS ─────────────────────────────────────────── */
+/* -- SECTIONS -- */
 .feed, .manifest { min-width: 0; }
 h2 {
   font-size: .8rem; letter-spacing: .25em; color: #d00; margin-bottom: 1rem;
   border-bottom: 1px solid #222; padding-bottom: .5rem;
 }
 
-/* ── CARD (feed entry & manifest item) ─────────────────── */
+/* -- CARD (feed entry & manifest item) -- */
 .card {
   display: flex; gap: .8rem; padding: .75rem;
   border-bottom: 1px solid #151515; transition: background .15s;
@@ -131,7 +131,7 @@ h2 {
   border-left: 2px solid #d00; color: #aaa;
 }
 
-/* ── SEARCH ───────────────────────────────────────────── */
+/* -- SEARCH -- */
 .search-input {
   background: #0d0d0d; border: 1px solid #222; color: #c0c0c0;
   padding: .4rem .6rem; font-family: inherit; font-size: .8rem; width: 100%;
@@ -140,7 +140,7 @@ h2 {
 .manifest-controls { display: flex; gap: .5rem; margin-bottom: 1rem; }
 .manifest-controls select { width: auto; }
 
-/* ── UTILITY ──────────────────────────────────────────── */
+/* -- UTILITY -- */
 .hidden { display: none !important; }
 .status-online { color: #0a8 !important; }
 .status-offline { color: #d00 !important; }
