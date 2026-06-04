@@ -1,11 +1,20 @@
+<h1 align="center">Project Skyscraper Change Monitor & Site Mirror</h1>
+<h3 align="center"><i>
+  
+  for [project-skyscraper.com](https://project-skyscraper.com/)
+  
+</i></h3>
 <div align="center" ><img src="https://github.com/vectorcmdr/project-skyscraper/blob/main/docs/favicon.jpg" width="160"></div>
-<h1 align="center">Project Skyscraper Change Monitor & Site Mirror<br/>for project-skyscraper.com</h1>
 
-### Serves the site monitor for External Operators at: [project-skyscraper.vectorcmdr.xyz](https://project-skyscraper.vectorcmdr.xyz/)
+<div align="center">
+  
+## Browse the monitor site: [External Operators Status Monitor](https://project-skyscraper.vectorcmdr.xyz/)
+
+</div>
 
 <br/>
 
-_Static mirror of the Project Skyscraper ARG website. Fully self-discovering builder - no hardcoded IDs or URL lists._
+_The static mirror of the Project Skyscraper ARG website is otherwise contained in the repo. The script to generate/update/serve is a fully self-discovering builder - no hardcoded IDs or URL lists._
 
 ---
 
