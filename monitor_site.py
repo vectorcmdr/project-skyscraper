@@ -103,153 +103,6 @@ COLLECTION_ENDPOINTS = [
     "/wp-json/wp/v2/block-directory/search",
 ]
 
-# Auth-gated wp/v2 endpoints (return 401/403 without credentials; monitor for 401→200 transitions)
-AUTH_GATED_ENDPOINTS = [
-    "/wp-json/wp/v2/settings",
-    "/wp-json/wp/v2/themes",
-    "/wp-json/wp/v2/plugins",
-    "/wp-json/wp/v2/block-types",
-    "/wp-json/wp/v2/templates",
-    "/wp-json/wp/v2/template-parts",
-    "/wp-json/wp/v2/global-styles",
-]
-
-# Non-WordPress API namespace roots (mixed response types; check via conditional GET + hash)
-EXTRA_API_ENDPOINTS = [
-    "/wp-json/jetpack/v4",
-    "/wp-json/wpcom/v2",
-    "/wp-json/wpcom/v3",
-    "/wp-json/wpcomsh/v1",
-    "/wp-json/code-snippets/v1",
-    "/wp-json/crowdsignal-forms/v1",
-    "/wp-json/wp-statistics/v2",
-    "/wp-json/wp-site-health/v1",
-    "/wp-json/wp-abilities/v1",
-    "/wp-json/akismet/v1",
-    "/wp-json/my-jetpack/v1",
-    "/wp-json/jetpack-boost/v1",
-    "/wp-json/jetpack-global-styles/v1",
-    "/wp-json/newspack-blocks/v1",
-    "/wp-json/videopress/v1",
-    "/wp-json/help-center",
-    "/wp-json/wp-block-editor/v1",
-    "/wp-json/wp-sync/v1",
-]
-
-# Jetpack sub-endpoints (all under /wp-json/jetpack/v4/)
-JETPACK_ENDPOINTS = [
-    "/wp-json/jetpack/v4/site",
-    "/wp-json/jetpack/v4/module",
-    "/wp-json/jetpack/v4/module/all",
-    "/wp-json/jetpack/v4/module/protect",
-    "/wp-json/jetpack/v4/module/related-posts",
-    "/wp-json/jetpack/v4/module/monitor",
-    "/wp-json/jetpack/v4/scan",
-    "/wp-json/jetpack/v4/scan/history",
-    "/wp-json/jetpack/v4/sync/status",
-    "/wp-json/jetpack/v4/sync/checksum",
-    "/wp-json/jetpack/v4/connection",
-    "/wp-json/jetpack/v4/connection/url",
-    "/wp-json/jetpack/v4/identity-crisis",
-    "/wp-json/jetpack/v4/plugins",
-    "/wp-json/jetpack/v4/update-plugins",
-    "/wp-json/jetpack/v4/recommendations/data",
-    "/wp-json/jetpack/v4/recommendations/site-pages",
-    "/wp-json/jetpack/v4/notice",
-    "/wp-json/jetpack/v4/notice/block",
-    "/wp-json/jetpack/v4/checkout",
-    "/wp-json/jetpack/v4/backup",
-    "/wp-json/jetpack/v4/backup-ux",
-    "/wp-json/jetpack/v4/backup-ux/data",
-    "/wp-json/jetpack/v4/stats-app",
-    "/wp-json/jetpack/v4/import",
-    "/wp-json/jetpack/v4/explat",
-    "/wp-json/jetpack/v4/blaze-app",
-    "/wp-json/jetpack/v4/blaze",
-    "/wp-json/jetpack/v4/videopress",
-    "/wp-json/jetpack/v4/social",
-    "/wp-json/jetpack/v4/search",
-    "/wp-json/jetpack/v4/search/plan",
-    "/wp-json/jetpack/v4/search/settings",
-    "/wp-json/jetpack/v4/search/stats",
-    "/wp-json/jetpack/v4/verify-tracking",
-    "/wp-json/jetpack/v4/verify-google-ads",
-]
-
-# WP.com sub-endpoints
-WPCOM_ENDPOINTS = [
-    "/wp-json/wpcom/v2/sites",
-    "/wp-json/wpcom/v2/site-verticals",
-    "/wp-json/wpcom/v2/block-likes",
-]
-
-# Theme static assets (CSS, JS, fonts, images) to monitor via conditional GET
-# PHP files excluded — they are processed server-side and cannot be fetched directly
-THEME_ASSETS = [
-    "/wp-content/themes/perenne/style.css",
-    "/wp-content/themes/perenne/theme.json",
-    "/wp-content/themes/perenne/readme.txt",
-    "/wp-content/themes/perenne/screenshot.png",
-    "/wp-content/themes/perenne/assets/css/main.css",
-    "/wp-content/themes/perenne/assets/css/blocks.css",
-    "/wp-content/themes/perenne/assets/js/navigation.js",
-    "/wp-content/themes/perenne/assets/js/script.js",
-    "/wp-content/themes/perenne/assets/fonts/ibm-plex-mono_normal_400.ttf",
-    "/wp-content/themes/perenne/assets/fonts/ibm-plex-mono_italic_400.ttf",
-]
-
-# Plugin static assets to monitor via conditional GET
-PLUGIN_ASSETS = [
-    "/wp-content/plugins/jetpack/modules/related-posts/related-posts.css",
-    "/wp-content/plugins/jetpack/modules/likes/style.css",
-    "/wp-content/plugins/jetpack/_inc/build/likes/style.min.css",
-    "/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css",
-    "/wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js",
-    "/wp-content/plugins/jetpack/_inc/blocks/swiper.js",
-    "/wp-content/plugins/jetpack/modules/stats/gravatar-hovercards.css",
-    "/wp-content/plugins/jetpack/modules/theme-tools/compat/perenne.css",
-    "/wp-content/plugins/gutenberg/build/scripts/dom-ready/index.min.js",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/paragraph/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/group/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/site-logo/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-date/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-title/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/spacer/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-content/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-navigation-link/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/heading/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-featured-image/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/quote/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/image/style.min.css",
-    "/wp-content/plugins/gutenberg/build/styles/block-library/post-terms/style.min.css",
-    "/wp-content/plugins/gravatar-enhanced/build/patterns-view.css",
-    "/wp-content/plugins/wp-statistics/assets/js/tracker.js",
-]
-
-# Discovery documents and extras
-DISCOVERY_DOCS = [
-    "/robots.txt",
-    "/sitemap-1.xml",
-    "/image-sitemap-1.xml",
-    "/news-sitemap.xml",
-    "/sitemap.xsl",
-    "/sitemap-index.xsl",
-    "/image-sitemap.xsl",
-    "/news-sitemap.xsl",
-]
-
-EXTRAS = [
-    "/readme.html",
-    "/license.txt",
-    "/wp-config-sample.php",
-    "/favicon.ico",
-    "/xmlrpc.php?rsd",
-    "/xmlrpc.php",
-    "/wp-admin/css/install.css",
-    "/wp-admin/images/wordpress-logo.png",
-]
-
-
 STABLE_PAGES = [
     BASE_URL,
     f"{BASE_URL}/about/",
@@ -718,22 +571,6 @@ def cleanup_old_reports(max_age_hours: int = 72):
 # Sitemap check
 # ---------------------------------------------------------------------------
 
-_SITEMAP_NOISE = [
-    (re.compile(r'^\s*<!--.*?-->\s*$'), ''),
-    (re.compile(r'^\s*<\?xml-stylesheet.*?\?>\s*$'), ''),
-    (re.compile(r'generated in \d+\.\d+ seconds'), ''),
-    (re.compile(r'\d+ bytes batcached for \d+ seconds'), ''),
-    (re.compile(r'served from batcache in \d+\.\d+ seconds'), ''),
-    (re.compile(r'expires in \d+ seconds'), ''),
-]
-
-
-def _clean_sitemap_content(text: str) -> str:
-    """Strip cache-noise lines from sitemap content before hashing."""
-    for pattern, replacement in _SITEMAP_NOISE:
-        text = pattern.sub(replacement, text)
-    return text
-
 def parse_sitemap_urls(content: str) -> dict:
     """Parse sitemap XML content, return dict of {url: metadata}."""
     urls = {}
@@ -762,7 +599,7 @@ def parse_sitemap_urls(content: str) -> dict:
 
 
 def check_sitemap(state: dict) -> list:
-    """Fetch and diff the sitemap. Returns list of change dicts with XML diff."""
+    """Fetch and diff the sitemap. Returns list of change dicts for URL diffs only."""
     changes = []
     sitemap_state = state.setdefault("sitemap", {})
     sitemap_state.setdefault("urls", {})
@@ -785,22 +622,8 @@ def check_sitemap(state: dict) -> list:
         })
         return changes
 
-    # Clean content and hash against noise-free version
-    clean_text = _clean_sitemap_content(result.text)
-    new_hash = hashlib.md5(clean_text.encode("utf-8")).hexdigest()
-    old_hash = sitemap_state.get("hash")
-
-    if old_hash == new_hash:
-        log("Sitemap: content unchanged (hash match after 304 miss)", "FAST")
-        sitemap_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
-
-    # Build change objects — pass content bytes in the change so apply_changes
-    # handles file I/O and diff computation (no path mismatch risk)
-    content_diff = ""
-
-    # Parse URLs from cleaned content
-    new_urls = parse_sitemap_urls(clean_text)
+    # Parse URLs and diff against previous set
+    new_urls = parse_sitemap_urls(result.text)
     old_urls = sitemap_state.get("urls", {})
 
     old_url_set = set(old_urls.keys())
@@ -809,21 +632,11 @@ def check_sitemap(state: dict) -> list:
     added = new_url_set - old_url_set
     removed = old_url_set - new_url_set
 
-    # Check for modified lastmod dates
-    modified = set()
-    common = new_url_set & old_url_set
-    for url in common:
-        old_meta = old_urls.get(url, {})
-        new_meta = new_urls.get(url, {})
-        if old_meta.get("lastmod") != new_meta.get("lastmod"):
-            modified.add(url)
-
     if added:
         changes.append({
             "type": "sitemap_added",
             "count": len(added),
             "urls": sorted(added)[:50],
-            "diff": content_diff,
             "detail": f"Added {len(added)} URL(s) to sitemap",
         })
     if removed:
@@ -831,49 +644,17 @@ def check_sitemap(state: dict) -> list:
             "type": "sitemap_removed",
             "count": len(removed),
             "urls": sorted(removed)[:50],
-            "diff": content_diff,
             "detail": f"Removed {len(removed)} URL(s) from sitemap",
         })
-    if modified:
-        changes.append({
-            "type": "sitemap_modified",
-            "count": len(modified),
-            "urls": sorted(modified)[:50],
-            "diff": content_diff,
-            "detail": f"Modified lastmod for {len(modified)} URL(s)",
-        })
 
-    if not added and not removed and not modified:
-        log("Sitemap: hash changed but no URL diff (metadata only) — content diff available", "FAST")
+    if not added and not removed:
+        log("Sitemap: content refreshed but no URL changes", "FAST")
     else:
-        log(f"Sitemap: +{len(added)} -{len(removed)} ~{len(modified)}", "FAST")
-
-    # Save baseline on first tracking so apply_changes can diff next cycle
-    if old_hash is None:
-        sitemap_path = url_to_path(SITEMAP_URL, subdir="discovery")
-        sitemap_path.parent.mkdir(parents=True, exist_ok=True)
-        sitemap_path.write_bytes(result.content)
-        log(f"Sitemap: saved baseline {sitemap_path} ({len(result.content)} bytes)", "FAST")
-
-    # Debug: verify mirror file state on change cycles
-    if old_hash is not None:
-        debug_path = url_to_path(SITEMAP_URL, subdir="discovery")
-        debug_exists = debug_path.is_file()
-        debug_size = debug_path.stat().st_size if debug_exists else -1
-        log(f"Sitemap: change detected, mirror file at {debug_path} exists={debug_exists} size={debug_size}", "FAST")
-        content_change = {
-            "type": "sitemap_content_changed",
-            "old_hash": old_hash,
-            "new_hash": new_hash,
-            "new_content": result.content,
-            "detail": "Sitemap XML content changed",
-        }
-        changes.append(content_change)
+        log(f"Sitemap: +{len(added)} -{len(removed)}", "FAST")
 
     # Update state
     sitemap_state["etag"] = result.etag
     sitemap_state["last_modified"] = result.last_modified
-    sitemap_state["hash"] = new_hash
     sitemap_state["last_checked"] = datetime.now(timezone.utc).isoformat()
     sitemap_state["urls"] = new_urls
 
@@ -1267,156 +1048,6 @@ def probe_unpublished(state: dict) -> list:
 # Generic JSON endpoint check (for non-paginated API endpoints)
 # ---------------------------------------------------------------------------
 
-def check_json_endpoint(endpoint: str, state: dict, label: str = "") -> list:
-    """Check any JSON endpoint via conditional GET + content hash.
-    Works for both array and object responses. Tracks hash only (no per-item diff)."""
-    changes = []
-    url = f"{BASE_URL}{endpoint}"
-    api_state = state.setdefault("api", {}).setdefault(endpoint, {})
-
-    etag = api_state.get("etag")
-    last_modified = api_state.get("last_modified")
-
-    result = fetch(url, etag=etag, last_modified=last_modified)
-
-    if result.not_modified:
-        api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
-
-    if result.failed:
-        # Track status changes (e.g. 401 -> 200 for auth-gated endpoints)
-        old_status = api_state.get("last_status")
-        if old_status and old_status != result.status:
-            changes.append({
-                "type": "endpoint_status_changed",
-                "endpoint": endpoint,
-                "old_status": old_status,
-                "new_status": result.status,
-                "detail": f"{label or endpoint} status {old_status} -> {result.status}",
-            })
-        api_state["last_status"] = result.status
-        api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
-
-    new_hash = result.hash
-    old_hash = api_state.get("hash")
-
-    if old_hash is not None and old_hash != new_hash:
-        changes.append({
-            "type": "json_endpoint_changed",
-            "endpoint": endpoint,
-            "old_hash": old_hash,
-            "new_hash": new_hash,
-            "detail": f"{label or endpoint} content changed",
-        })
-        log(f"JSON endpoint CHANGED: {label or endpoint}", "MEDIUM")
-    elif old_hash is None:
-        # Save content as baseline so future diffs have something to compare against
-        local_path = url_to_path(url, subdir="api")
-        local_path.parent.mkdir(parents=True, exist_ok=True)
-        local_path.write_bytes(result.content)
-        log(f"JSON endpoint first tracked: {label or endpoint}", "MEDIUM")
-
-    api_state["etag"] = result.etag
-    api_state["last_modified"] = result.last_modified
-    api_state["hash"] = new_hash
-    api_state["last_status"] = result.status
-    api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-
-    return changes
-
-
-# ---------------------------------------------------------------------------
-# Static asset check (conditional GET for files)
-# ---------------------------------------------------------------------------
-
-def check_static_asset(url: str, state: dict, subdir: str = "assets") -> list:
-    """Check a static file (CSS, JS, font, etc.) via conditional GET."""
-    changes = []
-    asset_state = state.setdefault("assets", {}).setdefault(url, {})
-
-    etag = asset_state.get("etag")
-    last_modified = asset_state.get("last_modified")
-
-    result = fetch(url, etag=etag, last_modified=last_modified)
-
-    if result.not_modified:
-        asset_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
-
-    if result.failed:
-        # Only report unavailable if we previously had content (avoid first-run false positives)
-        had_content = asset_state.get("hash") is not None
-        if had_content:
-            changes.append({
-                "type": "asset_unavailable",
-                "url": url,
-                "status": result.status,
-                "subdir": subdir,
-                "detail": f"Asset became unavailable: {url} (HTTP {result.status})",
-            })
-        asset_state["hash"] = None
-        asset_state["available"] = False
-        asset_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
-
-    new_hash = result.hash
-    old_hash = asset_state.get("hash")
-
-    if old_hash is not None and old_hash != new_hash:
-        # Read old content from mirror to compute a diff
-        local_path = url_to_path(url, subdir=subdir)
-        old_bytes = local_path.read_bytes() if local_path.is_file() else None
-        diff = ""
-        if old_bytes is not None and result.content is not None and not _is_binary_url(url):
-            diff = compute_diff(old_bytes, result.content, url, max_lines=30)
-        changes.append({
-            "type": "asset_changed",
-            "url": url,
-            "old_hash": old_hash,
-            "new_hash": new_hash,
-            "subdir": subdir,
-            "diff": diff,
-            "detail": f"Asset changed: {url}",
-        })
-        log(f"Asset CHANGED: {url}", "DEEP")
-
-    # Save content to mirror on first tracking so future diffs have a baseline
-    if old_hash is None and result.ok and result.content is not None:
-        local_path = url_to_path(url, subdir=subdir)
-        local_path.parent.mkdir(parents=True, exist_ok=True)
-        local_path.write_bytes(result.content)
-        log(f"Asset first tracked: {url}", "DEEP")
-
-    asset_state["etag"] = result.etag
-    asset_state["last_modified"] = result.last_modified
-    asset_state["hash"] = new_hash
-    asset_state["available"] = True
-    asset_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-
-    return changes
-
-
-# ---------------------------------------------------------------------------
-# oEmbed endpoint check
-# ---------------------------------------------------------------------------
-
-def check_oembed(state: dict) -> list:
-    """Check the oEmbed endpoint for a set of known pages."""
-    changes = []
-    sitemap_urls = state.get("sitemap", {}).get("urls", {})
-    urls_to_check = [BASE_URL] + list(sitemap_urls.keys())[:10]
-
-    for page_url in urls_to_check:
-        encoded = urllib.parse.quote(page_url, safe="")
-        for fmt_suffix, fmt_label in [("", "json"), ("&format=xml", "xml")]:
-            ep = f"/wp-json/oembed/1.0/embed?url={encoded}{fmt_suffix}"
-            c = check_json_endpoint(ep, state, label=f"oembed/{fmt_label}")
-            changes.extend(c)
-        jitter(0.1, 0.1)
-
-    return changes
-
 
 # ---------------------------------------------------------------------------
 # URL-to-path mapping (mirrors update_mirror.py's url_to_path)
@@ -1488,33 +1119,6 @@ def apply_changes(changes: list):
         ctype = change["type"]
 
         if ctype == "sitemap_added":
-            for page_url in change.get("urls", []):
-                if page_url.startswith(BASE_URL):
-                    fetch_and_save(page_url, "html")
-                    jitter(0.2, 0.1)
-
-        elif ctype == "sitemap_content_changed":
-            # Read old mirror file, write new content, compute diff — no re-fetch
-            sitemap_url = SITEMAP_URL
-            subdir = "discovery"
-            local_path = url_to_path(sitemap_url, subdir=subdir)
-            old_bytes = local_path.read_bytes() if local_path.is_file() else None
-            new_bytes = change.pop("new_content", None)
-            old_len = len(old_bytes) if old_bytes else 0
-            new_len = len(new_bytes) if new_bytes else 0
-            log(f"sitemap_content_changed: old_bytes={old_len} new_bytes={new_len} file_exists={local_path.is_file()}", "FETCH")
-            if new_bytes is not None:
-                local_path.parent.mkdir(parents=True, exist_ok=True)
-                local_path.write_bytes(new_bytes)
-                if old_bytes is not None and old_bytes != new_bytes:
-                    change["diff"] = compute_diff(old_bytes, new_bytes, sitemap_url, max_lines=40)
-                    log(f"sitemap_content_changed: diff computed ({len(change['diff'])} chars)", "FETCH")
-                else:
-                    change["diff"] = ""
-                    log(f"sitemap_content_changed: no diff (old={'None' if old_bytes is None else 'same'})", "FETCH")
-            jitter(0.2, 0.1)
-
-        elif ctype == "sitemap_modified":
             for page_url in change.get("urls", []):
                 if page_url.startswith(BASE_URL):
                     fetch_and_save(page_url, "html")
@@ -1601,34 +1205,6 @@ def apply_changes(changes: list):
                 fetch_and_save(api_url, "api")
                 jitter(0.15, 0.1)
 
-        elif ctype == "json_endpoint_changed":
-            ep = change.get("endpoint", "")
-            if ep:
-                url = f"{BASE_URL}{ep}"
-                _diff_and_store(url, "api", change)
-                jitter(0.15, 0.1)
-
-        elif ctype == "endpoint_status_changed":
-            ep = change.get("endpoint", "")
-            if ep:
-                url = f"{BASE_URL}{ep}"
-                fetch_and_save(url, "api")
-                jitter(0.15, 0.1)
-
-        elif ctype == "asset_changed":
-            asset_url = change.get("url", "")
-            subdir = change.get("subdir", "assets")
-            if asset_url:
-                fetch_and_save(asset_url, subdir)
-                jitter(0.2, 0.1)
-
-        elif ctype == "asset_unavailable":
-            asset_url = change.get("url", "")
-            subdir = change.get("subdir", "assets")
-            if asset_url:
-                fetch_and_save(asset_url, subdir)
-                jitter(0.2, 0.1)
-
 
 # Change types that warrant a feed entry and git commit (vs. ephemeral metadata noise)
 MEANINGFUL_CHANGE_TYPES = {
@@ -1683,26 +1259,6 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
                 except Exception as e:
                     log(f"Error checking {ep}: {e}", "ERROR")
 
-        # Non-WordPress API namespace roots
-        with ThreadPoolExecutor(max_workers=6) as ex:
-            futures = {}
-            for ep in EXTRA_API_ENDPOINTS:
-                futures[ex.submit(check_json_endpoint, ep, state, label=ep)] = ep
-            for ep in WPCOM_ENDPOINTS:
-                futures[ex.submit(check_json_endpoint, ep, state, label=ep)] = ep
-            for ep in JETPACK_ENDPOINTS:
-                futures[ex.submit(check_json_endpoint, ep, state, label=ep)] = ep
-            for ep in AUTH_GATED_ENDPOINTS:
-                futures[ex.submit(check_json_endpoint, ep, state, label=ep)] = ep
-
-            for f in as_completed(futures):
-                ep = futures[f]
-                try:
-                    changes = f.result()
-                    all_changes.extend(changes)
-                except Exception as e:
-                    log(f"Error checking {ep}: {e}", "ERROR")
-
     # -- Deep tier: page content checks + media analysis + orphan probe --
     if "deep" in tiers:
         log("=== Deep check ===", "DEEP")
@@ -1739,49 +1295,6 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
             all_changes.extend(changes)
         except Exception as e:
             log(f"Error probing unpublished: {e}", "ERROR")
-
-        # Static asset checks (theme + plugin files)
-        try:
-            with ThreadPoolExecutor(max_workers=6) as ex:
-                futures = {}
-                for asset_path in THEME_ASSETS + PLUGIN_ASSETS:
-                    url = f"{BASE_URL}{asset_path}"
-                    futures[ex.submit(check_static_asset, url, state)] = url
-                for f in as_completed(futures):
-                    try:
-                        changes = f.result()
-                        all_changes.extend(changes)
-                    except Exception as e:
-                        log(f"Error checking asset: {e}", "ERROR")
-        except Exception as e:
-            log(f"Error checking assets: {e}", "ERROR")
-
-        # Discovery documents
-        try:
-            for doc in DISCOVERY_DOCS:
-                url = f"{BASE_URL}{doc}"
-                changes = check_static_asset(url, state, subdir="discovery")
-                all_changes.extend(changes)
-                jitter(0.1, 0.1)
-        except Exception as e:
-            log(f"Error checking discovery docs: {e}", "ERROR")
-
-        # Extras
-        try:
-            for extra in EXTRAS:
-                url = f"{BASE_URL}{extra}"
-                changes = check_static_asset(url, state, subdir="extras")
-                all_changes.extend(changes)
-                jitter(0.1, 0.1)
-        except Exception as e:
-            log(f"Error checking extras: {e}", "ERROR")
-
-        # oEmbed
-        try:
-            changes = check_oembed(state)
-            all_changes.extend(changes)
-        except Exception as e:
-            log(f"Error checking oEmbed: {e}", "ERROR")
 
     # Save state
     save_state(state)
@@ -1842,15 +1355,6 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         title = urls[0] if urls else f"{count} URL(s) removed"
         link = urls[0] if urls else ""
         endpoint = "sitemap"
-    elif t == "sitemap_modified":
-        count = c.get("count", 0)
-        urls = c.get("urls", [])
-        title = urls[0] if urls else f"{count} URL(s) modified"
-        link = urls[0] if urls else ""
-        endpoint = "sitemap"
-    elif t == "sitemap_content_changed":
-        title = "Sitemap XML"
-        endpoint = "sitemap"
     elif t == "api_items_added":
         items = c.get("items", [])
         title = items[0].get("title", "") if items else c.get("detail", "")
@@ -1866,13 +1370,6 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         title = items[0].get("title", "") if items else c.get("detail", "")
         link = items[0].get("link", "") if items else ""
         author = items[0].get("author", 0) if items else 0
-        endpoint = c.get("endpoint", "")
-    elif t == "asset_changed":
-        title = c.get("url", "").split("/")[-1]
-        link = c.get("url", "")
-        endpoint = "asset"
-    elif t == "json_endpoint_changed":
-        title = c.get("detail", "JSON endpoint")
         endpoint = c.get("endpoint", "")
     elif t == "page_content_changed":
         title = c.get("url", "").split("/")[-1] or "page"
@@ -1894,9 +1391,6 @@ def _change_to_feed_entry(c: dict) -> dict | None:
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
         endpoint = "probe"
-    elif t == "asset_unavailable":
-        title = c.get("url", "").split("/")[-1]
-        endpoint = "asset"
     else:
         return None
 
@@ -1939,7 +1433,7 @@ def _update_manifest(manifest: dict, c: dict):
         # Match by extracting ID from path — fragile, skip for now
         pass
 
-    elif t in ("sitemap_added", "sitemap_removed", "sitemap_modified"):
+    elif t in ("sitemap_added", "sitemap_removed"):
         # Sitemap changes handled by sync_sitemap_to_manifest below
         pass
 
@@ -2198,12 +1692,10 @@ def notify_changes(changes: list):
     """Dispatch notifications for detected changes (Discord + local files)."""
 
     urgent = {c["type"] for c in changes if c["type"] in (
-        "sitemap_added", "sitemap_removed", "sitemap_content_changed",
+        "sitemap_added", "sitemap_removed",
         "api_items_added", "api_items_removed",
         "page_content_changed", "media_replaced",
         "media_orphan_upload", "media_thumbnail_changed",
-        "json_endpoint_changed",
-        "asset_changed",
     )}
 
     # Write report file for each unique type
@@ -2216,19 +1708,17 @@ def notify_changes(changes: list):
 
     # Ping the operator when any notifiable changes exist
     notified_types = {
-        "sitemap_added", "sitemap_removed", "sitemap_content_changed", "api_items_added",
+        "sitemap_added", "sitemap_removed", "api_items_added",
         "api_items_removed", "api_items_modified", "page_content_changed",
         "media_replaced", "media_orphan_upload", "media_thumbnail_changed",
         "unpublished_detected",
-        "json_endpoint_changed",
-        "asset_changed", "asset_unavailable",
     }
     # Discord: group notifications per category
     _embed_count = 0
 
-    # Combined sitemap notification with XML diff
+    # Combined sitemap notification (URL adds/removes only)
     sitemap_changes = []
-    for st in ("sitemap_added", "sitemap_removed", "sitemap_modified", "sitemap_content_changed"):
+    for st in ("sitemap_added", "sitemap_removed"):
         if st in by_type:
             sitemap_changes.extend(by_type[st])
 
@@ -2236,7 +1726,6 @@ def notify_changes(changes: list):
         fields = []
         total_added = sum(c.get("count", 0) for c in by_type.get("sitemap_added", []))
         total_removed = sum(c.get("count", 0) for c in by_type.get("sitemap_removed", []))
-        total_modified = sum(c.get("count", 0) for c in by_type.get("sitemap_modified", []))
 
         if total_added:
             c = by_type["sitemap_added"][0]
@@ -2244,44 +1733,19 @@ def notify_changes(changes: list):
         if total_removed:
             c = by_type["sitemap_removed"][0]
             fields.append({"name": f"Removed ({total_removed})", "value": "\n".join(c["urls"][:15])[:1024]})
-        if total_modified:
-            c = by_type["sitemap_modified"][0]
-            fields.append({"name": f"Modified ({total_modified})", "value": "\n".join(c["urls"][:15])[:1024]})
 
-        has_url_changes = total_added or total_removed or total_modified
+        desc_parts = []
+        if total_added:
+            desc_parts.append(f"+{total_added}")
+        if total_removed:
+            desc_parts.append(f"-{total_removed}")
 
-        # Show the XML content diff prominently
-        content_c = by_type.get("sitemap_content_changed", [None])[0]
-        if content_c and content_c.get("diff"):
-            diff_text = content_c["diff"]
-            label = "XML Diff (truncated)" if len(diff_text) > 920 else "XML Diff"
-            truncated = diff_text[:920] if len(diff_text) > 920 else diff_text
-            fields.insert(0, {"name": label, "value": f"```diff\n{truncated}\n```"})
-
-        has_content_diff = bool(content_c and content_c.get("diff"))
-
-        # Skip notification if only meaningless change (e.g. trailing newline)
-        suppress_sitemap = not has_url_changes and not has_content_diff
-        if suppress_sitemap:
-            log("Sitemap: suppressing notification — no URL changes and content diff is trivial", "FAST")
-
-        if not suppress_sitemap:
-            desc_parts = []
-            if total_added:
-                desc_parts.append(f"+{total_added}")
-            if total_removed:
-                desc_parts.append(f"-{total_removed}")
-            if total_modified:
-                desc_parts.append(f"~{total_modified}")
-            if not has_url_changes:
-                desc_parts.append("XML content")
-
-            send_discord(
-                title=f"Sitemap Changed: {' '.join(desc_parts)}",
-                description=", ".join(desc_parts),
-                fields=fields[:10] or None,
-                color=0x00ff88,
-            )
+        send_discord(
+            title=f"Sitemap Changed: {' '.join(desc_parts)}",
+            description=", ".join(desc_parts),
+            fields=fields[:10] or None,
+            color=0x00ff88,
+        )
 
     if "api_items_added" in by_type:
         clist = by_type["api_items_added"]
@@ -2417,62 +1881,12 @@ def notify_changes(changes: list):
             color=0xaa44ff,
         )
 
-    if "json_endpoint_changed" in by_type:
-        clist = by_type["json_endpoint_changed"]
-        fields = []
-        for c in clist[:10]:
-            fields.append({
-                "name": c["endpoint"].split("/")[-1],
-                "value": f"Hash changed: {c['old_hash'][:12]} -> {c['new_hash'][:12]}",
-            })
-        send_discord(
-            title=f"API Changes: {len(clist)} endpoint(s)",
-            description=f"{len(clist)} JSON endpoint(s) content changed",
-            fields=fields[:10] or None,
-            color=0x44aaff,
-        )
-
-    if "asset_changed" in by_type:
-        # Only notify assets with actual diffs (skip first-run where no old baseline)
-        clist = [c for c in by_type["asset_changed"] if c.get("diff")]
-        if clist:
-            fields = []
-            for c in clist[:6]:
-                filename = c["url"].split("/")[-1]
-                diff = c["diff"]
-                truncated = diff[:920] if len(diff) > 920 else diff
-                fields.append({
-                    "name": f"Changed: {filename}",
-                    "value": f"```diff\n{truncated}\n```",
-                })
-            send_discord(
-                title=f"Static Assets Changed: {len(clist)}",
-                description=f"{len(clist)} asset file(s) content changed",
-                fields=fields[:25] or None,
-                color=0x88ff44,
-            )
-
-    if "asset_unavailable" in by_type:
-        clist = by_type["asset_unavailable"]
-        send_discord(
-            title=f"Assets Unavailable: {len(clist)}",
-            description=f"{len(clist)} asset(s) returned HTTP errors",
-            fields=[{"name": "Assets", "value": "\n".join(
-                f"HTTP {c['status']}: {c['url'].split('/')[-1]}" for c in clist[:10]
-            )[:1024]}],
-            color=0xff4444,
-        )
-
-    # Summary notification if nothing was sent via Discord
-    # Silent types — detected + logged to file but never ping Discord
-    _silent_types = {"endpoint_status_changed"}
-
-    # Summary notification only for non-silent, non-notified types
+    # Summary notification only for non-notified types
     if not any(t in by_type for t in notified_types):
-        non_silent = {t for t in by_type if t not in _silent_types}
+        non_silent = set(by_type.keys())
         if non_silent:
-            total = sum(len(c) for t, c in by_type.items() if t not in _silent_types)
-            parts = [f"{t}={len(c)}" for t, c in by_type.items() if t not in _silent_types]
+            total = sum(len(c) for t, c in by_type.items())
+            parts = [f"{t}={len(c)}" for t, c in by_type.items()]
             send_discord_simple(f"Monitor detected {total} change(s): " + "; ".join(parts))
 
 
