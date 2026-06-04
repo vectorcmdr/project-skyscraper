@@ -929,7 +929,47 @@
       "diff": "",
       "detail": "Sitemap XML content changed",
       "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T08:05:22.582830+00:00",
+      "title": "robots.txt",
+      "link": "https://project-skyscraper.com/robots.txt",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/robots.txt",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T08:05:22.582861+00:00",
+      "title": "sitemap-1.xml",
+      "link": "https://project-skyscraper.com/sitemap-1.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-1.xml",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T08:05:22.582870+00:00",
+      "title": "sitemap-index.xsl",
+      "link": "https://project-skyscraper.com/sitemap-index.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T08:05:22.582878+00:00",
+      "title": "image-sitemap.xsl",
+      "link": "https://project-skyscraper.com/image-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl",
+      "author": ""
     }
   ],
-  "updated": "2026-06-04T08:00:37.846252+00:00"
+  "updated": "2026-06-04T08:05:22.582889+00:00"
 }
