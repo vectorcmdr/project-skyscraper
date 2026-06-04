@@ -1957,9 +1957,10 @@ def generate_page_data(state: dict, changes: list):
                 "date_gmt": "",
             })
 
-    # Remove pages no longer in sitemap (unpublished)
-    manifest["pages"] = [p for p in manifest["pages"]
-                         if p["path"] in sitemap_paths or p["type"] != "page"]
+    # Remove pages no longer in sitemap (unpublished) — only if we have sitemap data
+    if sitemap_paths:
+        manifest["pages"] = [p for p in manifest["pages"]
+                             if p["path"] in sitemap_paths or p["type"] != "page"]
 
     # Re-sort by modified descending
     manifest["pages"].sort(key=lambda p: p.get("modified", ""), reverse=True)
