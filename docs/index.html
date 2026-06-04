@@ -12,9 +12,9 @@
     <img src="favicon.jpg" alt="PS" class="landing-avatar">
     <h1>PROJECT SKYSCRAPER</h1>
     <p class="tagline">SITE MONITORING &amp; OPS CENTRE</p>
-    <div class="terminal-prompt">
+    <div class="terminal-prompt" id="opPrompt" title="click to set operator name">
       <span class="prompt-sym">&#9654;</span>
-      <input type="text" id="opInput" class="terminal-input" placeholder="Awaiting External Operator ghost line..." maxlength="48" autocomplete="off" spellcheck="false">
+      <span id="opDisplay" class="terminal-text">Awaiting External Operator ghost line...</span>
       <span class="cursor">&#9612;</span>
     </div>
 
@@ -27,12 +27,19 @@
     </footer>
   </main>
   <script>
-    const inp = document.getElementById('opInput');
+    const opDisplay = document.getElementById('opDisplay');
+    const opPrompt = document.getElementById('opPrompt');
     const saved = localStorage.getItem('operator');
-    if (saved) inp.value = saved;
-    const save = () => { const v = inp.value.trim(); localStorage.setItem('operator', v || ''); };
-    inp.addEventListener('blur', save);
-    inp.addEventListener('keydown', e => { if (e.key === 'Enter') { save(); inp.blur(); } });
+    if (saved) opDisplay.textContent = saved;
+    opPrompt.addEventListener('click', () => {
+      const current = localStorage.getItem('operator') || '';
+      const name = prompt('Enter operator name:', current);
+      if (name !== null) {
+        const trimmed = name.trim();
+        localStorage.setItem('operator', trimmed);
+        opDisplay.textContent = trimmed || 'Awaiting External Operator ghost line...';
+      }
+    });
   </script>
 </body>
 </html>

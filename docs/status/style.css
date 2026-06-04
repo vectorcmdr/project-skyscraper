@@ -32,20 +32,15 @@ body.landing {
   display: inline-flex; align-items: center; gap: .4rem; margin-top: 1.5rem;
   padding: .65rem 1.2rem;
   background: #0d0d0d; border: 1px solid #222; border-left: 3px solid #d00;
-  font-size: .85rem; color: #aaa; text-align: left;
+  font-size: .85rem; color: #aaa; text-align: left; cursor: pointer;
 }
+.terminal-prompt:hover { border-color: #444; }
 .terminal-prompt .cursor {
   animation: blink 1s step-end infinite;
   color: #d00; font-weight: bold; user-select: none;
 }
 .prompt-sym { color: #d00; font-weight: bold; user-select: none; }
-.terminal-input {
-  flex: 1; min-width: 18ch;
-  background: transparent; border: none; outline: none; padding: 0;
-  color: #c0c0c0; font-family: inherit; font-size: inherit;
-  caret-color: #d00;
-}
-.terminal-input::placeholder { color: #555; font-style: italic; }
+.terminal-text { color: #c0c0c0; min-width: 12ch; }
 
 /* ── BUTTONS ──────────────────────────────────────────── */
 .btn {
