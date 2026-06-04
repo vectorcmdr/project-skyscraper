@@ -981,6 +981,8 @@ def check_api_collection(endpoint: str, state: dict) -> list:
                 "type": item.get("type", ""),
                 "status": item.get("status", ""),
                 "link": item.get("link", ""),
+                "author": item.get("author", 0),
+                "name": item.get("name", ""),
             }
 
     log(f"API {endpoint}: {len(new_ids)} items across {total_pages} page(s)", "DEBUG")
@@ -1035,6 +1037,7 @@ def check_api_collection(endpoint: str, state: dict) -> list:
                 {
                     "id": c[2]["id"],
                     "title": c[2]["title"],
+                    "author": c[2].get("author", 0),
                     "old_modified": c[1].get("modified", ""),
                     "new_modified": c[2]["modified"],
                 }
@@ -1154,6 +1157,7 @@ def check_media_items(state: dict) -> list:
                 "id": item["id"],
                 "title": item.get("title", ""),
                 "url": item.get("source_url"),
+                "author": item.get("author", 0),
                 "detail": f"New unattached media #{item['id']} uploaded: {item.get('title', '')}",
             })
             log(f"Orphan media #{item['id']}: {item.get('title', '')}", "DEEP")
@@ -1785,6 +1789,19 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
 # GitHub Pages data generation
 # ---------------------------------------------------------------------------
 
+def _build_user_map(state: dict) -> dict:
+    """Build {user_id: display_name} lookup from state's users endpoint data."""
+    users = state.get("api", {}).get("/wp-json/wp/v2/users", {}).get("items", [])
+    result = {}
+    for u in users:
+        uid = u.get("id", 0)
+        name = u.get("name") or u.get("title") or ""
+        if not name:
+            name = str(uid)
+        result[uid] = name
+    return result
+
+
 def _change_to_feed_entry(c: dict) -> dict | None:
     """Convert a change object into a feed entry dict."""
     t = c["type"]
@@ -1792,6 +1809,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
     link = ""
     title = c.get("detail", "unknown")
     endpoint = ""
+    author = 0
 
     if t == "sitemap_added":
         count = c.get("count", 0)
@@ -1818,6 +1836,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         items = c.get("items", [])
         title = items[0].get("title", "") if items else c.get("detail", "")
         link = items[0].get("link", "") if items else ""
+        author = items[0].get("author", 0) if items else 0
         endpoint = c.get("endpoint", "")
     elif t == "api_items_removed":
         ids = c.get("ids", [])
@@ -1827,6 +1846,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         items = c.get("items", [])
         title = items[0].get("title", "") if items else c.get("detail", "")
         link = items[0].get("link", "") if items else ""
+        author = items[0].get("author", 0) if items else 0
         endpoint = c.get("endpoint", "")
     elif t == "asset_changed":
         title = c.get("url", "").split("/")[-1]
@@ -1850,6 +1870,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
     elif t == "media_orphan_upload":
         title = c.get("title", f"Media #{c.get('id', '?')}")
         link = c.get("url", "")
+        author = c.get("author", 0)
         endpoint = "media"
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
@@ -1868,6 +1889,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         "endpoint": endpoint,
         "diff": c.get("diff", ""),
         "detail": c.get("detail", ""),
+        "author": author,
     }
 
 
@@ -1886,6 +1908,7 @@ def _update_manifest(manifest: dict, c: dict):
                 "type": item.get("type", "page"),
                 "modified": item.get("modified", ""),
                 "date_gmt": item.get("date_gmt", ""),
+                "author": item.get("author", 0),
             }
             if existing:
                 existing[0].update(entry)
@@ -1927,7 +1950,6 @@ def generate_page_data(state: dict, changes: list):
 
     feed["entries"] = feed["entries"][-500:]
     feed["updated"] = datetime.now(timezone.utc).isoformat()
-    feed_path.write_text(json.dumps(feed, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # ── MANIFEST ──────────────────────────────────────────
     manifest = {"pages": []}
@@ -1956,6 +1978,7 @@ def generate_page_data(state: dict, changes: list):
                 "type": "page",
                 "modified": meta.get("lastmod", ""),
                 "date_gmt": "",
+                "author": 0,
             })
 
     # Remove pages no longer in sitemap (unpublished) — only if we have sitemap data
@@ -1965,6 +1988,18 @@ def generate_page_data(state: dict, changes: list):
 
     # Re-sort by modified descending
     manifest["pages"].sort(key=lambda p: p.get("modified", ""), reverse=True)
+
+    # Resolve author IDs to display names
+    user_map = _build_user_map(state)
+    for entry in feed["entries"]:
+        aid = entry.get("author", 0)
+        entry["author"] = user_map.get(aid, "") if aid else ""
+    for p in manifest["pages"]:
+        aid = p.get("author", 0)
+        p["author"] = user_map.get(aid, "") if aid else ""
+
+    # Write
+    feed_path.write_text(json.dumps(feed, indent=2, ensure_ascii=False), encoding="utf-8")
     manifest["updated"] = datetime.now(timezone.utc).isoformat()
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -2017,6 +2052,7 @@ def seed_feed_from_mirror(state: dict):
             "id": item.get("id"),
             "title": item.get("title", "Untitled media"),
             "url": item.get("link", ""),
+            "author": item.get("author", 0),
         })
 
     log(f"Seeded {len(seed_changes)} initial changes ({sum(1 for c in seed_changes if c['type']=='api_items_added')} content items, {sum(1 for c in seed_changes if c['type']=='media_orphan_upload')} media)", "FILE")
@@ -2041,10 +2077,17 @@ def seed_feed_from_mirror(state: dict):
                     "type": item.get("type", "attachment"),
                     "modified": item.get("modified", ""),
                     "date_gmt": item.get("date_gmt", ""),
+                    "author": item.get("author", 0),
                 })
                 existing_paths.add(path)
                 added += 1
         if added:
+            # Resolve media author IDs to names
+            media_user_map = _build_user_map(state)
+            for p in manifest["pages"]:
+                if p.get("type") == "attachment":
+                    aid = p.get("author", 0)
+                    p["author"] = media_user_map.get(aid, "") if aid else ""
             manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
             log(f"Added {added} media items to manifest", "FILE")
 
