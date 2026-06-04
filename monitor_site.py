@@ -402,6 +402,11 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str, max_lines: int = 
     return diff_text
 
 
+def _strip_html(text: str) -> str:
+    """Strip HTML tags from text while preserving diff +/- markers and newlines."""
+    return re.sub(r'<[^>]+>', '', text)
+
+
 def _diff_and_store(url: str, subdir: str, change_obj: dict, item_key: str = "diffs"):
     """Fetch URL, diff old vs new content, and store result in change_obj."""
     path = Path(url_to_path(url, subdir=subdir))
@@ -1437,6 +1442,15 @@ def _update_manifest(manifest: dict, c: dict):
         # Sitemap changes handled by sync_sitemap_to_manifest below
         pass
 
+    elif t == "page_content_changed":
+        url = c.get("url", "")
+        if url:
+            path = urllib.parse.urlparse(url).path
+            for p in manifest["pages"]:
+                if p["path"] == path:
+                    p["modified"] = datetime.now(timezone.utc).isoformat()
+                    break
+
 
 def generate_page_data(state: dict, changes: list):
     """Generate feed.json (change log) and manifest.json (known pages)
@@ -1796,7 +1810,7 @@ def notify_changes(changes: list):
             if items_str:
                 fields.append({"name": ep_label, "value": items_str[:1024]})
             for d in (c.get("diffs") or [])[:3]:
-                diff_text = d["diff"]
+                diff_text = _strip_html(d["diff"])
                 short_url = d["url"].split("/")[-1]
                 fields.append({
                     "name": f"Diff: {short_url}",
@@ -1817,7 +1831,7 @@ def notify_changes(changes: list):
             diff_text = ""
             if c.get("diffs"):
                 for d in c["diffs"][:1]:
-                    diff_text = d["diff"]
+                    diff_text = _strip_html(d["diff"])
             val = page_label[:200]
             if diff_text:
                 val += f"\n```diff\n{diff_text[:900]}\n```"
