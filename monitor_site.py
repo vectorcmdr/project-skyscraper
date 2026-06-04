@@ -2020,6 +2020,32 @@ def seed_feed_from_mirror(state: dict):
     log(f"Seeded {len(seed_changes)} initial changes ({sum(1 for c in seed_changes if c['type']=='api_items_added')} content items, {sum(1 for c in seed_changes if c['type']=='media_orphan_upload')} media)", "FILE")
     generate_page_data(state, seed_changes)
 
+    # Add media items to manifest (they aren't handled by _update_manifest)
+    import urllib.parse
+    manifest_path = MIRROR_DIR / "docs" / "data" / "manifest.json"
+    if manifest_path.is_file():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except Exception:
+            manifest = {"pages": []}
+        existing_paths = {p["path"] for p in manifest["pages"]}
+        added = 0
+        for item in api.get("/wp-json/wp/v2/media", {}).get("items", []):
+            path = urllib.parse.urlparse(item.get("link", "")).path
+            if path and path not in existing_paths:
+                manifest["pages"].append({
+                    "path": path,
+                    "title": item.get("title", path.split("/")[-1] or path),
+                    "type": item.get("type", "attachment"),
+                    "modified": item.get("modified", ""),
+                    "date_gmt": item.get("date_gmt", ""),
+                })
+                existing_paths.add(path)
+                added += 1
+        if added:
+            manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+            log(f"Added {added} media items to manifest", "FILE")
+
 
 def git_push_site():
     """git add / commit / push the docs/ directory if anything changed."""
