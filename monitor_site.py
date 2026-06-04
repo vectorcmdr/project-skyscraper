@@ -1849,6 +1849,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         endpoint = "media"
     elif t == "media_orphan_upload":
         title = c.get("title", f"Media #{c.get('id', '?')}")
+        link = c.get("url", "")
         endpoint = "media"
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
@@ -2015,6 +2016,7 @@ def seed_feed_from_mirror(state: dict):
             "detail": item.get("title", f"Media #{item.get('id', '?')}"),
             "id": item.get("id"),
             "title": item.get("title", "Untitled media"),
+            "url": item.get("link", ""),
         })
 
     log(f"Seeded {len(seed_changes)} initial changes ({sum(1 for c in seed_changes if c['type']=='api_items_added')} content items, {sum(1 for c in seed_changes if c['type']=='media_orphan_upload')} media)", "FILE")
