@@ -6097,3 +6097,147 @@
 [2026-06-04 05:42:42 UTC] [CHECK] No changes detected
 [2026-06-04 05:42:42 UTC] [INFO] Check complete
 [2026-06-04 05:42:42 UTC] [INFO] Monitor stopped
+[2026-06-04 05:44:29 UTC] [FILE] Feed already seeded — skipping
+[2026-06-04 05:44:29 UTC] [INFO] Starting initial check cycle...
+[2026-06-04 05:44:29 UTC] [FAST] === Fast check ===
+[2026-06-04 05:44:30 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 05:44:30 UTC] [MEDIUM] === Medium check ===
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/media: 10 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/posts: 45 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-04 05:44:30 UTC] [DEBUG] API /wp-json/wp/v2/search: 55 items across 1 page(s)
+[2026-06-04 05:44:30 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-04 05:44:30 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-04 05:44:31 UTC] [DEEP] === Deep check ===
+[2026-06-04 05:44:40 UTC] [DEEP] Probe: checked IDs 2652-2681 (next: 2682, ceiling: 2741)
+[2026-06-04 05:44:40 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/robots.txt
+[2026-06-04 05:44:41 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap-1.xml
+[2026-06-04 05:44:41 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap.xsl
+[2026-06-04 05:44:42 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/sitemap-index.xsl
+[2026-06-04 05:44:42 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/news-sitemap.xsl
+[2026-06-04 05:44:46 UTC] [FETCH] === Fetching content for 5 change(s) ===
+[2026-06-04 05:44:46 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/robots.txt -> discovery\robots.txt
+[2026-06-04 05:44:46 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/sitemap-1.xml -> discovery\sitemap-1.xml
+[2026-06-04 05:44:46 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/sitemap.xsl -> discovery\sitemap.xsl
+[2026-06-04 05:44:47 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/sitemap-index.xsl -> discovery\sitemap-index.xsl
+[2026-06-04 05:44:47 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/news-sitemap.xsl -> discovery\news-sitemap.xsl
+[2026-06-04 05:44:47 UTC] [FILE] Report written: 20260604_054447_asset_changed.json
+[2026-06-04 05:44:47 UTC] [FILE] Site data written: 70 feed entries, 55 manifest pages
+[2026-06-04 05:44:48 UTC] [FILE] git commit: [main 8bbab57] update site data [skip ci]
+ 2 files changed, 47 insertions(+), 2 deletions(-)
+[2026-06-04 05:44:50 UTC] [FILE] git push: 
+[2026-06-04 05:44:50 UTC] [INFO] Initial check complete
+[2026-06-04 05:44:50 UTC] [FAST] === Fast check ===
+[2026-06-04 05:44:50 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 05:44:50 UTC] [MEDIUM] === Medium check ===
+[2026-06-04 05:44:50 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-04 05:44:50 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-04 05:44:50 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-04 05:44:50 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-04 05:44:50 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-04 05:44:50 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-04 05:44:50 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-04 05:44:50 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-04 05:44:51 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-04 05:44:51 UTC] [DEBUG] API /wp-json/wp/v2/media: 10 items across 1 page(s)
+[2026-06-04 05:44:51 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-04 05:44:51 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-04 05:44:51 UTC] [DEBUG] API /wp-json/wp/v2/posts: 45 items across 1 page(s)
+[2026-06-04 05:44:51 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-04 05:44:51 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-04 05:44:51 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-04 05:44:51 UTC] [DEBUG] API /wp-json/wp/v2/search: 55 items across 1 page(s)
+[2026-06-04 05:44:51 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-04 05:44:52 UTC] [DEEP] === Deep check ===
+[2026-06-04 05:45:00 UTC] [DEEP] Probe: checked IDs 2682-2711 (next: 2712, ceiling: 2741)
+[2026-06-04 05:45:02 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/news-sitemap.xml
+[2026-06-04 05:45:02 UTC] [DEEP] Asset CHANGED: https://project-skyscraper.com/image-sitemap.xsl
+[2026-06-04 05:45:05 UTC] [FETCH] === Fetching content for 2 change(s) ===
+[2026-06-04 05:45:06 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/news-sitemap.xml -> discovery\news-sitemap.xml
+[2026-06-04 05:45:06 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/image-sitemap.xsl -> discovery\image-sitemap.xsl
+[2026-06-04 05:45:06 UTC] [FILE] Report written: 20260604_054506_asset_changed.json
+[2026-06-04 05:45:06 UTC] [FILE] Site data written: 72 feed entries, 55 manifest pages
+[2026-06-04 05:45:07 UTC] [FILE] git commit: [main b30fc64] update site data [skip ci]
+ 2 files changed, 20 insertions(+), 2 deletions(-)
+[2026-06-04 05:45:09 UTC] [FILE] git push: 
+[2026-06-04 05:45:20 UTC] [FAST] === Fast check ===
+[2026-06-04 05:45:20 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 05:45:20 UTC] [CHECK] No changes detected
+[2026-06-04 05:45:50 UTC] [FAST] === Fast check ===
+[2026-06-04 05:45:50 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 05:45:50 UTC] [CHECK] No changes detected
+[2026-06-04 05:45:59 UTC] [WARN] Lock file exists (89s old), another instance may be running
+[2026-06-04 05:45:59 UTC] [ERROR] Cannot acquire lock. If no other instance is running, manually remove: C:\stack\arg\project-skyscraper\state\.monitor.lock
+[2026-06-04 05:46:04 UTC] [WARN] Lock file exists (94s old), another instance may be running
+[2026-06-04 05:46:04 UTC] [ERROR] Cannot acquire lock. If no other instance is running, manually remove: C:\stack\arg\project-skyscraper\state\.monitor.lock
+[2026-06-04 05:46:10 UTC] [WARN] Lock file exists (100s old), another instance may be running
+[2026-06-04 05:46:10 UTC] [ERROR] Cannot acquire lock. If no other instance is running, manually remove: C:\stack\arg\project-skyscraper\state\.monitor.lock
+[2026-06-04 05:46:16 UTC] [FILE] Seeding feed from existing mirror data...
+[2026-06-04 05:46:16 UTC] [FILE] Seeded 65 initial changes (55 content items, 10 media)
+[2026-06-04 05:46:16 UTC] [FILE] Site data written: 65 feed entries, 55 manifest pages
+[2026-06-04 05:46:16 UTC] [FILE] Added 10 media items to manifest
+[2026-06-04 05:46:16 UTC] [INFO] Single check mode
+[2026-06-04 05:46:16 UTC] [FAST] === Fast check ===
+[2026-06-04 05:46:16 UTC] [FAST] Sitemap: content unchanged (hash match after 304 miss)
+[2026-06-04 05:46:16 UTC] [MEDIUM] === Medium check ===
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/media: 10 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/posts: 45 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-04 05:46:16 UTC] [DEBUG] API /wp-json/wp/v2/search: 55 items across 1 page(s)
+[2026-06-04 05:46:16 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-04 05:46:17 UTC] [DEEP] === Deep check ===
+[2026-06-04 05:46:20 UTC] [INFO] Shutting down (Ctrl+C)
+[2026-06-04 05:46:20 UTC] [INFO] Monitor stopped
+[2026-06-04 05:46:26 UTC] [DEEP] Probe: checked IDs 2712-2741 (next: 2742, ceiling: 2741)
+[2026-06-04 05:46:32 UTC] [CHECK] No changes detected
+[2026-06-04 05:46:32 UTC] [INFO] Check complete
+[2026-06-04 05:46:32 UTC] [INFO] Monitor stopped
