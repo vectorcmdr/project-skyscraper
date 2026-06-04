@@ -584,7 +584,52 @@
       "endpoint": "media",
       "diff": "",
       "detail": "Only [dust] Remain"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:44:47.739263+00:00",
+      "title": "robots.txt",
+      "link": "https://project-skyscraper.com/robots.txt",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/robots.txt"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:44:47.739319+00:00",
+      "title": "sitemap-1.xml",
+      "link": "https://project-skyscraper.com/sitemap-1.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-1.xml"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:44:47.739342+00:00",
+      "title": "sitemap.xsl",
+      "link": "https://project-skyscraper.com/sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:44:47.739356+00:00",
+      "title": "sitemap-index.xsl",
+      "link": "https://project-skyscraper.com/sitemap-index.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl"
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T05:44:47.739370+00:00",
+      "title": "news-sitemap.xsl",
+      "link": "https://project-skyscraper.com/news-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl"
     }
   ],
-  "updated": "2026-06-04T05:42:26.625752+00:00"
+  "updated": "2026-06-04T05:44:47.739392+00:00"
 }
