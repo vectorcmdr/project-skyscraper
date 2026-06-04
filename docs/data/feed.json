@@ -769,7 +769,67 @@
       "diff": "",
       "detail": "Sitemap XML content changed",
       "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.577890+00:00",
+      "title": "robots.txt",
+      "link": "https://project-skyscraper.com/robots.txt",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/robots.txt",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.577991+00:00",
+      "title": "news-sitemap.xml",
+      "link": "https://project-skyscraper.com/news-sitemap.xml",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xml",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.578041+00:00",
+      "title": "sitemap.xsl",
+      "link": "https://project-skyscraper.com/sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap.xsl",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.578075+00:00",
+      "title": "sitemap-index.xsl",
+      "link": "https://project-skyscraper.com/sitemap-index.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/sitemap-index.xsl",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.578106+00:00",
+      "title": "image-sitemap.xsl",
+      "link": "https://project-skyscraper.com/image-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/image-sitemap.xsl",
+      "author": ""
+    },
+    {
+      "type": "asset_changed",
+      "timestamp": "2026-06-04T07:05:23.578136+00:00",
+      "title": "news-sitemap.xsl",
+      "link": "https://project-skyscraper.com/news-sitemap.xsl",
+      "endpoint": "asset",
+      "diff": "",
+      "detail": "Asset changed: https://project-skyscraper.com/news-sitemap.xsl",
+      "author": ""
     }
   ],
-  "updated": "2026-06-04T07:00:01.020345+00:00"
+  "updated": "2026-06-04T07:05:23.578176+00:00"
 }
