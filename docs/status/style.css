@@ -29,7 +29,7 @@ body.landing {
 @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: .2 } }
 
 .terminal-prompt {
-  display: inline-block; margin-top: 1.5rem;
+  display: inline-flex; align-items: center; gap: .4rem; margin-top: 1.5rem;
   padding: .65rem 1.2rem;
   background: #0d0d0d; border: 1px solid #222; border-left: 3px solid #d00;
   font-size: .85rem; color: #aaa; text-align: left;
@@ -38,6 +38,13 @@ body.landing {
   animation: blink 1s step-end infinite;
   color: #d00; font-weight: bold;
 }
+.prompt-sym { color: #d00; font-weight: bold; user-select: none; }
+.terminal-input {
+  all: unset; display: inline; min-width: 12ch; color: #c0c0c0;
+  font-family: inherit; font-size: inherit; background: transparent;
+  caret-color: #d00;
+}
+.terminal-input::placeholder { color: #555; font-style: italic; }
 
 /* ── BUTTONS ──────────────────────────────────────────── */
 .btn {
@@ -59,7 +66,9 @@ body.landing {
   color: #eee; text-decoration: none; font-weight: bold; letter-spacing: .15em;
 }
 .topbar-avatar { width: 28px; height: 28px; border-radius: 50%; border: 1px solid #d00; object-fit: cover; }
+.topbar-right { display: flex; align-items: center; gap: 1rem; }
 .topbar-status { font-size: .8rem; letter-spacing: .1em; color: #d00; }
+.operator-label { font-size: .75rem; color: #666; letter-spacing: .05em; }
 
 /* ── LAYOUT ───────────────────────────────────────────── */
 .container {
@@ -92,6 +101,7 @@ h2 {
   display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .card-title:hover { color: #d00; }
+.card-title--no-link { color: #888; font-weight: normal; }
 .card-meta {
   font-size: .7rem; color: #666; margin-top: .2rem;
   display: flex; flex-wrap: wrap; gap: .3rem 1rem;
@@ -108,6 +118,10 @@ h2 {
 .card-meta .tag-post     { border-color: #48f; color: #48f; }
 .card-meta .tag-page     { border-color: #8af; color: #8af; }
 .card-meta .tag-attachment { border-color: #a8a; color: #a8a; }
+.card-meta-label { color: #555; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; }
+.ts-stack { display: inline-flex; flex-direction: column; line-height: 1.3; }
+.ts-utc   { color: #555; font-size: .65rem; }
+.ts-local { color: #999; font-size: .65rem; }
 .card-diff {
   margin-top: .4rem; padding: .4rem; background: #0d0d0d;
   font-size: .7rem; white-space: pre-wrap; overflow-x: auto;
