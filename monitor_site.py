@@ -769,6 +769,7 @@ def check_api_collection(endpoint: str, state: dict) -> list:
                 "link": item.get("link", ""),
                 "author": item.get("author", 0),
                 "name": item.get("name", ""),
+                "date_gmt": item.get("date_gmt", ""),
             }
 
     log(f"API {endpoint}: {len(new_ids)} items across {total_pages} page(s)", "DEBUG")
@@ -823,6 +824,10 @@ def check_api_collection(endpoint: str, state: dict) -> list:
                 {
                     "id": c[2]["id"],
                     "title": c[2]["title"],
+                    "link": c[2].get("link", ""),
+                    "type": c[2].get("type", ""),
+                    "modified": c[2].get("modified", ""),
+                    "date_gmt": c[2].get("date_gmt", ""),
                     "author": c[2].get("author", 0),
                     "old_modified": c[1].get("modified", ""),
                     "new_modified": c[2]["modified"],
