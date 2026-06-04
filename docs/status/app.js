@@ -50,6 +50,7 @@ function renderFeed(entries) {
             <span class="${tagCls}">${icon} ${e.type}</span>
             ${fmtBoth(e.timestamp)}
             ${e.endpoint ? `<span>${esc(e.endpoint.split('/').pop())}</span>` : ''}
+            ${e.author ? `<span>by ${esc(e.author)}</span>` : ''}
             ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
           </div>
           ${e.diff ? `<div class="card-diff hidden" id="diff-${e._idx}">${esc(e.diff)}</div>` : ''}
@@ -89,6 +90,7 @@ function renderManifest(entries) {
             <span class="card-meta-label">modified</span>${fmtBoth(m.modified)}
             <span class="card-meta-label">created</span>${fmtBoth(m.date_gmt)}
             <span>${esc(m.path)}</span>
+            ${m.author ? `<span>by ${esc(m.author)}</span>` : ''}
           </div>
         </div>
       </div>`;
@@ -103,7 +105,8 @@ function filterManifest() {
   if (typ !== 'all') filtered = filtered.filter(m => m.type === typ);
   if (q) filtered = filtered.filter(m =>
     (m.title && m.title.toLowerCase().includes(q)) ||
-    (m.path && m.path.toLowerCase().includes(q))
+    (m.path && m.path.toLowerCase().includes(q)) ||
+    (m.author && m.author.toLowerCase().includes(q))
   );
   renderManifest(filtered);
 }
