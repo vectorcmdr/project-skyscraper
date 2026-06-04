@@ -50,8 +50,8 @@ body.landing {
 .prompt-input::placeholder { color: #444; }
 .brain-icon { animation: pulse-green 3s ease-in-out infinite; }
 @keyframes pulse-green {
-  0%, 100% { stroke: #2a2; }
-  50%      { stroke: #eee; }
+  0%, 100% { color: #2a2; }
+  50%      { color: #eee; }
 }
 
 /* -- BUTTONS -- */
