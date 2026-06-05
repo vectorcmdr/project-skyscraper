@@ -113,6 +113,15 @@ STABLE_PAGES = [
 # Hosts whose content should not trigger local-mirror-change alerts
 IGNORE_HOSTS = {"i0.wp.com", "fonts.wp.com", "s0.wp.com", "stats.wp.com", "c0.wp.com"}
 
+# Trace (Discourse forum user online status)
+TRACE_DISCOURSE_URL = "https://forums.atlas-65.com/u/the_architect.json"
+TRACE_STATUS_FILE = MIRROR_DIR / "docs" / "status" / "trace.json"
+TRACE_ACTIVE_THRESHOLD = 300  # seconds since last_seen_at to consider ACTIVE (5 min)
+TRACE_POLL_INTERVAL = 60  # poll every 60 seconds
+_trace_last_poll = 0
+_trace_last_state = None
+_trace_last_seen = None
+
 # Rate-limit tracking
 _rate_limited_until = 0  # timestamp until which we back off
 _rate_limit_lock = threading.Lock()
@@ -1348,6 +1357,60 @@ MEANINGFUL_CHANGE_TYPES = {
 
 
 # ---------------------------------------------------------------------------
+# Trace (Discourse forum online status)
+# ---------------------------------------------------------------------------
+
+def check_trace(state: dict) -> bool:
+    """Poll the Discourse API for the_architect's last_seen_at and write
+    trace.json to docs/status/ on state change (ACTIVE <-> LOST).
+    Returns True if trace.json was written (state changed)."""
+    global _trace_last_state, _trace_last_seen, _trace_last_poll
+
+    now_ts = time.time()
+    if now_ts - _trace_last_poll < TRACE_POLL_INTERVAL:
+        return False
+    _trace_last_poll = now_ts
+
+    result = fetch(TRACE_DISCOURSE_URL)
+    if result.failed:
+        log(f"Trace fetch failed: {result.error}", "WARN")
+        return False
+
+    try:
+        data = json.loads(result.text)
+        user = data.get("user", {})
+        last_seen_at = user.get("last_seen_at", "")
+    except (json.JSONDecodeError, KeyError, TypeError) as e:
+        log(f"Trace: failed to parse user data ({e})", "WARN")
+        return False
+
+    if not last_seen_at:
+        return False
+
+    now = datetime.now(timezone.utc)
+    last_seen = datetime.fromisoformat(last_seen_at.replace("Z", "+00:00"))
+    elapsed = (now - last_seen).total_seconds()
+    new_state = "ACTIVE" if elapsed < TRACE_ACTIVE_THRESHOLD else "LOST"
+
+    if new_state == _trace_last_state and last_seen_at == _trace_last_seen:
+        return False  # No meaningful change
+
+    _trace_last_state = new_state
+    _trace_last_seen = last_seen_at
+
+    trace_data = {
+        "state": new_state,
+        "lastSeenAt": last_seen_at,
+        "updatedAt": now.isoformat(),
+    }
+    TRACE_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    TRACE_STATUS_FILE.write_text(json.dumps(trace_data, indent=2), encoding="utf-8")
+
+    log(f"Trace state changed: {new_state} (last seen: {last_seen_at})", "INFO")
+    return True
+
+
+# ---------------------------------------------------------------------------
 # Check cycle orchestrator
 # ---------------------------------------------------------------------------
 
@@ -2136,6 +2199,14 @@ def daemon_loop(state: dict, quiet: bool = False):
                 import traceback
                 log(traceback.format_exc(), "ERROR")
 
+        # Trace check (Discourse online status) — runs independently every ~30s
+        try:
+            trace_changed = check_trace(state)
+            if trace_changed:
+                git_push_site()
+        except Exception as e:
+            log(f"Trace check failed: {e}", "ERROR")
+
         # Clean up old report files periodically
         if now % 3600 < 1:
             cleanup_old_reports()
@@ -2164,11 +2235,26 @@ def main():
     state = load_state()
     save_state(state)  # Ensure state directory/file exists
     seed_feed_from_mirror(state)
+    # Ensure trace.json exists (404 guard for status page)
+    if not TRACE_STATUS_FILE.is_file():
+        TRACE_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        TRACE_STATUS_FILE.write_text(json.dumps({
+            "state": "LOST",
+            "lastSeenAt": "",
+            "updatedAt": datetime.now(timezone.utc).isoformat(),
+        }, indent=2), encoding="utf-8")
+        log("Trace: wrote default trace.json", "FILE")
 
     try:
         if single_check:
             log("Single check mode")
             run_check_cycle(state, tiers={"fast", "medium", "deep"})
+            try:
+                trace_changed = check_trace(state)
+                if trace_changed:
+                    git_push_site()
+            except Exception as e:
+                log(f"Trace check failed: {e}", "ERROR")
             log("Check complete")
         else:
             daemon_loop(state, quiet=quiet)

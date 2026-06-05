@@ -87,6 +87,33 @@ body.landing {
 .topbar-right { display: flex; align-items: center; gap: 1rem; }
 .topbar-status { font-size: .8rem; letter-spacing: .1em; color: #d00; }
 .operator-label { font-size: .75rem; color: #666; letter-spacing: .05em; }
+.trace-status {
+  font-size: .75rem; letter-spacing: .1em; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding-right: .75rem; border-right: 1px solid #222;
+}
+.trace-dot {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0;
+}
+.trace-dot--active {
+  background: #0a8; box-shadow: 0 0 6px #0a8;
+  animation: trace-pulse-green 1.5s ease-in-out infinite;
+}
+.trace-dot--lost {
+  background: #d00; box-shadow: 0 0 6px #d00;
+  animation: trace-pulse-red 1.5s ease-in-out infinite;
+}
+@keyframes trace-pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #0a8; }
+  50%      { opacity: .4; box-shadow: 0 0 2px #0a8; }
+}
+@keyframes trace-pulse-red {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #d00; }
+  50%      { opacity: .4; box-shadow: 0 0 2px #d00; }
+}
+.trace-label { color: #888; }
+.trace-time  { color: #666; font-variant-numeric: tabular-nums; }
 
 /* -- LAYOUT -- */
 .container {
@@ -173,6 +200,22 @@ h2 {
 .search-input:focus { outline: none; border-color: #d00; }
 .manifest-controls { display: flex; gap: .5rem; margin-bottom: 1rem; }
 .manifest-controls select { width: auto; }
+
+/* -- DECORATIVE DATA GIF (desktop only, bottom-left) -- */
+.data-gif {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  z-index: 5;
+  width: 48px;
+  height: auto;
+  border: 1px solid #d00;
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 900px), (max-height: 700px), (pointer: coarse) {
+  .data-gif { display: none; }
+}
 
 /* -- UTILITY -- */
 .hidden { display: none !important; }

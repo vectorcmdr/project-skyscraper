@@ -156,3 +156,52 @@ document.querySelectorAll('.tab').forEach(btn => {
 
 load();
 setOperator();
+
+/* ── TRACE (Discourse online status) ───────────────────── */
+let traceTick = null;
+
+function fmtElapsed(seconds) {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  if (h > 0) return `${h}h${String(m).padStart(2,'0')}m${String(s).padStart(2,'0')}s`;
+  if (m > 0) return `${m}m${String(s).padStart(2,'0')}s`;
+  return `${s}s`;
+}
+
+function renderTrace(data) {
+  const el = document.getElementById('traceStatus');
+  if (!el) return;
+
+  if (data.state === 'ACTIVE') {
+    el.innerHTML = `<span class="trace-dot trace-dot--active"></span><span class="trace-label">TRACE: ACTIVE</span>`;
+  } else if (data.state === 'LOST' && data.lastSeenAt) {
+    const then = new Date(data.lastSeenAt);
+    const elapsed = (Date.now() - then.getTime()) / 1000;
+    el.innerHTML = `<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TRACE: LOST</span> <span class="trace-time">-${fmtElapsed(elapsed)}</span>`;
+  } else {
+    el.innerHTML = '';
+  }
+}
+
+function updateTrace() {
+  fetch('trace.json')
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(data => {
+      renderTrace(data);
+      if (data.state === 'LOST') {
+        if (traceTick) clearInterval(traceTick);
+        traceTick = setInterval(() => renderTrace(data), 1000);
+      } else {
+        if (traceTick) { clearInterval(traceTick); traceTick = null; }
+      }
+    })
+    .catch(() => {
+      const el = document.getElementById('traceStatus');
+      if (el) el.innerHTML = '';
+    });
+}
+
+updateTrace();
+// Re-fetch trace.json every 30s so ACTIVE→LOST flip isn't missed (silent while ticking)
+setInterval(updateTrace, 30000);
