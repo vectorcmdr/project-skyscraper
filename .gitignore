@@ -5,3 +5,6 @@ config.json
 __pycache__/
 *.pyc
 .notes.md
+monitor/monitor.log
+state/.monitor.lock
+state/monitor_state.json
