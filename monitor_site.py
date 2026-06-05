@@ -431,6 +431,16 @@ def _extract_text_diff(diffs: list, max_chars: int = 500) -> str:
     """Extract meaningful text-only changes from diff entries (display layer only)."""
     lines_out = []
     for d in diffs:
+        text_diff = d.get("text_diff")
+        if text_diff:
+            for line in text_diff.split("\n"):
+                if line.startswith("--- "):
+                    continue
+                if line and line[0] in ("-", "+"):
+                    rest = line[1:].strip()
+                    if rest:
+                        lines_out.append(f"{line[0]} {rest}")
+            continue
         is_json = "wp-json" in d["url"]
         for line in d["diff"].split("\n"):
             line = line.rstrip("\r")
@@ -467,6 +477,45 @@ def _extract_text_diff(diffs: list, max_chars: int = 500) -> str:
     return result
 
 
+def _compute_text_diff(old_bytes: bytes, new_bytes: bytes) -> str:
+    """Compare rendered text fields from old/new API JSON and return a meaningful text-level diff."""
+    try:
+        old_data = json.loads(old_bytes.decode("utf-8", errors="replace"))
+        new_data = json.loads(new_bytes.decode("utf-8", errors="replace"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return ""
+    fields = []
+    for fname in ("content", "title", "excerpt"):
+        old_val = old_data.get(fname, {})
+        new_val = new_data.get(fname, {})
+        if isinstance(old_val, dict) and "rendered" in old_val:
+            old_txt = _strip_html(old_val.get("rendered", ""))
+            new_txt = _strip_html(new_val.get("rendered", ""))
+        elif isinstance(old_val, str):
+            old_txt = _strip_html(old_val)
+            new_txt = _strip_html(new_val)
+        else:
+            continue
+        if old_txt != new_txt:
+            fields.append((fname, old_txt, new_txt))
+    if not fields:
+        return ""
+    parts = []
+    for fname, old_txt, new_txt in fields:
+        old_lines = old_txt.splitlines()
+        new_lines = new_txt.splitlines()
+        d = list(difflib.unified_diff(old_lines, new_lines, lineterm="", n=0))[2:]
+        if d:
+            parts.append(f"--- {fname}")
+            parts.extend(d)
+    if not parts:
+        return ""
+    result = "\n".join(parts)
+    if len(result) > 1000:
+        result = result[:997] + "..."
+    return result
+
+
 def _diff_and_store(url: str, subdir: str, change_obj: dict, item_key: str = "diffs"):
     """Fetch URL, diff old vs new content, and store result in change_obj."""
     path = Path(url_to_path(url, subdir=subdir))
@@ -475,10 +524,12 @@ def _diff_and_store(url: str, subdir: str, change_obj: dict, item_key: str = "di
     new_bytes = path.read_bytes() if path.is_file() else None
     if old_bytes is not None and new_bytes is not None and old_bytes != new_bytes:
         diff = compute_diff(old_bytes, new_bytes, url)
-        change_obj.setdefault(item_key, []).append({
-            "url": url,
-            "diff": diff,
-        })
+        entry = {"url": url, "diff": diff}
+        if "wp-json" in url:
+            text_diff = _compute_text_diff(old_bytes, new_bytes)
+            if text_diff:
+                entry["text_diff"] = text_diff
+        change_obj.setdefault(item_key, []).append(entry)
 
 
 # ---------------------------------------------------------------------------
