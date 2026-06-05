@@ -430,17 +430,22 @@ _NOISE_JSON_FIELDS = frozenset({
 def _extract_text_diff(diffs: list, max_chars: int = 500) -> str:
     """Extract meaningful text-only changes from diff entries (display layer only)."""
     lines_out = []
+    consumed_text = False
     for d in diffs:
         text_diff = d.get("text_diff")
-        if text_diff:
-            for line in text_diff.split("\n"):
-                if line.startswith("--- "):
-                    continue
-                if line and line[0] in ("-", "+"):
-                    rest = line[1:].strip()
-                    if rest:
-                        lines_out.append(f"{line[0]} {rest}")
+        if text_diff is not None:
+            consumed_text = True
+            if text_diff:
+                for line in text_diff.split("\n"):
+                    if line.startswith("--- "):
+                        continue
+                    if line and line[0] in ("-", "+"):
+                        rest = line[1:].strip()
+                        if rest:
+                            lines_out.append(f"{line[0]} {rest}")
             continue
+        if consumed_text:
+            continue  # text_diff already covered this item, skip raw diffs
         is_json = "wp-json" in d["url"]
         for line in d["diff"].split("\n"):
             line = line.rstrip("\r")
