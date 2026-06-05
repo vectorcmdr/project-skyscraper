@@ -407,10 +407,64 @@ def _strip_html(text: str) -> str:
     """Strip HTML tags, decode entities, and collapse whitespace for readable display."""
     text = re.sub(r'<[^>]+>', '', text)
     text = html.unescape(text)
+    # Decode JSON escape sequences left in (e.g. \n, \", \\)
+    text = text.replace('\\n', '\n').replace('\\r', '\r').replace('\\t', '\t')
+    text = re.sub(r'\\(["\\/])', r'\1', text)
+    # Remove truncated/incomplete HTML tags (no closing >)
+    text = re.sub(r'<[^>\s]+', '', text)
     lines = text.split('\n')
     lines = [re.sub(r'\s+', ' ', l).strip() for l in lines]
     lines = [l for l in lines if l]
     return '\n'.join(lines)
+
+
+_NOISE_JSON_FIELDS = frozenset({
+    "modified", "modified_gmt", "date_gmt", "guid", "_links", "meta", "code",
+    "id", "author", "status", "type", "slug", "template", "featured_media",
+    "comment_status", "ping_status", "menu_order", "parent", "order",
+    "generated_slug", "_private", "link", "class_list", "categories",
+    "tags", "sticky", "format", "password",
+})
+
+
+def _extract_text_diff(diffs: list, max_chars: int = 500) -> str:
+    """Extract meaningful text-only changes from diff entries (display layer only)."""
+    lines_out = []
+    for d in diffs:
+        is_json = "wp-json" in d["url"]
+        for line in d["diff"].split("\n"):
+            line = line.rstrip("\r")
+            if not line or line[0] == "@":
+                continue
+            prefix = line[0]
+            rest = line[1:].strip()
+            clean = _strip_html(rest)
+            if not clean:
+                continue
+            # JSON key-value noise filter
+            if is_json and clean.startswith('"'):
+                if '":' not in clean:
+                    continue
+                field = clean.split('":')[0].strip('" ')
+                if field in _NOISE_JSON_FIELDS:
+                    continue
+                # Extract value from rendered/title/excerpt fields
+                val = clean.split('":', 1)[1].strip().strip('",').strip("'").strip()
+                if val and len(val) > 1:
+                    clean = val
+                else:
+                    continue
+            # CSS noise filter
+            if re.match(r'^[.#][-a-zA-Z#]', clean) and ('{' in clean or ';' in clean or ':before' in clean or ':after' in clean):
+                continue
+            lines_out.append(f"{prefix} {clean}")
+
+    if not lines_out:
+        return ""
+    result = '\n'.join(lines_out)
+    if len(result) > max_chars:
+        result = result[:max_chars - 3] + "..."
+    return result
 
 
 def _diff_and_store(url: str, subdir: str, change_obj: dict, item_key: str = "diffs"):
@@ -1425,12 +1479,17 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         link = items[0].get("link", "") if items else ""
         author = items[0].get("author", 0) if items else 0
         endpoint = c.get("endpoint", "")
-        diff = _content_preview(link, endpoint, str(items[0].get("id", ""))) if items else ""
+        diffs = c.get("diffs", [])
+        if diffs:
+            diff = _extract_text_diff(diffs)
+        else:
+            diff = _content_preview(link, endpoint, str(items[0].get("id", ""))) if items else ""
     elif t == "page_content_changed":
         title = c.get("url", "").split("/")[-1] or "page"
         link = c.get("url", "")
         endpoint = "page"
-        diff = _content_preview(link)
+        diffs = c.get("diffs", [])
+        diff = _extract_text_diff(diffs) if diffs else _content_preview(link)
     elif t == "media_replaced":
         title = f"Media #{c.get('id', '?')}"
         link = c.get("new_url", "")
@@ -1854,12 +1913,16 @@ def notify_changes(changes: list):
         fields = []
         for c in clist:
             ep_label = c["endpoint"].split("/")[-1]
+            diffs = c.get("diffs", [])
             for item in c.get("items", [])[:5]:
-                preview = _content_preview(
-                    item.get("link", ""),
-                    c.get("endpoint", ""),
-                    str(item.get("id", ""))
-                )
+                if diffs:
+                    preview = _extract_text_diff(diffs)
+                else:
+                    preview = _content_preview(
+                        item.get("link", ""),
+                        c.get("endpoint", ""),
+                        str(item.get("id", ""))
+                    )
                 item_title = item.get("title", "(untitled)")
                 val = preview[:1000] if preview else "(no cached content)"
                 fields.append({
@@ -1878,7 +1941,11 @@ def notify_changes(changes: list):
         fields = []
         for c in clist[:5]:
             page_label = c["url"].split("/")[-1] or c["url"]
-            preview = _content_preview(c.get("url", ""))
+            diffs = c.get("diffs", [])
+            if diffs:
+                preview = _extract_text_diff(diffs)
+            else:
+                preview = _content_preview(c.get("url", ""))
             val = page_label[:200]
             if preview:
                 val += f"\n{preview[:900]}"

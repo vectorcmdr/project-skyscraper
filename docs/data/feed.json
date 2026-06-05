@@ -656,7 +656,7 @@
       "title": "Inbox",
       "link": "",
       "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "@@ -5,2 +5,2 @@\n- \"modified\": \"2026-05-29T11:16:42\",\n- \"modified_gmt\": \"2026-05-29T10:16:42\",\n+ \"modified\": \"2026-05-31T19:56:08\",\n+ \"modified_gmt\": \"2026-05-31T18:56:08\",\n@@ -15 +15 @@\n- \"rendered\": \"\\n\\nProject Skyscraper</s...",
+      "diff": "- Project Skyscraper",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": ""
     },
@@ -676,7 +676,7 @@
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
       "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "Inbox – project-skyscraper\nProject Skyscraper\nGhost <null>À : the_architect@project-skyscraper.com\njeudi 28 mai19:00\nT’en es où ?\nProject Skyscraper\nThe Architect <the_architect@project-skyscraper.com>À : Ghost <null>\njeudi 28 mai19:54\nOn a un problème. https://project-skyscraper.com/inbox/\nProject Skyscraper\nGhost <null>À : the_architect@project-skyscraper.com\nvendredi 29 mai10:31\nEt pour la Tour ? Est-ce que System est connecté ?\nProject Skyscraper\nThe Architect <the_architect@project-skysc...",
+      "diff": "- Project Skyscraper",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "System"
     },
@@ -691,5 +691,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-05T03:16:19.512786+00:00"
+  "updated": "2026-06-05T03:25:55.787256+00:00"
 }

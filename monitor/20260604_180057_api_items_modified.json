@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-06-04 18:00:57 UTC",
+  "category": "api_items_modified",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_modified",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 2655,
+            "title": "2017_dataset",
+            "author": 279180096,
+            "old_modified": "2026-06-04T18:18:14",
+            "new_modified": "2026-06-04T18:57:28"
+          }
+        ],
+        "detail": "1 item(s) modified in /wp-json/wp/v2/posts"
+      }
+    ]
+  }
+}

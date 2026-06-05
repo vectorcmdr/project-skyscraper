@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-06-04 15:18:49 UTC",
+  "category": "api_items_modified",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_modified",
+        "endpoint": "/wp-json/wp/v2/pages",
+        "count": 1,
+        "items": [
+          {
+            "id": 1812,
+            "title": "Inbox",
+            "author": 279180096,
+            "old_modified": "2026-05-31T19:56:08",
+            "new_modified": "2026-06-04T16:16:05"
+          }
+        ],
+        "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/wp-json/wp/v2/pages/1812",
+            "diff": "@@ -5,2 +5,2 @@\n-  \"modified\": \"2026-05-29T11:16:42\",\n-  \"modified_gmt\": \"2026-05-29T10:16:42\",\n+  \"modified\": \"2026-05-31T19:56:08\",\n+  \"modified_gmt\": \"2026-05-31T18:56:08\",\n@@ -15 +15 @@\n-    \"rendered\": \"\\n<div class=\\\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\\\" style=\\\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:0;padding-bottom:0\\\">\\n<p class=\\\"has-base-color has-primary-background-color has-text-color has-background has-link-color has-medium-font-size wp-elements-427504c7d44304b094088571c12a4b57 wp-block-paragraph\\\" style=\\\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)\\\"><strong>Project Skyscraper</s..."
+          }
+        ]
+      }
+    ]
+  }
+}
