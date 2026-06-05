@@ -231,7 +231,7 @@ h2 {
   pointer-events: none;
   user-select: none;
 }
-@media (max-height: 700px), (pointer: coarse) {
+@media (max-height: 700px) {
   .data-gif { display: none; }
 }
 
