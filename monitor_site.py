@@ -1350,6 +1350,43 @@ def _build_user_map(state: dict) -> dict:
     return result
 
 
+def _content_preview(link: str, endpoint: str = "", item_id: str = "") -> str:
+    """Extract readable text from cached page for display (not raw diff)."""
+    raw = ""
+
+    # Try API JSON first — content.rendered has the body without page chrome
+    if endpoint and item_id:
+        api_url = f"{BASE_URL}{endpoint}/{item_id}"
+        api_path = url_to_path(api_url, subdir="api")
+        if api_path.is_file():
+            try:
+                data = json.loads(api_path.read_text(encoding="utf-8"))
+                raw = data.get("content", {}).get("rendered", "") or data.get("excerpt", {}).get("rendered", "") or ""
+            except Exception:
+                pass
+
+    # Fall back to full HTML page
+    if not raw and link:
+        html_path = url_to_path(link, subdir="html")
+        if html_path.is_file():
+            try:
+                raw = html_path.read_text(encoding="utf-8")
+            except Exception:
+                pass
+
+    if not raw:
+        return ""
+
+    # Remove script/style blocks before stripping tags
+    text = re.sub(r'<script[^>]*>.*?</script>', '', raw, flags=re.DOTALL)
+    text = re.sub(r'<style[^>]*>.*?</style>', '', text, flags=re.DOTALL)
+    text = _strip_html(text)
+
+    if len(text) > 497:
+        text = text[:497] + "..."
+    return text
+
+
 def _change_to_feed_entry(c: dict) -> dict | None:
     """Convert a change object into a feed entry dict."""
     t = c["type"]
@@ -1388,16 +1425,12 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         link = items[0].get("link", "") if items else ""
         author = items[0].get("author", 0) if items else 0
         endpoint = c.get("endpoint", "")
-        diffs = c.get("diffs", [])
-        raw_diff = _strip_html(diffs[0]["diff"]) if diffs else ""
-        diff = (raw_diff[:497] + "...") if len(raw_diff) > 500 else raw_diff
+        diff = _content_preview(link, endpoint, str(items[0].get("id", ""))) if items else ""
     elif t == "page_content_changed":
         title = c.get("url", "").split("/")[-1] or "page"
         link = c.get("url", "")
         endpoint = "page"
-        diffs = c.get("diffs", [])
-        raw_diff = _strip_html(diffs[0]["diff"]) if diffs else ""
-        diff = (raw_diff[:497] + "...") if len(raw_diff) > 500 else raw_diff
+        diff = _content_preview(link)
     elif t == "media_replaced":
         title = f"Media #{c.get('id', '?')}"
         link = c.get("new_url", "")
@@ -1821,18 +1854,17 @@ def notify_changes(changes: list):
         fields = []
         for c in clist:
             ep_label = c["endpoint"].split("/")[-1]
-            items_str = "\n".join(
-                f"#{i['id']}: {i.get('title', '(untitled)')}"
-                for i in c["items"][:10]
-            )
-            if items_str:
-                fields.append({"name": ep_label, "value": items_str[:1024]})
-            for d in (c.get("diffs") or [])[:3]:
-                diff_text = _strip_html(d["diff"])
-                short_url = d["url"].split("/")[-1]
+            for item in c.get("items", [])[:5]:
+                preview = _content_preview(
+                    item.get("link", ""),
+                    c.get("endpoint", ""),
+                    str(item.get("id", ""))
+                )
+                item_title = item.get("title", "(untitled)")
+                val = preview[:1000] if preview else "(no cached content)"
                 fields.append({
-                    "name": f"Diff: {short_url}",
-                    "value": f"```diff\n{diff_text}\n```" if len(diff_text) < 950 else diff_text,
+                    "name": f"{item_title} ({ep_label})",
+                    "value": val,
                 })
         send_discord(
             title=f"Modified API Items: {total}",
@@ -1846,13 +1878,10 @@ def notify_changes(changes: list):
         fields = []
         for c in clist[:5]:
             page_label = c["url"].split("/")[-1] or c["url"]
-            diff_text = ""
-            if c.get("diffs"):
-                for d in c["diffs"][:1]:
-                    diff_text = _strip_html(d["diff"])
+            preview = _content_preview(c.get("url", ""))
             val = page_label[:200]
-            if diff_text:
-                val += f"\n```diff\n{diff_text[:900]}\n```"
+            if preview:
+                val += f"\n{preview[:900]}"
             fields.append({"name": "Page Changed", "value": val[:1024]})
         send_discord(
             title=f"Page Content Changed: {len(clist)} page(s)",
