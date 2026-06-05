@@ -84,7 +84,16 @@ body.landing {
   color: #eee; text-decoration: none; font-weight: bold; letter-spacing: .15em;
 }
 .topbar-avatar { width: 28px; height: 28px; border-radius: 50%; border: 1px solid #d00; object-fit: cover; }
-.topbar-right { display: flex; align-items: center; gap: 1rem; }
+.topbar-right { display: flex; flex-direction: column; align-items: flex-end; gap: .35rem; }
+.topbar-right-top { display: flex; align-items: center; gap: 1rem; }
+.proxy-network { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; justify-content: flex-end; }
+.proxy-label { font-size: .65rem; color: #555; letter-spacing: .1em; white-space: nowrap; }
+.proxy-tag {
+  display: inline-block; padding: .1rem .35rem; text-decoration: none;
+  border: 1px solid #333; font-size: .65rem; color: #888;
+  letter-spacing: .08em; transition: all .15s; line-height: 1.4;
+}
+.proxy-tag:hover { border-color: #666; color: #aaa; background: #151515; }
 .topbar-status { font-size: .8rem; letter-spacing: .1em; color: #d00; }
 .operator-label { font-size: .75rem; color: #666; letter-spacing: .05em; }
 .trace-status {
