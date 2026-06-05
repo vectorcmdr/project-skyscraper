@@ -24,6 +24,7 @@ Usage:
 """
 
 import difflib
+import html
 import json
 import hashlib
 import os
@@ -403,8 +404,13 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str, max_lines: int = 
 
 
 def _strip_html(text: str) -> str:
-    """Strip HTML tags from text while preserving diff +/- markers and newlines."""
-    return re.sub(r'<[^>]+>', '', text)
+    """Strip HTML tags, decode entities, and collapse whitespace for readable display."""
+    text = re.sub(r'<[^>]+>', '', text)
+    text = html.unescape(text)
+    lines = text.split('\n')
+    lines = [re.sub(r'\s+', ' ', l).strip() for l in lines]
+    lines = [l for l in lines if l]
+    return '\n'.join(lines)
 
 
 def _diff_and_store(url: str, subdir: str, change_obj: dict, item_key: str = "diffs"):
@@ -1352,6 +1358,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
     title = c.get("detail", "unknown")
     endpoint = ""
     author = 0
+    diff = ""
 
     if t == "sitemap_added":
         count = c.get("count", 0)
@@ -1381,10 +1388,16 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         link = items[0].get("link", "") if items else ""
         author = items[0].get("author", 0) if items else 0
         endpoint = c.get("endpoint", "")
+        diffs = c.get("diffs", [])
+        raw_diff = _strip_html(diffs[0]["diff"]) if diffs else ""
+        diff = (raw_diff[:497] + "...") if len(raw_diff) > 500 else raw_diff
     elif t == "page_content_changed":
         title = c.get("url", "").split("/")[-1] or "page"
         link = c.get("url", "")
         endpoint = "page"
+        diffs = c.get("diffs", [])
+        raw_diff = _strip_html(diffs[0]["diff"]) if diffs else ""
+        diff = (raw_diff[:497] + "...") if len(raw_diff) > 500 else raw_diff
     elif t == "media_replaced":
         title = f"Media #{c.get('id', '?')}"
         link = c.get("new_url", "")
@@ -1410,7 +1423,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         "title": title,
         "link": link,
         "endpoint": endpoint,
-        "diff": c.get("diff", ""),
+        "diff": diff,
         "detail": c.get("detail", ""),
         "author": author,
     }
