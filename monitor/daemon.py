@@ -66,7 +66,10 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
     if state["stats"]["first_run"] is None:
         state["stats"]["first_run"] = state["stats"]["last_run"]
 
-    quiet = is_initial or is_first_cycle
+    warmup = state["stats"].get("_warmup", 0)
+    quiet = is_initial or is_first_cycle or warmup > 0
+    if warmup > 0:
+        state["stats"]["_warmup"] = warmup - 1
 
     if "fast" in tiers:
         log("=== Fast check ===", "FAST")
@@ -257,10 +260,8 @@ def daemon_loop(quiet: bool = False):
     print_banner()
     state = load_state()
     _sync_state_hashes_to_mirror(state)
+    state["stats"]["_warmup"] = 2
     save_state(state)
-    seed_feed_from_mirror(state)
-    ensure_trace_default()
-    init_trace_state()
 
     last_tiers = {"fast": 0, "medium": 0, "deep": 0}
 
