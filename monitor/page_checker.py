@@ -54,7 +54,7 @@ def check_page_content(url: str, state: dict) -> list:
                 if old_bytes != result.content:
                     diff_text = compute_diff(old_bytes, result.content, url, str(old_path))
 
-            if diff_text is None:
+            if not diff_text:
                 log(f"Page {url}: hash changed but beautified diff is noise-only (suppressed)", "DEEP")
             else:
                 change_obj = {

@@ -41,6 +41,10 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
     if not filtered:
         return None
 
+    real = [l for l in filtered if l.strip() and not l.strip().startswith("@@")]
+    if not real:
+        return None
+
     if len(filtered) > max_lines:
         filtered = filtered[:max_lines]
         filtered.append(f"... ({len(diff_lines) - max_lines} more lines)")

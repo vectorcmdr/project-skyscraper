@@ -27,6 +27,22 @@ from monitor.report_writer import clean_old_reports, write_monitor_report
 from monitor.discovery import fetch_and_save
 
 
+def _sync_state_hashes_to_mirror(state: dict):
+    import hashlib
+    from monitor.url_mapper import url_to_path
+    pages = state.get("pages", {})
+    synced = 0
+    for url, ps in pages.items():
+        path = url_to_path(url, "html")
+        if path.is_file():
+            fh = hashlib.md5(path.read_bytes()).hexdigest()
+            if ps.get("hash") != fh:
+                ps["hash"] = fh
+                synced += 1
+    if synced:
+        log(f"Synced {synced} stale state hashes to mirror", "FILE")
+
+
 def print_banner():
     print(flush=True)
     print("  project-skyscraper.com - Change Monitor", flush=True)
@@ -238,6 +254,7 @@ def daemon_loop(quiet: bool = False):
 
     print_banner()
     state = load_state()
+    _sync_state_hashes_to_mirror(state)
     save_state(state)
     seed_feed_from_mirror(state)
     ensure_trace_default()
@@ -310,6 +327,7 @@ def run_single_check():
     try:
         print_banner()
         state = load_state()
+        _sync_state_hashes_to_mirror(state)
         save_state(state)
         ensure_trace_default()
         init_trace_state()
