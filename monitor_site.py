@@ -150,7 +150,7 @@ _PAGE_NOISE_PATTERNS = [
     # WP Statistics online check endpoint signature
     (re.compile(r'"_wpnonce":"[a-f0-9]+"'), '"_wpnonce":"REMOVED"'),
     # Auto-generated CSS class hashes (WordPress block editor)
-    (re.compile(r'wp-custom-css-[a-f0-9]{9}'), 'wp-custom-css-XXXXXXXXX'),
+    (re.compile(r'wp-custom-css-[a-f0-9]+'), 'wp-custom-css-XXXXXXXXX'),
 ]
 
 def _strip_content_noise(html: str) -> str:
