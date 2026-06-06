@@ -45,6 +45,11 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
     if not real:
         return None
 
+    import re as _re
+    text = _re.sub(r'<[^>]+>', '', "".join(real)).strip()
+    if not text or len(text) < 3:
+        return None
+
     if len(filtered) > max_lines:
         filtered = filtered[:max_lines]
         filtered.append(f"... ({len(diff_lines) - max_lines} more lines)")

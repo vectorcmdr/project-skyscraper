@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-06-06 16:10:31 UTC",
+  "category": "changes",
+  "data": {
+    "count": 9,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-080413-full/",
+        "old_hash": "4ba002f80913d7516aa8cd6040eec78d",
+        "new_hash": "2ecea98aa2daff7f608c943c952dc67f",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-080413-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-080413-full/",
+            "diff": "@@ -421,3 +421,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/project-skyscraper/",
+        "old_hash": "7eedeba4a6c03c799e6bf4e7158de078",
+        "new_hash": "37b7a790f6ef7e10d4faffe37ff45e57",
+        "detail": "Content changed: https://project-skyscraper.com/project-skyscraper/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/project-skyscraper/",
+            "diff": "@@ -419,3 +419,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-094316-full/",
+        "old_hash": "52178f4ee091494c3b4fae6766deb83f",
+        "new_hash": "a37e85f08bd89539520b8a106f995894",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-094316-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-094316-full/",
+            "diff": "@@ -425,3 +425,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "old_hash": "b1fa009738463b3df2d02d21f17efdd9",
+        "new_hash": "44a361b74493bfa2571e4ed7bddef92d",
+        "detail": "Content changed: https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+            "diff": "@@ -366,3 +366,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sleep-mode/",
+        "old_hash": "db9b093746531b03ef1f169da8568060",
+        "new_hash": "3db68f43a3b41e2012acd38179e55a34",
+        "detail": "Content changed: https://project-skyscraper.com/sleep-mode/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sleep-mode/",
+            "diff": "@@ -401,3 +401,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/tr4ce/",
+        "old_hash": "1e2f8694b7b97ec7f2282097ad6d8941",
+        "new_hash": "88d2c5a425a253ef84ebe4f90142065f",
+        "detail": "Content changed: https://project-skyscraper.com/tr4ce/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/tr4ce/",
+            "diff": "@@ -419,3 +419,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2002/05/12/code/",
+        "old_hash": "7b49bcb2a382892ea13c726f2a0084a4",
+        "new_hash": "c033a278807fdfc26995ccd5f10336a2",
+        "detail": "Content changed: https://project-skyscraper.com/2002/05/12/code/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2002/05/12/code/",
+            "diff": "@@ -728,4 +728,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "old_hash": "c0bae50c56b89bb56fc4475cb61840f6",
+        "new_hash": "c52458c3deb08205cd41b6be53e16870",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+            "diff": "@@ -712,3 +712,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/06/01/event-01062017/",
+        "old_hash": "42b357c27e413b97cb2d14f80fce3c1b",
+        "new_hash": "7f9b500d0e64e1c2ec5f60cc16a98068",
+        "detail": "Content changed: https://project-skyscraper.com/2017/06/01/event-01062017/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/06/01/event-01062017/",
+            "diff": "@@ -504,3 +504,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      }
+    ]
+  }
+}
