@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-06-06 15:26:04 UTC",
+  "category": "changes",
+  "data": {
+    "count": 3,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-094127-full/",
+        "old_hash": "6ed1f9723bfe6a45593b1dafdc38b71e",
+        "new_hash": "de1e4eb702fe37230a4083d2da018eed",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-094127-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-094127-full/",
+            "diff": "@@ -424,3 +424,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+        "old_hash": "b13e9e8c59c6e6cb14254e6ce71cbc66",
+        "new_hash": "7ef37ea3c38755f223e5fd4c577e381d",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+            "diff": "@@ -285,7 +285,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 0/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 1/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -368,7 +368,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"d4a96231a6\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/01/structural-analysis-204649/\" /><input type=\"hidden\" name=\"post_id\" value=\"1226\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"0ee4d5bf17\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/01/structural-analysis-204649/\" /><input type=\"hidden\" name=\"post_id\" value=\"1226\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-211927-full/",
+        "old_hash": "16164cf6f44aed3e511abcc253d687c7",
+        "new_hash": "e85b44fc1c4804cdcecc0f1173f2af36",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-211927-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-211927-full/",
+            "diff": "@@ -418,3 +418,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

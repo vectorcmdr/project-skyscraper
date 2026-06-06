@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-06-06 15:26:21 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/inbox/",
+        "old_hash": "b80613758db85d21cd6975102caa5485",
+        "new_hash": "b1c91a91bc55618a5ddf78bec4192d57",
+        "detail": "Content changed: https://project-skyscraper.com/inbox/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/inbox/",
+            "diff": "@@ -519,3 +519,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "old_hash": "dcb43599215024878172b043e6b83a2a",
+        "new_hash": "c00fb6fa3bc28a7a635fd1b0a8c11397",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+            "diff": "@@ -504,4 +504,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      }
+    ]
+  }
+}

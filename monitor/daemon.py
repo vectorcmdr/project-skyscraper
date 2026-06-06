@@ -262,10 +262,9 @@ def daemon_loop(quiet: bool = False):
 
     last_tiers = {"fast": 0, "medium": 0, "deep": 0}
 
-    is_first = state["stats"]["total_checks"] == 0
-    log("Starting initial check cycle..." + (" (quiet sync)" if is_first else ""))
-    run_check_cycle(state, tiers={"fast", "medium", "deep"}, is_initial=is_first)
-    log("Initial check complete")
+    log("Starting initial sync cycle (quiet)...")
+    run_check_cycle(state, tiers={"fast", "medium", "deep"}, is_initial=True)
+    log("Initial sync complete, now monitoring")
 
     def _on_shutdown(signum, frame):
         log("Shutting down...")
@@ -332,9 +331,8 @@ def run_single_check():
         ensure_trace_default()
         init_trace_state()
 
-        is_first = state["stats"]["total_checks"] == 0
-        log("Single check mode" + (" (quiet sync)" if is_first else ""))
-        run_check_cycle(state, tiers={"fast", "medium", "deep"}, is_initial=is_first)
+        log("Single check mode")
+        run_check_cycle(state, tiers={"fast", "medium", "deep"})
 
         trace_changed = check_trace()
         if trace_changed:
