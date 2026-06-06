@@ -1,14 +1,17 @@
 """Page content checking -- hash comparison with noise-aware diffs."""
 
+import re
 from datetime import datetime, timezone
 
-from monitor.config import BASE_URL
+from monitor.config import BASE_URL, DATA_DIR
 from monitor.http_client import fetch
 from monitor.logger import log
 from monitor.noise_filter import is_noise_only_page_change
 from monitor.diff_engine import compute_diff
 from monitor.url_mapper import url_to_path
 from monitor.api_collections import find_author_for_url
+
+_NEURAL_URL = f"{BASE_URL}/neural-network-status/"
 
 
 def check_page_content(url: str, state: dict) -> list:
@@ -27,6 +30,9 @@ def check_page_content(url: str, state: dict) -> list:
     if result.failed:
         log(f"Page {url}: fetch failed ({result.status})", "WARN")
         return changes
+
+    if url == _NEURAL_URL:
+        _extract_connection_count(result.text)
 
     new_hash = result.hash
     old_hash = page_state.get("hash")
@@ -82,6 +88,16 @@ def _save_mirror_copy(url: str, result):
     path.parent.mkdir(parents=True, exist_ok=True)
     if result.content:
         path.write_bytes(result.content)
+
+
+def _extract_connection_count(html: str):
+    m = re.search(r'<strong>(\d+)</strong>\s*Live Connection', html)
+    if m:
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        import json
+        (DATA_DIR / "connections.json").write_text(
+            json.dumps({"count": int(m.group(1))}), encoding="utf-8"
+        )
 
 
 def get_page_check_batch(state: dict, chunk_size: int = 15) -> list:

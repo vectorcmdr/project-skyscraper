@@ -107,7 +107,7 @@
 
       function applyLiveParams(text) {
         var m;
-        if ((m = /<strong>(\d+)<\/strong>/.exec(text))) { LIVE_COUNT = m[1]; countEl.textContent = m[1]; }
+        if ((m = /count\s*=\s*(\d+)/.exec(text))) { PARAMS.COUNT = parseInt(m[1]); }
         if ((m = /count\s*=\s*(\d+)/.exec(text))) { PARAMS.COUNT = parseInt(m[1]); }
         if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
           PARAMS.DISTANCE = parseFloat(m[1]); PARAMS.DIST_ADD = parseFloat(m[2]);
@@ -244,6 +244,11 @@
         .then(function (t) { applyLiveParams(t); })
         .catch(function () {})
         .finally(function () { init(); });
+
+      fetch('data/connections.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { if (d && d.count) { countEl.textContent = d.count; } })
+        .catch(function () {});
     })();
   </script>
 </body>

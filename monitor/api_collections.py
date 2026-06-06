@@ -39,8 +39,6 @@ def check_api_collection(endpoint: str, state: dict) -> list:
     new_ids = set()
     new_items_map = {}
 
-    pending_items = set(api_state.get("_pending_ids", []))
-
     for item in items:
         iid = str(item.get("id"))
         if iid:
@@ -49,12 +47,7 @@ def check_api_collection(endpoint: str, state: dict) -> list:
 
     log(f"API {endpoint}: {len(new_ids)} items across {total_pages} page(s)", "DEBUG")
 
-    added_ids = set()
-    for iid in new_ids - known_ids:
-        if iid in pending_items:
-            added_ids.add(iid)
-        else:
-            pending_items.add(iid)
+    added_ids = new_ids - known_ids
 
     removed_ids = known_ids - new_ids
     changed_items = []
@@ -121,7 +114,6 @@ def check_api_collection(endpoint: str, state: dict) -> list:
     api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
     api_state["items"] = [new_items_map[iid] for iid in sorted(new_items_map, key=int)]
     api_state["total_pages"] = total_pages
-    api_state["_pending_ids"] = sorted(iid for iid in pending_items if iid not in added_ids)
 
     return changes
 
