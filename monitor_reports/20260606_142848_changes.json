@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-06-06 14:28:48 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 2850,
+            "title": "2022_dataset",
+            "modified": "2026-06-06T15:15:48",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+            "author": 279180095,
+            "name": "",
+            "date_gmt": "2022-04-24T18:00:00"
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/posts"
+      }
+    ]
+  }
+}

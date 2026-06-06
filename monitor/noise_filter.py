@@ -15,6 +15,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'[?&]m=\d+'), ''),
     (re.compile(r'e-\d{6}\.js'), 'e-000000.js'),
     (re.compile(r'nonce=[a-f0-9]+'), 'nonce=REMOVED'),
+    (re.compile(r'"nonce"\s*:\s*"[a-f0-9]+"'), '"nonce":"REMOVED"'),
     (re.compile(r'generated in \d+\.\d+ seconds'), ''),
     (re.compile(r'\d+ bytes batcached for \d+ seconds'), ''),
     (re.compile(r'served from batcache in \d+\.\d+ seconds'), ''),
@@ -24,6 +25,14 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'"signature":"[a-f0-9]+"'), '"signature":"REMOVED"'),
     (re.compile(r'"_wpnonce":"[a-f0-9]+"'), '"_wpnonce":"REMOVED"'),
     (re.compile(r'wp-custom-css-[a-f0-9]+'), 'wp-custom-css-XXXXXXXXX'),
+    (re.compile(r'<button\b[^>]*type=[\"\x27]submit[\"\x27][^>]*>[\s\S]*?</button>'), '', re.IGNORECASE),
+    (re.compile(r'"is_logged_in"\s*:\s*"\w*"'), '"is_logged_in":""'),
+    (re.compile(r'"ajaxurl"\s*:\s*"[^"]*"'), '"ajaxurl":""'),
+    (re.compile(r'"lang"\s*:\s*"[^"]*"'), '"lang":""'),
+    (re.compile(r'"display_exif"\s*:\s*"[^"]*"'), '"display_exif":""'),
+    (re.compile(r'"display_comments"\s*:\s*"[^"]*"'), '"display_comments":""'),
+    (re.compile(r'"single_image_gallery"\s*:\s*"[^"]*"'), '"single_image_gallery":""'),
+    (re.compile(r'"jetpack_subscriptions_widget"[^}]*\}'), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -35,6 +44,14 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ +-]\s*<!--$'),
     re.compile(r'^[ +-]\s*-->$'),
     re.compile(r'^[ +-]\s*//# sourceURL=.+$'),
+    re.compile(r'^[ +-]\s*<button\s+type.*$'),
+    re.compile(r'^[ +-]\s*"nonce"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"is_logged_in"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"ajaxurl"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"lang"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"display_exif"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"display_comments"\s*:.*$'),
+    re.compile(r'^[ +-]\s*"single_image_gallery"\s*:.*$'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({
