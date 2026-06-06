@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-06T11:27:07.062233+00:00",
+      "title": "2018_dataset",
+      "link": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Current state: unverified\n+ Current state: stable\n  <!--\n- generated 21 seconds ago\n- generated in 0.297 seconds\n+ generated 250 seconds ago\n+ generated in 0.288 seconds\n  served from batcache in 0.002 seconds\n- expires in 279 seconds\n+ expires in 50 seconds\n  -->",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System"
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-06T10:51:42.856248+00:00",
       "title": "project-skyscraper.com",
@@ -741,5 +751,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-06T10:51:42.857504+00:00"
+  "updated": "2026-06-06T11:27:07.063135+00:00"
 }
