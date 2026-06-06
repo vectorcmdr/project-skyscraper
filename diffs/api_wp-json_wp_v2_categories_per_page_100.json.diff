@@ -1,16 +1,20 @@
 # Diff: https://project-skyscraper.com/wp-json/wp/v2/categories?per_page=100
 # File: api/wp-json/wp/v2/categories_per_page_100.json
-# Timestamp: 2026-06-01 13:19:39 UTC
-# Lines: 47 old -> 47 new
+# Timestamp: 2026-06-06 07:57:50 UTC
+# Lines: 686 old -> 686 new
 # Beautified: yes
---- old/api/wp-json/wp/v2/categories_per_page_100.json
-+++ new/api/wp-json/wp/v2/categories_per_page_100.json
-@@ -1,7 +1,7 @@
+
+@@ -1,6 +1,6 @@
  [
+
    {
-     "id": 6325,
--    "count": 39,
-+    "count": 40,
+
+-    "count": 40,
+
++    "count": 46,
+
      "description": "",
-     "link": "https://project-skyscraper.com/category/non-classe/",
+
      "name": "Non classé",
+
+     "taxonomy": "category"

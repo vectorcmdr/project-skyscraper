@@ -1,0 +1,66 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/posts/1792
+# File: api/wp-json/wp/v2/posts/1792.json
+# Timestamp: 2026-06-06 07:58:24 UTC
+# Lines: 3921 old -> 6387 new
+# Beautified: yes
+
+@@ -37,6 +37,116 @@
+         "height": 0
+
+       },
+
+       "classes": []
+
++    },
+
++    {
+
++      "url": "https://project-skyscraper.com/2026/05/10/security-log-171453/",
+
++      "url_meta": {
+
++        "origin": 1792,
+
++        "position": 1
+
++      },
+
++      "title": "SECURITY LOG",
+
++      "date": "10 May 2026",
+
++      "excerpt": "memory bloc TRACE on holdUpdate: Full log",
+
++      "rel": "",
+
++      "context": "In &quot;Non classé&quot;",
+
++      "block_context": {
+
++        "text": "Non classé"
+
++      },
+
++      "img": {
+
++        "alt_text": "",
+
++        "src": "",
+
++        "width": 0,
+
++        "height": 0
+
++      },
+
++      "classes": []
+
++    },
+
++    {
+
++      "url": "https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+
++      "url_meta": {
+
+... (87 more lines)

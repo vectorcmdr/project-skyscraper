@@ -273,3 +273,920 @@
 [2026-06-06 07:43:49 UTC] [FAST] === Fast check ===
 [2026-06-06 07:43:50 UTC] [FAST] Sitemap: content refreshed but no URL changes
 [2026-06-06 07:43:50 UTC] [CHECK] No changes detected
+[2026-06-06 07:44:12 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-06 07:44:12 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 07:44:12 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 07:44:12 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/users: unchanged (304)
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-06 07:44:12 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 07:44:12 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 07:44:12 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-06 07:44:12 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 07:44:13 UTC] [CHECK] No changes detected
+[2026-06-06 07:44:20 UTC] [FAST] === Fast check ===
+[2026-06-06 07:44:20 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:44:20 UTC] [CHECK] No changes detected
+[2026-06-06 07:44:50 UTC] [FAST] === Fast check ===
+[2026-06-06 07:44:51 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:44:51 UTC] [CHECK] No changes detected
+[2026-06-06 07:45:21 UTC] [FAST] === Fast check ===
+[2026-06-06 07:45:21 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:45:21 UTC] [CHECK] No changes detected
+[2026-06-06 07:45:52 UTC] [FAST] === Fast check ===
+[2026-06-06 07:45:52 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:45:52 UTC] [CHECK] No changes detected
+[2026-06-06 07:46:12 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/users: unchanged (304)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 07:46:13 UTC] [CHECK] No changes detected
+[2026-06-06 07:46:22 UTC] [FAST] === Fast check ===
+[2026-06-06 07:46:23 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:46:23 UTC] [CHECK] No changes detected
+[2026-06-06 07:46:52 UTC] [FAST] === Fast check ===
+[2026-06-06 07:46:53 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:46:53 UTC] [CHECK] No changes detected
+[2026-06-06 07:47:23 UTC] [FAST] === Fast check ===
+[2026-06-06 07:47:23 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:47:23 UTC] [CHECK] No changes detected
+[2026-06-06 07:47:53 UTC] [FAST] === Fast check ===
+[2026-06-06 07:47:53 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:47:53 UTC] [CHECK] No changes detected
+[2026-06-06 07:48:13 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 07:48:13 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 07:48:13 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-06 07:48:13 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 07:48:13 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-06 07:48:13 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 07:48:13 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-06 07:48:13 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-06 07:48:13 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-06 07:48:14 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 07:48:14 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-06 07:48:14 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [DEBUG] API /wp-json/wp/v2/posts: 46 items across 1 page(s)
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-06 07:48:14 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-06 07:48:14 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 07:48:14 UTC] [DEBUG] API /wp-json/wp/v2/search: 56 items across 1 page(s)
+[2026-06-06 07:48:14 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-06 07:48:14 UTC] [CHECK] No changes detected
+[2026-06-06 07:48:24 UTC] [FAST] === Fast check ===
+[2026-06-06 07:48:24 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:48:24 UTC] [CHECK] No changes detected
+[2026-06-06 07:48:39 UTC] [INFO] Trace state changed: LOST (last seen: 2026-06-06T07:43:30.334Z)
+[2026-06-06 07:48:39 UTC] [FILE] git commit: [main 57e97c7] update site data [skip ci]
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[2026-06-06 07:48:41 UTC] [FILE] git push: 
+[2026-06-06 07:48:54 UTC] [FAST] === Fast check ===
+[2026-06-06 07:48:55 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:48:55 UTC] [CHECK] No changes detected
+[2026-06-06 07:49:25 UTC] [FAST] === Fast check ===
+[2026-06-06 07:49:25 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:49:25 UTC] [CHECK] No changes detected
+[2026-06-06 07:49:55 UTC] [FAST] === Fast check ===
+[2026-06-06 07:49:55 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:49:55 UTC] [CHECK] No changes detected
+[2026-06-06 07:50:14 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [DEBUG] API /wp-json/wp/v2/posts: 46 items across 1 page(s)
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 07:50:15 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 07:50:16 UTC] [DEBUG] API /wp-json/wp/v2/search: 56 items across 1 page(s)
+[2026-06-06 07:50:16 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-06 07:50:16 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 07:50:16 UTC] [CHECK] No changes detected
+[2026-06-06 07:50:25 UTC] [FAST] === Fast check ===
+[2026-06-06 07:50:26 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 07:50:26 UTC] [CHECK] No changes detected
+[2026-06-06 07:50:56 UTC] [FAST] === Fast check ===
+[2026-06-06 07:50:56 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:50:56 UTC] [CHECK] No changes detected
+[2026-06-06 07:51:26 UTC] [FAST] === Fast check ===
+[2026-06-06 07:51:27 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:51:27 UTC] [CHECK] No changes detected
+[2026-06-06 07:51:57 UTC] [FAST] === Fast check ===
+[2026-06-06 07:51:57 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:51:57 UTC] [CHECK] No changes detected
+[2026-06-06 07:52:15 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/posts: 46 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 07:52:15 UTC] [DEBUG] API /wp-json/wp/v2/search: 56 items across 1 page(s)
+[2026-06-06 07:52:15 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-06 07:52:15 UTC] [CHECK] No changes detected
+[2026-06-06 07:52:28 UTC] [FAST] === Fast check ===
+[2026-06-06 07:52:28 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:52:28 UTC] [CHECK] No changes detected
+[2026-06-06 07:52:58 UTC] [FAST] === Fast check ===
+[2026-06-06 07:52:59 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:52:59 UTC] [CHECK] No changes detected
+[2026-06-06 07:53:29 UTC] [FAST] === Fast check ===
+[2026-06-06 07:53:29 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 07:53:29 UTC] [CHECK] No changes detected
+[2026-06-06 07:53:55 UTC] [INFO] Shutting down...
+[2026-06-06 07:53:55 UTC] [INFO] Monitor stopped
+[2026-06-06 07:54:48 UTC] [INFO] ============================================================
+[2026-06-06 07:54:48 UTC] [INFO]   project-skyscraper.com - Complete Mirror Update
+[2026-06-06 07:54:48 UTC] [INFO]   2026-06-06 07:54:48 UTC
+[2026-06-06 07:54:48 UTC] [INFO] ============================================================
+[2026-06-06 07:54:48 UTC] [INFO] 
+[2026-06-06 07:54:48 UTC] [INFO] PHASE 1: Discovery
+[2026-06-06 07:54:49 UTC] [INFO]   61 URLs from sitemaps
+[2026-06-06 07:54:49 UTC] [INFO] 
+[2026-06-06 07:54:49 UTC] [INFO] PHASE 2: HTML Pages
+[2026-06-06 07:54:49 UTC] [INFO] === FETCHING HTML PAGES ===
+[2026-06-06 07:54:49 UTC] [FILE] State file removed -- daemon will quiet-sync on next start
+[2026-06-06 07:57:01 UTC] [INFO] ============================================================
+[2026-06-06 07:57:01 UTC] [INFO]   project-skyscraper.com - Complete Mirror Update
+[2026-06-06 07:57:01 UTC] [INFO]   2026-06-06 07:57:01 UTC
+[2026-06-06 07:57:01 UTC] [INFO] ============================================================
+[2026-06-06 07:57:01 UTC] [INFO] 
+[2026-06-06 07:57:01 UTC] [INFO] PHASE 1: Discovery
+[2026-06-06 07:57:02 UTC] [INFO]   61 URLs from sitemaps
+[2026-06-06 07:57:02 UTC] [INFO] 
+[2026-06-06 07:57:02 UTC] [INFO] PHASE 2: HTML Pages
+[2026-06-06 07:57:02 UTC] [INFO] === FETCHING HTML PAGES ===
+[2026-06-06 07:57:03 UTC] [INFO]   CHG  https://project-skyscraper.com/sleep-mode/
+[2026-06-06 07:57:12 UTC] [INFO]   CHG  https://project-skyscraper.com/sec-log-080413-full/
+[2026-06-06 07:57:14 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/15/sec-log-152158/
+[2026-06-06 07:57:15 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/18/sec-log-022531/
+[2026-06-06 07:57:15 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/20/sec-log-132904/
+[2026-06-06 07:57:16 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/23/sec-log-003237/
+[2026-06-06 07:57:16 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/25/sec-log-113610/
+[2026-06-06 07:57:17 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/27/sec-log-access-granted/
+[2026-06-06 07:57:18 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/
+[2026-06-06 07:57:19 UTC] [INFO]   CHG  https://project-skyscraper.com/2017/06/01/event-01062017/
+[2026-06-06 07:57:19 UTC] [INFO]   CHG  https://project-skyscraper.com/neural-network-status/
+[2026-06-06 07:57:20 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/06/01/structural-analysis-204649/
+[2026-06-06 07:57:21 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/
+[2026-06-06 07:57:21 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/10/security-log-171453/
+[2026-06-06 07:57:22 UTC] [INFO]   CHG  https://project-skyscraper.com/sec-log-094127-full/
+[2026-06-06 07:57:23 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/12/sec-log-120000/
+[2026-06-06 07:57:23 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/14/sec-log-172832/
+[2026-06-06 07:57:24 UTC] [INFO]   CHG  https://project-skyscraper.com/2005/04/13/quote/
+[2026-06-06 07:57:24 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/05/18/sec-log-211927/
+[2026-06-06 07:57:25 UTC] [INFO]   CHG  https://project-skyscraper.com/sec-log-211927-full/
+[2026-06-06 07:57:26 UTC] [INFO]   CHG  https://project-skyscraper.com/request-memory-timestamp-094317/
+[2026-06-06 07:57:28 UTC] [INFO]   CHG  https://project-skyscraper.com/inbox/
+[2026-06-06 07:57:29 UTC] [INFO]   CHG  https://project-skyscraper.com/2002/05/12/code/
+[2026-06-06 07:57:31 UTC] [INFO]   CHG  https://project-skyscraper.com/2017/07/21/event-21072017/
+[2026-06-06 07:57:31 UTC] [INFO]   CHG  https://project-skyscraper.com/2026/06/02/sec-log-194022/
+[2026-06-06 07:57:32 UTC] [INFO]   CHG  https://project-skyscraper.com/2017/07/08/2017_dataset/
+[2026-06-06 07:57:33 UTC] [INFO]   CHG  https://project-skyscraper.com/logo/
+[2026-06-06 07:57:33 UTC] [INFO]   CHG  https://project-skyscraper.com/tr4ce/
+[2026-06-06 07:57:34 UTC] [INFO]   CHG  https://project-skyscraper.com
+[2026-06-06 07:57:34 UTC] [INFO] 
+[2026-06-06 07:57:34 UTC] [INFO] PHASE 3: REST API
+[2026-06-06 07:57:34 UTC] [INFO] --- Root & Route Discovery ---
+[2026-06-06 07:57:48 UTC] [INFO] --- wp/v2 Collection Endpoints ---
+[2026-06-06 07:57:48 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts.json.diff
+[2026-06-06 07:57:48 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts
+[2026-06-06 07:57:48 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_per_page_100.json.diff
+[2026-06-06 07:57:48 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts?per_page=100
+[2026-06-06 07:57:49 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages.json.diff
+[2026-06-06 07:57:49 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages
+[2026-06-06 07:57:49 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_per_page_100.json.diff
+[2026-06-06 07:57:49 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages?per_page=100
+[2026-06-06 07:57:49 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_media.json.diff
+[2026-06-06 07:57:49 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/media
+[2026-06-06 07:57:49 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_media_per_page_100.json.diff
+[2026-06-06 07:57:49 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/media?per_page=100
+[2026-06-06 07:57:50 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_categories.json.diff
+[2026-06-06 07:57:50 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/categories
+[2026-06-06 07:57:50 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_categories_per_page_100.json.diff
+[2026-06-06 07:57:50 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/categories?per_page=100
+[2026-06-06 07:57:50 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_tags.json.diff
+[2026-06-06 07:57:50 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/tags
+[2026-06-06 07:57:50 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_tags_per_page_100.json.diff
+[2026-06-06 07:57:50 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/tags?per_page=100
+[2026-06-06 07:57:53 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_navigation.json.diff
+[2026-06-06 07:57:53 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/navigation
+[2026-06-06 07:57:53 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_navigation_per_page_100.json.diff
+[2026-06-06 07:57:53 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/navigation?per_page=100
+[2026-06-06 07:57:53 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_search.json.diff
+[2026-06-06 07:57:53 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/search
+[2026-06-06 07:57:54 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_search_per_page_100.json.diff
+[2026-06-06 07:57:54 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/search?per_page=100
+[2026-06-06 07:57:54 UTC] [INFO] --- Auth-gated Endpoints ---
+[2026-06-06 07:57:54 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/settings -> 401
+[2026-06-06 07:57:55 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/themes -> 401
+[2026-06-06 07:57:56 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/plugins -> 401
+[2026-06-06 07:57:56 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/block-types -> 401
+[2026-06-06 07:57:57 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/templates -> 401
+[2026-06-06 07:57:57 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/template-parts -> 401
+[2026-06-06 07:57:58 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/global-styles -> 404
+[2026-06-06 07:57:58 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/menu-items -> 401
+[2026-06-06 07:57:58 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/menus -> 401
+[2026-06-06 07:57:59 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/sidebars -> 401
+[2026-06-06 07:57:59 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wp/v2/widgets -> 401
+[2026-06-06 07:57:59 UTC] [INFO] --- Individual Items ---
+[2026-06-06 07:58:00 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_117.json.diff
+[2026-06-06 07:58:00 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/117
+[2026-06-06 07:58:11 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_259.json.diff
+[2026-06-06 07:58:11 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/259
+[2026-06-06 07:58:11 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/263
+[2026-06-06 07:58:12 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_267.json.diff
+[2026-06-06 07:58:12 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/267
+[2026-06-06 07:58:12 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/269
+[2026-06-06 07:58:13 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/271
+[2026-06-06 07:58:14 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/273
+[2026-06-06 07:58:14 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/275
+[2026-06-06 07:58:15 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/277
+[2026-06-06 07:58:16 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/279
+[2026-06-06 07:58:16 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_281.json.diff
+[2026-06-06 07:58:16 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/281
+[2026-06-06 07:58:17 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_291.json.diff
+[2026-06-06 07:58:17 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/291
+[2026-06-06 07:58:18 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_320.json.diff
+[2026-06-06 07:58:18 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/320
+[2026-06-06 07:58:19 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1226.json.diff
+[2026-06-06 07:58:19 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1226
+[2026-06-06 07:58:19 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1231.json.diff
+[2026-06-06 07:58:19 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1231
+[2026-06-06 07:58:20 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1626.json.diff
+[2026-06-06 07:58:20 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1626
+[2026-06-06 07:58:21 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1640.json.diff
+[2026-06-06 07:58:21 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1640
+[2026-06-06 07:58:23 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1680.json.diff
+[2026-06-06 07:58:23 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1680
+[2026-06-06 07:58:23 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1691.json.diff
+[2026-06-06 07:58:23 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1691
+[2026-06-06 07:58:24 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1792.json.diff
+[2026-06-06 07:58:24 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1792
+[2026-06-06 07:58:26 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1837.json.diff
+[2026-06-06 07:58:26 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1837
+[2026-06-06 07:58:27 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_posts_1852.json.diff
+[2026-06-06 07:58:27 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/posts/1852
+[2026-06-06 07:58:27 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/wp/v2/posts/2420
+[2026-06-06 07:58:28 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/wp/v2/posts/2441
+[2026-06-06 07:58:29 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_per_page_100.json.diff
+[2026-06-06 07:58:29 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages?per_page=100
+[2026-06-06 07:58:29 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_1.json.diff
+[2026-06-06 07:58:29 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages/1
+[2026-06-06 07:58:30 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages/75
+[2026-06-06 07:58:31 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_288.json.diff
+[2026-06-06 07:58:31 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages/288
+[2026-06-06 07:58:33 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_1223.json.diff
+[2026-06-06 07:58:33 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages/1223
+[2026-06-06 07:58:34 UTC] [INFO]     DIFF saved: api_wp-json_wp_v2_pages_1776.json.diff
+[2026-06-06 07:58:34 UTC] [INFO]   CHG  https://project-skyscraper.com/wp-json/wp/v2/pages/1776
+[2026-06-06 07:58:42 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/wp/v2/media/2374
+[2026-06-06 07:58:42 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/wp/v2/media/2659
+[2026-06-06 07:58:42 UTC] [INFO]     Posts: 46  Pages: 10  Media: 11
+[2026-06-06 07:58:42 UTC] [INFO]   Probing IDs 1-2959 for unpublished content...
+[2026-06-06 07:59:13 UTC] [INFO]     Progress: 200/2959 ...
+[2026-06-06 07:59:47 UTC] [INFO]     Progress: 400/2959 ...
+[2026-06-06 08:00:33 UTC] [INFO]     Progress: 600/2959 ...
+[2026-06-06 08:01:23 UTC] [INFO]     Progress: 800/2959 ...
+[2026-06-06 08:02:17 UTC] [INFO]     Progress: 1000/2959 ...
+[2026-06-06 08:03:11 UTC] [INFO]     Progress: 1200/2959 ...
+[2026-06-06 08:03:44 UTC] [INFO]     Progress: 1400/2959 ...
+[2026-06-06 08:04:19 UTC] [INFO]     Progress: 1600/2959 ...
+[2026-06-06 08:04:52 UTC] [INFO]     Progress: 1800/2959 ...
+[2026-06-06 08:05:24 UTC] [INFO]     Progress: 2000/2959 ...
+[2026-06-06 08:06:00 UTC] [INFO]     Progress: 2200/2959 ...
+[2026-06-06 08:06:35 UTC] [INFO]     Progress: 2400/2959 ...
+[2026-06-06 08:07:10 UTC] [INFO]     Progress: 2600/2959 ...
+[2026-06-06 08:07:20 UTC] [INFO]     Progress: 2800/2959 ...
+[2026-06-06 08:07:29 UTC] [INFO]     Found 345 unpublished posts, 0 unpublished pages
+[2026-06-06 08:07:29 UTC] [INFO] --- Jetpack Sub-endpoints ---
+[2026-06-06 08:07:32 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/site -> 401
+[2026-06-06 08:07:32 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/module -> 404
+[2026-06-06 08:07:33 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/module/all -> 401
+[2026-06-06 08:07:34 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/module/protect -> 401
+[2026-06-06 08:07:34 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/scan -> 401
+[2026-06-06 08:07:35 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/scan/history -> 404
+[2026-06-06 08:07:36 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/sync/status -> 401
+[2026-06-06 08:07:37 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/sync/checksum -> 404
+[2026-06-06 08:07:38 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/connection/url -> 401
+[2026-06-06 08:07:39 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/identity-crisis -> 404
+[2026-06-06 08:07:39 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/plugins -> 401
+[2026-06-06 08:07:40 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/update-plugins -> 404
+[2026-06-06 08:07:41 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/recommendations/data -> 401
+[2026-06-06 08:07:41 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/recommendations/site-pages -> 404
+[2026-06-06 08:07:42 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/backup -> 404
+[2026-06-06 08:07:43 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/backup-ux -> 404
+[2026-06-06 08:07:43 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/backup-ux/data -> 404
+[2026-06-06 08:07:48 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/social -> 404
+[2026-06-06 08:07:49 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/search -> 401
+[2026-06-06 08:07:49 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/search/plan -> 401
+[2026-06-06 08:07:50 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/search/settings -> 401
+[2026-06-06 08:07:50 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/jetpack/v4/search/stats -> 401
+[2026-06-06 08:07:51 UTC] [INFO] --- WP.com Sub-endpoints ---
+[2026-06-06 08:07:51 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wpcom/v2/sites -> 404
+[2026-06-06 08:07:52 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wpcom/v2/site-verticals -> 404
+[2026-06-06 08:07:52 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/wpcom/v2/block-likes -> 404
+[2026-06-06 08:07:53 UTC] [INFO] --- oEmbed Endpoints ---
+[2026-06-06 08:07:54 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com -> 404
+[2026-06-06 08:07:54 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com&format=xml -> 404
+[2026-06-06 08:07:55 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F -> 404
+[2026-06-06 08:07:56 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F&format=xml -> 404
+[2026-06-06 08:07:56 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F1970%2F01%2F01%2Forigin%2F
+[2026-06-06 08:07:57 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F1970%2F01%2F01%2Forigin%2F&format=xml
+[2026-06-06 08:07:58 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2002%2F05%2F12%2Fcode%2F
+[2026-06-06 08:07:58 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2002%2F05%2F12%2Fcode%2F&format=xml
+[2026-06-06 08:07:59 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2005%2F04%2F13%2Fquote%2F
+[2026-06-06 08:08:00 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2005%2F04%2F13%2Fquote%2F&format=xml
+[2026-06-06 08:08:00 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F06%2F01%2Fevent-01062017%2F
+[2026-06-06 08:08:01 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F06%2F01%2Fevent-01062017%2F&format=xml
+[2026-06-06 08:08:02 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F07%2F08%2F2017_dataset%2F
+[2026-06-06 08:08:02 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F07%2F08%2F2017_dataset%2F&format=xml
+[2026-06-06 08:08:03 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F07%2F21%2Fevent-21072017%2F
+[2026-06-06 08:08:03 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2017%2F07%2F21%2Fevent-21072017%2F&format=xml
+[2026-06-06 08:08:04 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F24%2Fsleep-mode-46105%2F
+[2026-06-06 08:08:05 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F24%2Fsleep-mode-46105%2F&format=xml
+[2026-06-06 08:08:05 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F27%2Fsleep-mode-46108%2F
+[2026-06-06 08:08:06 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F27%2Fsleep-mode-46108%2F&format=xml
+[2026-06-06 08:08:06 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F29%2Fsleep-mode-46110%2F
+[2026-06-06 08:08:07 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F03%2F29%2Fsleep-mode-46110%2F&format=xml
+[2026-06-06 08:08:08 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F01%2Fsleep-mode-4613%2F
+[2026-06-06 08:08:08 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F01%2Fsleep-mode-4613%2F&format=xml
+[2026-06-06 08:08:09 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F03%2Fsleep-mode-46115%2F
+[2026-06-06 08:08:09 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F03%2Fsleep-mode-46115%2F&format=xml
+[2026-06-06 08:08:10 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F06%2Fsleep-mode-46118%2F
+[2026-06-06 08:08:11 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F06%2Fsleep-mode-46118%2F&format=xml
+[2026-06-06 08:08:11 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F08%2Fsleep-mode-46120%2F
+[2026-06-06 08:08:12 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F08%2Fsleep-mode-46120%2F&format=xml
+[2026-06-06 08:08:13 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F11%2Fsleep-mode-46123%2F
+[2026-06-06 08:08:13 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F11%2Fsleep-mode-46123%2F&format=xml
+[2026-06-06 08:08:14 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F13%2Fsleep-mode-46125%2F
+[2026-06-06 08:08:15 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F13%2Fsleep-mode-46125%2F&format=xml
+[2026-06-06 08:08:15 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F16%2Fsleep-mode-46128%2F
+[2026-06-06 08:08:16 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F16%2Fsleep-mode-46128%2F&format=xml
+[2026-06-06 08:08:16 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F18%2Fsleep-mode-46130%2F
+[2026-06-06 08:08:17 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F18%2Fsleep-mode-46130%2F&format=xml
+[2026-06-06 08:08:18 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F21%2Fsleep-mode-46133%2F
+[2026-06-06 08:08:18 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F21%2Fsleep-mode-46133%2F&format=xml
+[2026-06-06 08:08:19 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F23%2Fsleep-mode-46135%2F
+[2026-06-06 08:08:19 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F23%2Fsleep-mode-46135%2F&format=xml
+[2026-06-06 08:08:20 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F25%2Fsleep-mode-46137%2F
+[2026-06-06 08:08:21 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F25%2Fsleep-mode-46137%2F&format=xml
+[2026-06-06 08:08:21 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F28%2Fsleep-mode-46140%2F
+[2026-06-06 08:08:22 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F28%2Fsleep-mode-46140%2F&format=xml
+[2026-06-06 08:08:22 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F30%2Fsleep-mode-46142%2F
+[2026-06-06 08:08:23 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F04%2F30%2Fsleep-mode-46142%2F&format=xml
+[2026-06-06 08:08:23 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F03%2Fsec-log-080413%2F
+[2026-06-06 08:08:24 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F03%2Fsec-log-080413%2F&format=xml
+[2026-06-06 08:08:25 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F05%2Fsec-log-190746%2F
+[2026-06-06 08:08:25 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F05%2Fsec-log-190746%2F&format=xml
+[2026-06-06 08:08:26 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F08%2Fsec-log-061119%2F
+[2026-06-06 08:08:26 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F08%2Fsec-log-061119%2F&format=xml
+[2026-06-06 08:08:27 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F10%2Fsec-log-171452%2F
+[2026-06-06 08:08:27 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F10%2Fsec-log-171452%2F&format=xml
+[2026-06-06 08:08:28 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F10%2Fsecurity-log-171453%2F
+[2026-06-06 08:08:29 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F10%2Fsecurity-log-171453%2F&format=xml
+[2026-06-06 08:08:29 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F12%2Fsec-log-120000%2F
+[2026-06-06 08:08:30 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F12%2Fsec-log-120000%2F&format=xml
+[2026-06-06 08:08:30 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F13%2Fsec-log-041825%2F
+[2026-06-06 08:08:31 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F13%2Fsec-log-041825%2F&format=xml
+[2026-06-06 08:08:32 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F14%2Fsec-log-172832%2F
+[2026-06-06 08:08:32 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F14%2Fsec-log-172832%2F&format=xml
+[2026-06-06 08:08:33 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F15%2Fsec-log-152158%2F
+[2026-06-06 08:08:34 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F15%2Fsec-log-152158%2F&format=xml
+[2026-06-06 08:08:34 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F18%2Fsec-log-022531%2F
+[2026-06-06 08:08:35 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F18%2Fsec-log-022531%2F&format=xml
+[2026-06-06 08:08:35 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F18%2Fsec-log-211927%2F
+[2026-06-06 08:08:36 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F18%2Fsec-log-211927%2F&format=xml
+[2026-06-06 08:08:36 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F20%2Fsec-log-132904%2F
+[2026-06-06 08:08:37 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F20%2Fsec-log-132904%2F&format=xml
+[2026-06-06 08:08:38 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F21%2Fsec-log-170516%2F
+[2026-06-06 08:08:38 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F21%2Fsec-log-170516%2F&format=xml
+[2026-06-06 08:08:39 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F23%2Fsec-log-003237%2F
+[2026-06-06 08:08:40 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F23%2Fsec-log-003237%2F&format=xml
+[2026-06-06 08:08:40 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F25%2Fsec-log-113610%2F
+[2026-06-06 08:08:41 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F25%2Fsec-log-113610%2F&format=xml
+[2026-06-06 08:08:41 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-185027%2F
+[2026-06-06 08:08:42 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-185027%2F&format=xml
+[2026-06-06 08:08:43 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-access-granted%2F
+[2026-06-06 08:08:43 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-access-granted%2F&format=xml
+[2026-06-06 08:08:44 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-reboot%2F
+[2026-06-06 08:08:44 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F27%2Fsec-log-reboot%2F&format=xml
+[2026-06-06 08:08:45 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F29%2Fsec-log-114327%2F
+[2026-06-06 08:08:46 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F29%2Fsec-log-114327%2F&format=xml
+[2026-06-06 08:08:46 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F30%2Fsec-log-memory-sector-access%2F
+[2026-06-06 08:08:47 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F30%2Fsec-log-memory-sector-access%2F&format=xml
+[2026-06-06 08:08:47 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F31%2Fsec-log-193727%2F
+[2026-06-06 08:08:48 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F05%2F31%2Fsec-log-193727%2F&format=xml
+[2026-06-06 08:08:48 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F01%2Fdiagnostic-op-morse%2F
+[2026-06-06 08:08:49 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F01%2Fdiagnostic-op-morse%2F&format=xml
+[2026-06-06 08:08:50 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F01%2Fstructural-analysis-204649%2F
+[2026-06-06 08:08:50 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F01%2Fstructural-analysis-204649%2F&format=xml
+[2026-06-06 08:08:51 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F02%2Fsec-log-194022%2F
+[2026-06-06 08:08:52 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F02%2Fsec-log-194022%2F&format=xml
+[2026-06-06 08:08:52 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fabout%2F
+[2026-06-06 08:08:53 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fabout%2F&format=xml
+[2026-06-06 08:08:53 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Finbox%2F
+[2026-06-06 08:08:54 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Finbox%2F&format=xml
+[2026-06-06 08:08:55 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Flogo%2F
+[2026-06-06 08:08:55 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Flogo%2F&format=xml
+[2026-06-06 08:08:56 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fneural-network-status%2F
+[2026-06-06 08:08:57 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fneural-network-status%2F&format=xml
+[2026-06-06 08:08:57 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fonly-dust-remain%2F
+[2026-06-06 08:08:58 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fonly-dust-remain%2F&format=xml
+[2026-06-06 08:08:58 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fproject-skyscraper%2F
+[2026-06-06 08:08:59 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fproject-skyscraper%2F&format=xml
+[2026-06-06 08:08:59 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Freport-lon-reality-glitch%2F
+[2026-06-06 08:09:00 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Freport-lon-reality-glitch%2F&format=xml
+[2026-06-06 08:09:01 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Frequest-memory-timestamp-094317%2F
+[2026-06-06 08:09:01 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Frequest-memory-timestamp-094317%2F&format=xml
+[2026-06-06 08:09:02 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-080413-full%2F
+[2026-06-06 08:09:02 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-080413-full%2F&format=xml
+[2026-06-06 08:09:03 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-094127-full%2F
+[2026-06-06 08:09:04 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-094127-full%2F&format=xml
+[2026-06-06 08:09:05 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-094316-full%2F
+[2026-06-06 08:09:05 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-094316-full%2F&format=xml
+[2026-06-06 08:09:06 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-211927-full%2F
+[2026-06-06 08:09:06 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsec-log-211927-full%2F&format=xml
+[2026-06-06 08:09:07 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsleep-mode%2F
+[2026-06-06 08:09:07 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Fsleep-mode%2F&format=xml
+[2026-06-06 08:09:08 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Ftr4ce%2F
+[2026-06-06 08:09:09 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fproject-skyscraper.com%2Ftr4ce%2F&format=xml
+[2026-06-06 08:09:10 UTC] [INFO]     DIFF saved: api__rest_route__index.html.diff
+[2026-06-06 08:09:10 UTC] [INFO]   CHG  https://project-skyscraper.com/?rest_route=/
+[2026-06-06 08:09:11 UTC] [INFO]     DIFF saved: api__rest_route__wp_v2.html.diff
+[2026-06-06 08:09:11 UTC] [INFO]   CHG  https://project-skyscraper.com/?rest_route=/wp/v2
+[2026-06-06 08:09:11 UTC] [INFO] 
+[2026-06-06 08:09:11 UTC] [INFO] PHASE 4: Media
+[2026-06-06 08:09:11 UTC] [INFO] === FETCHING MEDIA FILES ===
+[2026-06-06 08:09:19 UTC] [INFO]   Discovered 76 media URLs
+[2026-06-06 08:09:20 UTC] [INFO]   NEW  http://project-skyscraper.com/?page_id=1
+[2026-06-06 08:09:20 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2005/04/IMG_00004_1.jpg -> 404
+[2026-06-06 08:09:20 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg -> 404
+[2026-06-06 08:09:20 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/logo.png -> 404
+[2026-06-06 08:09:21 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/project-skyscraper.jpg -> 404
+[2026-06-06 08:09:21 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/TR4CE.jpg -> 404
+[2026-06-06 08:09:21 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png -> 404
+[2026-06-06 08:09:21 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain.jpg -> 404
+[2026-06-06 08:09:22 UTC] [INFO]   ERR  https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg -> 404
+[2026-06-06 08:09:22 UTC] [INFO]   ERR  https://project-skyscraper.com/2026/04/24/navigation/ -> 404
+[2026-06-06 08:09:23 UTC] [INFO]     DIFF saved: media__p_117.html.diff
+[2026-06-06 08:09:23 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=117
+[2026-06-06 08:09:24 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=1226
+[2026-06-06 08:09:25 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=1231
+[2026-06-06 08:09:26 UTC] [INFO]     DIFF saved: media__p_128.html.diff
+[2026-06-06 08:09:26 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=128
+[2026-06-06 08:09:27 UTC] [INFO]     DIFF saved: media__p_132.html.diff
+[2026-06-06 08:09:27 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=132
+[2026-06-06 08:09:28 UTC] [INFO]     DIFF saved: media__p_134.html.diff
+[2026-06-06 08:09:28 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=134
+[2026-06-06 08:09:29 UTC] [INFO]     DIFF saved: media__p_136.html.diff
+[2026-06-06 08:09:29 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=136
+[2026-06-06 08:09:30 UTC] [INFO]     DIFF saved: media__p_138.html.diff
+[2026-06-06 08:09:30 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=138
+[2026-06-06 08:09:30 UTC] [INFO]     DIFF saved: media__p_140.html.diff
+[2026-06-06 08:09:31 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=140
+[2026-06-06 08:09:31 UTC] [INFO]     DIFF saved: media__p_142.html.diff
+[2026-06-06 08:09:31 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=142
+[2026-06-06 08:09:32 UTC] [INFO]     DIFF saved: media__p_144.html.diff
+[2026-06-06 08:09:32 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=144
+[2026-06-06 08:09:33 UTC] [INFO]     DIFF saved: media__p_146.html.diff
+[2026-06-06 08:09:33 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=146
+[2026-06-06 08:09:34 UTC] [INFO]     DIFF saved: media__p_148.html.diff
+[2026-06-06 08:09:34 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=148
+[2026-06-06 08:09:35 UTC] [INFO]     DIFF saved: media__p_150.html.diff
+[2026-06-06 08:09:35 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=150
+[2026-06-06 08:09:36 UTC] [INFO]     DIFF saved: media__p_152.html.diff
+[2026-06-06 08:09:36 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=152
+[2026-06-06 08:09:36 UTC] [INFO]     DIFF saved: media__p_154.html.diff
+[2026-06-06 08:09:36 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=154
+[2026-06-06 08:09:37 UTC] [INFO]     DIFF saved: media__p_156.html.diff
+[2026-06-06 08:09:37 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=156
+[2026-06-06 08:09:38 UTC] [INFO]     DIFF saved: media__p_158.html.diff
+[2026-06-06 08:09:38 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=158
+[2026-06-06 08:09:39 UTC] [INFO]     DIFF saved: media__p_160.html.diff
+[2026-06-06 08:09:39 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=160
+[2026-06-06 08:09:40 UTC] [INFO]     DIFF saved: media__p_1626.html.diff
+[2026-06-06 08:09:40 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1626
+[2026-06-06 08:09:41 UTC] [INFO]     DIFF saved: media__p_1640.html.diff
+[2026-06-06 08:09:41 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1640
+[2026-06-06 08:09:42 UTC] [INFO]     DIFF saved: media__p_1669.html.diff
+[2026-06-06 08:09:42 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1669
+[2026-06-06 08:09:43 UTC] [INFO]     DIFF saved: media__p_1674.html.diff
+[2026-06-06 08:09:43 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1674
+[2026-06-06 08:09:44 UTC] [INFO]     DIFF saved: media__p_1680.html.diff
+[2026-06-06 08:09:44 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1680
+[2026-06-06 08:09:45 UTC] [INFO]     DIFF saved: media__p_1691.html.diff
+[2026-06-06 08:09:45 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1691
+[2026-06-06 08:09:45 UTC] [INFO]     DIFF saved: media__p_1792.html.diff
+[2026-06-06 08:09:45 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1792
+[2026-06-06 08:09:46 UTC] [INFO]     DIFF saved: media__p_1802.html.diff
+[2026-06-06 08:09:46 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1802
+[2026-06-06 08:09:47 UTC] [INFO]     DIFF saved: media__p_1833.html.diff
+[2026-06-06 08:09:47 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1833
+[2026-06-06 08:09:48 UTC] [INFO]     DIFF saved: media__p_1837.html.diff
+[2026-06-06 08:09:48 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1837
+[2026-06-06 08:09:49 UTC] [INFO]     DIFF saved: media__p_1852.html.diff
+[2026-06-06 08:09:49 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=1852
+[2026-06-06 08:09:50 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=2420
+[2026-06-06 08:09:50 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=2441
+[2026-06-06 08:09:51 UTC] [INFO]     DIFF saved: media__p_259.html.diff
+[2026-06-06 08:09:51 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=259
+[2026-06-06 08:09:52 UTC] [INFO]     DIFF saved: media__p_263.html.diff
+[2026-06-06 08:09:52 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=263
+[2026-06-06 08:09:53 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=2655
+[2026-06-06 08:09:54 UTC] [INFO]     DIFF saved: media__p_267.html.diff
+[2026-06-06 08:09:54 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=267
+[2026-06-06 08:09:55 UTC] [INFO]     DIFF saved: media__p_269.html.diff
+[2026-06-06 08:09:55 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=269
+[2026-06-06 08:09:55 UTC] [INFO]     DIFF saved: media__p_271.html.diff
+[2026-06-06 08:09:55 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=271
+[2026-06-06 08:09:56 UTC] [INFO]     DIFF saved: media__p_273.html.diff
+[2026-06-06 08:09:56 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=273
+[2026-06-06 08:09:57 UTC] [INFO]     DIFF saved: media__p_275.html.diff
+[2026-06-06 08:09:57 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=275
+[2026-06-06 08:09:58 UTC] [INFO]     DIFF saved: media__p_277.html.diff
+[2026-06-06 08:09:58 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=277
+[2026-06-06 08:09:59 UTC] [INFO]     DIFF saved: media__p_279.html.diff
+[2026-06-06 08:09:59 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=279
+[2026-06-06 08:10:00 UTC] [INFO]     DIFF saved: media__p_281.html.diff
+[2026-06-06 08:10:00 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=281
+[2026-06-06 08:10:00 UTC] [INFO]     DIFF saved: media__p_283.html.diff
+[2026-06-06 08:10:00 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=283
+[2026-06-06 08:10:01 UTC] [INFO]     DIFF saved: media__p_291.html.diff
+[2026-06-06 08:10:01 UTC] [INFO]   CHG  https://project-skyscraper.com/?p=291
+[2026-06-06 08:10:02 UTC] [INFO]   NEW  https://project-skyscraper.com/?p=320
+[2026-06-06 08:10:03 UTC] [INFO]   NEW  https://project-skyscraper.com/?page_id=1223
+[2026-06-06 08:10:04 UTC] [INFO]     DIFF saved: media__page_id_1628.html.diff
+[2026-06-06 08:10:04 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=1628
+[2026-06-06 08:10:04 UTC] [INFO]     DIFF saved: media__page_id_1682.html.diff
+[2026-06-06 08:10:05 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=1682
+[2026-06-06 08:10:06 UTC] [INFO]     DIFF saved: media__page_id_1776.html.diff
+[2026-06-06 08:10:06 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=1776
+[2026-06-06 08:10:07 UTC] [INFO]     DIFF saved: media__page_id_1812.html.diff
+[2026-06-06 08:10:07 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=1812
+[2026-06-06 08:10:07 UTC] [INFO]     DIFF saved: media__page_id_252.html.diff
+[2026-06-06 08:10:08 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=252
+[2026-06-06 08:10:08 UTC] [INFO]     DIFF saved: media__page_id_288.html.diff
+[2026-06-06 08:10:08 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=288
+[2026-06-06 08:10:09 UTC] [INFO]     DIFF saved: media__page_id_551.html.diff
+[2026-06-06 08:10:09 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=551
+[2026-06-06 08:10:10 UTC] [INFO]     DIFF saved: media__page_id_75.html.diff
+[2026-06-06 08:10:10 UTC] [INFO]   CHG  https://project-skyscraper.com/?page_id=75
+[2026-06-06 08:10:18 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain.jpg
+[2026-06-06 08:10:19 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg
+[2026-06-06 08:10:34 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain-150x150.jpg
+[2026-06-06 08:10:34 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain-300x300.jpg
+[2026-06-06 08:10:35 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain-768x768.jpg
+[2026-06-06 08:10:36 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/Only-dust-Remain-1024x1024.jpg
+[2026-06-06 08:10:36 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416-150x150.jpg
+[2026-06-06 08:10:37 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416-300x300.jpg
+[2026-06-06 08:10:37 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416-768x768.jpg
+[2026-06-06 08:10:38 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416-1024x1024.jpg
+[2026-06-06 08:10:40 UTC] [INFO] 
+[2026-06-06 08:10:40 UTC] [INFO] PHASE 5: Password-Protected Pages
+[2026-06-06 08:10:40 UTC] [INFO] === FETCHING PASSWORD-PROTECTED PAGES ===
+[2026-06-06 08:10:40 UTC] [INFO]   Got postpass cookie: wp-postpass_c1bf580313ada4e182d3c84800b41a4c
+[2026-06-06 08:10:41 UTC] [INFO]     DIFF saved: html_request-memory-timestamp-094317.html.diff
+[2026-06-06 08:10:41 UTC] [INFO]   CHG  https://project-skyscraper.com/request-memory-timestamp-094317/
+[2026-06-06 08:10:43 UTC] [INFO] 
+[2026-06-06 08:10:43 UTC] [INFO] PHASE 6: Theme Assets
+[2026-06-06 08:10:43 UTC] [INFO] === FETCHING THEME ASSETS ===
+[2026-06-06 08:10:45 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/index.php -> 403
+[2026-06-06 08:10:46 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/functions.php -> 500
+[2026-06-06 08:10:46 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/header.php -> 404
+[2026-06-06 08:10:47 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/footer.php -> 404
+[2026-06-06 08:10:48 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/assets/css/main.css -> 404
+[2026-06-06 08:10:48 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/themes/perenne/assets/js/navigation.js -> 404
+[2026-06-06 08:10:51 UTC] [INFO] 
+[2026-06-06 08:10:51 UTC] [INFO] PHASE 7: Plugin Assets
+[2026-06-06 08:10:51 UTC] [INFO] === FETCHING PLUGIN ASSETS ===
+[2026-06-06 08:10:54 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=15.9-a.7
+[2026-06-06 08:10:54 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7
+[2026-06-06 08:10:57 UTC] [INFO]   NEW  https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/build/tiled-gallery/tiled-gallery/tiled-gallery.min.js?ver=15.9-a.7
+[2026-06-06 08:10:57 UTC] [INFO] 
+[2026-06-06 08:10:57 UTC] [INFO] PHASE 8: Discovery Documents
+[2026-06-06 08:10:57 UTC] [INFO] === FETCHING DISCOVERY DOCUMENTS ===
+[2026-06-06 08:10:58 UTC] [INFO]   CHG  https://project-skyscraper.com/sitemap-1.xml
+[2026-06-06 08:10:59 UTC] [INFO] 
+[2026-06-06 08:10:59 UTC] [INFO] PHASE 9: Extras
+[2026-06-06 08:10:59 UTC] [INFO] === FETCHING EXTRAS ===
+[2026-06-06 08:11:01 UTC] [INFO]   ERR  https://project-skyscraper.com/xmlrpc.php -> 405
+[2026-06-06 08:11:01 UTC] [INFO] 
+[2026-06-06 08:11:01 UTC] [INFO] PHASE 10: Third-party CDN
+[2026-06-06 08:11:01 UTC] [INFO] === FETCHING THIRD-PARTY CDN ASSETS ===
+[2026-06-06 08:11:05 UTC] [INFO] 
+[2026-06-06 08:11:05 UTC] [INFO] PHASE 11: External References
+[2026-06-06 08:11:05 UTC] [INFO] === FETCHING EXTERNAL REFERENCES ===
+[2026-06-06 08:11:06 UTC] [INFO]   FAIL https://www.reddit.com/r/NoMansSkyTheGame/comments/1tczflq/connection_detected_access_denied.json -> HTTP Error 403: Blocked
+[2026-06-06 08:11:07 UTC] [INFO]   OK   https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180.json
+[2026-06-06 08:11:08 UTC] [INFO] 
+[2026-06-06 08:11:08 UTC] [INFO] PHASE 12: Additional Endpoints
+[2026-06-06 08:11:08 UTC] [INFO] === FETCHING ADDITIONAL ENDPOINTS ===
+[2026-06-06 08:11:08 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-content/debug.log -> 403
+[2026-06-06 08:11:11 UTC] [INFO]   ERR  https://project-skyscraper.com/wp-admin/ -> 403
+[2026-06-06 08:11:11 UTC] [INFO] 
+[2026-06-06 08:11:11 UTC] [INFO] PHASE 13: Reports
+[2026-06-06 08:11:11 UTC] [INFO] === GENERATING REPORTS ===
+[2026-06-06 08:11:12 UTC] [FILE] Manifest written: C:\stack\arg\project-skyscraper\MIRROR_MANIFEST.md
+[2026-06-06 08:11:12 UTC] [FILE] Unpublished report: C:\stack\arg\project-skyscraper\UNPUBLISHED_IDS.md
+[2026-06-06 08:11:15 UTC] [FILE] Changelog written: C:\stack\arg\project-skyscraper\diffs\CHANGELOG.md (108 files)
+[2026-06-06 08:11:15 UTC] [INFO] 
+[2026-06-06 08:11:15 UTC] [INFO] ============================================================
+[2026-06-06 08:11:15 UTC] [INFO]   UPDATE COMPLETE
+[2026-06-06 08:11:15 UTC] [INFO]   Fetched: 269  New: 145  Changed: 123
+[2026-06-06 08:11:15 UTC] [INFO]   Skipped: 198  Failed: 59
+[2026-06-06 08:11:15 UTC] [INFO]   Changes: 123 file(s)
+[2026-06-06 08:11:15 UTC] [INFO] ============================================================
+[2026-06-06 08:13:07 UTC] [FILE] Feed already seeded -- skipping
+[2026-06-06 08:13:07 UTC] [INFO] Starting initial check cycle... (quiet sync)
+[2026-06-06 08:13:07 UTC] [FAST] === Fast check ===
+[2026-06-06 08:13:07 UTC] [FAST] Sitemap: +61 -0
+[2026-06-06 08:13:07 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/posts: 46 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 08:13:08 UTC] [DEBUG] API /wp-json/wp/v2/search: 56 items across 1 page(s)
+[2026-06-06 08:13:08 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-06 08:13:08 UTC] [DEEP] === Deep check ===
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/about/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/sleep-mode/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/1970/01/01/origin/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/03/24/sleep-mode-46105/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/03/27/sleep-mode-46108/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/03/29/sleep-mode-46110/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/01/sleep-mode-4613/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/03/sleep-mode-46115/
+[2026-06-06 08:13:08 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/06/sleep-mode-46118/
+[2026-06-06 08:13:09 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/08/sleep-mode-46120/
+[2026-06-06 08:13:09 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/11/sleep-mode-46123/
+[2026-06-06 08:13:09 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/13/sleep-mode-46125/
+[2026-06-06 08:13:09 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/16/sleep-mode-46128/
+[2026-06-06 08:13:09 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/18/sleep-mode-46130/
+[2026-06-06 08:13:18 UTC] [DEEP] Probe: checked IDs 2660-2689 (next: 2690, ceiling: 2959)
+[2026-06-06 08:13:18 UTC] [FETCH] === Initial sync: 1 change(s) -- mirroring quietly ===
+[2026-06-06 08:13:18 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/ -> html\index.html
+[2026-06-06 08:13:19 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2002/05/12/code/ -> html\2002\05\12\code.html
+[2026-06-06 08:13:20 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2005/04/13/quote/ -> html\2005\04\13\quote.html
+[2026-06-06 08:13:20 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2017/06/01/event-01062017/ -> html\2017\06\01\event-01062017.html
+[2026-06-06 08:13:21 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2017/07/08/2017_dataset/ -> html\2017\07\08\2017_dataset.html
+[2026-06-06 08:13:21 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2017/07/21/event-21072017/ -> html\2017\07\21\event-21072017.html
+[2026-06-06 08:13:28 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/04/21/sleep-mode-46133/ -> html\2026\04\21\sleep-mode-46133.html
+[2026-06-06 08:13:30 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/03/sec-log-080413/ -> html\2026\05\03\sec-log-080413.html
+[2026-06-06 08:13:31 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/05/sec-log-190746/ -> html\2026\05\05\sec-log-190746.html
+[2026-06-06 08:13:31 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/08/sec-log-061119/ -> html\2026\05\08\sec-log-061119.html
+[2026-06-06 08:13:32 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/10/sec-log-171452/ -> html\2026\05\10\sec-log-171452.html
+[2026-06-06 08:13:32 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/10/security-log-171453/ -> html\2026\05\10\security-log-171453.html
+[2026-06-06 08:13:32 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/12/sec-log-120000/ -> html\2026\05\12\sec-log-120000.html
+[2026-06-06 08:13:33 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/14/sec-log-172832/ -> html\2026\05\14\sec-log-172832.html
+[2026-06-06 08:13:34 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/15/sec-log-152158/ -> html\2026\05\15\sec-log-152158.html
+[2026-06-06 08:13:35 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/21/sec-log-170516/ -> html\2026\05\21\sec-log-170516.html
+[2026-06-06 08:13:36 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/25/sec-log-113610/ -> html\2026\05\25\sec-log-113610.html
+[2026-06-06 08:13:38 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/ -> html\2026\05\30\sec-log-memory-sector-access.html
+[2026-06-06 08:13:39 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/ -> html\2026\06\01\diagnostic-op-morse.html
+[2026-06-06 08:13:40 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/06/01/structural-analysis-204649/ -> html\2026\06\01\structural-analysis-204649.html
+[2026-06-06 08:13:40 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/2026/06/02/sec-log-194022/ -> html\2026\06\02\sec-log-194022.html
+[2026-06-06 08:13:42 UTC] [FETCH]   FETCH OK: https://project-skyscraper.com/logo/ -> html\logo.html
+[2026-06-06 08:13:42 UTC] [FILE] Report written: 20260606_081342_changes.json
+[2026-06-06 08:13:42 UTC] [INFO] Initial check complete
+[2026-06-06 08:13:42 UTC] [FAST] === Fast check ===
+[2026-06-06 08:13:42 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:13:42 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/tags: 4 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/tags: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/categories: 1 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/categories: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 08:13:42 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/pages: 10 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/pages: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/posts: 46 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [MEDIUM] API /wp-json/wp/v2/posts: hash changed but no item diff (meta only)
+[2026-06-06 08:13:42 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 08:13:42 UTC] [DEBUG] API /wp-json/wp/v2/navigation: 2 items across 1 page(s)
+[2026-06-06 08:13:42 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 08:13:42 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: hash changed but no item diff (meta only)
+[2026-06-06 08:13:43 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 08:13:43 UTC] [DEBUG] API /wp-json/wp/v2/search: 56 items across 1 page(s)
+[2026-06-06 08:13:43 UTC] [MEDIUM] API /wp-json/wp/v2/search: hash changed but no item diff (meta only)
+[2026-06-06 08:13:43 UTC] [DEEP] === Deep check ===
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/25/sleep-mode-46137/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/21/sleep-mode-46133/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/23/sleep-mode-46135/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/28/sleep-mode-46140/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/04/30/sleep-mode-46142/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/sec-log-080413-full/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/05/sec-log-190746/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/03/sec-log-080413/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/08/sec-log-061119/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/10/sec-log-171452/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/15/sec-log-152158/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/13/sec-log-041825/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/18/sec-log-022531/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/20/sec-log-132904/
+[2026-06-06 08:13:43 UTC] [DEEP] Page content first tracked: https://project-skyscraper.com/2026/05/23/sec-log-003237/
+[2026-06-06 08:13:52 UTC] [DEEP] Probe: checked IDs 2690-2719 (next: 2720, ceiling: 2959)
+[2026-06-06 08:13:52 UTC] [CHECK] No changes detected
+[2026-06-06 08:14:13 UTC] [FAST] === Fast check ===
+[2026-06-06 08:14:13 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:14:13 UTC] [CHECK] No changes detected
+[2026-06-06 08:14:43 UTC] [FAST] === Fast check ===
+[2026-06-06 08:14:43 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:14:43 UTC] [CHECK] No changes detected
+[2026-06-06 08:15:14 UTC] [FAST] === Fast check ===
+[2026-06-06 08:15:14 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:15:14 UTC] [CHECK] No changes detected
+[2026-06-06 08:15:42 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 08:15:42 UTC] [DEBUG] API /wp-json/wp/v2/media: 11 items across 1 page(s)
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/media: hash changed but no item diff (meta only)
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 08:15:42 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 08:15:43 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 08:15:43 UTC] [CHECK] No changes detected
+[2026-06-06 08:15:45 UTC] [FAST] === Fast check ===
+[2026-06-06 08:15:45 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:15:45 UTC] [CHECK] No changes detected
+[2026-06-06 08:16:15 UTC] [FAST] === Fast check ===
+[2026-06-06 08:16:16 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:16:16 UTC] [CHECK] No changes detected
+[2026-06-06 08:16:46 UTC] [FAST] === Fast check ===
+[2026-06-06 08:16:46 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:16:46 UTC] [CHECK] No changes detected
+[2026-06-06 08:17:17 UTC] [FAST] === Fast check ===
+[2026-06-06 08:17:17 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:17:17 UTC] [CHECK] No changes detected
+[2026-06-06 08:17:43 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/media: unchanged (304)
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 08:17:43 UTC] [CHECK] No changes detected
+[2026-06-06 08:17:47 UTC] [FAST] === Fast check ===
+[2026-06-06 08:17:48 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:17:48 UTC] [CHECK] No changes detected
+[2026-06-06 08:18:18 UTC] [FAST] === Fast check ===
+[2026-06-06 08:18:19 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:18:19 UTC] [CHECK] No changes detected
+[2026-06-06 08:18:49 UTC] [FAST] === Fast check ===
+[2026-06-06 08:18:49 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:18:49 UTC] [CHECK] No changes detected
+[2026-06-06 08:19:19 UTC] [FAST] === Fast check ===
+[2026-06-06 08:19:19 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 08:19:19 UTC] [CHECK] No changes detected
+[2026-06-06 08:19:43 UTC] [MEDIUM] === Medium check ===
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/posts: unchanged (304)
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/pages: unchanged (304)
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/categories: unchanged (304)
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/tags: unchanged (304)
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/media: unchanged (304)
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/navigation: unchanged (304)
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/comments: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [DEBUG] API /wp-json/wp/v2/users: 2 items across 1 page(s)
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/blocks: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/users: hash changed but no item diff (meta only)
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/menu-items: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/menus: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/widgets: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/sidebars: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [MEDIUM] API /wp-json/wp/v2/search: unchanged (304)
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/types: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/statuses: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/taxonomies: fetch failed or empty
+[2026-06-06 08:19:43 UTC] [WARN] API /wp-json/wp/v2/block-directory/search: fetch failed or empty
+[2026-06-06 08:19:44 UTC] [CHECK] No changes detected
+[2026-06-06 08:19:50 UTC] [FAST] === Fast check ===
+[2026-06-06 08:19:50 UTC] [FAST] Sitemap: content refreshed but no URL changes
+[2026-06-06 08:19:50 UTC] [CHECK] No changes detected
+[2026-06-06 08:20:20 UTC] [FAST] === Fast check ===
+[2026-06-06 08:20:20 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 08:20:20 UTC] [CHECK] No changes detected
+[2026-06-06 08:20:50 UTC] [FAST] === Fast check ===
+[2026-06-06 08:20:50 UTC] [FAST] Sitemap: unchanged (304)
+[2026-06-06 08:20:50 UTC] [CHECK] No changes detected

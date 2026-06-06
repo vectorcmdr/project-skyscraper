@@ -1,74 +1,66 @@
 # Diff: https://project-skyscraper.com/wp-json/wp/v2/pages/1223
 # File: api/wp-json/wp/v2/pages/1223.json
-# Timestamp: 2026-06-01 08:00:37 UTC
-# Lines: 59 old -> 7 new
+# Timestamp: 2026-06-06 07:58:33 UTC
+# Lines: 98 old -> 6961 new
 # Beautified: yes
---- old/api/wp-json/wp/v2/pages/1223.json
-+++ new/api/wp-json/wp/v2/pages/1223.json
-@@ -1,59 +1,7 @@
--<!DOCTYPE html>
--<html lang="en">
--	<head>
--		<meta charset="utf-8">
--		<title>429 Too Many Requests</title>
--		<meta name="description" content="">
--		<meta name="author" content="">
--
--		<style>
--		body {
--			background-color: #f8f8f8;
--			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
--			color: #333;
--			padding-top: 20px;
--		}
--		div {
--			display: block;
--		}
--		.container {
--			width: 1100px;
--			padding-top: 50px;
--			margin-left: auto;
--			margin-right: auto;
--		}
--		.error-msg, .support-msg {
--			text-align: center;
--		}
--		.error-msg {
--			margin-bottom: 40px;
--		}
--		.error-msg h1 {
--			font-size: 52px;
--			display: block;
--			margin: 0px;
--		}
--		.error-msg p {
--			font-size: 20px;
--			display: block;
--			margin: 10px 0;
--		}
--		.support-msg p {
--			font-size: 14px;
--			color: #888;
--		}
--		</style>
--	</head>
--
--	<body>
--		<div class="container">
--			<div class="error-msg">
--				<h1>429 Too Many Requests</h1>
--				<p>You have been rate-limited for making too many requests in a short time frame.</p>
--			</div>
--			<div class="support-msg">
--				<p>Website owner? If you think you have reached this message in error, please contact support.</p>
--			</div>
--		</div>
--	</body>
--</html>
-+{
-+  "code": "rest_forbidden",
-+  "message": "Sorry, you are not allowed to do that.",
-+  "data": {
-+    "status": 401
-+  }
-+}
+
+@@ -1,4 +1,129 @@
+ {
+
+-  "message": "Sorry, you are not allowed to do that.",
+
+-  "data": {}
+
++  "date": "2026-06-01T20:46:00",
+
++  "title": {
+
++    "rendered": "Report: LONDON"
+
++  },
+
++  "content": {
+
++    "rendered": "\n<div style=\"position: relative; width: 100%; max-width: 900px; margin: 40px auto; overflow: hidden; border-radius: 6px;\">\n  <canvas id=\"waveCanvas\" style=\"width: 100%; height: auto; display: block;\"></canvas>\n</div>\n\n<script>\n// ================Is this real ?=====================\nconst canvas = document.getElementById('waveCanvas');\nconst ctx = canvas.getContext('2d', { alpha: true });\n\nlet img = new Image();\nimg.src = \"https://iili.io/CFCOYml.jpg\";\n\nlet time = 0;\nconst padding = 35;\n\nimg.onload = () => {\n  canvas.width = img.width;\n  canvas.height = img.height;\n  \n  // Wave\n  window.slices = [];\n  let x = 0;\n  while (x < canvas.width) {\n    const width = 28 + Math.random() * 58; // entre 28px et 86px\n    window.slices.push({ x: x, width: Math.min(width, canvas.width - x) });\n    x += width;\n  }\n  \n  animate();\n};\n\nfunction animate() {\n  time += 0.017;\n\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n  window.slices.forEach((slice, i) => {\n    const waveY = Math.sin(time * 1.1 + i * 0.7) * 13;\n    const waveX = Math.cos(time * 0.8 + i * 0.5) * 4.5;\n\n    ctx.save();\n    ctx.beginPath();\n    ctx.rect(slice.x + waveX, padding, slice.width, canvas.height - padding * 2);\n    ctx.clip();\n\n    ctx.drawImage(\n      img,\n      slice.x, 0, slice.width, canvas.height,\n      slice.x + waveX, waveY, slice.width, canvas.height\n    );\n    ctx.restore();\n  });\n\n  ctx.fillStyle = \"rgba(12, 12, 28, 0.07)\";\n  ctx.fillRect(0, 0, canvas.width, canvas.height);\n\n  requestAnimationFrame(animate);\n}\n</script>\n",
+
++    "protected": false
+
++  },
+
++  "excerpt": {
+
++    "rendered": "",
+
++    "protected": false
+
++  },
+
++  "jetpack_likes_enabled": true,
+
++  "jetpack_sharing_enabled": true,
+
++  "jetpack_shortlink": "https://wp.me/PhdnFZ-jJ",
+
++  "jetpack-related-posts": [
+
++    {
+
++      "url": "https://project-skyscraper.com/sleep-mode/",
+
++      "url_meta": {
+
++        "origin": 1223,
+
++        "position": 0
+
++      },
+
++      "title": "SLEEP MODE",
+
++      "date": "25 April 2026",
+
++      "excerpt": "status=nominal █",
+
++      "rel": "",
+
+... (102 more lines)

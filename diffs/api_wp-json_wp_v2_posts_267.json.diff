@@ -1,0 +1,66 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/posts/267
+# File: api/wp-json/wp/v2/posts/267.json
+# Timestamp: 2026-06-06 07:58:12 UTC
+# Lines: 5593 old -> 5593 new
+# Beautified: yes
+
+@@ -17,13 +17,35 @@
+   "jetpack_shortlink": "https://wp.me/phdnFZ-4j",
+
+   "jetpack-related-posts": [
+
+     {
+
+-      "url": "https://project-skyscraper.com/2026/05/18/sec-log-022531/",
+
++      "url": "https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+
+       "url_meta": {
+
+         "origin": 267,
+
+         "position": 0
+
+       },
+
+       "title": "SECURITY LOG",
+
+-      "date": "18 May 2026",
+
++      "date": "23 May 2026",
+
++      "excerpt": "memory bloc : Connection detectedAccess denied",
+
++      "rel": "",
+
++      "context": "In &quot;Non classé&quot;",
+
++      "block_context": {
+
++        "text": "Non classé"
+
++      },
+
++      "img": {
+
++        "alt_text": "",
+
++        "src": "",
+
++        "width": 0,
+
++        "height": 0
+
++      },
+
++      "classes": []
+
++    },
+
++    {
+
++      "url": "https://project-skyscraper.com/2026/05/20/sec-log-132904/",
+
++      "url_meta": {
+
+... (73 more lines)

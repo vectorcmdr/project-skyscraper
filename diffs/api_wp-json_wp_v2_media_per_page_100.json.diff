@@ -1,510 +1,66 @@
 # Diff: https://project-skyscraper.com/wp-json/wp/v2/media?per_page=100
 # File: api/wp-json/wp/v2/media_per_page_100.json
-# Timestamp: 2026-05-29 14:09:27 UTC
-# Lines: 1439 old -> 1937 new
+# Timestamp: 2026-06-06 07:57:49 UTC
+# Lines: 60831 old -> 77924 new
 # Beautified: yes
---- old/api/wp-json/wp/v2/media_per_page_100.json
-+++ new/api/wp-json/wp/v2/media_per_page_100.json
-@@ -1,4 +1,502 @@
+
+@@ -1,4 +1,346 @@
  [
+
 +  {
-+    "id": 1842,
-+    "date": "2026-05-29T11:25:34",
-+    "date_gmt": "2026-05-29T10:25:34",
-+    "guid": {
-+      "rendered": "https://project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png"
-+    },
-+    "modified": "2026-05-29T11:25:34",
-+    "modified_gmt": "2026-05-29T10:25:34",
-+    "slug": "when_we_were_17",
-+    "status": "inherit",
-+    "type": "attachment",
-+    "link": "https://project-skyscraper.com/2002/05/12/code/when_we_were_17/",
+
++    "date": "2026-06-04T18:16:56",
+
 +    "title": {
-+      "rendered": "When_we_were_17"
+
++      "rendered": "YBM_request_#2416"
+
 +    },
-+    "author": 279180095,
-+    "featured_media": 0,
-+    "comment_status": "open",
-+    "ping_status": "closed",
-+    "template": "",
-+    "meta": {
-+      "advanced_seo_description": "",
-+      "jetpack_seo_html_title": "",
-+      "jetpack_seo_noindex": false
-+    },
+
 +    "attachment_category": [],
+
 +    "attachment_tag": [],
-+    "class_list": [
-+      "post-1842",
-+      "attachment",
-+      "type-attachment",
-+      "status-inherit",
-+      "hentry"
-+    ],
-+    "filename": "When_we_were_17.png",
-+    "filesize": 1786874,
+
++    "filename": "YBM_request_2416.jpg",
+
++    "filesize": 1457473,
+
 +    "jetpack_likes_enabled": true,
+
 +    "jetpack_sharing_enabled": true,
-+    "jetpack_shortlink": "https://wp.me/ahdnFZ-tI",
+
++    "jetpack_shortlink": "https://wp.me/ahdnFZ-GT",
+
 +    "description": {
-+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"184\" src=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=300%2C184&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?w=1212&amp;ssl=1 1212w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=300%2C184&amp;ssl=1 300w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=1024%2C627&amp;ssl=1 1024w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=768%2C470&amp;ssl=1 768w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=1200%2C735&amp;ssl=1 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" data-attachment-id=\"1842\" data-permalink=\"https://project-skyscraper.com/2002/05/12/code/when_we_were_17/\" data-orig-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=1212%2C742&amp;ssl=1\" data-orig-size=\"1212,742\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;,&quot;alt&quot;:&quot;&quot;}\" data-image-title=\"When_we_were_17\" data-image-description=\"\" data-image-caption=\"\" data-large-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=1024%2C627&amp;ssl=1\" /></a></p>\n"
+
++      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"188\" height=\"300\" src=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?fit=188%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?w=1000&amp;ssl=1 1000w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?resize=188%2C300&amp;ssl=1 188w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?resize=640%2C1024&amp;ssl=1 640w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?resize=768%2C1229&amp;ssl=1 768w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?resize=960%2C1536&amp;ssl=1 960w\" sizes=\"auto, (max-width: 188px) 100vw, 188px\" data-attachment-id=\"2659\" data-permalink=\"https://project-skyscraper.com/2017/07/08/2017_dataset/ybm_request_2416/\" data-orig-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?fit=1000%2C1600&amp;ssl=1\" data-orig-size=\"1000,1600\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;,&quot;alt&quot;:&quot;&quot;}\" data-image-title=\"YBM_request_#2416\" data-image-description=\"\" data-image-caption=\"\" data-large-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/YBM_request_2416.jpg?fit=640%2C1024&amp;ssl=1\" /></a></p>\n"
+
 +    },
+
 +    "caption": {
+
 +      "rendered": ""
+
 +    },
+
 +    "alt_text": "",
+
 +    "media_type": "image",
-+    "mime_type": "image/png",
-+    "media_details": {
-+      "width": 1212,
-+      "height": 742,
-+      "file": "2026/05/When_we_were_17.png",
-+      "filesize": 1786874,
-+      "sizes": {
-+        "medium": {
-+          "file": "When_we_were_17-300x184.png",
-+          "width": 300,
-+          "height": 184,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=300%2C184&ssl=1"
-+        },
-+        "large": {
-+          "file": "When_we_were_17-1024x627.png",
-+          "width": 1024,
-+          "height": 627,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=1024%2C627&ssl=1"
-+        },
-+        "thumbnail": {
-+          "file": "When_we_were_17-150x150.png",
-+          "width": 150,
-+          "height": 150,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=150%2C150&ssl=1"
-+        },
-+        "medium_large": {
-+          "file": "When_we_were_17-768x470.png",
-+          "width": 768,
-+          "height": 470,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=768%2C470&ssl=1"
-+        },
-+        "newspack-article-block-landscape-large": {
-+          "file": "When_we_were_17-1200x742.png",
-+          "width": 1200,
-+          "height": 742,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=1200%2C742&ssl=1"
-+        },
-+        "newspack-article-block-portrait-large": {
-+          "file": "When_we_were_17-900x742.png",
-+          "width": 900,
-+          "height": 742,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=900%2C742&ssl=1"
-+        },
-+        "newspack-article-block-square-large": {
-+          "file": "When_we_were_17-1200x742.png",
-+          "width": 1200,
-+          "height": 742,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=1200%2C742&ssl=1"
-+        },
-+        "newspack-article-block-landscape-medium": {
-+          "file": "When_we_were_17-800x600.png",
-+          "width": 800,
-+          "height": 600,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=800%2C600&ssl=1"
-+        },
-+        "newspack-article-block-portrait-medium": {
-+          "file": "When_we_were_17-600x742.png",
-+          "width": 600,
-+          "height": 742,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=600%2C742&ssl=1"
-+        },
-+        "newspack-article-block-square-medium": {
-+          "file": "When_we_were_17-800x742.png",
-+          "width": 800,
-+          "height": 742,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=800%2C742&ssl=1"
-+        },
-+        "newspack-article-block-landscape-intermediate": {
-+          "file": "When_we_were_17-600x450.png",
-+          "width": 600,
-+          "height": 450,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=600%2C450&ssl=1"
-+        },
-+        "newspack-article-block-portrait-intermediate": {
-+          "file": "When_we_were_17-450x600.png",
-+          "width": 450,
-+          "height": 600,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=450%2C600&ssl=1"
-+        },
-+        "newspack-article-block-square-intermediate": {
-+          "file": "When_we_were_17-600x600.png",
-+          "width": 600,
-+          "height": 600,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=600%2C600&ssl=1"
-+        },
-+        "newspack-article-block-landscape-small": {
-+          "file": "When_we_were_17-400x300.png",
-+          "width": 400,
-+          "height": 300,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=400%2C300&ssl=1"
-+        },
-+        "newspack-article-block-portrait-small": {
-+          "file": "When_we_were_17-300x400.png",
-+          "width": 300,
-+          "height": 400,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=300%2C400&ssl=1"
-+        },
-+        "newspack-article-block-square-small": {
-+          "file": "When_we_were_17-400x400.png",
-+          "width": 400,
-+          "height": 400,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=400%2C400&ssl=1"
-+        },
-+        "newspack-article-block-landscape-tiny": {
-+          "file": "When_we_were_17-200x150.png",
-+          "width": 200,
-+          "height": 150,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=200%2C150&ssl=1"
-+        },
-+        "newspack-article-block-portrait-tiny": {
-+          "file": "When_we_were_17-150x200.png",
-+          "width": 150,
-+          "height": 200,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=150%2C200&ssl=1"
-+        },
-+        "newspack-article-block-square-tiny": {
-+          "file": "When_we_were_17-200x200.png",
-+          "width": 200,
-+          "height": 200,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?resize=200%2C200&ssl=1"
-+        },
-+        "newspack-article-block-uncropped": {
-+          "file": "When_we_were_17-1200x735.png",
-+          "width": 1200,
-+          "height": 735,
-+          "virtual": true,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=1200%2C735&ssl=1"
-+        },
-+        "full": {
-+          "file": "When_we_were_17.png?fit=1212%2C742&ssl=1",
-+          "width": 1212,
-+          "height": 742,
-+          "mime_type": "image/png",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png?fit=1212%2C742&ssl=1"
-+        }
-+      },
-+      "image_meta": {
-+        "aperture": "0",
-+        "credit": "",
-+        "camera": "",
-+        "caption": "",
-+        "created_timestamp": "0",
-+        "copyright": "",
-+        "focal_length": "0",
-+        "iso": "0",
-+        "shutter_speed": "0",
-+        "title": "",
-+        "orientation": "0",
-+        "keywords": [],
-+        "alt": ""
-+      }
-+    },
-+    "post": 1837,
-+    "source_url": "https://project-skyscraper.com/wp-content/uploads/2026/05/When_we_were_17.png",
-+    "jetpack_videopress_guid": "",
-+    "jetpack_videopress": {
-+      "title": "When_we_were_17",
-+      "description": "",
-+      "caption": "",
-+      "guid": null,
-+      "rating": null,
-+      "allow_download": 0,
-+      "display_embed": 0,
-+      "privacy_setting": 2,
-+      "needs_playback_token": false,
-+      "is_private": false,
-+      "private_enabled_for_site": false
-+    },
-+    "_links": {
-+      "self": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/media/1842",
-+          "targetHints": {
-+            "allow": [
-+              "GET"
-+            ]
-+          }
-+        }
-+      ],
-+      "collection": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/media"
-+        }
-+      ],
-+      "about": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/attachment"
-+        }
-+      ],
-+      "author": [
-+        {
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
-+        }
-+      ],
-+      "replies": [
-+        {
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1842"
-+        }
-+      ],
-+      "wp:term": [
-+        {
-+          "taxonomy": "attachment_category",
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/attachment_category?post=1842"
-+        },
-+        {
-+          "taxonomy": "attachment_tag",
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/attachment_tag?post=1842"
-+        }
-+      ],
-+      "wp:attached-to": [
-+        {
-+          "embeddable": true,
-+          "post_type": "post",
-+          "id": 1837,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1837"
-+        }
-+      ],
-+      "curies": [
-+        {
-+          "name": "wp",
-+          "href": "https://api.w.org/{rel}",
-+          "templated": true
-+        }
-+      ]
-+    }
-+  },
-+  {
-+    "id": 1841,
-+    "date": "2026-05-29T11:24:19",
-+    "date_gmt": "2026-05-29T10:24:19",
-+    "guid": {
-+      "rendered": "https://project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg"
-+    },
-+    "modified": "2026-05-29T11:24:19",
-+    "modified_gmt": "2026-05-29T10:24:19",
-+    "slug": "unknown",
-+    "status": "inherit",
-+    "type": "attachment",
-+    "link": "https://project-skyscraper.com/2002/05/12/code/unknown/",
-+    "title": {
-+      "rendered": "Unknown"
-+    },
-+    "author": 279180095,
-+    "featured_media": 0,
-+    "comment_status": "open",
-+    "ping_status": "closed",
-+    "template": "",
-+    "meta": {
-+      "advanced_seo_description": "",
-+      "jetpack_seo_html_title": "",
-+      "jetpack_seo_noindex": false
-+    },
-+    "attachment_category": [],
-+    "attachment_tag": [],
-+    "class_list": [
-+      "post-1841",
-+      "attachment",
-+      "type-attachment",
-+      "status-inherit",
-+      "hentry"
-+    ],
-+    "filename": "Unknown.jpg",
-+    "filesize": 460461,
-+    "jetpack_likes_enabled": true,
-+    "jetpack_sharing_enabled": true,
-+    "jetpack_shortlink": "https://wp.me/ahdnFZ-tH",
-+    "description": {
-+      "rendered": "<p class=\"attachment\"><a href=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?ssl=1\"><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=300%2C300&amp;ssl=1\" class=\"attachment-medium size-medium\" alt=\"\" srcset=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?w=999&amp;ssl=1 999w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?resize=768%2C768&amp;ssl=1 768w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" data-attachment-id=\"1841\" data-permalink=\"https://project-skyscraper.com/2002/05/12/code/unknown/\" data-orig-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&amp;ssl=1\" data-orig-size=\"999,999\" data-comments-opened=\"1\" data-image-meta=\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;,&quot;alt&quot;:&quot;&quot;}\" data-image-title=\"Unknown\" data-image-description=\"\" data-image-caption=\"\" data-large-file=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&amp;ssl=1\" /></a></p>\n"
-+    },
-+    "caption": {
-+      "rendered": ""
-+    },
-+    "alt_text": "",
-+    "media_type": "image",
+
 +    "mime_type": "image/jpeg",
+
 +    "media_details": {
-+      "width": 999,
-+      "height": 999,
-+      "file": "2026/05/Unknown.jpg",
-+      "filesize": 460461,
+
++      "width": 1000,
+
++      "height": 1600,
+
++      "file": "2026/06/YBM_request_2416.jpg",
+
++      "filesize": 1457473,
+
 +      "sizes": {
+
 +        "medium": {
-+          "file": "Unknown-300x300.jpg",
-+          "width": 300,
-+          "height": 300,
-+          "virtual": true,
-+          "mime_type": "image/jpeg",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=300%2C300&ssl=1"
-+        },
-+        "thumbnail": {
-+          "file": "Unknown-150x150.jpg",
-+          "width": 150,
-+          "height": 150,
-+          "virtual": true,
-+          "mime_type": "image/jpeg",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?resize=150%2C150&ssl=1"
-+        },
-+        "medium_large": {
-+          "file": "Unknown-768x768.jpg",
-+          "width": 768,
-+          "height": 768,
-+          "virtual": true,
-+          "mime_type": "image/jpeg",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=768%2C768&ssl=1"
-+        },
-+        "full": {
-+          "file": "Unknown.jpg?fit=999%2C999&ssl=1",
-+          "width": 999,
-+          "height": 999,
-+          "mime_type": "image/jpeg",
-+          "source_url": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&ssl=1"
-+        }
-+      },
-+      "image_meta": {
-+        "aperture": "0",
-+        "credit": "",
-+        "camera": "",
-+        "caption": "",
-+        "created_timestamp": "0",
-+        "copyright": "",
-+        "focal_length": "0",
-+        "iso": "0",
-+        "shutter_speed": "0",
-+        "title": "",
-+        "orientation": "1",
-+        "keywords": [],
-+        "alt": ""
-+      }
-+    },
-+    "post": 1837,
-+    "source_url": "https://project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg",
-+    "jetpack_videopress_guid": "",
-+    "jetpack_videopress": {
-+      "title": "Unknown",
-+      "description": "",
-+      "caption": "",
-+      "guid": null,
-+      "rating": null,
-+      "allow_download": 0,
-+      "display_embed": 0,
-+      "privacy_setting": 2,
-+      "needs_playback_token": false,
-+      "is_private": false,
-+      "private_enabled_for_site": false
-+    },
-+    "_links": {
-+      "self": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/media/1841",
-+          "targetHints": {
-+            "allow": [
-+              "GET"
-+            ]
-+          }
-+        }
-+      ],
-+      "collection": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/media"
-+        }
-+      ],
-+      "about": [
-+        {
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/types/attachment"
-+        }
-+      ],
-+      "author": [
-+        {
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
-+        }
-+      ],
-+      "replies": [
-+        {
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1841"
-+        }
-+      ],
-+      "wp:term": [
-+        {
-+          "taxonomy": "attachment_category",
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/attachment_category?post=1841"
-+        },
-+        {
-+          "taxonomy": "attachment_tag",
-+          "embeddable": true,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/attachment_tag?post=1841"
-+        }
-+      ],
-+      "wp:attached-to": [
-+        {
-+          "embeddable": true,
-+          "post_type": "post",
-+          "id": 1837,
-+          "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1837"
-+        }
-+      ],
-+      "curies": [
-+        {
-+          "name": "wp",
-+          "href": "https://api.w.org/{rel}",
-+          "templated": true
-+        }
-+      ]
-+    }
-+  },
-   {
-     "id": 1745,
-     "date": "2026-05-25T18:55:20",
+
+... (317 more lines)

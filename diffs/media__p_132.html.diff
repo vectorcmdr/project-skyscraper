@@ -1,9 +1,63 @@
 # Diff: https://project-skyscraper.com/?p=132
 # File: media/_p_132.html
-# Timestamp: 2026-06-01 13:21:00 UTC
-# Binary: size changed
+# Timestamp: 2026-06-06 08:09:27 UTC
+# Lines: 65251 old -> 65301 new
+# Beautified: yes
 
---- old/media/_p_132.html
-+++ new/media/_p_132.html
--63.7 KB
-+63.7 KB
+@@ -364,7 +364,7 @@
+ 							<input type="hidden" name="app_source" value="atomic-subscription-modal-lo"/>
+
+ 							<input type="hidden" name="redirect_fragment" value="subscribe-blog"/>
+
+ 							<input type="hidden" name="lang" value="en_US"/>
+
+-							<input type="hidden" id="_wpnonce" name="_wpnonce" value="b34def2439" /><input type="hidden" name="_wp_http_referer" value="/2026/03/27/sleep-mode-46108/" /><input type="hidden" name="post_id" value="132"/>							<button type="submit"
+
++							<input type="hidden" id="_wpnonce" name="_wpnonce" value="d4a96231a6" /><input type="hidden" name="_wp_http_referer" value="/2026/03/27/sleep-mode-46108/" /><input type="hidden" name="post_id" value="132"/>							<button type="submit"
+
+ 																	class="wp-block-button__link"
+
+ 																									style="font-size: 16px;padding: 15px 23px 15px 23px;margin: 0; margin-left: 10px;border-radius: 50px;border-width: 1px;"
+
+ 																name="jetpack_subscriptions_widget"
+
+@@ -412,7 +412,7 @@
+         "isWpConsentApiActive": false
+
+     },
+
+     "isLegacyEventLoaded": "",
+
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=24dd7c97a8",
+
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e79284bdac",
+
+     "onlineParams": {
+
+         "wp_statistics_hit": 1,
+
+         "source_type": "post",
+
+@@ -435,7 +435,7 @@
+     "hp": "atomic",
+
+     "ac": "2",
+
+     "amp": "0",
+
+-    "j": "1:15.9-a.5"
+
++    "j": "1:15.9-a.7"
+
+ }]);
+
+ _stq.push(["clickTrackerInit", "254386991", "132"]);
+
+ //# sourceURL=jetpack-stats-js-before</script>
+
+@@ -443,7 +443,7 @@
+ <script id="jetpack-blocks-assets-base-url-js-before">var Jetpack_Block_Assets_Base_Url = "https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/";
+
+ //# sourceURL=jetpack-blocks-assets-base-url-js-before</script>
+
+... (17 more lines)

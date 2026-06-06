@@ -1,302 +1,66 @@
 # Diff: https://project-skyscraper.com/wp-json/wp/v2/posts/1852
 # File: api/wp-json/wp/v2/posts/1852.json
-# Timestamp: 2026-06-01 07:46:57 UTC
-# Lines: 7 old -> 290 new
+# Timestamp: 2026-06-06 07:58:27 UTC
+# Lines: 6053 old -> 6242 new
 # Beautified: yes
---- old/api/wp-json/wp/v2/posts/1852.json
-+++ new/api/wp-json/wp/v2/posts/1852.json
-@@ -1,7 +1,290 @@
- {
--  "code": "rest_post_invalid_id",
--  "message": "Invalid post ID.",
--  "data": {
--    "status": 404
-+  "id": 1852,
-+  "date": "2026-05-31T19:37:00",
-+  "date_gmt": "2026-05-31T18:37:00",
-+  "guid": {
-+    "rendered": "https://project-skyscraper.com/?p=1852"
-+  },
-+  "modified": "2026-05-31T19:35:48",
-+  "modified_gmt": "2026-05-31T18:35:48",
-+  "slug": "sec-log-193727",
-+  "status": "publish",
-+  "type": "post",
-+  "link": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
-+  "title": {
-+    "rendered": "SECURITY LOG"
-+  },
-+  "content": {
-+    "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1780256220:<br><br>System: Core<br><br>Module: Memory_reconstruction_engine<br>Status: Access locked behind password<br><br>ERROR: Bit offset detected<br>Offset_value: undefined<br><br>Action required: Quantify offset<br><br>Warning: Memory reconstruction blocked</p>\n",
-+    "protected": false
-+  },
-+  "excerpt": {
-+    "rendered": "<p>memory bloc : System: Core Module: Memory_reconstruction_engineStatus: Access locked behind password ERROR: Bit offset detectedOffset_value: undefined Action required: Quantify offset Warning: Memory reconstruction blocked</p>\n",
-+    "protected": false
-+  },
-+  "author": 279180095,
-+  "featured_media": 0,
-+  "comment_status": "closed",
-+  "ping_status": "closed",
-+  "sticky": false,
-+  "template": "security-logs",
-+  "format": "standard",
-+  "meta": {
-+    "advanced_seo_description": "",
-+    "jetpack_seo_html_title": "",
-+    "jetpack_seo_noindex": false,
-+    "_jetpack_newsletter_access": "",
-+    "_jetpack_dont_email_post_to_subs": true,
-+    "_jetpack_newsletter_tier_id": 0,
-+    "_jetpack_memberships_contains_paywalled_content": false,
-+    "_jetpack_feature_clip_id": 0,
-+    "_jetpack_memberships_contains_paid_content": false,
-+    "footnotes": "",
-+    "jetpack_post_was_ever_published": false
-+  },
-+  "categories": [
-+    6325
-+  ],
-+  "tags": [],
-+  "class_list": [
-+    "post-1852",
-+    "post",
-+    "type-post",
-+    "status-publish",
-+    "format-standard",
-+    "hentry",
-+    "category-non-classe"
-+  ],
-+  "jetpack_featured_media_url": "",
-+  "jetpack_likes_enabled": false,
-+  "jetpack_sharing_enabled": false,
-+  "jetpack_shortlink": "https://wp.me/phdnFZ-tS",
-+  "jetpack-related-posts": [
-+    {
-+      "id": 291,
-+      "url": "https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/",
+
+@@ -39,10 +39,32 @@
+       "classes": []
+
+     },
+
+     {
+
++      "url": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+
 +      "url_meta": {
+
 +        "origin": 1852,
-+        "position": 0
-+      },
-+      "title": "SECURITY LOG",
-+      "author": "The Architect",
-+      "date": "30 May 2026",
-+      "format": false,
-+      "excerpt": "memory bloc : Memory_reconstruction_engine activatedFull log",
-+      "rel": "",
-+      "context": "In &quot;Non classé&quot;",
-+      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
-+      },
-+      "img": {
-+        "alt_text": "",
-+        "src": "",
-+        "width": 0,
-+        "height": 0
-+      },
-+      "classes": []
-+    },
-+    {
-+      "id": 117,
-+      "url": "https://project-skyscraper.com/1970/01/01/origin/",
-+      "url_meta": {
-+        "origin": 1852,
+
 +        "position": 1
+
 +      },
-+      "title": "HELLO, WORLD",
-+      "author": "The Architect",
-+      "date": "1 January 1970",
-+      "format": false,
-+      "excerpt": "memory bloc : no/value",
+
++      "title": "SECURITY LOG",
+
++      "date": "2 June 2026",
+
++      "excerpt": "memory bloc :System: CoreModule: Memory_reconstruction_engineData_Revision: ReceivedSource: External_Operator Memory_Bloc_Edition: UnauthorizedWarning: Memory_Bloc_Addition only.Saved memory bloc can't be edited.",
+
 +      "rel": "",
+
 +      "context": "In &quot;Non classé&quot;",
+
 +      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
+
++        "text": "Non classé"
+
 +      },
+
 +      "img": {
+
 +        "alt_text": "",
-+        "src": "https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=512%2C512&ssl=1&resize=350%2C200",
-+        "width": 350,
-+        "height": 200
-+      },
-+      "classes": []
-+    },
-+    {
-+      "id": 140,
-+      "url": "https://project-skyscraper.com/2026/04/06/sleep-mode-46118/",
-+      "url_meta": {
-+        "origin": 1852,
-+        "position": 2
-+      },
-+      "title": "SLEEP MODE",
-+      "author": "The Architect",
-+      "date": "6 April 2026",
-+      "format": false,
-+      "excerpt": "memory bloc : sleeping",
-+      "rel": "",
-+      "context": "In &quot;Non classé&quot;",
-+      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
-+      },
-+      "img": {
-+        "alt_text": "",
+
 +        "src": "",
+
 +        "width": 0,
+
 +        "height": 0
+
 +      },
+
 +      "classes": []
+
 +    },
+
 +    {
-+      "id": 138,
-+      "url": "https://project-skyscraper.com/2026/04/03/sleep-mode-46115/",
-+      "url_meta": {
-+        "origin": 1852,
-+        "position": 3
-+      },
-+      "title": "SLEEP MODE",
-+      "author": "The Architect",
-+      "date": "3 April 2026",
-+      "format": false,
-+      "excerpt": "memory bloc : sleeping",
-+      "rel": "",
-+      "context": "In &quot;Non classé&quot;",
-+      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
-+      },
-+      "img": {
-+        "alt_text": "",
-+        "src": "",
-+        "width": 0,
-+        "height": 0
-+      },
-+      "classes": []
-+    },
-+    {
-+      "id": 136,
-+      "url": "https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
-+      "url_meta": {
-+        "origin": 1852,
-+        "position": 4
-+      },
-+      "title": "SLEEP MODE",
-+      "author": "The Architect",
-+      "date": "1 April 2026",
-+      "format": false,
-+      "excerpt": "memory bloc : sleeping",
-+      "rel": "",
-+      "context": "In &quot;Non classé&quot;",
-+      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
-+      },
-+      "img": {
-+        "alt_text": "",
-+        "src": "",
-+        "width": 0,
-+        "height": 0
-+      },
-+      "classes": []
-+    },
-+    {
-+      "id": 134,
-+      "url": "https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
-+      "url_meta": {
-+        "origin": 1852,
-+        "position": 5
-+      },
-+      "title": "SLEEP MODE",
-+      "author": "The Architect",
-+      "date": "29 March 2026",
-+      "format": false,
-+      "excerpt": "memory bloc : sleeping",
-+      "rel": "",
-+      "context": "In &quot;Non classé&quot;",
-+      "block_context": {
-+        "text": "Non classé",
-+        "link": "https://project-skyscraper.com/category/non-classe/"
-+      },
-+      "img": {
-+        "alt_text": "",
-+        "src": "",
-+        "width": 0,
-+        "height": 0
-+      },
-+      "classes": []
-+    }
-+  ],
-+  "_links": {
-+    "self": [
-+      {
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1852",
-+        "targetHints": {
-+          "allow": [
-+            "GET"
-+          ]
-+        }
-+      }
-+    ],
-+    "collection": [
-+      {
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/posts"
-+      }
-+    ],
-+    "about": [
-+      {
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/types/post"
-+      }
-+    ],
-+    "author": [
-+      {
-+        "embeddable": true,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/users/279180095"
-+      }
-+    ],
-+    "replies": [
-+      {
-+        "embeddable": true,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/comments?post=1852"
-+      }
-+    ],
-+    "version-history": [
-+      {
-+        "count": 2,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1852/revisions"
-+      }
-+    ],
-+    "predecessor-version": [
-+      {
-+        "id": 1854,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/posts/1852/revisions/1854"
-+      }
-+    ],
-+    "wp:attachment": [
-+      {
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/media?parent=1852"
-+      }
-+    ],
-+    "wp:term": [
-+      {
-+        "taxonomy": "category",
-+        "embeddable": true,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/categories?post=1852"
-+      },
-+      {
-+        "taxonomy": "post_tag",
-+        "embeddable": true,
-+        "href": "https://project-skyscraper.com/wp-json/wp/v2/tags?post=1852"
-+      }
-+    ],
-+    "curies": [
-+      {
-+        "name": "wp",
-+        "href": "https://api.w.org/{rel}",
-+        "templated": true
-+      }
-+    ]
-   }
- }
+
+       "url": "https://project-skyscraper.com/1970/01/01/origin/",
+
+       "url_meta": {
+
+         "origin": 1852,
+
+-        "position": 1
+
+... (60 more lines)

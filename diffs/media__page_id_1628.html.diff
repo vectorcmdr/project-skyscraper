@@ -1,9 +1,54 @@
 # Diff: https://project-skyscraper.com/?page_id=1628
 # File: media/_page_id_1628.html
-# Timestamp: 2026-06-01 13:21:21 UTC
-# Binary: size changed
+# Timestamp: 2026-06-06 08:10:04 UTC
+# Lines: 59087 old -> 59163 new
+# Beautified: yes
 
---- old/media/_page_id_1628.html
-+++ new/media/_page_id_1628.html
--57.8 KB
-+57.7 KB
+@@ -336,7 +336,7 @@
+         "isWpConsentApiActive": false
+
+     },
+
+     "isLegacyEventLoaded": "",
+
+-    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=24dd7c97a8",
+
++    "customEventAjaxUrl": "https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e79284bdac",
+
+     "onlineParams": {
+
+         "wp_statistics_hit": 1,
+
+         "source_type": "page",
+
+@@ -359,7 +359,7 @@
+     "hp": "atomic",
+
+     "ac": "2",
+
+     "amp": "0",
+
+-    "j": "1:15.9-a.5"
+
++    "j": "1:15.9-a.7"
+
+ }]);
+
+ _stq.push(["clickTrackerInit", "254386991", "1628"]);
+
+ //# sourceURL=jetpack-stats-js-before</script>
+
+@@ -458,3 +458,7 @@
+ //# sourceURL=https://project-skyscraper.com/wp-includes/js/wp-emoji-loader.min.js</script>
+
+ </body>
+
+ </html>
+
++<!--
+
++	generated in 0.284 seconds
+
++	59940 bytes batcached for 300 seconds
+
++-->

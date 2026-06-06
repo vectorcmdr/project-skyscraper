@@ -1,0 +1,32 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/pages/1
+# File: api/wp-json/wp/v2/pages/1.json
+# Timestamp: 2026-06-06 07:58:29 UTC
+# Lines: 1860 old -> 1998 new
+# Beautified: yes
+
+@@ -4,11 +4,11 @@
+     "rendered": "About"
+
+   },
+
+   "content": {
+
+-    "rendered": "\n<p class=\"wp-block-paragraph\">Is this real ?</p>\n",
+
++    "rendered": "\n<p class=\"has-text-align-center wp-block-paragraph\">This is<br><a href=\"https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump\">.-. . .- .-..</a></p>\n",
+
+     "protected": false
+
+   },
+
+   "excerpt": {
+
+-    "rendered": "<p>Is this real ?</p>\n",
+
++    "rendered": "<p>This is.-. . .- .-..</p>\n",
+
+     "protected": false
+
+   },
+
+   "jetpack_likes_enabled": true,

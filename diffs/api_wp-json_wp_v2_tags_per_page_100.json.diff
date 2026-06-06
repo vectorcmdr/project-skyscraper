@@ -1,16 +1,43 @@
 # Diff: https://project-skyscraper.com/wp-json/wp/v2/tags?per_page=100
 # File: api/wp-json/wp/v2/tags_per_page_100.json
-# Timestamp: 2026-05-29 14:09:31 UTC
-# Lines: 134 old -> 134 new
+# Timestamp: 2026-06-06 07:57:50 UTC
+# Lines: 1927 old -> 2557 new
 # Beautified: yes
---- old/api/wp-json/wp/v2/tags_per_page_100.json
-+++ new/api/wp-json/wp/v2/tags_per_page_100.json
-@@ -1,7 +1,7 @@
+
+@@ -1,6 +1,6 @@
  [
+
    {
-     "id": 16091,
--    "count": 1,
-+    "count": 2,
+
+-    "count": 2,
+
++    "count": 4,
+
      "description": "",
-     "link": "https://project-skyscraper.com/tag/stable/",
+
      "name": "stable",
+
+     "taxonomy": "post_tag"
+
+@@ -16,5 +16,11 @@
+     "description": "",
+
+     "name": "unverified",
+
+     "taxonomy": "post_tag"
+
++  },
+
++  {
+
++    "count": 1,
+
++    "description": "",
+
++    "name": "weak",
+
++    "taxonomy": "post_tag"
+
+   }
+
+ ]

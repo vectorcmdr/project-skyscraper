@@ -95,7 +95,7 @@ a.glitch-link:hover {
 /*# sourceURL=global-styles-inline-css */
 </style>
 <style id="wp-block-custom-css-inline-css">
-:root :where(.wp-custom-css-8b6cd400){position: relative;
+:root :where(.wp-custom-css-19078547){position: relative;
 width: 100%;
 height: 100vh;           /* Plein écran en hauteur */
 max-width: none !important;
@@ -196,7 +196,7 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <body class="wp-singular page-template page-template-connecting-dots page page-id-551 wp-custom-logo wp-embed-responsive wp-theme-perenne is-block-theme">
 
 <div class="wp-site-blocks">
-<div class="wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-8b6cd400">
+<div class="wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-19078547">
 <p class="wp-block-paragraph"></p>
 
 
@@ -209,7 +209,7 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <!--  -->
 <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; text-align: center; pointer-events: auto; width: 100%; padding: 20px;">
   <div id="live-visitors">
-    <span class="online-iterations "><strong>1</strong> Live Connections</span>
+    <span class="online-iterations "><strong>3</strong> Live Connections</span>
   </div>
 </div>
 
@@ -226,7 +226,7 @@ class Particle {
     const cx = width / 2;
     const cy = height / 2;
     const angle = Math.random() * Math.PI * 2;
-    const distance = 160;
+    const distance = 140 + Math.random() * 20;
 
     this.baseX = cx + Math.cos(angle) * distance;
     this.baseY = cy + Math.sin(angle) * distance;
@@ -234,12 +234,12 @@ class Particle {
     this.y = this.baseY;
     this.size = Math.random() * 1.6 + 1.6;
     this.angle = Math.random() * Math.PI * 2;
-    this.orbitSpeed = 0.016 + Math.random() * 0.16;
+    this.orbitSpeed = 0.16 + Math.random() * 0.16;
   }
   update() {
     this.angle += this.orbitSpeed;
-    let tx = this.baseX + Math.cos(this.angle) * 4;
-    let ty = this.baseY + Math.sin(this.angle) * 4;
+    let tx = this.baseX + Math.cos(this.angle) * 6;
+    let ty = this.baseY + Math.sin(this.angle) * 6;
 
     if (mouse.active) {
       const dx = mouse.x - this.x;
@@ -261,11 +261,11 @@ class Particle {
     if (intensity > 0.25) {
       ctx.fillStyle = '#ff2d2d';
       ctx.shadowBlur = 20;
-      ctx.shadowColor = '#ff6666';
+      ctx.shadowColor = '#ff2d2d';
     } else {
-      ctx.fillStyle = '#00ddff';
+      ctx.fillStyle = '#ff2d2d';
       ctx.shadowBlur = 8;
-      ctx.shadowColor = '#00ddff';
+      ctx.shadowColor = '#ff2d2d';
     }
 
     ctx.beginPath();
@@ -280,7 +280,7 @@ function connectParticles() {
     for (let j = i + 1; j < particles.length; j++) {
       const d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
       if (d < 170) {
-        ctx.strokeStyle = `rgba(0, 221, 255, ${1 - d / 170})`;
+        ctx.strokeStyle = `rgba(255, 45, 45, ${1 - d / 170})`;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
@@ -339,7 +339,7 @@ setInterval(() => {
 
 <footer class="wp-block-template-part"><footer class="wp-block-template-part">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<p class="wp-block-paragraph">System Filtering Platform offline</p>
+<p class="wp-block-paragraph">Processing incoming requests</p>
 </div>
 </footer></footer></div>
 <!-- wpcom_wp_footer -->
@@ -349,13 +349,13 @@ setInterval(() => {
 <meta id="bilmur" property="bilmur:data" content="" data-customproperties="{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;perenne&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}" data-provider="wordpress.com" data-service="atomic"  data-site-tz="Europe/London" >
 <script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202623"></script>
 <script id="wp-statistics-tracker-js-extra">
-var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=24dd7c97a8","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
+var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=e79284bdac","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
 //# sourceURL=wp-statistics-tracker-js-extra
 </script>
 <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js?m=1779192756'></script>
 <script id="jetpack-stats-js-before">
 _stq = window._stq || [];
-_stq.push([ "view", {"v":"ext","blog":"254386991","post":"551","tz":"1","srv":"project-skyscraper.com","hp":"atomic","ac":"2","amp":"0","j":"1:15.9-a.5"} ]);
+_stq.push([ "view", {"v":"ext","blog":"254386991","post":"551","tz":"1","srv":"project-skyscraper.com","hp":"atomic","ac":"2","amp":"0","j":"1:15.9-a.7"} ]);
 _stq.push([ "clickTrackerInit", "254386991", "551" ]);
 //# sourceURL=jetpack-stats-js-before
 </script>
@@ -371,6 +371,8 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 </body>
 </html>
 <!--
-	generated in 0.403 seconds
-	55754 bytes batcached for 300 seconds
+	generated 162 seconds ago
+	generated in 0.214 seconds
+	served from batcache in 0.002 seconds
+	expires in 138 seconds
 -->

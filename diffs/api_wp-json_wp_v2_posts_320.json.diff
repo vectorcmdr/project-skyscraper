@@ -1,0 +1,48 @@
+# Diff: https://project-skyscraper.com/wp-json/wp/v2/posts/320
+# File: api/wp-json/wp/v2/posts/320.json
+# Timestamp: 2026-06-06 07:58:18 UTC
+# Lines: 98 old -> 2874 new
+# Beautified: yes
+
+@@ -1,4 +1,19 @@
+ {
+
+-  "message": "Sorry, you are not allowed to do that.",
+
+-  "data": {}
+
++  "date": "2017-06-01T13:16:00",
+
++  "title": {
+
++    "rendered": "2017_dataset"
+
++  },
+
++  "content": {
+
++    "rendered": "\n<p class=\"wp-block-paragraph\">memory bloc 1496322960: Audiotapes<br><br>Value: Cassette tapes received.<br>Labels: 1, 3, 4, 6, 7, 9, 10, 12<br><br>Spectrograph_analysis: 706s7274616p<br><br>Source_injection: multiple</p>\n",
+
++    "protected": false
+
++  },
+
++  "excerpt": {
+
++    "rendered": "<p>memory bloc : Audiotapes Value: Cassette tapes received.Labels: 1, 3, 4, 6, 7, 9, 10, 12 Spectrograph_analysis: 706s7274616p Source_injection: multiple</p>\n",
+
++    "protected": false
+
++  },
+
++  "jetpack_featured_media_url": "",
+
++  "jetpack_likes_enabled": true,
+
++  "jetpack_sharing_enabled": true,
+
++  "jetpack_shortlink": "https://wp.me/phdnFZ-5a",
+
++  "jetpack-related-posts": []
+
+ }
