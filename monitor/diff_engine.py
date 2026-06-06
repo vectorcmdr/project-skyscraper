@@ -20,6 +20,8 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
         old_text = strip_json_noise(old_text)
         new_text = strip_json_noise(new_text)
     else:
+        old_text = strip_page_noise(old_text)
+        new_text = strip_page_noise(new_text)
         old_text = beautify(old_text, path_hint)
         new_text = beautify(new_text, path_hint)
 
