@@ -1,6 +1,26 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-06-06T20:44:07.469491+00:00",
+      "title": "STRUCTURAL ANALYSIS",
+      "link": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "The Architect"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-06T20:44:07.469321+00:00",
+      "title": "Report: BRUSSELS",
+      "link": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
+      "author": "The Architect"
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-06T15:40:17.556838+00:00",
       "title": "event-01062017",
@@ -891,5 +911,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-06T16:40:45.078244+00:00"
+  "updated": "2026-06-06T20:44:07.471329+00:00"
 }
