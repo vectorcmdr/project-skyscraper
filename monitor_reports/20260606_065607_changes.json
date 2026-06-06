@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-06-06 06:56:07 UTC",
+  "category": "changes",
+  "data": {
+    "count": 3,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/04/13/sleep-mode-46125/",
+        "old_hash": "b56381d94a6abd6eb6ae53fb68fd7404",
+        "new_hash": "fb100310d8c962cc7e13d95326e26f45",
+        "detail": "Content changed: https://project-skyscraper.com/2026/04/13/sleep-mode-46125/",
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/04/16/sleep-mode-46128/",
+        "old_hash": "cc130e71aa8cd66f52540af68a3c90d4",
+        "new_hash": "97e2bd44a7a812c54bdbb8540b0859cc",
+        "detail": "Content changed: https://project-skyscraper.com/2026/04/16/sleep-mode-46128/",
+        "author": 279180095,
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/04/16/sleep-mode-46128/",
+            "diff": ""
+          }
+        ]
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/04/23/sleep-mode-46135/",
+        "old_hash": "d3bcf60f9f5579869085bff059f25859",
+        "new_hash": "924205d2c2f23cc372c8ec09d820ba07",
+        "detail": "Content changed: https://project-skyscraper.com/2026/04/23/sleep-mode-46135/",
+        "author": 279180095
+      }
+    ]
+  }
+}
