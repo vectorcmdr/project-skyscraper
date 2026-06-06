@@ -122,6 +122,37 @@ _trace_last_poll = 0
 _trace_last_state = None
 _trace_last_seen = None
 
+# Noise suppression patterns for page content changes
+# Dynamic/metadata-only changes matching these are not exposed as feed entries
+_PAGE_NOISE_PATTERNS = [
+    # Live connection count (server-side dynamic stat)
+    (re.compile(r'<strong>\d+</strong>\s*Live Connections'), '<strong>0</strong> Live Connections'),
+    # Versioned script/CSS URLs
+    (re.compile(r'[?&]m=\d{6}'), ''),
+    (re.compile(r'e-\d{6}\.js'), 'e-000000.js'),
+    # Nonces
+    (re.compile(r'nonce=[a-f0-9]+'), 'nonce=REMOVED'),
+    # Cache/timing comments
+    (re.compile(r'generated in \d+\.\d+ seconds'), ''),
+    (re.compile(r'batcached for \d+ seconds'), ''),
+    (re.compile(r'served from batcache in \d+\.\d+ seconds'), ''),
+    (re.compile(r'expires in \d+ seconds'), ''),
+    (re.compile(r'generated \d+ seconds? ago'), ''),
+    # Jetpack stats version string
+    (re.compile(r'"j":"\d+:\d+\.\d+-[a-z]\.\d+"'), '"j":"0:0.0-a.0"'),
+    # WP Statistics signature hash
+    (re.compile(r'"signature":"[a-f0-9]+"'), '"signature":"REMOVED"'),
+    # WP Statistics online check endpoint signature
+    (re.compile(r'"_wpnonce":"[a-f0-9]+"'), '"_wpnonce":"REMOVED"'),
+    # Auto-generated CSS class hashes (WordPress block editor)
+    (re.compile(r'wp-custom-css-[a-f0-9]{9}'), 'wp-custom-css-XXXXXXXXX'),
+]
+
+def _strip_content_noise(html: str) -> str:
+    for pattern, replacement in _PAGE_NOISE_PATTERNS:
+        html = pattern.sub(replacement, html)
+    return html
+
 # Rate-limit tracking
 _rate_limited_until = 0  # timestamp until which we back off
 _rate_limit_lock = threading.Lock()
@@ -1004,7 +1035,8 @@ def check_api_collection(endpoint: str, state: dict) -> list:
 # ---------------------------------------------------------------------------
 
 def check_page_content(url: str, state: dict) -> list:
-    """Fetch a single page and compare hash. Returns changes if content differs."""
+    """Fetch a single page and compare hash. Returns changes if content differs.
+    Suppresses noise-only changes (dynamic stats, cache metadata) from the feed."""
     changes = []
     page_state = state.setdefault("pages", {}).setdefault(url, {})
 
@@ -1025,14 +1057,33 @@ def check_page_content(url: str, state: dict) -> list:
     old_hash = page_state.get("hash")
 
     if old_hash is not None and old_hash != new_hash:
-        changes.append({
-            "type": "page_content_changed",
-            "url": url,
-            "old_hash": old_hash,
-            "new_hash": new_hash,
-            "detail": f"Content changed: {url}",
-        })
-        log(f"Page content CHANGED: {url}", "DEEP")
+        # Check if the change is only noise (dynamic stats, cache metadata, etc.)
+        old_path = url_to_path(url, subdir="html")
+        if old_path.is_file():
+            old_text = old_path.read_text(encoding="utf-8", errors="replace")
+            new_text = result.content.decode("utf-8", errors="replace")
+            old_stripped = _strip_content_noise(old_text)
+            new_stripped = _strip_content_noise(new_text)
+            noise_only = hashlib.md5(old_stripped.encode("utf-8")).hexdigest() == \
+                         hashlib.md5(new_stripped.encode("utf-8")).hexdigest()
+        else:
+            noise_only = False
+
+        if noise_only:
+            log(f"Page {url}: hash changed but only noise (suppressed)", "DEEP")
+            # Still update the mirror so local copy stays current
+            path = url_to_path(url, subdir="html")
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(result.content)
+        else:
+            changes.append({
+                "type": "page_content_changed",
+                "url": url,
+                "old_hash": old_hash,
+                "new_hash": new_hash,
+                "detail": f"Content changed: {url}",
+            })
+            log(f"Page content CHANGED: {url}", "DEEP")
     elif old_hash is None:
         log(f"Page content first tracked: {url}", "DEEP")
 
