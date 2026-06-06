@@ -24,15 +24,21 @@ _The static mirror of the Project Skyscraper ARG website is otherwise contained 
 
 | File | Purpose |
 |------|---------|
-| `update_mirror.py` | Full 12-phase mirror fetch (one-shot) |
-| `update_mirror.ps1` | PowerShell wrapper for `update_mirror.py` |
-| `monitor_site.py` | Long-running change detection daemon |
-| `start_monitor.ps1` | PowerShell wrapper for `monitor_site.py` |
+| `monitor/` | Modular Python package (shared logic across all tools) |
+| `monitor_site.py` | Long-running change detection daemon (thin wrapper) |
+| `start_monitor.ps1` | PowerShell launcher for `monitor_site.py` |
+| `update_mirror.py` | Full mirror fetch, one-shot (thin wrapper) |
+| `update_mirror.ps1` | PowerShell launcher for `update_mirror.py` |
 | `serve_mirror.py` | Local HTTP server with URL rewriting |
-| `MIRROR_MANIFEST.md` | Full file listing (auto-generated) |
-| `POST_ID_SERIES.md` | Post/page/media ID analysis |
-| `state/monitor_state.json` | Persistent daemon state (git-friendly JSON) |
-| `monitor/` | Change reports and logs from the daemon |
+| `config.json` | Configuration (webhook, git, polling intervals) |
+| `docs/` | GitHub Pages site (status dashboard + changelog) |
+| `state/monitor_state.json` | Persistent daemon state (auto-managed) |
+| `diffs/` | Individual .diff files per changed resource |
+| `MIRROR_MANIFEST.md` | Full mirror file listing (auto-generated) |
+| `POST_ID_SERIES.md` | Post/page/media ID analysis + time reference table |
+| `UNPUBLISHED_IDS.md` | Draft/private content IDs detected via probing |
+
+Both `update_mirror.py` and `monitor_site.py` are thin entry points that import from the shared `monitor/` package. No duplicated logic.
 
 ---
 
@@ -65,36 +71,42 @@ A daemon that polls `project-skyscraper.com` in three tiers and alerts via Disco
 
 | Tier | Interval | Checks |
 |------|----------|--------|
-| **Fast** | 30s | Sitemap HEAD (ETag/Last-Modified) — quick change flag |
-| **Medium** | 120s | All REST API collections + namespace endpoints (conditional GET + pagination) |
-| **Deep** | 1800s | Page content hashes (5/cycle), static assets (theme/plugin CSS/JS/fonts), discovery docs, extras, oEmbed, media thumbnails, orphan ID probe (30 IDs/cycle) |
+| **Fast** | 30s | Sitemap URL diff (new/removed pages only, not metadata) |
+| **Medium** | 120s | All wp/v2 collections (conditional GET + paginated item diff) |
+| **Deep** | 1800s | Page content hashes (15/cycle round-robin), media thumbnail ETags, unpublished ID probe (30 IDs/cycle) |
 
-### What the Monitor Detects
+### Noise Suppression
 
-| Change Type | How |
-|-------------|-----|
-| New/removed sitemap URLs | Sitemap content hash diff |
-| New/removed/modified API items | Paginated collection fetch + item-level diff |
-| Page content changes | Full-content hash comparison |
-| Media file replacement | `source_url` change tracking |
-| Orphan/unattached uploads | `post_parent == 0` detection |
-| Media thumbnail variants | HEAD + ETag per `media_details.sizes` entry |
-| JSON endpoint changes | Conditional GET + hash for any REST endpoint |
-| Endpoint auth transitions | 401/403 → 200 status change detection |
-| Static asset changes | Conditional GET on known CSS/JS/font/image files |
-| Discovery doc changes | Conditional GET on robots.txt, sitemap XSL, etc. |
-| Unpublished/draft items | HEAD probe of IDs beyond the maximum known ID (chunked: 30/cycle) |
+Three-tier filtering prevents batcache, WP Statistics, nonce, and cache-timing noise from triggering alerts:
 
-### Rate-Limit Protections
+1. **Raw content stripping** -- removes known noise patterns from page content before hash comparison
+2. **Beautified diff filtering** -- JS is beautified, JSON is indented, and diffs are checked for real structural changes
+3. **Metadata-only API diffs** -- hash changes in API collections are inspected per-item; if only auto-generated fields (`_links`, `guid`, `meta`, etc.) differ, the change is suppressed
 
-- Random jitter on all sequential requests
-- 429 detection with exponential backoff (global cooldown)
-- Adaptive orphan probing (30 IDs per deep cycle, not all 300 at once)
-- `ThreadPoolExecutor` parallelism capped at 6–8 workers
+Noise-only changes still update the local mirror copy silently. Only genuine content additions, modifications, and removals produce Discord notifications and feed entries.
+
+### First-Run / Restart
+
+On restart or after `update_mirror.py` completes, the daemon detects a fresh state and performs a **quiet initial sync**: all content is fetched and mirrored, but no Discord pings, no feed.json updates, and no git pushes occur. The existing changelog and known-pages data is preserved.
+
+### Locking
+
+`update_mirror.py` and `monitor_site.py` share a PID-based lock file (`state/.monitor.lock`). Only one can run at a time; running the mirror update while the daemon is active will exit with an error. After `update_mirror.py` completes, it deletes the state file so the daemon quiet-syncs on next start.
+
+### Trace (The Architect Online Status)
+
+Polls the Discourse API every 60 seconds for `the_architect`'s `last_seen_at`. Writes `docs/status/trace.json` on state changes (ACTIVE if seen within 5 minutes, LOST otherwise). Transitions trigger a Discord embed (green for ACTIVE, red for LOST) and a git push to update the site.
 
 ### Discord Notifications
 
-All alerts are sent as rich embeds with color-coded categories. Each change type gets its own embed. No plain text messages. A summary embed is sent if no standard type matches.
+All alerts are sent as rich embeds with color-coded categories. The first embed in each cycle includes an @mention ping. Change types that trigger notifications:
+
+- Sitemap URL added/removed (green)
+- API items added (blue), modified (orange), removed (red)
+- Page content changed (amber, with beautified diff preview)
+- Media replaced (magenta), thumbnail changed (lavender), orphan upload (pink)
+- Unpublished content detected (purple)
+- Trace status ACTIVE/LOST (green/red)
 
 ### State
 
