@@ -303,8 +303,8 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.336754+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:52 GMT",
+      "last_checked": "2026-06-06T02:39:32.654952+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:29 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/comments": {},
@@ -441,8 +441,8 @@
           "type": "attachment"
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.338859+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:53 GMT",
+      "last_checked": "2026-06-06T02:39:32.650604+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:30 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/menu-items": {},
@@ -478,14 +478,14 @@
           "type": "wp_navigation"
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.464474+00:00",
-      "last_modified": null,
+      "last_checked": "2026-06-06T02:39:32.703725+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:30 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/pages": {
       "_pending_ids": [],
       "etag": null,
-      "hash": "8ff2bfb63c5ceca8e858cb94c17b5fb8",
+      "hash": "8e36519bf1fd47a48556667e1193adad",
       "items": [
         {
           "author": 279180095,
@@ -598,8 +598,8 @@
           "type": "page"
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.328123+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:53 GMT",
+      "last_checked": "2026-06-06T02:39:32.622164+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:30 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/plugins": {
@@ -1120,8 +1120,8 @@
           "type": "post"
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.320136+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:53 GMT",
+      "last_checked": "2026-06-06T02:39:32.814310+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:31 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/search": {
@@ -1803,8 +1803,8 @@
           "type": "post"
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.538983+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:53 GMT",
+      "last_checked": "2026-06-06T02:39:32.850247+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:30 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/settings": {
@@ -1868,8 +1868,8 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.334089+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:52 GMT",
+      "last_checked": "2026-06-06T02:39:32.642488+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:29 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/taxonomies": {},
@@ -1917,8 +1917,8 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-06-05T16:11:54.331966+00:00",
-      "last_modified": "Fri, 05 Jun 2026 16:05:52 GMT",
+      "last_checked": "2026-06-06T02:39:32.635220+00:00",
+      "last_modified": "Sat, 06 Jun 2026 02:33:30 GMT",
       "total_pages": 1
     },
     "/wp-json/wp/v2/widgets": {},
@@ -2357,21 +2357,267 @@
   "media_thumbnails": {},
   "pages": {},
   "probe": {
-    "last_probed": "2026-06-05T15:44:41.834153+00:00",
-    "position": 2896
+    "last_probed": "2026-06-06T02:29:50.253889+00:00",
+    "position": 2716
   },
   "sitemap": {
+    "_page_check_offset": 0,
     "etag": null,
     "hash": "06e2ceb1e38052e1d2d592c071308d50",
-    "last_checked": "2026-06-05T16:12:59.123935+00:00",
-    "last_modified": null,
-    "urls": {}
+    "last_checked": "2026-06-06T02:39:36.026634+00:00",
+    "last_modified": "Sat, 06 Jun 2026 02:35:32 GMT",
+    "urls": {
+      "https://project-skyscraper.com/": {
+        "lastmod": null,
+        "type": "page"
+      },
+      "https://project-skyscraper.com/1970/01/01/origin/": {
+        "lastmod": "2026-05-01T18:36:43Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2002/05/12/code/": {
+        "lastmod": "2026-05-29T10:25:34Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2005/04/13/quote/": {
+        "lastmod": "2026-05-25T17:55:20Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2017/06/01/event-01062017/": {
+        "lastmod": "2026-06-02T16:54:33Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2017/07/08/2017_dataset/": {
+        "lastmod": "2026-06-04T17:16:56Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2017/07/21/event-21072017/": {
+        "lastmod": "2026-06-02T17:04:37Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/03/24/sleep-mode-46105/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/03/27/sleep-mode-46108/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/03/29/sleep-mode-46110/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/01/sleep-mode-4613/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/03/sleep-mode-46115/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/06/sleep-mode-46118/": {
+        "lastmod": "2026-05-18T20:18:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/08/sleep-mode-46120/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/11/sleep-mode-46123/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/13/sleep-mode-46125/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/16/sleep-mode-46128/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/18/sleep-mode-46130/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/21/sleep-mode-46133/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/23/sleep-mode-46135/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/25/sleep-mode-46137/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/28/sleep-mode-46140/": {
+        "lastmod": "2026-05-18T20:17:29Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/04/30/sleep-mode-46142/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/03/sec-log-080413/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/05/sec-log-190746/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/08/sec-log-061119/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/10/sec-log-171452/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/10/security-log-171453/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/12/sec-log-120000/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/13/sec-log-041825/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/14/sec-log-172832/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/15/sec-log-152158/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/18/sec-log-022531/": {
+        "lastmod": "2026-05-18T20:17:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/18/sec-log-211927/": {
+        "lastmod": "2026-05-18T22:00:55Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/20/sec-log-132904/": {
+        "lastmod": "2026-05-01T15:37:27Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/21/sec-log-170516/": {
+        "lastmod": "2026-05-21T16:05:41Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/23/sec-log-003237/": {
+        "lastmod": "2026-05-01T15:37:27Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/25/sec-log-113610/": {
+        "lastmod": "2026-05-26T21:56:59Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/27/sec-log-185027/": {
+        "lastmod": "2026-05-27T17:50:25Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/": {
+        "lastmod": "2026-05-27T22:23:08Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/27/sec-log-reboot/": {
+        "lastmod": "2026-05-27T22:00:03Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/29/sec-log-114327/": {
+        "lastmod": "2026-05-29T09:17:39Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/": {
+        "lastmod": "2026-05-30T07:43:40Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/05/31/sec-log-193727/": {
+        "lastmod": "2026-05-31T18:35:48Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/": {
+        "lastmod": "2026-06-01T21:50:27Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/": {
+        "lastmod": "2026-06-01T19:15:32Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/2026/06/02/sec-log-194022/": {
+        "lastmod": "2026-06-02T18:37:31Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/about/": {
+        "lastmod": "2026-06-01T22:08:50Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/inbox/": {
+        "lastmod": "2026-06-04T15:16:05Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/logo/": {
+        "lastmod": "2026-04-25T08:53:10Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/neural-network-status/": {
+        "lastmod": "2026-05-01T08:18:28Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/only-dust-remain/": {
+        "lastmod": "2026-06-01T21:47:44Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/project-skyscraper/": {
+        "lastmod": "2026-04-25T08:59:23Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/report-lon-reality-glitch/": {
+        "lastmod": "2026-06-01T19:12:35Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/request-memory-timestamp-094317/": {
+        "lastmod": "2026-05-30T07:42:26Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/sec-log-080413-full/": {
+        "lastmod": "2026-05-05T15:25:07Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/sec-log-094127-full/": {
+        "lastmod": "2026-05-12T15:23:08Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/sec-log-094316-full/": {
+        "lastmod": "2026-05-30T07:41:53Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/sec-log-211927-full/": {
+        "lastmod": "2026-05-18T22:55:18Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/sleep-mode/": {
+        "lastmod": "2026-04-29T09:12:08Z",
+        "type": "page"
+      },
+      "https://project-skyscraper.com/tr4ce/": {
+        "lastmod": "2026-05-11T09:15:58Z",
+        "type": "page"
+      }
+    }
   },
   "stats": {
     "first_run": "2026-06-03T14:19:54.199835+00:00",
-    "last_run": "2026-06-05T16:12:59.000250+00:00",
-    "total_changes_detected": 468,
-    "total_checks": 5461
+    "last_run": "2026-06-06T02:39:35.949160+00:00",
+    "total_changes_detected": 469,
+    "total_checks": 6985
   },
   "version": 2
 }
