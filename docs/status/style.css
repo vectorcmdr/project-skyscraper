@@ -24,7 +24,7 @@ body.landing {
   text-shadow: 0 0 12px rgba(221,0,0,.6);
 }
 .tagline { color: #888; margin: .5rem 0 2rem; letter-spacing: .15em; font-size: .85rem; }
-.landing-nav { margin: 2rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+.landing-nav { margin: 2rem 0; display: flex; flex-direction: column; align-items: center; gap: .6rem; }
 .landing-footer { margin-top: 3rem; }
 .blink { animation: blink 1.2s step-end infinite; color: #d00; font-size: .8rem; }
 @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: .2 } }
@@ -72,6 +72,13 @@ body.landing {
   transition: all .2s;
 }
 .btn:hover { background: #d00; color: #0a0a0a; box-shadow: 0 0 20px rgba(221,0,0,.4); }
+.btn2 {
+  display: inline-block; padding: .75rem 2rem;
+  border: 1px solid #444; color: #444; text-decoration: none;
+  letter-spacing: .2em; font-size: .85rem;
+  transition: all .2s;
+}
+.btn2:hover { background: #444; color: #0a0a0a; box-shadow: 0 0 20px rgba(221,0,0,.4); }
 
 /* -- TOPBAR -- */
 .topbar {
