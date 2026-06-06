@@ -66,6 +66,8 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
     if state["stats"]["first_run"] is None:
         state["stats"]["first_run"] = state["stats"]["last_run"]
 
+    quiet = is_initial or is_first_cycle
+
     if "fast" in tiers:
         log("=== Fast check ===", "FAST")
         try:
@@ -123,7 +125,7 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
     if all_changes:
         state["stats"]["total_changes_detected"] += len(all_changes)
 
-        if is_first_cycle:
+        if quiet:
             log(f"=== Initial sync: {len(all_changes)} change(s) -- mirroring quietly ===", "FETCH")
             _apply_changes(all_changes)
         else:
