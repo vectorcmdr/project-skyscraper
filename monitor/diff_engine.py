@@ -7,7 +7,7 @@ metadata and show beautified content for proper line-level comparison.
 import difflib
 
 from monitor.beautifier import beautify
-from monitor.noise_filter import strip_page_noise, strip_json_noise, diff_has_real_changes
+from monitor.noise_filter import strip_page_noise, strip_json_noise, diff_has_real_changes, is_noise_diff_line
 from monitor.config import DIFF_MAX_LINES
 
 
@@ -36,15 +36,16 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
             return None
         return None
 
-    if not diff_has_real_changes("\n".join(diff_lines)):
+    filtered = [l for l in diff_lines if not is_noise_diff_line(l)]
+
+    if not filtered:
         return None
 
-    if len(diff_lines) > max_lines:
-        truncated = diff_lines[:max_lines]
-        truncated.append(f"... ({len(diff_lines) - max_lines} more lines)")
-        diff_lines = truncated
+    if len(filtered) > max_lines:
+        filtered = filtered[:max_lines]
+        filtered.append(f"... ({len(diff_lines) - max_lines} more lines)")
 
-    return "\n".join(diff_lines)
+    return "\n".join(filtered)
 
 
 def compute_text_diff(old_bytes: bytes, new_bytes: bytes) -> str | None:
