@@ -24,7 +24,7 @@ body.landing {
   text-shadow: 0 0 12px rgba(221,0,0,.6);
 }
 .tagline { color: #888; margin: .5rem 0 2rem; letter-spacing: .15em; font-size: .85rem; }
-.landing-nav { margin: 2rem 0; }
+.landing-nav { margin: 2rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
 .landing-footer { margin-top: 3rem; }
 .blink { animation: blink 1.2s step-end infinite; color: #d00; font-size: .8rem; }
 @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: .2 } }
