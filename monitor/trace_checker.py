@@ -64,7 +64,7 @@ def check_trace() -> bool:
     elapsed = (now - last_seen).total_seconds()
     new_state = "ACTIVE" if elapsed < TRACE_ACTIVE_THRESHOLD else "LOST"
 
-    if new_state == _trace_last_state and last_seen_at == _trace_last_seen:
+    if new_state == _trace_last_state:
         return False
 
     _trace_last_state = new_state
