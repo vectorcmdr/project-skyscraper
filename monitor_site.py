@@ -125,6 +125,9 @@ _trace_last_seen = None
 # Noise suppression patterns for page content changes
 # Dynamic/metadata-only changes matching these are not exposed as feed entries
 _PAGE_NOISE_PATTERNS = [
+    # Entire HTML comment block containing batcache/generated noise (MUST come first —
+    # removes the whole comment before individual patterns strip keywords it relies on)
+    (re.compile(r'<!--[^>]*?(?:generated in|batcached).*?-->', re.DOTALL), ''),
     # Live connection count (server-side dynamic stat)
     (re.compile(r'<strong>\d+</strong>\s*Live Connections'), '<strong>0</strong> Live Connections'),
     # Versioned script/CSS URLs
@@ -132,9 +135,9 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'e-\d{6}\.js'), 'e-000000.js'),
     # Nonces
     (re.compile(r'nonce=[a-f0-9]+'), 'nonce=REMOVED'),
-    # Cache/timing comments
+    # Cache/timing text (belt-and-suspenders for any loose fragments)
     (re.compile(r'generated in \d+\.\d+ seconds'), ''),
-    (re.compile(r'batcached for \d+ seconds'), ''),
+    (re.compile(r'\d+ bytes batcached for \d+ seconds'), ''),
     (re.compile(r'served from batcache in \d+\.\d+ seconds'), ''),
     (re.compile(r'expires in \d+ seconds'), ''),
     (re.compile(r'generated \d+ seconds? ago'), ''),

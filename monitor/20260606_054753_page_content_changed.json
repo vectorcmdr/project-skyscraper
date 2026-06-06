@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-06-06 05:47:53 UTC",
+  "category": "page_content_changed",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sleep-mode/",
+        "old_hash": "7f541d6af49e9f3cb7c90ff6e2331450",
+        "new_hash": "5267a764b9a3f610b92f0ce19e4bab69",
+        "detail": "Content changed: https://project-skyscraper.com/sleep-mode/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sleep-mode/",
+            "diff": "@@ -274 +274 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":75,\"search_query\":\"\",\"signature\":\"1dfe70a301949a32d229a4285174cec9\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":75,\"search_query\":\"\",\"signature\":\"1dfe70a301949a32d229a4285174cec9\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://p..."
+          },
+          {
+            "url": "https://project-skyscraper.com/sleep-mode/",
+            "diff": "@@ -274 +274 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":75,\"search_query\":\"\",\"signature\":\"1dfe70a301949a32d229a4285174cec9\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":75,\"search_query\":\"\",\"signature\":\"1dfe70a301949a32d229a4285174cec9\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://p..."
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}
