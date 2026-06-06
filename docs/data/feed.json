@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-06T10:51:42.856248+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jun.6, 2026\n  Jun.2, 2026\n  Jun.1, 2026\n  Mar.27, 2026\n  Mar.24, 2026\n+ Jul.24, 2018\n  Jul.21, 2017\n  \"copyright\": \"Copyright\",\n  \"comment_registration\": \"0\",\n  \"require_name_email\": \"1\",\n- \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F02%2Fsec-log-194022%2F\",\n+ \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F06%2Fsec-log-110328%2F\",\n  \"blog_id\": \"1\",\n  \"meta_data\": [\"camera\", \"aperture\", \"shutter_speed\", \"focal_length\", \"copyright\"]\n  };\n. .. (11 more lines)",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-06T10:30:59.381118+00:00",
       "title": "",
@@ -18,7 +28,7 @@
       "endpoint": "/wp-json/wp/v2/media",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/media",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "api_items_added",
@@ -28,7 +38,7 @@
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -731,5 +741,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-06T10:30:59.384744+00:00"
+  "updated": "2026-06-06T10:51:42.857504+00:00"
 }
