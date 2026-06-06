@@ -701,12 +701,34 @@ def cleanup_old_reports(max_age_hours: int = 72):
 # Sitemap check
 # ---------------------------------------------------------------------------
 
-def parse_sitemap_urls(content: str) -> dict:
-    """Parse sitemap XML content, return dict of {url: metadata}."""
+def parse_sitemap_urls(content: str, depth: int = 0) -> dict:
+    """Parse sitemap XML content, return dict of {url: metadata}.
+    Handles both <urlset> (page URLs) and <sitemapindex> (sub-sitemap references)
+    by following sub-sitemap links up to one level deep."""
     urls = {}
+    if depth > 1:
+        return urls
     try:
         root = ET.fromstring(content)
-        ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    except ET.ParseError:
+        return urls
+
+    tag = root.tag.split("}")[-1] if "}" in root.tag else root.tag
+    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+
+    if tag == "sitemapindex":
+        for sm_elem in root.findall(".//sm:sitemap", ns):
+            loc = sm_elem.find("sm:loc", ns)
+            if loc is not None and loc.text:
+                sub_url = loc.text.strip()
+                sub_result = fetch(sub_url, timeout=10)
+                if sub_result.ok and sub_result.content:
+                    sub_content = sub_result.content.decode("utf-8", errors="replace")
+                    sub_urls = parse_sitemap_urls(sub_content, depth=depth + 1)
+                    urls.update(sub_urls)
+        return urls
+
+    if tag == "urlset":
         for url_elem in root.findall(".//sm:url", ns):
             loc = url_elem.find("sm:loc", ns)
             lastmod = url_elem.find("sm:lastmod", ns)
@@ -723,8 +745,6 @@ def parse_sitemap_urls(content: str) -> dict:
                 url_str = loc.text.strip()
                 if url_str not in urls:
                     urls[url_str] = {"lastmod": None, "type": "page"}
-    except ET.ParseError:
-        pass
     return urls
 
 
@@ -1452,9 +1472,17 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
     if "deep" in tiers:
         log("=== Deep check ===", "DEEP")
 
-        # Check sitemap-listed pages for content changes
+        # Check sitemap-listed pages for content changes (round-robin)
         sitemap_urls = state.get("sitemap", {}).get("urls", {})
-        known_pages = list(sitemap_urls.keys())[:5]  # Limit to 5 per deep cycle to avoid hammering
+        all_page_urls = list(sitemap_urls.keys())
+        page_check_offset = state.setdefault("sitemap", {}).setdefault("_page_check_offset", 0)
+        chunk_size = 15
+        known_pages = all_page_urls[page_check_offset:page_check_offset + chunk_size]
+        # Wrap around
+        if len(known_pages) < chunk_size and len(all_page_urls) > chunk_size:
+            wrap_count = chunk_size - len(known_pages)
+            known_pages.extend(all_page_urls[:wrap_count])
+        state["sitemap"]["_page_check_offset"] = (page_check_offset + chunk_size) % len(all_page_urls) if all_page_urls else 0
 
         if known_pages:
             with ThreadPoolExecutor(max_workers=3) as ex:
