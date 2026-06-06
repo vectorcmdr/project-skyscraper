@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-06-06 06:09:26 UTC",
+  "category": "page_content_changed",
+  "data": {
+    "count": 8,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-094127-full/",
+        "old_hash": "189968171c66fe44ce739c1aeca3fe5f",
+        "new_hash": "7580eb1ed35063d343447a6f4be76c05",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-094127-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-094127-full/",
+            "diff": "@@ -297 +297 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":1628,\"search_query\":\"\",\"signature\":\"46c9de73f890b5ff29853f38b12f178e\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":1628,\"search_query\":\"\",\"signature\":\"46c9de73f890b5ff29853f38b12f178e\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https..."
+          },
+          {
+            "url": "https://project-skyscraper.com/sec-log-094127-full/",
+            "diff": "@@ -297 +297 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":1628,\"search_query\":\"\",\"signature\":\"46c9de73f890b5ff29853f38b12f178e\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":1628,\"search_query\":\"\",\"signature\":\"46c9de73f890b5ff29853f38b12f178e\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https..."
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+        "old_hash": "eb2957e647de4459c5dd1479b93bca66",
+        "new_hash": "3897019c63c87472390e543cb1028f4c",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+            "diff": "@@ -403,0 +404,4 @@\n+<!--\n+\tgenerated in 0.303 seconds\n+\t66658 bytes batcached for 300 seconds\n+-->"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "old_hash": "a3d5ffc134fc3c2d876d92aeb6d4687e",
+        "new_hash": "c465676bb81eb2981566665e1df7857e",
+        "detail": "Content changed: https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+            "diff": "@@ -399,0 +400,4 @@\n+<!--\n+\tgenerated in 0.319 seconds\n+\t66727 bytes batcached for 300 seconds\n+-->"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/project-skyscraper/",
+        "old_hash": "850d626d1698ab15ccbb6f7f02b7227c",
+        "new_hash": "f0f73f7c2bcc91e0f2ecfcf67a823de1",
+        "detail": "Content changed: https://project-skyscraper.com/project-skyscraper/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/project-skyscraper/",
+            "diff": "@@ -292 +292 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"post_type_attachment\",\"source_id\":19,\"search_query\":\"\",\"signature\":\"629963d0802256b208c3e719a9ea88d5\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"post_type_attachment\",\"source_id\":19,\"search_query\":\"\",\"signature\":\"629963d0802256b208c3e719a9ea88d5\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-sta..."
+          },
+          {
+            "url": "https://project-skyscraper.com/project-skyscraper/",
+            "diff": "@@ -292 +292 @@\n-var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"post_type_attachment\",\"source_id\":19,\"search_query\":\"\",\"signature\":\"629963d0802256b208c3e719a9ea88d5\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false},\"isLegacyEventLoaded\":\"\",\"customEventAjaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a93f3656ee\",\"onlineParams\":{\"wp_statistics_hit\":1,\"source_type\":\"post_type_attachment\",\"source_id\":19,\"search_query\":\"\",\"signature\":\"629963d0802256b208c3e719a9ea88d5\",\"action\":\"wp_statistics_online_check\"},\"jsCheckTime\":\"60000\"};\n+var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-sta..."
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/neural-network-status/",
+        "old_hash": "f076a508e5577594b3e731380b991844",
+        "new_hash": "fdd9e84e5628218975cfd175553b4b37",
+        "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/neural-network-status/",
+            "diff": "@@ -98 +98 @@\n-:root :where(.wp-custom-css-11b2b272){position: relative;\n+:root :where(.wp-custom-css-808c7ac1){position: relative;\n@@ -199 +199 @@\n-<div class=\"wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-11b2b272\">\n+<div class=\"wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-808c7ac1\">\n@@ -212 +212 @@\n-    <span class=\"online-iterations \"><strong>5</strong> Live Connections</span>\n+    <span class=\"online-iterations \"><strong>2</strong> Live Connections</span>\n@@ -374,4 +374,4 @@\n-\tgenerated 244 seconds ago\n-\tgenerated in 0.202 seconds\n-\tserved from batcache in 0.003 seconds\n-\texpires in 56 seconds\n+\tgenerated 162 seconds ago\n+\tgenerated in 0.265 seconds\n+\tserved from batcache in 0.002 seconds\n+\texpires in 138 seconds"
+          },
+          {
+            "url": "https://project-skyscraper.com/neural-network-status/",
+            "diff": "@@ -98 +98 @@\n-:root :where(.wp-custom-css-11b2b272){position: relative;\n+:root :where(.wp-custom-css-a949658a){position: relative;\n@@ -199 +199 @@\n-<div class=\"wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-11b2b272\">\n+<div class=\"wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-a949658a\">\n@@ -212 +212 @@\n-    <span class=\"online-iterations \"><strong>5</strong> Live Connections</span>\n+    <span class=\"online-iterations \"><strong>1</strong> Live Connections</span>\n@@ -374,4 +374,4 @@\n-\tgenerated 244 seconds ago\n-\tgenerated in 0.202 seconds\n-\tserved from batcache in 0.003 seconds\n-\texpires in 56 seconds\n+\tgenerated 119 seconds ago\n+\tgenerated in 0.283 seconds\n+\tserved from batcache in 0.002 seconds\n+\texpires in 181 seconds"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+        "old_hash": "56b24a1375ab9a5ed5f89190678477f3",
+        "new_hash": "b13e9e8c59c6e6cb14254e6ce71cbc66",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+            "diff": "@@ -404,6 +403,0 @@\n-<!--\n-\tgenerated 73 seconds ago\n-\tgenerated in 0.318 seconds\n-\tserved from batcache in 0.002 seconds\n-\texpires in 227 seconds\n--->"
+          },
+          {
+            "url": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+            "diff": "@@ -405,4 +405,2 @@\n-\tgenerated 73 seconds ago\n-\tgenerated in 0.318 seconds\n-\tserved from batcache in 0.002 seconds\n-\texpires in 227 seconds\n+\tgenerated in 0.274 seconds\n+\t66674 bytes batcached for 300 seconds"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/about/",
+        "old_hash": "81009313bd17c776bab3f8a02de71767",
+        "new_hash": "16e3dfaec25a358175dd4ff5562c2e8a",
+        "detail": "Content changed: https://project-skyscraper.com/about/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/about/",
+            "diff": "@@ -269,0 +270,4 @@\n+<!--\n+\tgenerated in 0.289 seconds\n+\t58048 bytes batcached for 300 seconds\n+-->"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/only-dust-remain/",
+        "old_hash": "ea03d623e0a84ec5fb8ba5efa61e98a1",
+        "new_hash": "c9f681c4efc53fce633c6185c3f99278",
+        "detail": "Content changed: https://project-skyscraper.com/only-dust-remain/",
+        "author": 279180095
+      }
+    ]
+  }
+}
