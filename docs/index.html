@@ -9,16 +9,23 @@
   <style>
     .neural-bg {
       position: fixed; top: 12px; left: 12px; width: 110px; height: 110px;
-      z-index: 0; pointer-events: none; opacity: .75;
+      z-index: 0; pointer-events: none;
     }
-    .neural-bg canvas { width: 100%; height: 100%; }
+    .neural-bg canvas { width: 100%; height: 100%; opacity: .75; }
+    .neural-count {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      color: #fff; font-family: 'Courier New', monospace; font-weight: bold;
+      font-size: 22px; text-shadow: 0 0 8px rgba(0,0,0,.8); z-index: 1;
+      pointer-events: none; user-select: none;
+    }
     @media (max-width: 600px) {
       .neural-bg { width: 80px; height: 80px; top: 8px; left: 8px; }
+      .neural-count { font-size: 16px; }
     }
   </style>
 </head>
 <body class="landing">
-  <div class="neural-bg"><canvas id="miniMesh"></canvas></div>
+  <div class="neural-bg"><canvas id="miniMesh"></canvas><span id="liveCount" class="neural-count"></span></div>
   <main class="landing-centre">
     <img src="favicon.jpg" alt="PS" class="landing-avatar">
     <h1>PROJECT SKYSCRAPER</h1>
@@ -96,10 +103,11 @@
         COUNT:      48
       };
       var LIVE_COUNT = '';
+      var countEl = document.getElementById('liveCount');
 
       function applyLiveParams(text) {
         var m;
-        if ((m = /<strong>(\d+)<\/strong>/.exec(text))) { LIVE_COUNT = m[1]; }
+        if ((m = /<strong>(\d+)<\/strong>/.exec(text))) { LIVE_COUNT = m[1]; countEl.textContent = m[1]; }
         if ((m = /count\s*=\s*(\d+)/.exec(text))) { PARAMS.COUNT = parseInt(m[1]); }
         if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
           PARAMS.DISTANCE = parseFloat(m[1]); PARAMS.DIST_ADD = parseFloat(m[2]);
@@ -211,17 +219,6 @@
           var mdx = p.x - mouse.x, mdy = p.y - mouse.y;
           var md = Math.sqrt(mdx * mdx + mdy * mdy);
           drawParticle(p, md);
-        }
-
-        if (LIVE_COUNT) {
-          ctx.shadowBlur = 0;
-          ctx.shadowColor = 'transparent';
-          var fs = Math.max(10, Math.round(Math.min(w, h) * 0.2));
-          ctx.font = 'bold ' + fs + 'px monospace';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillStyle = '#ffffff';
-          ctx.fillText(LIVE_COUNT, w / 2, h / 2);
         }
 
         requestAnimationFrame(animate);
