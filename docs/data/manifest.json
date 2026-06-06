@@ -1,12 +1,20 @@
 {
   "pages": [
     {
+      "path": "/sleep-mode/",
+      "title": "SLEEP MODE",
+      "type": "page",
+      "modified": "2026-06-06T05:47:53.890861+00:00",
+      "date_gmt": "",
+      "author": "The Architect"
+    },
+    {
       "path": "/logo/",
       "title": "Logo",
       "type": "attachment",
       "modified": "2026-06-06T05:47:03.101141+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2026/05/21/sec-log-170516/",
@@ -14,7 +22,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.101042+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2026/05/27/sec-log-reboot/",
@@ -22,7 +30,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100960+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2026/05/18/sec-log-211927/",
@@ -30,7 +38,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100879+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2026/05/27/sec-log-185027/",
@@ -38,7 +46,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100794+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/request-memory-timestamp-094317/",
@@ -46,7 +54,7 @@
       "type": "page",
       "modified": "2026-06-06T05:47:03.100707+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2002/05/12/code/",
@@ -54,7 +62,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100624+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2026/05/29/sec-log-114327/",
@@ -62,7 +70,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100528+00:00",
       "date_gmt": "",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "path": "/2017/07/21/event-21072017/",
@@ -70,7 +78,7 @@
       "type": "post",
       "modified": "2026-06-06T05:47:03.100384+00:00",
       "date_gmt": "",
-      "author": "System"
+      "author": ""
     },
     {
       "path": "/neural-network-status/",
@@ -505,14 +513,6 @@
       "author": ""
     },
     {
-      "path": "/sleep-mode/",
-      "title": "SLEEP MODE",
-      "type": "page",
-      "modified": "2026-04-29T10:12:08",
-      "date_gmt": "",
-      "author": ""
-    },
-    {
       "path": "/project-skyscraper/project-skyscraper-2/",
       "title": "Project-Skyscraper",
       "type": "attachment",
@@ -537,5 +537,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-06T05:47:03.121830+00:00"
+  "updated": "2026-06-06T05:47:53.895852+00:00"
 }

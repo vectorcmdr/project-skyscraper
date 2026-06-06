@@ -708,7 +708,7 @@
       "endpoint": "page",
       "diff": "- generated in 0.343 seconds\n- 66855 bytes batcached for 300 seconds\n- -->\n- generated in 0.343 seconds\n- 66855 bytes batcached for 300 seconds\n- -->",
       "detail": "Content changed: https://project-skyscraper.com/2017/07/21/event-21072017/",
-      "author": "System"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -718,7 +718,7 @@
       "endpoint": "page",
       "diff": "+ generated in 0.267 seconds\n+ 66744 bytes batcached for 300 seconds\n+ -->\n+ generated in 0.301 seconds\n+ 66744 bytes batcached for 300 seconds\n+ -->",
       "detail": "Content changed: https://project-skyscraper.com/2026/05/29/sec-log-114327/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -728,7 +728,7 @@
       "endpoint": "page",
       "diff": "- generated in 0.345 seconds\n- 94241 bytes batcached for 300 seconds\n- -->\n- generated in 0.345 seconds\n- 94241 bytes batcached for 300 seconds\n- -->",
       "detail": "Content changed: https://project-skyscraper.com/2002/05/12/code/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -738,7 +738,7 @@
       "endpoint": "page",
       "diff": "",
       "detail": "Content changed: https://project-skyscraper.com/request-memory-timestamp-094317/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -748,7 +748,7 @@
       "endpoint": "page",
       "diff": "- generated in 0.224 seconds\n- 67004 bytes batcached for 300 seconds\n- -->\n- generated in 0.224 seconds\n- 67004 bytes batcached for 300 seconds\n- -->",
       "detail": "Content changed: https://project-skyscraper.com/2026/05/27/sec-log-185027/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -758,7 +758,7 @@
       "endpoint": "page",
       "diff": "+ generated in 0.261 seconds\n+ 66644 bytes batcached for 300 seconds\n+ -->\n+ generated in 0.238 seconds\n+ 66644 bytes batcached for 300 seconds\n+ -->",
       "detail": "Content changed: https://project-skyscraper.com/2026/05/18/sec-log-211927/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -768,7 +768,7 @@
       "endpoint": "page",
       "diff": "- generated in 0.234 seconds\n- 66507 bytes batcached for 300 seconds\n- -->\n- generated in 0.234 seconds\n+ generated in 0.262 seconds",
       "detail": "Content changed: https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -778,7 +778,7 @@
       "endpoint": "page",
       "diff": "- generated in 0.371 seconds\n- 66886 bytes batcached for 300 seconds\n- -->\n- generated in 0.371 seconds\n- 66886 bytes batcached for 300 seconds\n- -->",
       "detail": "Content changed: https://project-skyscraper.com/2026/05/21/sec-log-170516/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -788,8 +788,18 @@
       "endpoint": "page",
       "diff": "+ generated 69 seconds ago\n+ generated in 0.219 seconds\n+ served from batcache in 0.002 seconds\n+ expires in 231 seconds\n+ -->\n+ generated in 0.245 seconds\n+ 62058 bytes batcached for 300 seconds\n+ -->",
       "detail": "Content changed: https://project-skyscraper.com/logo/",
+      "author": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-06T05:47:53.870059+00:00",
+      "title": "page",
+      "link": "https://project-skyscraper.com/sleep-mode/",
+      "endpoint": "page",
+      "diff": "- var WP_Statistics_Tracker_Object = {\"requestUrl\":\"https://project-skyscraper.com/wp-json/wp-statistics/v2\",\"ajaxUrl\":\"https://project-skyscraper.com/wp-admin/admin-ajax.php\",\"hitParams\":{\"wp_statistics_hit\":1,\"source_type\":\"page\",\"source_id\":75,\"search_query\":\"\",\"signature\":\"1dfe70a301949a32d229a4285174cec9\",\"endpoint\":\"hit\"},\"option\":{\"dntEnabled\":false,\"bypassAdBlockers\":false,\"consentIntegration\":{\"name\":null,\"status\":[]},\"isPreview\":false,\"userOnline\":false,\"isWpConsentApiActive\":false}...",
+      "detail": "Content changed: https://project-skyscraper.com/sleep-mode/",
       "author": "The Architect"
     }
   ],
-  "updated": "2026-06-06T05:47:03.097670+00:00"
+  "updated": "2026-06-06T05:47:53.870294+00:00"
 }
