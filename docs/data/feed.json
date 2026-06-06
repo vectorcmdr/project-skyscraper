@@ -1,6 +1,36 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-06T14:57:32.920565+00:00",
+      "title": "sec-log-003237",
+      "link": "https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+      "endpoint": "",
+      "diff": "- \t\t\t\t\t\t\t<button type=\"submit\"\n+ \t\t\t\t\t\t\t<button type=\"submit\"\n  class=\"wp-block-button__link\"\n  style=\"font-size: 16px;padding: 15px 23px 15px 23px;margin: 0; margin-left: 10px;border-radius: 50px;border-width: 1px;\"\n  name=\"jetpack_subscriptions_widget\"",
+      "detail": "Content changed: https://project-skyscraper.com/2026/05/23/sec-log-003237/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-06T14:57:32.920456+00:00",
+      "title": "sec-log-access-granted",
+      "link": "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
+      "endpoint": "",
+      "diff": "- \t\t\t\t\t\t\t<button type=\"submit\"\n+ \t\t\t\t\t\t\t<button type=\"submit\"\n  class=\"wp-block-button__link\"\n  style=\"font-size: 16px;padding: 15px 23px 15px 23px;margin: 0; margin-left: 10px;border-radius: 50px;border-width: 1px;\"\n  name=\"jetpack_subscriptions_widget\"",
+      "detail": "Content changed: https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-06T14:57:32.920293+00:00",
+      "title": "sleep-mode-46142",
+      "link": "https://project-skyscraper.com/2026/04/30/sleep-mode-46142/",
+      "endpoint": "",
+      "diff": "",
+      "detail": "Content changed: https://project-skyscraper.com/2026/04/30/sleep-mode-46142/",
+      "author": "The Architect"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-06T14:32:49.331103+00:00",
       "title": "",
@@ -851,5 +881,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-06T14:32:49.331774+00:00"
+  "updated": "2026-06-06T14:57:32.921677+00:00"
 }
