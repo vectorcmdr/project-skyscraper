@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-06-06 05:57:31 UTC",
+  "category": "page_content_changed",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/report-lon-reality-glitch/",
+        "old_hash": "0b16a7be911852f7f1029fd9ecdb3126",
+        "new_hash": "e8177286a4ddec3726d425e5e646bb87",
+        "detail": "Content changed: https://project-skyscraper.com/report-lon-reality-glitch/",
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+        "old_hash": "af8d59639f30956770adde40fdce5213",
+        "new_hash": "c89fce33c3e7db6dfbebe9cebda10250",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+            "diff": "@@ -411,0 +412,6 @@\n+<!--\n+\tgenerated 99 seconds ago\n+\tgenerated in 0.297 seconds\n+\tserved from batcache in 0.003 seconds\n+\texpires in 201 seconds\n+-->"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

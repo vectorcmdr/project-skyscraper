@@ -128,10 +128,12 @@ _PAGE_NOISE_PATTERNS = [
     # Entire HTML comment block containing batcache/generated noise (MUST come first —
     # removes the whole comment before individual patterns strip keywords it relies on)
     (re.compile(r'<!--[^>]*?(?:generated in|batcached).*?-->', re.DOTALL), ''),
+    # Entire WP Statistics tracker object (signature, nonce, source_id, etc. all change per-request)
+    (re.compile(r'var WP_Statistics_Tracker_Object\s*=\s*\{.*?\}\s*;', re.DOTALL), ''),
     # Live connection count (server-side dynamic stat)
     (re.compile(r'<strong>\d+</strong>\s*Live Connections'), '<strong>0</strong> Live Connections'),
     # Versioned script/CSS URLs
-    (re.compile(r'[?&]m=\d{6}'), ''),
+    (re.compile(r'[?&]m=\d+'), ''),
     (re.compile(r'e-\d{6}\.js'), 'e-000000.js'),
     # Nonces
     (re.compile(r'nonce=[a-f0-9]+'), 'nonce=REMOVED'),
