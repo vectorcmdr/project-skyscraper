@@ -26,6 +26,7 @@ from monitor.noise_filter import diff_has_real_changes
 from monitor.diff_engine import compute_diff, build_diff_header
 from monitor.report_writer import (
     generate_manifest_report, generate_unpublished_report, write_changelog,
+    generate_id_series_report,
 )
 from monitor.discovery import discover_sitemap_urls, fetch_and_save, discover_rest_api, KNOWN_NS_ROOTS, JETPACK_SUBS
 
@@ -602,6 +603,7 @@ def _generate_reports(unpub_posts, unpub_pages):
             section_data[section]["size"] += sz
 
     generate_manifest_report(section_data, total_files, total_size)
+    generate_id_series_report()
     generate_unpublished_report(unpub_posts, unpub_pages)
 
     meaningful_changes = []
