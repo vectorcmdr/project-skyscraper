@@ -9,7 +9,7 @@ import json
 import re
 
 _PAGE_NOISE_PATTERNS = [
-    (re.compile(r'<!--[^>]*?(?:generated in|batcached).*?-->', re.DOTALL), ''),
+    (re.compile(r'<!--[^>]*?(?:generated|batcached|expires).*?-->', re.DOTALL), ''),
     (re.compile(r'var WP_Statistics_Tracker_Object\s*=\s*\{.*?\}\s*;', re.DOTALL), ''),
     (re.compile(r'<strong>\d+</strong>\s*Live Connection'), '<strong>0</strong> Live Connection'),
     (re.compile(r'[?&]m=\d+'), ''),
@@ -27,13 +27,14 @@ _PAGE_NOISE_PATTERNS = [
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
-    re.compile(r'^[ +-]\tgenerated in \d+\.\d+ seconds$'),
-    re.compile(r'^[ +-]\t\d+ bytes batcached for \d+ seconds$'),
-    re.compile(r'^[ +-]\tgenerated \d+ seconds? ago$'),
-    re.compile(r'^[ +-]\tserved from batcache in \d+\.\d+ seconds$'),
-    re.compile(r'^[ +-]\texpires in \d+ seconds$'),
-    re.compile(r'^[ +-]<!--$'),
-    re.compile(r'^[ +-]-->$'),
+    re.compile(r'^[ +-]\s*generated in \d+\.\d+ seconds$'),
+    re.compile(r'^[ +-]\s*\d+ bytes batcached for \d+ seconds$'),
+    re.compile(r'^[ +-]\s*generated \d+ seconds? ago$'),
+    re.compile(r'^[ +-]\s*served from batcache in \d+\.\d+ seconds$'),
+    re.compile(r'^[ +-]\s*expires in \d+ seconds$'),
+    re.compile(r'^[ +-]\s*<!--$'),
+    re.compile(r'^[ +-]\s*-->$'),
+    re.compile(r'^[ +-]\s*//# sourceURL=.+$'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({
