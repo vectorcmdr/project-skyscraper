@@ -1761,8 +1761,8 @@ def _update_manifest(manifest: dict, c: dict):
                 "path": path,
                 "title": item.get("title", path.split("/")[-1] or path),
                 "type": item.get("type", "page"),
-                "modified": item.get("modified", ""),
-                "date_gmt": item.get("date_gmt", ""),
+                "modified": item.get("modified") or "",
+                "date_gmt": item.get("date_gmt") or "",
                 "author": item.get("author", 0),
             }
             if existing:
@@ -1838,11 +1838,12 @@ def generate_page_data(state: dict, changes: list):
         path = urllib.parse.urlparse(url).path
         sitemap_paths.add(path)
         if path not in existing_paths:
+            lastmod = meta.get("lastmod") or ""
             manifest["pages"].append({
                 "path": path,
                 "title": path.strip("/").split("/")[-1].replace("-", " ").title(),
                 "type": "page",
-                "modified": meta.get("lastmod", ""),
+                "modified": lastmod,
                 "date_gmt": "",
                 "author": 0,
             })
@@ -1852,8 +1853,8 @@ def generate_page_data(state: dict, changes: list):
         manifest["pages"] = [p for p in manifest["pages"]
                              if p["path"] in sitemap_paths or p["type"] != "page"]
 
-    # Re-sort by modified descending
-    manifest["pages"].sort(key=lambda p: p.get("modified", ""), reverse=True)
+    # Re-sort by modified descending (handle None values)
+    manifest["pages"].sort(key=lambda p: p.get("modified") or "", reverse=True)
 
     # Resolve author IDs to display names
     user_map = _build_user_map(state)
@@ -1964,8 +1965,8 @@ def seed_feed_from_mirror(state: dict):
                     "path": path,
                     "title": item.get("title", path.split("/")[-1] or path),
                     "type": item.get("type", "attachment"),
-                    "modified": item.get("modified", ""),
-                    "date_gmt": item.get("date_gmt", ""),
+                    "modified": item.get("modified") or "",
+                    "date_gmt": item.get("date_gmt") or "",
                     "author": item.get("author", 0),
                 })
                 existing_paths.add(path)
