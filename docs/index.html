@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,13 +8,12 @@
   <link rel="stylesheet" href="status/style.css">
   <style>
     .neural-bg {
-      position: fixed; top: 0; left: 0; width: 90px; height: 90px;
+      position: fixed; top: 12px; left: 12px; width: 110px; height: 110px;
       z-index: 0; pointer-events: none; opacity: .75;
-      overflow: hidden;
     }
     .neural-bg canvas { width: 100%; height: 100%; }
     @media (max-width: 600px) {
-      .neural-bg { width: 65px; height: 65px; }
+      .neural-bg { width: 80px; height: 80px; top: 8px; left: 8px; }
     }
   </style>
 </head>
@@ -73,64 +72,88 @@
     (function () {
       var canvas = document.getElementById('miniMesh');
       if (!canvas) return;
-      var ctx = canvas.getContext('2d');
+      var ctx = canvas.getContext('2d', { alpha: true });
       var particles = [];
+      var mouse = { x: -9999, y: -9999, active: false };
+      var SCALE = 0.28;
       var PARAMS = {
         COLOR:      '#ff2d2d',
-        SIZE_MIN:   1.0,
-        SIZE_MAX:   2.0,
+        DISTANCE:   140,
+        DIST_ADD:   20,
+        SIZE_MIN:   1.6,
+        SIZE_ADD:   1.6,
         SPEED_MIN:  0.16,
         SPEED_ADD:  0.16,
-        ORBIT_MIN:  40,
-        ORBIT_ADD:  10,
-        CONN_DIST:  55,
-        LINE_W:     0.5,
-        COUNT:      14
+        CONN_DIST:  170,
+        LINE_W:     0.7,
+        ORBIT_AMP:  6,
+        SHADOW:     8,
+        GLOW_SHADOW: 20,
+        GLOW_THRESH: 0.25,
+        GLOW_AMP:   3.2,
+        COUNT:      48
       };
 
       function applyLiveParams(text) {
         var m;
+        if ((m = /count\s*=\s*(\d+)/.exec(text))) { PARAMS.COUNT = parseInt(m[1]); }
+        if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
+          PARAMS.DISTANCE = parseFloat(m[1]); PARAMS.DIST_ADD = parseFloat(m[2]);
+        }
         if ((m = /size\s*=\s*Math\.random\(\)\s*\*\s*([\d.]+)\s*\+\s*([\d.]+)/.exec(text))) {
-          PARAMS.SIZE_MIN = parseFloat(m[2]) * 0.6; PARAMS.SIZE_MAX = (parseFloat(m[2]) + parseFloat(m[1])) * 0.6;
+          PARAMS.SIZE_ADD = parseFloat(m[1]); PARAMS.SIZE_MIN = parseFloat(m[2]);
         }
         if ((m = /orbitSpeed\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
           PARAMS.SPEED_MIN = parseFloat(m[1]); PARAMS.SPEED_ADD = parseFloat(m[2]);
         }
-        if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
-          PARAMS.ORBIT_MIN = Math.max(24, parseFloat(m[1]) * 0.28); PARAMS.ORBIT_ADD = parseFloat(m[2]) * 0.28;
+        if ((m = /lineWidth\s*=\s*([\d.]+)/.exec(text))) { PARAMS.LINE_W = parseFloat(m[1]); }
+        if ((m = /Math\.cos\(this\.angle\)\s*\*\s*([\d.]+)/.exec(text))) { PARAMS.ORBIT_AMP = parseFloat(m[1]); }
+        if ((m = /shadowBlur\s*=\s*(\d+)/g.exec(text))) {
+          PARAMS.GLOW_SHADOW = parseInt(m[1]);
+          if ((m = /shadowBlur\s*=\s*(\d+)/g.exec(text))) { PARAMS.SHADOW = parseInt(m[1]); }
         }
-        if ((m = /d\s*<\s*([\d]+)/.exec(text))) {
-          PARAMS.CONN_DIST = Math.round(parseFloat(m[1]) * 0.32);
+        if ((m = /intensity\s*>\s*([\d.]+)/.exec(text))) { PARAMS.GLOW_THRESH = parseFloat(m[1]); }
+        if ((m = /intensity\s*\*\s*([\d.]+)/.exec(text))) { PARAMS.GLOW_AMP = parseFloat(m[1]); }
+        if ((m = /d\s*<\s*([\d]+)/.exec(text))) { PARAMS.CONN_DIST = parseFloat(m[1]); }
+        if ((m = /fillStyle\s*=\s*'(#[a-fA-F0-9]{6})'/.exec(text))) { PARAMS.COLOR = m[1]; }
+      }
+
+      function drawParticle(p, mouseDist) {
+        var intensity = Math.max(0, 1 - mouseDist / 42);
+        var clr = PARAMS.COLOR;
+        if (intensity > PARAMS.GLOW_THRESH) {
+          ctx.fillStyle = clr;
+          ctx.shadowBlur = PARAMS.GLOW_SHADOW * SCALE;
+          ctx.shadowColor = clr;
+        } else {
+          ctx.fillStyle = clr;
+          ctx.shadowBlur = PARAMS.SHADOW * SCALE;
+          ctx.shadowColor = clr;
         }
-        if ((m = /lineWidth\s*=\s*([\d.]+)/.exec(text))) {
-          PARAMS.LINE_W = parseFloat(m[1]);
-        }
-        if ((m = /[\"'](#[a-fA-F0-9]{6})[\"']/.exec(text))) {
-          PARAMS.COLOR = m[1];
-        }
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size + intensity * PARAMS.GLOW_AMP * SCALE, 0, Math.PI * 2);
+        ctx.fill();
       }
 
       function init() {
         var w = canvas.offsetWidth, h = canvas.offsetHeight;
-        canvas.width = w * (window.devicePixelRatio || 1);
-        canvas.height = h * (window.devicePixelRatio || 1);
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+        var dpr = window.devicePixelRatio || 1;
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         var cx = w / 2, cy = h / 2;
         for (var i = 0; i < PARAMS.COUNT; i++) {
-          var a = (Math.PI * 2 / PARAMS.COUNT) * i;
+          var a = Math.random() * Math.PI * 2;
+          var r = (PARAMS.DISTANCE * SCALE + Math.random() * PARAMS.DIST_ADD * SCALE);
           particles.push({
-            bx: cx + Math.cos(a) * (PARAMS.ORBIT_MIN + Math.random() * PARAMS.ORBIT_ADD),
-            by: cy + Math.sin(a) * (PARAMS.ORBIT_MIN + Math.random() * PARAMS.ORBIT_ADD),
-            x: 0, y: 0,
-            size: PARAMS.SIZE_MIN + Math.random() * (PARAMS.SIZE_MAX - PARAMS.SIZE_MIN),
-            a: a,
+            bx: cx + Math.cos(a) * r,
+            by: cy + Math.sin(a) * r,
+            x: cx + Math.cos(a) * r,
+            y: cy + Math.sin(a) * r,
+            size: PARAMS.SIZE_MIN * SCALE + Math.random() * PARAMS.SIZE_ADD * SCALE,
+            angle: Math.random() * Math.PI * 2,
             sp: PARAMS.SPEED_MIN + Math.random() * PARAMS.SPEED_ADD
           });
-        }
-        for (var j = 0; j < particles.length; j++) {
-          particles[j].x = particles[j].bx;
-          particles[j].y = particles[j].by;
         }
         animate();
       }
@@ -141,9 +164,23 @@
 
         for (var i = 0; i < particles.length; i++) {
           var p = particles[i];
-          p.a += p.sp;
-          p.x += (p.bx + Math.cos(p.a) * 4 - p.x) * 0.12;
-          p.y += (p.by + Math.sin(p.a) * 4 - p.y) * 0.12;
+          p.angle += p.sp;
+          var tx = p.bx + Math.cos(p.angle) * PARAMS.ORBIT_AMP * SCALE;
+          var ty = p.by + Math.sin(p.angle) * PARAMS.ORBIT_AMP * SCALE;
+
+          if (mouse.active) {
+            var mdx = mouse.x - p.x, mdy = mouse.y - p.y;
+            var md = Math.sqrt(mdx * mdx + mdy * mdy);
+            var repelR = 45;
+            if (md < repelR) {
+              var force = (1 - md / repelR) * 0.42;
+              tx += mdx * force;
+              ty += mdy * force;
+            }
+          }
+
+          p.x += (tx - p.x) * 0.1;
+          p.y += (ty - p.y) * 0.1;
         }
 
         for (var i = 0; i < particles.length; i++) {
@@ -151,9 +188,10 @@
             var dx = particles[i].x - particles[j].x;
             var dy = particles[i].y - particles[j].y;
             var d = Math.sqrt(dx * dx + dy * dy);
-            if (d < PARAMS.CONN_DIST) {
-              ctx.lineWidth = PARAMS.LINE_W;
-              ctx.strokeStyle = 'rgba(255,45,45,' + (1 - d / PARAMS.CONN_DIST).toFixed(3) + ')';
+            var cd = PARAMS.CONN_DIST * SCALE;
+            if (d < cd) {
+              ctx.lineWidth = PARAMS.LINE_W * SCALE;
+              ctx.strokeStyle = 'rgba(255,45,45,' + (1 - d / cd).toFixed(3) + ')';
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
@@ -163,17 +201,29 @@
         }
 
         for (var k = 0; k < particles.length; k++) {
-          var pp = particles[k];
-          ctx.fillStyle = PARAMS.COLOR;
-          ctx.shadowBlur = 3;
-          ctx.shadowColor = PARAMS.COLOR;
-          ctx.beginPath();
-          ctx.arc(pp.x, pp.y, pp.size, 0, Math.PI * 2);
-          ctx.fill();
+          var p = particles[k];
+          var mdx = p.x - mouse.x, mdy = p.y - mouse.y;
+          var md = Math.sqrt(mdx * mdx + mdy * mdy);
+          drawParticle(p, md);
         }
 
         requestAnimationFrame(animate);
       }
+
+      function updateMouse(e) {
+        var r = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left;
+        mouse.y = e.clientY - r.top;
+        mouse.active = true;
+      }
+
+      document.addEventListener('mousemove', updateMouse);
+      document.addEventListener('mouseleave', function () { mouse.active = false; });
+      document.addEventListener('touchmove', function (e) {
+        var t = e.touches[0];
+        if (t) updateMouse(t);
+      });
+      document.addEventListener('touchend', function () { mouse.active = false; });
 
       fetch('https://project-skyscraper.com/neural-network-status/')
         .then(function (r) { return r.text(); })
