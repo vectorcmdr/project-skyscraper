@@ -127,7 +127,6 @@ def _fetch_save(url: str, subdir: str = "", save_headers: bool = False,
 
     req = urllib.request.Request(url, headers=req_headers)
     try:
-        import urllib.error
         resp = urllib.request.urlopen(req, timeout=30)
         content = resp.read()
         code = resp.status
