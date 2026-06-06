@@ -1076,13 +1076,24 @@ def check_page_content(url: str, state: dict) -> list:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(result.content)
         else:
-            changes.append({
+            change_obj = {
                 "type": "page_content_changed",
                 "url": url,
                 "old_hash": old_hash,
                 "new_hash": new_hash,
                 "detail": f"Content changed: {url}",
-            })
+            }
+            # Compute proper diff from old mirror content vs new content
+            old_bytes = old_path.read_bytes() if old_path and old_path.is_file() else None
+            if old_bytes is not None and old_bytes != result.content:
+                diff_text = compute_diff(old_bytes, result.content, url)
+                if diff_text:
+                    change_obj["diffs"] = [{"url": url, "diff": diff_text}]
+            # Look up author from API data in state
+            author = _find_author_for_url(state, url)
+            if author:
+                change_obj["author"] = author
+            changes.append(change_obj)
             log(f"Page content CHANGED: {url}", "DEEP")
     elif old_hash is None:
         log(f"Page content first tracked: {url}", "DEEP")
@@ -1589,6 +1600,23 @@ def run_check_cycle(state: dict, tiers: set = None) -> list:
 # GitHub Pages data generation
 # ---------------------------------------------------------------------------
 
+def _find_author_for_url(state: dict, url: str) -> int:
+    """Search API items in state for matching URL, return author user ID (0 if unknown)."""
+    if not url:
+        return 0
+    api_data = state.get("api", {})
+    if not isinstance(api_data, dict):
+        return 0
+    for ep_state in api_data.values():
+        items = ep_state.get("items", [])
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if item.get("link") == url:
+                return item.get("author", 0) or 0
+    return 0
+
+
 def _build_user_map(state: dict) -> dict:
     """Build {user_id: display_name} lookup from state's users endpoint data."""
     users = state.get("api", {}).get("/wp-json/wp/v2/users", {}).get("items", [])
@@ -1686,6 +1714,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         title = c.get("url", "").split("/")[-1] or "page"
         link = c.get("url", "")
         endpoint = "page"
+        author = c.get("author", 0)
         diffs = c.get("diffs", [])
         diff = _extract_text_diff(diffs) if diffs else _content_preview(link)
     elif t == "media_replaced":
@@ -1757,6 +1786,8 @@ def _update_manifest(manifest: dict, c: dict):
             for p in manifest["pages"]:
                 if p["path"] == path:
                     p["modified"] = datetime.now(timezone.utc).isoformat()
+                    if c.get("author"):
+                        p["author"] = c["author"]
                     break
 
 
