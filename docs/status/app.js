@@ -29,6 +29,18 @@ function esc(s) {
   return e.innerHTML;
 }
 
+function renderDiff(raw) {
+  if (!raw) return '';
+  return raw.split('\n').map(line => {
+    if (!line) return '';
+    if (line.startsWith('+ ')) return `<span class="diff-add">${esc(line)}</span>`;
+    if (line.startsWith('- ')) return `<span class="diff-rem">${esc(line)}</span>`;
+    if (line.startsWith('@@')) return `<span class="diff-hunk">${esc(line)}</span>`;
+    if (line.startsWith('...')) return `<span class="diff-more">${esc(line)}</span>`;
+    return `<span class="diff-ctx">${esc(line)}</span>`;
+  }).join('\n');
+}
+
 /* ── RENDER FEED ───────────────────────────────────────── */
 function renderFeed(entries) {
   const el = document.getElementById('feedEntries');
@@ -53,7 +65,7 @@ function renderFeed(entries) {
             ${e.author ? `<span>by ${esc(e.author)}</span>` : ''}
             ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
           </div>
-          ${e.diff ? `<div class="card-diff hidden" id="diff-${e._idx}">${esc(e.diff)}</div>` : ''}
+          ${e.diff ? `<div class="card-diff hidden" id="diff-${e._idx}"><pre class="diff-block">${renderDiff(e.diff)}</pre></div>` : ''}
         </div>
       </div>`;
   }).join('');

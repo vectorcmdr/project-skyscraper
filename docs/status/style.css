@@ -205,10 +205,20 @@ h2 {
 .ts-utc   { color: #555; font-size: .65rem; }
 .ts-local { color: #999; font-size: .65rem; }
 .card-diff {
-  margin-top: .4rem; padding: .4rem; background: #0d0d0d;
-  font-size: .7rem; white-space: pre-wrap; overflow-x: auto;
-  border-left: 2px solid #d00; color: #aaa;
+  margin-top: .4rem; background: #0d0d0d;
+  font-size: .7rem; overflow-x: auto;
+  border-left: 2px solid #d00;
 }
+.diff-block {
+  margin: 0; padding: .4rem .5rem; white-space: pre-wrap; color: #aaa;
+  font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+  line-height: 1.5; tab-size: 4;
+}
+.diff-add { background: rgba(0,170,0,.18); color: #80ff80; display: inline-block; width: 100%; }
+.diff-rem { background: rgba(220,30,30,.18); color: #ff8585; display: inline-block; width: 100%; }
+.diff-hunk { color: #6688cc; }
+.diff-ctx  { color: #888; }
+.diff-more { color: #cc8800; }
 
 /* -- SEARCH -- */
 .search-input {
