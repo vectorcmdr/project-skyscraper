@@ -6,8 +6,19 @@
   <title>PROJECT SKYSCRAPER | OPS CENTRE</title>
   <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <link rel="stylesheet" href="status/style.css">
+  <style>
+    .neural-bg {
+      position: fixed; top: 0; left: 0; width: 170px; height: 170px;
+      z-index: 0; pointer-events: none; opacity: .7;
+    }
+    .neural-bg canvas { width: 100%; height: 100%; }
+    @media (max-width: 600px) {
+      .neural-bg { width: 120px; height: 120px; }
+    }
+  </style>
 </head>
 <body class="landing">
+  <div class="neural-bg"><canvas id="miniMesh"></canvas></div>
   <main class="landing-centre">
     <img src="favicon.jpg" alt="PS" class="landing-avatar">
     <h1>PROJECT SKYSCRAPER</h1>
@@ -56,6 +67,119 @@
       if (e.key === 'Enter') { location.href = 'status/'; }
     });
     inp.focus();
+  </script>
+  <script>
+    (function () {
+      var canvas = document.getElementById('miniMesh');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      var PARAMS = {
+        COLOR:      '#ff2d2d',
+        SIZE_MIN:   1.6,
+        SIZE_MAX:   3.2,
+        SPEED_MIN:  0.16,
+        SPEED_ADD:  0.16,
+        ORBIT_MIN:  80,
+        ORBIT_ADD:  20,
+        CONN_DIST:  100,
+        LINE_W:     0.7,
+        COUNT:      14
+      };
+
+      function applyLiveParams(text) {
+        var m;
+        if ((m = /size\s*=\s*Math\.random\(\)\s*\*\s*([\d.]+)\s*\+\s*([\d.]+)/.exec(text))) {
+          PARAMS.SIZE_MIN = parseFloat(m[2]); PARAMS.SIZE_MAX = parseFloat(m[2]) + parseFloat(m[1]);
+        }
+        if ((m = /orbitSpeed\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
+          PARAMS.SPEED_MIN = parseFloat(m[1]); PARAMS.SPEED_ADD = parseFloat(m[2]);
+        }
+        if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
+          PARAMS.ORBIT_MIN = Math.max(40, parseFloat(m[1]) * 0.55); PARAMS.ORBIT_ADD = parseFloat(m[2]) * 0.55;
+        }
+        if ((m = /d\s*<\s*([\d]+)/.exec(text))) {
+          PARAMS.CONN_DIST = Math.round(parseFloat(m[1]) * 0.6);
+        }
+        if ((m = /lineWidth\s*=\s*([\d.]+)/.exec(text))) {
+          PARAMS.LINE_W = parseFloat(m[1]);
+        }
+        if ((m = /[\"'](#[a-fA-F0-9]{6})[\"']/.exec(text))) {
+          PARAMS.COLOR = m[1];
+        }
+      }
+
+      function init() {
+        var w = canvas.offsetWidth, h = canvas.offsetHeight;
+        canvas.width = w * (window.devicePixelRatio || 1);
+        canvas.height = h * (window.devicePixelRatio || 1);
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+
+        var cx = w / 2, cy = h / 2;
+        for (var i = 0; i < PARAMS.COUNT; i++) {
+          var a = (Math.PI * 2 / PARAMS.COUNT) * i;
+          particles.push({
+            bx: cx + Math.cos(a) * (PARAMS.ORBIT_MIN + Math.random() * PARAMS.ORBIT_ADD),
+            by: cy + Math.sin(a) * (PARAMS.ORBIT_MIN + Math.random() * PARAMS.ORBIT_ADD),
+            x: 0, y: 0,
+            size: PARAMS.SIZE_MIN + Math.random() * (PARAMS.SIZE_MAX - PARAMS.SIZE_MIN),
+            a: a,
+            sp: PARAMS.SPEED_MIN + Math.random() * PARAMS.SPEED_ADD
+          });
+        }
+        for (var j = 0; j < particles.length; j++) {
+          particles[j].x = particles[j].bx;
+          particles[j].y = particles[j].by;
+        }
+        animate();
+      }
+
+      function animate() {
+        var w = canvas.offsetWidth, h = canvas.offsetHeight;
+        ctx.clearRect(0, 0, w, h);
+
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.a += p.sp;
+          p.x += (p.bx + Math.cos(p.a) * 4 - p.x) * 0.12;
+          p.y += (p.by + Math.sin(p.a) * 4 - p.y) * 0.12;
+        }
+
+        for (var i = 0; i < particles.length; i++) {
+          for (var j = i + 1; j < particles.length; j++) {
+            var dx = particles[i].x - particles[j].x;
+            var dy = particles[i].y - particles[j].y;
+            var d = Math.sqrt(dx * dx + dy * dy);
+            if (d < PARAMS.CONN_DIST) {
+              ctx.lineWidth = PARAMS.LINE_W;
+              ctx.strokeStyle = 'rgba(255,45,45,' + (1 - d / PARAMS.CONN_DIST).toFixed(3) + ')';
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        for (var k = 0; k < particles.length; k++) {
+          var pp = particles[k];
+          ctx.fillStyle = PARAMS.COLOR;
+          ctx.shadowBlur = 6;
+          ctx.shadowColor = PARAMS.COLOR;
+          ctx.beginPath();
+          ctx.arc(pp.x, pp.y, pp.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      fetch('https://project-skyscraper.com/neural-network-status/')
+        .then(function (r) { return r.text(); })
+        .then(function (t) { applyLiveParams(t); })
+        .catch(function () {})
+        .finally(function () { init(); });
+    })();
   </script>
 </body>
 </html>
