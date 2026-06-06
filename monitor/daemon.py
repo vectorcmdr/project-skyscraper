@@ -19,7 +19,7 @@ from monitor.api_collections import check_api_collection, get_user_map
 from monitor.page_checker import check_page_content, get_page_check_batch
 from monitor.media_checker import check_media
 from monitor.id_prober import probe_unpublished
-from monitor.discord_notifier import notify_changes
+from monitor.discord_notifier import notify_changes, notify_trace_change
 from monitor.feed_manager import generate_site_data, seed_feed_from_mirror
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
@@ -282,6 +282,13 @@ def daemon_loop(quiet: bool = False):
 
             trace_changed = check_trace()
             if trace_changed:
+                import json
+                from monitor.config import TRACE_STATUS_FILE
+                try:
+                    td = json.loads(TRACE_STATUS_FILE.read_text(encoding="utf-8"))
+                    notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
+                except Exception:
+                    pass
                 push_site()
 
             if now % 3600 < 1:
@@ -313,6 +320,13 @@ def run_single_check():
 
         trace_changed = check_trace()
         if trace_changed:
+            import json
+            from monitor.config import TRACE_STATUS_FILE
+            try:
+                td = json.loads(TRACE_STATUS_FILE.read_text(encoding="utf-8"))
+                notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
+            except Exception:
+                pass
             push_site()
 
         log("Check complete")

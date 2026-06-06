@@ -230,8 +230,10 @@ def _extract_minimal_diff(diffs: list) -> str:
     if not lines_out:
         return ""
     result = "\n".join(lines_out)
-    if len(result) > 1000:
-        result = result[:997] + "..."
+    if len(result) > 2000:
+        cut = result.rfind("\n", 0, 1997)
+        result = result[:cut] if cut > 0 else result[:1997]
+        result += "\n... (truncated)"
     return result
 
 

@@ -260,3 +260,19 @@ def _get_diff_preview(change: dict, item: dict = None) -> str:
     if len(result) > 500:
         result = result[:497] + "..."
     return result
+
+
+def notify_trace_change(state: str, last_seen_at: str):
+    if not DISCORD_WEBHOOK:
+        return
+
+    if state == "ACTIVE":
+        color = 0x00ff88
+        title = "TRACE: The Architect is ACTIVE"
+        desc = f"Last seen: {last_seen_at}"
+    else:
+        color = 0xff4444
+        title = "TRACE: The Architect is LOST"
+        desc = f"Last seen: {last_seen_at}"
+
+    _send_embed(title=title, description=desc, color=color)
