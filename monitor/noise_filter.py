@@ -25,7 +25,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'"signature":"[a-f0-9]+"'), '"signature":"REMOVED"'),
     (re.compile(r'"_wpnonce":"[a-f0-9]+"'), '"_wpnonce":"REMOVED"'),
     (re.compile(r'wp-custom-css-[a-f0-9]+'), 'wp-custom-css-XXXXXXXXX'),
-    (re.compile(r'<button\b[^>]*type=[\"\x27]submit[\"\x27][^>]*>[\s\S]*?</button>'), '', re.IGNORECASE),
+    (re.compile(r'<button\b[^>]*type=[\x22\x27]submit[\x22\x27][^>]*>[\s\S]*?</button>', re.IGNORECASE), ''),
     (re.compile(r'"is_logged_in"\s*:\s*"\w*"'), '"is_logged_in":""'),
     (re.compile(r'"ajaxurl"\s*:\s*"[^"]*"'), '"ajaxurl":""'),
     (re.compile(r'"lang"\s*:\s*"[^"]*"'), '"lang":""'),
