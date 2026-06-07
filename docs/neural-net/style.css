@@ -42,7 +42,7 @@
   display: block;
   font-size: .7rem;
   letter-spacing: .25em;
-  color: #444;
+  color: #d00;
 }
 
 .canvas-stats {
@@ -52,7 +52,7 @@
   margin-top: 2px;
   font-size: .6rem;
   letter-spacing: .1em;
-  color: #333;
+  color: #eee;
 }
 
 .link {
@@ -208,6 +208,26 @@
   font-size: .8rem;
   letter-spacing: .2em;
   z-index: 5;
+}
+
+.legend-filter {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  font-family: inherit;
+  font-size: .65rem;
+  padding: .15rem .4rem;
+  width: 14ch;
+  outline: none;
+  letter-spacing: .08em;
+}
+.legend-filter:focus { border-color: #d00; color: #eee; }
+.legend-filter::placeholder { color: #444; }
+
+.filter-count {
+  font-size: .6rem;
+  color: #555;
+  white-space: nowrap;
 }
 
 .hidden {

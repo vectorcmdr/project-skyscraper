@@ -34,10 +34,18 @@
   const nodeCountEl = document.getElementById('nodeCount');
   const linkCountEl = document.getElementById('linkCount');
 
+  var maxDate = null;
+
   function getRadius(d) {
     var base = RADII[d.type] || 5;
     if (d.connectionCount) {
       base += Math.min(d.connectionCount * 0.3, 8);
+    }
+    if (maxDate && (d.type === 'page' || d.type === 'post')) {
+      var ageDays = (maxDate - new Date(d.date)) / 86400000;
+      if (ageDays > 3) {
+        base *= 0.6;
+      }
     }
     return base;
   }
@@ -90,12 +98,21 @@
     nodes = dataNodes.map(function (n) { return Object.assign({}, n); });
     links = dataLinks.map(function (l) { return Object.assign({}, l); });
 
+    maxDate = null;
+    nodes.forEach(function (n) {
+      if (n.date) {
+        var t = new Date(n.date);
+        if (!isNaN(t) && (!maxDate || t > maxDate)) maxDate = t;
+      }
+    });
+
     simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(130))
       .force('charge', d3.forceManyBody().strength(-400).theta(0.6))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide().radius(function (d) { return getRadius(d) + 6; }))
-      .alphaDecay(0.008);
+      .alphaDecay(0.03)
+      .velocityDecay(0.4);
 
     var link = g.append('g')
       .selectAll('line')
@@ -361,6 +378,45 @@
   setOperator();
   updateTrace();
   setInterval(updateTrace, 30000);
+
+  /* -- FILTER ------------------------------------------- */
+  var filterInput = document.getElementById('filterInput');
+  var filterCount = document.getElementById('filterCount');
+  if (filterInput) {
+    filterInput.addEventListener('input', function () {
+      var q = this.value.trim().toLowerCase();
+      if (!q || !g) {
+        g.selectAll('circle').attr('opacity', 1).attr('stroke', '#0a0a0a').attr('stroke-width', 1.5);
+        g.selectAll('line').attr('stroke-opacity', 0.4).attr('stroke', '#333').attr('stroke-width', 0.8);
+        g.selectAll('text').attr('opacity', 1);
+        filterCount.textContent = '';
+        return;
+      }
+      var matchIds = {};
+      nodes.forEach(function (n) {
+        if (n.label.toLowerCase().indexOf(q) !== -1 || n.type.toLowerCase().indexOf(q) !== -1) {
+          matchIds[n.id] = true;
+        }
+      });
+      links.forEach(function (l) {
+        var sid = typeof l.source === 'object' ? l.source.id : l.source;
+        var tid = typeof l.target === 'object' ? l.target.id : l.target;
+        if (matchIds[sid] || matchIds[tid]) {
+          matchIds[sid] = true;
+          matchIds[tid] = true;
+        }
+      });
+      var count = Object.keys(matchIds).length;
+      filterCount.textContent = count + '/' + nodes.length;
+      g.selectAll('circle').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.06; });
+      g.selectAll('line').attr('stroke-opacity', function (l) {
+        var sid = typeof l.source === 'object' ? l.source.id : l.source;
+        var tid = typeof l.target === 'object' ? l.target.id : l.target;
+        return (matchIds[sid] && matchIds[tid]) ? 0.5 : 0.02;
+      }).attr('stroke', '#333').attr('stroke-width', 0.8);
+      g.selectAll('text').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.04; });
+    });
+  }
 
   /* -- RESIZE ------------------------------------------- */
   window.addEventListener('resize', function () {

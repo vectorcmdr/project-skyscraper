@@ -273,6 +273,9 @@ def daemon_loop(quiet: bool = False):
         log("Refreshing graph.json...", "FILE")
         write_graph(build_graph(state))
 
+    ensure_trace_default()
+    init_trace_state()
+
     last_tiers = {"fast": 0, "medium": 0, "deep": 0}
 
     log("Starting initial sync cycle (quiet)...")

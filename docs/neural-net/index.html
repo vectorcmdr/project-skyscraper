@@ -39,7 +39,7 @@
 
   <div id="graph-container">
     <div class="canvas-header">
-      <span class="canvas-title">NEURAL NODE CANVAS</span>
+      <span class="canvas-title">NEURAL_NET_NODES</span>
       <div class="canvas-stats">
         <span id="nodeCount">nodes: --</span>
         <span id="linkCount">links: --</span>
@@ -53,6 +53,8 @@
     <span class="legend-item"><span class="legend-dot" style="background:#44ff88"></span>post</span>
     <span class="legend-item"><span class="legend-dot" style="background:#ffaa44"></span>media</span>
     <span class="legend-item"><span class="legend-dot" style="background:#8844ff"></span>external</span>
+    <input id="filterInput" class="legend-filter" type="text" placeholder="filter..." autocomplete="off" spellcheck="false">
+    <span id="filterCount" class="filter-count"></span>
   </div>
 
   <div id="infoPanel" class="info-panel hidden">

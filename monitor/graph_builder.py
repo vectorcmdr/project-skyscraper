@@ -34,6 +34,31 @@ def build_graph(state: dict) -> dict:
     api_data = state.get("api", {})
     user_map = get_user_map(state)
 
+    # Build taxonomy term ID -> path mappings
+    cat_id_to_path = {}
+    for item in api_data.get("/wp-json/wp/v2/categories", {}).get("items", []):
+        iid = item.get("id", 0)
+        url = item.get("link", "")
+        if iid and url and url.startswith(BASE_URL):
+            parsed = urllib.parse.urlparse(url)
+            cat_id_to_path[iid] = _norm_path(parsed.path) if parsed.path else "/"
+
+    tag_id_to_path = {}
+    for item in api_data.get("/wp-json/wp/v2/tags", {}).get("items", []):
+        iid = item.get("id", 0)
+        url = item.get("link", "")
+        if iid and url and url.startswith(BASE_URL):
+            parsed = urllib.parse.urlparse(url)
+            tag_id_to_path[iid] = _norm_path(parsed.path) if parsed.path else "/"
+
+    author_id_to_path = {}
+    for item in api_data.get("/wp-json/wp/v2/users", {}).get("items", []):
+        iid = item.get("id", 0)
+        url = item.get("link", "")
+        if iid and url and url.startswith(BASE_URL):
+            parsed = urllib.parse.urlparse(url)
+            author_id_to_path[iid] = _norm_path(parsed.path) if parsed.path else "/"
+
     # Build index of known URL paths from API items
     known_pages = {}
     id_to_path = {}
@@ -56,6 +81,8 @@ def build_graph(state: dict) -> dict:
             norm_path = _norm_path(path)
             if item_id:
                 id_to_path[item_id] = norm_path
+            raw_cats = item.get("categories", [])
+            raw_tags = item.get("tags", [])
             known_pages[norm_path] = {
                 "type": item_type,
                 "title": title or path.strip("/").split("/")[-1].replace("-", " ").title() or path,
@@ -65,6 +92,8 @@ def build_graph(state: dict) -> dict:
                 "author_name": user_map.get(author_id, ""),
                 "post_parent": item.get("post_parent", 0) or 0,
                 "parent": item.get("parent", 0) or 0,
+                "categories": list(raw_cats) if isinstance(raw_cats, list) else [],
+                "tags": list(raw_tags) if isinstance(raw_tags, list) else [],
             }
 
     # Sitemap hub node
@@ -201,6 +230,24 @@ def build_graph(state: dict) -> dict:
                 parent_path = id_to_path[rel_id]
                 if parent_path in node_ids and parent_path != path:
                     links.append({"source": path, "target": parent_path})
+
+    # Taxonomy links: posts -> author, categories, tags
+    for path, info in known_pages.items():
+        if path not in node_ids:
+            continue
+        aid = info.get("author", "") or ""
+        if aid and aid.isdigit():
+            apath = author_id_to_path.get(int(aid))
+            if apath and apath in node_ids and apath != path:
+                links.append({"source": path, "target": apath})
+        for cid in info.get("categories", []):
+            cpath = cat_id_to_path.get(cid)
+            if cpath and cpath in node_ids and cpath != path:
+                links.append({"source": path, "target": cpath})
+        for tid in info.get("tags", []):
+            tpath = tag_id_to_path.get(tid)
+            if tpath and tpath in node_ids and tpath != path:
+                links.append({"source": path, "target": tpath})
 
     # URL path hierarchy fallback: if node A's path is a subdirectory of
     # node B's, link them.  Only applied to nodes with zero connections

@@ -169,6 +169,8 @@ def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
 
 
 def _item_summary(item: dict) -> dict:
+    raw_cats = item.get("categories")
+    raw_tags = item.get("tags")
     return {
         "id": item["id"],
         "title": item.get("title", {}).get("rendered", "") if isinstance(item.get("title"), dict) else "",
@@ -181,6 +183,8 @@ def _item_summary(item: dict) -> dict:
         "date_gmt": item.get("date_gmt", ""),
         "post_parent": item.get("post_parent", 0) or 0,
         "parent": item.get("parent", 0) or 0,
+        "categories": list(raw_cats) if isinstance(raw_cats, list) else [],
+        "tags": list(raw_tags) if isinstance(raw_tags, list) else [],
     }
 
 
