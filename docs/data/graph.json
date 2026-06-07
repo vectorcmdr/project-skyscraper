@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T08:35:45.347465+00:00",
+  "updated": "2026-06-07T08:43:40.850758+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -142,6 +142,14 @@
       "type": "page",
       "label": "Theskyscraperarchitect",
       "url": "https://project-skyscraper.com/author/theskyscraperarchitect/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/tag/unstable",
+      "type": "page",
+      "label": "Unstable",
+      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -718,14 +726,6 @@
       "type": "external",
       "label": "soundcloud.com",
       "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unstable",
-      "type": "external",
-      "label": "Unstable",
-      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -1978,6 +1978,10 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-bru-ent-reunion-peak"
     },
     {
       "source": "/2026/04/24/navigation",
