@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-07T20:58:41.952725+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Jul.8, 2017\n  Jun.1, 2017\n  Oct.30, 2016\n  Apr.13, 2005\n  May.12, 2002\n  Mar.10, 1980\n  Mar.3, 1980",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-06-07T18:57:01.115236+00:00",
       "title": "2016_dataset",
@@ -8,7 +18,7 @@
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "- Current state: unstable\n+ Current state: stable",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
-      "author": "System"
+      "author": ""
     },
     {
       "type": "api_items_modified",
@@ -1001,5 +1011,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-07T18:57:01.116059+00:00"
+  "updated": "2026-06-07T20:58:41.953636+00:00"
 }

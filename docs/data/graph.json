@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T18:32:53.922577+00:00",
+  "updated": "2026-06-07T20:58:47.611662+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -142,14 +142,6 @@
       "type": "page",
       "label": "Theskyscraperarchitect",
       "url": "https://project-skyscraper.com/author/theskyscraperarchitect/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unstable",
-      "type": "page",
-      "label": "Unstable",
-      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -1953,7 +1945,7 @@
     },
     {
       "source": "/2016/10/30/2016_dataset-in-memoriam",
-      "target": "/tag/unstable"
+      "target": "/tag/stable"
     },
     {
       "source": "/2016/10/30/2016_dataset-in-memoriam",
@@ -2053,11 +2045,11 @@
     },
     {
       "source": "/1980/03/10/insert-coin",
-      "target": "/tag/unstable"
+      "target": "/tag/stable"
     },
     {
       "source": "/1980/03/10/insert-coin",
-      "target": "/1970/01/01/origin"
+      "target": "/1980/03/03/hoe"
     },
     {
       "source": "/1980/03/10/insert-coin",
