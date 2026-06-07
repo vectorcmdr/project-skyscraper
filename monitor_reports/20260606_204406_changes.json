@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-06-06 20:44:06 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/pages",
+        "count": 1,
+        "items": [
+          {
+            "id": 1270,
+            "title": "Report: BRUSSELS",
+            "modified": "2026-06-06T21:36:12",
+            "type": "page",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+            "author": 279180095,
+            "name": "",
+            "date_gmt": "2026-06-06T20:42:00"
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/pages"
+      },
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 1233,
+            "title": "STRUCTURAL ANALYSIS",
+            "modified": "2026-06-06T21:35:15",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+            "author": 279180095,
+            "name": "",
+            "date_gmt": "2026-06-06T20:42:00"
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/posts"
+      }
+    ]
+  }
+}

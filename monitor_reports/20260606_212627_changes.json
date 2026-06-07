@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-06-06 21:26:27 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/",
+        "old_hash": "525540677980acbd094bbc1984d311b9",
+        "new_hash": "c763d64efade3207c6eb1423cb3103ff",
+        "detail": "Content changed: https://project-skyscraper.com/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/",
+            "diff": "@@ -209,7 +209,9 @@\n <a class=\"skip-link screen-reader-text\" id=\"wp-skip-link\" href=\"#wp--skip-link--target\">Skip to content</a><div class=\"wp-site-blocks\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-34d87a16 wp-block-group-is-layout-constrained\" style=\"margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80)\">\n\n <main id=\"wp--skip-link--target\" class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<div class=\"wp-block-query is-layout-flow wp-block-query-is-layout-flow\"><ul class=\"inline-posts-loop wp-block-post-template is-layout-flow wp-block-post-template-is-layout-flow\"><li class=\"wp-block-post post-2815 post type-post status-publish format-standard hentry category-non-classe\">\n\n+<div class=\"wp-block-query is-layout-flow wp-block-query-is-layout-flow\"><ul class=\"inline-posts-loop wp-block-post-template is-layout-flow wp-block-post-template-is-layout-flow\"><li class=\"wp-block-post post-1233 post type-post status-publish format-standard hentry category-non-classe\">\n\n+<div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2026/06/06/structural-analysis-214218/\"><time datetime=\"2026-06-06T21:42:00+01:00\">Jun.6, 2026</time></a></div>\n\n+</li><li class=\"wp-block-post post-2815 post type-post status-publish format-standard hentry category-non-classe\">\n\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2026/06/06/sec-log-110328/\"><time datetime=\"2026-06-06T11:03:00+01:00\">Jun.6, 2026</time></a></div>\n\n </li><li class=\"wp-block-post post-2441 post type-post status-publish format-standard hentry category-non-classe\">\n\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2026/06/02/sec-log-194022/\"><time datetime=\"2026-06-02T19:40:00+01:00\">Jun.2, 2026</time></a></div>\n\n@@ -555,7 +557,7 @@\n     \"copyright\": \"Copyright\",\n\n     \"comment_registration\": \"0\",\n\n     \"require_name_email\": \"1\",\n\n-    \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F06%2Fsec-log-110328%2F\",\n\n+    \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F06%2Fstructural-analysis-214218%2F\",\n\n     \"blog_id\": \"1\",\n\n     \"meta_data\": [\"camera\", \"aperture\", \"shutter_speed\", \"focal_length\", \"copyright\"]\n\n };\n"
+          }
+        ]
+      }
+    ]
+  }
+}

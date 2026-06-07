@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-06-06 20:50:05 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/search",
+        "count": 2,
+        "items": [
+          {
+            "id": 1233,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": ""
+          },
+          {
+            "id": 1270,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": ""
+          }
+        ],
+        "detail": "2 new item(s) in /wp-json/wp/v2/search"
+      }
+    ]
+  }
+}
