@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-07T22:17:55.101883+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : Ghost >\n+ dimanche 08 juin23:12\n+ Blr owcy lh efbkh. Wc of lh efbkh !myypr://pkwjhny-rstrnkfphk.nwa/chukfl-chyvwks-ryfyur/\n  /*# sourceURL=global-styles-inline-css */\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System"
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-07T20:58:41.952725+00:00",
       "title": "project-skyscraper.com",
@@ -1011,5 +1021,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-07T20:58:41.953636+00:00"
+  "updated": "2026-06-07T22:17:55.102823+00:00"
 }
