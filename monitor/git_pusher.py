@@ -31,7 +31,7 @@ def push_site():
         r = subprocess.run(
             ["git", "-c", f"user.name={GIT_USER_NAME}",
              "-c", f"user.email={GIT_USER_EMAIL}",
-             "commit", "-m", "update site data [skip ci]"],
+             "commit", "-m", "update site data"],
             cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=30,
         )
         if r.returncode != 0:
