@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T15:06:11.747314+00:00",
+  "updated": "2026-06-07T16:32:42.761570+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -232,6 +232,14 @@
       "url": "https://project-skyscraper.com/1970/01/01/origin/",
       "author": "The Architect",
       "date": "1969-12-31T23:00:00"
+    },
+    {
+      "id": "/1980/03/10/insert-coin",
+      "type": "post",
+      "label": "Insert Coin",
+      "url": "https://project-skyscraper.com/1980/03/10/insert-coin/",
+      "author": "System",
+      "date": "1980-03-10T13:25:00"
     },
     {
       "id": "/2005/04/13/quote",
@@ -600,6 +608,14 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/in-memoriam/",
       "author": "The Architect",
       "date": "2026-06-06T12:07:49"
+    },
+    {
+      "id": "/1980/03/10/insert-coin/insert_coin",
+      "type": "media",
+      "label": "Insert_Coin",
+      "url": "https://project-skyscraper.com/1980/03/10/insert-coin/insert_coin/",
+      "author": "The Architect",
+      "date": "2026-06-07T16:26:29"
     },
     {
       "id": "/logo",
@@ -2012,6 +2028,26 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/tag/unstable"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/1970/01/01/origin"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/2002/05/12/code"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -2061,6 +2097,10 @@
     },
     {
       "source": "/2016/10/30/2016_dataset-in-memoriam/in-memoriam",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/1980/03/10/insert-coin/insert_coin",
       "target": "/author/theskyscraperarchitect"
     },
     {
@@ -2513,6 +2553,14 @@
     },
     {
       "source": "/2022/04/24/event-24042022",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
       "target": "/category/non-classe"
     }
   ]
