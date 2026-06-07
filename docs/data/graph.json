@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T07:50:53.241449+00:00",
+  "updated": "2026-06-07T08:07:11.952677+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1976,40 +1976,304 @@
       "target": "/"
     },
     {
-      "source": "/2017/07/08/2017_dataset/ybm_request_2416",
-      "target": "/2017/07/08/2017_dataset"
+      "source": "/project-skyscraper",
+      "target": "/author/theskyscraperarchitect"
     },
     {
-      "source": "/2018/07/24/2018_dataset/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2005/04/13/quote/wallace-stevens",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "/2005/04/13/quote/img_00004_1",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "/2002/05/12/code/when_we_were_17",
-      "target": "/2002/05/12/code"
-    },
-    {
-      "source": "/2016/10/30/2016_dataset-in-memoriam/in-memoriam",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/2002/05/12/code/unknown",
-      "target": "/2002/05/12/code"
-    },
-    {
-      "source": "/2005/04/13/quote/img_00004",
-      "target": "/2005/04/13/quote"
+      "source": "/logo",
+      "target": "/author/theskyscraperarchitect"
     },
     {
       "source": "/project-skyscraper/project-skyscraper-2",
-      "target": "/project-skyscraper"
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/tr4ce",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2005/04/13/quote/wallace-stevens",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2005/04/13/quote/img_00004",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2005/04/13/quote/img_00004_1",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2002/05/12/code/unknown",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2002/05/12/code/when_we_were_17",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/only-dust-remain",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2017/07/08/2017_dataset/ybm_request_2416",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2018/07/24/2018_dataset/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam/in-memoriam",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/about",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/sleep-mode",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/sec-log-080413-full",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/sec-log-094316-full",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/neural-network-status",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/report-lon-reality-glitch",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/report-bru-ent-reunion-peak",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/sec-log-094127-full",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/sec-log-211927-full",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/inbox",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/1970/01/01/origin",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/03/24/sleep-mode-46105",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/03/27/sleep-mode-46108",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/03/29/sleep-mode-46110",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/01/sleep-mode-4613",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/03/sleep-mode-46115",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/06/sleep-mode-46118",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/08/sleep-mode-46120",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/11/sleep-mode-46123",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/13/sleep-mode-46125",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/16/sleep-mode-46128",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/18/sleep-mode-46130",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/21/sleep-mode-46133",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/23/sleep-mode-46135",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/25/sleep-mode-46137",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/28/sleep-mode-46140",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/04/30/sleep-mode-46142",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/03/sec-log-080413",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/05/sec-log-190746",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/08/sec-log-061119",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/10/sec-log-171452",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/13/sec-log-041825",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/15/sec-log-152158",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/18/sec-log-022531",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/20/sec-log-132904",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/23/sec-log-003237",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/25/sec-log-113610",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/27/sec-log-access-granted",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/30/sec-log-memory-sector-access",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2017/06/01/event-01062017",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/01/structural-analysis-204649",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/06/01/diagnostic-op-morse",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/06/06/structural-analysis-214218",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/10/security-log-171453",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/12/sec-log-120000",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2005/04/13/quote",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/18/sec-log-211927",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/21/sec-log-170516",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/27/sec-log-185027",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/27/sec-log-reboot",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/29/sec-log-114327",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2002/05/12/code",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/05/31/sec-log-193727",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2018/07/24/2018_dataset",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2017/07/21/event-21072017",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/02/sec-log-194022",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2017/07/08/2017_dataset",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/06/sec-log-110328",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2022/04/24/event-24042022",
+      "target": "/author/theskyscraperarchitect"
     }
   ]
 }
