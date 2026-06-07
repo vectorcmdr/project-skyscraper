@@ -91,11 +91,11 @@
     links = dataLinks.map(function (l) { return Object.assign({}, l); });
 
     simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(70))
-      .force('charge', d3.forceManyBody().strength(-180))
+      .force('link', d3.forceLink(links).id(function (d) { return d.id; }).distance(130))
+      .force('charge', d3.forceManyBody().strength(-400).theta(0.6))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide().radius(function (d) { return getRadius(d) + 3; }))
-      .alphaDecay(0.02);
+      .force('collision', d3.forceCollide().radius(function (d) { return getRadius(d) + 6; }))
+      .alphaDecay(0.008);
 
     var link = g.append('g')
       .selectAll('line')
