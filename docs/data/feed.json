@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-07T18:55:01.205952+00:00",
+      "title": "Insert Coin",
+      "link": "https://project-skyscraper.com/1980/03/10/insert-coin/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Current state: unstable\n+ Current state: stable\n- Previous\n+ Previous\n  Next",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-07T18:32:53.547813+00:00",
       "title": "SLP #47",
@@ -981,5 +991,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-07T18:33:21.020079+00:00"
+  "updated": "2026-06-07T18:55:01.209794+00:00"
 }
