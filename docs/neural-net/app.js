@@ -258,17 +258,7 @@
         }
       });
 
-      link
-        .attr('x1', function (l) { return l.source.x; })
-        .attr('y1', function (l) { return l.source.y; })
-        .attr('x2', function (l) { return l.target.x; })
-        .attr('y2', function (l) { return l.target.y; });
-      node
-        .attr('cx', function (n) { return n.x; })
-        .attr('cy', function (n) { return n.y; });
-      label
-        .attr('x', function (n) { return n.x; })
-        .attr('y', function (n) { return n.y; });
+      simulation.alpha(0).tick();
 
       svg.transition().duration(450).call(
         zoom.transform,
