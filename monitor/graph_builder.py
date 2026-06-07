@@ -202,6 +202,24 @@ def build_graph(state: dict) -> dict:
                 if parent_path in node_ids and parent_path != path:
                     links.append({"source": path, "target": parent_path})
 
+    # URL path hierarchy fallback: if node A's path is a subdirectory of
+    # node B's, link them.  Only applied to nodes with zero connections
+    # so far.
+    connected = set()
+    for l in links:
+        connected.add(l["source"])
+        connected.add(l["target"])
+    sorted_paths = sorted(node_ids, key=lambda p: p.count("/"), reverse=True)
+    for path in sorted_paths:
+        if path in connected or path == "/":
+            continue
+        segments = path.strip("/").split("/")
+        for i in range(len(segments) - 1, 0, -1):
+            candidate = "/" + "/".join(segments[:i])
+            if candidate in node_ids and candidate != "/":
+                links.append({"source": path, "target": candidate})
+                break
+
     # Deduplicate links
     seen_links = set()
     deduped_links = []
@@ -283,7 +301,12 @@ def _normalize_href(href: str, page_url: str) -> dict | None:
     }
 
 
-def rebuild_on_change(changes: list, state: dict) -> bool:
+def rebuild_on_change(changes: list, state: dict, force: bool = False) -> bool:
+    if force:
+        graph = build_graph(state)
+        write_graph(graph)
+        return True
+
     trigger_types = {
         "sitemap_added", "sitemap_removed",
         "api_items_added", "api_items_removed",

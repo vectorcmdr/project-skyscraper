@@ -146,6 +146,8 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
     else:
         log("No changes detected", "CHECK")
 
+    rebuild_on_change(all_changes, state, force=True)
+
     return all_changes
 
 
