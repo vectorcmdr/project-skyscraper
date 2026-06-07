@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T18:28:52.537573+00:00",
+  "updated": "2026-06-07T18:32:53.922577+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -562,6 +562,14 @@
       "date": "2026-04-30T20:00:40"
     },
     {
+      "id": "/1980/03/03/hoe",
+      "type": "post",
+      "label": "SLP #47",
+      "url": "https://project-skyscraper.com/1980/03/03/hoe/",
+      "author": "System",
+      "date": "1980-03-03T13:00:00"
+    },
+    {
       "id": "/2026/06/01/structural-analysis-204649",
       "type": "post",
       "label": "STRUCTURAL ANALYSIS",
@@ -710,14 +718,6 @@
       "type": "external",
       "label": "freeimage.host",
       "url": "https://freeimage.host/i/C3q5NYF",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/1980/03/03/hoe",
-      "type": "external",
-      "label": "Hoe",
-      "url": "https://project-skyscraper.com/1980/03/03/hoe/",
       "author": "",
       "date": ""
     },
@@ -1266,6 +1266,10 @@
     {
       "source": "/1970/01/01/origin",
       "target": "/"
+    },
+    {
+      "source": "/1970/01/01/origin",
+      "target": "/1980/03/03/hoe"
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
@@ -2397,6 +2401,14 @@
     },
     {
       "source": "/2017/06/01/event-01062017",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/1980/03/03/hoe",
       "target": "/category/non-classe"
     },
     {
