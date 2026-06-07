@@ -168,6 +168,8 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         diffs = c.get("diffs", [])
         if diffs:
             diff = _extract_minimal_diff(diffs)
+        if not diff:
+            return None
     elif t == "page_content_changed":
         parts = c.get("url", "").rstrip("/").split("/")
         title = parts[-1] if parts and parts[-1] else "page"
@@ -175,6 +177,8 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         author = c.get("author", 0)
         diffs = c.get("diffs", [])
         diff = _extract_minimal_diff(diffs) if diffs else ""
+        if not diff:
+            return None
     elif t == "media_replaced":
         title = f"Media #{c.get('id', '?')}"
         link = c.get("new_url", "")

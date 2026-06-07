@@ -246,7 +246,9 @@ def _diff_and_save(url: str, subdir: str, change_obj: dict):
     new_bytes = path.read_bytes() if path.is_file() else None
     if old_bytes is not None and new_bytes is not None and old_bytes != new_bytes:
         diff = compute_diff(old_bytes, new_bytes, url, str(path.relative_to(path.parents[3])) if path.parents else "")
-        entry = {"url": url, "diff": diff if diff else ""}
+        if not diff:
+            return
+        entry = {"url": url, "diff": diff}
         if "wp-json" in url:
             text_diff = compute_text_diff(old_bytes, new_bytes)
             if text_diff:
