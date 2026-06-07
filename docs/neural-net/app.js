@@ -17,7 +17,7 @@
     external: 5,
   };
 
-  let svg, g, simulation, nodes, links;
+  let svg, g, simulation, nodes, links, zoom;
   let isolateNode = null;
 
   const container = document.getElementById('graph-container');
@@ -79,7 +79,7 @@
 
     g = svg.append('g');
 
-    var zoom = d3.zoom()
+    zoom = d3.zoom()
       .scaleExtent([0.1, 4])
       .on('zoom', function (event) {
         g.attr('transform', event.transform);
