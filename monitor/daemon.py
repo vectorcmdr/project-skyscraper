@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
-    MEANINGFUL_CHANGE_TYPES,
+    MEANINGFUL_CHANGE_TYPES, DATA_DIR,
 )
 from monitor.logger import log
 from monitor.state_manager import load_state, save_state, acquire_lock, release_lock
@@ -21,6 +21,7 @@ from monitor.media_checker import check_media
 from monitor.id_prober import probe_unpublished
 from monitor.discord_notifier import notify_changes, notify_trace_change
 from monitor.feed_manager import generate_site_data, seed_feed_from_mirror
+from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
 from monitor.report_writer import clean_old_reports, write_monitor_report
@@ -136,6 +137,7 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             _apply_changes(all_changes)
             notify_changes(all_changes, state)
             generate_site_data(state, all_changes)
+            rebuild_on_change(all_changes, state)
             meaningful = [c for c in all_changes if c.get("type") in MEANINGFUL_CHANGE_TYPES]
             if meaningful:
                 push_site()
@@ -262,6 +264,11 @@ def daemon_loop(quiet: bool = False):
     _sync_state_hashes_to_mirror(state)
     state["stats"]["_warmup"] = 2
     save_state(state)
+
+    graph_path = DATA_DIR / "graph.json"
+    if not graph_path.is_file():
+        log("Seeding graph.json from mirror data...", "FILE")
+        write_graph(build_graph(state))
 
     last_tiers = {"fast": 0, "medium": 0, "deep": 0}
 

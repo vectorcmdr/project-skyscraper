@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS NEURAL NET</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="../status/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="neural-body">
+  <header class="topbar neural-topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/NET
+      </a>
+      <span class="trace-status" id="traceStatus"></span>
+      <span class="neural-nav-links">
+        <a href="../status/" class="proxy-tag">OPS CENTRE</a>
+        <a href="../" class="proxy-tag">MAIN</a>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-right-top">
+        <span class="operator-label" id="operatorDisplay"></span>
+        <span class="topbar-status" id="statusBadge">&#9679; OFFLINE</span>
+      </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="https://monitor-project-skyscraper.pages.dev/" target="_blank" rel="noopener">MONITOR_PS</a>
+        <a class="proxy-tag" href="https://skyscraper.havenmap.online/" target="_blank" rel="noopener">HAVEN</a>
+        <a class="proxy-tag" href="https://forums.atlas-65.com/t/skyscraper-directory-organization-thread/" target="_blank" rel="noopener">ETARC/ACSD</a>
+        <a class="proxy-tag" href="https://docs.google.com/spreadsheets/d/1mUOrEQqj5SqazYnwB9yjaRHICkJJVo0lJHHPSd9DbV4/edit?gid=1171087795#gid=1171087795" target="_blank" rel="noopener">YBM_CADENCE</a>
+        <a class="proxy-tag" href="https://gchq.github.io/CyberChef/#recipe=Substitute('ABCDEFGHIJKLMNOPQRSTUVWXYZ','MINDFAGEBJRLHCVPQSKYUWOXTZ',true)Reverse('Line'/disabled)&input=TGYgcHdreWggaHJ5IHd1b2hreWgu&oenc=65001&ieol=CRLF" target="_blank" rel="noopener">SCHL_CODE</a>
+        <a class="proxy-tag" href="https://translate.google.com/?sl=fr&tl=en&op=translate" target="_blank" rel="noopener">FR_EN</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="graph-container">
+    <div class="canvas-header">
+      <span class="canvas-title">NEURAL NODE CANVAS</span>
+      <div class="canvas-stats">
+        <span id="nodeCount">nodes: --</span>
+        <span id="linkCount">links: --</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="legend" class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#ff2d2d"></span>sitemap</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4488ff"></span>page</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#44ff88"></span>post</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#ffaa44"></span>media</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#8844ff"></span>external</span>
+  </div>
+
+  <div id="infoPanel" class="info-panel hidden">
+    <div class="info-panel-header">
+      <span id="infoLabel"></span>
+      <span id="infoType" class="info-type-tag"></span>
+    </div>
+    <div class="info-panel-body">
+      <div class="info-row"><span class="info-key">URL</span><span id="infoUrl" class="info-val"></span></div>
+      <div class="info-row"><span class="info-key">AUTHOR</span><span id="infoAuthor" class="info-val"></span></div>
+      <div class="info-row"><span class="info-key">DATE</span><span id="infoDate" class="info-val"></span></div>
+      <div class="info-row"><span class="info-key">CONNECTIONS</span><span id="infoConns" class="info-val"></span></div>
+    </div>
+    <button id="viewAllBtn" class="info-btn hidden">VIEW ALL</button>
+  </div>
+
+  <div id="loading" class="loading">LOADING GRAPH DATA...</div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
