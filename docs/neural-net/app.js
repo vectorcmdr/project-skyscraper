@@ -194,11 +194,14 @@
   }
 
   var savedTransform = null;
+  var savedPositions = null;
 
   function clickNode(d) {
     isolateNode = d;
 
     savedTransform = d3.zoomTransform(svg.node());
+    savedPositions = {};
+    nodes.forEach(function (n) { savedPositions[n.id] = { x: n.x, y: n.y }; });
 
     var neighborIds = getNeighborIds(d);
 
@@ -231,16 +234,41 @@
       .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0; });
 
     if (simulation) {
-      simulation.alpha(0.5).restart();
-      var cx = d.x, cy = d.y;
+      simulation.stop();
+
       var dim = container.getBoundingClientRect();
-      var scale = 0.6;
-      var tx = dim.width / 2 - cx * scale;
-      var ty = dim.height / 2 - cy * scale;
+      var cx = dim.width / 2;
+      var cy = dim.height / 2;
+      d.x = cx;
+      d.y = cy;
+      d.fx = cx;
+      d.fy = cy;
+
+      var nbors = [];
+      neighborIds.forEach(function (id) {
+        if (id !== d.id) nbors.push(id);
+      });
+      var radius = Math.min(dim.width, dim.height) * 0.25;
+      nbors.forEach(function (id, i) {
+        var angle = (2 * Math.PI * i) / nbors.length;
+        var nnode = nodes.filter(function (n) { return n.id === id; })[0];
+        if (nnode) {
+          nnode.x = cx + radius * Math.cos(angle);
+          nnode.y = cy + radius * Math.sin(angle);
+        }
+      });
+
       svg.transition().duration(450).call(
         zoom.transform,
-        d3.zoomIdentity.translate(tx, ty).scale(scale)
+        d3.zoomIdentity.translate(0, 0).scale(1)
       );
+
+      setTimeout(function () {
+        if (!isolateNode) return;
+        d.fx = null;
+        d.fy = null;
+        simulation.alpha(0.4).restart();
+      }, 500);
     }
 
     showInfo(d);
@@ -249,6 +277,16 @@
 
   function resetGraph() {
     isolateNode = null;
+
+    if (savedPositions) {
+      nodes.forEach(function (n) {
+        var p = savedPositions[n.id];
+        if (p) { n.x = p.x; n.y = p.y; }
+        n.fx = null;
+        n.fy = null;
+      });
+      savedPositions = null;
+    }
 
     g.selectAll('circle')
       .transition().duration(400)
