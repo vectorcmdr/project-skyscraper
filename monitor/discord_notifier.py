@@ -133,19 +133,20 @@ def notify_changes(changes: list, state: dict):
         _send_embed(title=f"Modified Items: {total}", description="", fields=fields[:10], color=0xffaa00)
 
     if "page_content_changed" in by_type:
-        clist = by_type["page_content_changed"]
-        fields = []
-        for c in clist[:5]:
-            page_label = c["url"].split("/")[-1] or c["url"]
-            author = _resolve_author(user_map, c.get("author", 0))
-            preview = _get_diff_preview(c)
-            val = page_label[:200]
-            if author:
-                val += f" (by {author})"
-            if preview:
-                val += f"\n{preview[:900]}"
-            fields.append({"name": "Page Changed", "value": val[:1024]})
-        _send_embed(title=f"Page Content Changed: {len(clist)} page(s)", description="", fields=fields[:10], color=0xff8800)
+        clist = [c for c in by_type["page_content_changed"] if _get_diff_preview(c)]
+        if clist:
+            fields = []
+            for c in clist[:5]:
+                page_label = c["url"].split("/")[-1] or c["url"]
+                author = _resolve_author(user_map, c.get("author", 0))
+                preview = _get_diff_preview(c)
+                val = page_label[:200]
+                if author:
+                    val += f" (by {author})"
+                if preview:
+                    val += f"\n{preview[:900]}"
+                fields.append({"name": "Page Changed", "value": val[:1024]})
+            _send_embed(title=f"Page Content Changed: {len(clist)} page(s)", description="", fields=fields[:10], color=0xff8800)
 
     if "media_replaced" in by_type:
         clist = by_type["media_replaced"]
