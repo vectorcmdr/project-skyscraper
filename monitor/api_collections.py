@@ -43,7 +43,7 @@ def check_api_collection(endpoint: str, state: dict) -> list:
         iid = str(item.get("id"))
         if iid:
             new_ids.add(iid)
-            new_items_map[iid] = _item_summary(item)
+            new_items_map[iid] = _item_summary(item, endpoint)
 
     log(f"API {endpoint}: {len(new_ids)} items across {total_pages} page(s)", "DEBUG")
 
@@ -168,10 +168,10 @@ def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
     return all_items, combined_hash, total_pages, final_etag, final_last_modified
 
 
-def _item_summary(item: dict) -> dict:
+def _item_summary(item: dict, endpoint: str = "") -> dict:
     raw_cats = item.get("categories")
     raw_tags = item.get("tags")
-    return {
+    result = {
         "id": item["id"],
         "title": item.get("title", {}).get("rendered", "") if isinstance(item.get("title"), dict) else "",
         "modified": item.get("modified", ""),
@@ -186,6 +186,13 @@ def _item_summary(item: dict) -> dict:
         "categories": list(raw_cats) if isinstance(raw_cats, list) else [],
         "tags": list(raw_tags) if isinstance(raw_tags, list) else [],
     }
+    if item.get("type") in ("wp_navigation", "wp_block", "nav_menu_item"):
+        raw = item.get("content", {})
+        if isinstance(raw, dict):
+            result["content_rendered"] = raw.get("rendered", "")
+    if "/categories" in endpoint or "/tags" in endpoint or "/users" in endpoint:
+        result["count"] = item.get("count", 0)
+    return result
 
 
 def get_user_map(state: dict) -> dict:

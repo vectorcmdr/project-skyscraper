@@ -3,9 +3,9 @@
 
   const COLORS = {
     sitemap:  '#ff2d2d',
-    page:     '#4488ff',
-    post:     '#44ff88',
-    media:    '#ffaa44',
+    page:     '#88aaff',
+    post:     '#4488ff',
+    media:    '#aa88aa',
     external: '#8844ff',
   };
 
@@ -151,6 +151,7 @@
       .attr('class', 'node-label')
       .attr('dx', function (d) { return getRadius(d) + 3; })
       .attr('dy', 3)
+      .attr('fill', '#eee')
       .text(function (d) {
         var label = d.label || d.id;
         if (label.length > 22) label = label.slice(0, 20) + '..';
@@ -416,14 +417,16 @@
           matchIds[n.id] = true;
         }
       });
+      var neighborIds = {};
       links.forEach(function (l) {
         var sid = typeof l.source === 'object' ? l.source.id : l.source;
         var tid = typeof l.target === 'object' ? l.target.id : l.target;
         if (matchIds[sid] || matchIds[tid]) {
-          matchIds[sid] = true;
-          matchIds[tid] = true;
+          neighborIds[sid] = true;
+          neighborIds[tid] = true;
         }
       });
+      Object.keys(neighborIds).forEach(function (id) { matchIds[id] = true; });
       var count = Object.keys(matchIds).length;
       filterCount.textContent = count + '/' + nodes.length;
       g.selectAll('circle').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.06; });

@@ -62,6 +62,46 @@ def build_graph(state: dict) -> dict:
     # Build index of known URL paths from API items
     known_pages = {}
     id_to_path = {}
+
+    _mirror_item_cache = {}
+
+    def _mirror_items(endpoint: str) -> list:
+        if endpoint not in _mirror_item_cache:
+            mirror_path = MIRROR_DIR / "api" / "{}.json".format(endpoint.lstrip("/"))
+            try:
+                _mirror_item_cache[endpoint] = json.loads(mirror_path.read_text(encoding="utf-8"))
+            except Exception:
+                _mirror_item_cache[endpoint] = []
+        return _mirror_item_cache[endpoint]
+
+    _CONTENT_ENDPOINTS = frozenset({
+        "/wp-json/wp/v2/navigation", "/wp-json/wp/v2/menu-items",
+        "/wp-json/wp/v2/menus", "/wp-json/wp/v2/blocks",
+    })
+
+    def _ensure_content_rendered(endpoint: str, item: dict) -> str:
+        cr = item.get("content_rendered", "") or ""
+        if cr or endpoint not in _CONTENT_ENDPOINTS:
+            return cr or ""
+        for mi in _mirror_items(endpoint):
+            if mi.get("id") == item.get("id"):
+                raw = mi.get("content", {})
+                if isinstance(raw, dict):
+                    return raw.get("rendered", "") or ""
+                return ""
+        return ""
+
+    def _ensure_taxonomy_count(endpoint: str, item: dict) -> int:
+        if "/categories" not in endpoint and "/tags" not in endpoint:
+            return -1
+        c = item.get("count")
+        if c is not None:
+            return c
+        for mi in _mirror_items(endpoint):
+            if mi.get("id") == item.get("id"):
+                return mi.get("count", 0) or 0
+        return -1
+
     for endpoint, ep_state in api_data.items():
         items = ep_state.get("items", [])
         if not isinstance(items, list):
@@ -94,6 +134,8 @@ def build_graph(state: dict) -> dict:
                 "parent": item.get("parent", 0) or 0,
                 "categories": list(raw_cats) if isinstance(raw_cats, list) else [],
                 "tags": list(raw_tags) if isinstance(raw_tags, list) else [],
+                "count": _ensure_taxonomy_count(endpoint, item),
+                "content_rendered": _ensure_content_rendered(endpoint, item),
             }
 
     # Sitemap hub node
@@ -142,6 +184,8 @@ def build_graph(state: dict) -> dict:
     # Add API items not in sitemap as extra nodes
     for path, info in known_pages.items():
         if path not in all_page_paths:
+            if info.get("count") == 0:
+                continue
             url = info["url"]
             all_page_paths[path] = url
             seen_urls.add(url)
@@ -162,10 +206,15 @@ def build_graph(state: dict) -> dict:
 
     for path, url in all_page_paths.items():
         html_path = url_to_path(url, "html")
+        info = known_pages.get(path, {})
         if not html_path.is_file():
-            continue
-
-        hrefs = _extract_hrefs(html_path)
+            content_html = info.get("content_rendered", "")
+            if content_html:
+                hrefs = re.findall(r'''(?:href|src)\s*=\s*["\'](.*?)["\']''', content_html, re.IGNORECASE)
+            else:
+                hrefs = []
+        else:
+            hrefs = _extract_hrefs(html_path)
         for href in hrefs:
             target_info = _normalize_href(href, url)
             if target_info is None:
