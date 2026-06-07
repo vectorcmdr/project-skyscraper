@@ -39,7 +39,7 @@ def generate_site_data(state: dict, changes: list):
         entry = _change_to_feed_entry(c)
         if entry:
             feed["entries"].append(entry)
-        _update_manifest(manifest, c)
+            _update_manifest(manifest, c)
 
     _sync_manifest_from_sitemap(manifest, state)
 
