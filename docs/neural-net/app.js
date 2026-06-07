@@ -180,37 +180,52 @@
     simulation.alpha(0.3).restart();
   }
 
+  function getNeighborIds(d) {
+    var ids = new Set();
+    ids.add(d.id);
+    links.forEach(function (l) {
+      var sid = typeof l.source === 'object' ? l.source.id : l.source;
+      var tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (sid === d.id) ids.add(tid);
+      if (tid === d.id) ids.add(sid);
+    });
+    return ids;
+  }
+
   function clickNode(d) {
     isolateNode = d;
 
-    var neighborIds = new Set();
-    neighborIds.add(d.id);
-    links.forEach(function (l) {
-      if (l.source.id === d.id) neighborIds.add(l.target.id);
-      if (l.target.id === d.id) neighborIds.add(l.source.id);
-    });
+    var neighborIds = getNeighborIds(d);
 
     g.selectAll('circle')
       .transition().duration(300)
-      .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0.08; })
+      .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0; })
       .attr('stroke', function (n) { return n.id === d.id ? '#d00' : '#0a0a0a'; })
       .attr('stroke-width', function (n) { return n.id === d.id ? 3 : 1.5; });
 
     g.selectAll('line')
       .transition().duration(300)
-      .attr('stroke-opacity', function (l) {
-        return (l.source.id === d.id || l.target.id === d.id) ? 0.8 : 0.02;
+      .attr('opacity', function (l) {
+        var sid = typeof l.source === 'object' ? l.source.id : l.source;
+        var tid = typeof l.target === 'object' ? l.target.id : l.target;
+        return neighborIds.has(sid) && neighborIds.has(tid) ? 1 : 0;
       })
       .attr('stroke', function (l) {
-        return (l.source.id === d.id || l.target.id === d.id) ? '#d00' : '#333';
+        var sid = typeof l.source === 'object' ? l.source.id : l.source;
+        var tid = typeof l.target === 'object' ? l.target.id : l.target;
+        return (sid === d.id || tid === d.id) ? '#d00' : '#333';
       })
       .attr('stroke-width', function (l) {
-        return (l.source.id === d.id || l.target.id === d.id) ? 2 : 0.8;
+        var sid = typeof l.source === 'object' ? l.source.id : l.source;
+        var tid = typeof l.target === 'object' ? l.target.id : l.target;
+        return (sid === d.id || tid === d.id) ? 2 : 0.8;
       });
 
     g.selectAll('text')
       .transition().duration(300)
-      .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0.05; });
+      .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0; });
+
+    if (simulation) simulation.stop();
 
     showInfo(d);
     viewAllBtn.classList.remove('hidden');
@@ -227,6 +242,7 @@
 
     g.selectAll('line')
       .transition().duration(400)
+      .attr('opacity', 1)
       .attr('stroke-opacity', 0.4)
       .attr('stroke', '#333')
       .attr('stroke-width', 0.8);
@@ -234,6 +250,8 @@
     g.selectAll('text')
       .transition().duration(400)
       .attr('opacity', 1);
+
+    if (simulation) simulation.alpha(0.3).restart();
 
     infoPanel.classList.add('hidden');
     viewAllBtn.classList.add('hidden');
