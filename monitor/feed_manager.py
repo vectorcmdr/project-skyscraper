@@ -239,6 +239,7 @@ def _extract_minimal_diff(diffs: list) -> str:
 
 def _update_manifest(manifest: dict, c: dict):
     t = c["type"]
+    now = datetime.now(timezone.utc).isoformat()
     if t in ("api_items_added", "api_items_modified"):
         for item in c.get("items", []):
             path = urllib.parse.urlparse(item.get("link", "")).path
@@ -249,7 +250,7 @@ def _update_manifest(manifest: dict, c: dict):
                 "path": path,
                 "title": item.get("title", path.split("/")[-1] or path),
                 "type": item.get("type", "page"),
-                "modified": item.get("modified") or "",
+                "modified": now if t == "api_items_added" else (item.get("modified") or now),
                 "date_gmt": item.get("date_gmt") or "",
                 "author": item.get("author", 0),
             }
@@ -263,7 +264,7 @@ def _update_manifest(manifest: dict, c: dict):
             path = urllib.parse.urlparse(url).path
             for p in manifest["pages"]:
                 if p["path"] == path:
-                    p["modified"] = datetime.now(timezone.utc).isoformat()
+                    p["modified"] = now
                     if c.get("author"):
                         p["author"] = c["author"]
                     break
