@@ -36,6 +36,7 @@ def build_graph(state: dict) -> dict:
 
     # Build index of known URL paths from API items
     known_pages = {}
+    id_to_path = {}
     for endpoint, ep_state in api_data.items():
         items = ep_state.get("items", [])
         if not isinstance(items, list):
@@ -51,13 +52,19 @@ def build_graph(state: dict) -> dict:
             if isinstance(title, dict):
                 title = title.get("rendered", "")
             author_id = item.get("author", 0) or 0
-            known_pages[_norm_path(path)] = {
+            item_id = item.get("id", 0)
+            norm_path = _norm_path(path)
+            if item_id:
+                id_to_path[item_id] = norm_path
+            known_pages[norm_path] = {
                 "type": item_type,
                 "title": title or path.strip("/").split("/")[-1].replace("-", " ").title() or path,
                 "author": str(author_id) if author_id else "",
                 "date": item.get("date_gmt") or item.get("modified", ""),
                 "url": url,
                 "author_name": user_map.get(author_id, ""),
+                "post_parent": item.get("post_parent", 0) or 0,
+                "parent": item.get("parent", 0) or 0,
             }
 
     # Sitemap hub node
@@ -182,6 +189,18 @@ def build_graph(state: dict) -> dict:
                     nodes.append(external_nodes[ext_id])
 
                 links.append({"source": path, "target": ext_id})
+
+    # Add API relationship links (media <-> parent post, child page <-> parent page)
+    node_ids = {n["id"] for n in nodes}
+    for path, info in known_pages.items():
+        if path not in node_ids:
+            continue
+        for rel_field in ("post_parent", "parent"):
+            rel_id = info.get(rel_field, 0) or 0
+            if rel_id and rel_id in id_to_path:
+                parent_path = id_to_path[rel_id]
+                if parent_path in node_ids and parent_path != path:
+                    links.append({"source": path, "target": parent_path})
 
     # Deduplicate links
     seen_links = set()

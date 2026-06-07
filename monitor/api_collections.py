@@ -179,6 +179,8 @@ def _item_summary(item: dict) -> dict:
         "author": item.get("author", 0),
         "name": item.get("name", ""),
         "date_gmt": item.get("date_gmt", ""),
+        "post_parent": item.get("post_parent", 0) or 0,
+        "parent": item.get("parent", 0) or 0,
     }
 
 
