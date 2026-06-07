@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T08:18:47.409975+00:00",
+  "updated": "2026-06-07T08:35:45.347465+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -142,22 +142,6 @@
       "type": "page",
       "label": "Theskyscraperarchitect",
       "url": "https://project-skyscraper.com/author/theskyscraperarchitect/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unstable",
-      "type": "page",
-      "label": "Unstable",
-      "url": "https://project-skyscraper.com/tag/unstable/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unverified",
-      "type": "page",
-      "label": "Unverified",
-      "url": "https://project-skyscraper.com/tag/unverified/",
       "author": "",
       "date": ""
     },
@@ -734,6 +718,14 @@
       "type": "external",
       "label": "soundcloud.com",
       "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/tag/unstable",
+      "type": "external",
+      "label": "Unstable",
+      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -1974,6 +1966,46 @@
     {
       "source": "/tr4ce",
       "target": "/"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/inbox"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-lon-reality-glitch"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094316-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094127-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-211927-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-080413-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sleep-mode"
     },
     {
       "source": "/project-skyscraper",
