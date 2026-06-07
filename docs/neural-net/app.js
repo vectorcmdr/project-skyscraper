@@ -136,11 +136,11 @@
         clickNode(d);
       })
       .on('mouseenter', function (event, d) {
-        if (isolateNode) return;
+        if (isolateNode || _filterActive) return;
         highlightConnections(d, true);
       })
       .on('mouseleave', function () {
-        if (isolateNode) return;
+        if (isolateNode || _filterActive) return;
         resetHighlights();
       });
 
@@ -193,8 +193,12 @@
     return ids;
   }
 
+  var savedTransform = null;
+
   function clickNode(d) {
     isolateNode = d;
+
+    savedTransform = d3.zoomTransform(svg.node());
 
     var neighborIds = getNeighborIds(d);
 
@@ -226,7 +230,18 @@
       .transition().duration(300)
       .attr('opacity', function (n) { return neighborIds.has(n.id) ? 1 : 0; });
 
-    if (simulation) simulation.stop();
+    if (simulation) {
+      simulation.alpha(0.5).restart();
+      var cx = d.x, cy = d.y;
+      var dim = container.getBoundingClientRect();
+      var scale = 0.6;
+      var tx = dim.width / 2 - cx * scale;
+      var ty = dim.height / 2 - cy * scale;
+      svg.transition().duration(450).call(
+        zoom.transform,
+        d3.zoomIdentity.translate(tx, ty).scale(scale)
+      );
+    }
 
     showInfo(d);
     viewAllBtn.classList.remove('hidden');
@@ -252,10 +267,19 @@
       .transition().duration(400)
       .attr('opacity', 1);
 
+    if (savedTransform) {
+      svg.transition().duration(450).call(zoom.transform, savedTransform);
+      savedTransform = null;
+    }
+
     if (simulation) simulation.alpha(0.3).restart();
 
     infoPanel.classList.add('hidden');
     viewAllBtn.classList.add('hidden');
+
+    if (filterInput && filterInput.value.trim()) {
+      setTimeout(function () { applyFilter(filterInput.value.trim().toLowerCase()); }, 450);
+    }
   }
 
   function highlightConnections(d, show) {
@@ -400,42 +424,59 @@
 
   /* -- FILTER ------------------------------------------- */
   var filterInput = document.getElementById('filterInput');
+  var filterClearBtn = document.getElementById('filterClearBtn');
   var filterCount = document.getElementById('filterCount');
+  var _filterActive = false;
+
+  function applyFilter(q) {
+    if (!q || !g) {
+      _filterActive = false;
+      if (filterClearBtn) filterClearBtn.classList.add('hidden');
+      g.selectAll('circle').attr('opacity', 1).attr('stroke', '#0a0a0a').attr('stroke-width', 1.5);
+      g.selectAll('line').attr('stroke-opacity', 0.4).attr('stroke', '#333').attr('stroke-width', 0.8);
+      g.selectAll('text').attr('opacity', 1);
+      filterCount.textContent = '';
+      return;
+    }
+    _filterActive = true;
+    if (filterClearBtn) filterClearBtn.classList.remove('hidden');
+    var matchIds = {};
+    nodes.forEach(function (n) {
+      if (n.label.toLowerCase().indexOf(q) !== -1 || n.type.toLowerCase().indexOf(q) !== -1) {
+        matchIds[n.id] = true;
+      }
+    });
+    var neighborIds = {};
+    links.forEach(function (l) {
+      var sid = typeof l.source === 'object' ? l.source.id : l.source;
+      var tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (matchIds[sid] || matchIds[tid]) {
+        neighborIds[sid] = true;
+        neighborIds[tid] = true;
+      }
+    });
+    Object.keys(neighborIds).forEach(function (id) { matchIds[id] = true; });
+    var count = Object.keys(matchIds).length;
+    filterCount.textContent = count + '/' + nodes.length;
+    g.selectAll('circle').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.06; });
+    g.selectAll('line').attr('stroke-opacity', function (l) {
+      var sid = typeof l.source === 'object' ? l.source.id : l.source;
+      var tid = typeof l.target === 'object' ? l.target.id : l.target;
+      return (matchIds[sid] && matchIds[tid]) ? 0.5 : 0.02;
+    }).attr('stroke', '#333').attr('stroke-width', 0.8);
+    g.selectAll('text').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.04; });
+  }
+
   if (filterInput) {
     filterInput.addEventListener('input', function () {
-      var q = this.value.trim().toLowerCase();
-      if (!q || !g) {
-        g.selectAll('circle').attr('opacity', 1).attr('stroke', '#0a0a0a').attr('stroke-width', 1.5);
-        g.selectAll('line').attr('stroke-opacity', 0.4).attr('stroke', '#333').attr('stroke-width', 0.8);
-        g.selectAll('text').attr('opacity', 1);
-        filterCount.textContent = '';
-        return;
-      }
-      var matchIds = {};
-      nodes.forEach(function (n) {
-        if (n.label.toLowerCase().indexOf(q) !== -1 || n.type.toLowerCase().indexOf(q) !== -1) {
-          matchIds[n.id] = true;
-        }
-      });
-      var neighborIds = {};
-      links.forEach(function (l) {
-        var sid = typeof l.source === 'object' ? l.source.id : l.source;
-        var tid = typeof l.target === 'object' ? l.target.id : l.target;
-        if (matchIds[sid] || matchIds[tid]) {
-          neighborIds[sid] = true;
-          neighborIds[tid] = true;
-        }
-      });
-      Object.keys(neighborIds).forEach(function (id) { matchIds[id] = true; });
-      var count = Object.keys(matchIds).length;
-      filterCount.textContent = count + '/' + nodes.length;
-      g.selectAll('circle').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.06; });
-      g.selectAll('line').attr('stroke-opacity', function (l) {
-        var sid = typeof l.source === 'object' ? l.source.id : l.source;
-        var tid = typeof l.target === 'object' ? l.target.id : l.target;
-        return (matchIds[sid] && matchIds[tid]) ? 0.5 : 0.02;
-      }).attr('stroke', '#333').attr('stroke-width', 0.8);
-      g.selectAll('text').attr('opacity', function (n) { return matchIds[n.id] ? 1 : 0.04; });
+      applyFilter(this.value.trim().toLowerCase());
+    });
+  }
+  if (filterClearBtn) {
+    filterClearBtn.addEventListener('click', function () {
+      filterInput.value = '';
+      applyFilter('');
+      filterInput.focus();
     });
   }
 

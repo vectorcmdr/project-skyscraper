@@ -75,7 +75,7 @@
 .node-label {
   font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
   font-size: 8px;
-  fill: #888;
+  fill: #eee;
   pointer-events: none;
 }
 
@@ -210,6 +210,11 @@
   z-index: 5;
 }
 
+.filter-wrap {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
 .legend-filter {
   background: transparent;
   border: 1px solid #333;
@@ -223,6 +228,20 @@
 }
 .legend-filter:focus { border-color: #d00; color: #eee; }
 .legend-filter::placeholder { color: #444; }
+
+.filter-clear {
+  position: absolute;
+  right: 2px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: .8rem;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  font-family: inherit;
+}
+.filter-clear:hover { color: #d00; }
 
 .filter-count {
   font-size: .6rem;

@@ -49,11 +49,14 @@
 
   <div id="legend" class="legend">
     <span class="legend-item"><span class="legend-dot" style="background:#ff2d2d"></span>sitemap</span>
-    <span class="legend-item"><span class="legend-dot" style="background:#4488ff"></span>page</span>
-    <span class="legend-item"><span class="legend-dot" style="background:#44ff88"></span>post</span>
-    <span class="legend-item"><span class="legend-dot" style="background:#ffaa44"></span>media</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#88aaff"></span>page</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#4488ff"></span>post</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#aa88aa"></span>media</span>
     <span class="legend-item"><span class="legend-dot" style="background:#8844ff"></span>external</span>
-    <input id="filterInput" class="legend-filter" type="text" placeholder="filter..." autocomplete="off" spellcheck="false">
+    <div class="filter-wrap">
+      <input id="filterInput" class="legend-filter" type="text" placeholder="filter..." autocomplete="off" spellcheck="false">
+      <button id="filterClearBtn" class="filter-clear hidden">&times;</button>
+    </div>
     <span id="filterCount" class="filter-count"></span>
   </div>
 
