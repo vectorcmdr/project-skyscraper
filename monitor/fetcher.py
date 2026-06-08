@@ -15,7 +15,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from monitor.config import (
-    BASE_URL, MIRROR_DIR, DIFF_DIR, PAGE_PASSWORD, PASSWORD_PROTECTED_PAGES,
+    BASE_URL, MIRROR_DIR, DIFF_DIR, PASSWORD_PROTECTED_PAGES,
     MAX_WORKERS,
 )
 from monitor.http_client import fetch as http_fetch, jitter
@@ -424,22 +424,28 @@ def _fetch_media(post_links, page_links, sitemap_urls):
 
 def _fetch_password_protected_pages():
     log("=== FETCHING PASSWORD-PROTECTED PAGES ===")
-    cookies = _get_postpass_cookie()
-    if not cookies:
-        log("  WARN: No postpass cookie obtained")
-        return
-    cookie_header = "; ".join(f"{k}={v}" for k, v in cookies.items())
-    for url in PASSWORD_PROTECTED_PAGES:
-        _fetch_save(url, "html", cookie=cookie_header)
-        time.sleep(0.5)
+    # Group URLs by password to minimize cookie requests
+    by_password = {}
+    for url, pwd in PASSWORD_PROTECTED_PAGES.items():
+        by_password.setdefault(pwd, []).append(url)
+
+    for pwd, urls in by_password.items():
+        cookies = _get_postpass_cookie(pwd, urls[0])
+        if not cookies:
+            log(f"  WARN: No postpass cookie obtained for password (len={len(pwd)})")
+            continue
+        cookie_header = "; ".join(f"{k}={v}" for k, v in cookies.items())
+        for url in urls:
+            _fetch_save(url, "html", cookie=cookie_header)
+            time.sleep(0.5)
 
 
-def _get_postpass_cookie() -> dict:
+def _get_postpass_cookie(password: str, redirect_url: str) -> dict:
     url = f"{BASE_URL}/wp-login.php?action=postpass"
     data = urllib.parse.urlencode({
-        "post_password": PAGE_PASSWORD,
+        "post_password": password,
         "Submit": "Enter",
-        "redirect_to": PASSWORD_PROTECTED_PAGES[0],
+        "redirect_to": redirect_url,
     }).encode()
 
     class NoRedirectHandler(urllib.request.HTTPRedirectHandler):

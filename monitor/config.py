@@ -84,11 +84,11 @@ FETCH_TIMEOUT = 15
 HEAD_TIMEOUT = 10
 DIFF_MAX_LINES = 30
 
-PASSWORD_PROTECTED_PAGES = [
-    "https://project-skyscraper.com/request-memory-timestamp-094317/",
-    "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
-]
-PAGE_PASSWORD = "EMILY"
+PASSWORD_PROTECTED_PAGES = {
+    "https://project-skyscraper.com/request-memory-timestamp-094317/": "EMILY",
+    "https://project-skyscraper.com/2026/05/31/sec-log-193727/": "EMILY",
+    "https://project-skyscraper.com/report-bru-ent-reunion-peak/": "EVENT HORIZON",
+}
 
 MIRROR_SUBDIRS = ["html", "api", "media", "assets", "discovery", "extras", "endpoints", "third_party"]
 
