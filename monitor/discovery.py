@@ -1,9 +1,12 @@
 """Endpoint discovery -- REST API namespace/route enumeration + mirror fetch helpers."""
 
 import json
+import re
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
-from monitor.config import BASE_URL, MIRROR_DIR
+from monitor.config import BASE_URL, MIRROR_DIR, PASSWORD_PROTECTED_PAGES
 from monitor.http_client import fetch, jitter
 from monitor.url_mapper import url_to_path
 from monitor.logger import log
@@ -58,13 +61,14 @@ def _parse_sub_sitemap(path: Path, urls: dict, ns: dict):
         pass
 
 
-def fetch_and_save(url: str, subdir: str = "") -> bool:
+def fetch_and_save(url: str, subdir: str = "", cookie: str = "") -> bool:
     path = url_to_path(url, subdir=subdir)
     path.parent.mkdir(parents=True, exist_ok=True)
 
     old_bytes = path.read_bytes() if path.is_file() else None
 
-    result = fetch(url)
+    headers = {"Cookie": cookie} if cookie else None
+    result = fetch(url, headers_extra=headers)
     if result.failed:
         log(f"  FETCH FAIL: {url} -> {result.status}", "ERROR")
         return False
@@ -77,6 +81,50 @@ def fetch_and_save(url: str, subdir: str = "") -> bool:
     path.write_bytes(result.content)
     log(f"  FETCH OK: {url} -> {path.relative_to(MIRROR_DIR)}", "FETCH")
     return True
+
+
+def get_postpass_cookie(password: str, redirect_url: str) -> str:
+    post_url = f"{BASE_URL}/wp-login.php?action=postpass"
+    data = urllib.parse.urlencode({
+        "post_password": password,
+        "Submit": "Enter",
+        "redirect_to": redirect_url,
+    }).encode()
+
+    class _NoRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            return None
+
+    opener = urllib.request.build_opener(_NoRedirect)
+    req = urllib.request.Request(post_url, data=data, headers={
+        "User-Agent": "Mozilla/5.0 (project-skyscraper-mirror/1.0)",
+        "Content-Type": "application/x-www-form-urlencoded",
+    })
+    try:
+        resp = opener.open(req, timeout=30)
+    except urllib.error.HTTPError as e:
+        resp = e
+
+    cookies = []
+    raw = resp.headers.get_all("Set-Cookie") if hasattr(resp.headers, "get_all") else None
+    if raw is None:
+        set_cookie = resp.headers.get("Set-Cookie", "")
+        raw = re.split(r', (?=[a-zA-Z0-9_\-]+=)', set_cookie) if set_cookie else []
+    for part in raw:
+        m = re.search(r'(wp-postpass_[a-f0-9]+)=([^;]+)', part.strip())
+        if m:
+            cookies.append(f"{m.group(1)}={urllib.parse.unquote(m.group(2))}")
+    if cookies:
+        log(f"  Got postpass cookie ({len(cookies)} parts)", "FETCH")
+    return "; ".join(cookies)
+
+
+def fetch_protected_page(url: str, password: str, subdir: str = "") -> bool:
+    cookie = get_postpass_cookie(password, url)
+    if not cookie:
+        log(f"  Could not get postpass cookie for {url}", "ERROR")
+        return False
+    return fetch_and_save(url, subdir=subdir, cookie=cookie)
 
 
 def _fetch_and_save(url: str, subdir: str = "") -> tuple:

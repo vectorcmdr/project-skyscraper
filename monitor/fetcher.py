@@ -28,7 +28,10 @@ from monitor.report_writer import (
     generate_manifest_report, generate_unpublished_report, write_changelog,
     generate_id_series_report,
 )
-from monitor.discovery import discover_sitemap_urls, fetch_and_save, discover_rest_api, KNOWN_NS_ROOTS, JETPACK_SUBS
+from monitor.discovery import (
+    discover_sitemap_urls, fetch_and_save, fetch_protected_page,
+    get_postpass_cookie, discover_rest_api, KNOWN_NS_ROOTS, JETPACK_SUBS,
+)
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 project-skyscraper-mirror/1.0"
 
@@ -424,56 +427,9 @@ def _fetch_media(post_links, page_links, sitemap_urls):
 
 def _fetch_password_protected_pages():
     log("=== FETCHING PASSWORD-PROTECTED PAGES ===")
-    # Group URLs by password to minimize cookie requests
-    by_password = {}
     for url, pwd in PASSWORD_PROTECTED_PAGES.items():
-        by_password.setdefault(pwd, []).append(url)
-
-    for pwd, urls in by_password.items():
-        cookies = _get_postpass_cookie(pwd, urls[0])
-        if not cookies:
-            log(f"  WARN: No postpass cookie obtained for password (len={len(pwd)})")
-            continue
-        cookie_header = "; ".join(f"{k}={v}" for k, v in cookies.items())
-        for url in urls:
-            _fetch_save(url, "html", cookie=cookie_header)
-            time.sleep(0.5)
-
-
-def _get_postpass_cookie(password: str, redirect_url: str) -> dict:
-    url = f"{BASE_URL}/wp-login.php?action=postpass"
-    data = urllib.parse.urlencode({
-        "post_password": password,
-        "Submit": "Enter",
-        "redirect_to": redirect_url,
-    }).encode()
-
-    class NoRedirectHandler(urllib.request.HTTPRedirectHandler):
-        def redirect_request(self, req, fp, code, msg, headers, newurl):
-            return None
-
-    opener = urllib.request.build_opener(NoRedirectHandler)
-    req = urllib.request.Request(url, data=data, headers={
-        "User-Agent": USER_AGENT,
-        "Content-Type": "application/x-www-form-urlencoded",
-    })
-    try:
-        resp = opener.open(req, timeout=30)
-    except urllib.error.HTTPError as e:
-        resp = e
-
-    cookies = {}
-    raw = resp.headers.get_all("Set-Cookie") if hasattr(resp.headers, "get_all") else None
-    if raw is None:
-        set_cookie = resp.headers.get("Set-Cookie", "")
-        raw = re.split(r', (?=[a-zA-Z0-9_\-]+=)', set_cookie) if set_cookie else []
-    for part in raw:
-        part = part.strip()
-        m = re.search(r'(wp-postpass_[a-f0-9]+)=([^;]+)', part)
-        if m:
-            cookies[m.group(1)] = urllib.parse.unquote(m.group(2))
-            log(f"  Got postpass cookie: {m.group(1)}")
-    return cookies
+        fetch_protected_page(url, pwd, "html")
+        time.sleep(0.5)
 
 
 def _fetch_theme_assets():

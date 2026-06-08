@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
-    MEANINGFUL_CHANGE_TYPES, DATA_DIR,
+    MEANINGFUL_CHANGE_TYPES, DATA_DIR, PASSWORD_PROTECTED_PAGES,
 )
 from monitor.logger import log
 from monitor.state_manager import load_state, save_state, acquire_lock, release_lock
@@ -25,7 +25,7 @@ from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
 from monitor.report_writer import clean_old_reports, write_monitor_report
-from monitor.discovery import fetch_and_save
+from monitor.discovery import fetch_and_save, fetch_protected_page
 
 
 def _sync_state_hashes_to_mirror(state: dict):
@@ -160,7 +160,7 @@ def _apply_changes(changes: list):
         if ctype == "sitemap_added":
             for page_url in change.get("urls", []):
                 if page_url.startswith("https://project-skyscraper.com"):
-                    fetch_and_save(page_url, "html")
+                    _fetch_page_html(page_url)
                     time.sleep(0.3)
 
         elif ctype == "api_items_added":
@@ -174,14 +174,14 @@ def _apply_changes(changes: list):
                     time.sleep(0.2)
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
-                        fetch_and_save(link, "html")
+                        _fetch_page_html(link)
                         time.sleep(0.2)
                 elif "/pages" in endpoint:
                     fetch_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/pages/{iid}", "api")
                     time.sleep(0.2)
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
-                        fetch_and_save(link, "html")
+                        _fetch_page_html(link)
                         time.sleep(0.2)
                 elif "/media" in endpoint:
                     fetch_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/media/{iid}", "api")
@@ -218,7 +218,7 @@ def _apply_changes(changes: list):
         elif ctype == "page_content_changed":
             page_url = change.get("url", "")
             if page_url:
-                fetch_and_save(page_url, "html")
+                _fetch_page_html(page_url)
                 time.sleep(0.3)
 
         elif ctype == "media_thumbnail_changed":
@@ -240,13 +240,24 @@ def _apply_changes(changes: list):
     write_monitor_report("changes", {"count": len(changes), "changes": changes[:50]})
 
 
+def _fetch_page_html(url: str, subdir: str = "html"):
+    password = PASSWORD_PROTECTED_PAGES.get(url)
+    if password:
+        fetch_protected_page(url, password, subdir)
+    else:
+        fetch_and_save(url, subdir)
+
+
 def _diff_and_save(url: str, subdir: str, change_obj: dict):
     from monitor.diff_engine import compute_diff, compute_text_diff
     from monitor.url_mapper import url_to_path
 
     path = url_to_path(url, subdir=subdir)
     old_bytes = path.read_bytes() if path.is_file() else None
-    fetch_and_save(url, subdir)
+    if subdir == "html":
+        _fetch_page_html(url)
+    else:
+        fetch_and_save(url, subdir)
     new_bytes = path.read_bytes() if path.is_file() else None
     if old_bytes is not None and new_bytes is not None and old_bytes != new_bytes:
         diff = compute_diff(old_bytes, new_bytes, url, str(path.relative_to(path.parents[3])) if path.parents else "")
