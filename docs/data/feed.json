@@ -1,6 +1,26 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-08T13:24:27.967658+00:00",
+      "title": "event-24042022",
+      "link": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+      "endpoint": "",
+      "diff": "- Previous\n+ Previous\n  Next",
+      "detail": "Content changed: https://project-skyscraper.com/2022/04/24/event-24042022/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-08T13:24:27.967425+00:00",
+      "title": "2018_dataset",
+      "link": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+      "endpoint": "",
+      "diff": "  Previous\n- Next\n+ Next",
+      "detail": "Content changed: https://project-skyscraper.com/2018/07/24/2018_dataset/",
+      "author": "System"
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-06-08T12:27:31.537130+00:00",
       "title": "https://project-skyscraper.com/2021/02/25/event-25022021/",
@@ -1131,5 +1151,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-08T12:27:31.540931+00:00"
+  "updated": "2026-06-08T13:24:27.969078+00:00"
 }
