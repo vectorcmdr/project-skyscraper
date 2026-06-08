@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-06-08T09:16:17.502438+00:00",
+      "title": "2021_dataset",
+      "link": "https://project-skyscraper.com/2021/02/25/event-25022021/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "The Architect"
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-08T08:46:01.371216+00:00",
       "title": "report-bru-ent-reunion-peak",
@@ -8,7 +18,7 @@
       "endpoint": "",
       "diff": "  img#wpstats{display:none}\n. .. (57 more lines)",
       "detail": "Content changed: https://project-skyscraper.com/report-bru-ent-reunion-peak/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "unpublished_detected",
@@ -38,7 +48,7 @@
       "endpoint": "",
       "diff": "",
       "detail": "Added 2 URL(s) to sitemap",
-      "author": 0
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -188,7 +198,7 @@
       "endpoint": "",
       "diff": "",
       "detail": "Added 3 URL(s) to sitemap",
-      "author": 0
+      "author": ""
     },
     {
       "type": "page_content_changed",
@@ -1071,5 +1081,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-08T08:46:01.374131+00:00"
+  "updated": "2026-06-08T09:16:17.505081+00:00"
 }
