@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T20:57:38.699727+00:00",
+  "updated": "2026-06-08T21:03:47.595798+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -608,6 +608,14 @@
       "url": "https://project-skyscraper.com/8740677a9483/",
       "author": "The Architect",
       "date": "2026-06-08T20:43:58"
+    },
+    {
+      "id": "/b1c9e4f072a5",
+      "type": "media",
+      "label": "B1C9E4F072A5",
+      "url": "https://project-skyscraper.com/b1c9e4f072a5/",
+      "author": "The Architect",
+      "date": "2026-06-08T20:56:41"
     },
     {
       "id": "/2005/04/13/quote/img_00004",
@@ -2225,6 +2233,10 @@
     },
     {
       "source": "/53a05806675f",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/b1c9e4f072a5",
       "target": "/author/theskyscraperarchitect"
     },
     {
