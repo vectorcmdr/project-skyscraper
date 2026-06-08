@@ -1,6 +1,26 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-06-08T15:56:52.395316+00:00",
+      "title": "#2916 (posts)",
+      "link": "",
+      "endpoint": "posts",
+      "diff": "",
+      "detail": "Unpublished posts #2916 (HTTP 401)",
+      "author": 0
+    },
+    {
+      "type": "unpublished_detected",
+      "timestamp": "2026-06-08T15:56:52.395242+00:00",
+      "title": "#2915 (posts)",
+      "link": "",
+      "endpoint": "posts",
+      "diff": "",
+      "detail": "Unpublished posts #2915 (HTTP 401)",
+      "author": 0
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-08T13:24:27.967658+00:00",
       "title": "event-24042022",
@@ -1151,5 +1171,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-08T13:24:27.969078+00:00"
+  "updated": "2026-06-08T15:56:52.398267+00:00"
 }
