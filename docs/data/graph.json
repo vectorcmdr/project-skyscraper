@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T18:27:01.504706+00:00",
+  "updated": "2026-06-08T18:57:03.968907+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -696,6 +696,22 @@
       "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/ybm_request_2416/",
       "author": "The Architect",
       "date": "2026-06-04T17:16:56"
+    },
+    {
+      "id": "/request-memory-timestamp-094317/context.image.src",
+      "type": "external",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/request-memory-timestamp-094317/context.submission.url",
+      "type": "external",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
+      "author": "",
+      "date": ""
     },
     {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
@@ -1858,6 +1874,14 @@
     {
       "source": "/request-memory-timestamp-094317",
       "target": "/"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.submission.url"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.image.src"
     },
     {
       "source": "/2026/05/27/sec-log-185027",
