@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "sitemap_added",
+      "timestamp": "2026-06-08T00:31:41.762405+00:00",
+      "title": "https://project-skyscraper.com/1980/03/03/hoe/",
+      "link": "https://project-skyscraper.com/1980/03/03/hoe/",
+      "endpoint": "",
+      "diff": "",
+      "detail": "Added 2 URL(s) to sitemap",
+      "author": 0
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-08T00:29:25.054623+00:00",
       "title": "neural-network-status",
@@ -8,7 +18,7 @@
       "endpoint": "",
       "diff": "  const cx = width / 2;\n  const cy = height / 2;\n  const angle = Math.random() * Math.PI * 2;\n- const distance = 140 + Math.random() * 20;\n+ const distance = 140 + Math.random() * 5.8;\n  this.baseX = cx + Math.cos(angle) * distance;\n  this.baseY = cy + Math.sin(angle) * distance;\n  this.x = this.baseX;\n  this.y = this.baseY;\n  this.size = Math.random() * 1.6 + 1.6;\n- this.angle = Math.random() * Math.PI * 2;\n- this.orbitSpeed = 0.16 + Math.random() * 0.16;\n+ this.angle = Math.random(58) * Math.PI * 2;\n+ this.orbitSpeed = 0.058 + Math.random() * 0.058;\n  }\n  update() {\n  this.angle += this.orbitSpeed;\n- let tx = this.baseX + Math.cos(this.angle) * 6;\n- let ty = this.baseY + Math.sin(this.angle) * 6;\n+ let tx = this.baseX + Math.cos(this.angle) * 20;\n+ let ty = this.baseY + Math.sin(this.angle) * 0.58;\n  if (mouse.active) {\n  const dx = mouse.x - this.x;",
       "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect"
+      "author": ""
     },
     {
       "type": "api_items_modified",
@@ -1031,5 +1041,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-08T00:29:25.055523+00:00"
+  "updated": "2026-06-08T00:31:41.763088+00:00"
 }

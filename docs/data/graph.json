@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T00:29:32.059525+00:00",
+  "updated": "2026-06-08T00:31:42.488333+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -714,6 +714,14 @@
       "date": ""
     },
     {
+      "id": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE",
+      "type": "external",
+      "label": "holographyforum.org",
+      "url": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://iili.io/CFCOYml.jpg",
       "type": "external",
       "label": "iili.io",
@@ -905,6 +913,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/1980/03/03/hoe"
+    },
+    {
+      "source": "sitemap",
       "target": "/neural-network-status"
     },
     {
@@ -1014,6 +1026,10 @@
     {
       "source": "sitemap",
       "target": "/2022/04/24/event-24042022"
+    },
+    {
+      "source": "sitemap",
+      "target": "/1980/03/10/insert-coin"
     },
     {
       "source": "sitemap",
@@ -1636,6 +1652,26 @@
       "target": "/2017/07/08/2017_dataset"
     },
     {
+      "source": "/1980/03/03/hoe",
+      "target": "/"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "/1970/01/01/origin"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "/1980/03/10/insert-coin"
+    },
+    {
       "source": "/neural-network-status",
       "target": "/"
     },
@@ -1976,6 +2012,26 @@
       "target": "/2026/03/24/sleep-mode-46105"
     },
     {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/tag/stable"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/1980/03/03/hoe"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/2002/05/12/code"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -2034,26 +2090,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/1980/03/03/hoe"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/2002/05/12/code"
     },
     {
       "source": "/project-skyscraper",
