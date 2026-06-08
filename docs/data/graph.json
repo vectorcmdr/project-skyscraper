@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T20:27:02.658543+00:00",
+  "updated": "2026-06-08T20:51:29.254033+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -592,6 +592,22 @@
       "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65/",
       "author": "The Architect",
       "date": "2026-06-06T10:25:00"
+    },
+    {
+      "id": "/53a05806675f",
+      "type": "media",
+      "label": "53A05806675F",
+      "url": "https://project-skyscraper.com/53a05806675f/",
+      "author": "The Architect",
+      "date": "2026-06-08T20:48:20"
+    },
+    {
+      "id": "/8740677a9483",
+      "type": "media",
+      "label": "8740677A9483",
+      "url": "https://project-skyscraper.com/8740677a9483/",
+      "author": "The Architect",
+      "date": "2026-06-08T20:43:58"
     },
     {
       "id": "/2005/04/13/quote/img_00004",
@@ -2201,6 +2217,14 @@
     },
     {
       "source": "/1980/03/10/insert-coin/insert_coin",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/8740677a9483",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/53a05806675f",
       "target": "/author/theskyscraperarchitect"
     },
     {
