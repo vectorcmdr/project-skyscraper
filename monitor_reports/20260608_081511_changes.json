@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-08 08:15:11 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "unpublished_detected",
+        "id": 2915,
+        "status": 401,
+        "endpoint": "posts",
+        "detail": "Unpublished posts #2915 (HTTP 401)"
+      },
+      {
+        "type": "unpublished_detected",
+        "id": 2916,
+        "status": 401,
+        "endpoint": "posts",
+        "detail": "Unpublished posts #2916 (HTTP 401)"
+      }
+    ]
+  }
+}

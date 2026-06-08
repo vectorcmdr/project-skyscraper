@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-06-07 16:32:40 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/media",
+        "count": 1,
+        "items": [
+          {
+            "id": 2892,
+            "title": "Insert_Coin",
+            "modified": "2026-06-07T17:26:29",
+            "type": "attachment",
+            "status": "inherit",
+            "link": "https://project-skyscraper.com/1980/03/10/insert-coin/insert_coin/",
+            "author": 279180095,
+            "name": "",
+            "date_gmt": "2026-06-07T16:26:29",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/media"
+      },
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 2883,
+            "title": "Insert Coin",
+            "modified": "2026-06-07T17:26:40",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/1980/03/10/insert-coin/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "1980-03-10T13:25:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": [
+              16089
+            ]
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/posts"
+      }
+    ]
+  }
+}

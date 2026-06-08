@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-06-07 18:28:51 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/search",
+        "count": 1,
+        "items": [
+          {
+            "id": 381,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/search"
+      }
+    ]
+  }
+}

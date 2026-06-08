@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-06-07 14:23:23 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/05/13/sec-log-041825/",
+        "old_hash": "db9492d4d985e9cf3945af97599dbeb1",
+        "new_hash": "e1528949d7a08cc74f58b2f75b7e9f3a",
+        "detail": "Content changed: https://project-skyscraper.com/2026/05/13/sec-log-041825/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/05/13/sec-log-041825/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/05/13/sec-log-041825/\" /><input type=\"hidden\" name=\"post_id\" value=\"271\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/05/13/sec-log-041825/\" /><input type=\"hidden\" name=\"post_id\" value=\"271\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -499,4 +499,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+        "old_hash": "513248829436983c807d0cf3faacb893",
+        "new_hash": "aadee1c6cd36129f27a70c38ab76ed12",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+            "diff": "@@ -368,7 +368,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/06/structural-analysis-214218/\" /><input type=\"hidden\" name=\"post_id\" value=\"1233\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/06/structural-analysis-214218/\" /><input type=\"hidden\" name=\"post_id\" value=\"1233\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

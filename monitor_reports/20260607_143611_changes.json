@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-06-07 14:36:11 UTC",
+  "category": "changes",
+  "data": {
+    "count": 8,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "old_hash": "b6377d5dc88045175ad31bda8ee78aa7",
+        "new_hash": "f5db14f865546ad649017edd7290e38f",
+        "detail": "Content changed: https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/05/31/sec-log-193727/\" /><input type=\"hidden\" name=\"post_id\" value=\"1852\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/05/31/sec-log-193727/\" /><input type=\"hidden\" name=\"post_id\" value=\"1852\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "old_hash": "ceef4679b51e206a942f5c719d4bb8b8",
+        "new_hash": "fcda1f4933e487e28ddc5f5d648e0b4a",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+            "diff": "@@ -369,7 +369,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/21/event-21072017/\" /><input type=\"hidden\" name=\"post_id\" value=\"2420\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/21/event-21072017/\" /><input type=\"hidden\" name=\"post_id\" value=\"2420\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "old_hash": "012544e7574a0c44253837ed834324f6",
+        "new_hash": "82c626fe5a0bc2299b12eaac784ed81e",
+        "detail": "Content changed: https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+            "diff": "@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2018/07/24/2018_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2155\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2018/07/24/2018_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2155\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -712,3 +712,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+        "old_hash": "2c554b7fbe216d9e46f02b77afdfc5a0",
+        "new_hash": "d79e19bb921caac9db44d4b61606793f",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
+            "diff": "@@ -368,7 +368,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/02/sec-log-194022/\" /><input type=\"hidden\" name=\"post_id\" value=\"2441\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/02/sec-log-194022/\" /><input type=\"hidden\" name=\"post_id\" value=\"2441\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -503,4 +503,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/",
+        "old_hash": "0f85d322187bc49087e6a9e494ad3905",
+        "new_hash": "6b5afe2dc669c148522a281c5621877b",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/08/2017_dataset/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/",
+            "diff": "@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/08/2017_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2655\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/08/2017_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2655\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -712,4 +712,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/06/sec-log-110328/",
+        "old_hash": "72ed66a3de7958fe1639c0c7fd06f0e6",
+        "new_hash": "6e77e6bc5bd15e6d7c4fc565c01763f3",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/06/sec-log-110328/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/06/sec-log-110328/",
+            "diff": "@@ -372,7 +372,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/06/sec-log-110328/\" /><input type=\"hidden\" name=\"post_id\" value=\"2815\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/06/06/sec-log-110328/\" /><input type=\"hidden\" name=\"post_id\" value=\"2815\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+        "old_hash": "c4fce45d67963d01de191a512b184ef0",
+        "new_hash": "f52ef7bb2b8421c7c25645b09cf46071",
+        "detail": "Content changed: https://project-skyscraper.com/2022/04/24/event-24042022/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+            "diff": "@@ -369,7 +369,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2022/04/24/event-24042022/\" /><input type=\"hidden\" name=\"post_id\" value=\"2850\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2022/04/24/event-24042022/\" /><input type=\"hidden\" name=\"post_id\" value=\"2850\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -504,4 +504,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "old_hash": "aa2dba591984525de42e013f4d52948b",
+        "new_hash": "bde398b6ad43ce2287b9b1b8c2fa7459",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+            "diff": "@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"55faf258f7\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2016/10/30/2016_dataset-in-memoriam/\" /><input type=\"hidden\" name=\"post_id\" value=\"2829\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"f89455370b\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2016/10/30/2016_dataset-in-memoriam/\" /><input type=\"hidden\" name=\"post_id\" value=\"2829\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -712,4 +712,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      }
+    ]
+  }
+}
