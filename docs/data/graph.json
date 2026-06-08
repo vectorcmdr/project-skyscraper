@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T11:24:37.795285+00:00",
+  "updated": "2026-06-08T12:27:33.275493+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -929,6 +929,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
+      "source": "sitemap",
       "target": "/report-lon-reality-glitch"
     },
     {
@@ -1688,6 +1692,22 @@
       "target": "/"
     },
     {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/tag/stable"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/2022/04/24/event-24042022"
+    },
+    {
       "source": "/report-lon-reality-glitch",
       "target": "/"
     },
@@ -2102,22 +2122,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/2022/04/24/event-24042022"
     },
     {
       "source": "/project-skyscraper",
