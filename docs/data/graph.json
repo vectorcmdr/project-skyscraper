@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T17:03:24.936307+00:00",
+  "updated": "2026-06-09T17:09:41.187382+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -160,6 +160,70 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "author": "System",
       "date": "2016-10-30T05:54:00"
+    },
+    {
+      "id": "/2016/10/02/event-02102016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/10/02/event-02102016/",
+      "author": "System",
+      "date": "2016-10-01T23:00:00"
+    },
+    {
+      "id": "/2016/10/23/event-23102016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/10/23/event-23102016/",
+      "author": "System",
+      "date": "2016-10-22T23:00:00"
+    },
+    {
+      "id": "/2016/11/10/event-10112016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/11/10/event-10112016/",
+      "author": "System",
+      "date": "2016-11-10T00:00:00"
+    },
+    {
+      "id": "/2016/11/17/event-17112016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/11/17/event-17112016/",
+      "author": "System",
+      "date": "2016-11-17T00:00:00"
+    },
+    {
+      "id": "/2016/11/24/event-24112016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/11/24/event-24112016/",
+      "author": "System",
+      "date": "2016-11-24T00:00:00"
+    },
+    {
+      "id": "/2016/12/11/event-11122016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/12/11/event-11122016/",
+      "author": "System",
+      "date": "2016-12-11T00:00:00"
+    },
+    {
+      "id": "/2016/12/14/event-14122016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+      "author": "System",
+      "date": "2016-12-14T00:00:00"
+    },
+    {
+      "id": "/2016/12/26/event-26122016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/12/26/event-26122016/",
+      "author": "System",
+      "date": "2016-12-26T00:00:00"
     },
     {
       "id": "/2017/06/01/event-01062017",
@@ -752,6 +816,14 @@
       "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/ybm_request_2416/",
       "author": "The Architect",
       "date": "2026-06-04T17:16:56"
+    },
+    {
+      "id": "/2016/09/26/event-26092016",
+      "type": "external",
+      "label": "Event 26092016",
+      "url": "https://project-skyscraper.com/2016/09/26/event-26092016/",
+      "author": "",
+      "date": ""
     },
     {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
@@ -2224,6 +2296,102 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/10/02/event-02102016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/10/02/event-02102016",
+      "target": "/2016/09/26/event-26092016"
+    },
+    {
+      "source": "/2016/10/02/event-02102016",
+      "target": "/2016/10/23/event-23102016"
+    },
+    {
+      "source": "/2016/10/23/event-23102016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/10/23/event-23102016",
+      "target": "/2016/10/02/event-02102016"
+    },
+    {
+      "source": "/2016/10/23/event-23102016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/11/10/event-10112016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/11/10/event-10112016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/11/10/event-10112016",
+      "target": "/2016/11/17/event-17112016"
+    },
+    {
+      "source": "/2016/11/17/event-17112016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/11/17/event-17112016",
+      "target": "/2016/11/10/event-10112016"
+    },
+    {
+      "source": "/2016/11/17/event-17112016",
+      "target": "/2016/11/24/event-24112016"
+    },
+    {
+      "source": "/2016/11/24/event-24112016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/11/24/event-24112016",
+      "target": "/2016/11/17/event-17112016"
+    },
+    {
+      "source": "/2016/11/24/event-24112016",
+      "target": "/2016/12/11/event-11122016"
+    },
+    {
+      "source": "/2016/12/11/event-11122016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/12/11/event-11122016",
+      "target": "/2016/11/24/event-24112016"
+    },
+    {
+      "source": "/2016/12/11/event-11122016",
+      "target": "/2016/12/14/event-14122016"
+    },
+    {
+      "source": "/2016/12/14/event-14122016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/12/14/event-14122016",
+      "target": "/2016/12/11/event-11122016"
+    },
+    {
+      "source": "/2016/12/14/event-14122016",
+      "target": "/2016/12/26/event-26122016"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
+      "target": "/2016/12/14/event-14122016"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
+      "target": "/2017/05/28/waking-titan"
+    },
+    {
       "source": "/2026/06/09/diagnostic-180000",
       "target": "/"
     },
@@ -2641,6 +2809,70 @@
     },
     {
       "source": "/2021/02/25/event-25022021",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/10/02/event-02102016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/10/02/event-02102016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/10/23/event-23102016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/10/23/event-23102016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/11/10/event-10112016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/11/10/event-10112016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/11/17/event-17112016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/11/17/event-17112016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/11/24/event-24112016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/11/24/event-24112016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/12/11/event-11122016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/12/11/event-11122016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/12/14/event-14122016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/12/14/event-14122016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
       "target": "/category/non-classe"
     },
     {
