@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:11:07.824290+00:00",
+  "updated": "2026-06-09T16:27:14.308913+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -594,11 +594,19 @@
       "date": "2026-06-09T12:37:00"
     },
     {
+      "id": "/2017/05/28/waking-titan",
+      "type": "post",
+      "label": "WAKING TITAN",
+      "url": "https://project-skyscraper.com/2017/05/28/waking-titan/",
+      "author": "System",
+      "date": "2017-05-28T16:00:00"
+    },
+    {
       "id": "/1958/04/17/event-17041958",
       "type": "post",
       "label": "World Fair",
       "url": "https://project-skyscraper.com/1958/04/17/event-17041958/",
-      "author": "The Architect",
+      "author": "System",
       "date": "1958-04-17T14:27:00"
     },
     {
@@ -2224,6 +2232,22 @@
       "target": "/1970/01/01/origin"
     },
     {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/2017/06/01/event-01062017"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -2777,10 +2801,18 @@
     },
     {
       "source": "/1958/04/17/event-17041958",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/1958/04/17/event-17041958",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
       "target": "/category/non-classe"
     }
   ]
