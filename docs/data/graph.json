@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T22:26:59.001059+00:00",
+  "updated": "2026-06-09T00:34:57.391346+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1100,6 +1100,18 @@
       "target": "/only-dust-remain"
     },
     {
+      "source": "sitemap",
+      "target": "/8740677a9483"
+    },
+    {
+      "source": "sitemap",
+      "target": "/53a05806675f"
+    },
+    {
+      "source": "sitemap",
+      "target": "/b1c9e4f072a5"
+    },
+    {
       "source": "/",
       "target": "/2026/06/06/structural-analysis-214218"
     },
@@ -2125,6 +2137,18 @@
     },
     {
       "source": "/only-dust-remain",
+      "target": "/"
+    },
+    {
+      "source": "/8740677a9483",
+      "target": "/"
+    },
+    {
+      "source": "/53a05806675f",
+      "target": "/"
+    },
+    {
+      "source": "/b1c9e4f072a5",
       "target": "/"
     },
     {
