@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:37:44.031532+00:00",
+  "updated": "2026-06-09T17:03:24.936307+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -224,6 +224,14 @@
       "url": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
       "author": "The Architect",
       "date": "2026-05-31T23:50:00"
+    },
+    {
+      "id": "/2026/06/09/diagnostic-180000",
+      "type": "post",
+      "label": "DIAGNOSTIC",
+      "url": "https://project-skyscraper.com/2026/06/09/diagnostic-180000/",
+      "author": "System",
+      "date": "2026-06-09T17:00:00"
     },
     {
       "id": "/1970/01/01/origin",
@@ -2216,6 +2224,14 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2026/06/09/diagnostic-180000",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
+      "target": "/2026/06/09/structural-analysis-133722"
+    },
+    {
       "source": "/2026/06/09/structural-analysis-133722",
       "target": "/"
     },
@@ -2649,6 +2665,14 @@
     },
     {
       "source": "/2026/06/06/structural-analysis-214218",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
       "target": "/category/non-classe"
     },
     {
