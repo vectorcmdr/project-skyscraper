@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-06-09 17:03:23 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 1238,
+            "title": "DIAGNOSTIC",
+            "modified": "2026-06-09T18:00:25",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2026/06/09/diagnostic-180000/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2026-06-09T17:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/posts"
+      },
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/search",
+        "count": 1,
+        "items": [
+          {
+            "id": 1238,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/search"
+      }
+    ]
+  }
+}

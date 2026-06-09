@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-06-09 16:37:41 UTC",
+  "category": "changes",
+  "data": {
+    "count": 6,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/03/24/sleep-mode-46105/",
+        "old_hash": "3180bfaa88c7d1956c6589397a0015a8",
+        "new_hash": "18598d2609e456905eab1f8e2a881e43",
+        "detail": "Content changed: https://project-skyscraper.com/2026/03/24/sleep-mode-46105/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/03/24/sleep-mode-46105/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/24/sleep-mode-46105/\" /><input type=\"hidden\" name=\"post_id\" value=\"128\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2d615a2340\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/24/sleep-mode-46105/\" /><input type=\"hidden\" name=\"post_id\" value=\"128\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/1970/01/01/origin/",
+        "old_hash": "89f60b6d59c441ef364688352fec92f9",
+        "new_hash": "784b902b851ecf8a6c924feb15417b3d",
+        "detail": "Content changed: https://project-skyscraper.com/1970/01/01/origin/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/1970/01/01/origin/",
+            "diff": "@@ -370,7 +370,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/1970/01/01/origin/\" /><input type=\"hidden\" name=\"post_id\" value=\"117\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2d615a2340\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/1970/01/01/origin/\" /><input type=\"hidden\" name=\"post_id\" value=\"117\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -493,3 +493,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/03/27/sleep-mode-46108/",
+        "old_hash": "536b38a43fd7a0258eb934c3fa54df18",
+        "new_hash": "cb864798890289748714771c71642608",
+        "detail": "Content changed: https://project-skyscraper.com/2026/03/27/sleep-mode-46108/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/03/27/sleep-mode-46108/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/27/sleep-mode-46108/\" /><input type=\"hidden\" name=\"post_id\" value=\"132\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2d615a2340\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/27/sleep-mode-46108/\" /><input type=\"hidden\" name=\"post_id\" value=\"132\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
+        "old_hash": "44c55495253355c175bdd3e7475388ab",
+        "new_hash": "2c6465643a93240af37ca504e2a56683",
+        "detail": "Content changed: https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/29/sleep-mode-46110/\" /><input type=\"hidden\" name=\"post_id\" value=\"134\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2d615a2340\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/03/29/sleep-mode-46110/\" /><input type=\"hidden\" name=\"post_id\" value=\"134\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/",
+        "old_hash": "65f20a22c24a89a20470aec5f235381c",
+        "new_hash": "9d7aa76ae98dc8718f7b6e0f1ca53338",
+        "detail": "Content changed: https://project-skyscraper.com/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/",
+            "diff": "@@ -307,6 +307,8 @@\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2017/07/08/2017_dataset/\"><time datetime=\"2017-07-08T14:35:00+01:00\">Jul.8, 2017</time></a></div>\n\n </li><li class=\"wp-block-post post-320 post type-post status-publish format-standard hentry category-non-classe tag-stable\">\n\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2017/06/01/event-01062017/\"><time datetime=\"2017-06-01T13:16:00+01:00\">Jun.1, 2017</time></a></div>\n\n+</li><li class=\"wp-block-post post-3003 post type-post status-publish format-standard hentry category-non-classe\">\n\n+<div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2017/05/28/waking-titan/\"><time datetime=\"2017-05-28T17:00:00+01:00\">May.28, 2017</time></a></div>\n\n </li><li class=\"wp-block-post post-2829 post type-post status-publish format-standard hentry category-non-classe tag-stable\">\n\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\"><time datetime=\"2016-10-30T05:54:00+00:00\">Oct.30, 2016</time></a></div>\n\n </li><li class=\"wp-block-post post-1674 post type-post status-publish format-standard has-post-thumbnail hentry category-non-classe tag-stable\">\n\n@@ -319,6 +321,8 @@\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/1980/03/03/hoe/\"><time datetime=\"1980-03-03T13:00:00+00:00\">Mar.3, 1980</time></a></div>\n\n </li><li class=\"wp-block-post post-117 post type-post status-publish format-standard has-post-thumbnail hentry category-non-classe\">\n\n <div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/1970/01/01/origin/\"><time datetime=\"1970-01-01T00:00:00+01:00\">Jan.1, 1970</time></a></div>\n\n+</li><li class=\"wp-block-post post-2989 post type-post status-publish format-standard hentry category-non-classe\">\n\n+<div style=\"margin-right:var(--wp--preset--spacing--40)\" class=\"wp-block-post-date\"><a href=\"https://project-skyscraper.com/1958/04/17/event-17041958/\"><time datetime=\"1958-04-17T14:27:00+00:00\">Apr.17, 1958</time></a></div>\n\n </li></ul>\n\n \n\n \n"
+          }
+        ]
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
+        "old_hash": "81904b811d101ec196d89e75133ce750",
+        "new_hash": "c4e5c4cc1c30d15a0e11bcc953307dc3",
+        "detail": "Content changed: https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
+            "diff": "@@ -364,7 +364,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/01/sleep-mode-4613/\" /><input type=\"hidden\" name=\"post_id\" value=\"136\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2d615a2340\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/01/sleep-mode-4613/\" /><input type=\"hidden\" name=\"post_id\" value=\"136\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -487,3 +487,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

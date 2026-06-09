@@ -1,0 +1,281 @@
+{
+  "timestamp": "2026-06-09 17:09:37 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 8,
+        "items": [
+          {
+            "id": 1019,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:07:22",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/10/02/event-02102016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-10-01T23:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1061,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:07:04",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/10/23/event-23102016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-10-22T23:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1097,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:06:44",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/11/10/event-10112016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-11-10T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1111,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:06:32",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/11/17/event-17112016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-11-17T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1125,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:06:17",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/11/24/event-24112016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-11-24T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1159,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:05:58",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/12/11/event-11122016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-12-11T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1165,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:05:40",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-12-14T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          },
+          {
+            "id": 1189,
+            "title": "2016_dataset",
+            "modified": "2026-06-09T18:05:13",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/12/26/event-26122016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-12-26T00:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          }
+        ],
+        "detail": "8 new item(s) in /wp-json/wp/v2/posts"
+      },
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/search",
+        "count": 8,
+        "items": [
+          {
+            "id": 1019,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1061,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1097,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1111,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1125,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1159,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1165,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          },
+          {
+            "id": 1189,
+            "title": "",
+            "modified": "",
+            "type": "post",
+            "status": "",
+            "link": "",
+            "author": 0,
+            "name": "",
+            "date_gmt": "",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          }
+        ],
+        "detail": "8 new item(s) in /wp-json/wp/v2/search"
+      }
+    ]
+  }
+}

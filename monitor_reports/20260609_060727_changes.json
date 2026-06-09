@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-06-09 06:07:27 UTC",
+  "category": "changes",
+  "data": {
+    "count": 3,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2002/05/12/code/",
+        "old_hash": "633795e25fcc867c691cf37c811faab5",
+        "new_hash": "f6e8b14b4a91be3d87c00ffa6c7829bb",
+        "detail": "Content changed: https://project-skyscraper.com/2002/05/12/code/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2002/05/12/code/",
+            "diff": "@@ -395,7 +395,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"efe3107727\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2002/05/12/code/\" /><input type=\"hidden\" name=\"post_id\" value=\"1837\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2002/05/12/code/\" /><input type=\"hidden\" name=\"post_id\" value=\"1837\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n\n@@ -716,4 +716,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "old_hash": "1d2fd0c1d26103d67f344d56af6c972b",
+        "new_hash": "3fad4f4b3f63239ebe8ce6e8cc616ce2",
+        "detail": "Content changed: https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+            "diff": "@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"efe3107727\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2018/07/24/2018_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2155\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2018/07/24/2018_dataset/\" /><input type=\"hidden\" name=\"post_id\" value=\"2155\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "old_hash": "f1b97903e5616d53c1f8ca1a8faf3789",
+        "new_hash": "76336539ce641df99edbd0b364ff6556",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+            "diff": "@@ -369,7 +369,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"efe3107727\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/21/event-21072017/\" /><input type=\"hidden\" name=\"post_id\" value=\"2420\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"206d15d9ad\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2017/07/21/event-21072017/\" /><input type=\"hidden\" name=\"post_id\" value=\"2420\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n"
+          }
+        ],
+        "author": 279180096
+      }
+    ]
+  }
+}
