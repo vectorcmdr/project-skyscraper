@@ -79,6 +79,13 @@ body.landing {
   transition: all .2s;
 }
 .btn2:hover { background: #444; color: #0a0a0a; box-shadow: 0 0 20px rgba(221,0,0,.4); }
+.btn3 {
+  display: inline-block; padding: .75rem 2rem;
+  border: 1px solid #3388ee; color: #3388ee; text-decoration: none;
+  letter-spacing: .2em; font-size: .85rem;
+  transition: all .2s;
+}
+.btn3:hover { background: #3388ee; color: #0a0a0a; box-shadow: 0 0 20px rgba(51,136,238,.4); }
 
 /* -- TOPBAR -- */
 .topbar {
