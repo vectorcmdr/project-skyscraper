@@ -1,6 +1,15 @@
 {
   "pages": [
     {
+      "path": "/inbox/",
+      "title": "Inbox",
+      "type": "page",
+      "modified": "2026-06-09T19:17:46",
+      "date_gmt": "2026-05-28T17:00:20",
+      "author": "System",
+      "author_name": ""
+    },
+    {
       "path": "/b1c9e4f072a5/",
       "title": "B1C9E4F072A5",
       "type": "attachment",
@@ -700,15 +709,6 @@
       "author_name": ""
     },
     {
-      "path": "/inbox/",
-      "title": "Inbox",
-      "type": "page",
-      "modified": "2026-06-08T21:27:34.337884+00:00",
-      "date_gmt": "2026-05-28T17:00:20",
-      "author": "System",
-      "author_name": ""
-    },
-    {
       "path": "/sec-log-211927-full/",
       "title": "Security Log",
       "type": "page",
@@ -1253,5 +1253,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-09T18:17:32.893029+00:00"
+  "updated": "2026-06-09T18:21:50.255406+00:00"
 }
