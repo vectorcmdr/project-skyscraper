@@ -152,10 +152,12 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         urls = c.get("urls", [])
         title = urls[0] if urls else f"{c.get('count', 0)} URL(s) added"
         link = urls[0] if urls else ""
+        diff = "\n".join(f"+ {u}" for u in urls[:20])
     elif t == "sitemap_removed":
         urls = c.get("urls", [])
         title = urls[0] if urls else f"{c.get('count', 0)} URL(s) removed"
         link = urls[0] if urls else ""
+        diff = "\n".join(f"- {u}" for u in urls[:20])
     elif t == "api_items_added":
         items = c.get("items", [])
         title = items[0].get("title", "") if items else c.get("detail", "")
@@ -212,6 +214,8 @@ def _change_to_feed_entry(c: dict) -> dict | None:
 
 def _extract_minimal_diff(diffs: list) -> str:
     import re
+    from monitor.noise_filter import is_noise_diff_line
+
     lines_out = []
     for d in diffs:
         text_diff = d.get("text_diff")
@@ -227,6 +231,8 @@ def _extract_minimal_diff(diffs: list) -> str:
         for line in d["diff"].split("\n"):
             line = line.rstrip("\r")
             if not line or line[0] == "@":
+                continue
+            if is_noise_diff_line(line):
                 continue
             prefix = line[0]
             rest = line[1:].strip()

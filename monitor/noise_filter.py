@@ -37,6 +37,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'"display_comments"\s*:\s*"[^"]*"'), '"display_comments":""'),
     (re.compile(r'"single_image_gallery"\s*:\s*"[^"]*"'), '"single_image_gallery":""'),
     (re.compile(r'"jetpack_subscriptions_widget"[^}]*\}'), ''),
+    (re.compile(r'img#wpstats\{display:none\}'), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -56,16 +57,24 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ +-]\s*"display_exif"\s*:.*$'),
     re.compile(r'^[ +-]\s*"display_comments"\s*:.*$'),
     re.compile(r'^[ +-]\s*"single_image_gallery"\s*:.*$'),
+    re.compile(r'^[ +-]\s*_stq\s*='),
     re.compile(r'^[ +-]\s*_stq\.'),
     re.compile(r'^[ +-]\s*\(new Image\(\)\)\.src ='),
     re.compile(r'^[ +-]\s*"j"\s*:\s*"\d+:\d+'),
-    re.compile(r'^[ +-]\s*{"hp":'),
+    re.compile(r'^[ +-]\s*"hp":'),
     re.compile(r'^[ +-]\s*"ac":'),
     re.compile(r'^[ +-]\s*"amp":'),
     re.compile(r'^[ +-]\s*/?\*?# sourceURL=.+$'),
     re.compile(r'^[ +-]\s*\.wp-block-\w+'),
     re.compile(r'^[ +-]\s*:where\(\.wp-block-'),
-    re.compile(r'^[ +-]\s*};\s*$'),
+    re.compile(r'^[ +-]\s*}[\]\)]*;\s*$'),
+    re.compile(r'^[ +-]\s*var Jetpack_Block_Assets_Base_Url'),
+    re.compile(r'^[ +-]\s*\{?"baseUrl":'),
+    re.compile(r'^[ +-]\s*"concatemoji":'),
+    re.compile(r'^\.\.\.\s*\(truncated\)$'),
+    re.compile(r'^[ +-]\s*img#wpstats'),
+    re.compile(r'^[ .]+\.\.\s*\(\d+ more lines?\)$'),
+    re.compile(r'^[ .]+\.\.\s*\(truncated\)$'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({

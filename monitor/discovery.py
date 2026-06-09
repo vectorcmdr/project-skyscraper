@@ -122,6 +122,11 @@ def get_postpass_cookie(password: str, redirect_url: str) -> str:
 def fetch_protected_page(url: str, password: str, subdir: str = "") -> bool:
     cookie = get_postpass_cookie(password, url)
     if not cookie:
+        log(f"  Retrying postpass for {url}", "FETCH")
+        import time
+        time.sleep(2)
+        cookie = get_postpass_cookie(password, url)
+    if not cookie:
         log(f"  Could not get postpass cookie for {url}", "ERROR")
         return False
     return fetch_and_save(url, subdir=subdir, cookie=cookie)

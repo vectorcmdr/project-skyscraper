@@ -132,10 +132,11 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
         if quiet:
             log(f"=== Initial sync: {len(all_changes)} change(s) -- mirroring quietly ===", "FETCH")
             _apply_changes(all_changes)
-            # Always notify new/removed items even during warmup
-            always_notify = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed")]
-            if always_notify:
-                notify_changes(always_notify, state)
+            # Always process new/removed items even during warmup
+            always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added")]
+            if always_capture:
+                notify_changes(always_capture, state)
+                generate_site_data(state, always_capture)
         else:
             log(f"=== Processing {len(all_changes)} change(s) ===", "FETCH")
             _apply_changes(all_changes)
