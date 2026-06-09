@@ -1,6 +1,76 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.803298+00:00",
+      "title": "diagnostic-op-morse",
+      "link": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.803063+00:00",
+      "title": "structural-analysis-214218",
+      "link": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.802706+00:00",
+      "title": "event-25022021",
+      "link": "https://project-skyscraper.com/2021/02/25/event-25022021/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2021/02/25/event-25022021/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.802459+00:00",
+      "title": "structural-analysis-204649",
+      "link": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.802049+00:00",
+      "title": "hoe",
+      "link": "https://project-skyscraper.com/1980/03/03/hoe/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/1980/03/03/hoe/",
+      "author": "System"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.801316+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "  const cx = width / 2;\n  const cy = height / 2;\n  const angle = Math.random() * Math.PI * 2;\n- const distance = 140 + Math.random() * 5.8;\n+ const distance = 120 + Math.random() * 2;\n  this.baseX = cx + Math.cos(angle) * distance;\n  this.baseY = cy + Math.sin(angle) * distance;\n  this.x = this.baseX;\n  this.y = this.baseY;\n  this.size = Math.random() * 1.6 + 1.6;\n- this.angle = Math.random(58) * Math.PI * 2;\n- this.orbitSpeed = 0.058 + Math.random() * 0.058;\n+ this.angle = Math.random() * Math.PI * 2;\n+ this.orbitSpeed = 0.365 + Math.random() * 0.365;\n  }\n  update() {\n  this.angle += this.orbitSpeed;\n  let tx = this.baseX + Math.cos(this.angle) * 20;\n- let ty = this.baseY + Math.sin(this.angle) * 0.58;\n+ let ty = this.baseY + Math.sin(this.angle) * 3.65;\n  if (mouse.active) {\n  const dx = mouse.x - this.x;",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-09T17:38:25.800680+00:00",
+      "title": "event-01062017",
+      "link": "https://project-skyscraper.com/2017/06/01/event-01062017/",
+      "endpoint": "",
+      "diff": "- Previous\n+ Previous\n  Next\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 1/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 36/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2017/06/01/event-01062017/",
+      "author": "System"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-09T17:19:42.359616+00:00",
       "title": "2016_dataset",
@@ -1429,7 +1499,327 @@
       "diff": "",
       "detail": "About",
       "author": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-12-26T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/26/event-26122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-12-14T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-12-11T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/11/event-11122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-11-24T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/24/event-24112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-11-17T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/17/event-17112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-11-10T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/10/event-10112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-10-22T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/10/23/event-23102016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-09-18T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/19/event-19092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-09-07T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/08/event-08092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-08-27T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/28/event-28082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-08-19T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/20/event-20082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-08-03T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/04/event-04082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-07-31T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/01/event-01082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-07-10T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/07/11/event-11072016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-07-01T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/07/02/event-02072016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-06-22T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/23/event-23062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-06-05T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/06/event-06062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-05-31T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/01/event-01062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-05-22T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/23/event-23052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-05-11T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/12/event-12052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-05-08T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/09/event-09052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-04-30T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/01/event-01052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-03-31T23:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/04/01/event-01042016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-03-25T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/03/25/event-25032016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-03-19T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/03/19/event-19032016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-03-12T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/03/12/event-12032016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-03-05T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/03/05/event-05032016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-02-22T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/02/22/event-22022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-02-14T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/02/14/event-14022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-02-03T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/02/03/event-03022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-01-26T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/26/event-26012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2016-01-13T00:00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/13/event-13012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System"
     }
   ],
-  "updated": "2026-06-09T17:19:42.360524+00:00"
+  "updated": "2026-06-09T17:38:25.804330+00:00"
 }
