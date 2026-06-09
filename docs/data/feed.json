@@ -1,6 +1,16 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-06-09T16:03:06.889057+00:00",
+      "title": "World Fair",
+      "link": "https://project-skyscraper.com/1958/04/17/event-17041958/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "The Architect"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-06-09T15:57:06.230668+00:00",
       "title": "STRUCTURAL ANALYSIS",
@@ -1301,5 +1311,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-06-09T15:57:06.231894+00:00"
+  "updated": "2026-06-09T16:03:06.890197+00:00"
 }
