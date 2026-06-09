@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T04:10:03.152129+00:00",
+  "updated": "2026-06-09T04:14:56.633295+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -720,22 +720,6 @@
       "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/ybm_request_2416/",
       "author": "The Architect",
       "date": "2026-06-04T17:16:56"
-    },
-    {
-      "id": "/request-memory-timestamp-094317/context.image.src",
-      "type": "external",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/request-memory-timestamp-094317/context.submission.url",
-      "type": "external",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
-      "author": "",
-      "date": ""
     },
     {
       "id": "https://forums.atlas-65.com/u/akodokusamoto/summary",
@@ -2110,14 +2094,6 @@
     {
       "source": "/request-memory-timestamp-094317",
       "target": "/"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.submission.url"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.image.src"
     },
     {
       "source": "/sec-log-080413-full",
