@@ -1,0 +1,134 @@
+{
+  "timestamp": "2026-06-08 19:26:58 UTC",
+  "category": "changes",
+  "data": {
+    "count": 9,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "old_hash": "360bf122d389c8be63ff21ce53cd419b",
+        "new_hash": "0c5dc5279e18f68efa74adce696ac738",
+        "detail": "Content changed: https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
+            "diff": "@@ -396,7 +396,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"1:15.9-beta\"\n\n+    \"j\": \"0:0.0-a.0\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"1852\"]);\n\n@@ -404,7 +404,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n\n@@ -499,3 +499,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2002/05/12/code/",
+        "old_hash": "66145a6888963fef9066b9af96e11fa3",
+        "new_hash": "c7d45c3532964586b1801a9f3b4ce8f8",
+        "detail": "Content changed: https://project-skyscraper.com/2002/05/12/code/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2002/05/12/code/",
+            "diff": "@@ -625,7 +625,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"1837\"]);\n\n@@ -633,7 +633,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n\n@@ -728,4 +728,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "old_hash": "cfb9458385d97f05db83b46ae280f672",
+        "new_hash": "159d22bb994b7c79d54116f43a697dc5",
+        "detail": "Content changed: https://project-skyscraper.com/2018/07/24/2018_dataset/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
+            "diff": "@@ -609,7 +609,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2155\"]);\n\n@@ -617,7 +617,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "old_hash": "805e740e2dd0cab243775fd86b512b7c",
+        "new_hash": "ee2daabb6cf9932c45014c5dd561e441",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/21/event-21072017/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+            "diff": "@@ -401,7 +401,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2420\"]);\n\n@@ -409,7 +409,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/",
+        "old_hash": "670a5130617f7f1293769f8e676a16da",
+        "new_hash": "46093aad34074cdae0c2164199e00b83",
+        "detail": "Content changed: https://project-skyscraper.com/2017/07/08/2017_dataset/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/",
+            "diff": "@@ -609,7 +609,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2655\"]);\n\n@@ -617,7 +617,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "old_hash": "14ff502926c6d360a7965a497e932dca",
+        "new_hash": "0d7cf212fd3062d8a8ee4a16b70ce582",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+            "diff": "@@ -609,7 +609,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2829\"]);\n\n@@ -617,7 +617,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n\n@@ -712,3 +712,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+        "old_hash": "f9ce047d93b8b595bbd3e3996fac4e9b",
+        "new_hash": "f8396115c59da0ffe4a5493224fbf86f",
+        "detail": "Content changed: https://project-skyscraper.com/2022/04/24/event-24042022/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2022/04/24/event-24042022/",
+            "diff": "@@ -401,7 +401,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2850\"]);\n\n@@ -409,7 +409,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n\n@@ -504,4 +504,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/1980/03/10/insert-coin/",
+        "old_hash": "085d31827ec21574d0c9ca6531348cb2",
+        "new_hash": "0dad5c11ad9fd851ff059f904edbb789",
+        "detail": "Content changed: https://project-skyscraper.com/1980/03/10/insert-coin/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/1980/03/10/insert-coin/",
+            "diff": "@@ -613,7 +613,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"2883\"]);\n\n@@ -621,7 +621,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n {\"baseUrl\":\"https://s.w.org/images/core/emoji/17.0.2/72x72/\",\"ext\":\".png\",\"svgUrl\":\"https://s.w.org/images/core/emoji/17.0.2/svg/\",\"svgExt\":\".svg\",\"source\":{\"concatemoji\":\"https://project-skyscraper.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0\"}}\n\n </script>\n\n@@ -716,3 +716,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/",
+        "old_hash": "f814f32c7e5ae10d442f1c2e8e53d8ae",
+        "new_hash": "f765489b4a4dc819e9ffd2326230130c",
+        "detail": "Content changed: https://project-skyscraper.com/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/",
+            "diff": "@@ -569,7 +569,7 @@\n };\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/build/carousel/jetpack-carousel.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"tiled-gallery-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/build/tiled-gallery/tiled-gallery/tiled-gallery.min.js?ver=15.9-a.7\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"tiled-gallery-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/build/tiled-gallery/tiled-gallery/tiled-gallery.min.js?ver=15.9-beta\"></script>\n\n <script id=\"wp-statistics-tracker-js-extra\">//# sourceURL=wp-statistics-tracker-js-extra</script>\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];\n\n@@ -583,7 +583,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"0\"]);\n"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-08 22:26:55 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-080413-full/",
+        "old_hash": "89bd5fc1ceeb6f2dd227ddd1e75f94e3",
+        "new_hash": "cf3d417cce14d4d05849bec1ed5291aa",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-080413-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-080413-full/",
+            "diff": "@@ -322,7 +322,7 @@\n     \"hp\": \"atomic\",\n\n     \"ac\": \"2\",\n\n     \"amp\": \"0\",\n\n-    \"j\": \"0:0.0-a.0\"\n\n+    \"j\": \"1:15.9-beta\"\n\n }]);\n\n _stq.push([\"clickTrackerInit\", \"254386991\", \"252\"]);\n\n@@ -421,4 +421,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

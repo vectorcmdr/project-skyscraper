@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-06-08 21:03:46 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/media",
+        "count": 1,
+        "items": [
+          {
+            "id": 2949,
+            "title": "B1C9E4F072A5",
+            "modified": "2026-06-08T21:56:41",
+            "type": "attachment",
+            "status": "inherit",
+            "link": "https://project-skyscraper.com/b1c9e4f072a5/",
+            "author": 279180095,
+            "name": "",
+            "date_gmt": "2026-06-08T20:56:41",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/media"
+      }
+    ]
+  }
+}
