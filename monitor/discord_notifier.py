@@ -189,6 +189,7 @@ def _resolve_author(user_map: dict, author_id) -> str:
 def _get_diff_preview(change: dict, item: dict = None) -> str:
     import html as html_mod
     import re
+    from monitor.noise_filter import is_noise_diff_line
 
     diffs = change.get("diffs", [])
     if diffs:
@@ -207,6 +208,8 @@ def _get_diff_preview(change: dict, item: dict = None) -> str:
             for line in d["diff"].split("\n"):
                 line = line.rstrip("\r")
                 if not line or line[0] == "@":
+                    continue
+                if is_noise_diff_line(line):
                     continue
                 prefix = line[0]
                 rest = line[1:].strip()
