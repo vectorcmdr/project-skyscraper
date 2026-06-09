@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:31:12.623175+00:00",
+  "updated": "2026-06-09T16:37:44.031532+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1317,6 +1317,10 @@
     },
     {
       "source": "/",
+      "target": "/2017/05/28/waking-titan"
+    },
+    {
+      "source": "/",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
@@ -1340,6 +1344,10 @@
       "target": "/1970/01/01/origin"
     },
     {
+      "source": "/",
+      "target": "/1958/04/17/event-17041958"
+    },
+    {
       "source": "/about",
       "target": "/"
     },
@@ -1354,6 +1362,10 @@
     {
       "source": "/1970/01/01/origin",
       "target": "/"
+    },
+    {
+      "source": "/1970/01/01/origin",
+      "target": "/1958/04/17/event-17041958"
     },
     {
       "source": "/1970/01/01/origin",
