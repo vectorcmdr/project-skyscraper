@@ -35,24 +35,28 @@ def generate_site_data(state: dict, changes: list):
             manifest = {}
     manifest.setdefault("pages", [])
 
+    new_entries = []
     for c in changes:
         entry = _change_to_feed_entry(c)
         if entry:
             feed["entries"].append(entry)
             _update_manifest(manifest, c)
+            new_entries.append(entry)
 
     _sync_manifest_from_sitemap(manifest, state)
 
     feed["entries"] = feed["entries"][-500:]
 
     user_map = get_user_map(state)
-    for entry in feed["entries"]:
+    # Only resolve author names for newly-added entries; existing entries
+    # already have resolved string names and would be blanked by re-lookup
+    for entry in new_entries:
         aid = entry.get("author", 0)
-        if aid:
+        if isinstance(aid, int) and aid:
             entry["author"] = user_map.get(aid, "")
     for p in manifest["pages"]:
         aid = p.get("author", 0)
-        if aid:
+        if isinstance(aid, int) and aid:
             p["author"] = user_map.get(aid, "")
 
     feed["entries"].sort(key=lambda e: e.get("timestamp", ""), reverse=True)

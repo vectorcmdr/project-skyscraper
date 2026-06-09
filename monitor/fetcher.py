@@ -587,14 +587,15 @@ def _extract_html_resource_urls() -> set:
     if not html_dir.exists():
         return found
     patterns = [
-        re.compile(r'''(?:src|href|data-src|content)="([^"]+)"'''),
+        re.compile(r'''(?:src|href|data-src|content)=(["'])([^"']+?)\1'''),
         re.compile(r'''url\(['"]?([^'")\s]+)['"]?\)'''),
     ]
     for hf in sorted(html_dir.rglob("*.html")):
         text = hf.read_text(encoding="utf-8", errors="replace")
         for pat in patterns:
             for m in pat.finditer(text):
-                u = m.group(1)
+                u = m.lastindex > 1 and m.group(2) or m.group(1)
+                u = u.strip()
                 if u.startswith("//"):
                     u = "https:" + u
                 if u.startswith(("http://", "https://")) or u.startswith("/"):
