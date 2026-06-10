@@ -524,3 +524,52 @@ def _parse_url_date(link):
     if m:
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
     return ""
+
+
+def refresh_reports(state: dict):
+    """Regenerate all markdown reports from current state and mirror data.
+    Called by the daemon after each deep cycle."""
+    log("=== REFRESHING MARKDOWN REPORTS ===")
+
+    # Walk mirror for manifest stats
+    total_files = 0
+    total_size = 0
+    section_data = {}
+    for root, dirs, files in os.walk(str(MIRROR_DIR)):
+        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "state", "monitor_reports")]
+        for fn in files:
+            fp = os.path.join(root, fn)
+            rel = os.path.relpath(fp, str(MIRROR_DIR))
+            sz = os.path.getsize(fp)
+            total_files += 1
+            total_size += sz
+            section = rel.replace("\\", "/").split("/")[0]
+            section_data.setdefault(section, {"files": 0, "size": 0})
+            section_data[section]["files"] += 1
+            section_data[section]["size"] += sz
+
+    generate_manifest_report(section_data, total_files, total_size)
+    generate_id_series_report()
+
+    unpublished_posts = [
+        item for item in state.get("prober", {}).get("posts", {}).get("_unpublished", [])
+    ]
+    unpublished_pages = [
+        item for item in state.get("prober", {}).get("pages", {}).get("_unpublished", [])
+    ]
+    generate_unpublished_report(unpublished_posts, unpublished_pages)
+
+    # Regenerate CHANGELOG.md from existing diff files
+    meaningful = []
+    diff_dir = DIFF_DIR
+    if diff_dir.is_dir():
+        for df in sorted(diff_dir.iterdir()):
+            if df.suffix == ".diff":
+                content = df.read_text(encoding="utf-8", errors="replace")
+                rel_path = df.name.replace(".diff", "")
+                if content.strip():
+                    meaningful.append(("", df, content, rel_path))
+    if meaningful:
+        write_changelog(meaningful)
+
+    log("Markdown reports refreshed", "FILE")
