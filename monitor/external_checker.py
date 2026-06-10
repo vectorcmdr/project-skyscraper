@@ -137,10 +137,22 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_
             "site": hostname,
             "site_label": site_label,
             "url": robots_url,
-            "diff": f"robots.txt hash: {old_hash[:16]} -> {new_hash[:16]}",
+            "diff": _diff_text(
+                site_state.get("robots_txt", {}).get("content", ""),
+                content, "robots.txt"
+            ),
             "detail": f"robots.txt changed for {hostname}",
         })
         log(f"  robots.txt changed for {hostname}", "CHECK")
+    elif old_hash is None:
+        changes.append({
+            "type": "external_robots_txt_changed",
+            "site": hostname,
+            "site_label": site_label,
+            "url": robots_url,
+            "diff": f"+ {content[:2000]}",
+            "detail": f"Initial robots.txt capture for {hostname}",
+        })
 
     site_state.setdefault("robots_txt", {})
     site_state["robots_txt"]["hash"] = new_hash
@@ -148,6 +160,18 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_
     site_state["robots_txt"]["last_checked"] = datetime.now(timezone.utc).isoformat()
 
     return changes
+
+
+def _diff_text(old_text: str, new_text: str, label: str = "") -> str:
+    import difflib
+    old_lines = old_text.splitlines(keepends=True)
+    new_lines = new_text.splitlines(keepends=True)
+    diff_iter = difflib.unified_diff(old_lines, new_lines, n=3, lineterm="")
+    lines = list(diff_iter)[2:]
+    result = "\n".join(lines)
+    if len(result) > 2000:
+        result = result[:1997] + "..."
+    return result
 
 
 def _check_wp_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
@@ -168,6 +192,13 @@ def _check_wp_site(site_url: str, hostname: str, site_state: dict, site_label: s
             changes.extend(c)
         except Exception as e:
             log(f"  WP collection check failed for {endpoint} on {hostname}: {e}", "ERROR")
+
+    # Probe for unpublished content
+    try:
+        c = _external_probe_unpublished(hostname, site_url, site_state, site_label)
+        changes.extend(c)
+    except Exception as e:
+        log(f"  External probe failed for {hostname}: {e}", "ERROR")
 
     return changes
 
@@ -252,6 +283,59 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     api_state["hash"] = new_hash
     api_state["items"] = [new_items_map[iid] for iid in sorted(new_items_map, key=int)]
     api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+
+    return changes
+
+
+def _external_probe_unpublished(hostname: str, site_url: str, site_state: dict, site_label: str = "") -> list:
+    from monitor.config import PROBE_RANGE, PROBE_CHUNK_SIZE
+    from monitor.http_client import head_url, jitter
+
+    changes = []
+    probe_state = site_state.setdefault("probe", {})
+
+    max_id = 0
+    for ep in ("/wp-json/wp/v2/posts", "/wp-json/wp/v2/pages"):
+        api_state = site_state.get("api", {}).get(ep, {})
+        for item in api_state.get("items", []):
+            iid = item.get("id", 0)
+            if iid and iid > max_id:
+                max_id = iid
+
+    if max_id == 0:
+        probe_state["position"] = probe_state.get("position", 3)
+        max_id = probe_state.get("max_seen", 20)
+
+    probe_pos = probe_state.get("position", max_id + 1)
+    probe_ceiling = max_id + PROBE_RANGE
+    if probe_pos > probe_ceiling:
+        probe_pos = max_id + 1
+    chunk_end = min(probe_pos + PROBE_CHUNK_SIZE - 1, probe_ceiling)
+
+    for pid in range(probe_pos, chunk_end + 1):
+        for ep_template in ["/wp-json/wp/v2/posts/{id}", "/wp-json/wp/v2/pages/{id}"]:
+            url = f"{site_url.rstrip('/')}{ep_template.replace('{id}', str(pid))}"
+            result = head_url(url)
+            if result.status in (401, 403):
+                ep_name = "posts" if "/posts/" in url else "pages"
+                changes.append({
+                    "type": "external_unpublished_detected",
+                    "site": hostname,
+                    "site_label": site_label,
+                    "id": pid,
+                    "status": result.status,
+                    "endpoint": ep_name,
+                    "detail": f"Unpublished {ep_name} #{pid} (HTTP {result.status}) on {hostname}",
+                })
+                log(f"  {hostname}: Unpublished {ep_name} #{pid} (HTTP {result.status})", "DEEP")
+            elif result.status == 200:
+                ep_name = "posts" if "/posts/" in url else "pages"
+                log(f"  {hostname}: Newly published {ep_name} #{pid}", "DEEP")
+        jitter(0.08, 0.1)
+
+    probe_state["position"] = chunk_end + 1
+    probe_state["last_probed"] = datetime.now(timezone.utc).isoformat()
+    log(f"  {hostname}: Probe checked IDs {probe_pos}-{chunk_end}", "DEEP")
 
     return changes
 

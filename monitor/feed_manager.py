@@ -241,6 +241,10 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         if not link:
             link = c.get("url", f"https://{site}")
         diff = c.get("diff", "")
+    elif t == "external_unpublished_detected":
+        title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
+        link = f"https://{c.get('site', '')}/"
+        diff = f"HTTP {c.get('status', '?')}"
     else:
         return None
 

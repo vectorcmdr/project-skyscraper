@@ -122,6 +122,7 @@ MEANINGFUL_CHANGE_TYPES = frozenset({
     "external_dns_changed",
     "external_robots_txt_changed",
     "external_unpublished_detected",
+    "external_unpublished_detected",
     "media_orphan_upload",
     "media_replaced",
     "media_thumbnail_changed",

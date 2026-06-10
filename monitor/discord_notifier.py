@@ -184,6 +184,7 @@ def notify_changes(changes: list, state: dict):
         "external_dns_changed": ("DNS Changes", 0x4488ff),
         "external_robots_txt_changed": ("robots.txt Changes", 0x88ccff),
         "external_content_changed": ("External Content Changes", 0x66aaff),
+        "external_unpublished_detected": ("Unpublished Content (External)", 0xaa44ff),
     }
     for type_key, (label, color) in ext_groups.items():
         if type_key in by_type:
