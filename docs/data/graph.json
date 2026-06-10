@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T09:22:07.143877+00:00",
+  "updated": "2026-06-10T09:24:07.843523+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1016,6 +1016,14 @@
       "url": "https://project-skyscraper.com/2022/04/24/event-24042022/",
       "author": "The Architect",
       "date": "2022-04-24T18:00:00"
+    },
+    {
+      "id": "/2023/09/26/event-26092023",
+      "type": "post",
+      "label": "2023_dataset",
+      "url": "https://project-skyscraper.com/2023/09/26/event-26092023/",
+      "author": "The Architect",
+      "date": "2023-09-26T04:53:00"
     },
     {
       "id": "/2002/05/12/code",
@@ -4764,6 +4772,18 @@
       "target": "/2016/12/05/event-05122016"
     },
     {
+      "source": "/2023/09/26/event-26092023",
+      "target": "/"
+    },
+    {
+      "source": "/2023/09/26/event-26092023",
+      "target": "/2022/04/24/event-24042022"
+    },
+    {
+      "source": "/2023/09/26/event-26092023",
+      "target": "/2026/03/24/sleep-mode-46105"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -6137,6 +6157,14 @@
     },
     {
       "source": "/2017/05/28/waking-titan",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2023/09/26/event-26092023",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2023/09/26/event-26092023",
       "target": "/category/non-classe"
     },
     {
