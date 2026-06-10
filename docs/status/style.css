@@ -153,16 +153,11 @@ body.landing {
   gap: 1.5rem; padding: 1.5rem; max-width: 1600px; margin: 0 auto;
 }
 @media (max-width: 1200px) { .container { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+@media (max-width: 900px), (orientation: portrait) { .container { grid-template-columns: 1fr; } }
 
-/* Portrait: 2-col where feed+external share left column with tabs */
-@media (orientation: portrait) and (min-width: 900px) {
-  .container { grid-template-columns: 1fr 1fr; }
-}
-
-/* -- TABS (shown when sections share a column or screen is narrow) -- */
+/* -- TABS (narrow or portrait: single-pane tab view) -- */
 .tabs { display: none; }
-@media (max-width: 900px) {
+@media (max-width: 900px), (orientation: portrait) {
   .tabs { display: flex; border-bottom: 1px solid #222; margin-bottom: 1rem; }
   .tab {
     flex: 1; background: #0d0d0d; border: none; border-bottom: 2px solid transparent;
@@ -175,21 +170,6 @@ body.landing {
   .feed, .manifest, .external { display: none; }
   #feed.active, #manifest.active, #external.active { display: block; }
   .feed h2, .manifest h2, .external h2 { display: none; }
-}
-/* Portrait at wider widths: feed and external share left column via tabs */
-@media (orientation: portrait) and (min-width: 900px) {
-  .tabs { display: flex; border-bottom: 1px solid #222; margin-bottom: 1rem; }
-  .tab {
-    flex: 1; background: #0d0d0d; border: none; border-bottom: 2px solid transparent;
-    padding: .6rem 1rem; color: #666; font-family: inherit; font-size: .7rem;
-    letter-spacing: .2em; cursor: pointer; text-transform: uppercase;
-    transition: color .15s, border-color .15s;
-  }
-  .tab:hover { color: #aaa; }
-  .tab.active { color: #d00; border-bottom-color: #d00; }
-  .feed, .external { display: none; }
-  #feed.active, #external.active { display: block; }
-  .feed h2, .external h2 { display: none; }
 }
 
 /* -- SECTIONS -- */
