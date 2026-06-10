@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-10 01:47:36 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-080413-full/",
+        "old_hash": "f163ba6e785aee399fdc38c551155d79",
+        "new_hash": "65a9ba21786898aee9ac0e093f227290",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-080413-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-080413-full/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>Security Log &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -314,7 +313,7 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

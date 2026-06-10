@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-09 22:17:35 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2021/02/25/event-25022021/",
+        "old_hash": "1b83e05e711ebb89018573901ca69af1",
+        "new_hash": "372620b86c3dddc8a1ceddd7d210f7c5",
+        "detail": "Content changed: https://project-skyscraper.com/2021/02/25/event-25022021/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2021/02/25/event-25022021/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>2021_dataset &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -393,11 +392,11 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/_static/??-eJxtjUsOwjAMRC9EsIoEUReIswQ3Qk7zU8ZRr18v2MFuNE/z5uiOW9VYlXqeH6mgFLUH3qm0beYI4laKcRDmGzykq7TqjIbsLHzxH3pNuBy/fqugQQUqDApANHcC6bDXOGz1Ks/F+3VZb/7+OAEzyj1N'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n\n@@ -492,4 +491,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}
