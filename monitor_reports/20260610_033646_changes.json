@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-06-10 03:36:46 UTC",
+  "category": "changes",
+  "data": {
+    "count": 6,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+        "old_hash": "f1b79eb84e78c29e67f085393a3ec273",
+        "new_hash": "3228893ece3af0f6aaf933595eb1b8b0",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>STRUCTURAL ANALYSIS &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -392,11 +391,11 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/_static/??-eJxtjUsOwjAMRC9EsIoEUReIswQ3Qk7zU8ZRr18v2MFuNE/z5uiOW9VYlXqeH6mgFLUH3qm0beYI4laKcRDmGzykq7TqjIbsLHzxH3pNuBy/fqugQQUqDApANHcC6bDXOGz1Ks/F+3VZb/7+OAEzyj1N'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+        "old_hash": "98ef7971cb758f60244af2fc76c19451",
+        "new_hash": "8c2fd8230040e0c1db29f0b4d4924d99",
+        "detail": "Content changed: https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2026/06/01/diagnostic-op-morse/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>DIAGNOSTIC &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -400,11 +399,11 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/_static/??-eJxtjUsOwjAMRC9EsIoEUReIswQ3Qk7zU8ZRr18v2MFuNE/z5uiOW9VYlXqeH6mgFLUH3qm0beYI4laKcRDmGzykq7TqjIbsLHzxH3pNuBy/fqugQQUqDApANHcC6bDXOGz1Ks/F+3VZb/7+OAEzyj1N'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9-beta\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=15.9\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n\n@@ -499,4 +498,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-094127-full/",
+        "old_hash": "6c144a5a69ef1adb222287f91720b36a",
+        "new_hash": "bc9ff3290de1f36185505c8678e1c17a",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-094127-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-094127-full/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>Security Log &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -317,7 +316,7 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+        "old_hash": "0b2985025a5f578178c861ae915b801f",
+        "new_hash": "71cdb4ad865a1a546191ae495cf05aa2",
+        "detail": "Content changed: https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+            "diff": "@@ -169,24 +169,16 @@\n <link rel='shortlink' href='https://wp.me/PhdnFZ-ku' />\n\n \t<style></style>\n\n \t\t<!-- Analytics by WP Statistics - https://wp-statistics.com -->\n\n+<meta name=\"description\" content=\"Sky is not the limit\" />\n\n \n\n <!-- Jetpack Open Graph Tags -->\n\n <meta property=\"og:type\" content=\"article\" />\n\n <meta property=\"og:title\" content=\"Report: BRUSSELS\" />\n\n <meta property=\"og:url\" content=\"https://project-skyscraper.com/report-bru-ent-reunion-peak/\" />\n\n-<meta property=\"og:description\" content=\"Visit the post for more.\" />\n\n <meta property=\"article:published_time\" content=\"2026-06-06T20:42:00+00:00\" />\n\n <meta property=\"article:modified_time\" content=\"2026-06-06T20:36:12+00:00\" />\n\n <meta property=\"og:site_name\" content=\"project-skyscraper\" />\n\n-<meta property=\"og:image\" content=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=512%2C512&#038;ssl=1\" />\n\n-<meta property=\"og:image:width\" content=\"512\" />\n\n-<meta property=\"og:image:height\" content=\"512\" />\n\n-<meta property=\"og:image:alt\" content=\"\" />\n\n <meta property=\"og:locale\" content=\"en_US\" />\n\n-<meta name=\"twitter:text:title\" content=\"Protected: Report: BRUSSELS\" />\n\n-<meta name=\"twitter:image\" content=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=240%2C240&amp;ssl=1\" />\n\n-<meta name=\"twitter:card\" content=\"summary\" />\n\n-<meta name=\"twitter:description\" content=\"Visit the post for more.\" />\n\n \n\n <!-- End Jetpack Open Graph Tags -->\n\n <style class=\"wp-fonts-local\">\n\n@@ -229,51 +221,10 @@\n </div>\n\n \n\n \n\n... (52 more lines)"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/sec-log-211927-full/",
+        "old_hash": "174722cfc0e8dd66d115c65482dcbcfe",
+        "new_hash": "98cb867e8226e9c0dd3d69313f935572",
+        "detail": "Content changed: https://project-skyscraper.com/sec-log-211927-full/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/sec-log-211927-full/",
+            "diff": "@@ -6,7 +6,6 @@\n <meta name='robots' content='max-image-preview:large' />\n\n <title>Security Log &#8211; project-skyscraper</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n-<link rel='dns-prefetch' href='//stats.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n\n <link rel='dns-prefetch' href='//jetpack.wordpress.com' />\n\n <link rel='dns-prefetch' href='//s0.wp.com' />\n\n@@ -311,7 +310,7 @@\n <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js'></script>\n\n <script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n+<script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n <script id=\"wp-emoji-settings\" type=\"application/json\">\n\n </script>\n\n@@ -406,4 +405,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "old_hash": "11d9eb628e227ef8a4fc48e52ca5c579",
+        "new_hash": "ec709e12fb861a769718418544ea44bb",
+        "detail": "Content changed: https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+            "diff": "@@ -34,12 +34,6 @@\n \n\n </style>\n\n-<style id=\"wp-block-button-inline-css\">\n\n-\n\n-</style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=15.9' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=15.9' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \n\n@@ -149,7 +143,7 @@\n </style>\n\n <link rel='stylesheet' id='all-css-bbd697e9e44873ede353c5e40ca59056' href='https://project-skyscraper.com/wp-content/plugins/gravatar-enhanced/build/patterns-view.css' type='text/css' media='all' />\n\n <style id=\"core-block-supports-inline-css\">\n\n </style>\n\n <link rel='stylesheet' id='all-css-bad00ea205979c34f3df0fa2a1d34152' href='https://project-skyscraper.com/wp-content/themes/perenne/style.css' type='text/css' media='all' />\n\n@@ -171,31 +165,16 @@\n <link rel='shortlink' href='https://wp.me/PhdnFZ-sE' />\n\n \t<style></style>\n\n \t\t<!-- Analytics by WP Statistics - https://wp-statistics.com -->\n\n-<script id=\"wp-importmap\" type=\"importmap\">{\n\n-    \"imports\": {\n\n-        \"@wordpress/interactivity\": \"https://project-skyscraper.com/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\"\n\n-    }\n\n-}</script>\n\n-<script id=\"jp-forms-view-js-module\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=15.9\" type=\"module\"></script>\n\n-<link rel=\"modulepreload\" href=\"https://project-skyscraper.com/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n-<meta name=\"description\" content=\"Protocol Information: Memory_reconstruction_engine: Active (Deprecated) Status: Memory bloc addition authorized Warning: Risk of unstable memory anchoring increased Instructions: Injecting data from multiple sources increases the chances of anchoring\" />\n\n+<meta name=\"description\" content=\"Sky is not the limit\" />\n\n \n\n... (259 more lines)"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}
