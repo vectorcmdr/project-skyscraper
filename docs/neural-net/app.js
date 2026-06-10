@@ -485,7 +485,7 @@
     if (filterClearBtn) filterClearBtn.classList.remove('hidden');
     var matchIds = {};
     nodes.forEach(function (n) {
-      if (n.label.toLowerCase().indexOf(q) !== -1 || n.type.toLowerCase().indexOf(q) !== -1) {
+      if (n.label.toLowerCase().indexOf(q) !== -1 || n.type.toLowerCase().indexOf(q) !== -1 || (n.id && n.id.toLowerCase().indexOf(q) !== -1) || (n.url && n.url.toLowerCase().indexOf(q) !== -1)) {
         matchIds[n.id] = true;
       }
     });
