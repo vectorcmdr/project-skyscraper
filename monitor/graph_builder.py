@@ -298,6 +298,23 @@ def build_graph(state: dict) -> dict:
             if tpath and tpath in node_ids and tpath != path:
                 links.append({"source": path, "target": tpath})
 
+    # Path-based media parent linking: for media under a content path, link to the parent path
+    for path, info in known_pages.items():
+        if path not in node_ids:
+            continue
+        if info.get("type") == "media":
+            parts = path.strip("/").split("/")
+            if len(parts) > 3:
+                parent_candidate = "/" + "/".join(parts[:-1])
+                if parent_candidate in node_ids and parent_candidate != path:
+                    # Check not already linked
+                    already = any(
+                        l.get("source") == path and l.get("target") == parent_candidate
+                        for l in links
+                    )
+                    if not already:
+                        links.append({"source": path, "target": parent_candidate})
+
     # Dataset links: connect event posts to their parent dataset post by sharing the same title
     title_to_posts = {}
     for path, info in known_pages.items():

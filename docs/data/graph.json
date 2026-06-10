@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T17:15:31.025150+00:00",
+  "updated": "2026-06-10T17:18:38.952068+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -90,20 +90,20 @@
       "date": "2026-05-03T07:04:00"
     },
     {
-      "id": "/sec-log-094316-full",
-      "type": "page",
-      "label": "Security Log",
-      "url": "https://project-skyscraper.com/sec-log-094316-full/",
-      "author": "The Architect",
-      "date": "2026-05-30T08:43:00"
-    },
-    {
       "id": "/sec-log-094127-full",
       "type": "page",
       "label": "Security Log",
       "url": "https://project-skyscraper.com/sec-log-094127-full/",
       "author": "The Architect",
       "date": "2026-05-11T08:41:30"
+    },
+    {
+      "id": "/sec-log-094316-full",
+      "type": "page",
+      "label": "Security Log",
+      "url": "https://project-skyscraper.com/sec-log-094316-full/",
+      "author": "The Architect",
+      "date": "2026-05-30T08:43:00"
     },
     {
       "id": "/sec-log-211927-full",
@@ -858,6 +858,14 @@
       "date": "2016-10-27T23:00:00"
     },
     {
+      "id": "/2016/10/30/2016_dataset-in-memoriam",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+      "author": "System",
+      "date": "2016-10-30T05:54:00"
+    },
+    {
       "id": "/2016/11/07/event-07112016",
       "type": "post",
       "label": "2016_dataset",
@@ -962,14 +970,6 @@
       "date": "2016-12-26T00:00:00"
     },
     {
-      "id": "/2016/10/30/2016_dataset-in-memoriam",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
-      "author": "System",
-      "date": "2016-10-30T05:54:00"
-    },
-    {
       "id": "/2017/06/01/event-01062017",
       "type": "post",
       "label": "2017_dataset",
@@ -978,20 +978,20 @@
       "date": "2017-06-01T12:16:00"
     },
     {
-      "id": "/2017/07/21/event-21072017",
-      "type": "post",
-      "label": "2017_dataset",
-      "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
-      "author": "System",
-      "date": "2017-07-21T00:00:00"
-    },
-    {
       "id": "/2017/07/08/2017_dataset",
       "type": "post",
       "label": "2017_dataset",
       "url": "https://project-skyscraper.com/2017/07/08/2017_dataset/",
       "author": "System",
       "date": "2017-07-08T13:35:00"
+    },
+    {
+      "id": "/2017/07/21/event-21072017",
+      "type": "post",
+      "label": "2017_dataset",
+      "url": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+      "author": "System",
+      "date": "2017-07-21T00:00:00"
     },
     {
       "id": "/2018/07/24/2018_dataset",
@@ -1106,12 +1106,36 @@
       "date": "2026-05-10T16:14:00"
     },
     {
+      "id": "/2026/05/10/security-log-171453",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/10/security-log-171453/",
+      "author": "The Architect",
+      "date": "2026-05-10T16:15:00"
+    },
+    {
+      "id": "/2026/05/12/sec-log-120000",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/12/sec-log-120000/",
+      "author": "The Architect",
+      "date": "2026-05-12T11:00:00"
+    },
+    {
       "id": "/2026/05/13/sec-log-041825",
       "type": "post",
       "label": "SECURITY LOG",
       "url": "https://project-skyscraper.com/2026/05/13/sec-log-041825/",
       "author": "The Architect",
       "date": "2026-05-13T03:18:00"
+    },
+    {
+      "id": "/2026/05/14/sec-log-172832",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/14/sec-log-172832/",
+      "author": "The Architect",
+      "date": "2026-05-14T16:28:00"
     },
     {
       "id": "/2026/05/15/sec-log-152158",
@@ -1130,12 +1154,28 @@
       "date": "2026-05-18T01:25:00"
     },
     {
+      "id": "/2026/05/18/sec-log-211927",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/18/sec-log-211927/",
+      "author": "The Architect",
+      "date": "2026-05-18T20:19:00"
+    },
+    {
       "id": "/2026/05/20/sec-log-132904",
       "type": "post",
       "label": "SECURITY LOG",
       "url": "https://project-skyscraper.com/2026/05/20/sec-log-132904/",
       "author": "The Architect",
       "date": "2026-05-20T12:29:00"
+    },
+    {
+      "id": "/2026/05/21/sec-log-170516",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/21/sec-log-170516/",
+      "author": "The Architect",
+      "date": "2026-05-21T16:05:41"
     },
     {
       "id": "/2026/05/23/sec-log-003237",
@@ -1154,68 +1194,20 @@
       "date": "2026-05-25T10:36:00"
     },
     {
-      "id": "/2026/05/27/sec-log-access-granted",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
-      "author": "The Architect",
-      "date": "2026-05-27T21:39:00"
-    },
-    {
-      "id": "/2026/05/30/sec-log-memory-sector-access",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/",
-      "author": "The Architect",
-      "date": "2026-05-30T08:43:00"
-    },
-    {
-      "id": "/2026/05/10/security-log-171453",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/10/security-log-171453/",
-      "author": "The Architect",
-      "date": "2026-05-10T16:15:00"
-    },
-    {
-      "id": "/2026/05/12/sec-log-120000",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/12/sec-log-120000/",
-      "author": "The Architect",
-      "date": "2026-05-12T11:00:00"
-    },
-    {
-      "id": "/2026/05/14/sec-log-172832",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/14/sec-log-172832/",
-      "author": "The Architect",
-      "date": "2026-05-14T16:28:00"
-    },
-    {
-      "id": "/2026/05/18/sec-log-211927",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/18/sec-log-211927/",
-      "author": "The Architect",
-      "date": "2026-05-18T20:19:00"
-    },
-    {
-      "id": "/2026/05/21/sec-log-170516",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/05/21/sec-log-170516/",
-      "author": "The Architect",
-      "date": "2026-05-21T16:05:41"
-    },
-    {
       "id": "/2026/05/27/sec-log-185027",
       "type": "post",
       "label": "SECURITY LOG",
       "url": "https://project-skyscraper.com/2026/05/27/sec-log-185027/",
       "author": "The Architect",
       "date": "2026-05-27T17:50:24"
+    },
+    {
+      "id": "/2026/05/27/sec-log-access-granted",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/27/sec-log-access-granted/",
+      "author": "The Architect",
+      "date": "2026-05-27T21:39:00"
     },
     {
       "id": "/2026/05/27/sec-log-reboot",
@@ -1232,6 +1224,14 @@
       "url": "https://project-skyscraper.com/2026/05/29/sec-log-114327/",
       "author": "The Architect",
       "date": "2026-05-29T10:43:00"
+    },
+    {
+      "id": "/2026/05/30/sec-log-memory-sector-access",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/05/30/sec-log-memory-sector-access/",
+      "author": "The Architect",
+      "date": "2026-05-30T08:43:00"
     },
     {
       "id": "/2026/05/31/sec-log-193727",
@@ -1602,18 +1602,18 @@
       "date": ""
     },
     {
-      "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
-      "type": "external",
-      "label": "forums.atlas-65.com",
-      "url": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://forums.atlas-65.com/u/akodokusamoto/summary",
       "type": "external",
       "label": "forums.atlas-65.com",
       "url": "https://forums.atlas-65.com/u/akodokusamoto/summary",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
+      "type": "external",
+      "label": "forums.atlas-65.com",
+      "url": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
       "author": "",
       "date": ""
     },
@@ -1689,11 +1689,7 @@
     },
     {
       "source": "sitemap",
-      "target": "/about"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sleep-mode"
+      "target": "/1958/04/17/event-17041958"
     },
     {
       "source": "sitemap",
@@ -1701,123 +1697,19 @@
     },
     {
       "source": "sitemap",
-      "target": "/2026/03/24/sleep-mode-46105"
+      "target": "/1980/03/03/hoe"
     },
     {
       "source": "sitemap",
-      "target": "/2026/03/27/sleep-mode-46108"
+      "target": "/1980/03/10/insert-coin"
     },
     {
       "source": "sitemap",
-      "target": "/2026/03/29/sleep-mode-46110"
+      "target": "/2002/05/12/code"
     },
     {
       "source": "sitemap",
-      "target": "/2026/04/01/sleep-mode-4613"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/03/sleep-mode-46115"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
+      "target": "/2005/04/13/quote"
     },
     {
       "source": "sitemap",
@@ -1826,10 +1718,6 @@
     {
       "source": "sitemap",
       "target": "/2016/01/09/event-09012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/06/01/event-01062017"
     },
     {
       "source": "sitemap",
@@ -1846,10 +1734,6 @@
     {
       "source": "sitemap",
       "target": "/2016/01/23/event-23012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1980/03/03/hoe"
     },
     {
       "source": "sitemap",
@@ -1933,10 +1817,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/04/01/event-01042016"
     },
     {
@@ -1954,10 +1834,6 @@
     {
       "source": "sitemap",
       "target": "/2016/04/14/event-14042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2021/02/25/event-25022021"
     },
     {
       "source": "sitemap",
@@ -2185,6 +2061,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "sitemap",
       "target": "/2016/11/07/event-07112016"
     },
     {
@@ -2237,7 +2117,187 @@
     },
     {
       "source": "sitemap",
-      "target": "/report-lon-reality-glitch"
+      "target": "/2017/05/28/waking-titan"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/06/01/event-01062017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/07/08/2017_dataset"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/07/21/event-21072017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2022/04/24/event-24042022"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2023/09/26/event-26092023"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/03/24/sleep-mode-46105"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/03/27/sleep-mode-46108"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/03/29/sleep-mode-46110"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/01/sleep-mode-4613"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/03/sleep-mode-46115"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/06/sleep-mode-46118"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/08/sleep-mode-46120"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/11/sleep-mode-46123"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/13/sleep-mode-46125"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/16/sleep-mode-46128"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/18/sleep-mode-46130"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/21/sleep-mode-46133"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/23/sleep-mode-46135"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/25/sleep-mode-46137"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/28/sleep-mode-46140"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/04/30/sleep-mode-46142"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/03/sec-log-080413"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/05/sec-log-190746"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/08/sec-log-061119"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/10/sec-log-171452"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/10/security-log-171453"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/12/sec-log-120000"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/13/sec-log-041825"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/14/sec-log-172832"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/15/sec-log-152158"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/18/sec-log-022531"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/18/sec-log-211927"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/20/sec-log-132904"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/21/sec-log-170516"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/23/sec-log-003237"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/25/sec-log-113610"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/27/sec-log-185027"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/27/sec-log-access-granted"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/27/sec-log-reboot"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/29/sec-log-114327"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/30/sec-log-memory-sector-access"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/31/sec-log-193727"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/01/diagnostic-op-morse"
     },
     {
       "source": "sitemap",
@@ -2245,7 +2305,11 @@
     },
     {
       "source": "sitemap",
-      "target": "/2026/06/01/diagnostic-op-morse"
+      "target": "/2026/06/02/sec-log-194022"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/06/sec-log-110328"
     },
     {
       "source": "sitemap",
@@ -2257,135 +2321,7 @@
     },
     {
       "source": "sitemap",
-      "target": "/report-bru-ent-reunion-peak"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-211927-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "sitemap",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "sitemap",
-      "target": "/inbox"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2002/05/12/code"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/31/sec-log-193727"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/07/21/event-21072017"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/02/sec-log-194022"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/07/08/2017_dataset"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/06/sec-log-110328"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2022/04/24/event-24042022"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1980/03/10/insert-coin"
-    },
-    {
-      "source": "sitemap",
       "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1958/04/17/event-17041958"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2023/09/26/event-26092023"
-    },
-    {
-      "source": "sitemap",
-      "target": "/project-skyscraper"
-    },
-    {
-      "source": "sitemap",
-      "target": "/logo"
-    },
-    {
-      "source": "sitemap",
-      "target": "/tr4ce"
-    },
-    {
-      "source": "sitemap",
-      "target": "/only-dust-remain"
-    },
-    {
-      "source": "sitemap",
-      "target": "/8740677a9483"
     },
     {
       "source": "sitemap",
@@ -2393,7 +2329,71 @@
     },
     {
       "source": "sitemap",
+      "target": "/8740677a9483"
+    },
+    {
+      "source": "sitemap",
+      "target": "/about"
+    },
+    {
+      "source": "sitemap",
       "target": "/b1c9e4f072a5"
+    },
+    {
+      "source": "sitemap",
+      "target": "/inbox"
+    },
+    {
+      "source": "sitemap",
+      "target": "/logo"
+    },
+    {
+      "source": "sitemap",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "sitemap",
+      "target": "/only-dust-remain"
+    },
+    {
+      "source": "sitemap",
+      "target": "/project-skyscraper"
+    },
+    {
+      "source": "sitemap",
+      "target": "/report-bru-ent-reunion-peak"
+    },
+    {
+      "source": "sitemap",
+      "target": "/report-lon-reality-glitch"
+    },
+    {
+      "source": "sitemap",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sec-log-080413-full"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sec-log-094127-full"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sec-log-094316-full"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sec-log-211927-full"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sleep-mode"
+    },
+    {
+      "source": "sitemap",
+      "target": "/tr4ce"
     },
     {
       "source": "/",
@@ -2800,16 +2800,16 @@
       "target": "/page/2"
     },
     {
-      "source": "/about",
+      "source": "/1958/04/17/event-17041958",
       "target": "/"
     },
     {
-      "source": "/about",
-      "target": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump"
+      "source": "/1958/04/17/event-17041958",
+      "target": "/neural-network-status"
     },
     {
-      "source": "/sleep-mode",
-      "target": "/"
+      "source": "/1958/04/17/event-17041958",
+      "target": "/1970/01/01/origin"
     },
     {
       "source": "/1970/01/01/origin",
@@ -2824,360 +2824,76 @@
       "target": "/1980/03/03/hoe"
     },
     {
-      "source": "/2026/03/24/sleep-mode-46105",
+      "source": "/1980/03/03/hoe",
       "target": "/"
     },
     {
-      "source": "/2026/03/24/sleep-mode-46105",
-      "target": "/2022/04/24/event-24042022"
+      "source": "/1980/03/03/hoe",
+      "target": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE"
     },
     {
-      "source": "/2026/03/24/sleep-mode-46105",
-      "target": "/2026/03/27/sleep-mode-46108"
+      "source": "/1980/03/03/hoe",
+      "target": "/neural-network-status"
     },
     {
-      "source": "/2026/03/27/sleep-mode-46108",
+      "source": "/1980/03/03/hoe",
+      "target": "/1970/01/01/origin"
+    },
+    {
+      "source": "/1980/03/03/hoe",
+      "target": "/1980/03/10/insert-coin"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
       "target": "/"
     },
     {
-      "source": "/2026/03/27/sleep-mode-46108",
-      "target": "/2026/03/24/sleep-mode-46105"
+      "source": "/1980/03/10/insert-coin",
+      "target": "/neural-network-status"
     },
     {
-      "source": "/2026/03/27/sleep-mode-46108",
-      "target": "/2026/03/29/sleep-mode-46110"
+      "source": "/1980/03/10/insert-coin",
+      "target": "/tag/stable"
     },
     {
-      "source": "/2026/03/29/sleep-mode-46110",
+      "source": "/1980/03/10/insert-coin",
+      "target": "/1980/03/03/hoe"
+    },
+    {
+      "source": "/1980/03/10/insert-coin",
+      "target": "/2002/05/12/code"
+    },
+    {
+      "source": "/2002/05/12/code",
       "target": "/"
     },
     {
-      "source": "/2026/03/29/sleep-mode-46110",
-      "target": "/2026/03/27/sleep-mode-46108"
+      "source": "/2002/05/12/code",
+      "target": "/tag/stable"
     },
     {
-      "source": "/2026/03/29/sleep-mode-46110",
-      "target": "/2026/04/01/sleep-mode-4613"
+      "source": "/2002/05/12/code",
+      "target": "/1980/03/10/insert-coin"
     },
     {
-      "source": "/2026/04/01/sleep-mode-4613",
+      "source": "/2002/05/12/code",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2005/04/13/quote",
       "target": "/"
     },
     {
-      "source": "/2026/04/01/sleep-mode-4613",
-      "target": "/2026/03/29/sleep-mode-46110"
+      "source": "/2005/04/13/quote",
+      "target": "/tag/stable"
     },
     {
-      "source": "/2026/04/01/sleep-mode-4613",
-      "target": "/2026/04/03/sleep-mode-46115"
+      "source": "/2005/04/13/quote",
+      "target": "/2002/05/12/code"
     },
     {
-      "source": "/2026/04/03/sleep-mode-46115",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/03/sleep-mode-46115",
-      "target": "/2026/04/01/sleep-mode-4613"
-    },
-    {
-      "source": "/2026/04/03/sleep-mode-46115",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "/2026/04/06/sleep-mode-46118",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/06/sleep-mode-46118",
-      "target": "/2026/04/03/sleep-mode-46115"
-    },
-    {
-      "source": "/2026/04/06/sleep-mode-46118",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "/2026/04/08/sleep-mode-46120",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/08/sleep-mode-46120",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "/2026/04/08/sleep-mode-46120",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "/2026/04/11/sleep-mode-46123",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/11/sleep-mode-46123",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "/2026/04/11/sleep-mode-46123",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "/2026/04/13/sleep-mode-46125",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/13/sleep-mode-46125",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "/2026/04/13/sleep-mode-46125",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "/2026/04/16/sleep-mode-46128",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/16/sleep-mode-46128",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "/2026/04/16/sleep-mode-46128",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "/2026/04/18/sleep-mode-46130",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/18/sleep-mode-46130",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "/2026/04/18/sleep-mode-46130",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "/2026/04/21/sleep-mode-46133",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/21/sleep-mode-46133",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "/2026/04/21/sleep-mode-46133",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "/2026/04/23/sleep-mode-46135",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/23/sleep-mode-46135",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "/2026/04/23/sleep-mode-46135",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "/2026/04/25/sleep-mode-46137",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/25/sleep-mode-46137",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "/2026/04/25/sleep-mode-46137",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "/2026/04/28/sleep-mode-46140",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/28/sleep-mode-46140",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "/2026/04/28/sleep-mode-46140",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "/2026/04/30/sleep-mode-46142",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/30/sleep-mode-46142",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "/2026/04/30/sleep-mode-46142",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "/sec-log-080413-full",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/03/sec-log-080413",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/03/sec-log-080413",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "/2026/05/03/sec-log-080413",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "/2026/05/03/sec-log-080413",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "/2026/05/05/sec-log-190746",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/05/sec-log-190746",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "/2026/05/05/sec-log-190746",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "/2026/05/08/sec-log-061119",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/08/sec-log-061119",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "/2026/05/08/sec-log-061119",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "/2026/05/10/sec-log-171452",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/10/sec-log-171452",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "/2026/05/10/sec-log-171452",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "/2026/05/13/sec-log-041825",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/13/sec-log-041825",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "/2026/05/13/sec-log-041825",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "/2026/05/15/sec-log-152158",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/15/sec-log-152158",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "/2026/05/15/sec-log-152158",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "/2026/05/18/sec-log-022531",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/18/sec-log-022531",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "/2026/05/18/sec-log-022531",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "/2026/05/20/sec-log-132904",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/20/sec-log-132904",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "/2026/05/20/sec-log-132904",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "/2026/05/23/sec-log-003237",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/23/sec-log-003237",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "/2026/05/23/sec-log-003237",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "/2026/05/25/sec-log-113610",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/25/sec-log-113610",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "/2026/05/25/sec-log-113610",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "/2026/05/27/sec-log-access-granted",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-access-granted",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "/2026/05/27/sec-log-access-granted",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "/sec-log-094316-full",
-      "target": "/"
-    },
-    {
-      "source": "/sec-log-094316-full",
-      "target": "https://freeimage.host/i/C3q5NYF"
-    },
-    {
-      "source": "/2026/05/30/sec-log-memory-sector-access",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/30/sec-log-memory-sector-access",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "/2026/05/30/sec-log-memory-sector-access",
-      "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "/2026/05/30/sec-log-memory-sector-access",
-      "target": "/2026/05/31/sec-log-193727"
+      "source": "/2005/04/13/quote",
+      "target": "/2016/01/05/event-05012016"
     },
     {
       "source": "/2016/01/05/event-05012016",
@@ -3206,22 +2922,6 @@
     {
       "source": "/2016/01/09/event-09012016",
       "target": "/2016/01/13/event-13012016"
-    },
-    {
-      "source": "/2017/06/01/event-01062017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/06/01/event-01062017",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/2017/06/01/event-01062017",
-      "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "/2017/06/01/event-01062017",
-      "target": "/2017/07/08/2017_dataset"
     },
     {
       "source": "/2016/01/13/event-13012016",
@@ -3270,26 +2970,6 @@
     {
       "source": "/2016/01/23/event-23012016",
       "target": "/2016/01/26/event-26012016"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/1970/01/01/origin"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/1980/03/10/insert-coin"
     },
     {
       "source": "/2016/01/26/event-26012016",
@@ -3530,10 +3210,6 @@
     {
       "source": "/2016/03/29/event-29032016-2",
       "target": "/2016/04/01/event-01042016"
-    },
-    {
-      "source": "/neural-network-status",
-      "target": "/"
     },
     {
       "source": "/2016/04/01/event-01042016",
@@ -3594,22 +3270,6 @@
     {
       "source": "/2016/04/14/event-14042016",
       "target": "/2016/04/22/event-22042016"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/2022/04/24/event-24042022"
     },
     {
       "source": "/2016/04/22/event-22042016",
@@ -4284,6 +3944,26 @@
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "/"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "https://forums.atlas-65.com/u/akodokusamoto/summary"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "/tag/stable"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "/2016/10/25/event-25102016"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "target": "/2016/11/07/event-07112016"
+    },
+    {
       "source": "/2016/11/07/event-07112016",
       "target": "/"
     },
@@ -4440,288 +4120,36 @@
       "target": "/2017/05/28/waking-titan"
     },
     {
-      "source": "/report-lon-reality-glitch",
+      "source": "/2017/05/28/waking-titan",
       "target": "/"
     },
     {
-      "source": "/report-lon-reality-glitch",
-      "target": "https://iili.io/CFCOYml.jpg"
+      "source": "/2017/05/28/waking-titan",
+      "target": "/neural-network-status"
     },
     {
-      "source": "/2026/06/01/structural-analysis-204649",
+      "source": "/2017/05/28/waking-titan",
+      "target": "/2016/12/26/event-26122016"
+    },
+    {
+      "source": "/2017/05/28/waking-titan",
+      "target": "/2017/06/01/event-01062017"
+    },
+    {
+      "source": "/2017/06/01/event-01062017",
       "target": "/"
     },
     {
-      "source": "/2026/06/01/structural-analysis-204649",
-      "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "/2026/06/01/structural-analysis-204649",
-      "target": "/2026/06/02/sec-log-194022"
-    },
-    {
-      "source": "/2026/06/01/diagnostic-op-morse",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/01/diagnostic-op-morse",
-      "target": "/2026/05/31/sec-log-193727"
-    },
-    {
-      "source": "/2026/06/01/diagnostic-op-morse",
-      "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "/2026/06/06/structural-analysis-214218",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/06/structural-analysis-214218",
-      "target": "/2026/06/06/sec-log-110328"
-    },
-    {
-      "source": "/2026/06/06/structural-analysis-214218",
-      "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "/2026/06/09/diagnostic-180000",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/09/diagnostic-180000",
-      "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "/report-bru-ent-reunion-peak",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/10/security-log-171453",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/10/security-log-171453",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "/2026/05/10/security-log-171453",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "/2026/05/10/security-log-171453",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "/sec-log-094127-full",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/12/sec-log-120000",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/12/sec-log-120000",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "/2026/05/12/sec-log-120000",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "/2026/05/12/sec-log-120000",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "https://preview.redd.it/connection-detected-access-denied-v0-8c7atk6y141h1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=c1f17506bd913fb8de67bbb3452379ca0d0c723b"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1tczflq/connection_detected_access_denied/"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "/2005/04/13/quote",
-      "target": "/"
-    },
-    {
-      "source": "/2005/04/13/quote",
+      "source": "/2017/06/01/event-01062017",
       "target": "/tag/stable"
     },
     {
-      "source": "/2005/04/13/quote",
-      "target": "/2002/05/12/code"
+      "source": "/2017/06/01/event-01062017",
+      "target": "/2017/05/28/waking-titan"
     },
     {
-      "source": "/2005/04/13/quote",
-      "target": "/2016/01/05/event-05012016"
-    },
-    {
-      "source": "/2026/05/18/sec-log-211927",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/18/sec-log-211927",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "/2026/05/18/sec-log-211927",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "/sec-log-211927-full",
-      "target": "/"
-    },
-    {
-      "source": "/sec-log-211927-full",
-      "target": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180"
-    },
-    {
-      "source": "/2026/05/21/sec-log-170516",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/21/sec-log-170516",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "/2026/05/21/sec-log-170516",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.submission.url"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.image.src"
-    },
-    {
-      "source": "/2026/05/27/sec-log-185027",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-185027",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "/2026/05/27/sec-log-185027",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "/2026/05/27/sec-log-reboot",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-reboot",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "/2026/05/27/sec-log-reboot",
-      "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "/inbox",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/29/sec-log-114327",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/29/sec-log-114327",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "/2026/05/29/sec-log-114327",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "/2002/05/12/code",
-      "target": "/"
-    },
-    {
-      "source": "/2002/05/12/code",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/2002/05/12/code",
-      "target": "/1980/03/10/insert-coin"
-    },
-    {
-      "source": "/2002/05/12/code",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "/2026/05/31/sec-log-193727",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/31/sec-log-193727",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "/2026/05/31/sec-log-193727",
-      "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "/2018/07/24/2018_dataset",
-      "target": "/"
-    },
-    {
-      "source": "/2018/07/24/2018_dataset",
-      "target": "/tag/stable"
-    },
-    {
-      "source": "/2018/07/24/2018_dataset",
-      "target": "/2017/07/21/event-21072017"
-    },
-    {
-      "source": "/2018/07/24/2018_dataset",
-      "target": "/2021/02/25/event-25022021"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/tag/weak"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
+      "source": "/2017/06/01/event-01062017",
       "target": "/2017/07/08/2017_dataset"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2026/06/02/sec-log-194022",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/02/sec-log-194022",
-      "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "/2026/06/02/sec-log-194022",
-      "target": "/2026/06/06/sec-log-110328"
     },
     {
       "source": "/2017/07/08/2017_dataset",
@@ -4744,36 +4172,52 @@
       "target": "/2017/07/21/event-21072017"
     },
     {
-      "source": "/2026/06/06/sec-log-110328",
+      "source": "/2017/07/21/event-21072017",
       "target": "/"
     },
     {
-      "source": "/2026/06/06/sec-log-110328",
-      "target": "/2026/06/02/sec-log-194022"
+      "source": "/2017/07/21/event-21072017",
+      "target": "/tag/weak"
     },
     {
-      "source": "/2026/06/06/sec-log-110328",
-      "target": "/2026/06/06/structural-analysis-214218"
+      "source": "/2017/07/21/event-21072017",
+      "target": "/2017/07/08/2017_dataset"
     },
     {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "source": "/2017/07/21/event-21072017",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2018/07/24/2018_dataset",
       "target": "/"
     },
     {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
-      "target": "https://forums.atlas-65.com/u/akodokusamoto/summary"
-    },
-    {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
+      "source": "/2018/07/24/2018_dataset",
       "target": "/tag/stable"
     },
     {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
-      "target": "/2016/10/25/event-25102016"
+      "source": "/2018/07/24/2018_dataset",
+      "target": "/2017/07/21/event-21072017"
     },
     {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
-      "target": "/2016/11/07/event-07112016"
+      "source": "/2018/07/24/2018_dataset",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/tag/stable"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2021/02/25/event-25022021",
+      "target": "/2022/04/24/event-24042022"
     },
     {
       "source": "/2022/04/24/event-24042022",
@@ -4796,24 +4240,552 @@
       "target": "/2026/03/24/sleep-mode-46105"
     },
     {
-      "source": "/1980/03/10/insert-coin",
+      "source": "/2023/09/26/event-26092023",
       "target": "/"
     },
     {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/neural-network-status"
+      "source": "/2023/09/26/event-26092023",
+      "target": "/2022/04/24/event-24042022"
     },
     {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/tag/stable"
+      "source": "/2023/09/26/event-26092023",
+      "target": "/2026/03/24/sleep-mode-46105"
     },
     {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/1980/03/03/hoe"
+      "source": "/2026/03/24/sleep-mode-46105",
+      "target": "/"
     },
     {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/2002/05/12/code"
+      "source": "/2026/03/24/sleep-mode-46105",
+      "target": "/2022/04/24/event-24042022"
+    },
+    {
+      "source": "/2026/03/24/sleep-mode-46105",
+      "target": "/2026/03/27/sleep-mode-46108"
+    },
+    {
+      "source": "/2026/03/27/sleep-mode-46108",
+      "target": "/"
+    },
+    {
+      "source": "/2026/03/27/sleep-mode-46108",
+      "target": "/2026/03/24/sleep-mode-46105"
+    },
+    {
+      "source": "/2026/03/27/sleep-mode-46108",
+      "target": "/2026/03/29/sleep-mode-46110"
+    },
+    {
+      "source": "/2026/03/29/sleep-mode-46110",
+      "target": "/"
+    },
+    {
+      "source": "/2026/03/29/sleep-mode-46110",
+      "target": "/2026/03/27/sleep-mode-46108"
+    },
+    {
+      "source": "/2026/03/29/sleep-mode-46110",
+      "target": "/2026/04/01/sleep-mode-4613"
+    },
+    {
+      "source": "/2026/04/01/sleep-mode-4613",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/01/sleep-mode-4613",
+      "target": "/2026/03/29/sleep-mode-46110"
+    },
+    {
+      "source": "/2026/04/01/sleep-mode-4613",
+      "target": "/2026/04/03/sleep-mode-46115"
+    },
+    {
+      "source": "/2026/04/03/sleep-mode-46115",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/03/sleep-mode-46115",
+      "target": "/2026/04/01/sleep-mode-4613"
+    },
+    {
+      "source": "/2026/04/03/sleep-mode-46115",
+      "target": "/2026/04/06/sleep-mode-46118"
+    },
+    {
+      "source": "/2026/04/06/sleep-mode-46118",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/06/sleep-mode-46118",
+      "target": "/2026/04/03/sleep-mode-46115"
+    },
+    {
+      "source": "/2026/04/06/sleep-mode-46118",
+      "target": "/2026/04/08/sleep-mode-46120"
+    },
+    {
+      "source": "/2026/04/08/sleep-mode-46120",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/08/sleep-mode-46120",
+      "target": "/2026/04/06/sleep-mode-46118"
+    },
+    {
+      "source": "/2026/04/08/sleep-mode-46120",
+      "target": "/2026/04/11/sleep-mode-46123"
+    },
+    {
+      "source": "/2026/04/11/sleep-mode-46123",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/11/sleep-mode-46123",
+      "target": "/2026/04/08/sleep-mode-46120"
+    },
+    {
+      "source": "/2026/04/11/sleep-mode-46123",
+      "target": "/2026/04/13/sleep-mode-46125"
+    },
+    {
+      "source": "/2026/04/13/sleep-mode-46125",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/13/sleep-mode-46125",
+      "target": "/2026/04/11/sleep-mode-46123"
+    },
+    {
+      "source": "/2026/04/13/sleep-mode-46125",
+      "target": "/2026/04/16/sleep-mode-46128"
+    },
+    {
+      "source": "/2026/04/16/sleep-mode-46128",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/16/sleep-mode-46128",
+      "target": "/2026/04/13/sleep-mode-46125"
+    },
+    {
+      "source": "/2026/04/16/sleep-mode-46128",
+      "target": "/2026/04/18/sleep-mode-46130"
+    },
+    {
+      "source": "/2026/04/18/sleep-mode-46130",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/18/sleep-mode-46130",
+      "target": "/2026/04/16/sleep-mode-46128"
+    },
+    {
+      "source": "/2026/04/18/sleep-mode-46130",
+      "target": "/2026/04/21/sleep-mode-46133"
+    },
+    {
+      "source": "/2026/04/21/sleep-mode-46133",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/21/sleep-mode-46133",
+      "target": "/2026/04/18/sleep-mode-46130"
+    },
+    {
+      "source": "/2026/04/21/sleep-mode-46133",
+      "target": "/2026/04/23/sleep-mode-46135"
+    },
+    {
+      "source": "/2026/04/23/sleep-mode-46135",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/23/sleep-mode-46135",
+      "target": "/2026/04/21/sleep-mode-46133"
+    },
+    {
+      "source": "/2026/04/23/sleep-mode-46135",
+      "target": "/2026/04/25/sleep-mode-46137"
+    },
+    {
+      "source": "/2026/04/25/sleep-mode-46137",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/25/sleep-mode-46137",
+      "target": "/2026/04/23/sleep-mode-46135"
+    },
+    {
+      "source": "/2026/04/25/sleep-mode-46137",
+      "target": "/2026/04/28/sleep-mode-46140"
+    },
+    {
+      "source": "/2026/04/28/sleep-mode-46140",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/28/sleep-mode-46140",
+      "target": "/2026/04/25/sleep-mode-46137"
+    },
+    {
+      "source": "/2026/04/28/sleep-mode-46140",
+      "target": "/2026/04/30/sleep-mode-46142"
+    },
+    {
+      "source": "/2026/04/30/sleep-mode-46142",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/30/sleep-mode-46142",
+      "target": "/2026/04/28/sleep-mode-46140"
+    },
+    {
+      "source": "/2026/04/30/sleep-mode-46142",
+      "target": "/2026/05/03/sec-log-080413"
+    },
+    {
+      "source": "/2026/05/03/sec-log-080413",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/03/sec-log-080413",
+      "target": "/sec-log-080413-full"
+    },
+    {
+      "source": "/2026/05/03/sec-log-080413",
+      "target": "/2026/04/30/sleep-mode-46142"
+    },
+    {
+      "source": "/2026/05/03/sec-log-080413",
+      "target": "/2026/05/05/sec-log-190746"
+    },
+    {
+      "source": "/2026/05/05/sec-log-190746",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/05/sec-log-190746",
+      "target": "/2026/05/03/sec-log-080413"
+    },
+    {
+      "source": "/2026/05/05/sec-log-190746",
+      "target": "/2026/05/08/sec-log-061119"
+    },
+    {
+      "source": "/2026/05/08/sec-log-061119",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/08/sec-log-061119",
+      "target": "/2026/05/05/sec-log-190746"
+    },
+    {
+      "source": "/2026/05/08/sec-log-061119",
+      "target": "/2026/05/10/sec-log-171452"
+    },
+    {
+      "source": "/2026/05/10/sec-log-171452",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/10/sec-log-171452",
+      "target": "/2026/05/08/sec-log-061119"
+    },
+    {
+      "source": "/2026/05/10/sec-log-171452",
+      "target": "/2026/05/10/security-log-171453"
+    },
+    {
+      "source": "/2026/05/10/security-log-171453",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/10/security-log-171453",
+      "target": "/sec-log-094127-full"
+    },
+    {
+      "source": "/2026/05/10/security-log-171453",
+      "target": "/2026/05/10/sec-log-171452"
+    },
+    {
+      "source": "/2026/05/10/security-log-171453",
+      "target": "/2026/05/12/sec-log-120000"
+    },
+    {
+      "source": "/2026/05/12/sec-log-120000",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/12/sec-log-120000",
+      "target": "/sec-log-094127-full"
+    },
+    {
+      "source": "/2026/05/12/sec-log-120000",
+      "target": "/2026/05/10/security-log-171453"
+    },
+    {
+      "source": "/2026/05/12/sec-log-120000",
+      "target": "/2026/05/13/sec-log-041825"
+    },
+    {
+      "source": "/2026/05/13/sec-log-041825",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/13/sec-log-041825",
+      "target": "/2026/05/12/sec-log-120000"
+    },
+    {
+      "source": "/2026/05/13/sec-log-041825",
+      "target": "/2026/05/14/sec-log-172832"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "https://preview.redd.it/connection-detected-access-denied-v0-8c7atk6y141h1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=c1f17506bd913fb8de67bbb3452379ca0d0c723b"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1tczflq/connection_detected_access_denied/"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "/2026/05/13/sec-log-041825"
+    },
+    {
+      "source": "/2026/05/14/sec-log-172832",
+      "target": "/2026/05/15/sec-log-152158"
+    },
+    {
+      "source": "/2026/05/15/sec-log-152158",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/15/sec-log-152158",
+      "target": "/2026/05/14/sec-log-172832"
+    },
+    {
+      "source": "/2026/05/15/sec-log-152158",
+      "target": "/2026/05/18/sec-log-022531"
+    },
+    {
+      "source": "/2026/05/18/sec-log-022531",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/18/sec-log-022531",
+      "target": "/2026/05/15/sec-log-152158"
+    },
+    {
+      "source": "/2026/05/18/sec-log-022531",
+      "target": "/2026/05/18/sec-log-211927"
+    },
+    {
+      "source": "/2026/05/18/sec-log-211927",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/18/sec-log-211927",
+      "target": "/2026/05/18/sec-log-022531"
+    },
+    {
+      "source": "/2026/05/18/sec-log-211927",
+      "target": "/2026/05/20/sec-log-132904"
+    },
+    {
+      "source": "/2026/05/20/sec-log-132904",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/20/sec-log-132904",
+      "target": "/2026/05/18/sec-log-211927"
+    },
+    {
+      "source": "/2026/05/20/sec-log-132904",
+      "target": "/2026/05/21/sec-log-170516"
+    },
+    {
+      "source": "/2026/05/21/sec-log-170516",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/21/sec-log-170516",
+      "target": "/2026/05/20/sec-log-132904"
+    },
+    {
+      "source": "/2026/05/21/sec-log-170516",
+      "target": "/2026/05/23/sec-log-003237"
+    },
+    {
+      "source": "/2026/05/23/sec-log-003237",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/23/sec-log-003237",
+      "target": "/2026/05/21/sec-log-170516"
+    },
+    {
+      "source": "/2026/05/23/sec-log-003237",
+      "target": "/2026/05/25/sec-log-113610"
+    },
+    {
+      "source": "/2026/05/25/sec-log-113610",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/25/sec-log-113610",
+      "target": "/2026/05/23/sec-log-003237"
+    },
+    {
+      "source": "/2026/05/25/sec-log-113610",
+      "target": "/2026/05/27/sec-log-185027"
+    },
+    {
+      "source": "/2026/05/27/sec-log-185027",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/27/sec-log-185027",
+      "target": "/2026/05/25/sec-log-113610"
+    },
+    {
+      "source": "/2026/05/27/sec-log-185027",
+      "target": "/2026/05/27/sec-log-access-granted"
+    },
+    {
+      "source": "/2026/05/27/sec-log-access-granted",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/27/sec-log-access-granted",
+      "target": "/2026/05/27/sec-log-185027"
+    },
+    {
+      "source": "/2026/05/27/sec-log-access-granted",
+      "target": "/2026/05/27/sec-log-reboot"
+    },
+    {
+      "source": "/2026/05/27/sec-log-reboot",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/27/sec-log-reboot",
+      "target": "/2026/05/27/sec-log-access-granted"
+    },
+    {
+      "source": "/2026/05/27/sec-log-reboot",
+      "target": "/2026/05/29/sec-log-114327"
+    },
+    {
+      "source": "/2026/05/29/sec-log-114327",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/29/sec-log-114327",
+      "target": "/2026/05/27/sec-log-reboot"
+    },
+    {
+      "source": "/2026/05/29/sec-log-114327",
+      "target": "/2026/05/30/sec-log-memory-sector-access"
+    },
+    {
+      "source": "/2026/05/30/sec-log-memory-sector-access",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/30/sec-log-memory-sector-access",
+      "target": "/sec-log-094316-full"
+    },
+    {
+      "source": "/2026/05/30/sec-log-memory-sector-access",
+      "target": "/2026/05/29/sec-log-114327"
+    },
+    {
+      "source": "/2026/05/30/sec-log-memory-sector-access",
+      "target": "/2026/05/31/sec-log-193727"
+    },
+    {
+      "source": "/2026/05/31/sec-log-193727",
+      "target": "/"
+    },
+    {
+      "source": "/2026/05/31/sec-log-193727",
+      "target": "/2026/05/30/sec-log-memory-sector-access"
+    },
+    {
+      "source": "/2026/05/31/sec-log-193727",
+      "target": "/2026/06/01/diagnostic-op-morse"
+    },
+    {
+      "source": "/2026/06/01/diagnostic-op-morse",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/01/diagnostic-op-morse",
+      "target": "/2026/05/31/sec-log-193727"
+    },
+    {
+      "source": "/2026/06/01/diagnostic-op-morse",
+      "target": "/2026/06/01/structural-analysis-204649"
+    },
+    {
+      "source": "/2026/06/01/structural-analysis-204649",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/01/structural-analysis-204649",
+      "target": "/2026/06/01/diagnostic-op-morse"
+    },
+    {
+      "source": "/2026/06/01/structural-analysis-204649",
+      "target": "/2026/06/02/sec-log-194022"
+    },
+    {
+      "source": "/2026/06/02/sec-log-194022",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/02/sec-log-194022",
+      "target": "/2026/06/01/structural-analysis-204649"
+    },
+    {
+      "source": "/2026/06/02/sec-log-194022",
+      "target": "/2026/06/06/sec-log-110328"
+    },
+    {
+      "source": "/2026/06/06/sec-log-110328",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/06/sec-log-110328",
+      "target": "/2026/06/02/sec-log-194022"
+    },
+    {
+      "source": "/2026/06/06/sec-log-110328",
+      "target": "/2026/06/06/structural-analysis-214218"
+    },
+    {
+      "source": "/2026/06/06/structural-analysis-214218",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/06/structural-analysis-214218",
+      "target": "/2026/06/06/sec-log-110328"
+    },
+    {
+      "source": "/2026/06/06/structural-analysis-214218",
+      "target": "/2026/06/09/structural-analysis-133722"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
+      "target": "/2026/06/09/structural-analysis-133722"
     },
     {
       "source": "/2026/06/09/structural-analysis-133722",
@@ -4836,59 +4808,7 @@
       "target": "/2026/06/09/diagnostic-180000"
     },
     {
-      "source": "/1958/04/17/event-17041958",
-      "target": "/"
-    },
-    {
-      "source": "/1958/04/17/event-17041958",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/1958/04/17/event-17041958",
-      "target": "/1970/01/01/origin"
-    },
-    {
-      "source": "/2017/05/28/waking-titan",
-      "target": "/"
-    },
-    {
-      "source": "/2017/05/28/waking-titan",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2017/05/28/waking-titan",
-      "target": "/2016/12/26/event-26122016"
-    },
-    {
-      "source": "/2017/05/28/waking-titan",
-      "target": "/2017/06/01/event-01062017"
-    },
-    {
-      "source": "/2023/09/26/event-26092023",
-      "target": "/"
-    },
-    {
-      "source": "/2023/09/26/event-26092023",
-      "target": "/2022/04/24/event-24042022"
-    },
-    {
-      "source": "/2023/09/26/event-26092023",
-      "target": "/2026/03/24/sleep-mode-46105"
-    },
-    {
-      "source": "/project-skyscraper",
-      "target": "/"
-    },
-    {
-      "source": "/logo",
-      "target": "/"
-    },
-    {
-      "source": "/tr4ce",
-      "target": "/"
-    },
-    {
-      "source": "/only-dust-remain",
+      "source": "/53a05806675f",
       "target": "/"
     },
     {
@@ -4896,11 +4816,91 @@
       "target": "/"
     },
     {
-      "source": "/53a05806675f",
+      "source": "/about",
       "target": "/"
     },
     {
+      "source": "/about",
+      "target": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump"
+    },
+    {
       "source": "/b1c9e4f072a5",
+      "target": "/"
+    },
+    {
+      "source": "/inbox",
+      "target": "/"
+    },
+    {
+      "source": "/logo",
+      "target": "/"
+    },
+    {
+      "source": "/neural-network-status",
+      "target": "/"
+    },
+    {
+      "source": "/only-dust-remain",
+      "target": "/"
+    },
+    {
+      "source": "/project-skyscraper",
+      "target": "/"
+    },
+    {
+      "source": "/report-bru-ent-reunion-peak",
+      "target": "/"
+    },
+    {
+      "source": "/report-lon-reality-glitch",
+      "target": "/"
+    },
+    {
+      "source": "/report-lon-reality-glitch",
+      "target": "https://iili.io/CFCOYml.jpg"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.submission.url"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.image.src"
+    },
+    {
+      "source": "/sec-log-080413-full",
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-094127-full",
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-094316-full",
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-094316-full",
+      "target": "https://freeimage.host/i/C3q5NYF"
+    },
+    {
+      "source": "/sec-log-211927-full",
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-211927-full",
+      "target": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180"
+    },
+    {
+      "source": "/sleep-mode",
+      "target": "/"
+    },
+    {
+      "source": "/tr4ce",
       "target": "/"
     },
     {
@@ -6334,6 +6334,46 @@
     {
       "source": "/2023/09/26/event-26092023",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2005/04/13/quote/wallace-stevens",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2005/04/13/quote/img_00004",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2005/04/13/quote/img_00004_1",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2002/05/12/code/unknown",
+      "target": "/2002/05/12/code"
+    },
+    {
+      "source": "/2002/05/12/code/when_we_were_17",
+      "target": "/2002/05/12/code"
+    },
+    {
+      "source": "/2017/07/08/2017_dataset/ybm_request_2416",
+      "target": "/2017/07/08/2017_dataset"
+    },
+    {
+      "source": "/2018/07/24/2018_dataset/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2016/10/30/2016_dataset-in-memoriam/in-memoriam",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/1980/03/10/insert-coin/insert_coin",
+      "target": "/1980/03/10/insert-coin"
+    },
+    {
+      "source": "/2023/09/26/event-26092023/bcdcf4dfcedb",
+      "target": "/2023/09/26/event-26092023"
     },
     {
       "source": "/2016/01/05/event-05012016",
