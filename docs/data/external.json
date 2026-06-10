@@ -1,6 +1,61 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-10T05:34:46.321323+00:00",
+      "title": "wakingtitan.com page fetch returned 530 (server error)",
+      "link": "https://wakingtitan.com/",
+      "endpoint": "",
+      "diff": "",
+      "detail": "wakingtitan.com page fetch returned 530 (server error)",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-10T05:34:46.321314+00:00",
+      "title": "No items in /wp-json/wp/v2/posts on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "No items in /wp-json/wp/v2/posts on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "author": 0,
+      "site": "tower"
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-10T05:34:46.321303+00:00",
+      "title": "No items in /wp-json/wp/v2/pages on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "",
+      "detail": "No items in /wp-json/wp/v2/pages on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "author": 0,
+      "site": "tower"
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-10T05:34:46.321288+00:00",
+      "title": "No items in /wp-json/wp/v2/media on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "",
+      "detail": "No items in /wp-json/wp/v2/media on theskyscraperarchitect-ywvhk.wordpress.com (may not be live yet)",
+      "author": 0,
+      "site": "tower"
+    },
+    {
+      "type": "external_robots_txt_changed",
+      "timestamp": "2026-06-10T05:34:46.321253+00:00",
+      "title": "robots.txt changed for ",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com/robots.txt",
+      "endpoint": "",
+      "diff": "robots.txt captured",
+      "detail": "Initial robots.txt capture for theskyscraperarchitect-ywvhk.wordpress.com",
+      "author": 0,
+      "site": "tower"
+    },
+    {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:18:34.100011+00:00",
       "title": "DNS TXT changed for wakingtitan.com",
@@ -78,5 +133,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-10T05:18:34.100030+00:00"
+  "updated": "2026-06-10T05:34:46.321343+00:00"
 }
