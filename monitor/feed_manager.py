@@ -232,24 +232,17 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
     elif t == "external_dns_changed":
         diff = c.get("diff", "")
-        caption = "captured" if diff and '-' not in diff.split('\n')[0] else "changed"
+        first = diff.split('\n')[0] if diff else ""
+        caption = "captured" if diff and not first.startswith('- ') else "changed"
         title = f"DNS {c.get('record_type', '')} {caption} for {c.get('hostname', '')}"
         link = f"https://{c.get('hostname', '')}"
     elif t == "external_robots_txt_changed":
         diff = c.get("diff", "")
-        caption = "captured" if diff and '-' not in diff.split('\n')[0] else "changed"
-        title = f"robots.txt {caption} for {c.get('hostname', '')}"
-        link = c.get("url", f"https://{c.get('hostname', '')}")
-    elif t == "external_content_changed":
-        site = c.get("site", "")
-        items = c.get("items", [])
-        if items:
-            title = items[0].get("title", "") if isinstance(items[0], dict) else str(items[0])
-            link = items[0].get("link", "") if isinstance(items[0], dict) else ""
-        else:
-            title = c.get("detail", f"Content changed on {site}")
-        if not link:
-            link = c.get("url", f"https://{site}")
+        first = diff.split('\n')[0] if diff else ""
+        caption = "captured" if diff and not first.startswith('- ') else "changed"
+        site = c.get("site", c.get("hostname", ""))
+        title = f"robots.txt {caption} for {site}"
+        link = c.get("url", f"https://{site}")
         diff = c.get("diff", "")
     elif t == "external_unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"

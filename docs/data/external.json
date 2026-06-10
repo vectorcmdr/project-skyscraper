@@ -1,4 +1,93 @@
 {
-  "entries": [],
-  "updated": "2026-06-10T00:00:00.000000+00:00"
+  "entries": [
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721625+00:00",
+      "title": "DNS TXT captured for wakingtitan.com",
+      "link": "https://wakingtitan.com",
+      "endpoint": "",
+      "diff": "+ TXT google-site-verification=Rf_AxkXyxhERNnXGVXZ8gt9BrlOrpw0Z9Ryi4mYIy6A\n+ TXT v=spf1 include:servers.mcsv.net ?all",
+      "detail": "DNS TXT captured for wakingtitan.com",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721616+00:00",
+      "title": "DNS NS captured for wakingtitan.com",
+      "link": "https://wakingtitan.com",
+      "endpoint": "",
+      "diff": "+ NS fay.ns.cloudflare.com.\n+ NS lee.ns.cloudflare.com.",
+      "detail": "DNS NS captured for wakingtitan.com",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721606+00:00",
+      "title": "DNS MX captured for wakingtitan.com",
+      "link": "https://wakingtitan.com",
+      "endpoint": "",
+      "diff": "+ MX alt1.aspmx.l.google.com.\n+ MX alt2.aspmx.l.google.com.\n+ MX alt3.aspmx.l.google.com.\n+ MX alt4.aspmx.l.google.com.\n+ MX aspmx.l.google.com.",
+      "detail": "DNS MX captured for wakingtitan.com",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721594+00:00",
+      "title": "DNS AAAA captured for wakingtitan.com",
+      "link": "https://wakingtitan.com",
+      "endpoint": "",
+      "diff": "+ AAAA 2606:4700::6812:22c\n+ AAAA 2606:4700::6812:32c",
+      "detail": "DNS AAAA captured for wakingtitan.com",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721570+00:00",
+      "title": "DNS A captured for wakingtitan.com",
+      "link": "https://wakingtitan.com",
+      "endpoint": "",
+      "diff": "+ A 104.18.2.44\n+ A 104.18.3.44",
+      "detail": "DNS A captured for wakingtitan.com",
+      "author": 0,
+      "site": "wakingtitan"
+    },
+    {
+      "type": "external_robots_txt_changed",
+      "timestamp": "2026-06-10T17:36:44.721523+00:00",
+      "title": "robots.txt captured for theskyscraperarchitect-ywvhk.wordpress.com",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com/robots.txt",
+      "endpoint": "",
+      "diff": "+ User-agent: *\n+ Disallow: /\n+ \n+ # This file was generated on Mon, 08 Jun 2026 15:28:53 +0000",
+      "detail": "Initial robots.txt capture for theskyscraperarchitect-ywvhk.wordpress.com",
+      "author": 0,
+      "site": "tower"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721490+00:00",
+      "title": "DNS CNAME captured for theskyscraperarchitect-ywvhk.wordpress.com",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+      "endpoint": "",
+      "diff": "+ CNAME lb.wordpress.com.",
+      "detail": "DNS CNAME captured for theskyscraperarchitect-ywvhk.wordpress.com",
+      "author": 0,
+      "site": "tower"
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-10T17:36:44.721414+00:00",
+      "title": "DNS A captured for theskyscraperarchitect-ywvhk.wordpress.com",
+      "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+      "endpoint": "",
+      "diff": "+ A 192.0.78.12\n+ A 192.0.78.13",
+      "detail": "DNS A captured for theskyscraperarchitect-ywvhk.wordpress.com",
+      "author": 0,
+      "site": "tower"
+    }
+  ],
+  "updated": "2026-06-10T17:36:44.721644+00:00"
 }
