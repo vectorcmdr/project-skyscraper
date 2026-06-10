@@ -298,6 +298,30 @@ def build_graph(state: dict) -> dict:
             if tpath and tpath in node_ids and tpath != path:
                 links.append({"source": path, "target": tpath})
 
+    # Dataset links: connect event posts to their parent dataset post by sharing the same title
+    title_to_posts = {}
+    for path, info in known_pages.items():
+        if path not in node_ids:
+            continue
+        title = info.get("title", "")
+        if title:
+            title_to_posts.setdefault(title, []).append(path)
+    for title, paths in title_to_posts.items():
+        if len(paths) < 2:
+            continue
+        # Pick the main post as the one WITHOUT an event date in its path
+        main = None
+        events = []
+        for p in paths:
+            if re.search(r'/event-\d{8}', p):
+                events.append(p)
+            elif main is None:
+                main = p
+        if main and events:
+            for ep in events:
+                if ep != main:
+                    links.append({"source": ep, "target": main})
+
     # URL path hierarchy fallback: if node A's path is a subdirectory of
     # node B's, link them.  Only applied to nodes with zero connections
     # so far.
