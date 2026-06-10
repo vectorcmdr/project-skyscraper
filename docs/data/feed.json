@@ -2,6 +2,17 @@
   "entries": [
     {
       "type": "api_items_added",
+      "timestamp": "2026-06-10T09:22:05.535303+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": ""
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-06-10T09:00:02.016763+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/06/25/event-25062016/",
@@ -2722,5 +2733,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-10T09:00:02.018338+00:00"
+  "updated": "2026-06-10T09:22:05.536596+00:00"
 }
