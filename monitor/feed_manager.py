@@ -223,13 +223,15 @@ def _change_to_feed_entry(c: dict) -> dict | None:
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
     elif t == "external_dns_changed":
-        title = f"DNS {c.get('record_type', '')} changed for {c.get('hostname', '')}"
+        diff = c.get("diff", "")
+        caption = "captured" if diff and '-' not in diff.split('\n')[0] else "changed"
+        title = f"DNS {c.get('record_type', '')} {caption} for {c.get('hostname', '')}"
         link = f"https://{c.get('hostname', '')}"
-        diff = c.get("diff", "")
     elif t == "external_robots_txt_changed":
-        title = f"robots.txt changed for {c.get('hostname', '')}"
-        link = c.get("url", f"https://{c.get('hostname', '')}")
         diff = c.get("diff", "")
+        caption = "captured" if diff and '-' not in diff.split('\n')[0] else "changed"
+        title = f"robots.txt {caption} for {c.get('hostname', '')}"
+        link = c.get("url", f"https://{c.get('hostname', '')}")
     elif t == "external_content_changed":
         site = c.get("site", "")
         items = c.get("items", [])

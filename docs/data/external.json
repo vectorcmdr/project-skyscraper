@@ -3,7 +3,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448641+00:00",
-      "title": "DNS TXT changed for wakingtitan.com",
+      "title": "DNS TXT captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ TXT ['google-site-verification=Rf_AxkXyxhERNnXGVXZ8gt9BrlOrpw0Z9Ryi4mYIy6A', 'v=spf1 include:servers.mcsv.net ?all']",
@@ -14,7 +14,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448634+00:00",
-      "title": "DNS NS changed for wakingtitan.com",
+      "title": "DNS NS captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ NS ['fay.ns.cloudflare.com.', 'lee.ns.cloudflare.com.']",
@@ -25,7 +25,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448627+00:00",
-      "title": "DNS MX changed for wakingtitan.com",
+      "title": "DNS MX captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ MX ['alt1.aspmx.l.google.com.', 'alt2.aspmx.l.google.com.', 'alt3.aspmx.l.google.com.', 'alt4.aspmx.l.google.com.', 'aspmx.l.google.com.']",
@@ -36,7 +36,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448619+00:00",
-      "title": "DNS AAAA changed for wakingtitan.com",
+      "title": "DNS AAAA captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ AAAA ['2606:4700::6812:22c', '2606:4700::6812:32c']",
@@ -47,7 +47,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448610+00:00",
-      "title": "DNS A changed for wakingtitan.com",
+      "title": "DNS A captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ A ['104.18.2.44', '104.18.3.44']",
@@ -58,7 +58,7 @@
     {
       "type": "external_robots_txt_changed",
       "timestamp": "2026-06-10T05:47:38.448600+00:00",
-      "title": "robots.txt changed for ",
+      "title": "robots.txt captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com/robots.txt",
       "endpoint": "",
       "diff": "+ User-agent: *\n+ Disallow: /\n+ \n+ # This file was generated on Mon, 08 Jun 2026 15:28:53 +0000",
@@ -69,7 +69,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448587+00:00",
-      "title": "DNS CNAME changed for theskyscraperarchitect-ywvhk.wordpress.com",
+      "title": "DNS CNAME captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
       "endpoint": "",
       "diff": "+ CNAME ['lb.wordpress.com.']",
@@ -80,7 +80,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:47:38.448553+00:00",
-      "title": "DNS A changed for theskyscraperarchitect-ywvhk.wordpress.com",
+      "title": "DNS A captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
       "endpoint": "",
       "diff": "+ A ['192.0.78.12', '192.0.78.13']",
@@ -102,7 +102,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372961+00:00",
-      "title": "DNS TXT changed for wakingtitan.com",
+      "title": "DNS TXT captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ TXT ['google-site-verification=Rf_AxkXyxhERNnXGVXZ8gt9BrlOrpw0Z9Ryi4mYIy6A', 'v=spf1 include:servers.mcsv.net ?all']",
@@ -113,7 +113,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372900+00:00",
-      "title": "DNS NS changed for wakingtitan.com",
+      "title": "DNS NS captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ NS ['fay.ns.cloudflare.com.', 'lee.ns.cloudflare.com.']",
@@ -124,7 +124,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372886+00:00",
-      "title": "DNS MX changed for wakingtitan.com",
+      "title": "DNS MX captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ MX ['alt1.aspmx.l.google.com.', 'alt2.aspmx.l.google.com.', 'alt3.aspmx.l.google.com.', 'alt4.aspmx.l.google.com.', 'aspmx.l.google.com.']",
@@ -135,7 +135,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372877+00:00",
-      "title": "DNS AAAA changed for wakingtitan.com",
+      "title": "DNS AAAA captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ AAAA ['2606:4700::6812:22c', '2606:4700::6812:32c']",
@@ -146,7 +146,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372869+00:00",
-      "title": "DNS A changed for wakingtitan.com",
+      "title": "DNS A captured for wakingtitan.com",
       "link": "https://wakingtitan.com",
       "endpoint": "",
       "diff": "+ A ['104.18.2.44', '104.18.3.44']",
@@ -190,7 +190,7 @@
     {
       "type": "external_robots_txt_changed",
       "timestamp": "2026-06-10T05:40:41.372823+00:00",
-      "title": "robots.txt changed for ",
+      "title": "robots.txt captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com/robots.txt",
       "endpoint": "",
       "diff": "+ User-agent: *\nDisallow: /\n\n# This file was generated on Mon, 08 Jun 2026 15:28:53 +0000\n",
@@ -201,7 +201,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372626+00:00",
-      "title": "DNS CNAME changed for theskyscraperarchitect-ywvhk.wordpress.com",
+      "title": "DNS CNAME captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
       "endpoint": "",
       "diff": "+ CNAME ['lb.wordpress.com.']",
@@ -212,7 +212,7 @@
     {
       "type": "external_dns_changed",
       "timestamp": "2026-06-10T05:40:41.372590+00:00",
-      "title": "DNS A changed for theskyscraperarchitect-ywvhk.wordpress.com",
+      "title": "DNS A captured for theskyscraperarchitect-ywvhk.wordpress.com",
       "link": "https://theskyscraperarchitect-ywvhk.wordpress.com",
       "endpoint": "",
       "diff": "+ A ['192.0.78.12', '192.0.78.13']",
