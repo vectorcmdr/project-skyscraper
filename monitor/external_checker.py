@@ -69,23 +69,23 @@ def _check_site_dns(hostname: str, site_state: dict, site_label: str = "") -> li
         new = records.get(rtype, [])
         if old != new:
             dns_state[rtype] = new
-            if old:
-                diff_lines = []
-                old_set, new_set = set(old), set(new)
-                for v in sorted(old_set - new_set):
-                    diff_lines.append(f"- {rtype} {v}")
-                for v in sorted(new_set - old_set):
-                    diff_lines.append(f"+ {rtype} {v}")
-                changes.append({
-                    "type": "external_dns_changed",
-                    "site": hostname,
-                    "site_label": site_label,
-                    "hostname": hostname,
-                    "record_type": rtype,
-                    "diff": "\n".join(diff_lines),
-                    "detail": f"DNS {rtype} record changed for {hostname}",
-                })
-                log(f"  DNS {rtype} changed for {hostname}: {' '.join(diff_lines)}", "CHECK")
+            diff_lines = []
+            old_set, new_set = set(old), set(new)
+            for v in sorted(old_set - new_set):
+                diff_lines.append(f"- {rtype} {v}")
+            for v in sorted(new_set - old_set):
+                diff_lines.append(f"+ {rtype} {v}")
+            caption = "captured" if not old else "changed"
+            changes.append({
+                "type": "external_dns_changed",
+                "site": hostname,
+                "site_label": site_label,
+                "hostname": hostname,
+                "record_type": rtype,
+                "diff": "\n".join(diff_lines),
+                "detail": f"DNS {rtype} {caption} for {hostname}",
+            })
+            log(f"  DNS {rtype} {caption} for {hostname}: {' '.join(diff_lines)}", "CHECK")
 
     return changes
 
