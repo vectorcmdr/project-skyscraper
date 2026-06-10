@@ -138,17 +138,14 @@
       })
       .on('mouseenter', function (event, d) {
         if (d.type === 'sitemap') return;
-        if (isolateNode || _filterActive) return;
-        highlightConnections(d, true);
+        if (!isolateNode && !_filterActive) highlightConnections(d, true);
         showHoverCard(event, d);
       })
       .on('mousemove', function (event) {
-        if (isolateNode || _filterActive) return;
         moveHoverCard(event);
       })
       .on('mouseleave', function () {
-        if (isolateNode || _filterActive) return;
-        resetHighlights();
+        if (!isolateNode && !_filterActive) resetHighlights();
         hideHoverCard();
       });
 
