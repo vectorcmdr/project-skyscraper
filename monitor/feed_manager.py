@@ -255,6 +255,8 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
         link = f"https://{c.get('site', '')}/"
         diff = f"HTTP {c.get('status', '?')}"
+    elif t.startswith("external_"):
+        return None
     else:
         return None
 
