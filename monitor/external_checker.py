@@ -139,7 +139,7 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_
             "url": robots_url,
             "diff": _diff_text(
                 site_state.get("robots_txt", {}).get("content", ""),
-                content, "robots.txt"
+                content
             ),
             "detail": f"robots.txt changed for {hostname}",
         })
@@ -150,28 +150,25 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_
             "site": hostname,
             "site_label": site_label,
             "url": robots_url,
-            "diff": f"+ {content[:2000]}",
+            "diff": "\n".join("+ " + line for line in content.splitlines()),
             "detail": f"Initial robots.txt capture for {hostname}",
         })
 
     site_state.setdefault("robots_txt", {})
     site_state["robots_txt"]["hash"] = new_hash
-    site_state["robots_txt"]["content"] = content[:5000]
+    site_state["robots_txt"]["content"] = content
     site_state["robots_txt"]["last_checked"] = datetime.now(timezone.utc).isoformat()
 
     return changes
 
 
-def _diff_text(old_text: str, new_text: str, label: str = "") -> str:
+def _diff_text(old_text: str, new_text: str) -> str:
     import difflib
     old_lines = old_text.splitlines(keepends=True)
     new_lines = new_text.splitlines(keepends=True)
     diff_iter = difflib.unified_diff(old_lines, new_lines, n=3, lineterm="")
     lines = list(diff_iter)[2:]
-    result = "\n".join(lines)
-    if len(result) > 2000:
-        result = result[:1997] + "..."
-    return result
+    return "\n".join(lines)
 
 
 def _check_wp_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
