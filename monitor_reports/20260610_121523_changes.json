@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-06-10 12:15:23 UTC",
+  "category": "changes",
+  "data": {
+    "count": 2,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+        "old_hash": "e66965a09ed6075af38a8992dac58c88",
+        "new_hash": "578fad0775d18c964d6a8dc9261a3b97",
+        "detail": "Content changed: https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
+            "diff": "@@ -169,24 +169,16 @@\n <link rel='shortlink' href='https://wp.me/PhdnFZ-ku' />\n\n \t<style></style>\n\n \t\t<!-- Analytics by WP Statistics - https://wp-statistics.com -->\n\n+<meta name=\"description\" content=\"Sky is not the limit\" />\n\n \n\n <!-- Jetpack Open Graph Tags -->\n\n <meta property=\"og:type\" content=\"article\" />\n\n <meta property=\"og:title\" content=\"Report: BRUSSELS\" />\n\n <meta property=\"og:url\" content=\"https://project-skyscraper.com/report-bru-ent-reunion-peak/\" />\n\n-<meta property=\"og:description\" content=\"Visit the post for more.\" />\n\n <meta property=\"article:published_time\" content=\"2026-06-06T20:42:00+00:00\" />\n\n <meta property=\"article:modified_time\" content=\"2026-06-06T20:36:12+00:00\" />\n\n <meta property=\"og:site_name\" content=\"project-skyscraper\" />\n\n-<meta property=\"og:image\" content=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=512%2C512&#038;ssl=1\" />\n\n-<meta property=\"og:image:width\" content=\"512\" />\n\n-<meta property=\"og:image:height\" content=\"512\" />\n\n-<meta property=\"og:image:alt\" content=\"\" />\n\n <meta property=\"og:locale\" content=\"en_US\" />\n\n-<meta name=\"twitter:text:title\" content=\"Protected: Report: BRUSSELS\" />\n\n-<meta name=\"twitter:image\" content=\"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=240%2C240&amp;ssl=1\" />\n\n-<meta name=\"twitter:card\" content=\"summary\" />\n\n-<meta name=\"twitter:description\" content=\"Visit the post for more.\" />\n\n \n\n <!-- End Jetpack Open Graph Tags -->\n\n <style class=\"wp-fonts-local\">\n\n@@ -229,51 +221,10 @@\n </div>\n\n \n\n \n\n... (57 more lines)"
+          }
+        ],
+        "author": 279180095
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "old_hash": "7d80a810e0c8db4ca46552546535a8d2",
+        "new_hash": "f2b963ef02c897579d20daaa55e6db94",
+        "detail": "Content changed: https://project-skyscraper.com/request-memory-timestamp-094317/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/request-memory-timestamp-094317/",
+            "diff": "@@ -34,12 +34,6 @@\n \n\n </style>\n\n-<style id=\"wp-block-button-inline-css\">\n\n-\n\n-</style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=15.9' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=15.9' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \n\n@@ -149,7 +143,7 @@\n </style>\n\n <link rel='stylesheet' id='all-css-bbd697e9e44873ede353c5e40ca59056' href='https://project-skyscraper.com/wp-content/plugins/gravatar-enhanced/build/patterns-view.css' type='text/css' media='all' />\n\n <style id=\"core-block-supports-inline-css\">\n\n </style>\n\n <link rel='stylesheet' id='all-css-bad00ea205979c34f3df0fa2a1d34152' href='https://project-skyscraper.com/wp-content/themes/perenne/style.css' type='text/css' media='all' />\n\n@@ -171,31 +165,16 @@\n <link rel='shortlink' href='https://wp.me/PhdnFZ-sE' />\n\n \t<style></style>\n\n \t\t<!-- Analytics by WP Statistics - https://wp-statistics.com -->\n\n-<script id=\"wp-importmap\" type=\"importmap\">{\n\n-    \"imports\": {\n\n-        \"@wordpress/interactivity\": \"https://project-skyscraper.com/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\"\n\n-    }\n\n-}</script>\n\n-<script id=\"jp-forms-view-js-module\" src=\"https://project-skyscraper.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=15.9\" type=\"module\"></script>\n\n-<link rel=\"modulepreload\" href=\"https://project-skyscraper.com/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n-<meta name=\"description\" content=\"Protocol Information: Memory_reconstruction_engine: Active (Deprecated) Status: Memory bloc addition authorized Warning: Risk of unstable memory anchoring increased Instructions: Injecting data from multiple sources increases the chances of anchoring\" />\n\n+<meta name=\"description\" content=\"Sky is not the limit\" />\n\n \n\n... (264 more lines)"
+          }
+        ],
+        "author": 279180095
+      }
+    ]
+  }
+}

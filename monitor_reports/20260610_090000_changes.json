@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-06-10 09:00:00 UTC",
+  "category": "changes",
+  "data": {
+    "count": 1,
+    "changes": [
+      {
+        "type": "api_items_added",
+        "endpoint": "/wp-json/wp/v2/posts",
+        "count": 1,
+        "items": [
+          {
+            "id": 811,
+            "title": "2016_dataset",
+            "modified": "2026-06-10T09:46:43",
+            "type": "post",
+            "status": "publish",
+            "link": "https://project-skyscraper.com/2016/06/25/event-25062016/",
+            "author": 279180096,
+            "name": "",
+            "date_gmt": "2016-06-24T23:00:00",
+            "post_parent": 0,
+            "parent": 0,
+            "categories": [
+              6325
+            ],
+            "tags": []
+          }
+        ],
+        "detail": "1 new item(s) in /wp-json/wp/v2/posts"
+      }
+    ]
+  }
+}

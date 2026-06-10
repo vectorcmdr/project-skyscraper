@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-06-10 12:45:29 UTC",
+  "category": "changes",
+  "data": {
+    "count": 11,
+    "changes": [
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/23/event-23102016/",
+        "old_hash": "d778f1ab709bfc4d83b2f6f3b10a3e12",
+        "new_hash": "84810c5357220a061c5005464900bffd",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/23/event-23102016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/23/event-23102016/",
+            "diff": "@@ -267,7 +267,7 @@\n \n\n \n\n \n\n-<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/12/event-12102016/\" rel=\"prev\">Previous</a></div>\n\n+<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/18/event-18102016/\" rel=\"prev\">Previous</a></div>\n\n \n\n <div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/25/event-25102016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/12/event-12102016/",
+        "old_hash": "6e1379c41abd62eee07d3579383331dc",
+        "new_hash": "bb730461a52f02e37d647a9b5846377c",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/12/event-12102016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/12/event-12102016/",
+            "diff": "@@ -267,9 +267,9 @@\n \n\n \n\n \n\n-<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/07/event-07102016/\" rel=\"prev\">Previous</a></div>\n\n-\n\n-<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/23/event-23102016/\" rel=\"next\">Next</a></div></div>\n\n+<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/11/event-11102016/\" rel=\"prev\">Previous</a></div>\n\n+\n\n+<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/18/event-18102016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n </main>\n\n \n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/10/25/event-25102016/",
+        "old_hash": "4d90c1433d7c0c9d625173159983da7b",
+        "new_hash": "5490f2e2d2ac9fb9fc30a7c827d58a15",
+        "detail": "Content changed: https://project-skyscraper.com/2016/10/25/event-25102016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/10/25/event-25102016/",
+            "diff": "@@ -269,7 +269,7 @@\n \n\n <div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/23/event-23102016/\" rel=\"prev\">Previous</a></div>\n\n \n\n-<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\" rel=\"next\">Next</a></div></div>\n\n+<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/10/28/event-28102016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n </main>\n\n \n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/11/07/event-07112016/",
+        "old_hash": "fbbe6e32b1f61cfb159ad00e56c258d9",
+        "new_hash": "a7bce1f0f8c3d120f73e0d03269b96ee",
+        "detail": "Content changed: https://project-skyscraper.com/2016/11/07/event-07112016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/11/07/event-07112016/",
+            "diff": "@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/11/10/event-10112016/",
+        "old_hash": "57e26326d5b371b3ee911de6ad211adb",
+        "new_hash": "5cbac568c7cdc2615f5194b520603130",
+        "detail": "Content changed: https://project-skyscraper.com/2016/11/10/event-10112016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/11/10/event-10112016/",
+            "diff": "@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/11/17/event-17112016/",
+        "old_hash": "7ef03fb339144d0ea19ceb5138eb5d29",
+        "new_hash": "fc34fba02294617758b4231aa1092d7f",
+        "detail": "Content changed: https://project-skyscraper.com/2016/11/17/event-17112016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/11/17/event-17112016/",
+            "diff": "@@ -269,7 +269,7 @@\n \n\n <div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/10/event-10112016/\" rel=\"prev\">Previous</a></div>\n\n \n\n-<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/24/event-24112016/\" rel=\"next\">Next</a></div></div>\n\n+<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/21/event-21112016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n </main>\n\n \n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/11/24/event-24112016/",
+        "old_hash": "c0d888385db5f40e9df92c7c0325173e",
+        "new_hash": "ab5a61e26d4c8a17461a3ee2d0f23688",
+        "detail": "Content changed: https://project-skyscraper.com/2016/11/24/event-24112016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/11/24/event-24112016/",
+            "diff": "@@ -267,7 +267,7 @@\n \n\n \n\n \n\n-<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/17/event-17112016/\" rel=\"prev\">Previous</a></div>\n\n+<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/21/event-21112016/\" rel=\"prev\">Previous</a></div>\n\n \n\n <div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/29/event-29112016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/11/29/event-29112016/",
+        "old_hash": "8916e659f299de00f080e89e8f9e1791",
+        "new_hash": "f57be197480159f85a280e6c5969344e",
+        "detail": "Content changed: https://project-skyscraper.com/2016/11/29/event-29112016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/11/29/event-29112016/",
+            "diff": "@@ -269,7 +269,7 @@\n \n\n <div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/24/event-24112016/\" rel=\"prev\">Previous</a></div>\n\n \n\n-<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/12/05/event-05122016/\" rel=\"next\">Next</a></div></div>\n\n+<div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/12/02/event-02122016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n </main>\n\n \n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,4 +486,3 @@\n </body>\n\n </html>\n\n-\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/12/05/event-05122016/",
+        "old_hash": "cc7ec4032d7b5b24e2ca378986be2e28",
+        "new_hash": "94af58fc482b2f440251e3c41f42fbe3",
+        "detail": "Content changed: https://project-skyscraper.com/2016/12/05/event-05122016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/12/05/event-05122016/",
+            "diff": "@@ -267,7 +267,7 @@\n \n\n \n\n \n\n-<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/11/29/event-29112016/\" rel=\"prev\">Previous</a></div>\n\n+<div class=\"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-aecfe548 wp-block-group-is-layout-flex\"><div class=\"post-navigation-link-previous wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/12/02/event-02122016/\" rel=\"prev\">Previous</a></div>\n\n \n\n <div class=\"post-navigation-link-next wp-block-post-navigation-link\"><a href=\"https://project-skyscraper.com/2016/12/11/event-11122016/\" rel=\"next\">Next</a></div></div>\n\n </div>\n\n@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/12/11/event-11122016/",
+        "old_hash": "dbe19890d1b90c8c184de59c61e0a743",
+        "new_hash": "af7c4df166a8f16e9960ef3d37bf4dd5",
+        "detail": "Content changed: https://project-skyscraper.com/2016/12/11/event-11122016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/12/11/event-11122016/",
+            "diff": "@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,3 +486,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      },
+      {
+        "type": "page_content_changed",
+        "url": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+        "old_hash": "8438ce81556ed7ca3e2ba1654dd18c14",
+        "new_hash": "6d24e12637bb9f218f0c80ad1baadfbd",
+        "detail": "Content changed: https://project-skyscraper.com/2016/12/14/event-14122016/",
+        "diffs": [
+          {
+            "url": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+            "diff": "@@ -280,7 +280,7 @@\n \n\n <footer class=\"wp-block-template-part\">\n\n <div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n\n-<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 63/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n+<p class=\"wp-block-paragraph\">Memory unstable. Recovery in progress.<br><br>Memory_bloc_restoration: 101/365 Completed<br>Memory_bloc_verification: 0/365 Completed</p>\n\n </div>\n\n </footer></div>\n\n </div>\n\n@@ -486,3 +486,4 @@\n </body>\n\n </html>\n\n+\n"
+          }
+        ],
+        "author": 279180096
+      }
+    ]
+  }
+}
