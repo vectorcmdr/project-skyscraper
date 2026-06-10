@@ -44,12 +44,12 @@ function renderDiff(raw) {
 
 /* ── RENDER FEED ───────────────────────────────────────── */
 function renderFeed(entries) {
-  const el = document.getElementById('feedEntries');
+  const container = document.getElementById('feedEntries');
   if (!entries.length) {
-    el.innerHTML = '<div class="empty-msg">no changes recorded yet</div>';
+    container.innerHTML = '<div class="empty-msg">no changes recorded yet</div>';
     return;
   }
-  el.innerHTML = entries.map(e => {
+  container.innerHTML = entries.map(e => {
     const icon = e.type === 'added' || e.type.endsWith('_added') ? '+' : e.type === 'removed' || e.type.endsWith('_removed') ? '−' : '~';
     const tagCls = `tag tag-${e.type}`;
     return `
@@ -72,13 +72,13 @@ function renderFeed(entries) {
   }).join('');
 
   /* Diff toggle */
-  document.querySelectorAll('.diff-toggle').forEach(el => {
-    el.addEventListener('click', () => {
-      const id = el.dataset.idx;
-      const diffEl = document.getElementById('diff-' + id);
+  container.querySelectorAll('.diff-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.dataset.idx;
+      var diffEl = document.getElementById('diff-' + id);
       if (diffEl) {
         diffEl.classList.toggle('hidden');
-        el.innerHTML = diffEl.classList.contains('hidden') ? '&#9654; diff' : '&#9660; diff';
+        btn.innerHTML = diffEl.classList.contains('hidden') ? '\u25B4 diff' : '\u25BE diff';
       }
     });
   });
@@ -126,12 +126,12 @@ function filterManifest() {
 
 /* ── RENDER EXTERNAL ───────────────────────────────────── */
 function renderExternal(entries) {
-  const el = document.getElementById('externalEntries');
+  const container = document.getElementById('externalEntries');
   if (!entries.length) {
-    el.innerHTML = '<div class="empty-msg">no external events recorded yet</div>';
+    container.innerHTML = '<div class="empty-msg">no external events recorded yet</div>';
     return;
   }
-  el.innerHTML = entries.map(e => {
+  container.innerHTML = entries.map(e => {
     const tagCls = `tag tag-${e.type}`;
     return `
       <div class="card">
@@ -152,13 +152,13 @@ function renderExternal(entries) {
       </div>`;
   }).join('');
 
-  document.querySelectorAll('.diff-toggle').forEach(el => {
-    el.addEventListener('click', () => {
-      const id = el.dataset.idx;
-      const diffEl = document.getElementById('diff-ext-' + id);
+  container.querySelectorAll('.diff-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.dataset.idx;
+      var diffEl = document.getElementById('diff-ext-' + id);
       if (diffEl) {
         diffEl.classList.toggle('hidden');
-        el.innerHTML = diffEl.classList.contains('hidden') ? '&#9654; diff' : '&#9660; diff';
+        btn.innerHTML = diffEl.classList.contains('hidden') ? '\u25B4 diff' : '\u25BE diff';
       }
     });
   });
