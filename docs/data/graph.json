@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T23:47:51.651743+00:00",
+  "updated": "2026-06-10T00:17:51.024013+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1262,6 +1262,22 @@
       "type": "external",
       "label": "2",
       "url": "https://project-skyscraper.com/page/2/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/request-memory-timestamp-094317/context.image.src",
+      "type": "external",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/request-memory-timestamp-094317/context.submission.url",
+      "type": "external",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -3654,6 +3670,14 @@
     {
       "source": "/request-memory-timestamp-094317",
       "target": "/"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.submission.url"
+    },
+    {
+      "source": "/request-memory-timestamp-094317",
+      "target": "/request-memory-timestamp-094317/context.image.src"
     },
     {
       "source": "/2026/05/27/sec-log-185027",
