@@ -20,12 +20,13 @@ from monitor.page_checker import check_page_content, get_page_check_batch
 from monitor.media_checker import check_media
 from monitor.id_prober import probe_unpublished
 from monitor.discord_notifier import notify_changes, notify_trace_change
-from monitor.feed_manager import generate_site_data, seed_feed_from_mirror
+from monitor.feed_manager import generate_site_data, generate_external_data, seed_feed_from_mirror
 from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
 from monitor.report_writer import clean_old_reports, write_monitor_report
 from monitor.discovery import fetch_and_save, fetch_protected_page
+from monitor.external_checker import check_external_sites
 
 
 def _sync_state_hashes_to_mirror(state: dict):
@@ -124,6 +125,12 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
         except Exception as e:
             log(f"Error probing unpublished: {e}", "ERROR")
 
+        try:
+            changes = check_external_sites(state)
+            all_changes.extend(changes)
+        except Exception as e:
+            log(f"Error checking external sites: {e}", "ERROR")
+
     save_state(state)
 
     if all_changes:
@@ -137,11 +144,13 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             if always_capture:
                 notify_changes(always_capture, state)
                 generate_site_data(state, always_capture)
+                generate_external_data(state, always_capture)
         else:
             log(f"=== Processing {len(all_changes)} change(s) ===", "FETCH")
             _apply_changes(all_changes)
             notify_changes(all_changes, state)
             generate_site_data(state, all_changes)
+            generate_external_data(state, all_changes)
             rebuild_on_change(all_changes, state)
             meaningful = [c for c in all_changes if c.get("type") in MEANINGFUL_CHANGE_TYPES]
             if meaningful:

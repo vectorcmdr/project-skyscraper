@@ -71,6 +71,31 @@ def generate_site_data(state: dict, changes: list):
     log(f"Site data written: {len(feed['entries'])} feed entries, {len(manifest['pages'])} manifest pages", "FILE")
 
 
+def generate_external_data(state: dict, changes: list):
+    path = DATA_DIR / "external.json"
+    data = {"entries": []}
+    if path.is_file():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            data = {"entries": []}
+    data.setdefault("entries", [])
+
+    for c in changes:
+        t = c.get("type", "")
+        if t.startswith("external_"):
+            entry = _change_to_feed_entry(c)
+            if entry:
+                data["entries"].append(entry)
+
+    data["entries"] = data["entries"][-500:]
+    data["entries"].sort(key=lambda e: e.get("timestamp", ""), reverse=True)
+    data["updated"] = datetime.now(timezone.utc).isoformat()
+
+    _write_if_changed(path, data, "entries")
+    log(f"External data written: {sum(1 for e in data['entries'] if e['type'].startswith('external_'))} external entries", "FILE")
+
+
 def seed_feed_from_mirror(state: dict):
     feed_path = DATA_DIR / "feed.json"
     if feed_path.is_file():
@@ -197,6 +222,25 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         author = c.get("author", 0)
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
+    elif t == "external_dns_changed":
+        title = f"DNS {c.get('record_type', '')} changed for {c.get('hostname', '')}"
+        link = f"https://{c.get('hostname', '')}"
+        diff = c.get("diff", "")
+    elif t == "external_robots_txt_changed":
+        title = f"robots.txt changed for {c.get('hostname', '')}"
+        link = c.get("url", f"https://{c.get('hostname', '')}")
+        diff = c.get("diff", "")
+    elif t == "external_content_changed":
+        site = c.get("site", "")
+        items = c.get("items", [])
+        if items:
+            title = items[0].get("title", "") if isinstance(items[0], dict) else str(items[0])
+            link = items[0].get("link", "") if isinstance(items[0], dict) else ""
+        else:
+            title = c.get("detail", f"Content changed on {site}")
+        if not link:
+            link = c.get("url", f"https://{site}")
+        diff = c.get("diff", "")
     else:
         return None
 

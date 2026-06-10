@@ -37,6 +37,7 @@
     <div class="tabs">
       <button class="tab active" data-tab="feed">Change Log</button>
       <button class="tab" data-tab="manifest">Known Pages</button>
+      <button class="tab" data-tab="external">External Factors</button>
     </div>
 
     <!-- LEFT: Changes feed -->
@@ -58,6 +59,21 @@
         </select>
       </div>
       <div id="manifestEntries"></div>
+    </section>
+
+    <!-- EXTERNAL FACTORS -->
+    <section class="external" id="external">
+      <h2>&#9654; EXTERNAL FACTORS</h2>
+      <div class="manifest-controls">
+        <input type="text" id="externalSearch" placeholder="search site or type…" class="search-input">
+        <select id="externalFilter" class="search-input">
+          <option value="all">all types</option>
+          <option value="dns">DNS</option>
+          <option value="robots">robots.txt</option>
+          <option value="content">content</option>
+        </select>
+      </div>
+      <div id="externalEntries"></div>
     </section>
   </div>
 

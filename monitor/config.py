@@ -98,10 +98,30 @@ BINARY_EXTENSIONS = frozenset({
     ".zip", ".gz", ".pdf", ".mp4", ".webm", ".mp3",
 })
 
+EXTERNAL_SITES = {
+    "wakingtitan.com": {
+        "url": "https://wakingtitan.com",
+        "type": "generic",
+        "label": "WAKING TITAN",
+    },
+    "theskyscraperarchitect-ywvhk.wordpress.com": {
+        "url": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+        "type": "wordpress",
+        "label": "ARCHITECT WP",
+    },
+}
+
+EXTERNAL_CHECK_INTERVAL = 7200  # every 2 hours
+EXTERNAL_LONG_POLL_INTERVAL = 43200  # DNS deep check every 12h
+
 MEANINGFUL_CHANGE_TYPES = frozenset({
     "api_items_added",
     "api_items_modified",
     "api_items_removed",
+    "external_content_changed",
+    "external_dns_changed",
+    "external_robots_txt_changed",
+    "external_unpublished_detected",
     "media_orphan_upload",
     "media_replaced",
     "media_thumbnail_changed",

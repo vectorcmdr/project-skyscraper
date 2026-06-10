@@ -5,6 +5,7 @@ const SITE_LIVE  = 'https://project-skyscraper.com';
 /* ── STATE ─────────────────────────────────────────────── */
 let feed     = [];    /* changes feed, newest-first */
 let manifest = [];    /* all known pages/posts */
+let external = [];    /* external factors feed */
 let avatarUrl = '../favicon.jpg';
 
 /* ── HELPERS ───────────────────────────────────────────── */
@@ -123,12 +124,67 @@ function filterManifest() {
   renderManifest(filtered);
 }
 
+/* ── RENDER EXTERNAL ───────────────────────────────────── */
+function renderExternal(entries) {
+  const el = document.getElementById('externalEntries');
+  if (!entries.length) {
+    el.innerHTML = '<div class="empty-msg">no external events recorded yet</div>';
+    return;
+  }
+  el.innerHTML = entries.map(e => {
+    const tagCls = `tag tag-${e.type}`;
+    return `
+      <div class="card">
+        <img src="${esc(avatarUrl)}" alt="" class="card-avatar" loading="lazy">
+        <div class="card-body">
+          ${e.link
+            ? `<a href="${esc(e.link)}" target="_blank" rel="noopener" class="card-title">${esc(e.title || e.detail || 'untitled')}</a>`
+            : `<span class="card-title card-title--no-link">${esc(e.title || e.detail || 'untitled')}</span>`}
+          <div class="card-meta">
+            <span class="${tagCls}">${e.type.replace('external_', 'ext:')}</span>
+            ${fmtBoth(e.timestamp)}
+            ${e.detail ? `<span>${esc(e.detail.substring(0, 120))}</span>` : ''}
+            ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
+          </div>
+          ${e.diff ? `<div class="card-diff hidden" id="diff-ext-${e._idx}"><pre class="diff-block">${renderDiff(e.diff)}</pre></div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  document.querySelectorAll('.diff-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      const id = el.dataset.idx;
+      const diffEl = document.getElementById('diff-ext-' + id);
+      if (diffEl) {
+        diffEl.classList.toggle('hidden');
+        el.innerHTML = diffEl.classList.contains('hidden') ? '&#9654; diff' : '&#9660; diff';
+      }
+    });
+  });
+}
+
+/* ── FILTER EXTERNAL ───────────────────────────────────── */
+function filterExternal() {
+  const q   = document.getElementById('externalSearch').value.toLowerCase();
+  const typ = document.getElementById('externalFilter').value;
+  let filtered = external;
+  if (typ !== 'all') filtered = filtered.filter(e => e.type.includes(typ));
+  if (q) filtered = filtered.filter(e =>
+    (e.title && e.title.toLowerCase().includes(q)) ||
+    (e.detail && e.detail.toLowerCase().includes(q)) ||
+    (e.type && e.type.toLowerCase().includes(q)) ||
+    (e.site && e.site.toLowerCase().includes(q))
+  );
+  renderExternal(filtered);
+}
+
 /* ── LOAD DATA ─────────────────────────────────────────── */
 async function load() {
   try {
-    const [feedResp, manifestResp] = await Promise.all([
+    const [feedResp, manifestResp, externalResp] = await Promise.all([
       fetch(`${DATA_ROOT}/feed.json`),
       fetch(`${DATA_ROOT}/manifest.json`),
+      fetch(`${DATA_ROOT}/external.json`),
     ]);
     if (feedResp.ok) {
       const raw = await feedResp.json();
@@ -141,7 +197,13 @@ async function load() {
       manifest.sort((a, b) => new Date(b.modified) - new Date(a.modified));
       renderManifest(manifest);
     }
-    if (feedResp.ok || manifestResp.ok) {
+    if (externalResp.ok) {
+      const raw = await externalResp.json();
+      external = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
+      external.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      renderExternal(external);
+    }
+    if (feedResp.ok || manifestResp.ok || externalResp.ok) {
       document.getElementById('statusBadge').textContent = '\u25CF ONLINE';
       document.getElementById('statusBadge').className = 'topbar-status status-online';
     }
@@ -154,13 +216,15 @@ async function load() {
 /* ── EVENTS ────────────────────────────────────────────── */
 document.getElementById('manifestSearch').addEventListener('input', filterManifest);
 document.getElementById('manifestFilter').addEventListener('change', filterManifest);
+document.getElementById('externalSearch').addEventListener('input', filterExternal);
+document.getElementById('externalFilter').addEventListener('change', filterExternal);
 
-/* Tab switching (mobile) */
+/* Tab switching */
 document.querySelectorAll('.tab').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('#feed, #manifest').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('#feed, #manifest, #external').forEach(s => s.classList.remove('active'));
     const target = document.getElementById(btn.dataset.tab);
     if (target) target.classList.add('active');
   });

@@ -179,6 +179,29 @@ def notify_changes(changes: list, state: dict):
                         f"#{c['id']} ({c['endpoint']}) HTTP {c['status']}" for c in clist[:10]
                     )[:1024]}], color=0xaa44ff)
 
+    # External site changes
+    ext_groups = {
+        "external_dns_changed": ("DNS Changes", 0x4488ff),
+        "external_robots_txt_changed": ("robots.txt Changes", 0x88ccff),
+        "external_content_changed": ("External Content Changes", 0x66aaff),
+    }
+    for type_key, (label, color) in ext_groups.items():
+        if type_key in by_type:
+            clist = by_type[type_key]
+            fields = []
+            for c in clist[:5]:
+                site = c.get("site", "?")
+                detail = c.get("detail", "")[:200]
+                diff = c.get("diff", "")[:500]
+                val = f"Site: {site}\n"
+                if detail:
+                    val += f"{detail}\n"
+                if diff:
+                    val += f"```\n{diff}\n```"
+                fields.append({"name": label, "value": val[:1024]})
+            if fields:
+                _send_embed(title=f"{label}: {len(clist)}", description="", fields=fields[:10], color=color)
+
 
 def _resolve_author(user_map: dict, author_id) -> str:
     if not author_id:
