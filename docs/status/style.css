@@ -213,6 +213,7 @@ h2 {
 .card-meta .tag-post     { border-color: #48f; color: #48f; }
 .card-meta .tag-page     { border-color: #8af; color: #8af; }
 .card-meta .tag-attachment { border-color: #a8a; color: #a8a; }
+.card-meta .tag-site { border-color: #48f; color: #48f; text-transform: none; }
 .card-meta-label { color: #555; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; }
 .ts-stack { display: inline-flex; flex-direction: column; line-height: 1.3; }
 .ts-utc   { color: #555; font-size: .65rem; }

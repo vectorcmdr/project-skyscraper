@@ -24,7 +24,7 @@ from monitor.feed_manager import generate_site_data, generate_external_data, see
 from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
-from monitor.report_writer import clean_old_reports, write_monitor_report, refresh_reports
+from monitor.report_writer import clean_old_reports, write_monitor_report
 from monitor.discovery import fetch_and_save, fetch_protected_page
 from monitor.external_checker import check_external_sites
 
@@ -131,11 +131,6 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
         except Exception as e:
             log(f"Error checking external sites: {e}", "ERROR")
 
-        try:
-            refresh_reports(state)
-        except Exception as e:
-            log(f"Error refreshing reports: {e}", "ERROR")
-
     save_state(state)
 
     if all_changes:
@@ -145,7 +140,7 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             log(f"=== Initial sync: {len(all_changes)} change(s) -- mirroring quietly ===", "FETCH")
             _apply_changes(all_changes)
             # Always process new/removed items even during warmup
-            always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added")]
+            always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added", "external_dns_changed", "external_robots_txt_changed", "external_content_changed")]
             if always_capture:
                 notify_changes(always_capture, state)
                 generate_site_data(state, always_capture)

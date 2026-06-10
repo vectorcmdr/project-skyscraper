@@ -253,6 +253,7 @@ def _change_to_feed_entry(c: dict) -> dict | None:
         "diff": diff,
         "detail": c.get("detail", ""),
         "author": author,
+        "site": c.get("site_label", ""),
     }
 
 

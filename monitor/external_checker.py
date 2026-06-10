@@ -15,34 +15,41 @@ from monitor.logger import log
 from monitor.noise_filter import strip_page_noise, is_noise_diff_line
 
 
+SITE_LABELS = {
+    "wakingtitan.com": "wakingtitan",
+    "theskyscraperarchitect-ywvhk.wordpress.com": "tower",
+}
+
+
 def check_external_sites(state: dict) -> list:
     changes = []
     ext_state = state.setdefault("external", {})
 
     for hostname, info in EXTERNAL_SITES.items():
         site_state = ext_state.setdefault(hostname, {})
+        site_label = SITE_LABELS.get(hostname, hostname.split(".")[0])
 
         try:
-            c = _check_site_dns(hostname, site_state)
+            c = _check_site_dns(hostname, site_state, site_label)
             changes.extend(c)
         except Exception as e:
             log(f"  External DNS check failed for {hostname}: {e}", "ERROR")
 
         try:
-            c = _check_site_robots_txt(info["url"], hostname, site_state)
+            c = _check_site_robots_txt(info["url"], hostname, site_state, site_label)
             changes.extend(c)
         except Exception as e:
             log(f"  External robots.txt check failed for {hostname}: {e}", "ERROR")
 
         if info.get("type") == "wordpress":
             try:
-                c = _check_wp_site(info["url"], hostname, site_state)
+                c = _check_wp_site(info["url"], hostname, site_state, site_label)
                 changes.extend(c)
             except Exception as e:
                 log(f"  External WP check failed for {hostname}: {e}", "ERROR")
         else:
             try:
-                c = _check_generic_site(info["url"], hostname, site_state)
+                c = _check_generic_site(info["url"], hostname, site_state, site_label)
                 changes.extend(c)
             except Exception as e:
                 log(f"  External content check failed for {hostname}: {e}", "ERROR")
@@ -52,7 +59,7 @@ def check_external_sites(state: dict) -> list:
     return changes
 
 
-def _check_site_dns(hostname: str, site_state: dict) -> list:
+def _check_site_dns(hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
     dns_state = site_state.setdefault("dns", {})
     records = _resolve_dns(hostname)
@@ -72,6 +79,7 @@ def _check_site_dns(hostname: str, site_state: dict) -> list:
                 changes.append({
                     "type": "external_dns_changed",
                     "site": hostname,
+                    "site_label": site_label,
                     "hostname": hostname,
                     "record_type": rtype,
                     "diff": "\n".join(diff_lines),
@@ -83,8 +91,9 @@ def _check_site_dns(hostname: str, site_state: dict) -> list:
 
 
 def _resolve_dns(hostname: str) -> dict:
+    DNS_TYPES = {"A": 1, "AAAA": 28, "TXT": 16, "CNAME": 5, "MX": 15, "NS": 2}
     results = {}
-    for rtype in ("A", "AAAA", "TXT", "CNAME", "MX", "NS"):
+    for rtype, rtype_num in DNS_TYPES.items():
         try:
             url = f"https://dns.google/resolve?name={urllib.parse.quote(hostname)}&type={rtype}"
             req = urllib.request.Request(url, headers={
@@ -95,9 +104,11 @@ def _resolve_dns(hostname: str) -> dict:
             data = json.loads(resp.read().decode())
             values = []
             for answer in data.get("Answer", []):
+                if answer.get("type") != rtype_num:
+                    continue
                 v = answer.get("data", "")
                 if rtype == "MX":
-                    v = answer.get("data", "").split(" ")[-1] if " " in answer.get("data", "") else v
+                    v = v.split(" ")[-1] if " " in v else v
                 if v:
                     values.append(v)
             results[rtype] = sorted(values)
@@ -108,7 +119,7 @@ def _resolve_dns(hostname: str) -> dict:
     return results
 
 
-def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict) -> list:
+def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
     robots_url = f"{site_url.rstrip('/')}/robots.txt"
     result = fetch(robots_url)
@@ -124,6 +135,7 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict) -> li
         changes.append({
             "type": "external_robots_txt_changed",
             "site": hostname,
+            "site_label": site_label,
             "url": robots_url,
             "diff": f"robots.txt hash: {old_hash[:16]} -> {new_hash[:16]}",
             "detail": f"robots.txt changed for {hostname}",
@@ -138,7 +150,7 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict) -> li
     return changes
 
 
-def _check_wp_site(site_url: str, hostname: str, site_state: dict) -> list:
+def _check_wp_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
 
     wp_endpoints = [
@@ -152,7 +164,7 @@ def _check_wp_site(site_url: str, hostname: str, site_state: dict) -> list:
         api_state = site_state.setdefault("api", {}).setdefault(endpoint, {})
 
         try:
-            c = _check_wp_collection(api_url, endpoint, hostname, api_state, site_state)
+            c = _check_wp_collection(api_url, endpoint, hostname, api_state, site_state, site_label)
             changes.extend(c)
         except Exception as e:
             log(f"  WP collection check failed for {endpoint} on {hostname}: {e}", "ERROR")
@@ -161,7 +173,7 @@ def _check_wp_site(site_url: str, hostname: str, site_state: dict) -> list:
 
 
 def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
-                         api_state: dict, site_state: dict) -> list:
+                         api_state: dict, site_state: dict, site_label: str = "") -> list:
     from monitor.api_collections import _fetch_all_pages, _item_summary
 
     result = fetch(api_url, etag=api_state.get("etag"))
@@ -197,6 +209,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
         changes.append({
             "type": "external_content_changed",
             "site": hostname,
+            "site_label": site_label,
             "endpoint": endpoint,
             "count": len(added_ids),
             "items": added_details[:30],
@@ -208,6 +221,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
         changes.append({
             "type": "external_content_changed",
             "site": hostname,
+            "site_label": site_label,
             "endpoint": endpoint,
             "count": len(removed_ids),
             "items": [],
@@ -227,6 +241,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
         changes.append({
             "type": "external_content_changed",
             "site": hostname,
+            "site_label": site_label,
             "endpoint": endpoint,
             "count": len(changed_items),
             "items": [new_items_map[c[0]] for c in changed_items[:30]],
@@ -241,7 +256,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     return changes
 
 
-def _check_generic_site(site_url: str, hostname: str, site_state: dict) -> list:
+def _check_generic_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
     pages_state = site_state.setdefault("pages", {})
 
@@ -274,6 +289,7 @@ def _check_generic_site(site_url: str, hostname: str, site_state: dict) -> list:
                 changes.append({
                     "type": "external_content_changed",
                     "site": hostname,
+                    "site_label": site_label,
                     "url": url,
                     "diff": diff,
                     "detail": f"Content changed: {url}",

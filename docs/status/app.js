@@ -142,6 +142,7 @@ function renderExternal(entries) {
             : `<span class="card-title card-title--no-link">${esc(e.title || e.detail || 'untitled')}</span>`}
           <div class="card-meta">
             <span class="${tagCls}">${e.type.replace('external_', 'ext:')}</span>
+            ${e.site ? `<span class="tag tag-site">${esc(e.site)}</span>` : ''}
             ${fmtBoth(e.timestamp)}
             ${e.detail ? `<span>${esc(e.detail.substring(0, 120))}</span>` : ''}
             ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
@@ -168,7 +169,13 @@ function filterExternal() {
   const q   = document.getElementById('externalSearch').value.toLowerCase();
   const typ = document.getElementById('externalFilter').value;
   let filtered = external;
-  if (typ !== 'all') filtered = filtered.filter(e => e.type.includes(typ));
+  if (typ !== 'all') {
+    if (typ === 'wakingtitan' || typ === 'tower') {
+      filtered = filtered.filter(e => e.site === typ);
+    } else {
+      filtered = filtered.filter(e => e.type.includes(typ));
+    }
+  }
   if (q) filtered = filtered.filter(e =>
     (e.title && e.title.toLowerCase().includes(q)) ||
     (e.detail && e.detail.toLowerCase().includes(q)) ||
