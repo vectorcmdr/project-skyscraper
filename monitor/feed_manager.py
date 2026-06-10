@@ -81,12 +81,20 @@ def generate_external_data(state: dict, changes: list):
             data = {"entries": []}
     data.setdefault("entries", [])
 
+    existing_keys = set()
+    for e in data["entries"]:
+        k = (e.get("type", ""), e.get("site", ""), e.get("detail", "")[:120])
+        existing_keys.add(k)
+
     for c in changes:
         t = c.get("type", "")
         if t.startswith("external_"):
             entry = _change_to_feed_entry(c)
             if entry:
-                data["entries"].append(entry)
+                k = (entry["type"], entry.get("site", ""), entry.get("detail", "")[:120])
+                if k not in existing_keys:
+                    existing_keys.add(k)
+                    data["entries"].append(entry)
 
     data["entries"] = data["entries"][-500:]
     data["entries"].sort(key=lambda e: e.get("timestamp", ""), reverse=True)
