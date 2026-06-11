@@ -1,0 +1,240 @@
+/* -- TOOLS PAGE SPECIFIC STYLES -- */
+
+body {
+  background: #0a0a0a;
+}
+
+/* ── CYBER EYE PANEL ── */
+.eye-panel {
+  position: relative;
+  float: left;
+  width: 105px;
+  height: 105px;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  flex-shrink: 0;
+}
+.eye-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #d00;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%);
+  pointer-events: none;
+}
+.eye-panel-inner {
+  position: absolute;
+  inset: 2px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%);
+  overflow: hidden;
+  background: #050505;
+}
+.eye-panel-inner canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── CONTENT LAYOUT ── */
+.tools-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.tools-main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+.tools-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.tools-title-area {
+  padding-top: 1.5rem;
+  flex: 1;
+}
+.tools-title {
+  font-size: 1.4rem;
+  letter-spacing: .3em;
+  color: #eee;
+  text-shadow: 0 0 12px rgba(221,0,0,.4);
+}
+.tools-subtitle {
+  color: #666;
+  font-size: .75rem;
+  letter-spacing: .15em;
+  margin-top: .35rem;
+}
+
+/* ── TOOL TABS ── */
+.tool-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #222;
+  margin-bottom: 1.5rem;
+}
+.tool-tab {
+  background: #0d0d0d;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: .7rem 1.5rem;
+  color: #666;
+  font-family: inherit;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.tool-tab:hover {
+  color: #aaa;
+  background: #111;
+}
+.tool-tab.active {
+  color: #d00;
+  border-bottom-color: #d00;
+  background: #0d0d0d;
+}
+
+/* ── TOOL PANES ── */
+.tool-pane {
+  display: none;
+  animation: fadeIn .2s ease;
+}
+.tool-pane.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tool-pane h3 {
+  color: #d00;
+  font-size: .85rem;
+  letter-spacing: .2em;
+  margin-bottom: .5rem;
+}
+.tool-pane p {
+  color: #666;
+  font-size: .7rem;
+  margin-bottom: 1rem;
+  letter-spacing: .05em;
+}
+
+/* ── TOOL INPUT / OUTPUT ── */
+.tool-input-group {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.tool-input {
+  flex: 1;
+  min-width: 200px;
+  background: #0d0d0d;
+  border: 1px solid #222;
+  color: #c0c0c0;
+  padding: .5rem .7rem;
+  font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+  font-size: .8rem;
+  resize: vertical;
+}
+.tool-input:focus {
+  outline: none;
+  border-color: #d00;
+}
+.tool-textarea {
+  min-height: 80px;
+}
+.tool-btn {
+  background: #0d0d0d;
+  border: 1px solid #d00;
+  color: #d00;
+  padding: .5rem 1.2rem;
+  font-family: inherit;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.tool-btn:hover {
+  background: #d00;
+  color: #0a0a0a;
+}
+.tool-output {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-left: 3px solid #d00;
+  padding: .7rem;
+  min-height: 60px;
+  font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+  font-size: .8rem;
+  color: #c0c0c0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.tool-output.is-loading {
+  color: #666;
+  animation: pulse-text 1s ease-in-out infinite;
+}
+@keyframes pulse-text {
+  0%, 100% { opacity: .6; }
+  50% { opacity: .3; }
+}
+.tool-output.is-error {
+  color: #d00;
+  border-left-color: #d00;
+}
+.tool-swap-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #555;
+  padding: .2rem .5rem;
+  font-family: inherit;
+  font-size: .6rem;
+  cursor: pointer;
+  transition: all .15s;
+  letter-spacing: .1em;
+  margin-left: .5rem;
+}
+.tool-swap-btn:hover {
+  border-color: #d00;
+  color: #d00;
+}
+.tool-char-count {
+  font-size: .6rem;
+  color: #444;
+  margin-top: .25rem;
+  letter-spacing: .1em;
+}
+
+@media (max-width: 700px) {
+  .eye-panel {
+    width: 60px;
+    height: 60px;
+    margin: 1rem 1rem 1rem 0;
+  }
+  .tools-header {
+    gap: 1rem;
+  }
+  .tools-title {
+    font-size: 1rem;
+  }
+  .tool-tab {
+    padding: .5rem .8rem;
+    font-size: .6rem;
+  }
+  .tool-input-group {
+    flex-direction: column;
+  }
+  .tool-btn {
+    width: 100%;
+  }
+}

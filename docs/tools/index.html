@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS OPS CENTRE | TOOLS</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="../status/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tools-body">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/TOOLS
+      </a>
+      <span class="trace-status" id="traceStatus"></span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-right-top">
+        <span class="operator-label" id="operatorDisplay"></span>
+        <span class="topbar-status" id="statusBadge">&#9679; ONLINE</span>
+      </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tools-main">
+    <div class="tools-header">
+      <div class="eye-panel">
+        <div class="eye-panel-inner">
+          <canvas id="eyeCanvas"></canvas>
+        </div>
+      </div>
+      <div class="tools-title-area">
+        <h1 class="tools-title">&#9654; OPERATOR TOOLS</h1>
+        <p class="tools-subtitle">SCHOOL_CODE &middot; TRANSLATION &middot; ANALYSIS</p>
+      </div>
+    </div>
+
+    <div class="tool-tabs">
+      <button class="tool-tab active" data-tab="schl_code">SCHL_CODE</button>
+      <button class="tool-tab" data-tab="schl_fr_en">SCHL_FR_EN</button>
+      <button class="tool-tab" data-tab="fr_en">FR_EN</button>
+    </div>
+
+    <!-- PANE: SCHL_CODE -->
+    <div class="tool-pane active" id="pane-schl_code">
+      <h3>&#9654; SCHOOL CIPHER</h3>
+      <p>Apply the PROJECT SKYSCRAPER substitution cipher. Decrypts ciphertext to plaintext or encrypts plaintext to ciphertext using the KEY mapping: ABCDEFGHIJKLMNOPQRSTUVWXYZ &harr; MINDFAGEBJRLHCVPQSKYUWOXTZ</p>
+      <div class="tool-input-group">
+        <textarea id="schlCodeInput" class="tool-input tool-textarea" placeholder="enter ciphertext or plaintext..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-btn" onclick="runSchlCode()">RUN</button>
+        <button class="tool-swap-btn" id="schlCodeMode" onclick="toggleSchlMode()">DECRYPT</button>
+      </div>
+      <div class="tool-output" id="schlCodeOutput">(no input)</div>
+      <div class="tool-char-count" id="schlCodeCount">0 chars</div>
+    </div>
+
+    <!-- PANE: SCHL_FR_EN -->
+    <div class="tool-pane" id="pane-schl_fr_en">
+      <h3>&#9654; SCHOOL CIPHER + FR&rarr;EN</h3>
+      <p>Decrypt the ciphertext with the SCHOOL cipher, then translate the result from French to English via MyMemory API.</p>
+      <div class="tool-input-group">
+        <textarea id="schlFrEnInput" class="tool-input tool-textarea" placeholder="enter encrypted french text..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-btn" onclick="runSchlFrEn()">DECIPHER + TRANSLATE</button>
+      </div>
+      <div class="tool-output" id="schlFrEnOutput">(no input)</div>
+      <div class="tool-char-count" id="schlFrEnCount">0 chars</div>
+    </div>
+
+    <!-- PANE: FR_EN -->
+    <div class="tool-pane" id="pane-fr_en">
+      <h3>&#9654; FRENCH &harr; ENGLISH</h3>
+      <p>Translate between French and English via MyMemory API.</p>
+      <div class="tool-input-group">
+        <textarea id="frEnInput" class="tool-input tool-textarea" placeholder="enter text to translate..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-btn" onclick="runFrEn()">TRANSLATE</button>
+        <button class="tool-swap-btn" id="frEnDirection" onclick="toggleFrEnDirection()">EN&rarr;FR</button>
+      </div>
+      <div class="tool-output" id="frEnOutput">(no input)</div>
+      <div class="tool-char-count" id="frEnCount">0 chars</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
