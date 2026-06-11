@@ -382,18 +382,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-.tsconv-date-input {
-  flex: 0 0 140px;
-  min-width: 120px;
-}
-.tsconv-time-input {
-  flex: 0 0 90px;
-  min-width: 70px;
-}
-.tsconv-epoch-input {
-  flex: 1;
-  min-width: 200px;
-}
 .tsconv-date-picker {
   background: #0d0d0d;
   border: 1px solid #222;
@@ -413,6 +401,14 @@ body {
 .tsconv-date-picker::-webkit-calendar-picker-indicator {
   filter: invert(0.7);
   cursor: pointer;
+}
+.tsconv-time-input {
+  flex: 0 0 90px;
+  min-width: 70px;
+}
+.tsconv-epoch-input {
+  flex: 1;
+  min-width: 200px;
 }
 
 @media (max-width: 700px) {
@@ -453,9 +449,8 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
-  .tsconv-date-input,
-  .tsconv-time-input,
   .tsconv-date-picker,
+  .tsconv-time-input,
   .tsconv-epoch-input {
     flex: 1;
     min-width: 0;

@@ -143,16 +143,15 @@ function toggleFrEnDirection() {
 
 /* ── TOOL: TS_CONV (Timestamp Converter) ──────────────── */
 
-function _parseDateDMY(str) {
-  if (!str || !str.trim()) return null;
-  var parts = str.trim().split('-');
+function _parseDate(value) {
+  if (!value) return null;
+  var parts = value.split('-');
   if (parts.length !== 3) return null;
-  var day = parseInt(parts[0], 10);
-  var month = parseInt(parts[1], 10) - 1;
-  var year = parseInt(parts[2], 10);
-  if (isNaN(day) || isNaN(month) || isNaN(year)) return null;
-  if (day < 1 || day > 31 || month < 0 || month > 11) return null;
-  return { day: day, month: month, year: year };
+  return {
+    year: parseInt(parts[0], 10),
+    month: parseInt(parts[1], 10) - 1,
+    day: parseInt(parts[2], 10)
+  };
 }
 
 function _parseTime(str) {
@@ -169,26 +168,6 @@ function _pad2(n) {
   return n < 10 ? '0' + n : '' + n;
 }
 
-function _syncDateInputToPicker(dateInputId, pickerId) {
-  var di = document.getElementById(dateInputId);
-  var dp = document.getElementById(pickerId);
-  if (!di || !dp) return;
-  var d = _parseDateDMY(di.value);
-  if (d) {
-    dp.value = d.year + '-' + _pad2(d.month + 1) + '-' + _pad2(d.day);
-  }
-}
-
-function _syncPickerToDateInput(pickerId, dateInputId) {
-  var dp = document.getElementById(pickerId);
-  var di = document.getElementById(dateInputId);
-  if (!dp || !di || !dp.value) return;
-  var parts = dp.value.split('-');
-  if (parts.length === 3) {
-    di.value = _pad2(parseInt(parts[2], 10)) + '-' + _pad2(parseInt(parts[1], 10)) + '-' + parts[0];
-  }
-}
-
 function runTsConvDate() {
   var dateInput = document.getElementById('tsConvDateInput');
   var timeInput = document.getElementById('tsConvTimeInput');
@@ -196,16 +175,16 @@ function runTsConvDate() {
   var modeEl = document.getElementById('tsConvDateMode');
   if (!dateInput || !output || !modeEl) return;
 
-  var dateStr = dateInput.value;
+  var dateVal = dateInput.value;
   var timeStr = timeInput ? timeInput.value : '';
 
-  if (!dateStr || !dateStr.trim()) {
+  if (!dateVal) {
     output.textContent = '(enter a date)';
     return;
   }
 
-  var d = _parseDateDMY(dateStr);
-  if (!d) { output.textContent = 'invalid date format (use DD-MM-YYYY)'; return; }
+  var d = _parseDate(dateVal);
+  if (!d) { output.textContent = 'invalid date'; return; }
 
   var t = _parseTime(timeStr);
   var isUTC = modeEl.textContent === 'UTC';
@@ -274,13 +253,12 @@ function _initTsConv() {
   var now = new Date();
   var di = document.getElementById('tsConvDateInput');
   var ti = document.getElementById('tsConvTimeInput');
-  if (di) di.value = _pad2(now.getDate()) + '-' + _pad2(now.getMonth() + 1) + '-' + now.getFullYear();
+  if (di) di.value = now.getFullYear() + '-' + _pad2(now.getMonth() + 1) + '-' + _pad2(now.getDate());
   if (ti) ti.value = _pad2(now.getHours()) + ':' + _pad2(now.getMinutes()) + ':' + _pad2(now.getSeconds());
 
   var ei = document.getElementById('tsConvEpochInput');
   if (ei) ei.value = Math.floor(now.getTime() / 1000);
 
-  _syncDateInputToPicker('tsConvDateInput', 'tsConvDatePicker');
   runTsConvDate();
   runTsConvEpoch();
 }
@@ -885,11 +863,9 @@ function setupEnterTriggers() {
 
   var ddi = document.getElementById('tsConvDateInput');
   var dti = document.getElementById('tsConvTimeInput');
-  var dpk = document.getElementById('tsConvDatePicker');
   var eei = document.getElementById('tsConvEpochInput');
-  if (ddi) ddi.addEventListener('input', function() { _syncDateInputToPicker('tsConvDateInput', 'tsConvDatePicker'); runTsConvDate(); });
+  if (ddi) ddi.addEventListener('input', runTsConvDate);
   if (dti) dti.addEventListener('input', runTsConvDate);
-  if (dpk) dpk.addEventListener('input', function() { _syncPickerToDateInput('tsConvDatePicker', 'tsConvDateInput'); runTsConvDate(); });
   if (eei) eei.addEventListener('input', runTsConvEpoch);
 }
 
