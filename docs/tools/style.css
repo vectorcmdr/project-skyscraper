@@ -113,6 +113,7 @@ body {
   letter-spacing: .04em;
   flex: 1;
   min-width: 150px;
+  font-size: .8rem;
 }
 .query-input {
   background: #0a0a0a;
