@@ -209,6 +209,21 @@ body {
   color: #d00;
   border-left-color: #d00;
 }
+.translate-links {
+  display: block;
+  padding-top: .5rem;
+  font-size: .7rem;
+  letter-spacing: .1em;
+}
+.translate-links a {
+  color: #d00;
+  text-decoration: none;
+  transition: color .15s;
+}
+.translate-links a:hover {
+  color: #ff4444;
+  text-decoration: underline;
+}
 .tool-swap-btn {
   background: transparent;
   border: 1px solid #333;

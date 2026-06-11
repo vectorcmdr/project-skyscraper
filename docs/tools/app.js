@@ -24,58 +24,10 @@ function schoolCodeEncrypt(text) {
   return substitute(text, KEY, ALPHA);
 }
 
-/* ── TRANSLATION (LibreTranslate) ──────────────────────── */
-var TRANS_CHUNK = 2000;
-
-function translate(text, langpair) {
-  var parts = langpair.split('|');
-  return fetch('https://translate.argosopentech.com/translate', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ q: text, source: parts[0], target: parts[1], format: 'text' })
-  }).then(function(r) { return r.json(); }).then(function(data) {
-    if (data.error) throw new Error(data.error);
-    return data.translatedText;
-  });
-}
-
-function translateLong(text, langpair, onChunk) {
-  if (text.length <= TRANS_CHUNK) return translate(text, langpair);
-
-  var chunks = [];
-  var pos = 0;
-  while (pos < text.length) {
-    var end = Math.min(pos + TRANS_CHUNK, text.length);
-    if (end < text.length) {
-      var split = -1;
-      for (var i = end; i > pos + TRANS_CHUNK * 0.6; i--) {
-        var c = text[i];
-        if (c === '.' || c === '!' || c === '?' || c === '\n') { split = i + 1; break; }
-      }
-      if (split <= pos) {
-        for (var i = end; i > pos + TRANS_CHUNK * 0.6; i--) {
-          if (text[i] === ' ') { split = i + 1; break; }
-        }
-      }
-      if (split > pos) end = split;
-    }
-    chunks.push(text.substring(pos, end).trim());
-    pos = end;
-  }
-
-  var results = [];
-  var remaining = chunks.length;
-  if (onChunk) onChunk(0, chunks.length);
-  var promises = chunks.map(function(chunk, i) {
-    return translate(chunk, langpair).then(function(r) {
-      results[i] = r;
-      remaining--; var done = chunks.length - remaining;
-      if (onChunk) onChunk(done, chunks.length);
-      return r;
-    });
-  });
-  return Promise.all(promises).then(function() { return results.join(' '); });
-}
+/* ── TRANSLATION (Bergamot WASM) ───────────────────────────
+ *   window.translateText(text, from, to) is loaded by
+ *   translator/bergamot.js as a module script.
+ */
 
 /* ── TOOL: SCHL_CODE ───────────────────────────────────── */
 function runSchlCode() {
@@ -109,7 +61,8 @@ function toggleSchlMode() {
 }
 
 /* ── TOOL: SCHL_FR_EN ──────────────────────────────────── */
-function runSchlFrEn() {
+var schlFrEnReqId = 0;
+async function runSchlFrEn() {
   var input = document.getElementById('schlFrEnInput');
   var output = document.getElementById('schlFrEnOutput');
   if (!input || !output) return;
@@ -117,25 +70,28 @@ function runSchlFrEn() {
   var text = input.value;
   if (!text) { output.textContent = '(no input)'; return; }
 
+  var reqId = ++schlFrEnReqId;
   var decrypted = schoolCodeDecrypt(text);
-  output.className = 'tool-output is-loading';
-  output.textContent = 'translating...';
 
-  translateLong(decrypted, 'fr|en', function(done, total) {
-    output.textContent = 'translating... ' + done + '/' + total;
-  }).then(function(translated) {
+  output.className = 'tool-output is-loading';
+  output.textContent = 'Decrypted: ' + decrypted + '\n\nInitializing translator (downloading models ~18 MB on first use)...';
+
+  try {
+    var result = await window.translateText(decrypted, 'fr', 'en');
+    if (reqId !== schlFrEnReqId) return;
     output.className = 'tool-output';
-    output.textContent = decrypted + '\n\u2500'.repeat(40) + '\n' + translated;
-  })
-    .catch(function(err) {
-      output.className = 'tool-output is-error';
-      output.textContent = 'Translation error: ' + err.message + '\n\nDecrypted text:\n' + decrypted;
-    });
+    output.textContent = decrypted + '\n\n\u2192 ' + result;
+  } catch (e) {
+    if (reqId !== schlFrEnReqId) return;
+    output.className = 'tool-output is-error';
+    output.textContent = decrypted + '\n\nTranslation error: ' + e.message;
+  }
   updateCharCount('schlFrEnCount', text.length);
 }
 
 /* ── TOOL: FR_EN (reverse) ─────────────────────────────── */
-function runFrEn() {
+var frEnReqId = 0;
+async function runFrEn() {
   var input = document.getElementById('frEnInput');
   var output = document.getElementById('frEnOutput');
   var direction = document.getElementById('frEnDirection');
@@ -144,20 +100,23 @@ function runFrEn() {
   var text = input.value;
   if (!text) { output.textContent = '(no input)'; return; }
 
-  var langpair = direction.textContent === 'EN\u2192FR' ? 'en|fr' : 'fr|en';
-  output.className = 'tool-output is-loading';
-  output.textContent = 'translating...';
+  var reqId = ++frEnReqId;
+  var from = direction.textContent === 'EN\u2192FR' ? 'en' : 'fr';
+  var to = direction.textContent === 'EN\u2192FR' ? 'fr' : 'en';
 
-  translateLong(text, langpair, function(done, total) {
-    output.textContent = 'translating... ' + done + '/' + total;
-  }).then(function(translated) {
+  output.className = 'tool-output is-loading';
+  output.textContent = 'Initializing translator (downloading models ~18 MB on first use)...';
+
+  try {
+    var result = await window.translateText(text, from, to);
+    if (reqId !== frEnReqId) return;
     output.className = 'tool-output';
-    output.textContent = text + '\n\u2500'.repeat(40) + '\n' + translated;
-  })
-    .catch(function(err) {
-      output.className = 'tool-output is-error';
-      output.textContent = 'Translation error: ' + err.message;
-    });
+    output.textContent = result;
+  } catch (e) {
+    if (reqId !== frEnReqId) return;
+    output.className = 'tool-output is-error';
+    output.textContent = 'Translation error: ' + e.message;
+  }
   updateCharCount('frEnCount', text.length);
 }
 

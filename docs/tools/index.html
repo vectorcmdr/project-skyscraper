@@ -70,7 +70,7 @@
     <!-- PANE: SCHL_FR_EN -->
     <div class="tool-pane" id="pane-schl_fr_en">
       <h3>&#9654; SCHOOL CIPHER + FR&rarr;EN</h3>
-      <p>Decrypt the ciphertext with the SCHOOL cipher, then translate the result from French to English via MyMemory API.</p>
+      <p>Decrypt the ciphertext with the SCHOOL cipher, then translate the result from French to English via on-device WASM (Bergamot). Models download once (~18 MB) then run locally.</p>
       <div class="tool-input-group">
         <textarea id="schlFrEnInput" class="tool-input tool-textarea" placeholder="enter encrypted french text..." spellcheck="false" autocomplete="off"></textarea>
         <button class="tool-btn" onclick="runSchlFrEn()">DECIPHER + TRANSLATE</button>
@@ -82,7 +82,7 @@
     <!-- PANE: FR_EN -->
     <div class="tool-pane" id="pane-fr_en">
       <h3>&#9654; FRENCH &harr; ENGLISH</h3>
-      <p>Translate between French and English via MyMemory API.</p>
+      <p>Translate between French and English via on-device WASM (Bergamot). Models download once (~18 MB) then run locally with no server round-trips.</p>
       <div class="tool-input-group">
         <textarea id="frEnInput" class="tool-input tool-textarea" placeholder="enter text to translate..." spellcheck="false" autocomplete="off"></textarea>
         <button class="tool-btn" onclick="runFrEn()">TRANSLATE</button>
@@ -93,6 +93,7 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script type="module" src="translator/bergamot.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
