@@ -307,7 +307,6 @@ def build_graph(state: dict) -> dict:
             if len(parts) > 3:
                 parent_candidate = "/" + "/".join(parts[:-1])
                 if parent_candidate in node_ids and parent_candidate != path:
-                    # Check not already linked
                     already = any(
                         l.get("source") == path and l.get("target") == parent_candidate
                         for l in links
