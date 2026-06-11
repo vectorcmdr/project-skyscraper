@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-06-11T15:19:08.196113+00:00",
+      "title": "4 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "4 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-11T15:19:08.196011+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "4 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-11T15:13:07.715924+00:00",
       "title": "",
@@ -3690,5 +3712,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-11T15:13:07.718368+00:00"
+  "updated": "2026-06-11T15:19:08.198706+00:00"
 }
