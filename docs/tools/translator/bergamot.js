@@ -36,8 +36,8 @@ class DecompressingBacking extends TranslatorBacking {
         if (result.done) break;
         chunks.push(result.value);
         received += result.value.byteLength;
-        if (contentLength > 0 && window._updateDownloadProgress) {
-          window._updateDownloadProgress(received, contentLength);
+        if (contentLength > 0 && window._addDownloadProgress) {
+          window._addDownloadProgress(result.value.byteLength);
         }
       }
 
@@ -99,26 +99,36 @@ window.translateText = async function(text, from, to) {
   return response.target.text;
 };
 
-/* ── Download progress bar ──────────────────────────────── */
+/* ── Download progress bar (accumulated across all model files) ── */
 
-window._updateDownloadProgress = function(received, total) {
+var _dlTotal = 0;
+var _dlReceived = 0;
+
+window._initDownloadProgress = function(totalBytes) {
+  _dlTotal = totalBytes;
+  _dlReceived = 0;
   var bar = document.getElementById('downloadProgressBar');
   var text = document.getElementById('downloadProgressText');
   var container = document.getElementById('downloadProgress');
-  if (!bar || !text || !container) return;
-  container.style.display = 'flex';
-  var pct = Math.round(received / total * 100);
-  bar.style.width = pct + '%';
-  text.textContent = pct + '%';
-  if (received >= total) {
-    setTimeout(function() {
-      container.style.display = 'none';
-      bar.style.width = '0%';
-    }, 600);
-  }
+  if (bar) bar.style.width = '0%';
+  if (text) text.textContent = '0%';
+  if (container) container.style.display = 'flex';
+};
+
+window._addDownloadProgress = function(delta) {
+  if (_dlTotal <= 0) return;
+  _dlReceived += delta;
+  var pct = Math.round(_dlReceived / _dlTotal * 100);
+  if (pct > 100) pct = 100;
+  var bar = document.getElementById('downloadProgressBar');
+  var text = document.getElementById('downloadProgressText');
+  if (bar) bar.style.width = pct + '%';
+  if (text) text.textContent = pct + '%';
 };
 
 window._showDownloadProgress = function() {
+  _dlTotal = 26324715;
+  _dlReceived = 0;
   var bar = document.getElementById('downloadProgressBar');
   var text = document.getElementById('downloadProgressText');
   var container = document.getElementById('downloadProgress');
@@ -158,7 +168,7 @@ window.acceptTranslationDownload = async function() {
   localStorage.setItem('translation_consent', 'yes');
   hideConsent();
   setStatus('Downloading translation module (~26 MB)...');
-  window._showDownloadProgress();
+  window._initDownloadProgress(26324715);
   try {
     var t = await getTranslator();
     await t.translate({ from: 'fr', to: 'en', text: 'bonjour', html: false });
