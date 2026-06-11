@@ -74,7 +74,7 @@ async function runSchlFrEn() {
   var decrypted = schoolCodeDecrypt(text);
 
   output.className = 'tool-output is-loading';
-  output.textContent = 'Decrypted: ' + decrypted + '\n\nInitializing translator (downloading models ~18 MB on first use)...';
+  output.textContent = 'Decrypted: ' + decrypted + '\n\nInitializing translator (downloading models ~26 MB on first use)...';
 
   try {
     var result = await window.translateText(decrypted, 'fr', 'en');
@@ -105,7 +105,7 @@ async function runFrEn() {
   var to = direction.textContent === 'EN\u2192FR' ? 'fr' : 'en';
 
   output.className = 'tool-output is-loading';
-  output.textContent = 'Initializing translator (downloading models ~18 MB on first use)...';
+  output.textContent = 'Initializing translator (downloading models ~26 MB on first use)...';
 
   try {
     var result = await window.translateText(text, from, to);

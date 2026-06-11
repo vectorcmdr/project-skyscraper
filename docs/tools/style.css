@@ -69,10 +69,10 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .tools-title-area {
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   flex: 1;
 }
 .tools-title {
@@ -93,7 +93,7 @@ body {
   display: flex;
   gap: 0;
   border-bottom: 1px solid #222;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 .tool-tab {
   background: #0d0d0d;
@@ -135,12 +135,12 @@ body {
   color: #d00;
   font-size: .85rem;
   letter-spacing: .2em;
-  margin-bottom: .5rem;
+  margin-bottom: 0.2rem;
 }
 .tool-pane p {
   color: #666;
   font-size: .7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: .05em;
 }
 
@@ -148,7 +148,7 @@ body {
 .tool-input-group {
   display: flex;
   gap: .5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
 }
 .tool-input {
@@ -189,8 +189,8 @@ body {
   background: #0d0d0d;
   border: 1px solid #222;
   border-left: 3px solid #d00;
-  padding: .7rem;
-  min-height: 60px;
+  padding: .5rem .7rem;
+  min-height: 40px;
   font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
   font-size: .8rem;
   color: #c0c0c0;
@@ -305,22 +305,29 @@ body {
   .fp-panel {
     width: 44px;
     height: 60px;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   .eye-panel {
     width: 60px;
     height: 60px;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
   .tools-header {
     gap: 1rem;
+    margin-bottom: 0.25rem;
   }
   .tools-title {
     font-size: 1rem;
   }
+  .tools-title-area {
+    padding-top: 0.25rem;
+  }
   .tool-tab {
-    padding: .5rem .8rem;
-    font-size: .6rem;
+    padding: .4rem .6rem;
+    font-size: .55rem;
+  }
+  .tool-tabs {
+    margin-bottom: 0.4rem;
   }
   .tool-input-group {
     flex-direction: column;
