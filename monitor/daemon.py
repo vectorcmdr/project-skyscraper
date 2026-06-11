@@ -8,6 +8,15 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
+
+if sys.platform == "win32":
+    import ctypes
+    _kernel32 = ctypes.windll.kernel32
+    _handler = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_uint)
+    def _console_handler(dwCtrlType):
+        return True
+    _kernel32.SetConsoleCtrlHandler(_handler(_console_handler), True)
+
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
     MEANINGFUL_CHANGE_TYPES, DATA_DIR, PASSWORD_PROTECTED_PAGES,
