@@ -37,11 +37,11 @@ function runSchlCode() {
   if (!input || !output) return;
 
   var text = input.value;
-  var mode = modeEl ? modeEl.textContent : 'DECRYPT';
+  var mode = modeEl ? modeEl.textContent : 'MODE: DECRYPT';
 
   if (!text) { output.textContent = '(no input)'; return; }
 
-  if (mode === 'DECRYPT') {
+  if (mode === 'MODE: DECRYPT') {
     output.textContent = schoolCodeDecrypt(text);
   } else {
     output.textContent = schoolCodeEncrypt(text);
@@ -52,10 +52,10 @@ function runSchlCode() {
 function toggleSchlMode() {
   var btn = document.getElementById('schlCodeMode');
   if (!btn) return;
-  if (btn.textContent === 'DECRYPT') {
-    btn.textContent = 'ENCRYPT';
+  if (btn.textContent === 'MODE: DECRYPT') {
+    btn.textContent = 'MODE: ENCRYPT';
   } else {
-    btn.textContent = 'DECRYPT';
+    btn.textContent = 'MODE: DECRYPT';
   }
   runSchlCode();
 }
