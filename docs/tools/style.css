@@ -365,6 +365,56 @@ body {
   text-align: right;
 }
 
+/* ── TIMESTAMP CONVERTER ── */
+.tsconv-section {
+  margin-bottom: 1rem;
+}
+.tsconv-section h4 {
+  color: #d00;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  margin-bottom: .5rem;
+}
+.tsconv-input-row {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: .5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tsconv-date-input {
+  flex: 0 0 140px;
+  min-width: 120px;
+}
+.tsconv-time-input {
+  flex: 0 0 90px;
+  min-width: 70px;
+}
+.tsconv-epoch-input {
+  flex: 1;
+  min-width: 200px;
+}
+.tsconv-date-picker {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  color: #c0c0c0;
+  padding: .4rem .5rem;
+  font-family: inherit;
+  font-size: .7rem;
+  cursor: pointer;
+  flex: 0 0 150px;
+  min-width: 120px;
+  color-scheme: dark;
+}
+.tsconv-date-picker:focus {
+  outline: none;
+  border-color: #d00;
+}
+.tsconv-date-picker::-webkit-calendar-picker-indicator {
+  filter: invert(0.7);
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .fp-panel {
     width: 44px;
@@ -397,6 +447,18 @@ body {
     flex-direction: column;
   }
   .tool-btn {
+    width: 100%;
+  }
+  .tsconv-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tsconv-date-input,
+  .tsconv-time-input,
+  .tsconv-date-picker,
+  .tsconv-epoch-input {
+    flex: 1;
+    min-width: 0;
     width: 100%;
   }
 }

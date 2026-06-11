@@ -52,6 +52,7 @@
       <button class="tool-tab active" data-tab="schl_code">SCHL_CODE</button>
       <button class="tool-tab" data-tab="schl_fr_en">SCHL_FR_EN</button>
       <button class="tool-tab" data-tab="fr_en">FR_EN</button>
+      <button class="tool-tab" data-tab="ts_conv">TS_CONV</button>
     </div>
 
     <!-- PANE: SCHL_CODE -->
@@ -102,6 +103,36 @@
         <button class="copy-btn" data-target="frEnOutput" title="Copy to clipboard">⎘</button>
       </div>
       <div class="tool-char-count" id="frEnCount">0 chars</div>
+    </div>
+    <!-- PANE: TS_CONV -->
+    <div class="tool-pane" id="pane-ts_conv">
+      <h3>&#9654; TIMESTAMP CONVERTER</h3>
+
+      <div class="tsconv-section">
+        <h4>DATE &rarr; EPOCH</h4>
+        <div class="tsconv-input-row">
+          <input type="text" id="tsConvDateInput" class="tool-input tsconv-date-input" placeholder="DD-MM-YYYY" spellcheck="false" autocomplete="off">
+          <input type="date" id="tsConvDatePicker" class="tsconv-date-picker">
+          <input type="text" id="tsConvTimeInput" class="tool-input tsconv-time-input" placeholder="HH:MM:SS" spellcheck="false" autocomplete="off">
+          <button class="tool-swap-btn" id="tsConvDateMode" onclick="toggleTsConvDateMode()">UTC</button>
+        </div>
+        <div class="tool-output-wrap">
+          <div class="tool-output" id="tsConvEpochOutput">(enter a date)</div>
+          <button class="copy-btn" data-target="tsConvEpochOutput" title="Copy epoch">⎘</button>
+        </div>
+      </div>
+
+      <div class="tsconv-section">
+        <h4>EPOCH &rarr; DATE</h4>
+        <div class="tsconv-input-row">
+          <input type="text" id="tsConvEpochInput" class="tool-input tsconv-epoch-input" placeholder="epoch timestamp (seconds)" spellcheck="false" autocomplete="off">
+          <button class="tool-swap-btn" id="tsConvEpochMode" onclick="toggleTsConvEpochMode()">UTC</button>
+        </div>
+        <div class="tool-output-wrap">
+          <div class="tool-output" id="tsConvDateOutput">(enter an epoch)</div>
+          <button class="copy-btn" data-target="tsConvDateOutput" title="Copy date">⎘</button>
+        </div>
+      </div>
     </div>
   </div>
 

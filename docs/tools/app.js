@@ -141,6 +141,150 @@ function toggleFrEnDirection() {
   runFrEn();
 }
 
+/* ── TOOL: TS_CONV (Timestamp Converter) ──────────────── */
+
+function _parseDateDMY(str) {
+  if (!str || !str.trim()) return null;
+  var parts = str.trim().split('-');
+  if (parts.length !== 3) return null;
+  var day = parseInt(parts[0], 10);
+  var month = parseInt(parts[1], 10) - 1;
+  var year = parseInt(parts[2], 10);
+  if (isNaN(day) || isNaN(month) || isNaN(year)) return null;
+  if (day < 1 || day > 31 || month < 0 || month > 11) return null;
+  return { day: day, month: month, year: year };
+}
+
+function _parseTime(str) {
+  if (!str || !str.trim()) return { h: 0, m: 0, s: 0 };
+  var parts = str.trim().split(':');
+  return {
+    h: parseInt(parts[0], 10) || 0,
+    m: parseInt(parts[1], 10) || 0,
+    s: parseInt(parts[2], 10) || 0
+  };
+}
+
+function _pad2(n) {
+  return n < 10 ? '0' + n : '' + n;
+}
+
+function _syncDateInputToPicker(dateInputId, pickerId) {
+  var di = document.getElementById(dateInputId);
+  var dp = document.getElementById(pickerId);
+  if (!di || !dp) return;
+  var d = _parseDateDMY(di.value);
+  if (d) {
+    dp.value = d.year + '-' + _pad2(d.month + 1) + '-' + _pad2(d.day);
+  }
+}
+
+function _syncPickerToDateInput(pickerId, dateInputId) {
+  var dp = document.getElementById(pickerId);
+  var di = document.getElementById(dateInputId);
+  if (!dp || !di || !dp.value) return;
+  var parts = dp.value.split('-');
+  if (parts.length === 3) {
+    di.value = _pad2(parseInt(parts[2], 10)) + '-' + _pad2(parseInt(parts[1], 10)) + '-' + parts[0];
+  }
+}
+
+function runTsConvDate() {
+  var dateInput = document.getElementById('tsConvDateInput');
+  var timeInput = document.getElementById('tsConvTimeInput');
+  var output = document.getElementById('tsConvEpochOutput');
+  var modeEl = document.getElementById('tsConvDateMode');
+  if (!dateInput || !output || !modeEl) return;
+
+  var dateStr = dateInput.value;
+  var timeStr = timeInput ? timeInput.value : '';
+
+  if (!dateStr || !dateStr.trim()) {
+    output.textContent = '(enter a date)';
+    return;
+  }
+
+  var d = _parseDateDMY(dateStr);
+  if (!d) { output.textContent = 'invalid date format (use DD-MM-YYYY)'; return; }
+
+  var t = _parseTime(timeStr);
+  var isUTC = modeEl.textContent === 'UTC';
+
+  var date = isUTC
+    ? new Date(Date.UTC(d.year, d.month, d.day, t.h, t.m, t.s))
+    : new Date(d.year, d.month, d.day, t.h, t.m, t.s);
+
+  var epoch = Math.floor(date.getTime() / 1000);
+  if (isNaN(epoch)) { output.textContent = 'invalid date'; return; }
+
+  output.textContent = epoch;
+}
+
+function runTsConvEpoch() {
+  var epochInput = document.getElementById('tsConvEpochInput');
+  var output = document.getElementById('tsConvDateOutput');
+  var modeEl = document.getElementById('tsConvEpochMode');
+  if (!epochInput || !output || !modeEl) return;
+
+  var val = epochInput.value.trim();
+  if (!val) { output.textContent = '(enter an epoch)'; return; }
+
+  var secs = parseInt(val, 10);
+  if (isNaN(secs)) { output.textContent = 'invalid epoch (must be integer seconds)'; return; }
+
+  var isUTC = modeEl.textContent === 'UTC';
+  var date = new Date(secs * 1000);
+
+  var day, month, year, h, m, s;
+  if (isUTC) {
+    day = _pad2(date.getUTCDate());
+    month = _pad2(date.getUTCMonth() + 1);
+    year = date.getUTCFullYear();
+    h = _pad2(date.getUTCHours());
+    m = _pad2(date.getUTCMinutes());
+    s = _pad2(date.getUTCSeconds());
+  } else {
+    day = _pad2(date.getDate());
+    month = _pad2(date.getMonth() + 1);
+    year = date.getFullYear();
+    h = _pad2(date.getHours());
+    m = _pad2(date.getMinutes());
+    s = _pad2(date.getSeconds());
+  }
+
+  output.textContent = day + '-' + month + '-' + year + ' ' + h + ':' + m + ':' + s;
+}
+
+function toggleTsConvDateMode() {
+  var btn = document.getElementById('tsConvDateMode');
+  if (!btn) return;
+  btn.textContent = btn.textContent === 'UTC' ? 'LOCAL' : 'UTC';
+  runTsConvDate();
+}
+
+function toggleTsConvEpochMode() {
+  var btn = document.getElementById('tsConvEpochMode');
+  if (!btn) return;
+  btn.textContent = btn.textContent === 'UTC' ? 'LOCAL' : 'UTC';
+  runTsConvEpoch();
+}
+
+function _initTsConv() {
+  /* Set default date to today, time to now */
+  var now = new Date();
+  var di = document.getElementById('tsConvDateInput');
+  var ti = document.getElementById('tsConvTimeInput');
+  if (di) di.value = _pad2(now.getDate()) + '-' + _pad2(now.getMonth() + 1) + '-' + now.getFullYear();
+  if (ti) ti.value = _pad2(now.getHours()) + ':' + _pad2(now.getMinutes()) + ':' + _pad2(now.getSeconds());
+
+  var ei = document.getElementById('tsConvEpochInput');
+  if (ei) ei.value = Math.floor(now.getTime() / 1000);
+
+  _syncDateInputToPicker('tsConvDateInput', 'tsConvDatePicker');
+  runTsConvDate();
+  runTsConvEpoch();
+}
+
 /* ── CHAR COUNT ────────────────────────────────────────── */
 function updateCharCount(id, len) {
   var el = document.getElementById(id);
@@ -738,6 +882,15 @@ function setupEnterTriggers() {
   document.getElementById('schlCodeInput').addEventListener('input', runSchlCode);
   document.getElementById('schlFrEnInput').addEventListener('input', debounce(runSchlFrEn, 400));
   document.getElementById('frEnInput').addEventListener('input', debounce(runFrEn, 400));
+
+  var ddi = document.getElementById('tsConvDateInput');
+  var dti = document.getElementById('tsConvTimeInput');
+  var dpk = document.getElementById('tsConvDatePicker');
+  var eei = document.getElementById('tsConvEpochInput');
+  if (ddi) ddi.addEventListener('input', function() { _syncDateInputToPicker('tsConvDateInput', 'tsConvDatePicker'); runTsConvDate(); });
+  if (dti) dti.addEventListener('input', runTsConvDate);
+  if (dpk) dpk.addEventListener('input', function() { _syncPickerToDateInput('tsConvDatePicker', 'tsConvDateInput'); runTsConvDate(); });
+  if (eei) eei.addEventListener('input', runTsConvEpoch);
 }
 
 function debounce(fn, ms) {
@@ -765,4 +918,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setupEnterTriggers();
   runSchlCode();
+  _initTsConv();
 });
