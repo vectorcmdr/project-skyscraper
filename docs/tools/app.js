@@ -270,14 +270,17 @@ function updateCharCount(id, len) {
 }
 
 /* ── COPY TO CLIPBOARD ────────────────────────────────── */
-function copyToClipboard(id) {
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  var id = btn.getAttribute('data-target');
+  if (!id) return;
   var el = document.getElementById(id);
   if (!el) return;
   var text = el.textContent;
   if (!text || text === '(no input)' || text === '(awaiting translation)' || text === '(awaiting cipher output)') return;
-  var btn = document.querySelector('[data-target="' + id + '"]');
+
   function ok() {
-    if (!btn) return;
     btn.classList.add('copied');
     btn.textContent = '\u2713';
     setTimeout(function() {
@@ -285,6 +288,7 @@ function copyToClipboard(id) {
       btn.textContent = '\u2398';
     }, 1500);
   }
+
   var ta = document.createElement('textarea');
   ta.value = text;
   ta.style.position = 'fixed';
@@ -301,11 +305,10 @@ function copyToClipboard(id) {
   var worked = document.execCommand('copy');
   document.body.removeChild(ta);
   if (worked) { ok(); return; }
-  /* If execCommand failed, try the modern API */
   navigator.clipboard.writeText(text).then(ok, function() {
     alert('clipboard copy failed - your browser may require HTTPS');
   });
-}
+});
 
 /* ── TABS ──────────────────────────────────────────────── */
 function switchTab(tabId) {
