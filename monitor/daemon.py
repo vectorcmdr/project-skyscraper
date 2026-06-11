@@ -12,10 +12,10 @@ from datetime import datetime, timezone
 if sys.platform == "win32":
     import ctypes
     _kernel32 = ctypes.windll.kernel32
-    _handler = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_uint)
+    _handler_t = ctypes.WINFUNCTYPE(ctypes.c_int, ctypes.c_uint)
     def _console_handler(dwCtrlType):
-        return True
-    _kernel32.SetConsoleCtrlHandler(_handler(_console_handler), True)
+        return 1
+    _kernel32.SetConsoleCtrlHandler(_handler_t(_console_handler), 1)
 
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
