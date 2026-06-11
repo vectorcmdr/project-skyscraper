@@ -288,16 +288,23 @@ function copyToClipboard(id) {
   var ta = document.createElement('textarea');
   ta.value = text;
   ta.style.position = 'fixed';
-  ta.style.top = '10px';
-  ta.style.left = '10px';
-  ta.style.width = '1px';
-  ta.style.height = '1px';
-  ta.style.opacity = '0';
+  ta.style.top = '100px';
+  ta.style.left = '100px';
+  ta.style.width = '300px';
+  ta.style.height = '50px';
+  ta.style.opacity = '0.01';
+  ta.style.zIndex = '9999';
   document.body.appendChild(ta);
+  ta.focus();
   ta.select();
   ta.setSelectionRange(0, text.length);
-  if (document.execCommand('copy')) { ok(); }
+  var worked = document.execCommand('copy');
   document.body.removeChild(ta);
+  if (worked) { ok(); return; }
+  /* If execCommand failed, try the modern API */
+  navigator.clipboard.writeText(text).then(ok, function() {
+    alert('clipboard copy failed - your browser may require HTTPS');
+  });
 }
 
 /* ── TABS ──────────────────────────────────────────────── */
