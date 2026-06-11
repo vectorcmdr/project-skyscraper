@@ -313,14 +313,15 @@ def daemon_loop(quiet: bool = False):
     run_check_cycle(state, tiers={"fast", "medium", "deep"}, is_initial=True)
     log("Initial sync complete, now monitoring")
 
-    def _on_shutdown(signum, frame):
-        log("Shutting down...")
-        save_state(state)
-        release_lock()
-        log("Monitor stopped")
-        sys.exit(0)
+    if sys.platform != "win32":
+        def _on_shutdown(signum, frame):
+            log("Shutting down...")
+            save_state(state)
+            release_lock()
+            log("Monitor stopped")
+            sys.exit(0)
 
-    signal.signal(signal.SIGINT, _on_shutdown)
+        signal.signal(signal.SIGINT, _on_shutdown)
 
     try:
         while True:
