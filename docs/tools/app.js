@@ -270,7 +270,7 @@ function updateCharCount(id, len) {
 }
 
 /* ── COPY TO CLIPBOARD ────────────────────────────────── */
-window.copyToClipboard = function(id) {
+function copyToClipboard(id) {
   var el = document.getElementById(id);
   if (!el) return;
   var text = el.textContent;
@@ -285,22 +285,20 @@ window.copyToClipboard = function(id) {
       btn.textContent = '\u2398';
     }, 1500);
   }
-  navigator.clipboard.writeText(text).then(ok, function() {
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.top = '0';
-    ta.style.left = '0';
-    ta.style.width = '100px';
-    ta.style.height = '30px';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    ta.setSelectionRange(0, text.length);
-    try { document.execCommand('copy'); ok(); } catch (e) {}
-    document.body.removeChild(ta);
-  });
-};
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.top = '10px';
+  ta.style.left = '10px';
+  ta.style.width = '1px';
+  ta.style.height = '1px';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  if (document.execCommand('copy')) { ok(); }
+  document.body.removeChild(ta);
+}
 
 /* ── TABS ──────────────────────────────────────────────── */
 function switchTab(tabId) {
