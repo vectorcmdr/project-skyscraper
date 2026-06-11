@@ -406,6 +406,185 @@ function switchTab(tabId) {
   animate();
 })();
 
+/* ── SVG PATH UTILITIES (fingerprint seed variation) ──── */
+(function svgUtils() {
+  /* Tokenize SVG path string into {cmd, args} array.
+     Handles implicit repeated commands (same letter omitted). */
+  window._tokenizeSVG = function(str) {
+    var tokens = [];
+    var re = /([MLCQASZTmlcqaszt])|([-+]?\d*\.?\d+(?:[eE][-+]?\d+)?)/g;
+    var m;
+    while ((m = re.exec(str)) !== null) {
+      if (m[1]) {
+        tokens.push({cmd: m[1], args: []});
+      } else {
+        if (tokens.length === 0) continue;
+        tokens[tokens.length - 1].args.push(parseFloat(m[2]));
+      }
+    }
+    return tokens;
+  };
+
+  /* Expand implicit repeated commands into individual operations.
+     a/A: 7 args each, c/C: 6 args each, m/M: first 2 = moveto, rest = lineto,
+     everything else: 2 args each. */
+  window._expandImplicit = function(tokens) {
+    var out = [];
+    for (var i = 0; i < tokens.length; i++) {
+      var t = tokens[i];
+      var cmd = t.cmd, args = t.args, step;
+      if (cmd === 'z' || cmd === 'Z') {
+        out.push({cmd: cmd, args: []});
+        continue;
+      }
+      if (cmd === 'a' || cmd === 'A') step = 7;
+      else if (cmd === 'c' || cmd === 'C') step = 6;
+      else if (cmd === 'm' || cmd === 'M') step = 2;
+      else step = 2;
+
+      for (var j = 0; j < args.length; j += step) {
+        var piece = args.slice(j, j + step);
+        /* After first pair, m/M becomes l/L */
+        var useCmd = cmd;
+        if ((cmd === 'm' || cmd === 'M') && j > 0) {
+          useCmd = cmd === 'm' ? 'l' : 'L';
+        }
+        out.push({cmd: useCmd, args: piece});
+      }
+    }
+    return out;
+  };
+
+  /* Split token array into sub-paths at each M/m command */
+  window._splitSubPaths = function(tokens) {
+    var paths = [], cur = [];
+    for (var i = 0; i < tokens.length; i++) {
+      if ((tokens[i].cmd === 'M' || tokens[i].cmd === 'm') && cur.length > 0) {
+        paths.push(cur);
+        cur = [];
+      }
+      cur.push(tokens[i]);
+    }
+    if (cur.length > 0) paths.push(cur);
+    return paths;
+  };
+
+  /* Build SVG string from sub-paths array */
+  window._buildSVG = function(subPaths) {
+    var parts = [];
+    for (var i = 0; i < subPaths.length; i++) {
+      for (var j = 0; j < subPaths[i].length; j++) {
+        var t = subPaths[i][j];
+        var cmd = t.cmd;
+        var numStr = t.args.map(function(n, idx) {
+          /* Arc flags at positions 3,4 must be integer 0/1 for Path2D */
+          if ((cmd === 'a' || cmd === 'A') && (idx === 3 || idx === 4)) {
+            return n >= 0.5 ? '1' : '0';
+          }
+          if (Math.abs(n) < 0.0005) return '0';
+          var s = n.toFixed(3);
+          /* Strip leading zero for compactness like original SVG */
+          if (s.charAt(0) === '0' && s.length > 1) s = s.slice(1);
+          if (s.charAt(0) === '-' && s.charAt(1) === '0' && s.length > 2) {
+            s = '-' + s.slice(2);
+          }
+          return s;
+        }).join(' ');
+        parts.push(cmd + numStr);
+      }
+    }
+    return parts.join('');
+  };
+
+  /* Jitter coordinates of a sub-path. Returns new sub-path array. */
+  window._jitterSubPath = function(subPath, rng, strength) {
+    return subPath.map(function(t) {
+      var cmd = t.cmd, args = t.args;
+      var jittered = [];
+      for (var i = 0; i < args.length; i++) {
+        var val = args[i];
+        if ((cmd === 'a' || cmd === 'A') && (i === 3 || i === 4)) {
+          /* large-arc-flag and sweep-flag — keep as-is */
+          jittered.push(val);
+        } else {
+          var jit = (rng() - 0.5) * strength * (Math.abs(val) + 0.3);
+          jittered.push(val + jit);
+        }
+      }
+      return {cmd: cmd, args: jittered};
+    });
+  };
+
+  /* Clone a sub-path with scale + position offset.
+     The entire sub-path is repositioned by (ox, oy) in viewBox coords.
+     Relative command coordinates are scaled. */
+  window._cloneSubPath = function(subPath, scale, ox, oy) {
+    var clone = [];
+    for (var i = 0; i < subPath.length; i++) {
+      var t = subPath[i];
+      var args = t.args.slice();
+      var cmd = t.cmd;
+
+      /* Change relative moveto to absolute so we control exact position */
+      if (cmd === 'm') cmd = 'M';
+
+      if (i === 0) {
+        /* Offset the first coordinate pair (the moveto) */
+        if (args.length >= 2) {
+          args[0] = args[0] + ox;
+          args[1] = args[1] + oy;
+        }
+      } else {
+        /* Scale relative coords (dx/dy) */
+        for (var j = 0; j < args.length; j++) {
+          if ((cmd === 'a' || cmd === 'A') && (j === 3 || j === 4)) continue;
+          args[j] = args[j] * scale;
+        }
+      }
+      clone.push({cmd: cmd, args: args});
+    }
+    return clone;
+  };
+
+  /* Full pipeline: parse → split → jitter → add extra ridges → rebuild */
+  window._generateFingerprintPath = function(svgStr, rng) {
+    var tokens = window._expandImplicit(window._tokenizeSVG(svgStr));
+    var subPaths = window._splitSubPaths(tokens);
+
+    /* Jitter each sub-path with per-ridge strength */
+    var jittered = [];
+    for (var i = 0; i < subPaths.length; i++) {
+      var sp = subPaths[i];
+      var strength = 0.04 + rng() * 0.08;
+      jittered.push(window._jitterSubPath(sp, rng, strength));
+    }
+
+    /* Add outer-wrap ridges cloned from the first sub-path (outer contour) */
+    var outerCount = 1 + Math.floor(rng() * 2); /* 1–2 extra rings */
+    for (var i = 0; i < outerCount; i++) {
+      var scale = 1.04 + i * 0.04 + rng() * 0.04;
+      var ox = (rng() - 0.5) * 1.2;
+      var oy = (rng() - 0.5) * 0.8;
+      var clone = window._cloneSubPath(subPaths[0], scale, ox, oy, rng);
+      /* Apply unique jitter to this clone too */
+      clone = window._jitterSubPath(clone, rng, 0.04 + rng() * 0.06);
+      jittered.push(clone);
+    }
+
+    /* Optionally add 1 inner wrap from first sub-path at smaller scale */
+    if (rng() > 0.5) {
+      var innerScale = 0.92 + rng() * 0.04;
+      var ix = (rng() - 0.5) * 0.6;
+      var iy = (rng() - 0.5) * 0.4;
+      var inner = window._cloneSubPath(subPaths[0], innerScale, ix, iy, rng);
+      inner = window._jitterSubPath(inner, rng, 0.03 + rng() * 0.05);
+      jittered.push(inner);
+    }
+
+    return window._buildSVG(jittered);
+  };
+})();
+
 /* ── FINGERPRINT CANVAS ──────────────────────────────── */
 (function initFP() {
   var canvas = document.getElementById('fpCanvas');
@@ -431,73 +610,25 @@ function switchTab(tabId) {
 
   var time = 0;
 
-  /* Seed-derived parameters for the ridge arcs */
-  var coreX = (rng() - 0.5) * 4;
-  var coreY = -12 + rng() * 6;
-  var baseA = 10 + rng() * 3;
-  var baseB = 16 + rng() * 4;
-  var stepA = 3.5 + rng() * 1;
-  var stepB = 3 + rng() * 1;
-  var numRidges = 5 + Math.floor(rng() * 3);
-  var mirror = rng() > 0.5 ? 1 : -1;
-  var arcSpread = 0.7 + rng() * 0.25;
+  /* Reference SVG path data from the fingerprint icon */
+  var fpPathSrc = 'M4.16 20.176a.475.475 0 0 1-.439-.294 9.428 9.428 0 0 1 5-12.11.475.475 0 0 1 .364.875A8.464 8.464 0 0 0 4.6 19.521a.474.474 0 0 1-.259.62.48.48 0 0 1-.18.035zm14.544-2.648c1.52-.571 2.17-2.01 1.74-3.853-.686-2.943-4.361-6.932-9.215-6.447a.475.475 0 1 0 .094.944 8.021 8.021 0 0 1 8.198 5.72 2.143 2.143 0 0 1-1.15 2.747c-.853.32-1.816-.386-2.99-1.343a.474.474 0 1 0-.599.735c.911.743 2.005 1.636 3.158 1.636a2.154 2.154 0 0 0 .764-.14zm-3.785 4.917a.475.475 0 0 0-.237-.627c-3.015-1.361-5.06-4.272-5.078-6.135a1.351 1.351 0 0 1 .754-1.358 2.579 2.579 0 0 1 2.614.342.474.474 0 1 0 .493-.811 3.521 3.521 0 0 0-3.514-.389 2.287 2.287 0 0 0-1.296 2.225c.02 2.147 2.181 5.431 5.636 6.99a.475.475 0 0 0 .628-.237zm4.019-1.766a.475.475 0 0 0-.344-.576c-2.603-.658-5.336-2.514-6.357-4.318a.475.475 0 1 0-.826.468c1.307 2.309 4.486 4.147 6.95 4.77a.48.48 0 0 0 .117.014.475.475 0 0 0 .46-.358zm-9.97 2.22a.475.475 0 0 0 .141-.656c-3.359-5.215-2.254-8.739-.287-10.172 1.93-1.407 5.336-1.247 7.848 1.813a.474.474 0 1 0 .733-.601c-2.88-3.512-6.858-3.64-9.14-1.978-2.3 1.675-3.668 5.68.049 11.452a.474.474 0 0 0 .655.142zM4.85 4.397c1.323-1.234 8.372-4.568 13.677-.33a.474.474 0 1 0 .592-.74c-5.494-4.39-12.897-1.51-14.916.377a.474.474 0 1 0 .647.693zm17.347 8.67a.475.475 0 0 0 .378-.555 10.525 10.525 0 0 0-9.397-8.332 10.523 10.523 0 0 0-11.054 6.63.475.475 0 0 0 .87.38c1.872-4.3 5.64-6.57 10.078-6.067a9.58 9.58 0 0 1 8.57 7.565.475.475 0 0 0 .466.387.496.496 0 0 0 .089-.009z';
 
-  /* Pre-compute belly arc positions (fixed per seed) */
-  var bellyArcsL = [];
-  for (var ri = 0; ri < 3; ri++) {
-    bellyArcsL.push({ bx: 8 + ri * 6 + rng() * 3, by: BH - 10 - ri * 4 });
-  }
-  var bellyArcsR = [];
-  for (var ri = 0; ri < 3; ri++) {
-    bellyArcsR.push({ bx: BW - 8 - ri * 6 - rng() * 3, by: BH - 10 - ri * 4 });
-  }
+  /* Generate seed-variant path string, then compile to Path2D */
+  var fpPathStr = _generateFingerprintPath(fpPathSrc, rng);
+  var fpPath = new Path2D(fpPathStr);
 
-  /* Each ridge is an elliptical arc: from bottom side, around top, to opposite side. */
-  function renderRidges() {
-    for (var ri = 0; ri < numRidges; ri++) {
-      var a = baseA + ri * stepA;
-      var b = baseB + ri * stepB;
-      var lw = 2.4 - ri * 0.1;
-      if (lw < 1) lw = 1;
+  /* Seed-based variations applied as canvas transforms */
+  var flipX = rng() > 0.5 ? 1 : -1;
+  var scaleVal = 3.5 + rng() * 0.5;
+  var rotateVal = (rng() - 0.5) * 0.04;
+  var stretchX = 0.9 + rng() * 0.2;
+  var stretchY = 0.9 + rng() * 0.2;
+  var offsetX = (rng() - 0.5) * 4;
+  var offsetY = (rng() - 0.5) * 3;
+  var lineW = 1.4 + rng() * 0.6;
+  var dashA = 0.6 + rng() * 0.4;
+  var dashB = 0.15 + rng() * 0.15;
 
-      ctx.beginPath();
-      var startAngle = Math.PI * (0.5 + arcSpread * 0.25) * mirror;
-      var endAngle = Math.PI * (1.5 - arcSpread * 0.25) * mirror;
-      if (mirror < 0) {
-        var tmp = startAngle;
-        startAngle = endAngle;
-        endAngle = tmp;
-      }
-      ctx.ellipse(BW / 2 + coreX, BH / 2 + coreY, a, b, 0, startAngle, endAngle);
-      ctx.strokeStyle = 'rgba(200,200,200,0.7)';
-      ctx.lineWidth = lw;
-      ctx.lineCap = 'round';
-      ctx.stroke();
-    }
-
-    /* "Belly" arcs — short arcs at the bottom suggesting continuing ridges */
-    var ri;
-    for (ri = 0; ri < bellyArcsL.length; ri++) {
-      var ba = bellyArcsL[ri];
-      ctx.beginPath();
-      ctx.ellipse(ba.bx, ba.by, 4 - ri * 0.5, 3 - ri * 0.3, 0, 0, Math.PI);
-      ctx.strokeStyle = 'rgba(200,200,200,0.5)';
-      ctx.lineWidth = 1.5 - ri * 0.2;
-      ctx.lineCap = 'round';
-      ctx.stroke();
-    }
-    for (ri = 0; ri < bellyArcsR.length; ri++) {
-      var ba = bellyArcsR[ri];
-      ctx.beginPath();
-      ctx.ellipse(ba.bx, ba.by, 4 - ri * 0.5, 3 - ri * 0.3, 0, Math.PI, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(200,200,200,0.5)';
-      ctx.lineWidth = 1.5 - ri * 0.2;
-      ctx.lineCap = 'round';
-      ctx.stroke();
-    }
-  }
-
-  /* Scan highlight — red box state */
   var scanX = -1, scanY = -1;
   var scanTimer = 4;
   var scanPhase = 0;
@@ -506,7 +637,33 @@ function switchTab(tabId) {
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, BW, BH);
 
-    renderRidges();
+    var s = scaleVal;
+    ctx.save();
+    ctx.translate(BW / 2 + offsetX, BH / 2 + offsetY);
+    ctx.scale(flipX * s * stretchX, s * stretchY);
+    ctx.rotate(rotateVal);
+    ctx.translate(-12, -12);
+
+    /* Faint fill for shape body */
+    ctx.fillStyle = 'rgba(200,200,200,0.08)';
+    ctx.fill(fpPath);
+
+    /* Main ridge stroke with breaks */
+    ctx.setLineDash([dashA, dashB]);
+    ctx.strokeStyle = 'rgba(200,200,200,0.7)';
+    ctx.lineWidth = lineW / s;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.stroke(fpPath);
+
+    /* Thinner detail pass — offset dash for interleaved detail */
+    ctx.setLineDash([dashA * 0.6, dashB * 1.2]);
+    ctx.strokeStyle = 'rgba(180,180,180,0.35)';
+    ctx.lineWidth = (lineW * 0.5) / s;
+    ctx.stroke(fpPath);
+
+    ctx.setLineDash([]);
+    ctx.restore();
 
     /* Red scan box */
     if (scanX >= 0) {

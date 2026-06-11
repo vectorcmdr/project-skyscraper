@@ -236,17 +236,12 @@ body {
   .eye-panel {
     width: 60px;
     height: 60px;
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 0 1rem 0.5rem;
   }
   .fp-panel {
     width: 44px;
     height: 60px;
-    margin: 1rem 1rem 1rem 0.2rem;
-  }
-  .eye-panel {
-    width: 44px;
-    height: 60px;
-    margin: 1rem 0.2rem 1rem 0.5rem;
+    margin: 1rem 1rem 1rem 0;
   }
   .tools-header {
     gap: 1rem;
