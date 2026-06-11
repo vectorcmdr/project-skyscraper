@@ -917,16 +917,30 @@ function submitQuery() {
   setTimeout(pickQuery, 1500);
 }
 
+function _setOnline(online) {
+  var badge = document.getElementById('statusBadge');
+  if (!badge) return;
+  if (online) {
+    badge.textContent = '\u25CF ONLINE';
+    badge.className = 'topbar-status status-online';
+  } else {
+    badge.textContent = '\u25CF OFFLINE';
+    badge.className = 'topbar-status status-offline';
+  }
+}
+
 function initQueryBar() {
   fetch('data/queries.json')
     .then(function(r) { return r.json(); })
     .then(function(list) {
       _queries = list;
       pickQuery();
+      _setOnline(true);
     })
     .catch(function() {
       var el = document.getElementById('queryText');
       if (el) el.textContent = '(queries unavailable)';
+      _setOnline(false);
     });
 
   var inputEl = document.getElementById('queryInput');
