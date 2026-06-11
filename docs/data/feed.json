@@ -2,6 +2,17 @@
   "entries": [
     {
       "type": "api_items_added",
+      "timestamp": "2026-06-11T14:54:59.388407+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "2 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": ""
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-06-11T14:48:57.310479+00:00",
       "title": "",
       "link": "",
@@ -3591,5 +3602,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-11T14:48:57.312504+00:00"
+  "updated": "2026-06-11T14:54:59.389997+00:00"
 }
