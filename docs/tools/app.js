@@ -285,24 +285,21 @@ window.copyToClipboard = function(id) {
       btn.textContent = '\u2398';
     }, 1500);
   }
-  var ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.top = '0';
-  ta.style.left = '0';
-  ta.style.width = '100px';
-  ta.style.height = '30px';
-  ta.style.opacity = '0';
-  ta.style.zIndex = '-1';
-  document.body.appendChild(ta);
-  ta.value = text;
-  ta.select();
-  ta.setSelectionRange(0, text.length);
-  try {
-    document.execCommand('copy');
-    ok();
-  } catch (e) {}
-  document.body.removeChild(ta);
+  navigator.clipboard.writeText(text).then(ok, function() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.style.left = '0';
+    ta.style.width = '100px';
+    ta.style.height = '30px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    try { document.execCommand('copy'); ok(); } catch (e) {}
+    document.body.removeChild(ta);
+  });
 };
 
 /* ── TABS ──────────────────────────────────────────────── */
