@@ -93,6 +93,18 @@
     </div>
   </div>
 
+  <!-- ── TRANSLATION CONSENT DIALOG ── -->
+  <div id="translationConsent" class="consent-overlay">
+    <div class="consent-dialog">
+      <p>This tool requires downloading the translation module (~18 MB). Download now so it's ready to use, or wait and it will download on your first translation attempt.</p>
+      <div class="consent-buttons">
+        <button onclick="acceptTranslationDownload()" class="tool-btn">YES, DOWNLOAD</button>
+        <button onclick="declineTranslationDownload()" class="tool-btn consent-btn-no">NOT NOW</button>
+      </div>
+    </div>
+  </div>
+  <div id="translationStatus" class="translation-status"></div>
+
   <script type="module" src="translator/bergamot.js"></script>
   <script defer src="app.js"></script>
 </body>

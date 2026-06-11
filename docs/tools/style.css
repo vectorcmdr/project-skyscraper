@@ -247,6 +247,60 @@ body {
   letter-spacing: .1em;
 }
 
+/* ── TRANSLATION CONSENT DIALOG ── */
+.consent-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+.consent-dialog {
+  background: #0d0d0d;
+  border: 1px solid #d00;
+  padding: 1.5rem 2rem;
+  max-width: 420px;
+  text-align: center;
+}
+.consent-dialog p {
+  color: #c0c0c0;
+  font-size: .8rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.consent-buttons {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+}
+.consent-btn-no {
+  background: transparent;
+  border-color: #444;
+  color: #888;
+}
+.consent-btn-no:hover {
+  border-color: #d00;
+  color: #d00;
+  background: transparent;
+}
+.translation-status {
+  display: none;
+  color: #666;
+  font-size: .7rem;
+  text-align: center;
+  padding: .5rem;
+  letter-spacing: .1em;
+}
+.translation-status.is-ready {
+  color: #0a0;
+}
+.translation-status.is-error {
+  color: #d00;
+  animation: none;
+}
+
 @media (max-width: 700px) {
   .fp-panel {
     width: 44px;
