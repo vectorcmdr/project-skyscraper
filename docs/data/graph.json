@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T14:33:13.022684+00:00",
+  "updated": "2026-06-11T14:34:53.910737+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -74,6 +74,14 @@
       "date": "2026-06-01T19:46:00"
     },
     {
+      "id": "/report-par-temporal-merge",
+      "type": "page",
+      "label": "Report: PARIS",
+      "url": "https://project-skyscraper.com/report-par-temporal-merge/",
+      "author": "The Architect",
+      "date": "2026-06-11T14:26:00"
+    },
+    {
       "id": "/request-memory-timestamp-094317",
       "type": "page",
       "label": "Request Memory Timestamp",
@@ -142,6 +150,14 @@
       "type": "page",
       "label": "Theskyscraperarchitect",
       "url": "https://project-skyscraper.com/author/theskyscraperarchitect/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/tag/unstable",
+      "type": "page",
+      "label": "Unstable",
+      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -1746,6 +1762,14 @@
       "date": ""
     },
     {
+      "id": "https://iili.io/CC2x7xs.jpg",
+      "type": "external",
+      "label": "iili.io",
+      "url": "https://iili.io/CC2x7xs.jpg",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://preview.redd.it/connection-detected-access-denied-v0-8c7atk6y141h1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=c1f17506bd913fb8de67bbb3452379ca0d0c723b",
       "type": "external",
       "label": "preview.redd.it",
@@ -1766,14 +1790,6 @@
       "type": "external",
       "label": "soundcloud.com",
       "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unstable",
-      "type": "external",
-      "label": "Unstable",
-      "url": "https://project-skyscraper.com/tag/unstable/",
       "author": "",
       "date": ""
     },
@@ -5037,6 +5053,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/report-par-temporal-merge"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/request-memory-timestamp-094317"
     },
     {
@@ -5058,6 +5078,14 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
+    },
+    {
+      "source": "/report-par-temporal-merge",
+      "target": "/"
+    },
+    {
+      "source": "/report-par-temporal-merge",
+      "target": "https://iili.io/CC2x7xs.jpg"
     },
     {
       "source": "/2016/01/03/event-03012016",
@@ -5313,6 +5341,10 @@
     },
     {
       "source": "/report-bru-ent-reunion-peak",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/report-par-temporal-merge",
       "target": "/author/theskyscraperarchitect"
     },
     {
