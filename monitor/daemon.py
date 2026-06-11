@@ -302,7 +302,10 @@ def daemon_loop(quiet: bool = False):
 
     ensure_trace_default()
     init_trace_state()
-    push_site()
+    try:
+        push_site()
+    except BaseException:
+        log("Startup push_site interrupted, continuing", "WARN")
 
     last_tiers = {"fast": 0, "medium": 0, "deep": 0}
 
@@ -318,8 +321,6 @@ def daemon_loop(quiet: bool = False):
         sys.exit(0)
 
     signal.signal(signal.SIGINT, _on_shutdown)
-    if sys.platform != "win32":
-        signal.signal(signal.SIGTERM, _on_shutdown)
 
     try:
         while True:
@@ -365,6 +366,11 @@ def daemon_loop(quiet: bool = False):
                 log(f"Daemon loop error: {e}", "ERROR")
                 traceback.print_exc()
                 time.sleep(10)
+            except BaseException as e:
+                log(f"Daemon loop FATAL: {type(e).__name__}: {e}", "ERROR")
+                if not (isinstance(e, SystemExit) and e.code == 0):
+                    traceback.print_exc()
+                raise
     finally:
         release_lock()
         log("Daemon loop exited, lock released")
@@ -385,7 +391,10 @@ def run_single_check():
 
         log("Single check mode")
         write_graph(build_graph(state))
-        push_site()
+        try:
+            push_site()
+        except BaseException:
+            pass
         run_check_cycle(state, tiers={"fast", "medium", "deep"})
 
         trace_changed = check_trace()
