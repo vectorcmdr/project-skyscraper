@@ -24,19 +24,19 @@ function schoolCodeEncrypt(text) {
   return substitute(text, KEY, ALPHA);
 }
 
-/* ── TRANSLATION (MyMemory API) ────────────────────────── */
-var TRANS_CHUNK = 500;
+/* ── TRANSLATION (LibreTranslate) ──────────────────────── */
+var TRANS_CHUNK = 2000;
 
 function translate(text, langpair) {
-  var url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) +
-            '&langpair=' + encodeURIComponent(langpair);
-  return fetch(url)
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      var translated = data.responseData && data.responseData.translatedText;
-      if (!translated) throw new Error(data.responseDetails || 'Translation failed');
-      return translated;
-    });
+  var parts = langpair.split('|');
+  return fetch('https://translate.argosopentech.com/translate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ q: text, source: parts[0], target: parts[1], format: 'text' })
+  }).then(function(r) { return r.json(); }).then(function(data) {
+    if (data.error) throw new Error(data.error);
+    return data.translatedText;
+  });
 }
 
 function translateLong(text, langpair, onChunk) {
@@ -64,17 +64,17 @@ function translateLong(text, langpair, onChunk) {
   }
 
   var results = [];
-  var idx = 0;
-  function next() {
-    if (idx >= chunks.length) return results.join(' ');
-    return translate(chunks[idx], langpair).then(function(r) {
-      results.push(r);
-      idx++;
-      if (onChunk) onChunk(idx, chunks.length);
-      return next();
+  var remaining = chunks.length;
+  if (onChunk) onChunk(0, chunks.length);
+  var promises = chunks.map(function(chunk, i) {
+    return translate(chunk, langpair).then(function(r) {
+      results[i] = r;
+      remaining--; var done = chunks.length - remaining;
+      if (onChunk) onChunk(done, chunks.length);
+      return r;
     });
-  }
-  return next();
+  });
+  return Promise.all(promises).then(function() { return results.join(' '); });
 }
 
 /* ── TOOL: SCHL_CODE ───────────────────────────────────── */
