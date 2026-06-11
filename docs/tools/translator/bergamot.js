@@ -6,10 +6,64 @@ if (!('DecompressionStream' in self)) {
 
 class DecompressingBacking extends TranslatorBacking {
   async fetch(url, checksum, extra) {
-    var buffer = await super.fetch(url, checksum, extra);
-    if (!url.endsWith('.gz')) return buffer;
-    var stream = new Response(buffer).body.pipeThrough(new DecompressionStream('gzip'));
-    return new Response(stream).arrayBuffer();
+    var controller = new AbortController();
+    var abort = function() { controller.abort(); };
+    var timeout = this.downloadTimeout ? setTimeout(abort, this.downloadTimeout) : null;
+    var signal = controller.signal;
+
+    if (extra && extra.signal) {
+      extra.signal.addEventListener('abort', abort);
+    }
+
+    try {
+      var options = { credentials: 'omit', signal: signal };
+      if (checksum) {
+        options.integrity = 'sha256-' + this.hexToBase64(checksum);
+      }
+      if (typeof window === 'undefined') {
+        delete options.integrity;
+      }
+
+      var response = await fetch(url, options);
+      var contentLength = parseInt(response.headers.get('Content-Length') || '0', 10);
+
+      var reader = response.body.getReader();
+      var chunks = [];
+      var received = 0;
+
+      while (true) {
+        var result = await reader.read();
+        if (result.done) break;
+        chunks.push(result.value);
+        received += result.value.byteLength;
+        if (contentLength > 0 && window._updateDownloadProgress) {
+          window._updateDownloadProgress(received, contentLength);
+        }
+      }
+
+      var totalLength = 0;
+      for (var i = 0; i < chunks.length; i++) {
+        totalLength += chunks[i].byteLength;
+      }
+      var combined = new Uint8Array(totalLength);
+      var pos = 0;
+      for (var i = 0; i < chunks.length; i++) {
+        combined.set(chunks[i], pos);
+        pos += chunks[i].byteLength;
+      }
+
+      var buffer = combined.buffer;
+
+      if (url.endsWith('.gz')) {
+        var ds = new Response(buffer).body.pipeThrough(new DecompressionStream('gzip'));
+        return new Response(ds).arrayBuffer();
+      }
+      return buffer;
+
+    } finally {
+      if (timeout) clearTimeout(timeout);
+      if (extra && extra.signal) extra.signal.removeEventListener('abort', abort);
+    }
   }
 }
 
@@ -45,6 +99,39 @@ window.translateText = async function(text, from, to) {
   return response.target.text;
 };
 
+/* ── Download progress bar ──────────────────────────────── */
+
+window._updateDownloadProgress = function(received, total) {
+  var bar = document.getElementById('downloadProgressBar');
+  var text = document.getElementById('downloadProgressText');
+  var container = document.getElementById('downloadProgress');
+  if (!bar || !text || !container) return;
+  container.style.display = 'flex';
+  var pct = Math.round(received / total * 100);
+  bar.style.width = pct + '%';
+  text.textContent = pct + '%';
+  if (received >= total) {
+    setTimeout(function() {
+      container.style.display = 'none';
+      bar.style.width = '0%';
+    }, 600);
+  }
+};
+
+window._showDownloadProgress = function() {
+  var bar = document.getElementById('downloadProgressBar');
+  var text = document.getElementById('downloadProgressText');
+  var container = document.getElementById('downloadProgress');
+  if (bar) bar.style.width = '0%';
+  if (text) text.textContent = '0%';
+  if (container) container.style.display = 'flex';
+};
+
+window._hideDownloadProgress = function() {
+  var container = document.getElementById('downloadProgress');
+  if (container) container.style.display = 'none';
+};
+
 /* ── Consent dialog ─────────────────────────────────────── */
 
 var consent = localStorage.getItem('translation_consent');
@@ -71,11 +158,14 @@ window.acceptTranslationDownload = async function() {
   localStorage.setItem('translation_consent', 'yes');
   hideConsent();
   setStatus('Downloading translation module (~26 MB)...');
+  window._showDownloadProgress();
   try {
     var t = await getTranslator();
     await t.translate({ from: 'fr', to: 'en', text: 'bonjour', html: false });
+    window._hideDownloadProgress();
     setStatus('Translation module ready', 'is-ready');
   } catch (e) {
+    window._hideDownloadProgress();
     setStatus('Download failed: ' + e.message + '. Translation will still work on first use.', 'is-error');
   }
 };

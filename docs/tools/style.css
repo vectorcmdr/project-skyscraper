@@ -247,6 +247,44 @@ body {
   letter-spacing: .1em;
 }
 
+/* ── OUTPUT WRAPPER & COPY BUTTON ── */
+.tool-output-wrap {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.tool-output-wrap .tool-output {
+  margin-bottom: 0;
+}
+.copy-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #111;
+  border: 1px solid #333;
+  color: #555;
+  padding: 6px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .15s, color .15s, border-color .15s;
+  z-index: 1;
+  line-height: 1;
+  font-family: inherit;
+  border-radius: 2px;
+}
+.tool-output-wrap:hover .copy-btn,
+.copy-btn:focus-visible {
+  opacity: 1;
+}
+.copy-btn:hover {
+  color: #d00;
+  border-color: #d00;
+}
+.copy-btn.copied {
+  color: #0a0;
+  border-color: #0a0;
+}
+
 /* ── TRANSLATION CONSENT DIALOG ── */
 .consent-overlay {
   display: none;
@@ -299,6 +337,36 @@ body {
 .translation-status.is-error {
   color: #d00;
   animation: none;
+}
+
+/* ── DOWNLOAD PROGRESS BAR ── */
+.download-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0.5rem auto 0;
+  padding: 0 1rem;
+}
+.download-progress-track {
+  flex: 1;
+  height: 8px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+.download-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #d00;
+  transition: width 0.15s ease-out;
+}
+.download-progress-text {
+  font-size: .7rem;
+  color: #666;
+  letter-spacing: .1em;
+  min-width: 2.5rem;
+  text-align: right;
 }
 
 @media (max-width: 700px) {

@@ -56,26 +56,36 @@
 
     <!-- PANE: SCHL_CODE -->
     <div class="tool-pane active" id="pane-schl_code">
-      <h3>&#9654; SCHOOL CIPHER</h3>
+      <h3>&#9654; SCHOOL CODE</h3>
       <p>Apply the PROJECT SKYSCRAPER substitution cipher. Decrypts ciphertext to plaintext or encrypts plaintext to ciphertext using the KEY mapping: ABCDEFGHIJKLMNOPQRSTUVWXYZ &harr; MINDFAGEBJRLHCVPQSKYUWOXTZ</p>
       <div class="tool-input-group">
         <textarea id="schlCodeInput" class="tool-input tool-textarea" placeholder="enter ciphertext or plaintext..." spellcheck="false" autocomplete="off"></textarea>
         <button class="tool-btn" onclick="runSchlCode()">RUN</button>
         <button class="tool-swap-btn" id="schlCodeMode" onclick="toggleSchlMode()">DECRYPT</button>
       </div>
-      <div class="tool-output" id="schlCodeOutput">(no input)</div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlCodeOutput">(no input)</div>
+        <button class="copy-btn" data-target="schlCodeOutput" title="Copy to clipboard">⎘</button>
+      </div>
       <div class="tool-char-count" id="schlCodeCount">0 chars</div>
     </div>
 
     <!-- PANE: SCHL_FR_EN -->
     <div class="tool-pane" id="pane-schl_fr_en">
-      <h3>&#9654; SCHOOL CIPHER + FR&rarr;EN</h3>
-      <p>Decrypt the ciphertext with the SCHOOL cipher, then translate the result from French to English via on-device WASM (Bergamot). Models download once (~26 MB) then run locally.</p>
+      <h3>&#9654; SCHOOL CODE + FR&rarr;EN</h3>
+      <p>Decrypt the ciphertext with the SCHOOL CODE, then translate the result from French to English via on-device WASM (Bergamot). Models download once (~26 MB) then run locally.</p>
       <div class="tool-input-group">
         <textarea id="schlFrEnInput" class="tool-input tool-textarea" placeholder="enter encrypted french text..." spellcheck="false" autocomplete="off"></textarea>
         <button class="tool-btn" onclick="runSchlFrEn()">DECIPHER + TRANSLATE</button>
       </div>
-      <div class="tool-output" id="schlFrEnOutput">(no input)</div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlFrEnDecrypted">(awaiting cipher output)</div>
+        <button class="copy-btn" data-target="schlFrEnDecrypted" title="Copy decrypted text">⎘</button>
+      </div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlFrEnTranslated">(awaiting translation)</div>
+        <button class="copy-btn" data-target="schlFrEnTranslated" title="Copy translation">⎘</button>
+      </div>
       <div class="tool-char-count" id="schlFrEnCount">0 chars</div>
     </div>
 
@@ -86,9 +96,12 @@
       <div class="tool-input-group">
         <textarea id="frEnInput" class="tool-input tool-textarea" placeholder="enter text to translate..." spellcheck="false" autocomplete="off"></textarea>
         <button class="tool-btn" onclick="runFrEn()">TRANSLATE</button>
-        <button class="tool-swap-btn" id="frEnDirection" onclick="toggleFrEnDirection()">EN&rarr;FR</button>
+        <button class="tool-swap-btn" id="frEnDirection" onclick="toggleFrEnDirection()">FR&rarr;EN</button>
       </div>
-      <div class="tool-output" id="frEnOutput">(no input)</div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="frEnOutput">(no input)</div>
+        <button class="copy-btn" data-target="frEnOutput" title="Copy to clipboard">⎘</button>
+      </div>
       <div class="tool-char-count" id="frEnCount">0 chars</div>
     </div>
   </div>
@@ -104,6 +117,12 @@
     </div>
   </div>
   <div id="translationStatus" class="translation-status"></div>
+  <div id="downloadProgress" class="download-progress" style="display:none">
+    <div class="download-progress-track">
+      <div class="download-progress-bar" id="downloadProgressBar"></div>
+    </div>
+    <span class="download-progress-text" id="downloadProgressText">0%</span>
+  </div>
 
   <script type="module" src="translator/bergamot.js"></script>
   <script defer src="app.js"></script>

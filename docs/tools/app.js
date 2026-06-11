@@ -64,27 +64,34 @@ function toggleSchlMode() {
 var schlFrEnReqId = 0;
 async function runSchlFrEn() {
   var input = document.getElementById('schlFrEnInput');
-  var output = document.getElementById('schlFrEnOutput');
-  if (!input || !output) return;
+  var decEl = document.getElementById('schlFrEnDecrypted');
+  var trEl = document.getElementById('schlFrEnTranslated');
+  if (!input || !decEl || !trEl) return;
 
   var text = input.value;
-  if (!text) { output.textContent = '(no input)'; return; }
+  if (!text) { decEl.textContent = '(no input)'; trEl.textContent = '(awaiting translation)'; return; }
 
   var reqId = ++schlFrEnReqId;
   var decrypted = schoolCodeDecrypt(text);
 
-  output.className = 'tool-output is-loading';
-  output.textContent = 'Decrypted: ' + decrypted + '\n\nInitializing translator (downloading models ~26 MB on first use)...';
+  decEl.className = 'tool-output';
+  decEl.textContent = decrypted;
+
+  trEl.className = 'tool-output is-loading';
+  trEl.textContent = 'Initializing translator (downloading models ~26 MB on first use)...';
+  if (window._showDownloadProgress) window._showDownloadProgress();
 
   try {
     var result = await window.translateText(decrypted, 'fr', 'en');
     if (reqId !== schlFrEnReqId) return;
-    output.className = 'tool-output';
-    output.textContent = decrypted + '\n\n\u2192 ' + result;
+    trEl.className = 'tool-output';
+    trEl.textContent = result;
+    if (window._hideDownloadProgress) window._hideDownloadProgress();
   } catch (e) {
     if (reqId !== schlFrEnReqId) return;
-    output.className = 'tool-output is-error';
-    output.textContent = decrypted + '\n\nTranslation error: ' + e.message;
+    trEl.className = 'tool-output is-error';
+    trEl.textContent = 'Translation error: ' + e.message;
+    if (window._hideDownloadProgress) window._hideDownloadProgress();
   }
   updateCharCount('schlFrEnCount', text.length);
 }
@@ -106,16 +113,19 @@ async function runFrEn() {
 
   output.className = 'tool-output is-loading';
   output.textContent = 'Initializing translator (downloading models ~26 MB on first use)...';
+  if (window._showDownloadProgress) window._showDownloadProgress();
 
   try {
     var result = await window.translateText(text, from, to);
     if (reqId !== frEnReqId) return;
     output.className = 'tool-output';
     output.textContent = result;
+    if (window._hideDownloadProgress) window._hideDownloadProgress();
   } catch (e) {
     if (reqId !== frEnReqId) return;
     output.className = 'tool-output is-error';
     output.textContent = 'Translation error: ' + e.message;
+    if (window._hideDownloadProgress) window._hideDownloadProgress();
   }
   updateCharCount('frEnCount', text.length);
 }
@@ -135,6 +145,38 @@ function toggleFrEnDirection() {
 function updateCharCount(id, len) {
   var el = document.getElementById(id);
   if (el) el.textContent = len + ' chars';
+}
+
+/* ── COPY TO CLIPBOARD ────────────────────────────────── */
+function copyToClipboard(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var text = el.textContent;
+  if (!text || text === '(no input)' || text === '(awaiting translation)' || text === '(awaiting cipher output)') return;
+  var btn = document.querySelector('[data-target="' + id + '"]');
+  var fallback = function() {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  };
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(null, fallback);
+  } else {
+    fallback();
+  }
+  if (btn) {
+    btn.classList.add('copied');
+    btn.textContent = '\u2713';
+    setTimeout(function() {
+      btn.classList.remove('copied');
+      btn.textContent = '\u2398';
+    }, 1500);
+  }
 }
 
 /* ── TABS ──────────────────────────────────────────────── */
