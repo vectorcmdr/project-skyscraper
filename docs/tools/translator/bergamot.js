@@ -1,4 +1,17 @@
-import { LatencyOptimisedTranslator, SupersededError, CancelledError } from './translator.js';
+import { LatencyOptimisedTranslator, SupersededError, CancelledError, TranslatorBacking } from './translator.js';
+
+if (!('DecompressionStream' in self)) {
+  throw new Error('Your browser does not support on-device translation. Please use Chrome 80+, Firefox 110+, or Safari 16.4+.');
+}
+
+class DecompressingBacking extends TranslatorBacking {
+  async fetch(url, checksum, extra) {
+    var buffer = await super.fetch(url, checksum, extra);
+    if (!url.endsWith('.gz')) return buffer;
+    var stream = new Response(buffer).body.pipeThrough(new DecompressionStream('gzip'));
+    return new Response(stream).arrayBuffer();
+  }
+}
 
 var translator = null;
 var initPromise = null;
@@ -8,9 +21,11 @@ async function getTranslator() {
   if (initPromise) return initPromise;
 
   initPromise = (async function() {
-    var t = new LatencyOptimisedTranslator({
-      downloadTimeout: 120000
+    var backing = new DecompressingBacking({
+      downloadTimeout: 120000,
+      registryUrl: 'translator/models/index.json'
     });
+    var t = new LatencyOptimisedTranslator({}, backing);
     await t.worker;
     return t;
   })();
@@ -55,7 +70,7 @@ function setStatus(msg, className) {
 window.acceptTranslationDownload = async function() {
   localStorage.setItem('translation_consent', 'yes');
   hideConsent();
-  setStatus('Downloading translation module (~18 MB)...');
+  setStatus('Downloading translation module (~26 MB)...');
   try {
     var t = await getTranslator();
     await t.translate({ from: 'fr', to: 'en', text: 'bonjour', html: false });

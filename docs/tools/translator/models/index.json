@@ -1,0 +1,30 @@
+{
+  "fren": {
+    "vocab": {
+      "name": "/tools/translator/models/vocab.fren.spm.gz",
+      "size": 409706
+    },
+    "lex": {
+      "name": "/tools/translator/models/lex.50.50.fren.s2t.bin.gz",
+      "size": 2649934
+    },
+    "model": {
+      "name": "/tools/translator/models/model.fren.intgemm.alphas.bin.gz",
+      "size": 23175075
+    }
+  },
+  "enfr": {
+    "vocab": {
+      "name": "/tools/translator/models/vocab.enfr.spm.gz",
+      "size": 409706
+    },
+    "lex": {
+      "name": "/tools/translator/models/lex.50.50.enfr.s2t.bin.gz",
+      "size": 2297334
+    },
+    "model": {
+      "name": "/tools/translator/models/model.enfr.intgemm.alphas.bin.gz",
+      "size": 23045432
+    }
+  }
+}
