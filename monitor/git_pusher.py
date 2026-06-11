@@ -7,7 +7,7 @@ from monitor.config import MIRROR_DIR, SITE_DIR, GIT_BRANCH, GIT_USER_NAME, GIT_
 from monitor.logger import log
 
 
-def _git_retry(cmd, timeout, retries=3, delay=2):
+def _git_retry(cmd, timeout, retries=6, delay=1):
     for attempt in range(retries):
         try:
             r = subprocess.run(
