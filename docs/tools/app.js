@@ -276,29 +276,38 @@ function copyToClipboard(id) {
   var text = el.textContent;
   if (!text || text === '(no input)' || text === '(awaiting translation)' || text === '(awaiting cipher output)') return;
   var btn = document.querySelector('[data-target="' + id + '"]');
-  var fallback = function() {
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.left = '-9999px';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-  };
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(null, fallback);
-  } else {
-    fallback();
-  }
-  if (btn) {
+  var done = function() {
+    if (!btn) return;
     btn.classList.add('copied');
     btn.textContent = '\u2713';
     setTimeout(function() {
       btn.classList.remove('copied');
       btn.textContent = '\u2398';
     }, 1500);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function() {
+      fallbackCopy(text, done);
+    });
+  } else {
+    fallbackCopy(text, done);
   }
+}
+function fallbackCopy(text, done) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.top = '0';
+  ta.style.left = '0';
+  ta.style.width = '1px';
+  ta.style.height = '1px';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  if (done) done();
 }
 
 /* ── TABS ──────────────────────────────────────────────── */
