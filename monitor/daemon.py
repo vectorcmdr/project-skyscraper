@@ -318,48 +318,56 @@ def daemon_loop(quiet: bool = False):
         sys.exit(0)
 
     signal.signal(signal.SIGINT, _on_shutdown)
-    signal.signal(signal.SIGTERM, _on_shutdown)
+    if sys.platform != "win32":
+        signal.signal(signal.SIGTERM, _on_shutdown)
 
-    while True:
-        try:
-            now = time.time()
-            tiers_to_run = set()
+    try:
+        while True:
+            try:
+                now = time.time()
+                tiers_to_run = set()
 
-            if now - last_tiers["fast"] >= POLL_INTERVALS["fast"]:
-                tiers_to_run.add("fast")
-                last_tiers["fast"] = now
+                if now - last_tiers["fast"] >= POLL_INTERVALS["fast"]:
+                    tiers_to_run.add("fast")
+                    last_tiers["fast"] = now
 
-            if now - last_tiers["medium"] >= POLL_INTERVALS["medium"]:
-                tiers_to_run.add("medium")
-                last_tiers["medium"] = now
+                if now - last_tiers["medium"] >= POLL_INTERVALS["medium"]:
+                    tiers_to_run.add("medium")
+                    last_tiers["medium"] = now
 
-            if now - last_tiers["deep"] >= POLL_INTERVALS["deep"]:
-                tiers_to_run.add("deep")
-                last_tiers["deep"] = now
+                if now - last_tiers["deep"] >= POLL_INTERVALS["deep"]:
+                    tiers_to_run.add("deep")
+                    last_tiers["deep"] = now
 
-            if tiers_to_run:
-                run_check_cycle(state, tiers=tiers_to_run)
+                if tiers_to_run:
+                    run_check_cycle(state, tiers=tiers_to_run)
 
-            trace_changed = check_trace()
-            if trace_changed:
-                import json
-                from monitor.config import TRACE_STATUS_FILE
-                try:
-                    td = json.loads(TRACE_STATUS_FILE.read_text(encoding="utf-8"))
-                    notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
-                except Exception:
-                    pass
-                push_site()
+                trace_changed = check_trace()
+                if trace_changed:
+                    import json
+                    from monitor.config import TRACE_STATUS_FILE
+                    try:
+                        td = json.loads(TRACE_STATUS_FILE.read_text(encoding="utf-8"))
+                        notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
+                    except Exception:
+                        pass
+                    try:
+                        push_site()
+                    except BaseException:
+                        pass
 
-            if now % 3600 < 1:
-                clean_old_reports()
+                if now % 3600 < 1:
+                    clean_old_reports()
 
-            time.sleep(1)
+                time.sleep(1)
 
-        except Exception as e:
-            log(f"Daemon loop error: {e}", "ERROR")
-            traceback.print_exc()
-            time.sleep(10)
+            except Exception as e:
+                log(f"Daemon loop error: {e}", "ERROR")
+                traceback.print_exc()
+                time.sleep(10)
+    finally:
+        release_lock()
+        log("Daemon loop exited, lock released")
 
 
 def run_single_check():
@@ -389,7 +397,10 @@ def run_single_check():
                 notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
             except Exception:
                 pass
-            push_site()
+            try:
+                push_site()
+            except BaseException:
+                pass
 
         log("Check complete")
     finally:

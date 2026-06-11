@@ -17,7 +17,7 @@ def push_site():
             cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=30,
         )
         if r.returncode != 0:
-            log(f"git add failed: {r.stderr.strip()}", "ERROR")
+            log(f"git add failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
             return
 
         r = subprocess.run(
@@ -35,7 +35,7 @@ def push_site():
             cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=30,
         )
         if r.returncode != 0:
-            log(f"git commit failed: {r.stderr.strip()}", "ERROR")
+            log(f"git commit failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
             return
         log(f"git commit: {r.stdout.strip()}", "FILE")
 
@@ -45,13 +45,13 @@ def push_site():
             cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=60,
         )
         if r.returncode != 0:
-            log(f"git push failed: {r.stderr.strip()}", "ERROR")
+            log(f"git push failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
             return
         log(f"git push: {r.stdout.strip()}", "FILE")
 
     except FileNotFoundError:
         log("git push skipped -- git not found on PATH", "FILE")
     except subprocess.TimeoutExpired:
-        log("git push timed out", "ERROR")
+        log("git push timed out after 60s", "ERROR")
     except Exception as e:
         log(f"git push error: {e}", "ERROR")
