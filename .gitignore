@@ -4,7 +4,10 @@ config.json
 # Python cache
 __pycache__/
 *.pyc
+
+# Daemon auto-generated state and logs
+state/
+monitor_reports/
+
+# Session notes (ARG narrative context, excluded from mirror)
 .notes.md
-monitor/monitor.log
-state/.monitor.lock
-state/monitor_state.json
