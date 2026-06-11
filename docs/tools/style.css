@@ -12,7 +12,7 @@ body {
   float: left;
   width: 78px;
   height: 105px;
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
   flex-shrink: 0;
   border: 1px solid #d00;
   background: #050505;
@@ -27,7 +27,7 @@ body {
   float: left;
   width: 105px;
   height: 105px;
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
   flex-shrink: 0;
 }
 .eye-panel::before {
@@ -80,12 +80,14 @@ body {
   letter-spacing: .3em;
   color: #eee;
   text-shadow: 0 0 12px rgba(221,0,0,.4);
+  margin: 0;
 }
 .tools-subtitle {
   color: #666;
   font-size: .75rem;
   letter-spacing: .15em;
-  margin-top: .35rem;
+  margin: 0;
+  padding-top: .25rem;
 }
 
 /* ── TOOL TABS ── */
@@ -415,12 +417,12 @@ body {
   .fp-panel {
     width: 44px;
     height: 60px;
-    margin: 0.5rem 0;
+    margin: 0 0;
   }
   .eye-panel {
     width: 60px;
     height: 60px;
-    margin: 0.5rem 0;
+    margin: 0 0;
   }
   .tools-header {
     gap: 1rem;
