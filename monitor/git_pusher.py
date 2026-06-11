@@ -1,9 +1,38 @@
 """Git push for docs/ -- stage, commit, push when site data changes."""
 
 import subprocess
+import time
 
 from monitor.config import MIRROR_DIR, SITE_DIR, GIT_BRANCH, GIT_USER_NAME, GIT_USER_EMAIL, GITHUB_TOKEN
 from monitor.logger import log
+
+
+def _git_retry(cmd, timeout, retries=3, delay=2):
+    for attempt in range(retries):
+        try:
+            r = subprocess.run(
+                cmd, cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=timeout,
+            )
+            if r.returncode == 0:
+                return r
+            stderr = r.stderr.strip()
+            is_lock = r.returncode == 128 and any(
+                kw in stderr for kw in ["index.lock", "Unable to create", "could not open"]
+            )
+            if is_lock and attempt < retries - 1:
+                log(f"git lock contention (attempt {attempt+1}/{retries}), retrying in {delay}s", "WARN")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            return r
+        except subprocess.TimeoutExpired as e:
+            if attempt < retries - 1:
+                log(f"git timed out (attempt {attempt+1}/{retries}), retrying in {delay}s", "WARN")
+                time.sleep(delay)
+                delay *= 2
+                continue
+            raise
+    return None
 
 
 def push_site():
@@ -12,40 +41,43 @@ def push_site():
         return
 
     try:
-        r = subprocess.run(
-            ["git", "add", "--all", str(SITE_DIR)],
-            cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=30,
-        )
-        if r.returncode != 0:
-            log(f"git add failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+        label = "git add"
+        r = _git_retry(["git", "add", "--all", str(SITE_DIR)], timeout=30)
+        if r and r.returncode != 0:
+            log(f"{label} failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+            return
+        if not r:
             return
 
-        r = subprocess.run(
-            ["git", "diff", "--cached", "--quiet"],
-            cwd=str(MIRROR_DIR), capture_output=True, timeout=30,
-        )
-        if r.returncode == 0:
+        label = "git diff"
+        r = _git_retry(["git", "diff", "--cached", "--quiet"], timeout=30)
+        if r and r.returncode == 0:
             log("git push skipped -- no site changes to commit", "FILE")
             return
+        if not r:
+            return
 
-        r = subprocess.run(
+        label = "git commit"
+        r = _git_retry(
             ["git", "-c", f"user.name={GIT_USER_NAME}",
              "-c", f"user.email={GIT_USER_EMAIL}",
              "commit", "-m", "update site data"],
-            cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=30,
+            timeout=30,
         )
-        if r.returncode != 0:
-            log(f"git commit failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+        if r and r.returncode != 0:
+            log(f"{label} failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+            return
+        if not r:
             return
         log(f"git commit: {r.stdout.strip()}", "FILE")
 
+        label = "git push"
         remote_url = f"https://x-access-token:{GITHUB_TOKEN}@github.com/vectorcmdr/project-skyscraper.git" if GITHUB_TOKEN else "origin"
-        r = subprocess.run(
-            ["git", "push", remote_url, GIT_BRANCH],
-            cwd=str(MIRROR_DIR), capture_output=True, text=True, timeout=60,
-        )
-        if r.returncode != 0:
-            log(f"git push failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+        r = _git_retry(["git", "push", remote_url, GIT_BRANCH], timeout=60)
+        if r and r.returncode != 0:
+            log(f"{label} failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
+            return
+        if not r:
             return
         log(f"git push: {r.stdout.strip()}", "FILE")
 
