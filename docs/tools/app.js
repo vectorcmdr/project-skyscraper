@@ -879,6 +879,62 @@ function debounce(fn, ms) {
   };
 }
 
+/* ── VK-STYLE QUERY BAR ────────────────────────────────── */
+var _queries = [];
+var _queryTimer = null;
+
+function pickQuery() {
+  var textEl = document.getElementById('queryText');
+  var inputEl = document.getElementById('queryInput');
+  var resultEl = document.getElementById('queryResult');
+  if (!textEl || !_queries.length) return;
+  var q = _queries[Math.floor(Math.random() * _queries.length)];
+  textEl.textContent = q;
+  if (inputEl) inputEl.value = '';
+  if (resultEl) resultEl.textContent = '';
+}
+
+function flashPanels() {
+  var fp = document.querySelector('.fp-panel');
+  var eye = document.querySelector('.eye-panel');
+  if (fp) { fp.classList.remove('flash-white'); void fp.offsetWidth; fp.classList.add('flash-white'); }
+  if (eye) { eye.classList.remove('flash-white'); void eye.offsetWidth; eye.classList.add('flash-white'); }
+  if (_queryTimer) clearTimeout(_queryTimer);
+  _queryTimer = setTimeout(function() {
+    if (fp) fp.classList.remove('flash-white');
+    if (eye) eye.classList.remove('flash-white');
+  }, 900);
+}
+
+function submitQuery() {
+  var inputEl = document.getElementById('queryInput');
+  var resultEl = document.getElementById('queryResult');
+  if (!inputEl || !resultEl) return;
+  var val = inputEl.value.trim();
+  if (!val) { resultEl.textContent = '—'; return; }
+  resultEl.textContent = '> ' + val;
+  flashPanels();
+  setTimeout(pickQuery, 1500);
+}
+
+function initQueryBar() {
+  fetch('data/queries.json')
+    .then(function(r) { return r.json(); })
+    .then(function(list) {
+      _queries = list;
+      pickQuery();
+    })
+    .catch(function() {
+      var el = document.getElementById('queryText');
+      if (el) el.textContent = '(queries unavailable)';
+    });
+
+  var inputEl = document.getElementById('queryInput');
+  var btnEl = document.getElementById('queryBtn');
+  if (inputEl) inputEl.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitQuery(); });
+  if (btnEl) btnEl.addEventListener('click', submitQuery);
+}
+
 /* ── INIT ──────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function() {
   setOperator();
@@ -895,4 +951,5 @@ document.addEventListener('DOMContentLoaded', function() {
   setupEnterTriggers();
   runSchlCode();
   _initTsConv();
+  initQueryBar();
 });

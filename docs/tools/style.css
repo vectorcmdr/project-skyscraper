@@ -90,6 +90,84 @@ body {
   padding-top: .25rem;
 }
 
+/* ── QUERY BAR (VK-style interrogation) ── */
+.query-bar {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .6rem;
+  padding: .4rem .6rem;
+  background: #0d0d0d;
+  border: 1px solid #222;
+  font-size: .7rem;
+  flex-wrap: wrap;
+}
+.query-label {
+  color: #d00;
+  font-weight: bold;
+  letter-spacing: .15em;
+  flex-shrink: 0;
+}
+.query-text {
+  color: #c0c0c0;
+  letter-spacing: .04em;
+  flex: 1;
+  min-width: 150px;
+}
+.query-input {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  color: #c0c0c0;
+  padding: .25rem .5rem;
+  font-family: inherit;
+  font-size: .7rem;
+  flex: 0 0 140px;
+  min-width: 80px;
+}
+.query-input:focus {
+  outline: none;
+  border-color: #d00;
+}
+.query-btn {
+  background: transparent;
+  border: 1px solid #d00;
+  color: #d00;
+  padding: .25rem .5rem;
+  font-family: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: all .15s;
+  line-height: 1;
+}
+.query-btn:hover {
+  background: #d00;
+  color: #0a0a0a;
+}
+.query-result {
+  color: #555;
+  font-size: .6rem;
+  letter-spacing: .1em;
+  flex-shrink: 0;
+}
+
+/* ── BORDER FLASH (triggered by query submit) ── */
+@keyframes border-flash-fp {
+  0%   { border-color: #fff; box-shadow: 0 0 8px rgba(255,255,255,.6); }
+  50%  { border-color: #fff; box-shadow: 0 0 12px rgba(255,255,255,.4); }
+  100% { border-color: #d00; box-shadow: 0 0 0 transparent; }
+}
+@keyframes border-flash-eye {
+  0%   { background: #fff; }
+  50%  { background: #fff; }
+  100% { background: #d00; }
+}
+.fp-panel.flash-white {
+  animation: border-flash-fp .8s ease-out;
+}
+.eye-panel.flash-white::before {
+  animation: border-flash-eye .8s ease-out;
+}
+
 /* ── TOOL TABS ── */
 .tool-tabs {
   display: flex;
