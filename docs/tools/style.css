@@ -259,26 +259,22 @@ body {
   position: absolute;
   top: 4px;
   right: 4px;
-  background: #111;
-  border: 1px solid #333;
-  color: #555;
+  background: #1a1a1a;
+  border: 1px solid #555;
+  color: #eee;
   padding: 6px 10px;
   font-size: 1.1rem;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity .15s, color .15s, border-color .15s;
   z-index: 1;
   line-height: 1;
   font-family: inherit;
   border-radius: 2px;
-}
-.tool-output-wrap:hover .copy-btn,
-.copy-btn:focus-visible {
-  opacity: 1;
+  transition: color .15s, border-color .15s, background .15s;
 }
 .copy-btn:hover {
-  color: #d00;
+  color: #fff;
   border-color: #d00;
+  background: #222;
 }
 .copy-btn.copied {
   color: #0a0;
