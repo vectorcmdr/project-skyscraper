@@ -25,6 +25,8 @@ function schoolCodeEncrypt(text) {
 }
 
 /* ── TRANSLATION (MyMemory API) ────────────────────────── */
+var TRANS_CHUNK = 500;
+
 function translate(text, langpair) {
   var url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) +
             '&langpair=' + encodeURIComponent(langpair);
@@ -35,6 +37,44 @@ function translate(text, langpair) {
       if (!translated) throw new Error(data.responseDetails || 'Translation failed');
       return translated;
     });
+}
+
+function translateLong(text, langpair, onChunk) {
+  if (text.length <= TRANS_CHUNK) return translate(text, langpair);
+
+  var chunks = [];
+  var pos = 0;
+  while (pos < text.length) {
+    var end = Math.min(pos + TRANS_CHUNK, text.length);
+    if (end < text.length) {
+      var split = -1;
+      for (var i = end; i > pos + TRANS_CHUNK * 0.6; i--) {
+        var c = text[i];
+        if (c === '.' || c === '!' || c === '?' || c === '\n') { split = i + 1; break; }
+      }
+      if (split <= pos) {
+        for (var i = end; i > pos + TRANS_CHUNK * 0.6; i--) {
+          if (text[i] === ' ') { split = i + 1; break; }
+        }
+      }
+      if (split > pos) end = split;
+    }
+    chunks.push(text.substring(pos, end).trim());
+    pos = end;
+  }
+
+  var results = [];
+  var idx = 0;
+  function next() {
+    if (idx >= chunks.length) return results.join(' ');
+    return translate(chunks[idx], langpair).then(function(r) {
+      results.push(r);
+      idx++;
+      if (onChunk) onChunk(idx, chunks.length);
+      return next();
+    });
+  }
+  return next();
 }
 
 /* ── TOOL: SCHL_CODE ───────────────────────────────────── */
@@ -81,11 +121,12 @@ function runSchlFrEn() {
   output.className = 'tool-output is-loading';
   output.textContent = 'translating...';
 
-  translate(decrypted, 'fr|en')
-    .then(function(translated) {
-      output.className = 'tool-output';
-      output.textContent = decrypted + '\n\u2500'.repeat(40) + '\n' + translated;
-    })
+  translateLong(decrypted, 'fr|en', function(done, total) {
+    output.textContent = 'translating... ' + done + '/' + total;
+  }).then(function(translated) {
+    output.className = 'tool-output';
+    output.textContent = decrypted + '\n\u2500'.repeat(40) + '\n' + translated;
+  })
     .catch(function(err) {
       output.className = 'tool-output is-error';
       output.textContent = 'Translation error: ' + err.message + '\n\nDecrypted text:\n' + decrypted;
@@ -107,11 +148,12 @@ function runFrEn() {
   output.className = 'tool-output is-loading';
   output.textContent = 'translating...';
 
-  translate(text, langpair)
-    .then(function(translated) {
-      output.className = 'tool-output';
-      output.textContent = text + '\n\u2500'.repeat(40) + '\n' + translated;
-    })
+  translateLong(text, langpair, function(done, total) {
+    output.textContent = 'translating... ' + done + '/' + total;
+  }).then(function(translated) {
+    output.className = 'tool-output';
+    output.textContent = text + '\n\u2500'.repeat(40) + '\n' + translated;
+  })
     .catch(function(err) {
       output.className = 'tool-output is-error';
       output.textContent = 'Translation error: ' + err.message;
@@ -181,7 +223,13 @@ function switchTab(tabId) {
   var lookX = 0, lookY = 0;
   var dartTimer = 0;
   var redTimer = 0;
-  var nextRedFlicker = 15 + rng() * 30;
+  var nextRedFlicker = 10 + rng() * 20;
+
+  /* Blink state — 0=open(rest), 1=closing, 2=hold closed, 3=opening */
+  var blinkState = 0;
+  var blinkPos = 0;
+  var blinkHold = 0;
+  var nextBlink = 2 + rng() * 4;
 
   var GRID = {};
   var gazeTargetX = 0, gazeTargetY = 0;
@@ -203,6 +251,23 @@ function switchTab(tabId) {
     }
     lookX += (gazeTargetX + microX - lookX) * 0.07;
     lookY += (gazeTargetY + microY - lookY) * 0.07;
+  }
+
+  function updateBlink() {
+    var dt = 0.016;
+    if (blinkState === 0) {
+      nextBlink -= dt;
+      if (nextBlink <= 0) { blinkState = 1; blinkPos = 0; }
+    } else if (blinkState === 1) {
+      blinkPos += dt * 12;
+      if (blinkPos >= 1) { blinkPos = 1; blinkState = 2; blinkHold = 0; }
+    } else if (blinkState === 2) {
+      blinkHold += dt;
+      if (blinkHold >= 0.08) { blinkState = 3; }
+    } else if (blinkState === 3) {
+      blinkPos -= dt * 12;
+      if (blinkPos <= 0) { blinkPos = 0; blinkState = 0; nextBlink = 2 + rng() * 4; }
+    }
   }
 
   function getCell(gx, gy) {
@@ -379,10 +444,19 @@ function switchTab(tabId) {
       var gSize = 1 + Math.random() * 2;
       ctx.fillRect(gxPos - gSize / 2, gyPos - gSize / 2, gSize, gSize);
     }
+
+    /* Permanent resting eyelids + blink overlay */
+    var restingLid = BH * 0.10;
+    var blinkExtra = (BH / 2 - restingLid) * blinkPos;
+    var lidH = restingLid + blinkExtra;
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, BW, lidH);
+    ctx.fillRect(0, BH - lidH, BW, lidH);
   }
 
   function animate() {
     updateLook();
+    updateBlink();
     if (redTimer > 0) {
       redTimer += 0.016;
       if (redTimer > 1) redTimer = 0;
@@ -390,7 +464,7 @@ function switchTab(tabId) {
       nextRedFlicker -= 0.016;
       if (nextRedFlicker <= 0) {
         redTimer = 0.001;
-        nextRedFlicker = 20 + rng() * 40;
+        nextRedFlicker = 10 + rng() * 27;
       }
     }
     GRID = {};
@@ -443,11 +517,22 @@ function switchTab(tabId) {
   var wF2 = 4.0 + rng() * 3.0, wP2 = rng() * 6.283, wA2 = 0.15 + rng() * 0.15;
   var wobbleAmp = 0.8 + rng() * 0.6;
 
+  /* Pick a drift direction — innermost ring shifts from true center,
+     outermost ring stays fixed. Rings in between interpolate linearly,
+     creating tighter packing on one side and looser on the other. */
+  var driftX = (rng() - 0.5) * (8 + rng() * 8);
+  var driftY = (rng() - 0.5) * (8 + rng() * 8);
+
   /* Build each ring — smooth radii, shared wobble, subtle swirl offset */
   var rings = [];
   for (var ri = 0; ri < ringCount; ri++) {
     var rx = baseRx + ri * spacing;
     var ry = baseRy + ri * spacing * 1.35;
+
+    /* Interpolate center: t=1 at innermost (full drift), t=0 at outermost (fixed) */
+    var t = (ringCount - 1 - ri) / (ringCount - 1);
+    var ringCx = cx + driftX * t;
+    var ringCy = cy + driftY * t;
 
     /* Open-bottom arch — negative = below center (ring extends down),
        positive = above center (ring cut off higher).
@@ -462,6 +547,7 @@ function switchTab(tabId) {
     var gapLen = 2 + rng() * 4;
 
     rings.push({
+      cx: ringCx, cy: ringCy,
       rx: rx, ry: ry,
       gL: gapL, gR: gapR,
       sw: swirl,
@@ -476,14 +562,37 @@ function switchTab(tabId) {
     var wob = (Math.sin(th * r.wF1 + r.wP1) * r.wA1
              + Math.sin(th * r.wF2 + r.wP2) * r.wA2) * r.wAmp;
     return {
-      x: cx + (r.rx + wob) * Math.cos(theta),
-      y: cy + (r.ry + wob) * Math.sin(theta)
+      x: r.cx + (r.rx + wob) * Math.cos(theta),
+      y: r.cy + (r.ry + wob) * Math.sin(theta)
     };
   }
 
   var scanX = -1, scanY = -1;
   var scanTimer = 4;
   var scanPhase = 0;
+
+  function pickRidgePoint() {
+    var ri = Math.floor(rng() * rings.length);
+    var r = rings[ri];
+    var startTh = -Math.PI + r.gL;
+    var endTh = -r.gR;
+    var totalTh = endTh - startTh;
+    if (totalTh <= 0) totalTh += Math.PI * 2;
+    var avgR = (r.rx + r.ry) / 2;
+    var totalLen = avgR * totalTh;
+    var cycleLen = r.dash[0] + r.dash[1];
+    var th;
+    if (totalLen >= cycleLen) {
+      var numCycles = Math.floor(totalLen / cycleLen);
+      var cycle = Math.floor(rng() * numCycles);
+      var arcOffset = cycle * cycleLen + rng() * r.dash[0];
+      th = startTh + arcOffset / avgR;
+    } else {
+      th = startTh + rng() * totalTh * (r.dash[0] / cycleLen);
+    }
+    var p = ringPoint(th, r);
+    return { x: Math.round(p.x), y: Math.round(p.y) };
+  }
 
   function renderFP() {
     ctx.fillStyle = '#000';
@@ -557,8 +666,9 @@ function switchTab(tabId) {
         scanX = -1;
         scanTimer = 2 + rng() * 3;
       } else {
-        scanX = 10 + Math.floor(rng() * (BW - 20));
-        scanY = 10 + Math.floor(rng() * (BH - 20));
+        var pos = pickRidgePoint();
+        scanX = pos.x;
+        scanY = pos.y;
         scanPhase = 0;
         scanTimer = 0.8 + rng() * 0.4;
       }

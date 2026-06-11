@@ -12,7 +12,7 @@ body {
   float: left;
   width: 78px;
   height: 105px;
-  margin: 1.5rem 1.5rem 1.5rem 0;
+  margin: 1.5rem 0;
   flex-shrink: 0;
   border: 1px solid #d00;
   background: #050505;
@@ -27,7 +27,7 @@ body {
   float: left;
   width: 105px;
   height: 105px;
-  margin: 1.5rem 0 1.5rem 1.5rem;
+  margin: 1.5rem 0;
   flex-shrink: 0;
 }
 .eye-panel::before {
@@ -68,7 +68,7 @@ body {
 .tools-header {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 0.75rem;
   margin-bottom: 2rem;
 }
 .tools-title-area {
@@ -233,15 +233,15 @@ body {
 }
 
 @media (max-width: 700px) {
-  .eye-panel {
-    width: 60px;
-    height: 60px;
-    margin: 1rem 0 1rem 0.5rem;
-  }
   .fp-panel {
     width: 44px;
     height: 60px;
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 0;
+  }
+  .eye-panel {
+    width: 60px;
+    height: 60px;
+    margin: 1rem 0;
   }
   .tools-header {
     gap: 1rem;
