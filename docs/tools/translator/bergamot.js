@@ -9,8 +9,7 @@ async function getTranslator() {
 
   initPromise = (async function() {
     var t = new LatencyOptimisedTranslator({
-      downloadTimeout: 120000,
-      onerror: function(err) { console.error('[bergamot]', err); }
+      downloadTimeout: 120000
     });
     await t.worker;
     return t;
