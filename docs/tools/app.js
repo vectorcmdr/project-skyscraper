@@ -253,16 +253,15 @@ function switchTab(tabId) {
       }
     }
 
-    /* Iris (follows look offset) */
+    /* Iris ring (follows look offset, overrides sclera) */
     var iX = nx + lookX, iY = ny - eyeTilt + lookY;
-    var iDist = Math.sqrt(iX * iX / 0.20 / 0.20 + iY * iY / 0.19 / 0.19);
+    var iDist = Math.sqrt(iX * iX / 0.27 / 0.27 + iY * iY / 0.26 / 0.26);
     if (iDist < 1) {
-      var iBright = 40 + (1 - iDist) * 80;
-      /* Iris striae */
+      val = 130 + (1 - iDist) * 70;
+      /* Iris striae - radial lines */
       var angle = Math.atan2(iY, iX);
-      var streak = Math.abs(Math.cos(angle * 5 + iDist * 3)) * 0.25;
-      iBright = iBright - streak * 15;
-      val = Math.max(val, iBright);
+      var streak = Math.abs(Math.cos(angle * 6 + iDist * 4)) * 0.35;
+      val = val - streak * 40;
     }
 
     /* Pupil (follows look offset) */
@@ -405,6 +404,142 @@ function switchTab(tabId) {
     requestAnimationFrame(animate);
   }
   animate();
+})();
+
+/* ── FINGERPRINT CANVAS ──────────────────────────────── */
+(function initFP() {
+  var canvas = document.getElementById('fpCanvas');
+  if (!canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var seed = (localStorage.getItem('operator') || '').trim() || 'anon';
+  var seedNum = 0;
+  for (var i = 0; i < seed.length; i++) {
+    seedNum = ((seedNum << 5) - seedNum) + seed.charCodeAt(i);
+    seedNum |= 0;
+  }
+  var rng = function() {
+    seedNum = (seedNum * 1103515245 + 12345) & 0x7fffffff;
+    return (seedNum >>> 0) / 0x7fffffff;
+  };
+
+  var BW = 78, BH = 105;
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = BW * dpr;
+  canvas.height = BH * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  var time = 0;
+
+  /* Seed-derived parameters for the ridge arcs */
+  var coreX = (rng() - 0.5) * 4;
+  var coreY = -12 + rng() * 6;
+  var baseA = 10 + rng() * 3;
+  var baseB = 16 + rng() * 4;
+  var stepA = 3.5 + rng() * 1;
+  var stepB = 3 + rng() * 1;
+  var numRidges = 5 + Math.floor(rng() * 3);
+  var mirror = rng() > 0.5 ? 1 : -1;
+  var arcSpread = 0.7 + rng() * 0.25;
+
+  /* Pre-compute belly arc positions (fixed per seed) */
+  var bellyArcsL = [];
+  for (var ri = 0; ri < 3; ri++) {
+    bellyArcsL.push({ bx: 8 + ri * 6 + rng() * 3, by: BH - 10 - ri * 4 });
+  }
+  var bellyArcsR = [];
+  for (var ri = 0; ri < 3; ri++) {
+    bellyArcsR.push({ bx: BW - 8 - ri * 6 - rng() * 3, by: BH - 10 - ri * 4 });
+  }
+
+  /* Each ridge is an elliptical arc: from bottom side, around top, to opposite side. */
+  function renderRidges() {
+    for (var ri = 0; ri < numRidges; ri++) {
+      var a = baseA + ri * stepA;
+      var b = baseB + ri * stepB;
+      var lw = 2.4 - ri * 0.1;
+      if (lw < 1) lw = 1;
+
+      ctx.beginPath();
+      var startAngle = Math.PI * (0.5 + arcSpread * 0.25) * mirror;
+      var endAngle = Math.PI * (1.5 - arcSpread * 0.25) * mirror;
+      if (mirror < 0) {
+        var tmp = startAngle;
+        startAngle = endAngle;
+        endAngle = tmp;
+      }
+      ctx.ellipse(BW / 2 + coreX, BH / 2 + coreY, a, b, 0, startAngle, endAngle);
+      ctx.strokeStyle = 'rgba(200,200,200,0.7)';
+      ctx.lineWidth = lw;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+
+    /* "Belly" arcs — short arcs at the bottom suggesting continuing ridges */
+    var ri;
+    for (ri = 0; ri < bellyArcsL.length; ri++) {
+      var ba = bellyArcsL[ri];
+      ctx.beginPath();
+      ctx.ellipse(ba.bx, ba.by, 4 - ri * 0.5, 3 - ri * 0.3, 0, 0, Math.PI);
+      ctx.strokeStyle = 'rgba(200,200,200,0.5)';
+      ctx.lineWidth = 1.5 - ri * 0.2;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+    for (ri = 0; ri < bellyArcsR.length; ri++) {
+      var ba = bellyArcsR[ri];
+      ctx.beginPath();
+      ctx.ellipse(ba.bx, ba.by, 4 - ri * 0.5, 3 - ri * 0.3, 0, Math.PI, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(200,200,200,0.5)';
+      ctx.lineWidth = 1.5 - ri * 0.2;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+  }
+
+  /* Scan highlight — red box state */
+  var scanX = -1, scanY = -1;
+  var scanTimer = 4;
+  var scanPhase = 0;
+
+  function renderFP() {
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, BW, BH);
+
+    renderRidges();
+
+    /* Red scan box */
+    if (scanX >= 0) {
+      var pulse = 0.6 + Math.sin(scanPhase * 20) * 0.3;
+      ctx.fillStyle = 'rgba(221,0,0,' + (0.5 * pulse) + ')';
+      ctx.fillRect(scanX - 2, scanY - 2, 10, 10);
+      ctx.fillStyle = 'rgba(255,50,50,' + (0.8 * pulse) + ')';
+      ctx.fillRect(scanX, scanY, 6, 6);
+      ctx.fillStyle = 'rgba(255,100,100,1)';
+      ctx.fillRect(scanX, scanY, 6, 1);
+      ctx.fillRect(scanX, scanY, 1, 6);
+    }
+  }
+
+  function animateFP() {
+    scanPhase += 0.016;
+    scanTimer -= 0.016;
+    if (scanTimer <= 0) {
+      if (scanX >= 0) {
+        scanX = -1;
+        scanTimer = 2 + rng() * 3;
+      } else {
+        scanX = 10 + Math.floor(rng() * (BW - 20));
+        scanY = 10 + Math.floor(rng() * (BH - 20));
+        scanPhase = 0;
+        scanTimer = 0.8 + rng() * 0.4;
+      }
+    }
+    renderFP();
+    time += 0.016;
+    requestAnimationFrame(animateFP);
+  }
+  animateFP();
 })();
 
 /* ── TRACE (Discourse online status) ───────────────────── */
