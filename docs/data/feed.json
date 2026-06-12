@@ -1,24 +1,24 @@
 {
   "entries": [
     {
-      "type": "api_items_removed",
-      "timestamp": "2026-06-12T09:15:28.336282+00:00",
-      "title": "4 item(s) removed from /wp-json/wp/v2/posts",
+      "type": "api_items_added",
+      "timestamp": "2026-06-12T09:17:13.361825+00:00",
+      "title": "",
       "link": "",
-      "endpoint": "/wp-json/wp/v2/posts",
+      "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "4 item(s) removed from /wp-json/wp/v2/posts",
+      "detail": "8 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-12T09:15:28.335871+00:00",
+      "timestamp": "2026-06-12T09:17:13.361617+00:00",
       "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/09/30/event-30092016/",
+      "link": "https://project-skyscraper.com/2016/09/26/event-26092016/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
-      "detail": "11 new item(s) in /wp-json/wp/v2/posts",
+      "detail": "4 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": ""
     },
@@ -5241,5 +5241,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-12T09:15:28.338258+00:00"
+  "updated": "2026-06-12T09:17:13.364252+00:00"
 }
