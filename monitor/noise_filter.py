@@ -41,6 +41,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'"jetpack_subscriptions_widget"[^}]*\}'), ''),
     (re.compile(r'img#wpstats\{display:none\}'), ''),
     (re.compile(r'img:is\([^)]*\)\{contain-intrinsic-size:\d+px \d+px\}'), ''),
+    (re.compile(r'<script[^>]*type=[\x22\x27]importmap[\x22\x27][^>]*>[\s\S]*?</script>', re.IGNORECASE), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -80,6 +81,11 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^\.\.\.\s*\(truncated\)$'),
     re.compile(r'^[ +-]\s*img#wpstats'),
     re.compile(r'^[ +-]\s*img:is\(.*$'),
+    re.compile(r'^[ +-]\s*"@wordpress/interactivity".*$'),
+    re.compile(r'^[ +-]\s*"imports".*$'),
+    re.compile(r'^[ +-]\s*@wordpress/interactivity.*ver=.*$'),
+    re.compile(r'^[ +-]\s*_stq\s*=\s*window[.]?_stq.*$'),
+    re.compile(r'^[ +-]\s*_stq\s*=.*\[\]'),
     re.compile(r'^[ .]+\.\.\s*\(\d+ more lines?\)$'),
     re.compile(r'^[ .]+\.\.\s*\(truncated\)$'),
 ]
