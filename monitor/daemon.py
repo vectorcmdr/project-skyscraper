@@ -15,7 +15,8 @@ if sys.platform == "win32":
     _handler_t = ctypes.WINFUNCTYPE(ctypes.c_int, ctypes.c_uint)
     def _console_handler(dwCtrlType):
         return 1
-    _kernel32.SetConsoleCtrlHandler(_handler_t(_console_handler), 1)
+    _console_handler_cb = _handler_t(_console_handler)
+    _kernel32.SetConsoleCtrlHandler(_console_handler_cb, 1)
 
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
