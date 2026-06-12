@@ -1,25 +1,25 @@
 {
   "entries": [
     {
-      "type": "api_items_removed",
-      "timestamp": "2026-06-12T09:09:09.869766+00:00",
-      "title": "2 item(s) removed from /wp-json/wp/v2/posts",
-      "link": "",
+      "type": "api_items_added",
+      "timestamp": "2026-06-12T09:11:20.730226+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/07/10/event-10072016/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
-      "detail": "2 item(s) removed from /wp-json/wp/v2/posts",
-      "author": 0,
+      "detail": "9 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-12T09:09:09.869633+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/09/13/event-13092016/",
-      "endpoint": "/wp-json/wp/v2/posts",
+      "timestamp": "2026-06-12T09:11:20.730104+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "2 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System",
+      "detail": "16 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
       "site": ""
     },
     {
@@ -5241,5 +5241,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-12T09:09:09.871694+00:00"
+  "updated": "2026-06-12T09:11:20.732450+00:00"
 }
