@@ -124,6 +124,8 @@
         animate();
       }
 
+      var _S = function(v) { return v * SCALE; };
+
       function animate() {
         var w = canvas.offsetWidth, h = canvas.offsetHeight;
         ctx.clearRect(0, 0, w, h);
@@ -132,19 +134,19 @@
         for (var i = 0; i < particles.length; i++) {
           var p = particles[i];
           p.angle += p.orbitSpeed * 0.04;
-          var orbitX = Math.cos(p.angle) * (22 * SCALE);
-          var orbitY = Math.sin(p.angle) * (9 * SCALE);
-          var vibe = Math.sin(p.angle * p.vibeSpeed) * (6 * SCALE);
+          var orbitX = Math.cos(p.angle) * _S(22);
+          var orbitY = Math.sin(p.angle) * _S(9);
+          var vibe = Math.sin(p.angle * p.vibeSpeed) * _S(6);
           var tx = p.bx + orbitX + vibe * 0.5;
           var ty = p.by + orbitY + vibe * 0.9;
 
           if (mouse.active) {
-            var mdx = mouse.x - p.x, mdy = mouse.y - p.y;
-            var md = Math.hypot(mdx, mdy);
-            if (md < 300) {
-              var force = (1 - md / 300) * 0.55;
-              tx -= mdx * force;
-              ty -= mdy * force;
+            var dx = mouse.x - p.x, dy = mouse.y - p.y;
+            var dist = Math.hypot(dx, dy);
+            if (dist < _S(300)) {
+              var force = (1 - dist / _S(300)) * 0.55;
+              tx += dx * force;
+              ty += dy * force;
             }
           }
 
@@ -152,12 +154,13 @@
           p.y += (ty - p.y) * 0.08;
         }
 
-        ctx.lineWidth = 0.75;
+        ctx.lineWidth = _S(0.75);
+        var connDist = _S(165);
         for (var i = 0; i < particles.length; i++) {
           for (var j = i + 1; j < particles.length; j++) {
             var d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
-            if (d < 165 * SCALE) {
-              ctx.strokeStyle = 'rgba(255,45,45,' + Math.max(0, 1 - d / (165 * SCALE)).toFixed(3) + ')';
+            if (d < connDist) {
+              ctx.strokeStyle = 'rgba(255,45,45,' + Math.max(0, 1 - d / connDist).toFixed(3) + ')';
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
@@ -168,12 +171,12 @@
 
         for (var k = 0; k < particles.length; k++) {
           var p = particles[k];
-          var md = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-          var intensity = Math.max(0, 1 - md / 280);
-          ctx.shadowBlur = intensity > 0.3 ? 24 * SCALE : 9 * SCALE;
+          var dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+          var intensity = Math.max(0, 1 - dist / _S(280));
+          ctx.shadowBlur = intensity > 0.3 ? _S(24) : _S(9);
           ctx.fillStyle = '#ff2d2d';
           ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size + intensity * 3 * SCALE, 0, Math.PI * 2);
+          ctx.arc(p.x, p.y, p.size + intensity * _S(3), 0, Math.PI * 2);
           ctx.fill();
         }
 
