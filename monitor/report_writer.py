@@ -551,12 +551,8 @@ def refresh_reports(state: dict):
     generate_manifest_report(section_data, total_files, total_size)
     generate_id_series_report()
 
-    unpublished_posts = [
-        item for item in state.get("prober", {}).get("posts", {}).get("_unpublished", [])
-    ]
-    unpublished_pages = [
-        item for item in state.get("prober", {}).get("pages", {}).get("_unpublished", [])
-    ]
+    unpublished_posts = state.get("probe", {}).get("unpublished", {}).get("posts", [])
+    unpublished_pages = state.get("probe", {}).get("unpublished", {}).get("pages", [])
     generate_unpublished_report(unpublished_posts, unpublished_pages)
 
     # Regenerate CHANGELOG.md from existing diff files

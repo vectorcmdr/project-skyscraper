@@ -22,6 +22,8 @@ def probe_unpublished(state: dict) -> list:
 
     chunk_end = min(probe_pos + PROBE_CHUNK_SIZE - 1, probe_ceiling)
 
+    unpublished_log = probe_state.setdefault("unpublished", {"posts": [], "pages": []})
+
     for pid in range(probe_pos, chunk_end + 1):
         for ep_template in ["/wp-json/wp/v2/posts/{id}", "/wp-json/wp/v2/pages/{id}"]:
             url = f"{BASE_URL}{ep_template.replace('{id}', str(pid))}"
@@ -35,9 +37,14 @@ def probe_unpublished(state: dict) -> list:
                     "endpoint": ep_name,
                     "detail": f"Unpublished {ep_name} #{pid} (HTTP {result.status})",
                 })
+                entry = [pid, result.status]
+                seen_ids = {e[0] for e in unpublished_log[ep_name]}
+                if pid not in seen_ids:
+                    unpublished_log[ep_name].append(entry)
                 log(f"Unpublished {ep_name} #{pid} (HTTP {result.status})", "DEEP")
             elif result.status == 200:
                 ep_name = "posts" if "/posts/" in url else "pages"
+                unpublished_log[ep_name] = [e for e in unpublished_log[ep_name] if e[0] != pid]
                 log(f"Newly published {ep_name} #{pid} (was hidden)", "DEEP")
         jitter(0.08, 0.1)
 
