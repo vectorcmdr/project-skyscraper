@@ -92,49 +92,23 @@
       var PADDING = 0.72;
       var PARAMS = {
         COLOR:      '#ff2d2d',
-        DISTANCE:   140,
-        DIST_ADD:   20,
-        SIZE_MIN:   1.6,
-        SIZE_ADD:   1.6,
-        SPEED_MIN:  0.16,
-        SPEED_ADD:  0.16,
-        CONN_DIST:  170,
-        LINE_W:     0.7,
-        ORBIT_AMP:  6,
-        ORBIT_AMP_Y: 6,
-        SHADOW:     8,
-        GLOW_SHADOW: 20,
+        DISTANCE:   110,
+        DIST_ADD:   30,
+        SIZE_MIN:   1.8,
+        SIZE_ADD:   2.0,
+        SPEED_MIN:  0.12,
+        SPEED_ADD:  0.14,
+        CONN_DIST:  140,
+        LINE_W:     0.6,
+        ORBIT_AMP:  8,
+        ORBIT_AMP_Y: 8,
+        SHADOW:     10,
+        GLOW_SHADOW: 24,
         GLOW_THRESH: 0.25,
-        GLOW_AMP:   3.2,
-        COUNT:      48
+        GLOW_AMP:   3.5,
+        COUNT:      96
       };
-      var LIVE_COUNT = '';
       var countEl = document.getElementById('liveCount');
-
-      function applyLiveParams(text) {
-        var m;
-        if ((m = /count\s*=\s*(\d+)/.exec(text))) { PARAMS.COUNT = parseInt(m[1]); }
-        if ((m = /distance\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
-          PARAMS.DISTANCE = parseFloat(m[1]); PARAMS.DIST_ADD = parseFloat(m[2]);
-        }
-        if ((m = /size\s*=\s*Math\.random\(\)\s*\*\s*([\d.]+)\s*\+\s*([\d.]+)/.exec(text))) {
-          PARAMS.SIZE_ADD = parseFloat(m[1]); PARAMS.SIZE_MIN = parseFloat(m[2]);
-        }
-        if ((m = /orbitSpeed\s*=\s*([\d.]+)\s*\+\s*Math\.random\(\)\s*\*\s*([\d.]+)/.exec(text))) {
-          PARAMS.SPEED_MIN = parseFloat(m[1]); PARAMS.SPEED_ADD = parseFloat(m[2]);
-        }
-        if ((m = /lineWidth\s*=\s*([\d.]+)/.exec(text))) { PARAMS.LINE_W = parseFloat(m[1]); }
-        if ((m = /let tx = this\.baseX \+ Math\.cos\(this\.angle\) \* ([\d.]+)/.exec(text))) { PARAMS.ORBIT_AMP = parseFloat(m[1]); }
-        if ((m = /let ty = this\.baseY \+ Math\.sin\(this\.angle\) \* ([\d.]+)/.exec(text))) { PARAMS.ORBIT_AMP_Y = parseFloat(m[1]); }
-        if ((m = /shadowBlur\s*=\s*(\d+)/g.exec(text))) {
-          PARAMS.GLOW_SHADOW = parseInt(m[1]);
-          if ((m = /shadowBlur\s*=\s*(\d+)/g.exec(text))) { PARAMS.SHADOW = parseInt(m[1]); }
-        }
-        if ((m = /intensity\s*>\s*([\d.]+)/.exec(text))) { PARAMS.GLOW_THRESH = parseFloat(m[1]); }
-        if ((m = /intensity\s*\*\s*([\d.]+)/.exec(text))) { PARAMS.GLOW_AMP = parseFloat(m[1]); }
-        if ((m = /d\s*<\s*([\d]+)/.exec(text))) { PARAMS.CONN_DIST = parseFloat(m[1]); }
-        if ((m = /fillStyle\s*=\s*'(#[a-fA-F0-9]{6})'/.exec(text))) { PARAMS.COLOR = m[1]; }
-      }
 
       function drawParticle(p, mouseDist) {
         var intensity = Math.max(0, 1 - mouseDist / (Math.min(canvas.offsetWidth, canvas.offsetHeight) * 0.48));
@@ -245,16 +219,17 @@
       });
       document.addEventListener('touchend', function () { mouse.active = false; });
 
-      fetch('https://project-skyscraper.com/neural-network-status/')
-        .then(function (r) { return r.text(); })
-        .then(function (t) { applyLiveParams(t); })
-        .catch(function () {})
-        .finally(function () { init(); });
+      init();
 
-      fetch('data/connections.json')
+      fetch('data/graph.json')
         .then(function (r) { return r.json(); })
-        .then(function (d) { if (d && d.count !== undefined) { countEl.textContent = d.count; } })
-        .catch(function () {});
+        .then(function (d) { if (d && d.nodes) { countEl.textContent = d.nodes.length; } })
+        .catch(function () {
+          fetch('data/connections.json')
+            .then(function (r) { return r.json(); })
+            .then(function (d) { if (d && d.count !== undefined) { countEl.textContent = d.count; } })
+            .catch(function () {});
+        });
     })();
   </script>
 </body>
