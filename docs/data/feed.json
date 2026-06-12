@@ -1,24 +1,24 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-12T09:21:16.290366+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/11/25/event-25112016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "4 new item(s) in /wp-json/wp/v2/posts",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-12T11:30:37.821075+00:00",
+      "title": "event-30082016",
+      "link": "https://project-skyscraper.com/2016/08/30/event-30082016/",
+      "endpoint": "",
+      "diff": "  Previous\n- Next\n+ Next\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 146/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 191/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2016/08/30/event-30082016/",
       "author": "System",
       "site": ""
     },
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-12T09:17:13.361617+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/09/26/event-26092016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "4 new item(s) in /wp-json/wp/v2/posts",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-12T11:30:37.820498+00:00",
+      "title": "event-04092016",
+      "link": "https://project-skyscraper.com/2016/09/04/event-04092016/",
+      "endpoint": "",
+      "diff": "- Previous\n+ Previous\n  Next\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 146/365 CompletedMemory_bloc_verification: 0/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 191/365 CompletedMemory_bloc_verification: 0/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/2016/09/04/event-04092016/",
       "author": "System",
       "site": ""
     },
@@ -5241,5 +5241,5 @@
       "author": "System"
     }
   ],
-  "updated": "2026-06-12T09:21:16.292502+00:00"
+  "updated": "2026-06-12T11:30:37.826387+00:00"
 }
