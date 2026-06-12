@@ -94,7 +94,7 @@ a.glitch-link:hover {
 /*# sourceURL=global-styles-inline-css */
 </style>
 <style id="wp-block-custom-css-inline-css">
-:root :where(.wp-custom-css-2eba5cc0){position: relative;
+:root :where(.wp-custom-css-ac760c23){position: relative;
 width: 100%;
 height: 100vh;           /* Plein écran en hauteur */
 max-width: none !important;
@@ -195,12 +195,12 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <body class="wp-singular page-template page-template-connecting-dots page page-id-551 wp-custom-logo wp-embed-responsive wp-theme-perenne is-block-theme">
 
 <div class="wp-site-blocks">
-<div class="wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-2eba5cc0">
+<div class="wp-block-group has-custom-css is-layout-flow wp-block-group-is-layout-flow wp-custom-css-ac760c23">
 <p class="wp-block-paragraph"></p>
 
 
 
-<!--  -->
+<!-- Shape -->
 <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden;">
   <canvas id="meshCanvas" style="width: 100%; height: 100%; display: block;"></canvas>
 </div>
@@ -208,78 +208,103 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <!--  -->
 <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; text-align: center; pointer-events: auto; width: 100%; padding: 20px;">
   <div id="live-visitors">
-    <span class="online-iterations "><strong>4</strong> Live Connections</span>
+    <span class="online-iterations "><strong>5</strong> Live Connections</span>
   </div>
 </div>
 
 <script>
-// 
+// ==================== Processing ====================
 const canvas = document.getElementById('meshCanvas');
 const ctx = canvas.getContext('2d', { alpha: true });
 
 let width, height, particles = [];
 let mouse = { x: 0, y: 0, active: false };
 
+const HEX_RADIUS = 180;
+const PARTICLE_COUNT = 54;
+
 class Particle {
-  constructor() {
+  constructor(index) {
     const cx = width / 2;
     const cy = height / 2;
-    const angle = Math.random() * Math.PI * 2;
-    const distance = 120 + Math.random() * 2;
+    const offset = Math.PI / 6;
 
-    this.baseX = cx + Math.cos(angle) * distance;
-    this.baseY = cy + Math.sin(angle) * distance;
+    // Organisation
+    const perimeterProgress = index / PARTICLE_COUNT;
+    const side = Math.floor(perimeterProgress * 6);
+    const t = (perimeterProgress * 6) % 1;
+
+    const angle1 = offset + side * (Math.PI / 3);
+    const angle2 = offset + (side + 1) * (Math.PI / 3);
+
+    const x1 = cx + Math.cos(angle1) * HEX_RADIUS;
+    const y1 = cy + Math.sin(angle1) * HEX_RADIUS;
+    const x2 = cx + Math.cos(angle2) * HEX_RADIUS;
+    const y2 = cy + Math.sin(angle2) * HEX_RADIUS;
+
+    this.baseX = x1 + (x2 - x1) * t;
+    this.baseY = y1 + (y2 - y1) * t;
+
     this.x = this.baseX;
     this.y = this.baseY;
-    this.size = Math.random() * 1.6 + 1.6;
+    this.size = Math.random() * 1.4 + 1.8;
+
     this.angle = Math.random() * Math.PI * 2;
-    this.orbitSpeed = 0.365 + Math.random() * 0.365;
+    
+    // === Building DB ===
+    this.orbitSpeed = 0.25 + Math.random() * 0.25;      // beaucoup plus lent
+    this.vibeSpeed  = 1.1 + Math.random() * 0.9;        // vibration douce
   }
+
   update() {
     this.angle += this.orbitSpeed;
-    let tx = this.baseX + Math.cos(this.angle) * 20;
-    let ty = this.baseY + Math.sin(this.angle) * 3.65;
+
+    const orbitX = Math.cos(this.angle) * 22;
+    const orbitY = Math.sin(this.angle) * 9;
+
+    const vibe = Math.sin(this.angle * this.vibeSpeed) * 6;
+
+    let tx = this.baseX + orbitX + vibe * 0.5;
+    let ty = this.baseY + orbitY + vibe * 0.9;
 
     if (mouse.active) {
       const dx = mouse.x - this.x;
       const dy = mouse.y - this.y;
       const dist = Math.hypot(dx, dy);
-      if (dist < 280) {
-        const force = (1 - dist / 280) * 0.42;
+      if (dist < 300) {
+        const force = (1 - dist / 300) * 0.55;
         tx += dx * force;
         ty += dy * force;
       }
     }
-    this.x = this.x * 0.9 + tx * 0.1;
-    this.y = this.y * 0.9 + ty * 0.1;
+
+    //
+    this.x = this.x * 0.92 + tx * 0.08;
+    this.y = this.y * 0.92 + ty * 0.08;
   }
+
   draw() {
     const dist = Math.hypot(this.x - mouse.x, this.y - mouse.y);
-    const intensity = Math.max(0, 1 - dist / 260);
+    const intensity = Math.max(0, 1 - dist / 280);
 
-    if (intensity > 0.25) {
-      ctx.fillStyle = '#ff2d2d';
-      ctx.shadowBlur = 20;
-      ctx.shadowColor = '#ff2d2d';
-    } else {
-      ctx.fillStyle = '#ff2d2d';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#ff2d2d';
-    }
+    ctx.fillStyle = '#ff2d2d';
+    ctx.shadowBlur = intensity > 0.3 ? 24 : 9;
+    ctx.shadowColor = '#ff2d2d';
 
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size + intensity * 3.2, 0, Math.PI * 2);
+    ctx.arc(this.x, this.y, this.size + intensity * 3, 0, Math.PI * 2);
     ctx.fill();
   }
 }
 
+// ======== Operators process ========
 function connectParticles() {
-  ctx.lineWidth = 0.7;
+  ctx.lineWidth = 0.75;
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
-      if (d < 170) {
-        ctx.strokeStyle = `rgba(255, 45, 45, ${1 - d / 170})`;
+      if (d < 165) {
+        ctx.strokeStyle = `rgba(255, 45, 45, ${Math.max(0, 1 - d / 165)})`;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
@@ -296,6 +321,19 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+function init() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+  particles = [];
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle(i));
+  }
+
+  animate();
+}
+
+// ======== Operators Actions ========
 window.addEventListener('mousemove', (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
@@ -303,23 +341,11 @@ window.addEventListener('mousemove', (e) => {
 });
 
 window.addEventListener('mouseleave', () => mouse.active = false);
-
-function init() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = window.innerHeight;
-  particles = [];
-  
-  //
-  const count = 48;
-  for (let i = 0; i < count; i++) particles.push(new Particle());
-  
-  animate();
-}
-
 window.addEventListener('resize', init);
+
 init();
 
-// 
+// Live Operators
 setInterval(() => {
   const container = document.getElementById('live-visitors');
   if (!container) return;
@@ -348,7 +374,7 @@ setInterval(() => {
 <meta id="bilmur" property="bilmur:data" content="" data-customproperties="{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;perenne&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}" data-provider="wordpress.com" data-service="atomic"  data-site-tz="Europe/London" >
 <script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202624"></script>
 <script id="wp-statistics-tracker-js-extra">
-var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=d5ec6c44ad","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
+var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=cb6928c4cb","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":551,"search_query":"","signature":"316ac5589241d6d1fd69d12ad2d0358c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
 //# sourceURL=wp-statistics-tracker-js-extra
 </script>
 <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js?m=1779192756'></script>
@@ -370,6 +396,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 </body>
 </html>
 <!--
-	generated in 0.251 seconds
-	55740 bytes batcached for 300 seconds
+	generated in 0.207 seconds
+	56507 bytes batcached for 300 seconds
 -->

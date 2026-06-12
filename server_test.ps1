@@ -1,0 +1,1 @@
+Set-Location "C:\stack\arg\project-skyscraper\docs"; python -m http.server 8080
