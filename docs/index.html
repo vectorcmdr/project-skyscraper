@@ -93,8 +93,6 @@
       var countEl = document.getElementById('liveCount');
       var COUNT = 54;
 
-      var _hexR = 0;
-
       function init() {
         var w = canvas.offsetWidth, h = canvas.offsetHeight;
         var dpr = window.devicePixelRatio || 1;
@@ -102,17 +100,17 @@
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         SCALE = (Math.min(w, h) * PADDING) / REF_DIAMETER;
-        _hexR = Math.min(w, h) * 0.18;
         var cx = w / 2, cy = h / 2;
-        var offset = Math.PI / 6;
+        var hexR = 140 * SCALE;
+        var off = Math.PI / 6;
 
         for (var i = 0; i < COUNT; i++) {
-          var side = Math.floor(i / (COUNT / 6));
+          var s = Math.floor(i / (COUNT / 6));
           var t = ((i % (COUNT / 6)) / (COUNT / 6));
-          var a1 = offset + side * (Math.PI / 3);
-          var a2 = offset + (side + 1) * (Math.PI / 3);
-          var bx = cx + (Math.cos(a1) + (Math.cos(a2) - Math.cos(a1)) * t) * _hexR;
-          var by = cy + (Math.sin(a1) + (Math.sin(a2) - Math.sin(a1)) * t) * _hexR;
+          var a1 = off + s * (Math.PI / 3);
+          var a2 = off + (s + 1) * (Math.PI / 3);
+          var bx = cx + (Math.cos(a1) + (Math.cos(a2) - Math.cos(a1)) * t) * hexR;
+          var by = cy + (Math.sin(a1) + (Math.sin(a2) - Math.sin(a1)) * t) * hexR;
 
           particles.push({
             bx: bx, by: by,
@@ -126,38 +124,35 @@
         animate();
       }
 
-      var _S = function(v) { return v * SCALE; };
-
       function animate() {
         var w = canvas.offsetWidth, h = canvas.offsetHeight;
         ctx.clearRect(0, 0, w, h);
         ctx.shadowColor = '#ff2d2d';
 
+        var connDist = 170 * SCALE;
+        var mouseR = 140 * SCALE;
+
         for (var i = 0; i < particles.length; i++) {
           var p = particles[i];
           p.angle += p.orbitSpeed;
-          var orbitX = Math.cos(p.angle) * _S(22);
-          var orbitY = Math.sin(p.angle) * _S(9);
-          var vibe = Math.sin(p.angle * p.vibeSpeed) * _S(6);
-          var tx = p.bx + orbitX + vibe * 0.5;
-          var ty = p.by + orbitY + vibe * 0.9;
+          var tx = p.bx + Math.cos(p.angle) * (8 * SCALE);
+          var ty = p.by + Math.sin(p.angle) * (4 * SCALE);
 
           if (mouse.active) {
             var dx = mouse.x - p.x, dy = mouse.y - p.y;
             var dist = Math.hypot(dx, dy);
-            if (dist < _S(300)) {
-              var force = (1 - dist / _S(300)) * 0.55;
-              tx += dx * force;
-              ty += dy * force;
+            if (dist < mouseR) {
+              var force = (1 - dist / mouseR) * 0.5;
+              tx -= dx * force;
+              ty -= dy * force;
             }
           }
 
-          p.x += (tx - p.x) * 0.08;
-          p.y += (ty - p.y) * 0.08;
+          p.x += (tx - p.x) * 0.1;
+          p.y += (ty - p.y) * 0.1;
         }
 
-        ctx.lineWidth = _S(0.75);
-        var connDist = _S(165);
+        ctx.lineWidth = 0.6 * SCALE;
         for (var i = 0; i < particles.length; i++) {
           for (var j = i + 1; j < particles.length; j++) {
             var d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
@@ -174,11 +169,11 @@
         for (var k = 0; k < particles.length; k++) {
           var p = particles[k];
           var dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-          var intensity = Math.max(0, 1 - dist / _S(280));
-          ctx.shadowBlur = intensity > 0.3 ? _S(24) : _S(9);
+          var intensity = Math.max(0, 1 - dist / (Math.min(w, h) * 0.45));
+          ctx.shadowBlur = intensity > 0.3 ? 20 * SCALE : 8 * SCALE;
           ctx.fillStyle = '#ff2d2d';
           ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size + intensity * _S(3), 0, Math.PI * 2);
+          ctx.arc(p.x, p.y, p.size + intensity * 2.5 * SCALE, 0, Math.PI * 2);
           ctx.fill();
         }
 
