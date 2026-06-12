@@ -40,6 +40,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'"single_image_gallery"\s*:\s*"[^"]*"'), '"single_image_gallery":""'),
     (re.compile(r'"jetpack_subscriptions_widget"[^}]*\}'), ''),
     (re.compile(r'img#wpstats\{display:none\}'), ''),
+    (re.compile(r'img:is\([^)]*\)\{contain-intrinsic-size:\d+px \d+px\}'), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -78,6 +79,7 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ +-]\s*:root\{--wp--preset--'),
     re.compile(r'^\.\.\.\s*\(truncated\)$'),
     re.compile(r'^[ +-]\s*img#wpstats'),
+    re.compile(r'^[ +-]\s*img:is\(.*$'),
     re.compile(r'^[ .]+\.\.\s*\(\d+ more lines?\)$'),
     re.compile(r'^[ .]+\.\.\s*\(truncated\)$'),
 ]
