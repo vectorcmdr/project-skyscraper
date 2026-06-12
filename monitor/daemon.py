@@ -33,7 +33,7 @@ from monitor.feed_manager import generate_site_data, generate_external_data, see
 from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
-from monitor.report_writer import clean_old_reports, write_monitor_report
+from monitor.report_writer import clean_old_reports, write_monitor_report, refresh_reports
 from monitor.discovery import fetch_and_save, fetch_protected_page
 from monitor.external_checker import check_external_sites
 
@@ -369,6 +369,7 @@ def daemon_loop(quiet: bool = False):
 
                 if now % 3600 < 1:
                     clean_old_reports()
+                    refresh_reports(state)
 
                 time.sleep(1)
 
