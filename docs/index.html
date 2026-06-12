@@ -111,8 +111,8 @@
           var t = ((i % (COUNT / 6)) / (COUNT / 6));
           var a1 = offset + side * (Math.PI / 3);
           var a2 = offset + (side + 1) * (Math.PI / 3);
-          var bx = cx + (Math.cos(a1) + (Math.cos(a2) - Math.cos(a1)) * t) * hexR;
-          var by = cy + (Math.sin(a1) + (Math.sin(a2) - Math.sin(a1)) * t) * hexR;
+          var bx = cx + (Math.cos(a1) + (Math.cos(a2) - Math.cos(a1)) * t) * _hexR;
+          var by = cy + (Math.sin(a1) + (Math.sin(a2) - Math.sin(a1)) * t) * _hexR;
 
           particles.push({
             bx: bx, by: by,
