@@ -93,6 +93,8 @@
       var countEl = document.getElementById('liveCount');
       var COUNT = 54;
 
+      var _hexR = 0;
+
       function init() {
         var w = canvas.offsetWidth, h = canvas.offsetHeight;
         var dpr = window.devicePixelRatio || 1;
@@ -100,8 +102,8 @@
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         SCALE = (Math.min(w, h) * PADDING) / REF_DIAMETER;
+        _hexR = Math.min(w, h) * 0.18;
         var cx = w / 2, cy = h / 2;
-        var hexR = 180 * SCALE;
         var offset = Math.PI / 6;
 
         for (var i = 0; i < COUNT; i++) {
@@ -133,7 +135,7 @@
 
         for (var i = 0; i < particles.length; i++) {
           var p = particles[i];
-          p.angle += p.orbitSpeed * 0.04;
+          p.angle += p.orbitSpeed;
           var orbitX = Math.cos(p.angle) * _S(22);
           var orbitY = Math.sin(p.angle) * _S(9);
           var vibe = Math.sin(p.angle * p.vibeSpeed) * _S(6);
