@@ -37,7 +37,18 @@ def generate_site_data(state: dict, changes: list):
 
     new_entries = []
     for c in changes:
-        entry = _change_to_feed_entry(c)
+        ts = None
+        if c["type"] == "page_content_changed":
+            url = c.get("url", "")
+            page_s = state.get("pages", {}).get(url, {})
+            lm = page_s.get("last_modified", "")
+            if lm:
+                try:
+                    dt = datetime.strptime(lm, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
+                    ts = dt.isoformat()
+                except Exception:
+                    pass
+        entry = _change_to_feed_entry(c, ts)
         if entry:
             feed["entries"].append(entry)
             _update_manifest(manifest, c)
@@ -173,9 +184,9 @@ def seed_feed_from_mirror(state: dict):
             log(f"Added {added} media items to manifest", "FILE")
 
 
-def _change_to_feed_entry(c: dict) -> dict | None:
+def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
     t = c["type"]
-    now = datetime.now(timezone.utc).isoformat()
+    now = ts or datetime.now(timezone.utc).isoformat()
     link = ""
     title = c.get("detail", "unknown")
     author = 0
