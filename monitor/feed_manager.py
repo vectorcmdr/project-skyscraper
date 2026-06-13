@@ -114,7 +114,8 @@ def generate_site_data(state: dict, changes: list) -> bool:
     # Pass 2: Main processing loop
     for c in changes:
         is_memory_bloc = False
-        if c["type"] == "page_content_changed":
+        memory_bloc_detected = False
+        if c["type"] in ("page_content_changed", "api_items_added"):
             diffs = c.get("diffs", [])
             if diffs:
                 raw = diffs[0].get("diff", "")
@@ -127,7 +128,9 @@ def generate_site_data(state: dict, changes: list) -> bool:
                     group["changes"].append(c)
                     if group["first_ts"] is None:
                         group["first_ts"] = c.get("ts") or datetime.now(timezone.utc).isoformat()
-                    is_memory_bloc = True
+                    memory_bloc_detected = True
+                    if c["type"] == "page_content_changed":
+                        is_memory_bloc = True
 
         if not is_memory_bloc:
             ts = None
@@ -179,15 +182,18 @@ def generate_site_data(state: dict, changes: list) -> bool:
         last_ts = max(timestamps)
         first_ts = min(timestamps)
         existing = _find_memory_bloc_entry(feed["entries"], value)
+        new_page_count = sum(1 for c in group["changes"] if c["type"] == "api_items_added")
         if existing:
-            existing["page_count"] += len(group["changes"])
-            existing["detail"] = f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {existing['page_count']} pages"
-            existing["title"] = f"Memory bloc restoration: {group['new_value']} [{existing['page_count']} Pages]"
+            if new_page_count:
+                existing["page_count"] += new_page_count
+            count = existing["page_count"]
+            existing["detail"] = f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {count} pages"
+            existing["title"] = f"Memory bloc restoration: {group['new_value']} [{count} Pages]"
             existing["timestamp"] = first_ts if first_ts < existing["timestamp"] else existing["timestamp"]
             existing["last_timestamp"] = last_ts if last_ts > existing.get("last_timestamp", "") else existing.get("last_timestamp", last_ts)
             new_entries.append(existing)
         else:
-            count = len(group["changes"])
+            count = new_page_count or len(group["changes"])
             entry = {
                 "type": "memory_bloc_restoration",
                 "timestamp": first_ts,
@@ -647,7 +653,9 @@ def _consolidate_memory_bloc_entries(entries: list) -> list:
 
         existing = _find_memory_bloc_entry(others, value)
         if existing:
-            existing["page_count"] = existing.get("page_count", 0) + len(items)
+            new_page_count = sum(1 for e in items if e.get("type") == "api_items_added")
+            if new_page_count:
+                existing["page_count"] = existing.get("page_count", 0) + new_page_count
             count = existing["page_count"]
             existing["title"] = f"Memory bloc restoration: {value} [{count} Pages]"
             existing["detail"] = f"Memory bloc restoration changed from {old_val} to {value} across {count} pages"

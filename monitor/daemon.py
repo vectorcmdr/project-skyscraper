@@ -1,5 +1,6 @@
 """Daemon orchestrator -- tiered polling loop for change detection."""
 
+import re
 import signal
 import sys
 import time
@@ -56,6 +57,24 @@ def _sync_state_hashes_to_mirror(state: dict):
                 synced += 1
     if synced:
         log(f"Synced {synced} stale state hashes to mirror", "FILE")
+
+
+def _check_new_page_memory_bloc(url: str, change: dict):
+    import re
+    from monitor.url_mapper import url_to_path
+    html_path = url_to_path(url, "html")
+    if not html_path.is_file():
+        return
+    try:
+        text = html_path.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return
+    m = re.search(r'Memory_bloc_restoration:\s*(\d+/\d+)', text)
+    if not m:
+        return
+    new_val = m.group(1)
+    diff_text = f"- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: {new_val}"
+    change.setdefault("diffs", []).append({"url": url, "diff": diff_text})
 
 
 def print_banner():
@@ -205,6 +224,7 @@ def _apply_changes(changes: list, state: dict = None):
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
                         _fetch_page_html(link)
+                        _check_new_page_memory_bloc(link, change)
                         time.sleep(0.2)
                 elif "/pages" in endpoint:
                     fetch_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/pages/{iid}", "api")
@@ -212,6 +232,7 @@ def _apply_changes(changes: list, state: dict = None):
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
                         _fetch_page_html(link)
+                        _check_new_page_memory_bloc(link, change)
                         time.sleep(0.2)
                 elif "/media" in endpoint:
                     fetch_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/media/{iid}", "api")
