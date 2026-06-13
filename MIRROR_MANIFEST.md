@@ -1,14 +1,14 @@
 # project-skyscraper.com -- Complete Mirror Manifest
 
-**Generated:** 2026-06-12 06:00:01 UTC
+**Generated:** 2026-06-13 03:00:02 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| **Total files** | 7601 |
-| **Total size** | 109.3 MB |
+| **Total files** | 7654 |
+| **Total size** | 113.0 MB |
 
 ## Section Breakdown
 
@@ -18,10 +18,10 @@
 | **.notes.md/** | 1 | 3.2 KB |
 | **LICENSE/** | 1 | 1.1 KB |
 | **MIRROR_MANIFEST.md/** | 1 | 1.4 KB |
-| **POST_ID_SERIES.md/** | 1 | 71.1 KB |
+| **POST_ID_SERIES.md/** | 1 | 88.1 KB |
 | **README.md/** | 1 | 6.9 KB |
 | **UNPUBLISHED_IDS.md/** | 1 | 5.6 KB |
-| **api/** | 4311 | 7.1 MB |
+| **api/** | 4311 | 7.4 MB |
 | **assets/** | 68 | 1.6 MB |
 | **config.example.json/** | 1 | 423.0 B |
 | **config.json/** | 1 | 581.0 B |
@@ -32,9 +32,9 @@
 | **external/** | 1 | 103.4 KB |
 | **external_refs/** | 1 | 84.0 KB |
 | **extras/** | 15 | 39.8 KB |
-| **html/** | 309 | 19.4 MB |
+| **html/** | 362 | 22.7 MB |
 | **media/** | 121 | 16.3 MB |
-| **monitor/** | 24 | 177.3 KB |
+| **monitor/** | 24 | 179.8 KB |
 | **monitor_site.py/** | 1 | 653.0 B |
 | **serve_mirror.py/** | 1 | 10.2 KB |
 | **serve_site.ps1/** | 1 | 293.0 B |
