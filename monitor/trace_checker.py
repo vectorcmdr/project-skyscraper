@@ -74,7 +74,7 @@ def check_trace() -> bool:
             }
             TRACE_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
             TRACE_STATUS_FILE.write_text(json.dumps(trace_data, indent=2), encoding="utf-8")
-            return False
+            return "updated"
 
         _trace_last_state = new_state
         _trace_last_seen = last_seen_at
@@ -88,7 +88,7 @@ def check_trace() -> bool:
         TRACE_STATUS_FILE.write_text(json.dumps(trace_data, indent=2), encoding="utf-8")
 
         log(f"Trace state changed: {new_state} (last seen: {last_seen_at})", "INFO")
-        return True
+        return "changed"
 
     except BaseException:
         return False

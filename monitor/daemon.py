@@ -373,8 +373,8 @@ def daemon_loop(quiet: bool = False):
                 if tiers_to_run:
                     run_check_cycle(state, tiers=tiers_to_run)
 
-                trace_changed = check_trace()
-                if trace_changed:
+                trace_result = check_trace()
+                if trace_result == "changed":
                     import json
                     from monitor.config import TRACE_STATUS_FILE
                     try:
@@ -382,6 +382,11 @@ def daemon_loop(quiet: bool = False):
                         notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
                     except Exception:
                         pass
+                    try:
+                        push_site()
+                    except BaseException:
+                        pass
+                elif trace_result == "updated":
                     try:
                         push_site()
                     except BaseException:
@@ -428,8 +433,8 @@ def run_single_check():
             pass
         run_check_cycle(state, tiers={"fast", "medium", "deep"})
 
-        trace_changed = check_trace()
-        if trace_changed:
+        trace_result = check_trace()
+        if trace_result == "changed":
             import json
             from monitor.config import TRACE_STATUS_FILE
             try:
@@ -437,6 +442,11 @@ def run_single_check():
                 notify_trace_change(td.get("state", "LOST"), td.get("lastSeenAt", ""))
             except Exception:
                 pass
+            try:
+                push_site()
+            except BaseException:
+                pass
+        elif trace_result == "updated":
             try:
                 push_site()
             except BaseException:
