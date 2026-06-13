@@ -27,6 +27,19 @@
       "game_date": "2016-11-14T00:00:00"
     },
     {
+      "type": "api_items_added",
+      "timestamp": "2026-06-13T14:19:25",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/15/event-15122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2016_dataset",
+      "author": "System",
+      "site": "",
+      "id": 1167,
+      "game_date": "2016-12-15T00:00:00"
+    },
+    {
       "type": "unpublished_detected",
       "timestamp": "2026-06-13T08:20:38.690665+00:00",
       "title": "#3202 (posts)",
@@ -4287,5 +4300,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-13T14:35:13.278655+00:00"
+  "updated": "2026-06-13T14:46:24.270146+00:00"
 }
