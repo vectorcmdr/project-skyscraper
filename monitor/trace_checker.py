@@ -66,6 +66,14 @@ def check_trace() -> bool:
         new_state = "ACTIVE" if elapsed < TRACE_ACTIVE_THRESHOLD else "LOST"
 
         if new_state == _trace_last_state:
+            _trace_last_seen = last_seen_at
+            trace_data = {
+                "state": new_state,
+                "lastSeenAt": last_seen_at,
+                "updatedAt": now.isoformat(),
+            }
+            TRACE_STATUS_FILE.parent.mkdir(parents=True, exist_ok=True)
+            TRACE_STATUS_FILE.write_text(json.dumps(trace_data, indent=2), encoding="utf-8")
             return False
 
         _trace_last_state = new_state
