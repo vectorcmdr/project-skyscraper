@@ -587,4 +587,19 @@
       simulation.alpha(0.1).restart();
     }
   });
+
+  /* -- LAST SYNC ---------------------------------------- */
+  function updateSync() {
+    fetch(DATA_ROOT + '/graph_sync.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (data) {
+        var d = new Date(data.timestamp);
+        var opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        var utc = d.toLocaleString('en-GB', Object.assign({}, opts, { timeZone: 'UTC' }));
+        var local = d.toLocaleString('en-GB', opts);
+        document.getElementById('lastSync').textContent = 'LAST_SYNC: ' + utc + ' UTC [' + local + ']';
+      })
+      .catch(function () {});
+  }
+  updateSync();
 })();

@@ -153,6 +153,9 @@ def generate_site_data(state: dict, changes: list) -> bool:
 
     if feed_written:
         log(f"Feed updated: {len(feed['entries'])} entries, {len(manifest['pages'])} manifest pages", "FILE")
+        sync_path = DATA_DIR / "sync.json"
+        sync_path.write_text(json.dumps({"timestamp": datetime.now(timezone.utc).isoformat()}, indent=2), encoding="utf-8")
+        log("Sync timestamp written", "FILE")
 
     return feed_written
 

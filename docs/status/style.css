@@ -154,6 +154,12 @@ body.landing {
   .topbar-right { width: 100%; }
 }
 
+/* -- SYNC LINE -- */
+.sync-line {
+  text-align: center; font-size: .7rem; color: #555;
+  letter-spacing: .12em; padding: .5rem 0;
+}
+
 /* -- LAYOUT -- */
 .container {
   display: grid; grid-template-columns: 1fr 1fr 1fr;

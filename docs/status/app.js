@@ -288,3 +288,18 @@ function updateTrace() {
 updateTrace();
 // Re-fetch trace.json every 30s so ACTIVE→LOST flip isn't missed (silent while ticking)
 setInterval(updateTrace, 30000);
+
+/* ── LAST SYNC ──────────────────────────────────────────── */
+function updateSync() {
+  fetch(`${DATA_ROOT}/sync.json`)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      const d = new Date(data.timestamp);
+      const opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const utc = d.toLocaleString('en-GB', { ...opts, timeZone: 'UTC' });
+      const local = d.toLocaleString('en-GB', opts);
+      document.getElementById('lastSync').textContent = `LAST_SYNC: ${utc} UTC [${local}]`;
+    })
+    .catch(() => {});
+}
+updateSync();

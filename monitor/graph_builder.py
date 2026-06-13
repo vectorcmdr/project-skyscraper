@@ -463,3 +463,6 @@ def write_graph(graph: dict):
     path = DATA_DIR / "graph.json"
     path.write_text(json.dumps(graph, indent=2, ensure_ascii=False), encoding="utf-8")
     log(f"Graph written: {len(graph['nodes'])} nodes, {len(graph['links'])} links", "FILE")
+    sync_path = DATA_DIR / "graph_sync.json"
+    sync_path.write_text(json.dumps({"timestamp": datetime.now(timezone.utc).isoformat()}, indent=2), encoding="utf-8")
+    log("Graph sync timestamp written", "FILE")
