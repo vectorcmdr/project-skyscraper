@@ -14,7 +14,7 @@ from monitor.logger import log
 from monitor.api_collections import get_user_map
 
 
-def generate_site_data(state: dict, changes: list):
+def generate_site_data(state: dict, changes: list) -> bool:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     feed_path = DATA_DIR / "feed.json"
@@ -130,10 +130,13 @@ def generate_site_data(state: dict, changes: list):
     feed["updated"] = datetime.now(timezone.utc).isoformat()
     manifest["updated"] = datetime.now(timezone.utc).isoformat()
 
-    _write_if_changed(feed_path, feed, "entries")
+    feed_written = _write_if_changed(feed_path, feed, "entries")
     _write_if_changed(manifest_path, manifest, "pages")
 
-    log(f"Site data written: {len(feed['entries'])} feed entries, {len(manifest['pages'])} manifest pages", "FILE")
+    if feed_written:
+        log(f"Feed updated: {len(feed['entries'])} entries, {len(manifest['pages'])} manifest pages", "FILE")
+
+    return feed_written
 
 
 def generate_external_data(state: dict, changes: list):
@@ -501,12 +504,13 @@ def _consolidate_memory_bloc_entries(entries: list) -> list:
     return others
 
 
-def _write_if_changed(path, data: dict, key: str):
+def _write_if_changed(path, data: dict, key: str) -> bool:
     if path.is_file():
         try:
             old = json.loads(path.read_text(encoding="utf-8"))
             if old.get(key) == data.get(key):
-                return
+                return False
         except Exception:
             pass
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    return True

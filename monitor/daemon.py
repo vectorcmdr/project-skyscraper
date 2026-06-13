@@ -171,8 +171,13 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             else:
                 log(f"All {len(all_changes)} change(s) noise-only -- skipping git push", "CHECK")
     else:
-        generate_site_data(state, [])
+        feed_written = generate_site_data(state, [])
         save_state(state)
+        if feed_written:
+            try:
+                push_site()
+            except BaseException:
+                log("No-changes push failed, will retry next cycle", "WARN")
         log("No changes detected", "CHECK")
 
     return all_changes
