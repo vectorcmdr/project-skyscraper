@@ -140,7 +140,7 @@ def generate_site_data(state: dict, changes: list) -> bool:
                         ts = max(gmts)
                     except Exception:
                         pass
-            elif c["type"] == "media_orphan_upload":
+            elif c["type"] in ("media_orphan_upload", "media_upload"):
                 mg = c.get("modified_gmt", "")
                 if mg:
                     ts = mg
@@ -261,30 +261,34 @@ def seed_feed_from_mirror(state: dict):
         try:
             feed = json.loads(feed_path.read_text(encoding="utf-8"))
             for e in feed.get("entries", []):
-                if e.get("id") and e.get("type") in ("api_items_added", "media_orphan_upload"):
+                if e.get("id") and e.get("type") in ("api_items_added", "media_orphan_upload", "media_upload"):
                     existing_ids.add(e["id"])
-                    if e.get("type") == "media_orphan_upload":
+                    if e.get("type") in ("media_orphan_upload", "media_upload"):
                         media_fixup[e["id"]] = e
         except Exception:
             pass
 
     api = state.get("api", {})
 
-    # Fix up existing media entry timestamps from now() to actual modified_gmt
+    # Fix up existing media entry timestamps and types from API data
     if media_fixup:
         any_fixed = False
         for item in api.get("/wp-json/wp/v2/media", {}).get("items", []):
             item_id = item.get("id")
             if item_id in media_fixup:
+                entry = media_fixup[item_id]
                 mg = item.get("modified_gmt", "")
                 if mg:
-                    existing_ts = media_fixup[item_id].get("timestamp", "")
+                    existing_ts = entry.get("timestamp", "")
                     existing_clean = re.sub(r'\..*$', '', existing_ts).replace('+00:00', '').replace('Z', '')
                     mg_clean = mg[:19] if len(mg) >= 19 else mg
                     if existing_clean != mg_clean:
-                        media_fixup[item_id]["timestamp"] = mg
+                        entry["timestamp"] = mg
                         any_fixed = True
-                    media_fixup[item_id]["timestamp"] = mg
+                is_orphan = not item.get("post_parent", 0)
+                correct_type = "media_orphan_upload" if is_orphan else "media_upload"
+                if entry.get("type") != correct_type:
+                    entry["type"] = correct_type
                     any_fixed = True
         if any_fixed:
             feed["entries"] = feed.get("entries", [])
@@ -311,8 +315,9 @@ def seed_feed_from_mirror(state: dict):
         item_id = item.get("id")
         if item_id and item_id in existing_ids:
             continue
+        is_orphan = not item.get("post_parent", 0)
         seed_changes.append({
-            "type": "media_orphan_upload",
+            "type": "media_orphan_upload" if is_orphan else "media_upload",
             "endpoint": "media",
             "detail": item.get("title", f"Media #{item_id or '?'}"),
             "id": item_id,
@@ -416,6 +421,11 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         link = c.get("url", "")
         author = c.get("author", 0)
         entry_id = c.get("id")
+    elif t == "media_upload":
+        title = c.get("title", f"Media #{c.get('id', '?')}")
+        link = c.get("url", "")
+        author = c.get("author", 0)
+        entry_id = c.get("id")
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
     elif t == "unpublished_to_published":
@@ -462,8 +472,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         "detail": c.get("detail", ""),
         "author": author,
         "site": c.get("site_label", ""),
-        "id": entry_id if t in ("api_items_added", "media_orphan_upload") else None,
-        "game_date": game_date if t in ("api_items_added", "media_orphan_upload") else "",
+        "id": entry_id if t in ("api_items_added", "media_orphan_upload", "media_upload") else None,
+        "game_date": game_date if t in ("api_items_added", "media_orphan_upload", "media_upload") else "",
     }
 
 
