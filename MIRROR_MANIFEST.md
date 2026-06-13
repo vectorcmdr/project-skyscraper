@@ -1,6 +1,6 @@
 # project-skyscraper.com -- Complete Mirror Manifest
 
-**Generated:** 2026-06-13 12:00:01 UTC
+**Generated:** 2026-06-13 13:00:01 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
@@ -20,7 +20,7 @@
 | **MIRROR_MANIFEST.md/** | 1 | 1.4 KB |
 | **POST_ID_SERIES.md/** | 1 | 88.1 KB |
 | **README.md/** | 1 | 6.9 KB |
-| **UNPUBLISHED_IDS.md/** | 1 | 492.0 B |
+| **UNPUBLISHED_IDS.md/** | 1 | 519.0 B |
 | **api/** | 4311 | 7.4 MB |
 | **assets/** | 68 | 1.6 MB |
 | **config.example.json/** | 1 | 423.0 B |
@@ -34,7 +34,7 @@
 | **extras/** | 15 | 39.8 KB |
 | **html/** | 362 | 22.7 MB |
 | **media/** | 121 | 16.3 MB |
-| **monitor/** | 24 | 189.6 KB |
+| **monitor/** | 24 | 193.8 KB |
 | **monitor_site.py/** | 1 | 653.0 B |
 | **serve_mirror.py/** | 1 | 10.2 KB |
 | **serve_site.ps1/** | 1 | 293.0 B |
