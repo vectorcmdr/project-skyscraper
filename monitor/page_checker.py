@@ -9,7 +9,7 @@ from monitor.logger import log
 from monitor.noise_filter import is_noise_only_page_change
 from monitor.diff_engine import compute_diff
 from monitor.url_mapper import url_to_path
-from monitor.api_collections import find_author_for_url
+from monitor.api_collections import find_author_for_url, find_modified_gmt_for_url
 
 _NEURAL_URL = f"{BASE_URL}/neural-network-status/"
 
@@ -57,19 +57,36 @@ def check_page_content(url: str, state: dict) -> list:
             if not diff_text:
                 log(f"Page {url}: hash changed but beautified diff is noise-only (suppressed)", "DEEP")
             else:
-                change_obj = {
-                    "type": "page_content_changed",
-                    "url": url,
-                    "old_hash": old_hash,
-                    "new_hash": new_hash,
-                    "detail": f"Content changed: {url}",
-                    "diffs": [{"url": url, "diff": diff_text}],
-                }
-                author = find_author_for_url(state, url)
-                if author:
-                    change_obj["author"] = author
-                changes.append(change_obj)
-                log(f"Page content CHANGED: {url}", "DEEP")
+                mod_gmt = find_modified_gmt_for_url(state, url)
+                stale = False
+                if mod_gmt:
+                    try:
+                        mod_dt = datetime.fromisoformat(mod_gmt)
+                        if mod_dt.tzinfo is None:
+                            mod_dt = mod_dt.replace(tzinfo=timezone.utc)
+                        age = datetime.now(timezone.utc) - mod_dt
+                        if age.total_seconds() > 3600:
+                            stale = True
+                            log(f"Page {url}: content change from {age.total_seconds()/3600:.1f}h ago (stale catch-up, suppressed)", "DEEP")
+                    except Exception:
+                        pass
+
+                if not stale:
+                    change_obj = {
+                        "type": "page_content_changed",
+                        "url": url,
+                        "old_hash": old_hash,
+                        "new_hash": new_hash,
+                        "detail": f"Content changed: {url}",
+                        "diffs": [{"url": url, "diff": diff_text}],
+                    }
+                    if mod_gmt:
+                        change_obj["ts"] = mod_gmt
+                    author = find_author_for_url(state, url)
+                    if author:
+                        change_obj["author"] = author
+                    changes.append(change_obj)
+                    log(f"Page content CHANGED: {url}", "DEEP")
         _save_mirror_copy(url, result)
     elif old_hash is None:
         log(f"Page content first tracked: {url}", "DEEP")

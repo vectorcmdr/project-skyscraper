@@ -133,10 +133,22 @@ def notify_changes(changes: list, state: dict):
         _send_embed(title=f"Modified Items: {total}", description="", fields=fields[:10], color=0xffaa00)
 
     if "page_content_changed" in by_type:
-        clist = [c for c in by_type["page_content_changed"] if _get_diff_preview(c)]
-        if clist:
+        import re as _re
+        _mb_re = _re.compile(r'Memory_bloc_restoration:\s*(\d+/\d+)\s*Completed')
+        memory_bloc = []
+        regular = []
+        for c in by_type["page_content_changed"]:
+            if not _get_diff_preview(c):
+                continue
+            diffs = c.get("diffs", [])
+            if diffs and _mb_re.search(diffs[0].get("diff", "")):
+                memory_bloc.append(c)
+            else:
+                regular.append(c)
+
+        if regular:
             fields = []
-            for c in clist[:5]:
+            for c in regular[:5]:
                 page_label = c["url"].split("/")[-1] or c["url"]
                 author = _resolve_author(user_map, c.get("author", 0))
                 preview = _get_diff_preview(c)
@@ -146,7 +158,31 @@ def notify_changes(changes: list, state: dict):
                 if preview:
                     val += f"\n{preview[:900]}"
                 fields.append({"name": "Page Changed", "value": val[:1024]})
-            _send_embed(title=f"Page Content Changed: {len(clist)} page(s)", description="", fields=fields[:10], color=0xff8800)
+            _send_embed(title=f"Page Content Changed: {len(regular)} page(s)", description="", fields=fields[:10], color=0xff8800)
+
+        if memory_bloc:
+            groups = {}
+            for c in memory_bloc:
+                diffs = c.get("diffs", [])
+                if diffs:
+                    m = _mb_re.findall(diffs[0].get("diff", ""))
+                    if len(m) >= 2:
+                        val = m[1]
+                        groups.setdefault(val, {"new_value": val, "old_value": m[0], "changes": []})
+                        groups[val]["changes"].append(c)
+
+            for val, grp in groups.items():
+                page_count = len(grp["changes"])
+                urls = [c.get("url", "") for c in grp["changes"]]
+                samples = "\n".join(u.split("/")[-1] for u in urls[:10])
+                if len(urls) > 10:
+                    samples += f"\n... and {len(urls) - 10} more"
+                _send_embed(
+                    title=f"Memory Bloc Restoration: {grp['old_value']} \u2192 {grp['new_value']}",
+                    description=f"{page_count} page(s) updated",
+                    fields=[{"name": "Pages", "value": samples[:1024]}],
+                    color=0xff8800,
+                )
 
     if "media_replaced" in by_type:
         clist = by_type["media_replaced"]

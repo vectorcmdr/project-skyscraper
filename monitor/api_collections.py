@@ -175,6 +175,7 @@ def _item_summary(item: dict, endpoint: str = "") -> dict:
         "id": item["id"],
         "title": item.get("title", {}).get("rendered", "") if isinstance(item.get("title"), dict) else "",
         "modified": item.get("modified", ""),
+        "modified_gmt": item.get("modified_gmt", ""),
         "type": item.get("type", ""),
         "status": item.get("status", ""),
         "link": item.get("link", ""),
@@ -217,3 +218,18 @@ def find_author_for_url(state: dict, url: str) -> int:
             if item.get("link") == url:
                 return item.get("author", 0) or 0
     return 0
+
+
+def find_modified_gmt_for_url(state: dict, url: str) -> str | None:
+    if not url:
+        return None
+    api_data = state.get("api", {})
+    for ep_state in api_data.values():
+        items = ep_state.get("items", [])
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if item.get("link") == url:
+                mg = item.get("modified_gmt")
+                return mg if mg else None
+    return None

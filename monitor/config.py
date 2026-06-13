@@ -35,7 +35,7 @@ GITHUB_TOKEN = _CONFIG.get("github_token", "")
 
 POLL_INTERVALS = {
     "fast": 30,
-    "medium": 120,
+    "medium": 60,
     "deep": 1800,
 }
 

@@ -5,6 +5,7 @@ Produces docs/data/feed.json (change log) and docs/data/manifest.json
 """
 
 import json
+import re
 import urllib.parse
 from datetime import datetime, timezone
 
@@ -27,6 +28,11 @@ def generate_site_data(state: dict, changes: list):
             feed = {}
     feed.setdefault("entries", [])
 
+    consolidated = _consolidate_memory_bloc_entries(feed["entries"])
+    if consolidated is not feed["entries"]:
+        feed["entries"] = consolidated
+        log(f"Consolidated {len(feed['entries'])} feed entries via memory bloc aggregation", "FILE")
+
     manifest = {}
     if manifest_path.is_file():
         try:
@@ -36,22 +42,70 @@ def generate_site_data(state: dict, changes: list):
     manifest.setdefault("pages", [])
 
     new_entries = []
+    memory_bloc_groups = {}
+
     for c in changes:
-        ts = None
+        is_memory_bloc = False
         if c["type"] == "page_content_changed":
-            url = c.get("url", "")
-            page_s = state.get("pages", {}).get(url, {})
-            lm = page_s.get("last_modified", "")
-            if lm:
-                try:
-                    dt = datetime.strptime(lm, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
-                    ts = dt.isoformat()
-                except Exception:
-                    pass
-        entry = _change_to_feed_entry(c, ts)
-        if entry:
+            diffs = c.get("diffs", [])
+            if diffs:
+                raw = diffs[0].get("diff", "")
+                old_val, new_val = _parse_memory_bloc_diff(raw)
+                if new_val:
+                    group = memory_bloc_groups.setdefault(new_val, {
+                        "old_value": old_val, "new_value": new_val,
+                        "changes": [], "first_ts": None,
+                    })
+                    group["changes"].append(c)
+                    if group["first_ts"] is None:
+                        group["first_ts"] = c.get("ts") or datetime.now(timezone.utc).isoformat()
+                    is_memory_bloc = True
+
+        if not is_memory_bloc:
+            ts = None
+            if c["type"] == "page_content_changed":
+                url = c.get("url", "")
+                page_s = state.get("pages", {}).get(url, {})
+                lm = page_s.get("last_modified", "")
+                if lm:
+                    try:
+                        dt = datetime.strptime(lm, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
+                        ts = dt.isoformat()
+                    except Exception:
+                        pass
+                if not ts:
+                    ts = c.get("ts")
+            entry = _change_to_feed_entry(c, ts)
+            if entry:
+                feed["entries"].append(entry)
+                _update_manifest(manifest, c)
+                new_entries.append(entry)
+
+    for value, group in memory_bloc_groups.items():
+        now = datetime.now(timezone.utc).isoformat()
+        existing = _find_memory_bloc_entry(feed["entries"], value)
+        if existing:
+            existing["page_count"] += len(group["changes"])
+            existing["detail"] = f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {existing['page_count']} pages"
+            existing["title"] = f"Memory bloc restoration: {group['new_value']} [{existing['page_count']} Pages]"
+            existing["last_timestamp"] = now
+            new_entries.append(existing)
+        else:
+            count = len(group["changes"])
+            entry = {
+                "type": "memory_bloc_restoration",
+                "timestamp": group["first_ts"],
+                "title": f"Memory bloc restoration: {group['new_value']} [{count} Pages]",
+                "link": group["changes"][0].get("url", ""),
+                "diff": f"{group['old_value']} \u2192 {group['new_value']}",
+                "detail": f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {count} pages",
+                "author": "System",
+                "site": "",
+                "restoration_value": value,
+                "page_count": count,
+                "last_timestamp": now,
+            }
             feed["entries"].append(entry)
-            _update_manifest(manifest, c)
             new_entries.append(entry)
 
     _sync_manifest_from_sitemap(manifest, state)
@@ -70,7 +124,7 @@ def generate_site_data(state: dict, changes: list):
         if isinstance(aid, int) and aid:
             p["author"] = user_map.get(aid, "")
 
-    feed["entries"].sort(key=lambda e: e.get("timestamp", ""), reverse=True)
+    feed["entries"].sort(key=lambda e: (e.get("last_timestamp") or e.get("timestamp", "")), reverse=True)
     manifest["pages"].sort(key=lambda p: p.get("modified", ""), reverse=True)
 
     feed["updated"] = datetime.now(timezone.utc).isoformat()
@@ -371,6 +425,80 @@ def _sync_manifest_from_sitemap(manifest: dict, state: dict):
     if sitemap_paths:
         manifest["pages"] = [p for p in manifest["pages"]
                              if p["path"] in sitemap_paths or p["type"] != "page"]
+
+
+_MEMORY_BLOC_RE = re.compile(r'Memory_bloc_restoration:\s*(\d+/\d+)')
+
+
+def _parse_memory_bloc_diff(diff_text: str):
+    if not diff_text:
+        return None, None
+    matches = _MEMORY_BLOC_RE.findall(diff_text)
+    if len(matches) >= 2:
+        return matches[0], matches[1]
+    return None, None
+
+
+def _find_memory_bloc_entry(entries: list, value: str):
+    for entry in entries:
+        if entry.get("type") == "memory_bloc_restoration" and entry.get("restoration_value") == value:
+            return entry
+    return None
+
+
+def _consolidate_memory_bloc_entries(entries: list) -> list:
+    memory = []
+    others = []
+    for e in entries:
+        if e.get("type") == "page_content_changed" and e.get("diff"):
+            old, new = _parse_memory_bloc_diff(e["diff"])
+            if new:
+                memory.append(e)
+                continue
+        others.append(e)
+
+    if not memory:
+        return entries
+
+    groups = {}
+    for e in memory:
+        _, new = _parse_memory_bloc_diff(e["diff"])
+        if new:
+            groups.setdefault(new, []).append(e)
+
+    for value, items in groups.items():
+        timestamps = [e["timestamp"] for e in items if e.get("timestamp")]
+        oldest = min(timestamps) if timestamps else datetime.now(timezone.utc).isoformat()
+        newest = max(timestamps) if timestamps else oldest
+        old_val, _ = _parse_memory_bloc_diff(items[0].get("diff", ""))
+
+        existing = _find_memory_bloc_entry(others, value)
+        if existing:
+            existing["page_count"] = existing.get("page_count", 0) + len(items)
+            count = existing["page_count"]
+            existing["title"] = f"Memory bloc restoration: {value} [{count} Pages]"
+            existing["detail"] = f"Memory bloc restoration changed from {old_val} to {value} across {count} pages"
+            if oldest < existing["timestamp"]:
+                existing["timestamp"] = oldest
+            if newest > existing.get("last_timestamp", ""):
+                existing["last_timestamp"] = newest
+        else:
+            count = len(items)
+            others.append({
+                "type": "memory_bloc_restoration",
+                "timestamp": oldest,
+                "title": f"Memory bloc restoration: {value} [{count} Pages]",
+                "link": items[0].get("link", ""),
+                "diff": f"{old_val} \u2192 {value}" if old_val else value,
+                "detail": f"Memory bloc restoration changed from {old_val} to {value} across {count} pages",
+                "author": "System",
+                "site": "",
+                "restoration_value": value,
+                "page_count": count,
+                "last_timestamp": newest,
+            })
+
+    return others
 
 
 def _write_if_changed(path, data: dict, key: str):

@@ -144,14 +144,13 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
         except Exception as e:
             log(f"Error checking external sites: {e}", "ERROR")
 
-    save_state(state)
-
     if all_changes:
         state["stats"]["total_changes_detected"] += len(all_changes)
 
         if quiet:
             log(f"=== Initial sync: {len(all_changes)} change(s) -- mirroring quietly ===", "FETCH")
-            _apply_changes(all_changes)
+            _apply_changes(all_changes, state=state)
+            save_state(state)
             # Always process new/removed items even during warmup
             always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added", "external_dns_changed", "external_robots_txt_changed", "external_content_changed", "external_unpublished_detected")]
             if always_capture:
@@ -160,7 +159,8 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
                 generate_external_data(state, always_capture)
         else:
             log(f"=== Processing {len(all_changes)} change(s) ===", "FETCH")
-            _apply_changes(all_changes)
+            _apply_changes(all_changes, state=state)
+            save_state(state)
             notify_changes(all_changes, state)
             generate_site_data(state, all_changes)
             generate_external_data(state, all_changes)
@@ -171,12 +171,13 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             else:
                 log(f"All {len(all_changes)} change(s) noise-only -- skipping git push", "CHECK")
     else:
+        save_state(state)
         log("No changes detected", "CHECK")
 
     return all_changes
 
 
-def _apply_changes(changes: list):
+def _apply_changes(changes: list, state: dict = None):
     for change in changes:
         ctype = change["type"]
 
@@ -228,14 +229,14 @@ def _apply_changes(changes: list):
                     time.sleep(0.2)
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
-                        _diff_and_save(link, "html", change)
+                        _diff_and_save(link, "html", change, state=state)
                         time.sleep(0.2)
                 elif "/pages" in endpoint:
                     _diff_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/pages/{iid}", "api", change)
                     time.sleep(0.2)
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
-                        _diff_and_save(link, "html", change)
+                        _diff_and_save(link, "html", change, state=state)
                         time.sleep(0.2)
 
         elif ctype == "page_content_changed":
@@ -271,9 +272,10 @@ def _fetch_page_html(url: str, subdir: str = "html"):
         fetch_and_save(url, subdir)
 
 
-def _diff_and_save(url: str, subdir: str, change_obj: dict):
+def _diff_and_save(url: str, subdir: str, change_obj: dict, state: dict = None):
     from monitor.diff_engine import compute_diff, compute_text_diff
     from monitor.url_mapper import url_to_path
+    import hashlib
 
     path = url_to_path(url, subdir=subdir)
     old_bytes = path.read_bytes() if path.is_file() else None
@@ -292,6 +294,13 @@ def _diff_and_save(url: str, subdir: str, change_obj: dict):
             if text_diff:
                 entry["text_diff"] = text_diff
         change_obj.setdefault("diffs", []).append(entry)
+
+    if subdir == "html" and state is not None:
+        page_state = state.setdefault("pages", {}).setdefault(url, {})
+        page_state["hash"] = hashlib.md5(new_bytes).hexdigest()
+        page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+        page_state["etag"] = None
+        page_state["last_modified"] = None
 
 
 def daemon_loop(quiet: bool = False):
