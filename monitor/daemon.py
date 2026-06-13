@@ -408,10 +408,7 @@ def daemon_loop(quiet: bool = False):
                     except BaseException:
                         pass
                 elif trace_result == "updated":
-                    try:
-                        push_site()
-                    except BaseException:
-                        pass
+                    pass
 
                 if now % 3600 < 1:
                     clean_old_reports()
