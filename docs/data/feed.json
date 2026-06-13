@@ -11,11 +11,11 @@
       "site": "",
       "restoration_value": "199/365",
       "page_count": 73,
-      "last_timestamp": "2026-06-13T02:45:48.263272+00:00"
+      "last_timestamp": "2026-06-13T02:45:48+00:00"
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-13T01:45:47.015794+00:00",
+      "timestamp": "2026-06-13T01:45:47+00:00",
       "title": "Memory bloc restoration: 162/365 [7 Pages]",
       "link": "https://project-skyscraper.com/2016/03/24/event-24032016/",
       "diff": "146/365 → 162/365",
@@ -24,28 +24,17 @@
       "site": "",
       "restoration_value": "162/365",
       "page_count": 7,
-      "last_timestamp": "2026-06-13T02:15:51.692246+00:00"
+      "last_timestamp": "2026-06-13T02:15:51+00:00"
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-12T16:30:38.786220+00:00",
+      "timestamp": "2026-06-12T16:30:38+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
       "diff": "  Jun.1, 2017\n  May.28, 2017\n+ Dec.29, 2016\n  Dec.28, 2016\n  Dec.22, 2016\n  Dec.20, 2016\n+ Dec.19, 2016\n  Dec.17, 2016\n  Dec.14, 2016\n+ Dec.12, 2016\n  Dec.11, 2016\n  Dec.10, 2016\n+ Dec.7, 2016\n  Dec.6, 2016",
       "detail": "Content changed: https://project-skyscraper.com/",
       "author": 0,
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T15:29:43+00:00",
-      "title": "request-memory-timestamp-094317",
-      "link": "https://project-skyscraper.com/request-memory-timestamp-094317/",
-      "endpoint": "",
-      "diff": "- Request Memory Timestamp &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/request-memory-timestamp-094317/",
-      "author": "The Architect",
       "site": ""
     },
     {
@@ -61,7 +50,7 @@
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-10T10:16:00.500816+00:00",
+      "timestamp": "2026-06-10T10:16:00+00:00",
       "title": "Memory bloc restoration: 101/365 [59 Pages]",
       "link": "https://project-skyscraper.com/2016/10/12/event-12102016/",
       "diff": "63/365 → 101/365",
@@ -74,7 +63,7 @@
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-09T19:17:37.751765+00:00",
+      "timestamp": "2026-06-09T19:17:37+00:00",
       "title": "Memory bloc restoration: 63/365 [20 Pages]",
       "link": "https://project-skyscraper.com/2017/06/01/event-01062017/",
       "diff": "36/365 → 63/365",
@@ -87,7 +76,7 @@
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-09T17:38:25.802706+00:00",
+      "timestamp": "2026-06-09T17:38:25+00:00",
       "title": "Memory bloc restoration: 36/365 [6 Pages]",
       "link": "https://project-skyscraper.com/2017/06/01/event-01062017/",
       "diff": "1/365 → 36/365",
@@ -100,7 +89,7 @@
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-06T14:26:42.642857+00:00",
+      "timestamp": "2026-06-06T14:26:42+00:00",
       "title": "Memory bloc restoration: 1/365 [7 Pages]",
       "link": "https://project-skyscraper.com/2017/06/01/event-01062017/",
       "diff": "0/365 → 1/365",
@@ -110,72 +99,6 @@
       "restoration_value": "1/365",
       "page_count": 7,
       "last_timestamp": "2026-06-12T07:59:35+00:00"
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:29:35+00:00",
-      "title": "sleep-mode-46135",
-      "link": "https://project-skyscraper.com/2026/04/23/sleep-mode-46135/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/23/sleep-mode-46135/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:29:34+00:00",
-      "title": "sleep-mode-46128",
-      "link": "https://project-skyscraper.com/2026/04/16/sleep-mode-46128/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/16/sleep-mode-46128/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:28:37+00:00",
-      "title": "sleep-mode-46115",
-      "link": "https://project-skyscraper.com/2026/04/03/sleep-mode-46115/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/03/sleep-mode-46115/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:28:37+00:00",
-      "title": "sleep-mode-46108",
-      "link": "https://project-skyscraper.com/2026/03/27/sleep-mode-46108/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/03/27/sleep-mode-46108/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:28:36+00:00",
-      "title": "sleep-mode-46105",
-      "link": "https://project-skyscraper.com/2026/03/24/sleep-mode-46105/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/03/24/sleep-mode-46105/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:28:36+00:00",
-      "title": "origin",
-      "link": "https://project-skyscraper.com/1970/01/01/origin/",
-      "endpoint": "",
-      "diff": "- HELLO, WORLD &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/1970/01/01/origin/",
-      "author": "The Architect",
-      "site": ""
     },
     {
       "type": "page_content_changed",
@@ -200,39 +123,6 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:28:35+00:00",
-      "title": "only-dust-remain",
-      "link": "https://project-skyscraper.com/only-dust-remain/",
-      "endpoint": "",
-      "diff": "- Only [dust] Remain &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/only-dust-remain/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:24:57+00:00",
-      "title": "insert-coin",
-      "link": "https://project-skyscraper.com/1980/03/10/insert-coin/",
-      "endpoint": "",
-      "diff": "- Insert Coin &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/1980/03/10/insert-coin/",
-      "author": "System",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:24:57+00:00",
-      "title": "structural-analysis-133722",
-      "link": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
-      "endpoint": "",
-      "diff": "- STRUCTURAL ANALYSIS &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
       "timestamp": "2026-06-12T07:24:57+00:00",
       "title": "event-24042022",
       "link": "https://project-skyscraper.com/2022/04/24/event-24042022/",
@@ -250,39 +140,6 @@
       "diff": "- Previous\n+ Previous\n  Next",
       "detail": "Content changed: https://project-skyscraper.com/2002/05/12/code/",
       "author": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:23:54+00:00",
-      "title": "sec-log-211927-full",
-      "link": "https://project-skyscraper.com/sec-log-211927-full/",
-      "endpoint": "",
-      "diff": "- Security Log &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/sec-log-211927-full/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:23:54+00:00",
-      "title": "sec-log-120000",
-      "link": "https://project-skyscraper.com/2026/05/12/sec-log-120000/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/12/sec-log-120000/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-12T07:20:09+00:00",
-      "title": "structural-analysis-204649",
-      "link": "https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
-      "endpoint": "",
-      "diff": "- STRUCTURAL ANALYSIS &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/06/01/structural-analysis-204649/",
-      "author": "The Architect",
-      "site": ""
     },
     {
       "type": "page_content_changed",
@@ -316,73 +173,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.250541+00:00",
-      "title": "sleep-mode-46125",
-      "link": "https://project-skyscraper.com/2026/04/13/sleep-mode-46125/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/13/sleep-mode-46125/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.249285+00:00",
-      "title": "sleep-mode-46123",
-      "link": "https://project-skyscraper.com/2026/04/11/sleep-mode-46123/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/11/sleep-mode-46123/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.248764+00:00",
-      "title": "sleep-mode-46120",
-      "link": "https://project-skyscraper.com/2026/04/08/sleep-mode-46120/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/08/sleep-mode-46120/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.247713+00:00",
-      "title": "sleep-mode-46118",
-      "link": "https://project-skyscraper.com/2026/04/06/sleep-mode-46118/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/06/sleep-mode-46118/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.247191+00:00",
-      "title": "sleep-mode-4613",
-      "link": "https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/04/01/sleep-mode-4613/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.246669+00:00",
-      "title": "sleep-mode-46110",
-      "link": "https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
-      "endpoint": "",
-      "diff": "- SLEEP MODE &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/03/29/sleep-mode-46110/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:59:42.244547+00:00",
+      "timestamp": "2026-06-11T19:59:42+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -392,162 +183,8 @@
       "site": ""
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:29:40.161900+00:00",
-      "title": "waking-titan",
-      "link": "https://project-skyscraper.com/2017/05/28/waking-titan/",
-      "endpoint": "",
-      "diff": "- WAKING TITAN &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2017/05/28/waking-titan/",
-      "author": "System",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:29:40.161396+00:00",
-      "title": "event-17041958",
-      "link": "https://project-skyscraper.com/1958/04/17/event-17041958/",
-      "endpoint": "",
-      "diff": "- World Fair &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/1958/04/17/event-17041958/",
-      "author": "System",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T19:29:40.159351+00:00",
-      "title": "sec-log-110328",
-      "link": "https://project-skyscraper.com/2026/06/06/sec-log-110328/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/06/06/sec-log-110328/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.388125+00:00",
-      "title": "sec-log-194022",
-      "link": "https://project-skyscraper.com/2026/06/02/sec-log-194022/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/06/02/sec-log-194022/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.386599+00:00",
-      "title": "sec-log-114327",
-      "link": "https://project-skyscraper.com/2026/05/29/sec-log-114327/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/29/sec-log-114327/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.385955+00:00",
-      "title": "sec-log-193727",
-      "link": "https://project-skyscraper.com/2026/05/31/sec-log-193727/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/31/sec-log-193727/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.385444+00:00",
-      "title": "sec-log-185027",
-      "link": "https://project-skyscraper.com/2026/05/27/sec-log-185027/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/27/sec-log-185027/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.384933+00:00",
-      "title": "sec-log-reboot",
-      "link": "https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/27/sec-log-reboot/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.383404+00:00",
-      "title": "sec-log-170516",
-      "link": "https://project-skyscraper.com/2026/05/21/sec-log-170516/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/21/sec-log-170516/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.382369+00:00",
-      "title": "sec-log-172832",
-      "link": "https://project-skyscraper.com/2026/05/14/sec-log-172832/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/14/sec-log-172832/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:59:42.381748+00:00",
-      "title": "sec-log-211927",
-      "link": "https://project-skyscraper.com/2026/05/18/sec-log-211927/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/18/sec-log-211927/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:29:38.399190+00:00",
-      "title": "security-log-171453",
-      "link": "https://project-skyscraper.com/2026/05/10/security-log-171453/",
-      "endpoint": "",
-      "diff": "- SECURITY LOG &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/05/10/security-log-171453/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:29:38.398490+00:00",
-      "title": "report-bru-ent-reunion-peak",
-      "link": "https://project-skyscraper.com/report-bru-ent-reunion-peak/",
-      "endpoint": "",
-      "diff": "- Report: BRUSSELS &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/report-bru-ent-reunion-peak/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-11T18:29:38.397973+00:00",
-      "title": "structural-analysis-214218",
-      "link": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
-      "endpoint": "",
-      "diff": "- STRUCTURAL ANALYSIS &#8211; project-skyscraper",
-      "detail": "Content changed: https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
-      "author": "The Architect",
-      "site": ""
-    },
-    {
       "type": "external_robots_txt_changed",
-      "timestamp": "2026-06-11T16:59:26.312361+00:00",
+      "timestamp": "2026-06-11T16:59:26+00:00",
       "title": "robots.txt captured for wakingtitan.com",
       "link": "https://wakingtitan.com/robots.txt",
       "endpoint": "",
@@ -558,7 +195,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-11T15:43:16.758463+00:00",
+      "timestamp": "2026-06-11T15:43:16+00:00",
       "title": "STRUCTURAL ANALYSIS",
       "link": "https://project-skyscraper.com/2026/06/11/structural-analysis-152612/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -569,7 +206,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-10T14:15:16.884565+00:00",
+      "timestamp": "2026-06-10T14:15:16+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -580,7 +217,7 @@
     },
     {
       "type": "sitemap_added",
-      "timestamp": "2026-06-10T12:28:02.569376+00:00",
+      "timestamp": "2026-06-10T12:28:02+00:00",
       "title": "https://project-skyscraper.com/2016/01/16/event-16012016/",
       "link": "https://project-skyscraper.com/2016/01/16/event-16012016/",
       "endpoint": "",
@@ -591,7 +228,7 @@
     },
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-10T08:45:18.536466+00:00",
+      "timestamp": "2026-06-10T08:45:18+00:00",
       "title": "Memory bloc restoration: 75/365 [1 Pages]",
       "link": "https://project-skyscraper.com/",
       "diff": "63/365 → 75/365",
@@ -600,11 +237,11 @@
       "site": "",
       "restoration_value": "75/365",
       "page_count": 1,
-      "last_timestamp": "2026-06-10T08:45:18.536466+00:00"
+      "last_timestamp": "2026-06-10T08:45:18+00:00"
     },
     {
       "type": "sitemap_added",
-      "timestamp": "2026-06-09T20:34:17.178725+00:00",
+      "timestamp": "2026-06-09T20:34:17+00:00",
       "title": "https://project-skyscraper.com/1958/04/17/event-17041958/",
       "link": "https://project-skyscraper.com/1958/04/17/event-17041958/",
       "endpoint": "",
@@ -614,7 +251,7 @@
     },
     {
       "type": "sitemap_added",
-      "timestamp": "2026-06-09T20:28:35.199929+00:00",
+      "timestamp": "2026-06-09T20:28:35+00:00",
       "title": "https://project-skyscraper.com/",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -624,7 +261,7 @@
     },
     {
       "type": "sitemap_removed",
-      "timestamp": "2026-06-09T20:21:26.499830+00:00",
+      "timestamp": "2026-06-09T20:21:26+00:00",
       "title": "https://project-skyscraper.com/",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -634,7 +271,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-09T20:17:46.320807+00:00",
+      "timestamp": "2026-06-09T20:17:46+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -644,7 +281,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-09T18:21:50.253978+00:00",
+      "timestamp": "2026-06-09T18:21:50+00:00",
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
       "endpoint": "/wp-json/wp/v2/pages",
@@ -654,7 +291,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-09T16:37:42.432667+00:00",
+      "timestamp": "2026-06-09T16:37:42+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -664,7 +301,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-09T15:57:06.230668+00:00",
+      "timestamp": "2026-06-09T15:57:06+00:00",
       "title": "STRUCTURAL ANALYSIS",
       "link": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -674,7 +311,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-09T15:37:43.167179+00:00",
+      "timestamp": "2026-06-09T15:37:43+00:00",
       "title": "structural-analysis-214218",
       "link": "https://project-skyscraper.com/2026/06/06/structural-analysis-214218/",
       "endpoint": "",
@@ -684,7 +321,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-09T15:26:56.695067+00:00",
+      "timestamp": "2026-06-09T15:26:56+00:00",
       "title": "STRUCTURAL ANALYSIS",
       "link": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -694,7 +331,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-09T15:14:52.700161+00:00",
+      "timestamp": "2026-06-09T15:14:52+00:00",
       "title": "STRUCTURAL ANALYSIS",
       "link": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -704,7 +341,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-09T14:50:45.085597+00:00",
+      "timestamp": "2026-06-09T14:50:45+00:00",
       "title": "STRUCTURAL ANALYSIS",
       "link": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -714,7 +351,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-09T14:07:37.625162+00:00",
+      "timestamp": "2026-06-09T14:07:37+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -724,7 +361,7 @@
     },
     {
       "type": "sitemap_added",
-      "timestamp": "2026-06-09T00:34:49.050255+00:00",
+      "timestamp": "2026-06-09T00:34:49+00:00",
       "title": "https://project-skyscraper.com/53a05806675f/",
       "link": "https://project-skyscraper.com/53a05806675f/",
       "endpoint": "",
@@ -734,7 +371,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-08T13:24:27.967425+00:00",
+      "timestamp": "2026-06-08T13:24:27+00:00",
       "title": "2018_dataset",
       "link": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
       "endpoint": "",
@@ -744,7 +381,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-08T11:24:28.051057+00:00",
+      "timestamp": "2026-06-08T11:24:28+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -754,7 +391,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-07T22:17:55.101883+00:00",
+      "timestamp": "2026-06-07T22:17:55+00:00",
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
       "endpoint": "/wp-json/wp/v2/pages",
@@ -764,7 +401,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-07T18:57:01.115236+00:00",
+      "timestamp": "2026-06-07T18:57:01+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -774,7 +411,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-07T18:55:01.205952+00:00",
+      "timestamp": "2026-06-07T18:55:01+00:00",
       "title": "Insert Coin",
       "link": "https://project-skyscraper.com/1980/03/10/insert-coin/",
       "endpoint": "/wp-json/wp/v2/posts",
@@ -784,7 +421,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-07T18:28:38.689177+00:00",
+      "timestamp": "2026-06-07T18:28:38+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -794,7 +431,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-07T17:06:46.379188+00:00",
+      "timestamp": "2026-06-07T17:06:46+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -804,7 +441,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-06T23:26:29.691346+00:00",
+      "timestamp": "2026-06-06T23:26:29+00:00",
       "title": "sec-log-110328",
       "link": "https://project-skyscraper.com/2026/06/06/sec-log-110328/",
       "endpoint": "",
@@ -814,7 +451,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-06T21:26:27.750190+00:00",
+      "timestamp": "2026-06-06T21:26:27+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -824,7 +461,7 @@
     },
     {
       "type": "page_content_changed",
-      "timestamp": "2026-06-06T14:26:42.643091+00:00",
+      "timestamp": "2026-06-06T14:26:42+00:00",
       "title": "project-skyscraper.com",
       "link": "https://project-skyscraper.com/",
       "endpoint": "",
@@ -834,7 +471,7 @@
     },
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-06T11:27:07.062233+00:00",
+      "timestamp": "2026-06-06T11:27:07+00:00",
       "title": "2018_dataset",
       "link": "https://project-skyscraper.com/2018/07/24/2018_dataset/",
       "endpoint": "/wp-json/wp/v2/posts",

@@ -89,19 +89,22 @@ def generate_site_data(state: dict, changes: list) -> bool:
                 new_entries.append(entry)
 
     for value, group in memory_bloc_groups.items():
-        now = datetime.now(timezone.utc).isoformat()
+        timestamps = [c.get("ts") or datetime.now(timezone.utc).isoformat() for c in group["changes"]]
+        last_ts = max(timestamps)
+        first_ts = min(timestamps)
         existing = _find_memory_bloc_entry(feed["entries"], value)
         if existing:
             existing["page_count"] += len(group["changes"])
             existing["detail"] = f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {existing['page_count']} pages"
             existing["title"] = f"Memory bloc restoration: {group['new_value']} [{existing['page_count']} Pages]"
-            existing["last_timestamp"] = now
+            existing["timestamp"] = first_ts if first_ts < existing["timestamp"] else existing["timestamp"]
+            existing["last_timestamp"] = last_ts if last_ts > existing.get("last_timestamp", "") else existing.get("last_timestamp", last_ts)
             new_entries.append(existing)
         else:
             count = len(group["changes"])
             entry = {
                 "type": "memory_bloc_restoration",
-                "timestamp": group["first_ts"],
+                "timestamp": first_ts,
                 "title": f"Memory bloc restoration: {group['new_value']} [{count} Pages]",
                 "link": group["changes"][0].get("url", ""),
                 "diff": f"{group['old_value']} \u2192 {group['new_value']}",
@@ -110,7 +113,7 @@ def generate_site_data(state: dict, changes: list) -> bool:
                 "site": "",
                 "restoration_value": value,
                 "page_count": count,
-                "last_timestamp": now,
+                "last_timestamp": last_ts,
             }
             feed["entries"].append(entry)
             new_entries.append(entry)
@@ -491,10 +494,8 @@ def _consolidate_memory_bloc_entries(entries: list) -> list:
             count = existing["page_count"]
             existing["title"] = f"Memory bloc restoration: {value} [{count} Pages]"
             existing["detail"] = f"Memory bloc restoration changed from {old_val} to {value} across {count} pages"
-            if oldest < existing["timestamp"]:
-                existing["timestamp"] = oldest
-            if newest > existing.get("last_timestamp", ""):
-                existing["last_timestamp"] = newest
+            existing["timestamp"] = oldest
+            existing["last_timestamp"] = newest
         else:
             count = len(items)
             others.append({
