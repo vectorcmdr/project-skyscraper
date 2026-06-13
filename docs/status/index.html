@@ -48,8 +48,8 @@
       <h2>&#9654; CHANGE LOG</h2>
       <div class="feed-controls">
         <span class="sort-label">SORT:</span>
-        <button class="sort-btn active" data-sort="real">REAL TIME</button>
-        <button class="sort-btn" data-sort="game">GAME TIME</button>
+        <button class="sort-btn active" data-sort="real" data-tab="feed">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="feed">GAME TIME</button>
       </div>
       <div id="feedEntries"></div>
     </section>
@@ -65,6 +65,11 @@
           <option value="post">posts</option>
           <option value="attachment">media</option>
         </select>
+      </div>
+      <div class="feed-controls">
+        <span class="sort-label">SORT:</span>
+        <button class="sort-btn active" data-sort="real" data-tab="manifest">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="manifest">GAME TIME</button>
       </div>
       <div id="manifestEntries"></div>
     </section>
@@ -82,6 +87,11 @@
           <option value="wakingtitan">wakingtitan</option>
           <option value="tower">tower</option>
         </select>
+      </div>
+      <div class="feed-controls">
+        <span class="sort-label">SORT:</span>
+        <button class="sort-btn active" data-sort="real" data-tab="external">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="external">GAME TIME</button>
       </div>
       <div id="externalEntries"></div>
     </section>

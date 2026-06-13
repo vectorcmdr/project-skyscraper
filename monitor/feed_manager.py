@@ -58,6 +58,15 @@ def generate_site_data(state: dict, changes: list) -> bool:
             manifest = {}
     manifest.setdefault("pages", [])
 
+    for p in manifest["pages"]:
+        for field in ("modified", "date_gmt"):
+            val = p.get(field)
+            if val and not re.search(r'[Zz]|[+-]\d{2}:\d{2}$', val):
+                p[field] = val + '+00:00'
+                tz_fixed += 1
+    if tz_fixed:
+        log(f"Fixed timezone on {tz_fixed} feed/manifest timestamps", "FILE")
+
     new_entries = []
     memory_bloc_groups = {}
 

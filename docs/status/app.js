@@ -131,6 +131,16 @@ function filterManifest() {
     (m.path && m.path.toLowerCase().includes(q)) ||
     (m.author && m.author.toLowerCase().includes(q))
   );
+  const mode = getSortPref('manifest');
+  if (mode === 'real') {
+    filtered.sort((a, b) => new Date(b.modified) - new Date(a.modified));
+  } else {
+    filtered.sort((a, b) => {
+      const da = a.date_gmt ? new Date(a.date_gmt) : new Date(a.modified);
+      const db = b.date_gmt ? new Date(b.date_gmt) : new Date(b.modified);
+      return db - da;
+    });
+  }
   renderManifest(filtered);
 }
 
@@ -192,27 +202,50 @@ function filterExternal() {
     (e.type && e.type.toLowerCase().includes(q)) ||
     (e.site && e.site.toLowerCase().includes(q))
   );
+  filtered.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   renderExternal(filtered);
 }
 
 /* ── LOAD DATA ─────────────────────────────────────────── */
-function getSortPref() {
-  return localStorage.getItem('feedSort') || 'real';
+function getSortPref(tab) {
+  return localStorage.getItem('feedSort_' + tab) || 'real';
 }
 
-function sortAndRenderFeed() {
-  const mode = getSortPref();
-  const sorted = [...feed];
-  if (mode === 'real') {
-    sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-  } else {
-    sorted.sort((a, b) => {
-      const da = a.game_date ? new Date(a.game_date) : new Date(a.timestamp);
-      const db = b.game_date ? new Date(b.game_date) : new Date(b.timestamp);
-      return db - da;
-    });
+function sortAndRender(tab) {
+  const mode = getSortPref(tab);
+  if (tab === 'feed') {
+    const sorted = [...feed];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    } else {
+      sorted.sort((a, b) => {
+        const da = a.game_date ? new Date(a.game_date) : new Date(a.timestamp);
+        const db = b.game_date ? new Date(b.game_date) : new Date(b.timestamp);
+        return db - da;
+      });
+    }
+    renderFeed(sorted);
+  } else if (tab === 'manifest') {
+    const sorted = [...manifest];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.modified) - new Date(a.modified));
+    } else {
+      sorted.sort((a, b) => {
+        const da = a.date_gmt ? new Date(a.date_gmt) : new Date(a.modified);
+        const db = b.date_gmt ? new Date(b.date_gmt) : new Date(b.modified);
+        return db - da;
+      });
+    }
+    renderManifest(sorted);
+  } else if (tab === 'external') {
+    const sorted = [...external];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    } else {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    }
+    renderExternal(sorted);
   }
-  renderFeed(sorted);
 }
 
 async function load() {
@@ -225,18 +258,16 @@ async function load() {
     if (feedResp.ok) {
       const raw = await feedResp.json();
       feed = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
-      sortAndRenderFeed();
+      sortAndRender('feed');
     }
     if (manifestResp.ok) {
       manifest = (await manifestResp.json()).pages || [];
-      manifest.sort((a, b) => new Date(b.modified) - new Date(a.modified));
-      renderManifest(manifest);
+      filterManifest();
     }
     if (externalResp.ok) {
       const raw = await externalResp.json();
       external = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
-      external.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-      renderExternal(external);
+      filterExternal();
     }
     if (feedResp.ok || manifestResp.ok || externalResp.ok) {
       document.getElementById('statusBadge').textContent = '\u25CF ONLINE';
@@ -269,16 +300,20 @@ document.querySelectorAll('.tab').forEach(btn => {
 document.querySelectorAll('.sort-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const mode = btn.dataset.sort;
-    localStorage.setItem('feedSort', mode);
-    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    const tab = btn.dataset.tab;
+    localStorage.setItem('feedSort_' + tab, mode);
+    document.querySelectorAll(`.sort-btn[data-tab="${tab}"]`).forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    sortAndRenderFeed();
+    if (tab === 'feed') sortAndRender('feed');
+    else if (tab === 'manifest') filterManifest();
+    else if (tab === 'external') filterExternal();
   });
 });
 
-const initialSort = getSortPref();
 document.querySelectorAll('.sort-btn').forEach(b => {
-  b.classList.toggle('active', b.dataset.sort === initialSort);
+  const tab = b.dataset.tab;
+  const pref = localStorage.getItem('feedSort_' + tab) || 'real';
+  b.classList.toggle('active', b.dataset.sort === pref);
 });
 
 load();
