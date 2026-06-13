@@ -30,6 +30,15 @@ function esc(s) {
   return e.innerHTML;
 }
 
+function fmtGameTime(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  const opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  const utc   = d.toLocaleString('en-GB', { ...opts, timeZone: 'UTC' });
+  const local = d.toLocaleString('en-GB', opts);
+  return `<span class="gt-stack"><span class="gt-label">GAME TIME:</span><span class="gt-utc">${utc} UTC</span><span class="gt-local">${local} local</span></span>`;
+}
+
 function renderDiff(raw) {
   if (!raw) return '';
   return raw.split('\n').map(line => {
@@ -62,6 +71,7 @@ function renderFeed(entries) {
           <div class="card-meta">
             <span class="${tagCls}">${icon} ${e.type}</span>
             ${fmtBoth(e.timestamp)}
+            ${e.game_date ? fmtGameTime(e.game_date) : ''}
             ${e.endpoint ? `<span>${esc(e.endpoint.split('/').pop())}</span>` : ''}
             ${e.author ? `<span>by ${esc(e.author)}</span>` : ''}
             ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
@@ -186,6 +196,25 @@ function filterExternal() {
 }
 
 /* ── LOAD DATA ─────────────────────────────────────────── */
+function getSortPref() {
+  return localStorage.getItem('feedSort') || 'real';
+}
+
+function sortAndRenderFeed() {
+  const mode = getSortPref();
+  const sorted = [...feed];
+  if (mode === 'real') {
+    sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  } else {
+    sorted.sort((a, b) => {
+      const da = a.game_date ? new Date(a.game_date) : new Date(a.timestamp);
+      const db = b.game_date ? new Date(b.game_date) : new Date(b.timestamp);
+      return db - da;
+    });
+  }
+  renderFeed(sorted);
+}
+
 async function load() {
   try {
     const [feedResp, manifestResp, externalResp] = await Promise.all([
@@ -196,8 +225,7 @@ async function load() {
     if (feedResp.ok) {
       const raw = await feedResp.json();
       feed = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
-      feed.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-      renderFeed(feed);
+      sortAndRenderFeed();
     }
     if (manifestResp.ok) {
       manifest = (await manifestResp.json()).pages || [];
@@ -235,6 +263,22 @@ document.querySelectorAll('.tab').forEach(btn => {
     const target = document.getElementById(btn.dataset.tab);
     if (target) target.classList.add('active');
   });
+});
+
+/* Sort toggle */
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const mode = btn.dataset.sort;
+    localStorage.setItem('feedSort', mode);
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    sortAndRenderFeed();
+  });
+});
+
+const initialSort = getSortPref();
+document.querySelectorAll('.sort-btn').forEach(b => {
+  b.classList.toggle('active', b.dataset.sort === initialSort);
 });
 
 load();

@@ -132,6 +132,14 @@ def generate_site_data(state: dict, changes: list) -> bool:
                         ts = max(gmts)
                     except Exception:
                         pass
+            elif c["type"] == "api_items_added":
+                items = c.get("items", [])
+                gmts = [i.get("modified_gmt", "") for i in items if i.get("modified_gmt")]
+                if gmts:
+                    try:
+                        ts = max(gmts)
+                    except Exception:
+                        pass
 
             if c["type"] == "unpublished_to_published":
                 if c.get("id") in consumed_unpub:
@@ -242,12 +250,14 @@ def generate_external_data(state: dict, changes: list):
 
 def seed_feed_from_mirror(state: dict):
     feed_path = DATA_DIR / "feed.json"
+    existing_ids = set()
+
     if feed_path.is_file():
         try:
-            existing = json.loads(feed_path.read_text(encoding="utf-8"))
-            if existing.get("entries"):
-                log("Feed already seeded -- skipping", "FILE")
-                return
+            feed = json.loads(feed_path.read_text(encoding="utf-8"))
+            for e in feed.get("entries", []):
+                if e.get("id") and e.get("type") in ("api_items_added", "media_orphan_upload"):
+                    existing_ids.add(e["id"])
         except Exception:
             pass
 
@@ -257,6 +267,9 @@ def seed_feed_from_mirror(state: dict):
 
     for ep, label in [("/wp-json/wp/v2/pages", "pages"), ("/wp-json/wp/v2/posts", "posts")]:
         for item in api.get(ep, {}).get("items", []):
+            item_id = item.get("id")
+            if item_id and item_id in existing_ids:
+                continue
             seed_changes.append({
                 "type": "api_items_added",
                 "endpoint": ep,
@@ -265,11 +278,14 @@ def seed_feed_from_mirror(state: dict):
             })
 
     for item in api.get("/wp-json/wp/v2/media", {}).get("items", []):
+        item_id = item.get("id")
+        if item_id and item_id in existing_ids:
+            continue
         seed_changes.append({
             "type": "media_orphan_upload",
             "endpoint": "media",
-            "detail": item.get("title", f"Media #{item.get('id', '?')}"),
-            "id": item.get("id"),
+            "detail": item.get("title", f"Media #{item_id or '?'}"),
+            "id": item_id,
             "title": item.get("title", "Untitled media"),
             "url": item.get("link", ""),
             "author": item.get("author", 0),
@@ -316,6 +332,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
     title = c.get("detail", "unknown")
     author = 0
     diff = ""
+    entry_id = None
+    game_date = ""
 
     if t == "sitemap_added":
         urls = c.get("urls", [])
@@ -332,6 +350,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         title = items[0].get("title", "") if items else c.get("detail", "")
         link = items[0].get("link", "") if items else ""
         author = items[0].get("author", 0) if items else 0
+        entry_id = items[0].get("id") if items else None
+        game_date = items[0].get("date_gmt", "") if items else ""
     elif t == "api_items_removed":
         ids = c.get("ids", [])
         title = c.get("detail", f"{len(ids)} item(s) removed")
@@ -364,6 +384,7 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         title = c.get("title", f"Media #{c.get('id', '?')}")
         link = c.get("url", "")
         author = c.get("author", 0)
+        entry_id = c.get("id")
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
     elif t == "unpublished_to_published":
@@ -410,6 +431,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         "detail": c.get("detail", ""),
         "author": author,
         "site": c.get("site_label", ""),
+        "id": entry_id if t in ("api_items_added", "media_orphan_upload") else None,
+        "game_date": game_date if t in ("api_items_added", "media_orphan_upload") else "",
     }
 
 

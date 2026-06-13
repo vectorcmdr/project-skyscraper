@@ -320,6 +320,8 @@ def daemon_loop(quiet: bool = False):
     state["stats"]["_warmup"] = 2
     save_state(state)
 
+    seed_feed_from_mirror(state)
+
     graph_path = DATA_DIR / "graph.json"
     if not graph_path.is_file():
         log("Seeding graph.json from mirror data...", "FILE")
