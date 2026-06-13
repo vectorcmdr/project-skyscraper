@@ -179,7 +179,13 @@ def generate_unpublished_report(unpublished_posts: list, unpublished_pages: list
     for kind_name, entries in [("Posts", unpublished_posts), ("Pages", unpublished_pages)]:
         if entries:
             lines += ["", f"## Unpublished {kind_name}", "", "| ID | Status |", "|----|--------|"]
-            for iid, status in sorted(entries):
+            def _norm(e):
+                if isinstance(e, dict):
+                    return e.get("id", 0), e.get("first_seen", "?")
+                if isinstance(e, (list, tuple)) and len(e) > 0:
+                    return e[0], e[1] if len(e) > 1 else "?"
+                return 0, "?"
+            for iid, status in sorted((_norm(e) for e in entries), key=lambda x: x[0]):
                 lines.append(f"| {iid} | {status} |")
             lines.append("")
 

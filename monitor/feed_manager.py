@@ -51,6 +51,48 @@ def generate_site_data(state: dict, changes: list) -> bool:
     new_entries = []
     memory_bloc_groups = {}
 
+    unpub_lookup = {}
+    for c in changes:
+        if c["type"] == "unpublished_to_published":
+            pid = c.get("id")
+            if pid:
+                first_seen = c.get("first_seen", "")
+                for e in feed["entries"]:
+                    if e.get("type") == "unpublished_detected" and e.get("id") == pid:
+                        feed_ts = e.get("timestamp", "")
+                        if feed_ts and (not first_seen or feed_ts < first_seen):
+                            first_seen = feed_ts
+                        break
+                unpub_lookup[pid] = {
+                    "endpoint": c.get("endpoint", ""),
+                    "first_seen": first_seen,
+                }
+
+    # Pass 1: Augment api_items_added with unpublished context
+    consumed_unpub = set()
+    for c in changes:
+        if c["type"] == "api_items_added":
+            unpub_notes = []
+            for item in c.get("items", []):
+                pid = item.get("id")
+                if pid in unpub_lookup:
+                    info = unpub_lookup[pid]
+                    ts_str = info.get("first_seen", "")
+                    if ts_str:
+                        try:
+                            d = datetime.fromisoformat(ts_str)
+                            ts_short = d.strftime("%Y-%m-%d")
+                        except Exception:
+                            ts_short = ts_str[:10] if ts_str else "?"
+                    else:
+                        ts_short = "?"
+                    unpub_notes.append(f"#{pid} ({ts_short})")
+                    consumed_unpub.add(pid)
+            if unpub_notes:
+                existing = c.get("detail", "")
+                c["detail"] = f"{existing} — previously unpublished: {', '.join(unpub_notes)}"
+
+    # Pass 2: Main processing loop
     for c in changes:
         is_memory_bloc = False
         if c["type"] == "page_content_changed":
@@ -90,6 +132,11 @@ def generate_site_data(state: dict, changes: list) -> bool:
                         ts = max(gmts)
                     except Exception:
                         pass
+
+            if c["type"] == "unpublished_to_published":
+                if c.get("id") in consumed_unpub:
+                    continue
+
             entry = _change_to_feed_entry(c, ts)
             if entry:
                 feed["entries"].append(entry)
@@ -319,6 +366,17 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         author = c.get("author", 0)
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
+    elif t == "unpublished_to_published":
+        pid = c.get("id", "?")
+        ep = c.get("endpoint", "")
+        first_seen = c.get("first_seen", "")
+        title = f"Previously unpublished {ep} #{pid}"
+        if first_seen:
+            try:
+                d = datetime.fromisoformat(first_seen)
+                title += f" (since {d.strftime('%Y-%m-%d')})"
+            except Exception:
+                title += f" (since {first_seen[:10]})"
     elif t == "external_dns_changed":
         diff = c.get("diff", "")
         first = diff.split('\n')[0] if diff else ""

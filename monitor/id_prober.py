@@ -7,6 +7,31 @@ from monitor.http_client import head_url, jitter
 from monitor.logger import log
 
 
+def _entry_id(entry):
+    if isinstance(entry, dict):
+        return entry.get("id", 0)
+    if isinstance(entry, (list, tuple)) and len(entry) > 0:
+        return entry[0]
+    return 0
+
+
+def _migrate_log(ulog):
+    changed = False
+    for ep in ("posts", "pages"):
+        new_list = []
+        for entry in ulog.get(ep, []):
+            if isinstance(entry, (list, tuple)):
+                pid = entry[0] if len(entry) > 0 else 0
+                if pid:
+                    new_list.append({"id": pid, "first_seen": datetime.now(timezone.utc).isoformat()})
+                    changed = True
+            else:
+                new_list.append(entry)
+        ulog[ep] = new_list
+    if changed:
+        log("Migrated unpublished log entries to dict format", "FILE")
+
+
 def probe_unpublished(state: dict) -> list:
     changes = []
     max_id = _get_max_known_id(state)
@@ -23,6 +48,7 @@ def probe_unpublished(state: dict) -> list:
     chunk_end = min(probe_pos + PROBE_CHUNK_SIZE - 1, probe_ceiling)
 
     unpublished_log = probe_state.setdefault("unpublished", {"posts": [], "pages": []})
+    _migrate_log(unpublished_log)
 
     for pid in range(probe_pos, chunk_end + 1):
         for ep_template in ["/wp-json/wp/v2/posts/{id}", "/wp-json/wp/v2/pages/{id}"]:
@@ -37,14 +63,33 @@ def probe_unpublished(state: dict) -> list:
                     "endpoint": ep_name,
                     "detail": f"Unpublished {ep_name} #{pid} (HTTP {result.status})",
                 })
-                entry = [pid, result.status]
-                seen_ids = {e[0] for e in unpublished_log[ep_name]}
+                seen_ids = {_entry_id(e) for e in unpublished_log[ep_name]}
                 if pid not in seen_ids:
-                    unpublished_log[ep_name].append(entry)
+                    unpublished_log[ep_name].append({
+                        "id": pid,
+                        "first_seen": datetime.now(timezone.utc).isoformat(),
+                    })
                 log(f"Unpublished {ep_name} #{pid} (HTTP {result.status})", "DEEP")
             elif result.status == 200:
                 ep_name = "posts" if "/posts/" in url else "pages"
-                unpublished_log[ep_name] = [e for e in unpublished_log[ep_name] if e[0] != pid]
+                found_entry = None
+                remaining = []
+                for e in unpublished_log[ep_name]:
+                    if _entry_id(e) == pid:
+                        found_entry = e
+                    else:
+                        remaining.append(e)
+                unpublished_log[ep_name] = remaining
+                first_seen = ""
+                if isinstance(found_entry, dict):
+                    first_seen = found_entry.get("first_seen", "")
+                changes.append({
+                    "type": "unpublished_to_published",
+                    "id": pid,
+                    "endpoint": ep_name,
+                    "first_seen": first_seen,
+                    "detail": f"Previously unpublished {ep_name} #{pid} is now public",
+                })
                 log(f"Newly published {ep_name} #{pid} (was hidden)", "DEEP")
         jitter(0.08, 0.1)
 
