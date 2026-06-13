@@ -82,6 +82,14 @@ def generate_site_data(state: dict, changes: list) -> bool:
                         pass
                 if not ts:
                     ts = c.get("ts")
+            elif c["type"] == "api_items_modified":
+                items = c.get("items", [])
+                gmts = [i.get("modified_gmt", "") for i in items if i.get("modified_gmt")]
+                if gmts:
+                    try:
+                        ts = max(gmts)
+                    except Exception:
+                        pass
             entry = _change_to_feed_entry(c, ts)
             if entry:
                 feed["entries"].append(entry)

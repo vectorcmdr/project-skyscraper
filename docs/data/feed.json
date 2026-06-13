@@ -14,19 +14,6 @@
       "last_timestamp": "2026-06-13T02:45:48+00:00"
     },
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-13T01:45:47+00:00",
-      "title": "Memory bloc restoration: 162/365 [7 Pages]",
-      "link": "https://project-skyscraper.com/2016/03/24/event-24032016/",
-      "diff": "146/365 → 162/365",
-      "detail": "Memory bloc restoration changed from 146/365 to 162/365 across 7 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "162/365",
-      "page_count": 7,
-      "last_timestamp": "2026-06-13T02:15:51+00:00"
-    },
-    {
       "type": "page_content_changed",
       "timestamp": "2026-06-12T16:30:38+00:00",
       "title": "project-skyscraper.com",
@@ -238,6 +225,19 @@
       "restoration_value": "75/365",
       "page_count": 1,
       "last_timestamp": "2026-06-10T08:45:18+00:00"
+    },
+    {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-10T08:40:00+00:00",
+      "title": "Memory bloc restoration: 162/365 [7 Pages]",
+      "link": "https://project-skyscraper.com/2016/03/24/event-24032016/",
+      "diff": "146/365 → 162/365",
+      "detail": "Memory bloc restoration changed from 146/365 to 162/365 across 7 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "162/365",
+      "page_count": 7,
+      "last_timestamp": "2026-06-10T08:44:00+00:00"
     },
     {
       "type": "sitemap_added",

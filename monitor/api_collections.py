@@ -94,6 +94,7 @@ def check_api_collection(endpoint: str, state: dict) -> list:
                     "link": c[2].get("link", ""),
                     "type": c[2].get("type", ""),
                     "modified": c[2].get("modified", ""),
+                    "modified_gmt": c[2].get("modified_gmt", ""),
                     "date_gmt": c[2].get("date_gmt", ""),
                     "author": c[2].get("author", 0),
                     "old_modified": c[1].get("modified", ""),
