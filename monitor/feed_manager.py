@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from monitor.config import DATA_DIR
 from monitor.logger import log
 from monitor.api_collections import get_user_map
+from monitor.noise_filter import is_noise_diff_line
 
 
 def generate_site_data(state: dict, changes: list) -> bool:
@@ -32,6 +33,12 @@ def generate_site_data(state: dict, changes: list) -> bool:
     if consolidated is not feed["entries"]:
         feed["entries"] = consolidated
         log(f"Consolidated {len(feed['entries'])} feed entries via memory bloc aggregation", "FILE")
+
+    cleaned = _filter_noise_entries(feed["entries"])
+    if cleaned is not feed["entries"]:
+        removed = len(feed["entries"]) - len(cleaned)
+        feed["entries"] = cleaned
+        log(f"Removed {removed} noise-only feed entries", "FILE")
 
     manifest = {}
     if manifest_path.is_file():
@@ -365,6 +372,9 @@ def _extract_minimal_diff(diffs: list) -> str:
 
     if not lines_out:
         return ""
+    has_change_lines = any(l.startswith(("- ", "+ ")) for l in lines_out)
+    if not has_change_lines:
+        return ""
     result = "\n".join(lines_out)
     if len(result) > 2000:
         cut = result.rfind("\n", 0, 1997)
@@ -502,6 +512,25 @@ def _consolidate_memory_bloc_entries(entries: list) -> list:
             })
 
     return others
+
+
+def _filter_noise_entries(entries: list) -> list:
+    filtered = []
+    removed = 0
+    for e in entries:
+        if e.get("type") == "page_content_changed" and e.get("diff"):
+            lines = e["diff"].split("\n")
+            meaningful = any(
+                l.startswith(("- ", "+ ")) and not is_noise_diff_line(l)
+                for l in lines
+            )
+            if not meaningful:
+                removed += 1
+                continue
+        filtered.append(e)
+    if removed:
+        log(f"Filtered out {removed} noise-only entries from feed", "FILE")
+    return filtered
 
 
 def _write_if_changed(path, data: dict, key: str) -> bool:

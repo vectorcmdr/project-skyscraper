@@ -88,6 +88,8 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ +-]\s*_stq\s*=.*\[\]'),
     re.compile(r'^[ .]+\.\.\s*\(\d+ more lines?\)$'),
     re.compile(r'^[ .]+\.\.\s*\(truncated\)$'),
+    re.compile(r'^[ +-]\s*\S+\s*&#8211;\s*project-skyscraper'),
+    re.compile(r'^[ +-]\s*\S+\s*\u2013\s*project-skyscraper'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({

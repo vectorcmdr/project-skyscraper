@@ -41,8 +41,11 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
     if not filtered:
         return None
 
-    real = [l for l in filtered if l.strip() and not l.strip().startswith("@@")]
-    if not real:
+    has_changes = any(
+        l.strip() and not l.strip().startswith("@@") and l[0] in ("-", "+")
+        for l in filtered
+    )
+    if not has_changes:
         return None
 
     import re as _re
