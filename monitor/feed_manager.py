@@ -40,6 +40,16 @@ def generate_site_data(state: dict, changes: list) -> bool:
         feed["entries"] = cleaned
         log(f"Removed {removed} noise-only feed entries", "FILE")
 
+    tz_fixed = 0
+    for e in feed["entries"]:
+        for field in ("timestamp", "last_timestamp", "game_date"):
+            val = e.get(field)
+            if val and not re.search(r'[Zz]|[+-]\d{2}:\d{2}$', val):
+                e[field] = val + '+00:00'
+                tz_fixed += 1
+    if tz_fixed:
+        log(f"Fixed timezone on {tz_fixed} feed entry timestamps", "FILE")
+
     manifest = {}
     if manifest_path.is_file():
         try:
@@ -364,6 +374,9 @@ def seed_feed_from_mirror(state: dict):
 def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
     t = c["type"]
     now = ts or datetime.now(timezone.utc).isoformat()
+    # API modified_gmt lacks timezone suffix — assume UTC
+    if now and not re.search(r'[Zz]|[+-]\d{2}:\d{2}$', now):
+        now = now + '+00:00'
     link = ""
     title = c.get("detail", "unknown")
     author = 0
@@ -388,6 +401,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         author = items[0].get("author", 0) if items else 0
         entry_id = items[0].get("id") if items else None
         game_date = items[0].get("date_gmt", "") if items else ""
+        if game_date and not re.search(r'[Zz]|[+-]\d{2}:\d{2}$', game_date):
+            game_date = game_date + '+00:00'
     elif t == "api_items_removed":
         ids = c.get("ids", [])
         title = c.get("detail", f"{len(ids)} item(s) removed")
