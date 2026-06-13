@@ -49,7 +49,7 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
         return None
 
     import re as _re
-    text = _re.sub(r'<[^>]+>', '', "".join(real)).strip()
+    text = _re.sub(r'<[^>]+>', '', "".join(filtered)).strip()
     if not text or len(text) < 3:
         return None
 
