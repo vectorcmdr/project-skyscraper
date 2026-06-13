@@ -140,6 +140,10 @@ def generate_site_data(state: dict, changes: list) -> bool:
                         ts = max(gmts)
                     except Exception:
                         pass
+            elif c["type"] == "media_orphan_upload":
+                mg = c.get("modified_gmt", "")
+                if mg:
+                    ts = mg
 
             if c["type"] == "unpublished_to_published":
                 if c.get("id") in consumed_unpub:
@@ -251,6 +255,7 @@ def generate_external_data(state: dict, changes: list):
 def seed_feed_from_mirror(state: dict):
     feed_path = DATA_DIR / "feed.json"
     existing_ids = set()
+    media_fixup = {}
 
     if feed_path.is_file():
         try:
@@ -258,12 +263,37 @@ def seed_feed_from_mirror(state: dict):
             for e in feed.get("entries", []):
                 if e.get("id") and e.get("type") in ("api_items_added", "media_orphan_upload"):
                     existing_ids.add(e["id"])
+                    if e.get("type") == "media_orphan_upload":
+                        media_fixup[e["id"]] = e
         except Exception:
             pass
 
+    api = state.get("api", {})
+
+    # Fix up existing media entry timestamps from now() to actual modified_gmt
+    if media_fixup:
+        any_fixed = False
+        for item in api.get("/wp-json/wp/v2/media", {}).get("items", []):
+            item_id = item.get("id")
+            if item_id in media_fixup:
+                mg = item.get("modified_gmt", "")
+                if mg:
+                    existing_ts = media_fixup[item_id].get("timestamp", "")
+                    existing_clean = re.sub(r'\..*$', '', existing_ts).replace('+00:00', '').replace('Z', '')
+                    mg_clean = mg[:19] if len(mg) >= 19 else mg
+                    if existing_clean != mg_clean:
+                        media_fixup[item_id]["timestamp"] = mg
+                        any_fixed = True
+                    media_fixup[item_id]["timestamp"] = mg
+                    any_fixed = True
+        if any_fixed:
+            feed["entries"] = feed.get("entries", [])
+            feed["entries"].sort(key=lambda e: (e.get("last_timestamp") or e.get("timestamp", "")), reverse=True)
+            _write_if_changed(feed_path, feed, "entries")
+            log("Fixed media entry timestamps from API data", "FILE")
+
     log("Seeding feed from existing mirror data...", "FILE")
     seed_changes = []
-    api = state.get("api", {})
 
     for ep, label in [("/wp-json/wp/v2/pages", "pages"), ("/wp-json/wp/v2/posts", "posts")]:
         for item in api.get(ep, {}).get("items", []):
@@ -289,6 +319,7 @@ def seed_feed_from_mirror(state: dict):
             "title": item.get("title", "Untitled media"),
             "url": item.get("link", ""),
             "author": item.get("author", 0),
+            "modified_gmt": item.get("modified_gmt", ""),
         })
 
     if seed_changes:
