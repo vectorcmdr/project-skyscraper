@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T18:31:39.894991+00:00",
+  "updated": "2026-06-13T22:53:52.678748+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2450,22 +2450,6 @@
       "date": ""
     },
     {
-      "id": "/request-memory-timestamp-094317/context.image.src",
-      "type": "external",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/request-memory-timestamp-094317/context.submission.url",
-      "type": "external",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
       "type": "external",
       "label": "forums.atlas-65.com",
@@ -3677,6 +3661,10 @@
     },
     {
       "source": "/",
+      "target": "/2026/06/13/six-seasons"
+    },
+    {
+      "source": "/",
       "target": "/2026/06/11/diagnostic-192512"
     },
     {
@@ -4070,10 +4058,6 @@
     {
       "source": "/",
       "target": "/2016/10/09/event-09102016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/07/event-07102016"
     },
     {
       "source": "/",
@@ -6585,7 +6569,7 @@
     },
     {
       "source": "/2016/11/13/event-13112016",
-      "target": "/2016/11/16/event-16112016"
+      "target": "/2016/11/14/event-14112016"
     },
     {
       "source": "/2016/11/16/event-16112016",
@@ -6593,7 +6577,7 @@
     },
     {
       "source": "/2016/11/16/event-16112016",
-      "target": "/2016/11/13/event-13112016"
+      "target": "/2016/11/14/event-14112016"
     },
     {
       "source": "/2016/11/16/event-16112016",
@@ -6813,7 +6797,7 @@
     },
     {
       "source": "/2016/12/14/event-14122016",
-      "target": "/2016/12/17/event-17122016"
+      "target": "/2016/12/15/event-15122016"
     },
     {
       "source": "/2016/12/17/event-17122016",
@@ -6821,7 +6805,7 @@
     },
     {
       "source": "/2016/12/17/event-17122016",
-      "target": "/2016/12/14/event-14122016"
+      "target": "/2016/12/15/event-15122016"
     },
     {
       "source": "/2016/12/17/event-17122016",
@@ -7094,14 +7078,6 @@
     {
       "source": "/request-memory-timestamp-094317",
       "target": "/"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.submission.url"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/request-memory-timestamp-094317/context.image.src"
     },
     {
       "source": "/2026/05/27/sec-log-185027",
