@@ -7,7 +7,7 @@ import time
 import urllib.error
 import urllib.request
 
-from monitor.config import USER_AGENT, FETCH_TIMEOUT, HEAD_TIMEOUT
+from monitor.config import USER_AGENT, FETCH_TIMEOUT, HEAD_TIMEOUT, BASE_URL
 from monitor.logger import log
 
 
@@ -87,7 +87,13 @@ def fetch(url: str, etag: str = None, last_modified: str = None,
     if last_modified:
         req_headers["If-Modified-Since"] = last_modified
 
-    req = urllib.request.Request(url, headers=req_headers, method=method, data=data)
+    # Bypass WordPress Batcache with a 10s rolling cache buster
+    final_url = url
+    if BASE_URL in url and "wp-json" in url:
+        sep = "&" if "?" in url else "?"
+        final_url = f"{url}{sep}_cb={int(time.time() / 10)}"
+
+    req = urllib.request.Request(final_url, headers=req_headers, method=method, data=data)
     try:
         resp = urllib.request.urlopen(req, timeout=timeout)
         content = resp.read()
