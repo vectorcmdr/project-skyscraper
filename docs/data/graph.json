@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T00:32:12.873673+00:00",
+  "updated": "2026-06-14T00:45:40.316421+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2088,6 +2088,14 @@
       "url": "https://project-skyscraper.com/2026/06/06/sec-log-110328/",
       "author": "The Architect",
       "date": "2026-06-06T10:03:00"
+    },
+    {
+      "id": "/2026/06/14/sec-log-014527",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/06/14/sec-log-014527/",
+      "author": "The Architect",
+      "date": "2026-06-14T00:45:00"
     },
     {
       "id": "/2026/06/13/six-seasons",
@@ -7496,6 +7504,14 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2026/06/14/sec-log-014527",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/14/sec-log-014527",
+      "target": "/2026/06/13/six-seasons"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -9725,6 +9741,14 @@
     },
     {
       "source": "/2026/06/13/six-seasons",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/14/sec-log-014527",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/06/14/sec-log-014527",
       "target": "/category/non-classe"
     },
     {
