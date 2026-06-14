@@ -67,6 +67,8 @@ def generate_site_data(state: dict, changes: list) -> bool:
     if tz_fixed:
         log(f"Fixed timezone on {tz_fixed} feed/manifest timestamps", "FILE")
 
+    feed["entries"] = _merge_adjacent_bloc_entries(feed["entries"], 3600)
+
     new_entries = []
     memory_bloc_groups = {}
 
@@ -194,21 +196,39 @@ def generate_site_data(state: dict, changes: list) -> bool:
             new_entries.append(existing)
         else:
             count = new_page_count or len(group["changes"])
-            entry = {
-                "type": "memory_bloc_restoration",
-                "timestamp": first_ts,
-                "title": f"Memory bloc restoration: {group['new_value']} [{count} Pages]",
-                "link": group["changes"][0].get("url", ""),
-                "diff": f"{group['old_value']} \u2192 {group['new_value']}",
-                "detail": f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {count} pages",
-                "author": "System",
-                "site": "",
-                "restoration_value": value,
-                "page_count": count,
-                "last_timestamp": last_ts,
-            }
-            feed["entries"].append(entry)
-            new_entries.append(entry)
+            recent = _find_recent_bloc_entry(feed["entries"], last_ts, 3600)
+            if recent and new_page_count:
+                old_diff = recent.get("diff", "")
+                old_old = old_diff.split("→")[0].strip() if "→" in old_diff else "?"
+                old_val = old_old if old_old != "?" else group["old_value"]
+                recent["restoration_value"] = value
+                recent["page_count"] = recent.get("page_count", 0) + new_page_count
+                c = recent["page_count"]
+                recent["title"] = f"Memory bloc restoration: {value} [{c} Pages]"
+                recent["diff"] = f"{old_val} → {value}"
+                recent["detail"] = f"Memory bloc restoration changed from {old_val} to {value} across {c} pages"
+                if first_ts < recent.get("timestamp", ""):
+                    recent["timestamp"] = first_ts
+                if last_ts > recent.get("last_timestamp", ""):
+                    recent["last_timestamp"] = last_ts
+                new_entries.append(recent)
+            else:
+                count = new_page_count or len(group["changes"])
+                entry = {
+                    "type": "memory_bloc_restoration",
+                    "timestamp": first_ts,
+                    "title": f"Memory bloc restoration: {group['new_value']} [{count} Pages]",
+                    "link": group["changes"][0].get("url", ""),
+                    "diff": f"{group['old_value']} → {group['new_value']}",
+                    "detail": f"Memory bloc restoration changed from {group['old_value']} to {group['new_value']} across {count} pages",
+                    "author": "System",
+                    "site": "",
+                    "restoration_value": value,
+                    "page_count": count,
+                    "last_timestamp": last_ts,
+                }
+                feed["entries"].append(entry)
+                new_entries.append(entry)
 
     _sync_manifest_from_sitemap(manifest, state)
 
@@ -625,6 +645,34 @@ def _find_memory_bloc_entry(entries: list, value: str):
     return None
 
 
+def _find_recent_bloc_entry(entries: list, timestamp_iso: str, threshold: float = 3600):
+    target = _parse_iso(timestamp_iso)
+    if target is None:
+        return None
+    best = None
+    best_gap = None
+    for entry in entries:
+        if entry.get("type") != "memory_bloc_restoration":
+            continue
+        ets = _parse_iso(entry.get("last_timestamp") or entry.get("timestamp", ""))
+        if ets is None:
+            continue
+        gap = abs((target - ets).total_seconds())
+        if gap <= threshold and (best_gap is None or gap < best_gap):
+            best = entry
+            best_gap = gap
+    return best
+
+
+def _parse_iso(iso_str: str):
+    if not iso_str:
+        return None
+    try:
+        return datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
 def _consolidate_memory_bloc_entries(entries: list) -> list:
     memory = []
     others = []
@@ -697,6 +745,55 @@ def _filter_noise_entries(entries: list) -> list:
     if removed:
         log(f"Filtered out {removed} noise-only entries from feed", "FILE")
     return filtered
+
+
+def _merge_adjacent_bloc_entries(entries: list, threshold: float = 3600) -> list:
+    bloc = [(i, e) for i, e in enumerate(entries) if e.get("type") == "memory_bloc_restoration"]
+    if len(bloc) < 2:
+        return entries
+    bloc.sort(key=lambda x: _parse_iso(x[1].get("last_timestamp") or x[1].get("timestamp", "")) or datetime.min)
+    merged_indices = set()
+    result = list(entries)
+    for i in range(len(bloc) - 1):
+        if i in merged_indices:
+            continue
+        ea = bloc[i][1]
+        ea_lts = _parse_iso(ea.get("last_timestamp") or ea.get("timestamp", ""))
+        ea_ts = _parse_iso(ea.get("timestamp", ""))
+        if ea_lts is None:
+            continue
+        for j in range(i + 1, len(bloc)):
+            if j in merged_indices:
+                continue
+            eb = bloc[j][1]
+            eb_lts = _parse_iso(eb.get("last_timestamp") or eb.get("timestamp", ""))
+            eb_ts = _parse_iso(eb.get("timestamp", ""))
+            if eb_lts is None or eb_ts is None:
+                continue
+            if (eb_lts - ea_lts).total_seconds() <= threshold and abs((eb_ts - ea_ts).total_seconds()) <= threshold:
+                ea_old = ea.get("diff", "").split("→")[0].strip() if "→" in ea.get("diff", "") else "?"
+                eb_val = eb.get("restoration_value", "")
+                if eb_val and int(eb_val.split("/")[0]) > int(ea.get("restoration_value", "0").split("/")[0]):
+                    ea["restoration_value"] = eb_val
+                ea["page_count"] = ea.get("page_count", 0) + eb.get("page_count", 0)
+                ea["title"] = f"Memory bloc restoration: {ea['restoration_value']} [{ea['page_count']} Pages]"
+                ea["diff"] = f"{ea_old} \u2192 {ea['restoration_value']}"
+                ea["detail"] = f"Memory bloc restoration changed from {ea_old} to {ea['restoration_value']} across {ea['page_count']} pages"
+                if eb.get("timestamp", "") < ea.get("timestamp", ""):
+                    ea["timestamp"] = eb["timestamp"]
+                if eb.get("last_timestamp", "") > ea.get("last_timestamp", ""):
+                    ea["last_timestamp"] = eb["last_timestamp"]
+                ea_lts = _parse_iso(ea.get("last_timestamp") or ea.get("timestamp", ""))
+                ea_ts = _parse_iso(ea.get("timestamp", ""))
+                merged_indices.add(j)
+                result[bloc[i][0]] = ea
+                result[bloc[j][0]] = None
+            else:
+                break
+    result = [e for e in result if e is not None]
+    if len(result) != len(entries):
+        log(f"Merged {len(entries) - len(result)} adjacent memory bloc entries (threshold={threshold}s)", "FILE")
+    return result
 
 
 def _write_if_changed(path, data: dict, key: str) -> bool:
