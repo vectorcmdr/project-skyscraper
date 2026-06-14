@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-14T11:59:16+00:00",
+      "title": "SIX SEASONS",
+      "link": "https://project-skyscraper.com/2026/06/13/six-seasons/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_likes_enabled\": false,\n  \"jetpack_sharing_enabled\": false,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-PM\",\n- \"jetpack-related-posts\": [\n- {\n- \"url\": \"https://project-skyscraper.com/2002/05/12/code/\",\n- \"url_meta\": {\n- \"origin\": 3210,\n- \"position\": 0\n- },\n- \"title\": \"Code\",\n- \"date\": \"12 May 2002\",\n- \"excerpt\": \"memory bloc : When we were 17 Each entity is unique. Together they are one.\",\n- \"rel\": \"\",\n- \"context\": \"In &quot;Non classé&quot;\",\n- \"block_context\": {\n- \"text\": \"Non classé\"\n- },\n- \"img\": {\n- \"alt_text\": \"\",\n- \"src\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&ssl=1&resize=350%2C200\",\n- \"width\": 350,\n- \"height\": 200,\n- \"srcset\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&ssl=1&resize=350%2C200 1x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&ssl=1&resize=525%2C300 1.5x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/05/Unknown.jpg?fit=999%2C999&ssl=1&resize=700%2C400 2x\"\n- },\n- \"classes\": []\n- },\n- {\n- \"url\": \"https://project-skyscraper.com/2022/04/24/event-24042022/\",\n- Current state: unstable\n+ Current state: stable\n  Previous\n+ Next",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-14T08:23:04+00:00",
       "title": "project-skyscraper.com",
@@ -4573,5 +4586,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-14T08:24:52.011178+00:00"
+  "updated": "2026-06-14T12:00:26.925876+00:00"
 }
