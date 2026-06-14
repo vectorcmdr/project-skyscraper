@@ -193,6 +193,8 @@ def generate_site_data(state: dict, changes: list) -> bool:
             existing["title"] = f"Memory bloc restoration: {group['new_value']} [{count} Pages]"
             existing["timestamp"] = first_ts if first_ts < existing["timestamp"] else existing["timestamp"]
             existing["last_timestamp"] = last_ts if last_ts > existing.get("last_timestamp", "") else existing.get("last_timestamp", last_ts)
+            if existing.get("last_timestamp", "") > existing.get("timestamp", ""):
+                existing["timestamp"] = existing["last_timestamp"]
             new_entries.append(existing)
         else:
             count = new_page_count or len(group["changes"])
@@ -207,10 +209,9 @@ def generate_site_data(state: dict, changes: list) -> bool:
                 recent["title"] = f"Memory bloc restoration: {value} [{c} Pages]"
                 recent["diff"] = f"{old_val} → {value}"
                 recent["detail"] = f"Memory bloc restoration changed from {old_val} to {value} across {c} pages"
-                if first_ts < recent.get("timestamp", ""):
-                    recent["timestamp"] = first_ts
                 if last_ts > recent.get("last_timestamp", ""):
                     recent["last_timestamp"] = last_ts
+                recent["timestamp"] = recent["last_timestamp"]
                 new_entries.append(recent)
             else:
                 count = new_page_count or len(group["changes"])
@@ -779,10 +780,9 @@ def _merge_adjacent_bloc_entries(entries: list, threshold: float = 3600) -> list
                 ea["title"] = f"Memory bloc restoration: {ea['restoration_value']} [{ea['page_count']} Pages]"
                 ea["diff"] = f"{ea_old} \u2192 {ea['restoration_value']}"
                 ea["detail"] = f"Memory bloc restoration changed from {ea_old} to {ea['restoration_value']} across {ea['page_count']} pages"
-                if eb.get("timestamp", "") < ea.get("timestamp", ""):
-                    ea["timestamp"] = eb["timestamp"]
                 if eb.get("last_timestamp", "") > ea.get("last_timestamp", ""):
                     ea["last_timestamp"] = eb["last_timestamp"]
+                ea["timestamp"] = ea["last_timestamp"]
                 ea_lts = _parse_iso(ea.get("last_timestamp") or ea.get("timestamp", ""))
                 ea_ts = _parse_iso(ea.get("timestamp", ""))
                 merged_indices.add(j)
