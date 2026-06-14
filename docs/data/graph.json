@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T16:11:41.894028+00:00",
+  "updated": "2026-06-14T16:37:15.885322+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -16,6 +16,22 @@
       "url": "https://project-skyscraper.com/about/",
       "author": "The Architect",
       "date": "1969-12-31T23:00:12"
+    },
+    {
+      "id": "/1958/04/17/event-17041958",
+      "type": "page",
+      "label": "Event 17041958",
+      "url": "https://project-skyscraper.com/1958/04/17/event-17041958/",
+      "author": "",
+      "date": "2026-06-09T16:22:45Z"
+    },
+    {
+      "id": "/1980/03/03/hoe",
+      "type": "page",
+      "label": "Hoe",
+      "url": "https://project-skyscraper.com/1980/03/03/hoe/",
+      "author": "",
+      "date": "2026-06-07T18:25:22Z"
     },
     {
       "id": "/",
@@ -56,6 +72,14 @@
       "url": "https://project-skyscraper.com/category/non-classe/",
       "author": "",
       "date": ""
+    },
+    {
+      "id": "/1970/01/01/origin",
+      "type": "page",
+      "label": "Origin",
+      "url": "https://project-skyscraper.com/1970/01/01/origin/",
+      "author": "",
+      "date": "2026-05-01T18:36:43Z"
     },
     {
       "id": "/report-bru-ent-reunion-peak",
@@ -208,14 +232,6 @@
       "url": "https://project-skyscraper.com/2016/01/06/event-06012016/",
       "author": "System",
       "date": "2016-01-06T00:00:00"
-    },
-    {
-      "id": "/2016/01/07/event-07012016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/",
-      "author": "System",
-      "date": "2016-01-07T00:00:00"
     },
     {
       "id": "/2016/01/08/event-08012016",
@@ -2098,6 +2114,14 @@
       "date": "2016-01-05T00:00:00"
     },
     {
+      "id": "/2016/01/07/event-07012016",
+      "type": "post",
+      "label": "2016_dataset_07012016",
+      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/",
+      "author": "System",
+      "date": "2016-01-07T00:00:00"
+    },
+    {
       "id": "/2017/06/01/event-01062017",
       "type": "post",
       "label": "2017_dataset",
@@ -2192,14 +2216,6 @@
       "url": "https://project-skyscraper.com/2026/06/14/diagnostic-130321/",
       "author": "System",
       "date": "2026-06-14T12:03:00"
-    },
-    {
-      "id": "/1970/01/01/origin",
-      "type": "post",
-      "label": "HELLO, WORLD",
-      "url": "https://project-skyscraper.com/1970/01/01/origin/",
-      "author": "The Architect",
-      "date": "1969-12-31T23:00:00"
     },
     {
       "id": "/1980/03/10/insert-coin",
@@ -2546,14 +2562,6 @@
       "date": "2026-04-30T20:00:40"
     },
     {
-      "id": "/1980/03/03/hoe",
-      "type": "post",
-      "label": "SLP #47",
-      "url": "https://project-skyscraper.com/1980/03/03/hoe/",
-      "author": "System",
-      "date": "1980-03-03T13:00:00"
-    },
-    {
       "id": "/2026/06/01/structural-analysis-204649",
       "type": "post",
       "label": "STRUCTURAL ANALYSIS",
@@ -2592,14 +2600,6 @@
       "url": "https://project-skyscraper.com/2017/05/28/waking-titan/",
       "author": "System",
       "date": "2017-05-28T16:00:00"
-    },
-    {
-      "id": "/1958/04/17/event-17041958",
-      "type": "post",
-      "label": "World Fair",
-      "url": "https://project-skyscraper.com/1958/04/17/event-17041958/",
-      "author": "System",
-      "date": "1958-04-17T14:27:00"
     },
     {
       "id": "/12dd862fd254",
@@ -2766,6 +2766,30 @@
       "type": "external",
       "label": "2",
       "url": "https://project-skyscraper.com/page/2/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2016/01/07/event-07012016/context.image.src",
+      "type": "external",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2016/01/07/event-07012016/context.item.anchor",
+      "type": "external",
+      "label": "Context.Item.Anchor",
+      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.item.anchor",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2016/01/07/event-07012016/context.submission.url",
+      "type": "external",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -4873,11 +4897,23 @@
     },
     {
       "source": "/2016/01/07/event-07012016",
-      "target": "/2016/01/05/event-05012016"
+      "target": "/2016/01/06/event-06012016"
     },
     {
       "source": "/2016/01/07/event-07012016",
       "target": "/2016/01/08/event-08012016"
+    },
+    {
+      "source": "/2016/01/07/event-07012016",
+      "target": "/2016/01/07/event-07012016/context.submission.url"
+    },
+    {
+      "source": "/2016/01/07/event-07012016",
+      "target": "/2016/01/07/event-07012016/context.image.src"
+    },
+    {
+      "source": "/2016/01/07/event-07012016",
+      "target": "/2016/01/07/event-07012016/context.item.anchor"
     },
     {
       "source": "/2016/01/08/event-08012016",
@@ -8440,14 +8476,6 @@
       "target": "/author/system26da6be6a6"
     },
     {
-      "source": "/1970/01/01/origin",
-      "target": "/author/theskyscraperarchitect"
-    },
-    {
-      "source": "/1970/01/01/origin",
-      "target": "/category/non-classe"
-    },
-    {
       "source": "/2026/03/24/sleep-mode-46105",
       "target": "/author/theskyscraperarchitect"
     },
@@ -8797,14 +8825,6 @@
     },
     {
       "source": "/2016/01/23/event-23012016",
-      "target": "/category/non-classe"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/author/system26da6be6a6"
-    },
-    {
-      "source": "/1980/03/03/hoe",
       "target": "/category/non-classe"
     },
     {
@@ -10813,14 +10833,6 @@
     },
     {
       "source": "/2026/06/09/structural-analysis-133722",
-      "target": "/category/non-classe"
-    },
-    {
-      "source": "/1958/04/17/event-17041958",
-      "target": "/author/system26da6be6a6"
-    },
-    {
-      "source": "/1958/04/17/event-17041958",
       "target": "/category/non-classe"
     },
     {
@@ -10917,10 +10929,6 @@
     },
     {
       "source": "/2016/01/06/event-06012016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/2016/01/07/event-07012016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
