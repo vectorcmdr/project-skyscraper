@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T12:29:36.416001+00:00",
+  "updated": "2026-06-14T12:30:28.742984+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1784,6 +1784,14 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "author": "System",
       "date": "2016-10-30T05:54:00"
+    },
+    {
+      "id": "/2016/12/31/event-31122016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/12/31/event-31122016/",
+      "author": "System",
+      "date": "2016-12-31T00:00:00"
     },
     {
       "id": "/2017/06/01/event-01062017",
@@ -7544,6 +7552,18 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/12/31/event-31122016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/12/31/event-31122016",
+      "target": "/2016/12/29/event-29122016"
+    },
+    {
+      "source": "/2016/12/31/event-31122016",
+      "target": "/2017/05/28/waking-titan"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -9536,6 +9556,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2016/12/31/event-31122016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/12/31/event-31122016",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2026/06/01/structural-analysis-204649",
       "target": "/author/theskyscraperarchitect"
     },
@@ -10625,6 +10653,10 @@
     },
     {
       "source": "/2016/12/29/event-29122016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/12/31/event-31122016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     }
   ]
