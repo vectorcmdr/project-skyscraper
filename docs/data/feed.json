@@ -1,6 +1,71 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-13T17:18:16.532695+00:00",
+      "title": "Memory bloc restoration: 202/365 [4 Pages]",
+      "link": "",
+      "diff": "0/365 → 202/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 202/365 across 4 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "202/365",
+      "page_count": 4,
+      "last_timestamp": "2026-06-14T01:01:34.221423+00:00"
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-06-14T01:01:34.221300+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-06-14T01:01:34.220883+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-14T01:01:34.220768+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 308,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-14T01:01:17+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/06/event-06012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "The Architect",
+      "site": "",
+      "id": 308,
+      "game_date": "2016-01-06T00:00:00+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-06-14T01:00:11+00:00",
       "title": "2016_dataset",
@@ -12,19 +77,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-13T17:18:16.532695+00:00",
-      "title": "Memory bloc restoration: 202/365 [3 Pages]",
-      "link": "",
-      "diff": "0/365 → 202/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 202/365 across 3 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "202/365",
-      "page_count": 3,
-      "last_timestamp": "2026-06-14T00:45:38.863539+00:00"
     },
     {
       "type": "api_items_added",
@@ -4443,5 +4495,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-14T01:00:32.685362+00:00"
+  "updated": "2026-06-14T01:01:34.226615+00:00"
 }
