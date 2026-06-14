@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-14T16:14:48+00:00",
+      "title": "2016_dataset_07012016",
+      "link": "https://project-skyscraper.com/2016/01/07/event-07012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- 2016_dataset\n+ 2016_dataset_07012016\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-06-14T16:09:59+00:00",
       "title": "project-skyscraper.com",
@@ -5457,5 +5470,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-14T16:11:38.153896+00:00"
+  "updated": "2026-06-14T16:15:08.169325+00:00"
 }
