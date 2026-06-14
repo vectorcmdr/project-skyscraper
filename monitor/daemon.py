@@ -257,6 +257,7 @@ def _apply_changes(changes: list, state: dict = None):
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
                         _diff_and_save(link, "html", change, state=state)
+                        _check_new_page_memory_bloc(link, change)
                         time.sleep(0.2)
                 elif "/pages" in endpoint:
                     _diff_and_save(f"https://project-skyscraper.com/wp-json/wp/v2/pages/{iid}", "api", change)
@@ -264,6 +265,7 @@ def _apply_changes(changes: list, state: dict = None):
                     link = item.get("link", "")
                     if link and link.startswith("https://project-skyscraper.com"):
                         _diff_and_save(link, "html", change, state=state)
+                        _check_new_page_memory_bloc(link, change)
                         time.sleep(0.2)
 
         elif ctype == "page_content_changed":

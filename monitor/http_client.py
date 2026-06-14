@@ -87,11 +87,13 @@ def fetch(url: str, etag: str = None, last_modified: str = None,
     if last_modified:
         req_headers["If-Modified-Since"] = last_modified
 
-    # Bypass WordPress Batcache with a 10s rolling cache buster
+    # Bypass WordPress Batcache — unique URL per request
     final_url = url
     if BASE_URL in url and "wp-json" in url:
         sep = "&" if "?" in url else "?"
-        final_url = f"{url}{sep}_cb={int(time.time() / 10)}"
+        final_url = f"{url}{sep}_cb={random.randint(0, 99999999)}"
+        req_headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        req_headers["Pragma"] = "no-cache"
 
     req = urllib.request.Request(final_url, headers=req_headers, method=method, data=data)
     try:
