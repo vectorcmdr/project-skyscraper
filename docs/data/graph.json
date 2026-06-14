@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T16:39:22.741768+00:00",
+  "updated": "2026-06-14T17:55:15.415049+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -150,14 +150,6 @@
       "type": "page",
       "label": "Theskyscraperarchitect",
       "url": "https://project-skyscraper.com/author/theskyscraperarchitect/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/tag/unverified",
-      "type": "page",
-      "label": "Unverified",
-      "url": "https://project-skyscraper.com/tag/unverified/",
       "author": "",
       "date": ""
     },
@@ -2618,6 +2610,14 @@
       "date": "2026-06-06T10:25:00"
     },
     {
+      "id": "/4e2b91d8a370",
+      "type": "media",
+      "label": "4E2B91D8A370",
+      "url": "https://project-skyscraper.com/4e2b91d8a370/",
+      "author": "The Architect",
+      "date": "2026-06-14T17:54:40"
+    },
+    {
       "id": "/53a05806675f",
       "type": "media",
       "label": "53A05806675F",
@@ -2766,38 +2766,6 @@
       "type": "external",
       "label": "2",
       "url": "https://project-skyscraper.com/page/2/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/01/07/event-07012016/context.image.src",
-      "type": "external",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/01/07/event-07012016/context.item.anchor",
-      "type": "external",
-      "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.item.anchor",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/01/07/event-07012016/context.submission.url",
-      "type": "external",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2016/01/07/event-07012016/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/01/17/event-17012016",
-      "type": "external",
-      "label": "Event 17012016",
-      "url": "https://project-skyscraper.com/2016/01/17/event-17012016/",
       "author": "",
       "date": ""
     },
@@ -4893,7 +4861,7 @@
     },
     {
       "source": "/2016/01/07/event-07012016",
-      "target": "/tag/unverified"
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/01/07/event-07012016",
@@ -4902,18 +4870,6 @@
     {
       "source": "/2016/01/07/event-07012016",
       "target": "/2016/01/08/event-08012016"
-    },
-    {
-      "source": "/2016/01/07/event-07012016",
-      "target": "/2016/01/07/event-07012016/context.submission.url"
-    },
-    {
-      "source": "/2016/01/07/event-07012016",
-      "target": "/2016/01/07/event-07012016/context.image.src"
-    },
-    {
-      "source": "/2016/01/07/event-07012016",
-      "target": "/2016/01/07/event-07012016/context.item.anchor"
     },
     {
       "source": "/2016/01/08/event-08012016",
@@ -4977,11 +4933,15 @@
     },
     {
       "source": "/2016/01/16/event-16012016",
-      "target": "/2016/01/17/event-17012016"
+      "target": "/2016/01/18/event-18012016"
     },
     {
       "source": "/2016/01/18/event-18012016",
       "target": "/"
+    },
+    {
+      "source": "/2016/01/18/event-18012016",
+      "target": "/2016/01/16/event-16012016"
     },
     {
       "source": "/2016/01/18/event-18012016",
@@ -5077,7 +5037,7 @@
     },
     {
       "source": "/2016/01/28/event-28012016",
-      "target": "/2016/01/30/event-30012016"
+      "target": "/2016/01/29/event-29012016"
     },
     {
       "source": "/2016/01/30/event-30012016",
@@ -8425,6 +8385,10 @@
     },
     {
       "source": "/a7e9f3b8c2d6",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/4e2b91d8a370",
       "target": "/author/theskyscraperarchitect"
     },
     {
