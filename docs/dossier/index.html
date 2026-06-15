@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS OPS CENTRE | DOSSIER</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dossier-body">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/DOSSIER
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+        <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="dossier-tabs">
+    <button class="dossier-tab active" data-tab="showcase">TECH DEMO</button>
+    <button class="dossier-tab" data-tab="characters">CHARACTERS</button>
+    <button class="dossier-tab" data-tab="entities">ENTITIES</button>
+    <button class="dossier-tab" data-tab="players">PLAYERS</button>
+  </div>
+
+  <!-- SHOWCASE -->
+  <div class="dossier-pane active" id="pane-showcase">
+    <div class="showcase-grid">
+
+      <!-- 1. CYBERBRAIN SPHERE -->
+      <section class="dossier-panel" id="panel-cyberbrain">
+        <div class="dossier-panel-title">CYBERBRAIN SCAN</div>
+        <div class="dossier-panel-body panel-body-abs" id="cyberbrainContainer"></div>
+      </section>
+
+      <!-- 2. WAVEFORM -->
+      <section class="dossier-panel" id="panel-waveform">
+        <div class="dossier-panel-title">WAVEFORM ANALYSIS</div>
+        <div class="dossier-panel-body panel-body-abs" id="waveformContainer">
+          <canvas id="waveformCanvas" class="canvas-fill"></canvas>
+        </div>
+      </section>
+
+      <!-- 3. NEURAL GRID -->
+      <section class="dossier-panel" id="panel-neuralgrid">
+        <div class="dossier-panel-title">NEURAL GRID</div>
+        <div class="dossier-panel-body panel-body-col" id="neuralGridContainer">
+          <div class="neural-text" id="neuralTextTop">NEURAL ACTIVITY MONITOR</div>
+          <div class="neural-text-sub">SYNAPTIC DENSITY: <span id="synapticDensity">0.00</span>%</div>
+          <canvas id="neuralGridCanvas"></canvas>
+        </div>
+      </section>
+
+      <!-- 4. FOLDING PANEL -->
+      <section class="dossier-panel" id="panel-folding">
+        <div class="dossier-panel-title">FOLDING DOSSIER</div>
+        <div class="dossier-panel-body" id="foldingContainer">
+          <div class="fold-bar" id="foldBar">&#9650; COLLAPSE</div>
+          <div class="fold-box" id="foldBox">
+            <div class="fold-content">
+              <p>CLASSIFIED DOSSIER #A7X-9</p>
+              <p>SUBJECT: [ REDACTED ]</p>
+              <p>STATUS: PENDING REVIEW</p>
+              <p>THREAT LEVEL: &#9632;&#9632;&#9632;&#9632;&#9632;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. WARNING BLOCKS -->
+      <section class="dossier-panel" id="panel-warnings">
+        <div class="dossier-panel-title">THREAT WARNINGS</div>
+        <div class="dossier-panel-body warnings-body" id="warningsContainer">
+          <div class="warning-row">
+            <div class="warn-block warn-danger">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner">
+                <span class="warn-kanji">危険</span>
+                <span class="warn-label">DANGER</span>
+                <span class="warn-sub">UNAUTHORIZED ACCESS</span>
+              </div>
+            </div>
+            <div class="warn-block warn-caution">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner">
+                <span class="warn-kanji">警告</span>
+                <span class="warn-label">WARNING</span>
+                <span class="warn-sub">SYSTEM COMPROMISE</span>
+              </div>
+            </div>
+            <div class="warn-block warn-intrusion">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner">
+                <span class="warn-kanji">侵入</span>
+                <span class="warn-label">INTRUSION</span>
+                <span class="warn-sub">NETWORK BREACH DETECTED</span>
+              </div>
+            </div>
+          </div>
+          <div class="warning-row">
+            <div class="warn-block warn-surveil">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner">
+                <span class="warn-kanji">監視</span>
+                <span class="warn-label">SURVEILLANCE</span>
+                <span class="warn-sub">ACTIVE MONITORING</span>
+              </div>
+            </div>
+            <div class="warn-block warn-globe" id="warnGlobeBlock">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner warn-inner-globe">
+                <span class="warn-globe-label">SIGNAL</span>
+                <canvas id="globeCanvas" class="warn-globe-canvas"></canvas>
+                <span class="warn-globe-sub">INTERCEPTION ACTIVE</span>
+              </div>
+            </div>
+            <div class="warn-block warn-biohazard">
+              <span class="warn-stripes"></span>
+              <div class="warn-inner">
+                <span class="warn-kanji">注意</span>
+                <span class="warn-label">CAUTION</span>
+                <span class="warn-sub">CONTAINMENT PROTOCOL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. GAUGE GRID -->
+      <section class="dossier-panel" id="panel-gauge">
+        <div class="dossier-panel-title">GAUGE GRID</div>
+        <div class="dossier-panel-body panel-body-abs" id="gaugeGridContainer">
+          <canvas id="gaugeGridCanvas" class="canvas-fill"></canvas>
+        </div>
+      </section>
+
+      <!-- 7. SHUFFLE DECK -->
+      <section class="dossier-panel" id="panel-shuffle">
+        <div class="dossier-panel-title">SHUFFLE DECK</div>
+        <div class="dossier-panel-body shuffle-body" id="shuffleContainer">
+          <div class="shuffle-stack">
+            <div class="shuffle-card" id="shuffle0"><div class="shuffle-card-inner">EVIDENCE LOG #1<br><small>TIMESTAMP: 22:47:03</small></div></div>
+            <div class="shuffle-card" id="shuffle1"><div class="shuffle-card-inner">EVIDENCE LOG #2<br><small>TIMESTAMP: 23:12:58</small></div></div>
+            <div class="shuffle-card" id="shuffle2"><div class="shuffle-card-inner">EVIDENCE LOG #3<br><small>TIMESTAMP: 23:55:41</small></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. DNA SCANNER -->
+      <section class="dossier-panel" id="panel-dna">
+        <div class="dossier-panel-title">DNA TRICKLE</div>
+        <div class="dossier-panel-body panel-body-abs" id="dnaContainer">
+          <canvas id="dnaCanvas" class="canvas-fill"></canvas>
+          <div class="dna-overlay-left"></div>
+          <div class="dna-overlay-right"></div>
+        </div>
+      </section>
+
+      <!-- 9. DATA STREAM -->
+      <section class="dossier-panel" id="panel-datastream">
+        <div class="dossier-panel-title">DATA STREAM</div>
+        <div class="dossier-panel-body panel-body-abs" id="dataStreamContainer">
+          <canvas id="dataStreamCanvas" class="canvas-fill"></canvas>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- DOSSIER PANES (placeholder) -->
+  <div class="dossier-pane" id="pane-characters">
+    <div class="dossier-placeholder">
+      <span class="ph-icon">&#9632;</span>
+      CHARACTERS DOSSIER
+      <span class="ph-sub">CASE FILES PENDING</span>
+    </div>
+  </div>
+  <div class="dossier-pane" id="pane-entities">
+    <div class="dossier-placeholder">
+      <span class="ph-icon">&#9632;</span>
+      ENTITIES DOSSIER
+      <span class="ph-sub">CASE FILES PENDING</span>
+    </div>
+  </div>
+  <div class="dossier-pane" id="pane-players">
+    <div class="dossier-placeholder">
+      <span class="ph-icon">&#9632;</span>
+      PLAYERS DOSSIER
+      <span class="ph-sub">CASE FILES PENDING</span>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
