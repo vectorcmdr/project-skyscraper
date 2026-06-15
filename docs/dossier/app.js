@@ -258,6 +258,7 @@ function initCyberbrain() {
   brainGroup.add(centerGlow);
 
   brainGroup.scale.set(1.75, 1.75, 1.75);
+  brainGroup.position.y = -0.05;
   scene.add(brainGroup);
 
   /* ---- Stars background ---- */
@@ -296,7 +297,7 @@ function initCyberbrain() {
     sphereMat.uniforms.uTime.value = t;
     sphere.rotation.y = t * 0.025;
     ring.rotation.z = t * 0.02;
-    brainGroup.rotation.y = Math.sin(t * 0.015) * 0.08;
+    brainGroup.rotation.y = sphere.rotation.y;
 
     controls.update();
     renderer.render(scene, camera);
@@ -430,17 +431,22 @@ function initNeuralGrid() {
 
   function resize() {
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = canvas.clientWidth * dpr;
-    canvas.height = canvas.clientHeight * dpr;
+    const w = Math.max(1, canvas.clientWidth);
+    const h = Math.max(1, canvas.clientHeight);
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+    }
   }
 
   function draw() {
     const ctx = canvas.getContext('2d');
+    resize();
     const dpr = window.devicePixelRatio || 1;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const cw = canvas.clientWidth;
-    const ch = canvas.clientHeight;
+    const cw = Math.max(1, canvas.clientWidth);
+    const ch = Math.max(1, canvas.clientHeight);
 
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
@@ -725,8 +731,8 @@ function initShuffleDeck() {
 
   const positions = [
     { x: 0, y: 0 },
-    { x: 4, y: 3 },
-    { x: 8, y: 6 },
+    { x: -4, y: -3 },
+    { x: -8, y: -6 },
   ];
 
   const cardPos = [0, 1, 2];
@@ -755,12 +761,12 @@ function initDnaScanner() {
   const container = document.getElementById('dnaContainer');
   if (!canvas || !container) return;
 
-  const chars = 'ATCGU';
+  const chars = 'CTAG';
   let dims;
   let scrollY = 0;
   let rollerAngle = 0;
   const charH = 14;
-  const tapeWidthRatio = 0.65;
+  const tapeWidthRatio = 0.85;
 
   function resize() {
     dims = resizeCanvas(canvas, container);
@@ -787,8 +793,8 @@ function initDnaScanner() {
     const tapeBot = h - rollerY - rollerR - 2;
     const tapeH = tapeBot - tapeTop;
 
-    scrollY += 0.3;
-    rollerAngle += 0.03;
+    scrollY += 0.8;
+    rollerAngle += 0.06;
 
     /* Tape background */
     ctx.fillStyle = '#0a0a0a';
@@ -832,7 +838,7 @@ function initDnaScanner() {
 
       for (let c = 0; c < cols; c++) {
         const x = tx + 6 + c * 11 + Math.round(11 / 2);
-        const ch = chars[((r * 11) + (c * 7)) % chars.length];
+        const ch = chars[Math.floor(Math.random() * chars.length)];
         const flicker = 0.6 + Math.random() * 0.4;
         ctx.fillStyle = `hsla(${hue}, 80%, ${45 + flicker * 25}%, ${rowAlpha * flicker * 0.9})`;
         ctx.fillText(ch, x, y + charH / 2);
@@ -1047,9 +1053,10 @@ function initDataStream() {
         freezeLetters = {};
 
         /* Spell word left-to-right across consecutive columns, offset from edges */
-        const zonePad = 4;
-        const maxStart = Math.max(zonePad, columns.length - word.length - zonePad);
-        const startCol = zonePad + Math.floor(Math.random() * Math.max(1, maxStart - zonePad + 1));
+        const wordLen = word.length;
+        const maxStartCol = Math.max(0, columns.length - wordLen);
+        const zonePad = Math.min(3, Math.floor(maxStartCol / 2));
+        const startCol = zonePad + Math.floor(Math.random() * Math.max(1, maxStartCol - zonePad * 2 + 1));
         for (let li = 0; li < word.length; li++) {
           freezeLetters[startCol + li] = word[li];
         }
