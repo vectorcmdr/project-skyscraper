@@ -259,6 +259,7 @@ function initCyberbrain() {
 
   brainGroup.scale.set(1.75, 1.75, 1.75);
   brainGroup.position.y = -0.05;
+  brainGroup.rotation.y = Math.PI / 2;
   scene.add(brainGroup);
 
   /* ---- Stars background ---- */
