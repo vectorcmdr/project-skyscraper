@@ -418,16 +418,13 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
-  const COLS = 6;
-  const GAP = 4;
-  /* Pre-allocate more cells than needed (max 30 rows × 6 cols) */
-  const MAX_ROWS = 30;
-  let cells = [];
-  let targets = [];
-  for (let i = 0; i < COLS * MAX_ROWS; i++) {
-    cells.push(Math.random());
-    targets.push(Math.random() < 0.3 ? 1 : 0);
-  }
+  const COLS = 12;
+  const ROWS = 12;
+  const GAP = 2;
+  const TOTAL = COLS * ROWS;
+  let lit = new Uint8Array(TOTAL);
+
+  for (let i = 0; i < TOTAL; i++) lit[i] = Math.random() < 0.3 ? 1 : 0;
 
   function resize() {
     const dpr = window.devicePixelRatio || 1;
@@ -436,6 +433,14 @@ function initNeuralGrid() {
     if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
       canvas.width = w * dpr;
       canvas.height = h * dpr;
+    }
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function update() {
+    for (let i = 0; i < TOTAL; i++) {
+      if (Math.random() < 0.015) lit[i] = lit[i] ? 0 : 1;
     }
   }
 
@@ -451,48 +456,31 @@ function initNeuralGrid() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
 
-    if (cw < GAP * (COLS + 1) + 10 || ch < 10) return;
-
-    /* cellW = grid width / cols. cellH = cellW * 0.55 → always 55% as tall = always landscape.
-       Then compute how many rows fit in available height. */
     const cellW = (cw - GAP * (COLS + 1)) / COLS;
-    const cellH = cellW * 0.55;
-    const rows = Math.min(MAX_ROWS, Math.max(2, Math.floor((ch + GAP) / (cellH + GAP))));
+    const cellH = (ch - GAP * (ROWS + 1)) / ROWS;
+    if (cellW < 2 || cellH < 2) return;
 
-    let lit = 0;
-    for (let r = 0; r < rows; r++) {
+    let litCount = 0;
+    for (let r = 0; r < ROWS; r++) {
       for (let c = 0; c < COLS; c++) {
         const idx = r * COLS + c;
-        if (idx >= cells.length) break;
-        cells[idx] += (targets[idx] - cells[idx]) * 0.05;
-        const val = cells[idx];
         const x = GAP + c * (cellW + GAP);
         const y = GAP + r * (cellH + GAP);
 
-        if (val > 0.05) {
-          const bright = Math.min(1, val * 1.5);
-          ctx.fillStyle = `rgba(0, ${Math.floor(170 * bright)}, ${Math.floor(255 * bright)}, ${bright * 0.8})`;
+        if (lit[idx]) {
+          const b = 0.6 + Math.random() * 0.4;
+          ctx.fillStyle = `rgba(0,${Math.floor(170 * b)},255,${b * 0.85})`;
           ctx.fillRect(x, y, cellW, cellH);
-          lit++;
+          litCount++;
         } else {
-          ctx.fillStyle = 'rgba(255,255,255,0.03)';
+          ctx.fillStyle = 'rgba(255,255,255,0.025)';
           ctx.fillRect(x, y, cellW, cellH);
         }
       }
     }
 
     if (densityEl) {
-      densityEl.textContent = ((lit / (COLS * rows)) * 100).toFixed(1);
-    }
-  }
-
-  function update() {
-    if (Math.random() < 0.1) {
-      for (let i = 0; i < targets.length; i++) {
-        if (Math.random() < 0.3) {
-          targets[i] = Math.random() < 0.5 ? 0 : 0.5 + Math.random() * 0.5;
-        }
-      }
+      densityEl.textContent = ((litCount / TOTAL) * 100).toFixed(1);
     }
   }
 
@@ -503,7 +491,6 @@ function initNeuralGrid() {
   }
 
   window.addEventListener('resize', resize);
-  resize();
   animate();
 }
 
@@ -1003,8 +990,14 @@ function initDataStream() {
         /* Spell word in a zone inset from canvas edges */
         const wordLen = word.length;
         const marginCols = 5;
-        const maxStart = columns.length - wordLen - marginCols;
-        const startCol = marginCols + (maxStart > marginCols ? Math.floor(Math.random() * (maxStart - marginCols + 1)) : 0);
+        const minStart = marginCols;
+        const maxStart = columns.length - marginCols - wordLen;
+        let startCol;
+        if (minStart <= maxStart) {
+          startCol = minStart + Math.floor(Math.random() * (maxStart - minStart + 1));
+        } else {
+          startCol = Math.max(0, Math.floor((columns.length - wordLen) / 2));
+        }
         for (let li = 0; li < word.length; li++) {
           freezeLetters[startCol + li] = word[li];
         }
