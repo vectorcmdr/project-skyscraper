@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T16:49:36.886187+00:00",
+  "updated": "2026-06-15T21:46:13.174136+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -354,14 +354,6 @@
       "date": "2016-02-09T00:00:00"
     },
     {
-      "id": "/2016/02/10/event-10022016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/02/10/event-10022016/",
-      "author": "System",
-      "date": "2016-02-10T00:00:00"
-    },
-    {
       "id": "/2016/02/12/event-12022016",
       "type": "post",
       "label": "2016_dataset",
@@ -680,14 +672,6 @@
       "url": "https://project-skyscraper.com/2016/04/06/event-06042016/",
       "author": "System",
       "date": "2016-04-05T23:00:00"
-    },
-    {
-      "id": "/2016/04/08/event-08042016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/04/08/event-08042016/",
-      "author": "System",
-      "date": "2016-04-07T23:00:00"
     },
     {
       "id": "/2016/04/09/event-09042016",
@@ -1040,14 +1024,6 @@
       "url": "https://project-skyscraper.com/2016/06/14/event-14062016/",
       "author": "System",
       "date": "2016-06-13T23:00:00"
-    },
-    {
-      "id": "/2016/06/15/event-15062016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/06/15/event-15062016/",
-      "author": "System",
-      "date": "2016-06-14T23:00:00"
     },
     {
       "id": "/2016/06/17/event-17062016",
@@ -2090,6 +2066,30 @@
       "date": "2016-01-07T00:00:00"
     },
     {
+      "id": "/2016/04/08/event-08042016",
+      "type": "post",
+      "label": "2016_dataset_08042016",
+      "url": "https://project-skyscraper.com/2016/04/08/event-08042016/",
+      "author": "System",
+      "date": "2016-04-07T23:00:00"
+    },
+    {
+      "id": "/2016/02/10/event-10022016",
+      "type": "post",
+      "label": "2016_dataset_10022016",
+      "url": "https://project-skyscraper.com/2016/02/10/event-10022016/",
+      "author": "System",
+      "date": "2016-02-10T00:00:00"
+    },
+    {
+      "id": "/2016/06/15/event-15062016",
+      "type": "post",
+      "label": "2016_dataset_15062016",
+      "url": "https://project-skyscraper.com/2016/06/15/event-15062016/",
+      "author": "System",
+      "date": "2016-06-14T23:00:00"
+    },
+    {
       "id": "/2017/06/01/event-01062017",
       "type": "post",
       "label": "2017_dataset",
@@ -2682,6 +2682,14 @@
       "date": "2026-06-15T15:43:14"
     },
     {
+      "id": "/dd85ac69ae24",
+      "type": "media",
+      "label": "DD85AC69AE24",
+      "url": "https://project-skyscraper.com/dd85ac69ae24/",
+      "author": "The Architect",
+      "date": "2026-06-15T21:44:59"
+    },
+    {
       "id": "/2005/04/13/quote/img_00004",
       "type": "media",
       "label": "IMG_00004",
@@ -2794,6 +2802,14 @@
       "date": ""
     },
     {
+      "id": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/",
+      "type": "external",
+      "label": "cosmocover.com",
+      "url": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
       "type": "external",
       "label": "forums.atlas-65.com",
@@ -2842,6 +2858,14 @@
       "date": ""
     },
     {
+      "id": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack",
+      "type": "external",
+      "label": "loudersound.com",
+      "url": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://preview.redd.it/connection-detected-access-denied-v0-8c7atk6y141h1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=c1f17506bd913fb8de67bbb3452379ca0d0c723b",
       "type": "external",
       "label": "preview.redd.it",
@@ -2862,6 +2886,14 @@
       "type": "external",
       "label": "soundcloud.com",
       "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.universetoday.com/articles/great-attractor-revealed-galaxies-found-lurking-behind-the-milky-way",
+      "type": "external",
+      "label": "universetoday.com",
+      "url": "https://www.universetoday.com/articles/great-attractor-revealed-galaxies-found-lurking-behind-the-milky-way",
       "author": "",
       "date": ""
     },
@@ -5329,6 +5361,14 @@
     },
     {
       "source": "/2016/02/10/event-10022016",
+      "target": "https://www.universetoday.com/articles/great-attractor-revealed-galaxies-found-lurking-behind-the-milky-way"
+    },
+    {
+      "source": "/2016/02/10/event-10022016",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/02/10/event-10022016",
       "target": "/2016/02/09/event-09022016"
     },
     {
@@ -5825,7 +5865,11 @@
     },
     {
       "source": "/2016/04/08/event-08042016",
-      "target": "/tag/unverified"
+      "target": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/"
+    },
+    {
+      "source": "/2016/04/08/event-08042016",
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/04/08/event-08042016",
@@ -6385,7 +6429,11 @@
     },
     {
       "source": "/2016/06/15/event-15062016",
-      "target": "/tag/unverified"
+      "target": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack"
+    },
+    {
+      "source": "/2016/06/15/event-15062016",
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/06/15/event-15062016",
@@ -8617,6 +8665,10 @@
     },
     {
       "source": "/2023/12/12/event-12122023/cold-flame",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/dd85ac69ae24",
       "target": "/author/theskyscraperarchitect"
     },
     {
@@ -11236,10 +11288,6 @@
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
-      "source": "/2016/02/10/event-10022016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
       "source": "/2016/02/12/event-12022016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
@@ -11397,10 +11445,6 @@
     },
     {
       "source": "/2016/04/06/event-06042016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/2016/04/08/event-08042016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
@@ -11577,10 +11621,6 @@
     },
     {
       "source": "/2016/06/14/event-14062016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/2016/06/15/event-15062016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
