@@ -400,16 +400,96 @@ function initNeuralGrid() {
 
   const GAP = 4;
   const COLS = 8;
-  const ASPECT = 1.6;
-  let rows = 4;
   let cells = [];
   let targets = [];
 
-  function calcRows(cw, ch) {
-    const cellW = (cw - GAP * (COLS + 1)) / COLS;
-    const cellH = cellW / ASPECT;
-    return Math.max(2, Math.floor((ch + GAP) / (cellH + GAP)));
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    /* Set buffer size from CSS display size — no feedback loop since
+       we read clientWidth/clientHeight which is controlled by CSS flex,
+       not the other way around. */
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
   }
+
+  function draw() {
+    const dpr = window.devicePixelRatio || 1;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const rect = container.getBoundingClientRect();
+    const textEl = document.getElementById('neuralTextTop');
+    const textH = textEl ? textEl.offsetHeight + 30 : 40;
+    const cw = rect.width;
+    const ch = Math.max(100, rect.height - textH - 10);
+
+    ctx.fillStyle = '#080808';
+    ctx.fillRect(0, 0, cw, ch);
+
+    /* Ensure cells array covers at least COLS * 20 slots */
+    while (cells.length < COLS * 20) {
+      cells.push(Math.random());
+      targets.push(Math.random() < 0.3 ? 1 : 0);
+    }
+
+    /* Compute rows so each cell is wider than tall.
+       cellW = (cw - GAP*(COLS+1)) / COLS
+       cellH = cellW / 1.6  (target: 1.6x wider than tall)
+       rows  = (ch + GAP) / (cellH + GAP) */
+    const cellW = (cw - GAP * (COLS + 1)) / COLS;
+    const cellH_target = cellW / 1.6;
+    const rows = Math.max(2, Math.floor((ch + GAP) / (cellH_target + GAP)));
+
+    /* Actual cellH after distributing across rows (may differ slightly) */
+    const cellH = (ch - GAP * (rows + 1)) / rows;
+
+    let lit = 0;
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const idx = r * COLS + c;
+        if (idx >= cells.length) break;
+        cells[idx] += (targets[idx] - cells[idx]) * 0.05;
+        const val = cells[idx];
+        const x = GAP + c * (cellW + GAP);
+        const y = GAP + r * (cellH + GAP);
+
+        if (val > 0.05) {
+          const bright = Math.min(1, val * 1.5);
+          ctx.fillStyle = `rgba(0, ${Math.floor(170 * bright)}, ${Math.floor(255 * bright)}, ${bright * 0.8})`;
+          ctx.fillRect(x, y, cellW, cellH);
+          lit++;
+        } else {
+          ctx.fillStyle = 'rgba(255,255,255,0.03)';
+          ctx.fillRect(x, y, cellW, cellH);
+        }
+      }
+    }
+
+    if (densityEl) {
+      densityEl.textContent = ((lit / (COLS * rows)) * 100).toFixed(1);
+    }
+  }
+
+  function update() {
+    if (Math.random() < 0.1) {
+      for (let i = 0; i < targets.length; i++) {
+        if (Math.random() < 0.3) {
+          targets[i] = Math.random() < 0.5 ? 0 : 0.5 + Math.random() * 0.5;
+        }
+      }
+    }
+  }
+
+  function animate() {
+    update();
+    resize();
+    draw();
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  animate();
+}
 
   function init() {
     cells = [];
