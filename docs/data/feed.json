@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-06-15T14:27:32+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/10/30/event-30102016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 240/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-06-15T14:22:36+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/04/08/event-08042016/",
@@ -5626,5 +5639,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-15T14:22:54.733866+00:00"
+  "updated": "2026-06-15T14:27:53.651652+00:00"
 }
