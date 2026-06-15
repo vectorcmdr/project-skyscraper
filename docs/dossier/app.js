@@ -162,9 +162,9 @@ function initCyberbrain() {
     const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
     let inside = dCerebrum <= 1.0;
 
-    /* Temporal lobes — side protrusions at mid-lower height, forward */
-    const tCx = sx * 0.80, tCy = -0.12, tCz = 0.25;
-    const tRx = 0.22, tRy = 0.18, tRz = 0.30;
+    /* Temporal lobes — subtle side bulges, reduced so they don't look like wings */
+    const tCx = sx * 0.60, tCy = -0.08, tCz = 0.20;
+    const tRx = 0.12, tRy = 0.14, tRz = 0.22;
     const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
     if (dTemporal <= 1.0) inside = true;
 
@@ -257,6 +257,7 @@ function initCyberbrain() {
   const centerGlow = new THREE.Mesh(glowGeo2, glowMat2);
   brainGroup.add(centerGlow);
 
+  brainGroup.scale.set(1.75, 1.75, 1.75);
   scene.add(brainGroup);
 
   /* ---- Stars background ---- */
@@ -724,8 +725,8 @@ function initShuffleDeck() {
 
   const positions = [
     { x: 0, y: 0 },
-    { x: -4, y: 3 },
-    { x: -8, y: 6 },
+    { x: 4, y: 3 },
+    { x: 8, y: 6 },
   ];
 
   const cardPos = [0, 1, 2];
@@ -748,34 +749,24 @@ function initShuffleDeck() {
   setInterval(cycle, 3000);
 }
 
-/* ===== 8. DNA BELT SCROLL ===== */
+/* ===== 8. DNA BELT TAPE ===== */
 function initDnaScanner() {
   const canvas = document.getElementById('dnaCanvas');
   const container = document.getElementById('dnaContainer');
   if (!canvas || !container) return;
 
-  const bases = ['A', 'T', 'C', 'G', 'U'];
-  const chars = 'ATCGUATCGU';
+  const chars = 'ATCGU';
   let dims;
   let scrollY = 0;
-  const rowH = 16;
-  const fadePixels = 30;
-  let charCache = {}; /* persistent chars: "r,c" -> char */
+  let rollerAngle = 0;
+  const charH = 14;
+  const tapeWidthRatio = 0.65;
 
   function resize() {
     dims = resizeCanvas(canvas, container);
-    charCache = {};
   }
   resize();
   window.addEventListener('resize', resize);
-
-  function getChar(r, c) {
-    const key = `${r},${c}`;
-    if (!charCache[key] || Math.random() < 0.005) {
-      charCache[key] = chars[Math.floor(Math.random() * chars.length)];
-    }
-    return charCache[key];
-  }
 
   function draw() {
     const ctx = canvas.getContext('2d');
@@ -783,60 +774,153 @@ function initDnaScanner() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     const { w, h } = dims;
+
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, w, h);
 
-    const numRows = Math.ceil(h / rowH) + 2;
-    const cols = Math.floor(w / 10);
+    /* Tape belt dimensions */
+    const tw = Math.round(w * tapeWidthRatio);
+    const tx = Math.round((w - tw) / 2);
+    const rollerR = Math.round(tw * 0.14);
+    const rollerY = rollerR + 6;
+    const tapeTop = rollerY + rollerR + 2;
+    const tapeBot = h - rollerY - rollerR - 2;
+    const tapeH = tapeBot - tapeTop;
 
-    scrollY += 0.00015;
+    scrollY += 0.3;
+    rollerAngle += 0.03;
 
-    for (let r = -1; r < numRows; r++) {
-      const y = r * rowH - (scrollY % rowH);
-      const rowAlpha = Math.min(1, Math.min(y + fadePixels, h - y + fadePixels) / fadePixels);
-      if (rowAlpha <= 0.01) continue;
+    /* Tape background */
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(tx, tapeTop, tw, tapeH);
 
-      const hue = 180 + Math.sin(r * 1.3 + scrollY * 0.02) * 20;
-      ctx.font = '11px monospace';
-      ctx.textAlign = 'center';
-
-      for (let c = 0; c < cols; c++) {
-        const x = c * 10 + 5;
-        const ch = getChar(r, c);
-        const flicker = 0.4 + Math.random() * 0.6;
-        ctx.fillStyle = `hsla(${hue}, 80%, ${40 + flicker * 30}%, ${rowAlpha * flicker * 0.7})`;
-        ctx.fillText(ch, x, y + 12);
-      }
-
-      ctx.strokeStyle = `rgba(0,200,150,${rowAlpha * 0.04})`;
-      ctx.lineWidth = 0.5;
-      ctx.beginPath();
-      ctx.moveTo(0, y + rowH);
-      ctx.lineTo(w, y + rowH);
-      ctx.stroke();
-    }
-
-    /* Belt edges */
-    ctx.strokeStyle = 'rgba(0,200,150,0.25)';
-    ctx.lineWidth = 2;
+    /* Tape edge borders (left + right rails) */
+    ctx.strokeStyle = 'rgba(0,200,150,0.35)';
+    ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.moveTo(2, 0);
-    ctx.lineTo(2, h);
-    ctx.moveTo(w - 2, 0);
-    ctx.lineTo(w - 2, h);
+    ctx.moveTo(tx, tapeTop); ctx.lineTo(tx, tapeBot);
+    ctx.moveTo(tx + tw, tapeTop); ctx.lineTo(tx + tw, tapeBot);
     ctx.stroke();
 
-    /* Belt horizontal texture lines */
-    ctx.strokeStyle = 'rgba(0,200,150,0.04)';
+    /* Faint inner tape lines */
+    ctx.strokeStyle = 'rgba(0,200,150,0.08)';
     ctx.lineWidth = 0.5;
-    for (let by = 0; by < h; by += 40) {
-      const beltY = (by + scrollY * 50) % (h + 40) - 20;
+    ctx.beginPath();
+    ctx.moveTo(tx + 2, tapeTop); ctx.lineTo(tx + 2, tapeBot);
+    ctx.moveTo(tx + tw - 2, tapeTop); ctx.lineTo(tx + tw - 2, tapeBot);
+    ctx.stroke();
+
+    /* DNA characters on the tape */
+    const cols = Math.max(1, Math.floor((tw - 8) / 11));
+    const numRows = Math.ceil(tapeH / charH) + 2;
+    ctx.font = '10px monospace';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    for (let r = -1; r < numRows; r++) {
+      const y = tapeTop + r * charH - (scrollY % charH);
+      if (y < tapeTop - charH || y > tapeBot + charH) continue;
+
+      const fadeMargin = 24;
+      let rowAlpha = 1;
+      const distTop = y - tapeTop;
+      const distBot = tapeBot - y;
+      if (distTop < fadeMargin) rowAlpha = Math.max(0, distTop / fadeMargin);
+      if (distBot < fadeMargin) rowAlpha = Math.min(rowAlpha, Math.max(0, distBot / fadeMargin));
+
+      const hue = 180 + Math.sin(r * 1.3 + scrollY * 0.05) * 20;
+
+      for (let c = 0; c < cols; c++) {
+        const x = tx + 6 + c * 11 + Math.round(11 / 2);
+        const ch = chars[((r * 11) + (c * 7)) % chars.length];
+        const flicker = 0.6 + Math.random() * 0.4;
+        ctx.fillStyle = `hsla(${hue}, 80%, ${45 + flicker * 25}%, ${rowAlpha * flicker * 0.9})`;
+        ctx.fillText(ch, x, y + charH / 2);
+      }
+    }
+
+    /* Fade gradients at tape top/bottom (blend into rollers) */
+    const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + fadeMargin);
+    gradTop.addColorStop(0, '#080808');
+    gradTop.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradTop;
+    ctx.fillRect(tx, tapeTop, tw, fadeMargin);
+
+    const gradBot = ctx.createLinearGradient(0, tapeBot, 0, tapeBot - fadeMargin);
+    gradBot.addColorStop(0, '#080808');
+    gradBot.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradBot;
+    ctx.fillRect(tx, tapeBot - fadeMargin, tw, fadeMargin);
+
+    /* ---- Top roller ---- */
+    const cxa = Math.round(tx + tw / 2);
+    /* Outer ring */
+    ctx.shadowColor = 'rgba(0,200,150,0.2)';
+    ctx.shadowBlur = 8;
+    ctx.strokeStyle = 'rgba(0,200,150,0.55)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cxa, rollerY, rollerR, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    /* Inner ring */
+    ctx.strokeStyle = 'rgba(0,200,150,0.15)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cxa, rollerY, rollerR * 0.6, 0, Math.PI * 2);
+    ctx.stroke();
+
+    /* Spokes */
+    ctx.strokeStyle = 'rgba(0,200,150,0.2)';
+    ctx.lineWidth = 0.8;
+    for (let i = 0; i < 6; i++) {
+      const a = rollerAngle + i * Math.PI / 3;
       ctx.beginPath();
-      ctx.moveTo(5, beltY);
-      ctx.lineTo(w - 5, beltY);
+      ctx.moveTo(cxa + Math.cos(a) * rollerR * 0.6, rollerY + Math.sin(a) * rollerR * 0.6);
+      ctx.lineTo(cxa + Math.cos(a) * rollerR, rollerY + Math.sin(a) * rollerR);
       ctx.stroke();
     }
 
+    /* Hub */
+    ctx.fillStyle = 'rgba(0,200,150,0.4)';
+    ctx.beginPath();
+    ctx.arc(cxa, rollerY, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    /* ---- Bottom roller ---- */
+    const by = h - rollerY;
+    ctx.shadowColor = 'rgba(0,200,150,0.2)';
+    ctx.shadowBlur = 8;
+    ctx.strokeStyle = 'rgba(0,200,150,0.55)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(cxa, by, rollerR, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    ctx.strokeStyle = 'rgba(0,200,150,0.15)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cxa, by, rollerR * 0.6, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.strokeStyle = 'rgba(0,200,150,0.2)';
+    ctx.lineWidth = 0.8;
+    for (let i = 0; i < 6; i++) {
+      const a = rollerAngle + i * Math.PI / 3;
+      ctx.beginPath();
+      ctx.moveTo(cxa + Math.cos(a) * rollerR * 0.6, by + Math.sin(a) * rollerR * 0.6);
+      ctx.lineTo(cxa + Math.cos(a) * rollerR, by + Math.sin(a) * rollerR);
+      ctx.stroke();
+    }
+
+    ctx.fillStyle = 'rgba(0,200,150,0.4)';
+    ctx.beginPath();
+    ctx.arc(cxa, by, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    /* Side gradient overlays (blend edges into dark) */
     const gradLeft = ctx.createLinearGradient(0, 0, 20, 0);
     gradLeft.addColorStop(0, '#080808');
     gradLeft.addColorStop(1, 'transparent');
@@ -848,27 +932,12 @@ function initDnaScanner() {
     gradRight.addColorStop(1, 'transparent');
     ctx.fillStyle = gradRight;
     ctx.fillRect(w - 20, 0, 20, h);
-
-    const gradTop = ctx.createLinearGradient(0, 0, 0, fadePixels);
-    gradTop.addColorStop(0, '#080808');
-    gradTop.addColorStop(1, 'transparent');
-    ctx.fillStyle = gradTop;
-    ctx.fillRect(0, 0, w, fadePixels);
-
-    const gradBot = ctx.createLinearGradient(0, h, 0, h - fadePixels);
-    gradBot.addColorStop(0, '#080808');
-    gradBot.addColorStop(1, 'transparent');
-    ctx.fillStyle = gradBot;
-    ctx.fillRect(0, h - fadePixels, w, fadePixels);
   }
-
-  function drawFrame() { draw(); }
 
   function animate() {
     draw();
     requestAnimationFrame(animate);
   }
-
   animate();
 }
 
@@ -977,8 +1046,10 @@ function initDataStream() {
         freezeTimer = 80 + Math.floor(Math.random() * 60);
         freezeLetters = {};
 
-        /* Spell word left-to-right across consecutive columns */
-        const startCol = Math.floor(Math.random() * Math.max(1, columns.length - word.length));
+        /* Spell word left-to-right across consecutive columns, offset from edges */
+        const zonePad = 4;
+        const maxStart = Math.max(zonePad, columns.length - word.length - zonePad);
+        const startCol = zonePad + Math.floor(Math.random() * Math.max(1, maxStart - zonePad + 1));
         for (let li = 0; li < word.length; li++) {
           freezeLetters[startCol + li] = word[li];
         }
