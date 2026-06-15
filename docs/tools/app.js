@@ -24,10 +24,7 @@ function schoolCodeEncrypt(text) {
   return substitute(text, KEY, ALPHA);
 }
 
-/* ── TRANSLATION (Bergamot WASM) ───────────────────────────
- *   window.translateText(text, from, to) is loaded by
- *   translator/bergamot.js as a module script.
- */
+/* ── TRANSLATION ────────────────────────────────────────── */
 
 /* ── TOOL: SCHL_CODE ───────────────────────────────────── */
 function runSchlCode() {
@@ -61,8 +58,7 @@ function toggleSchlMode() {
 }
 
 /* ── TOOL: SCHL_FR_EN ──────────────────────────────────── */
-var schlFrEnReqId = 0;
-async function runSchlFrEn() {
+function runSchlFrEn() {
   var input = document.getElementById('schlFrEnInput');
   var decEl = document.getElementById('schlFrEnDecrypted');
   var trEl = document.getElementById('schlFrEnTranslated');
@@ -71,74 +67,34 @@ async function runSchlFrEn() {
   var text = input.value;
   if (!text) { decEl.textContent = '(no input)'; trEl.textContent = '(awaiting translation)'; return; }
 
-  var reqId = ++schlFrEnReqId;
   var decrypted = schoolCodeDecrypt(text);
 
   decEl.className = 'tool-output';
   decEl.textContent = decrypted;
 
-  trEl.className = 'tool-output is-loading';
-  trEl.textContent = 'Initializing translator (downloading models ~26 MB on first use)...';
-  if (window._showDownloadProgress) window._showDownloadProgress();
-
-  try {
-    var result = await window.translateText(decrypted, 'fr', 'en');
-    if (reqId !== schlFrEnReqId) return;
-    trEl.className = 'tool-output';
-    trEl.textContent = result;
-    if (window._hideDownloadProgress) window._hideDownloadProgress();
-  } catch (e) {
-    if (reqId !== schlFrEnReqId) return;
-    trEl.className = 'tool-output is-error';
-    trEl.textContent = 'Translation error: ' + e.message;
-    if (window._hideDownloadProgress) window._hideDownloadProgress();
-  }
+  trEl.className = 'tool-output';
+  trEl.textContent = 'Opened in Google Translate \u2192';
   updateCharCount('schlFrEnCount', text.length);
+
+  var gtUrl = 'https://translate.google.com/?sl=fr&tl=en&text=' + encodeURIComponent(decrypted);
+  window.open(gtUrl, '_blank');
 }
 
 /* ── TOOL: FR_EN (reverse) ─────────────────────────────── */
-var frEnReqId = 0;
-async function runFrEn() {
+function runFrEn() {
   var input = document.getElementById('frEnInput');
   var output = document.getElementById('frEnOutput');
-  var direction = document.getElementById('frEnDirection');
-  if (!input || !output || !direction) return;
+  if (!input || !output) return;
 
   var text = input.value;
   if (!text) { output.textContent = '(no input)'; return; }
 
-  var reqId = ++frEnReqId;
-  var from = direction.textContent === 'EN\u2192FR' ? 'en' : 'fr';
-  var to = direction.textContent === 'EN\u2192FR' ? 'fr' : 'en';
-
-  output.className = 'tool-output is-loading';
-  output.textContent = 'Initializing translator (downloading models ~26 MB on first use)...';
-  if (window._showDownloadProgress) window._showDownloadProgress();
-
-  try {
-    var result = await window.translateText(text, from, to);
-    if (reqId !== frEnReqId) return;
-    output.className = 'tool-output';
-    output.textContent = result;
-    if (window._hideDownloadProgress) window._hideDownloadProgress();
-  } catch (e) {
-    if (reqId !== frEnReqId) return;
-    output.className = 'tool-output is-error';
-    output.textContent = 'Translation error: ' + e.message;
-    if (window._hideDownloadProgress) window._hideDownloadProgress();
-  }
+  output.className = 'tool-output';
+  output.textContent = 'Opened in Google Translate \u2192';
   updateCharCount('frEnCount', text.length);
-}
 
-function toggleFrEnDirection() {
-  var btn = document.getElementById('frEnDirection');
-  if (!btn) return;
-  if (btn.textContent === 'EN\u2192FR') {
-    btn.textContent = 'FR\u2192EN';
-  } else {
-    btn.textContent = 'EN\u2192FR';
-  }
-  runFrEn();
+  var gtUrl = 'https://translate.google.com/?sl=auto&tl=en&text=' + encodeURIComponent(text);
+  window.open(gtUrl, '_blank');
 }
 
 /* ── TOOL: TS_CONV (Timestamp Converter) ──────────────── */
@@ -867,8 +823,6 @@ function setOperator() {
 /* ── AUTO-RUN ON TAB ENTER ─────────────────────────────── */
 function setupEnterTriggers() {
   document.getElementById('schlCodeInput').addEventListener('input', runSchlCode);
-  document.getElementById('schlFrEnInput').addEventListener('input', debounce(runSchlFrEn, 400));
-  document.getElementById('frEnInput').addEventListener('input', debounce(runFrEn, 400));
 
   var ddi = document.getElementById('tsConvDateInput');
   var dti = document.getElementById('tsConvTimeInput');
@@ -876,16 +830,6 @@ function setupEnterTriggers() {
   if (ddi) ddi.addEventListener('input', runTsConvDate);
   if (dti) dti.addEventListener('input', runTsConvDate);
   if (eei) eei.addEventListener('input', runTsConvEpoch);
-}
-
-function debounce(fn, ms) {
-  var timer;
-  return function() {
-    var args = arguments;
-    var ctx = this;
-    clearTimeout(timer);
-    timer = setTimeout(function() { fn.apply(ctx, args); }, ms);
-  };
 }
 
 /* ── VK-STYLE QUERY BAR ────────────────────────────────── */
