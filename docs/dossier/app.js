@@ -398,49 +398,42 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
+  const COLS = 6;
   const GAP = 4;
-  const COLS = 8;
+  /* Pre-allocate more cells than needed (max 30 rows × 6 cols) */
+  const MAX_ROWS = 30;
   let cells = [];
   let targets = [];
+  for (let i = 0; i < COLS * MAX_ROWS; i++) {
+    cells.push(Math.random());
+    targets.push(Math.random() < 0.3 ? 1 : 0);
+  }
 
   function resize() {
     const dpr = window.devicePixelRatio || 1;
-    /* Set buffer size from CSS display size — no feedback loop since
-       we read clientWidth/clientHeight which is controlled by CSS flex,
-       not the other way around. */
     canvas.width = canvas.clientWidth * dpr;
     canvas.height = canvas.clientHeight * dpr;
   }
 
   function draw() {
+    const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const rect = container.getBoundingClientRect();
     const textEl = document.getElementById('neuralTextTop');
     const textH = textEl ? textEl.offsetHeight + 30 : 40;
+    const rect = container.getBoundingClientRect();
     const cw = rect.width;
     const ch = Math.max(100, rect.height - textH - 10);
 
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
 
-    /* Ensure cells array covers at least COLS * 20 slots */
-    while (cells.length < COLS * 20) {
-      cells.push(Math.random());
-      targets.push(Math.random() < 0.3 ? 1 : 0);
-    }
-
-    /* Compute rows so each cell is wider than tall.
-       cellW = (cw - GAP*(COLS+1)) / COLS
-       cellH = cellW / 1.6  (target: 1.6x wider than tall)
-       rows  = (ch + GAP) / (cellH + GAP) */
+    /* cellW = grid width / cols. cellH = cellW * 0.55 → always 55% as tall = always landscape.
+       Then compute how many rows fit in available height. */
     const cellW = (cw - GAP * (COLS + 1)) / COLS;
-    const cellH_target = cellW / 1.6;
-    const rows = Math.max(2, Math.floor((ch + GAP) / (cellH_target + GAP)));
-
-    /* Actual cellH after distributing across rows (may differ slightly) */
-    const cellH = (ch - GAP * (rows + 1)) / rows;
+    const cellH = cellW * 0.55;
+    const rows = Math.min(MAX_ROWS, Math.max(2, Math.floor((ch + GAP) / (cellH + GAP))));
 
     let lit = 0;
     for (let r = 0; r < rows; r++) {
@@ -481,91 +474,12 @@ function initNeuralGrid() {
 
   function animate() {
     update();
-    resize();
     draw();
     requestAnimationFrame(animate);
   }
 
   window.addEventListener('resize', resize);
   resize();
-  animate();
-}
-
-  function init() {
-    cells = [];
-    targets = [];
-    for (let i = 0; i < COLS * 20; i++) {
-      cells.push(Math.random());
-      targets.push(Math.random() < 0.3 ? 1 : 0);
-    }
-  }
-
-  function draw() {
-    resizeCanvas(canvas, container);
-    const ctx = canvas.getContext('2d');
-    const dpr = window.devicePixelRatio || 1;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    const textEl = document.getElementById('neuralTextTop');
-    const textH = textEl ? textEl.offsetHeight + 30 : 40;
-    const rect = container.getBoundingClientRect();
-    const cw = rect.width;
-    const ch = Math.max(100, rect.height - textH - 10);
-    const usedRows = calcRows(cw, ch);
-
-    ctx.fillStyle = '#080808';
-    ctx.fillRect(0, 0, cw, ch);
-
-    const cellW = (cw - GAP * (COLS + 1)) / COLS;
-    const cellH = (ch - GAP * (usedRows + 1)) / usedRows;
-    const offX = GAP + (cellW - cellW) / 2;
-    const offY = GAP + (cellH - cellH) / 2;
-
-    let lit = 0;
-    const total = COLS * usedRows;
-    for (let r = 0; r < usedRows; r++) {
-      for (let c = 0; c < COLS; c++) {
-        const idx = r * COLS + c;
-        if (idx >= cells.length) break;
-        cells[idx] += (targets[idx] - cells[idx]) * 0.05;
-        const val = cells[idx];
-        const x = GAP + c * (cellW + GAP);
-        const y = GAP + r * (cellH + GAP);
-
-        if (val > 0.05) {
-          const bright = Math.min(1, val * 1.5);
-          ctx.fillStyle = `rgba(0, ${Math.floor(170 * bright)}, ${Math.floor(255 * bright)}, ${bright * 0.8})`;
-          ctx.fillRect(x, y, cellW, cellH);
-          lit++;
-        } else {
-          ctx.fillStyle = 'rgba(255,255,255,0.03)';
-          ctx.fillRect(x, y, cellW, cellH);
-        }
-      }
-    }
-
-    if (densityEl) {
-      densityEl.textContent = ((lit / total) * 100).toFixed(1);
-    }
-  }
-
-  function update() {
-    if (Math.random() < 0.1) {
-      for (let i = 0; i < targets.length; i++) {
-        if (Math.random() < 0.3) {
-          targets[i] = Math.random() < 0.5 ? 0 : 0.5 + Math.random() * 0.5;
-        }
-      }
-    }
-  }
-
-  function animate() {
-    update();
-    draw();
-    requestAnimationFrame(animate);
-  }
-
-  init();
   animate();
 }
 
