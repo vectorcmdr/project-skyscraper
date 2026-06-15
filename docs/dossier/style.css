@@ -245,6 +245,7 @@ body {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
   transition: clip-path 0.4s ease;
   overflow: hidden;
+  position: relative;
 }
 .fold-box.folded {
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, calc(100% - 20px) 0%, 0% 0%);
@@ -254,6 +255,7 @@ body {
   font-size: 0.65rem;
   line-height: 1.8;
   color: #888;
+  position: relative;
 }
 .fold-content p { margin: 0; }
 .fold-content p:first-child { color: #d00; }
@@ -284,9 +286,9 @@ body {
   background: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 4px,
-    rgba(255,255,255,0.03) 4px,
-    rgba(255,255,255,0.03) 8px
+    transparent 8px,
+    rgba(255,255,255,0.04) 8px,
+    rgba(255,255,255,0.04) 16px
   );
   pointer-events: none;
 }
@@ -333,7 +335,12 @@ body {
 .warn-surveil .warn-label { color: #00cc88; }
 
 .warn-globe      { background: #000a1a; border-color: #004488; }
-.warn-globe .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(0,100,255,0.05) 4px, rgba(0,100,255,0.05) 8px); }
+.warn-danger .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,0,0,0.08) 8px, rgba(255,0,0,0.08) 16px); }
+.warn-caution .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,170,0,0.08) 8px, rgba(255,170,0,0.08) 16px); }
+.warn-intrusion .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(170,68,255,0.08) 8px, rgba(170,68,255,0.08) 16px); }
+.warn-surveil .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,204,136,0.08) 8px, rgba(0,204,136,0.08) 16px); }
+.warn-globe .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,100,255,0.08) 8px, rgba(0,100,255,0.08) 16px); }
+.warn-biohazard .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,68,136,0.08) 8px, rgba(255,68,136,0.08) 16px); }
 
 .warn-biohazard  { background: #1a0010; border-color: #880044; }
 .warn-biohazard .warn-kanji { color: #ff4488; }
@@ -378,7 +385,6 @@ body {
   height: 100%;
   border: 1px solid #333;
   background: #0a0a0a;
-  transition: transform 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;

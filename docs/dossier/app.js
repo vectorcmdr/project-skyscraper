@@ -43,42 +43,39 @@ function initCyberbrain() {
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
   controls.dampingFactor = 0.05;
-  controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.8;
+  controls.autoRotate = false;
   controls.minDistance = 2.5;
   controls.maxDistance = 10;
 
-  /* ---- Lights ---- */
-  const ambient = new THREE.AmbientLight(0x222244, 0.6);
+  /* ---- Lights (green-tinted) ---- */
+  const ambient = new THREE.AmbientLight(0x002211, 0.6);
   scene.add(ambient);
-  const light1 = new THREE.DirectionalLight(0x4488ff, 1.5);
+  const light1 = new THREE.DirectionalLight(0x44ff88, 1.5);
   light1.position.set(3, 4, 2);
   scene.add(light1);
-  const light2 = new THREE.DirectionalLight(0xff4488, 0.5);
+  const light2 = new THREE.DirectionalLight(0x004422, 0.5);
   light2.position.set(-3, -2, 1);
   scene.add(light2);
 
-  /* ---- Sphere with scanline shader ---- */
+  /* ---- Sphere with diagonal scanline reveal shader ---- */
   const sphereGeo = new THREE.SphereGeometry(2.0, 64, 48);
   const sphereMat = new THREE.ShaderMaterial({
     uniforms: {
       uTime: { value: 0 },
-      uColor1: { value: new THREE.Color(0x0088ff) },
-      uColor2: { value: new THREE.Color(0x0044aa) },
-      uScanColor: { value: new THREE.Color(0x00ccff) },
+      uColor1: { value: new THREE.Color(0x00ff66) },
+      uColor2: { value: new THREE.Color(0x004422) },
+      uScanColor: { value: new THREE.Color(0x88ffaa) },
     },
     transparent: true,
-    opacity: 0.4,
+    opacity: 0.5,
     side: THREE.DoubleSide,
     depthWrite: false,
     vertexShader: `
       varying vec2 vUv;
       varying vec3 vNormal;
-      varying vec3 vPosition;
       void main() {
         vUv = uv;
         vNormal = normalize(normalMatrix * normal);
-        vPosition = (modelViewMatrix * vec4(position, 1.0)).xyz;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
     `,
@@ -91,22 +88,26 @@ function initCyberbrain() {
       varying vec3 vNormal;
 
       void main() {
-        float scanY = mod(vUv.y * 40.0 + uTime * 0.5, 1.0);
-        float scanline = smoothstep(0.96, 1.0, scanY);
+        float diag = (vUv.x + vUv.y) * 0.5;
+        float scanPos = fract(uTime * 0.12);
+        float width = 0.08;
 
-        float gridX = step(0.5, fract(vUv.x * 24.0));
-        float gridY = step(0.5, fract(vUv.y * 16.0));
-        float grid = max(gridX, gridY) * 0.15;
+        float scan = smoothstep(scanPos - width, scanPos, diag)
+                   - smoothstep(scanPos, scanPos + width, diag);
+
+        float reveal = smoothstep(0.0, 1.0, (diag - scanPos + 0.3) / 0.3);
+        reveal = clamp(reveal, 0.0, 1.0);
+
+        float gap = 1.0 - scan * 0.7;
 
         float rim = 1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
-        rim = pow(rim, 2.0) * 0.6;
+        rim = pow(rim, 2.0) * 0.5;
 
         vec3 color = mix(uColor1, uColor2, vUv.y);
-        color += grid;
-        color = mix(color, uScanColor, scanline * 0.8);
-        color += rim * vec3(0.3, 0.6, 1.0);
+        color = mix(color, uScanColor, scan * 0.9);
+        color += rim * vec3(0.2, 0.8, 0.3);
 
-        float alpha = 0.25 + rim * 0.5 + scanline * 0.3;
+        float alpha = (0.1 + rim * 0.4) * reveal * gap + scan * 0.5;
         gl_FragColor = vec4(color, alpha);
       }
     `,
@@ -114,119 +115,127 @@ function initCyberbrain() {
   const sphere = new THREE.Mesh(sphereGeo, sphereMat);
   scene.add(sphere);
 
-  /* ---- Wireframe overlay ---- */
-  const wireGeo = new THREE.SphereGeometry(2.01, 24, 18);
-  const wireMat = new THREE.MeshBasicMaterial({
-    wireframe: true,
-    color: 0x0066cc,
+  /* ---- Faint outline ring ---- */
+  const ringGeo = new THREE.TorusGeometry(2.0, 0.008, 16, 64);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: 0x00ff66,
     transparent: true,
-    opacity: 0.15,
+    opacity: 0.2,
   });
-  const wireSphere = new THREE.Mesh(wireGeo, wireMat);
-  scene.add(wireSphere);
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.rotation.x = Math.PI / 3;
+  scene.add(ring);
 
-  /* ---- Brain neural network (particles + connections) ---- */
+  /* ---- Brain particle system (improved shape) ---- */
   const brainGroup = new THREE.Group();
 
-  const brainPoints = [];
-  function randomInLobe(cx, cy, cz, rx, ry, rz) {
-    const theta = Math.random() * Math.PI * 2;
-    const phi = Math.acos(2 * Math.random() - 1);
-    const r = Math.cbrt(Math.random()) * 0.85 + 0.15;
-    return new THREE.Vector3(
-      cx + r * Math.sin(phi) * Math.cos(theta) * rx,
-      cy + r * Math.cos(phi) * ry,
-      cz + r * Math.sin(phi) * Math.sin(theta) * rz
-    );
-  }
-  for (let i = 0; i < 180; i++) {
-    brainPoints.push(randomInLobe(-0.5, 0.0, 0, 0.9, 0.7, 0.5));
-  }
-  for (let i = 0; i < 180; i++) {
-    brainPoints.push(randomInLobe(0.5, 0.0, 0, 0.9, 0.7, 0.5));
-  }
-  for (let i = 0; i < 40; i++) {
-    brainPoints.push(randomInLobe(0.0, -0.4, -0.3, 0.5, 0.3, 0.4));
+  function fillEllipsoid(cx, cy, cz, rx, ry, rz, count) {
+    const pts = [];
+    for (let i = 0; i < count; i++) {
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(2 * Math.random() - 1);
+      const r = Math.cbrt(Math.random()) * 0.85 + 0.15;
+      pts.push(new THREE.Vector3(
+        cx + r * Math.sin(phi) * Math.cos(theta) * rx,
+        cy + r * Math.cos(phi) * ry,
+        cz + r * Math.sin(phi) * Math.sin(theta) * rz
+      ));
+    }
+    return pts;
   }
 
-  /* Particle system */
-  const particlePositions = new Float32Array(brainPoints.length * 3);
-  const particleColors = new Float32Array(brainPoints.length * 3);
+  let brainPoints = [];
+  /* Left hemisphere */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.1, 0, 0.75, 0.55, 0.45, 180));
+  /* Right hemisphere */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.1, 0, 0.75, 0.55, 0.45, 180));
+  /* Frontal poles */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, 0.05, 0.8, 0.4, 0.35, 0.25, 60));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.3, 0.05, 0.8, 0.4, 0.35, 0.25, 60));
+  /* Temporal lobes */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.9, -0.1, 0.15, 0.2, 0.25, 0.35, 50));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.9, -0.1, 0.15, 0.2, 0.25, 0.35, 50));
+  /* Cerebellum */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.45, -0.45, 0.35, 0.2, 0.25, 50));
+  /* Brainstem */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.85, -0.1, 0.12, 0.2, 0.12, 20));
+
+  const particlePos = new Float32Array(brainPoints.length * 3);
+  const particleCol = new Float32Array(brainPoints.length * 3);
   for (let i = 0; i < brainPoints.length; i++) {
-    particlePositions[i*3] = brainPoints[i].x;
-    particlePositions[i*3+1] = brainPoints[i].y;
-    particlePositions[i*3+2] = brainPoints[i].z;
-    const brightness = 0.4 + Math.random() * 0.6;
-    particleColors[i*3] = 0.2 + Math.random() * 0.3;
-    particleColors[i*3+1] = 0.4 + brightness * 0.5;
-    particleColors[i*3+2] = 0.8 + brightness * 0.2;
+    particlePos[i*3] = brainPoints[i].x;
+    particlePos[i*3+1] = brainPoints[i].y;
+    particlePos[i*3+2] = brainPoints[i].z;
+    const b = 0.3 + Math.random() * 0.7;
+    particleCol[i*3] = 0.1 + Math.random() * 0.2;
+    particleCol[i*3+1] = 0.3 + b * 0.6;
+    particleCol[i*3+2] = 0.1 + Math.random() * 0.15;
   }
 
-  const particleGeo = new THREE.BufferGeometry();
-  particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-  particleGeo.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(particlePos, 3));
+  pGeo.setAttribute('color', new THREE.BufferAttribute(particleCol, 3));
 
-  const particleMat = new THREE.PointsMaterial({
-    size: 0.06,
+  const pMat = new THREE.PointsMaterial({
+    size: 0.055,
     vertexColors: true,
     transparent: true,
     opacity: 0.9,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
   });
-  const particles = new THREE.Points(particleGeo, particleMat);
+  const particles = new THREE.Points(pGeo, pMat);
   brainGroup.add(particles);
 
-  /* Connections between nearby particles */
-  const connectionPositions = [];
+  /* Connections */
+  const connPos = [];
   for (let i = 0; i < brainPoints.length; i++) {
     for (let j = i + 1; j < brainPoints.length; j++) {
-      const dist = brainPoints[i].distanceTo(brainPoints[j]);
-      if (dist < 0.4 && Math.random() < 0.15) {
-        connectionPositions.push(brainPoints[i].x, brainPoints[i].y, brainPoints[i].z);
-        connectionPositions.push(brainPoints[j].x, brainPoints[j].y, brainPoints[j].z);
+      const d = brainPoints[i].distanceTo(brainPoints[j]);
+      if (d < 0.35 && Math.random() < 0.12) {
+        connPos.push(brainPoints[i].x, brainPoints[i].y, brainPoints[i].z);
+        connPos.push(brainPoints[j].x, brainPoints[j].y, brainPoints[j].z);
       }
     }
   }
-
-  const connGeo = new THREE.BufferGeometry();
-  connGeo.setAttribute('position', new THREE.Float32BufferAttribute(connectionPositions, 3));
-  const connMat = new THREE.LineBasicMaterial({
-    color: 0x0066ff,
+  const cGeo = new THREE.BufferGeometry();
+  cGeo.setAttribute('position', new THREE.Float32BufferAttribute(connPos, 3));
+  const cMat = new THREE.LineBasicMaterial({
+    color: 0x00cc66,
     transparent: true,
-    opacity: 0.15,
+    opacity: 0.12,
   });
-  const connections = new THREE.LineSegments(connGeo, connMat);
+  const connections = new THREE.LineSegments(cGeo, cMat);
   brainGroup.add(connections);
 
   /* Center glow */
-  const glowGeo = new THREE.SphereGeometry(0.08, 8, 8);
-  const glowMat = new THREE.MeshBasicMaterial({
-    color: 0x0088ff,
+  const glowGeo2 = new THREE.SphereGeometry(0.08, 8, 8);
+  const glowMat2 = new THREE.MeshBasicMaterial({
+    color: 0x00ff88,
     transparent: true,
     opacity: 0.6,
   });
-  const centerGlow = new THREE.Mesh(glowGeo, glowMat);
+  const centerGlow = new THREE.Mesh(glowGeo2, glowMat2);
   brainGroup.add(centerGlow);
 
   scene.add(brainGroup);
 
   /* ---- Stars background ---- */
   const starCount = 800;
-  const starGeo2 = new THREE.BufferGeometry();
-  const starPos = new Float32Array(starCount * 3);
+  const starGeo3 = new THREE.BufferGeometry();
+  const starPos2 = new Float32Array(starCount * 3);
   for (let i = 0; i < starCount * 3; i++) {
-    starPos[i] = (Math.random() - 0.5) * 40;
+    starPos2[i] = (Math.random() - 0.5) * 40;
   }
-  starGeo2.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-  const starMat2 = new THREE.PointsMaterial({
-    color: 0x4488ff,
+  starGeo3.setAttribute('position', new THREE.BufferAttribute(starPos2, 3));
+  const starMat3 = new THREE.PointsMaterial({
+    color: 0x226644,
     size: 0.02,
     transparent: true,
-    opacity: 0.4,
+    opacity: 0.3,
     blending: THREE.AdditiveBlending,
   });
-  const stars = new THREE.Points(starGeo2, starMat2);
+  const stars = new THREE.Points(starGeo3, starMat3);
   scene.add(stars);
 
   /* ---- Resize ---- */
@@ -245,10 +254,9 @@ function initCyberbrain() {
     const t = time * 0.001;
 
     sphereMat.uniforms.uTime.value = t;
-    sphere.rotation.y = t * 0.05;
-    wireSphere.rotation.y = t * 0.05;
-    brainGroup.rotation.y = t * 0.03;
-    brainGroup.rotation.x = Math.sin(t * 0.015) * 0.1;
+    sphere.rotation.y = t * 0.03;
+    ring.rotation.z = t * 0.02;
+    brainGroup.rotation.y = Math.sin(t * 0.02) * 0.05;
 
     controls.update();
     renderer.render(scene, camera);
@@ -267,12 +275,8 @@ function initWaveform() {
   let scroll = 0;
   let phase = 0;
 
-  function draw() {
-    dims = resizeCanvas(canvas, container);
-    drawFrame();
-  }
-
   function drawFrame() {
+    dims = resizeCanvas(canvas, container);
     const ctx = canvas.getContext('2d');
     const { w, h } = dims;
     const dpr = window.devicePixelRatio || 1;
@@ -281,13 +285,14 @@ function initWaveform() {
     ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, w, h);
 
-    const pad = 20;
+    const pad = 12;
     const gw = w - pad * 2;
     const gh = h - pad * 2;
     const cx = pad;
     const cy = pad;
+    const midY = cy + gh / 2;
 
-    /* Grid and notches */
+    /* Grid notches */
     ctx.strokeStyle = 'rgba(255,255,255,0.05)';
     ctx.lineWidth = 0.5;
     const notchSpacing = 30;
@@ -320,47 +325,48 @@ function initWaveform() {
       ctx.stroke();
     }
 
-    /* Waveforms */
-    function drawWave(offsetY, phaseOff, color, amplitude) {
+    /* Center (zero) line */
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([3, 5]);
+    ctx.beginPath();
+    ctx.moveTo(cx, midY);
+    ctx.lineTo(cx + gw, midY);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    /* Waveforms - clean sine, more vertical space */
+    const amplitude = gh * 0.35;
+
+    function drawWave(offset, phaseOff, color, ampScale) {
       ctx.strokeStyle = color;
       ctx.lineWidth = 1.5;
       ctx.shadowColor = color;
       ctx.shadowBlur = 6;
       ctx.beginPath();
+      const cycles = 3;
       for (let px = 0; px <= gw; px++) {
-        const t = (px / gw) * Math.PI * 4 + scroll;
-        const yVal = Math.sin(t + phaseOff) * amplitude * 0.5
-                   + Math.sin(t * 2.3 + phaseOff * 1.5) * amplitude * 0.3
-                   + Math.sin(t * 0.7 + phaseOff * 2) * amplitude * 0.2;
-        const py = cy + gh / 2 + offsetY + yVal;
+        const t = (px / gw) * Math.PI * 2 * cycles + scroll;
+        const yVal = Math.sin(t + phaseOff) * amplitude * ampScale;
+        const py = midY + offset + yVal;
         px === 0 ? ctx.moveTo(cx + px, py) : ctx.lineTo(cx + px, py);
       }
       ctx.stroke();
       ctx.shadowBlur = 0;
     }
 
-    drawWave(-8, phase, 'rgba(0,170,255,0.8)', 18);
-    drawWave(8, phase + 0.8, 'rgba(255,0,170,0.7)', 18);
-
-    /* Center line */
-    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
-    ctx.lineWidth = 0.5;
-    ctx.setLineDash([3, 5]);
-    ctx.beginPath();
-    ctx.moveTo(cx, cy + gh / 2);
-    ctx.lineTo(cx + gw, cy + gh / 2);
-    ctx.stroke();
-    ctx.setLineDash([]);
+    drawWave(-6, phase, 'rgba(0,170,255,0.85)', 0.95);
+    drawWave(6, phase + 0.6, 'rgba(255,0,170,0.75)', 0.95);
   }
 
   function animate() {
-    scroll += 0.03;
-    phase += 0.01;
+    scroll += 0.035;
+    phase += 0.012;
     drawFrame();
     requestAnimationFrame(animate);
   }
 
-  window.addEventListener('resize', draw);
+  window.addEventListener('resize', drawFrame);
   animate();
 }
 
@@ -371,7 +377,7 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
-  const cols = 16, rows = 10;
+  const cols = 10, rows = 16;
   let cells = [];
   let targets = [];
   let dims;
@@ -410,6 +416,8 @@ function initNeuralGrid() {
     const gap = 4;
     const cellW = (cw - gap * (cols + 1)) / cols;
     const cellH = (ch - gap * (rows + 1)) / rows;
+    const drawW = cellW * 0.6;
+    const drawH = cellH * 1.3;
 
     let lit = 0;
     for (let r = 0; r < rows; r++) {
@@ -417,17 +425,17 @@ function initNeuralGrid() {
         const idx = r * cols + c;
         cells[idx] += (targets[idx] - cells[idx]) * 0.05;
         const val = cells[idx];
-        const x = gap + c * (cellW + gap);
-        const y = gap + r * (cellH + gap);
+        const x = gap + c * (cellW + gap) + (cellW - drawW) / 2;
+        const y = gap + r * (cellH + gap) + (cellH - drawH) / 2;
 
         if (val > 0.05) {
           const bright = Math.min(1, val * 1.5);
           ctx.fillStyle = `rgba(0, ${Math.floor(170 * bright)}, ${Math.floor(255 * bright)}, ${bright * 0.8})`;
-          ctx.fillRect(x, y, cellW, cellH);
+          ctx.fillRect(x, y, drawW, drawH);
           lit++;
         } else {
           ctx.fillStyle = 'rgba(255,255,255,0.03)';
-          ctx.fillRect(x, y, cellW, cellH);
+          ctx.fillRect(x, y, drawW, drawH);
         }
       }
     }
@@ -470,6 +478,22 @@ function initFoldingPanel() {
     box.classList.toggle('folded', folded);
     bar.innerHTML = folded ? '&#9660; EXPAND' : '&#9650; COLLAPSE';
   });
+}
+
+/* ===== 4a. CORNER MARKER (drawn on fold-box cut corner) ===== */
+function initCornerMarker() {
+  const box = document.getElementById('foldBox');
+  if (!box) return;
+  const foldContent = box.querySelector('.fold-content');
+  if (!foldContent) return;
+
+  const marker = document.createElement('div');
+  marker.style.cssText = 'position:absolute;bottom:0;right:0;z-index:3;pointer-events:none;';
+  marker.innerHTML =
+    '<svg width="20" height="20" viewBox="0 0 20 20">' +
+      '<polyline points="0,20 20,20 20,0" fill="none" stroke="#d00" stroke-width="1" opacity="0.6"/>' +
+    '</svg>';
+  foldContent.appendChild(marker);
 }
 
 /* ===== 5. SPINNING GLOBE (inside warning blocks) ===== */
@@ -579,9 +603,16 @@ function initGaugeGrid() {
 
     ctx.strokeStyle = '#333';
     ctx.lineWidth = 1;
-    ctx.strokeRect(3, gaugeTop, gaugeW - 6, gaugeH);
+    ctx.beginPath();
+    ctx.moveTo(3, gaugeTop);
+    ctx.lineTo(3, gaugeBot);
+    ctx.moveTo(3, gaugeTop);
+    ctx.lineTo(gaugeW + 2, gaugeTop);
+    ctx.moveTo(3, gaugeBot);
+    ctx.lineTo(gaugeW + 2, gaugeBot);
+    ctx.stroke();
 
-    /* Gauge tick marks */
+    /* Gauge tick marks (from left edge inward) */
     for (let i = 0; i <= 10; i++) {
       const y = gaugeTop + (gaugeH * i) / 10;
       const tickLen = i % 5 === 0 ? 10 : 5;
@@ -674,67 +705,40 @@ function initShuffleDeck() {
 
   if (cards.length < 3) return;
 
-  const offsets = [
-    { x: -5, y: -4, rot: -3 },
-    { x: 0, y: 0, rot: 0 },
-    { x: 5, y: 4, rot: 3 },
-  ];
+  cards.forEach((card, i) => {
+    card.style.transform = 'translate(0, 0)';
+    card.style.zIndex = 3 - i;
+  });
 
-  function applyPositions() {
+  function cycle() {
+    const top = cards.shift();
+    cards.push(top);
     cards.forEach((card, i) => {
-      const o = offsets[i];
-      card.style.transform = `translate(${o.x}px, ${o.y}px) rotate(${o.rot}deg)`;
       card.style.zIndex = 3 - i;
     });
   }
 
-  function shuffle() {
-    for (let i = offsets.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [offsets[i], offsets[j]] = [offsets[j], offsets[i]];
-    }
-    applyPositions();
-  }
-
-  applyPositions();
-  setInterval(shuffle, 3000);
+  setInterval(cycle, 3000);
 }
 
-/* ===== 8. DNA TRICKLE ===== */
+/* ===== 8. DNA BELT SCROLL ===== */
 function initDnaScanner() {
   const canvas = document.getElementById('dnaCanvas');
   const container = document.getElementById('dnaContainer');
   if (!canvas || !container) return;
 
-  const bases = ['A', 'T', 'C', 'G', 'A', 'T', 'C', 'G', 'U'];
-  let particles = [];
+  const bases = ['A', 'T', 'C', 'G', 'U'];
+  const chars = 'ATCGUATCGU';
   let dims;
+  let scrollY = 0;
+  const rowH = 16;
+  const fadePixels = 30;
 
   function resize() {
     dims = resizeCanvas(canvas, container);
   }
   resize();
   window.addEventListener('resize', resize);
-
-  for (let i = 0; i < 30; i++) {
-    addColumn();
-  }
-
-  function addColumn() {
-    const side = Math.random() < 0.5 ? -1 : 1;
-    const midX = dims.w / 2;
-    const helixR = 20 + Math.random() * 25;
-    const startY = -20 - Math.random() * 100;
-    particles.push({
-      x: midX + side * helixR,
-      targetX: midX - side * helixR,
-      y: startY,
-      speed: 0.3 + Math.random() * 0.6,
-      base: bases[Math.floor(Math.random() * bases.length)],
-      alpha: 0.2 + Math.random() * 0.8,
-      phase: Math.random() * Math.PI * 2,
-    });
-  }
 
   function draw() {
     const ctx = canvas.getContext('2d');
@@ -745,85 +749,62 @@ function initDnaScanner() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, w, h);
 
-    const midX = w / 2;
+    const numRows = Math.ceil(h / rowH) + 2;
+    const cols = Math.floor(w / 10);
 
-    /* Notch border effect */
-    ctx.strokeStyle = 'rgba(0,100,200,0.15)';
-    ctx.lineWidth = 1;
-    const notch = 20;
-    ctx.beginPath();
-    ctx.moveTo(notch, 0);
-    ctx.lineTo(w - notch, 0);
-    ctx.lineTo(w, notch);
-    ctx.lineTo(w, h - notch);
-    ctx.lineTo(w - notch, h);
-    ctx.lineTo(notch, h);
-    ctx.lineTo(0, h - notch);
-    ctx.lineTo(0, notch);
-    ctx.closePath();
-    ctx.stroke();
+    scrollY += 0.6;
 
-    /* Double helix guide lines */
-    ctx.strokeStyle = 'rgba(0,50,100,0.08)';
-    ctx.lineWidth = 0.5;
-    ctx.beginPath();
-    const guideCount = 120;
-    for (let i = 0; i <= guideCount; i++) {
-      const t = i / guideCount * Math.PI * 4;
-      const y = i / guideCount * h;
-      const x1 = midX + Math.sin(t) * 30;
-      const x2 = midX + Math.sin(t + Math.PI) * 30;
-      if (i === 0) {
-        ctx.moveTo(x1, y);
-        ctx.lineTo(x2, y);
-      } else {
-        ctx.lineTo(x1, y);
-        ctx.moveTo(x2, y);
-        ctx.lineTo(x1, y);
-      }
-    }
-    ctx.stroke();
+    for (let r = -1; r < numRows; r++) {
+      const y = r * rowH - (scrollY % rowH);
+      const rowAlpha = Math.min(1, Math.min(y + fadePixels, h - y + fadePixels) / fadePixels);
+      if (rowAlpha <= 0.01) continue;
 
-    /* Background trickle chars */
-    ctx.font = '8px monospace';
-    ctx.textAlign = 'center';
-    for (let y = 0; y < h; y += 6) {
-      const x = midX + Math.sin(y * 0.1 + Date.now() * 0.0005) * 28;
-      ctx.fillStyle = `rgba(0,50,80,0.08)`;
-      ctx.fillText(bases[Math.floor(Math.random() * bases.length)], x, y);
-    }
-
-    /* Falling particles */
-    particles.forEach(p => {
-      p.y += p.speed;
-      p.x += (p.targetX - p.x) * 0.01;
-      if (p.y > h + 10) {
-        p.y = -10;
-        p.base = bases[Math.floor(Math.random() * bases.length)];
-        const side = Math.random() < 0.5 ? -1 : 1;
-        p.x = midX + side * (15 + Math.random() * 35);
-        p.targetX = midX - side * (15 + Math.random() * 35);
-      }
-
-      const glow = Math.sin(p.y * 0.05 + p.phase) * 0.3 + 0.7;
-      ctx.fillStyle = `rgba(0, ${Math.floor(180 + glow * 75)}, ${Math.floor(200 + glow * 55)}, ${p.alpha * glow})`;
-      ctx.font = `${9 + glow * 3}px monospace`;
+      const hue = 180 + Math.sin(r * 1.3 + scrollY * 0.02) * 20;
+      ctx.font = '11px monospace';
       ctx.textAlign = 'center';
-      ctx.fillText(p.base, p.x, p.y);
 
-      /* Connecting line to partner position */
-      const partnerX = midX + (midX - p.x);
-      ctx.strokeStyle = `rgba(0,100,200,${p.alpha * glow * 0.15})`;
+      for (let c = 0; c < cols; c++) {
+        const x = c * 10 + 5;
+        const ch = chars[Math.floor(Math.random() * chars.length)];
+        const flicker = 0.4 + Math.random() * 0.6;
+        ctx.fillStyle = `hsla(${hue}, 80%, ${40 + flicker * 30}%, ${rowAlpha * flicker * 0.7})`;
+        ctx.fillText(ch, x, y + 12);
+      }
+
+      /* Row separator line */
+      ctx.strokeStyle = `rgba(0,200,150,${rowAlpha * 0.04})`;
       ctx.lineWidth = 0.5;
       ctx.beginPath();
-      ctx.moveTo(p.x, p.y);
-      ctx.lineTo(partnerX, p.y + 2);
+      ctx.moveTo(0, y + rowH);
+      ctx.lineTo(w, y + rowH);
       ctx.stroke();
-    });
-
-    if (particles.length < 60 && Math.random() < 0.1) {
-      addColumn();
     }
+
+    /* Side overlays */
+    const gradLeft = ctx.createLinearGradient(0, 0, 20, 0);
+    gradLeft.addColorStop(0, '#080808');
+    gradLeft.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradLeft;
+    ctx.fillRect(0, 0, 20, h);
+
+    const gradRight = ctx.createLinearGradient(w, 0, w - 20, 0);
+    gradRight.addColorStop(0, '#080808');
+    gradRight.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradRight;
+    ctx.fillRect(w - 20, 0, 20, h);
+
+    /* Top/bottom fade */
+    const gradTop = ctx.createLinearGradient(0, 0, 0, fadePixels);
+    gradTop.addColorStop(0, '#080808');
+    gradTop.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradTop;
+    ctx.fillRect(0, 0, w, fadePixels);
+
+    const gradBot = ctx.createLinearGradient(0, h, 0, h - fadePixels);
+    gradBot.addColorStop(0, '#080808');
+    gradBot.addColorStop(1, 'transparent');
+    ctx.fillStyle = gradBot;
+    ctx.fillRect(0, h - fadePixels, w, fadePixels);
   }
 
   function animate() {
@@ -841,16 +822,16 @@ function initDataStream() {
   if (!canvas || !container) return;
 
   const chars = '0123456789ABCDEF';
-  const words = ['ACCESS', 'DENIED', 'CLASSIFIED', 'TRACE', 'SIGNAL', 'BREACH',
-    'GHOST', 'SYSTEM', 'ALERT', 'SCAN', 'CIPHER', 'DECRYPT', 'WARNING', 'TARGET'];
+  const words = ['CONNECTION', 'DETECTED', 'ACCESS', 'DENIED', 'BREACH',
+    'GHOST', 'SYSTEM', 'ALERT', 'TRACE', 'CIPHER', 'WARNING', 'TARGET'];
   let columns = [];
   let dims;
-  let fontSize = 10;
+  let fontSize = 12;
   let colW;
 
   function resize() {
     dims = resizeCanvas(canvas, container);
-    fontSize = Math.max(8, Math.min(12, dims.w / 40));
+    fontSize = Math.max(10, Math.min(16, dims.w / 30));
     colW = fontSize * 1.2;
     const numCols = Math.floor(dims.w / colW);
     while (columns.length < numCols) {
@@ -875,14 +856,8 @@ function initDataStream() {
 
     const { w, h } = dims;
 
-    /* Fade trail */
-    ctx.fillStyle = 'rgba(8,8,8,0.08)';
+    ctx.fillStyle = 'rgba(8,0,0,0.08)';
     ctx.fillRect(0, 0, w, h);
-
-    /* Left decorative border */
-    ctx.strokeStyle = 'rgba(0,200,100,0.08)';
-    ctx.lineWidth = 1;
-    ctx.strokeRect(1, 1, w - 2, h - 2);
 
     ctx.font = `${fontSize}px monospace`;
     ctx.textAlign = 'center';
@@ -904,18 +879,17 @@ function initDataStream() {
 
       const x = ci * colW + colW / 2;
 
-      /* Trail */
       for (let i = 0; i < col.trail; i++) {
         const ty = col.y - i * fontSize;
         if (ty < -fontSize || ty > h + fontSize) continue;
         const alpha = 1 - (i / col.trail);
         const fade = alpha * alpha;
         if (i === 0) {
-          ctx.fillStyle = `rgba(200,255,200,${fade})`;
-          ctx.shadowColor = 'rgba(0,255,100,0.5)';
+          ctx.fillStyle = `rgba(255,200,200,${fade})`;
+          ctx.shadowColor = 'rgba(255,0,0,0.5)';
           ctx.shadowBlur = 6;
         } else {
-          ctx.fillStyle = `rgba(0,${Math.floor(180 * fade)},${Math.floor(100 * fade)},${fade * 0.6})`;
+          ctx.fillStyle = `rgba(255,${Math.floor(100 * fade)},${Math.floor(50 * fade)},${fade * 0.6})`;
           ctx.shadowBlur = 0;
         }
 
@@ -960,6 +934,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initWaveform();
   initNeuralGrid();
   initFoldingPanel();
+  initCornerMarker();
   initGlobe();
   initGaugeGrid();
   initShuffleDeck();
