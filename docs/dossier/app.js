@@ -139,46 +139,64 @@ function initCyberbrain() {
   ring.renderOrder = 0;
   scene.add(ring);
 
-  /* ---- Brain particle system (improved brain shape) ---- */
+  /* ---- Brain particle system (SDF-based brain shape) ---- */
   const brainGroup = new THREE.Group();
   brainGroup.renderOrder = 1;
 
-  function fillEllipsoid(cx, cy, cz, rx, ry, rz, count) {
-    const pts = [];
-    for (let i = 0; i < count; i++) {
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = Math.cbrt(Math.random()) * 0.85 + 0.15;
-      pts.push(new THREE.Vector3(
-        cx + r * Math.sin(phi) * Math.cos(theta) * rx,
-        cy + r * Math.cos(phi) * ry,
-        cz + r * Math.sin(phi) * Math.sin(theta) * rz
-      ));
-    }
-    return pts;
+  /* Volume test: is point inside the brain? */
+  function isInsideBrain(x, y, z) {
+    const ax = Math.abs(x);
+    const sx = x < 0 ? -1 : 1;
+
+    /* Longitudinal fissure — gap between hemispheres */
+    const fissureW = 0.04 + 0.04 * Math.max(0, 1 - Math.abs(z) / 1.0);
+    if (ax < fissureW && z < 0.6 && y > -0.2) return false;
+    if (ax < 0.02 && z < 0.4 && y > -0.3) return false;
+
+    /* Main cerebral hemispheres — elongated front-to-back, tapered at front */
+    const zNorm = z / 0.85;
+    const rx = (0.65 + 0.15 * Math.max(0, -zNorm));
+    const ry = 0.50;
+    const rz = 0.80;
+
+    const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
+    let inside = dCerebrum <= 1.0;
+
+    /* Temporal lobes — side protrusions at mid-lower height, forward */
+    const tCx = sx * 0.80, tCy = -0.12, tCz = 0.25;
+    const tRx = 0.22, tRy = 0.18, tRz = 0.30;
+    const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
+    if (dTemporal <= 1.0) inside = true;
+
+    /* Cerebellum — separated round structure at back-bottom */
+    const cbCx = 0, cbCy = -0.35, cbCz = -0.78;
+    const cbRx = 0.32, cbRy = 0.20, cbRz = 0.22;
+    const dCerebellum = ((x-cbCx)*(x-cbCx))/(cbRx*cbRx) + ((y-cbCy)*(y-cbCy))/(cbRy*cbRy) + ((z-cbCz)*(z-cbCz))/(cbRz*cbRz);
+    if (dCerebellum <= 1.0) inside = true;
+
+    /* Brainstem */
+    const bsCx = 0, bsCy = -0.73, bsCz = -0.28;
+    const bsRx = 0.10, bsRy = 0.28, bsRz = 0.10;
+    const dBrainstem = ((x-bsCx)*(x-bsCx))/(bsRx*bsRx) + ((y-bsCy)*(y-bsCy))/(bsRy*bsRy) + ((z-bsCz)*(z-bsCz))/(bsRz*bsRz);
+    if (dBrainstem <= 1.0) inside = true;
+
+    return inside;
   }
 
+  /* Rejection sampling within bounding box */
+  const BOUNDS = { x: [-1.2, 1.2], y: [-1.0, 0.8], z: [-1.0, 1.0] };
+  const maxPoints = 4000;
   let brainPoints = [];
-
-  /* Left hemisphere (wider at back, gap in middle) */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.65, 0.25, -0.2, 0.75, 0.65, 0.75, 500));
-  /* Right hemisphere */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.65, 0.25, -0.2, 0.75, 0.65, 0.75, 500));
-  /* Frontal: narrower forward */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.15, 0.95, 0.45, 0.4, 0.3, 200));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.15, 0.95, 0.45, 0.4, 0.3, 200));
-  /* Temporal lobes: stick out on sides */
-  brainPoints = brainPoints.concat(fillEllipsoid(-1.15, -0.1, 0.25, 0.22, 0.28, 0.4, 150));
-  brainPoints = brainPoints.concat(fillEllipsoid(1.15, -0.1, 0.25, 0.22, 0.28, 0.4, 150));
-  /* Cerebellum: round back-bottom */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.9, 0.45, 0.3, 0.35, 200));
-  /* Parietal: top area */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.5, 0.6, 0.2, 0.4, 0.25, 0.35, 100));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.5, 0.6, 0.2, 0.4, 0.25, 0.35, 100));
-  /* Brainstem */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.9, -0.3, 0.15, 0.35, 0.15, 80));
-  /* Corpus callosum bridge between hemispheres */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, 0.25, 0.0, 0.2, 0.15, 0.5, 80));
+  let attempts = 0;
+  while (brainPoints.length < maxPoints && attempts < maxPoints * 30) {
+    const px = BOUNDS.x[0] + Math.random() * (BOUNDS.x[1] - BOUNDS.x[0]);
+    const py = BOUNDS.y[0] + Math.random() * (BOUNDS.y[1] - BOUNDS.y[0]);
+    const pz = BOUNDS.z[0] + Math.random() * (BOUNDS.z[1] - BOUNDS.z[0]);
+    attempts++;
+    if (isInsideBrain(px, py, pz)) {
+      brainPoints.push(new THREE.Vector3(px, py, pz));
+    }
+  }
 
   const particlePos = new Float32Array(brainPoints.length * 3);
   const particleCol = new Float32Array(brainPoints.length * 3);
@@ -347,8 +365,8 @@ function initWaveform() {
     }
 
     /* Center (zero) line */
-    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
-    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+    ctx.lineWidth = 1;
     ctx.setLineDash([3, 5]);
     ctx.beginPath();
     ctx.moveTo(cx, midY);
@@ -420,11 +438,8 @@ function initNeuralGrid() {
     const dpr = window.devicePixelRatio || 1;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const textEl = document.getElementById('neuralTextTop');
-    const textH = textEl ? textEl.offsetHeight + 30 : 40;
-    const rect = container.getBoundingClientRect();
-    const cw = rect.width;
-    const ch = Math.max(100, rect.height - textH - 10);
+    const cw = canvas.clientWidth;
+    const ch = canvas.clientHeight;
 
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
@@ -709,8 +724,8 @@ function initShuffleDeck() {
 
   const positions = [
     { x: 0, y: 0 },
-    { x: 4, y: 3 },
-    { x: 8, y: 6 },
+    { x: -4, y: 3 },
+    { x: -8, y: 6 },
   ];
 
   const cardPos = [0, 1, 2];
@@ -756,7 +771,7 @@ function initDnaScanner() {
 
   function getChar(r, c) {
     const key = `${r},${c}`;
-    if (!charCache[key] || Math.random() < 0.02) {
+    if (!charCache[key] || Math.random() < 0.005) {
       charCache[key] = chars[Math.floor(Math.random() * chars.length)];
     }
     return charCache[key];
@@ -774,7 +789,7 @@ function initDnaScanner() {
     const numRows = Math.ceil(h / rowH) + 2;
     const cols = Math.floor(w / 10);
 
-    scrollY += 0.001;
+    scrollY += 0.00015;
 
     for (let r = -1; r < numRows; r++) {
       const y = r * rowH - (scrollY % rowH);
@@ -798,6 +813,27 @@ function initDnaScanner() {
       ctx.beginPath();
       ctx.moveTo(0, y + rowH);
       ctx.lineTo(w, y + rowH);
+      ctx.stroke();
+    }
+
+    /* Belt edges */
+    ctx.strokeStyle = 'rgba(0,200,150,0.25)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(2, 0);
+    ctx.lineTo(2, h);
+    ctx.moveTo(w - 2, 0);
+    ctx.lineTo(w - 2, h);
+    ctx.stroke();
+
+    /* Belt horizontal texture lines */
+    ctx.strokeStyle = 'rgba(0,200,150,0.04)';
+    ctx.lineWidth = 0.5;
+    for (let by = 0; by < h; by += 40) {
+      const beltY = (by + scrollY * 50) % (h + 40) - 20;
+      ctx.beginPath();
+      ctx.moveTo(5, beltY);
+      ctx.lineTo(w - 5, beltY);
       ctx.stroke();
     }
 
@@ -941,13 +977,10 @@ function initDataStream() {
         freezeTimer = 80 + Math.floor(Math.random() * 60);
         freezeLetters = {};
 
-        /* Pick random columns for each letter */
-        const available = [];
-        for (let i = 0; i < columns.length; i++) available.push(i);
-        for (let li = 0; li < word.length && available.length > 0; li++) {
-          const pick = Math.floor(Math.random() * available.length);
-          freezeLetters[available[pick]] = word[li];
-          available.splice(pick, 1);
+        /* Spell word left-to-right across consecutive columns */
+        const startCol = Math.floor(Math.random() * Math.max(1, columns.length - word.length));
+        for (let li = 0; li < word.length; li++) {
+          freezeLetters[startCol + li] = word[li];
         }
       }
     } else {
