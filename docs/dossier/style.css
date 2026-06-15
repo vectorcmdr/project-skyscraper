@@ -198,10 +198,12 @@ body {
   gap: 0.25rem;
   overflow: hidden;
   min-height: 0;
+  clip-path: inset(0);
 }
 .panel-body-col canvas {
-  flex: 1;
+  flex: 1 1 0;
   width: 100%;
+  min-width: 0;
   min-height: 0;
   display: block;
 }

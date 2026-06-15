@@ -450,6 +450,8 @@ function initNeuralGrid() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
 
+    if (cw < GAP * (COLS + 1) + 10 || ch < 10) return;
+
     /* cellW = grid width / cols. cellH = cellW * 0.55 → always 55% as tall = always landscape.
        Then compute how many rows fit in available height. */
     const cellW = (cw - GAP * (COLS + 1)) / COLS;
@@ -763,7 +765,6 @@ function initDnaScanner() {
   const chars = 'CTAG';
   let dims;
   let scrollY = 0;
-  let rollerAngle = 0;
   const charH = 14;
   const tapeWidthRatio = 0.85;
   let charCache = {};
@@ -793,23 +794,20 @@ function initDnaScanner() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, w, h);
 
-    /* Tape belt dimensions — small rollers, tape fills most of height */
+    /* Tape strip — full height, centered width */
     const tw = Math.round(w * tapeWidthRatio);
     const tx = Math.round((w - tw) / 2);
-    const rollerR = Math.round(tw * 0.10);
-    const rollerY = rollerR + 2;
-    const tapeTop = rollerY + rollerR;
-    const tapeBot = h - rollerY - rollerR;
+    const tapeTop = 2;
+    const tapeBot = h - 2;
     const tapeH = tapeBot - tapeTop;
 
-    scrollY += 0.4;
-    rollerAngle += 0.04;
+    scrollY -= 0.4;
 
     /* Tape background */
     ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(tx, tapeTop, tw, tapeH);
 
-    /* Tape edge borders (left + right rails) */
+    /* Tape edge rails */
     ctx.strokeStyle = 'rgba(0,200,150,0.35)';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
@@ -817,7 +815,6 @@ function initDnaScanner() {
     ctx.moveTo(tx + tw, tapeTop); ctx.lineTo(tx + tw, tapeBot);
     ctx.stroke();
 
-    /* Faint inner tape lines */
     ctx.strokeStyle = 'rgba(0,200,150,0.08)';
     ctx.lineWidth = 0.5;
     ctx.beginPath();
@@ -825,7 +822,7 @@ function initDnaScanner() {
     ctx.moveTo(tx + tw - 2, tapeTop); ctx.lineTo(tx + tw - 2, tapeBot);
     ctx.stroke();
 
-    /* DNA characters scrolling down the tape */
+    /* DNA characters scrolling up the strip */
     const cols = Math.max(1, Math.floor((tw - 8) / 11));
     const numRows = Math.ceil(tapeH / charH) + 2;
     ctx.font = '10px monospace';
@@ -833,13 +830,13 @@ function initDnaScanner() {
     ctx.textBaseline = 'middle';
 
     const rowOffset = Math.floor(scrollY / charH);
-    const pixelOffset = scrollY % charH;
+    const pixelOffset = ((scrollY % charH) + charH) % charH;
 
     for (let r = -1; r < numRows; r++) {
       const y = tapeTop + r * charH - pixelOffset;
       if (y < tapeTop - charH || y > tapeBot + charH) continue;
 
-      const fadeMargin = 20;
+      const fadeMargin = 16;
       let rowAlpha = 1;
       const distTop = y - tapeTop;
       const distBot = tapeBot - y;
@@ -857,85 +854,20 @@ function initDnaScanner() {
       }
     }
 
-    /* Fade gradients at tape top/bottom (blend into rollers) */
-    const fadePx = 20;
-    const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + fadePx);
+    /* Fade at top/bottom edges */
+    const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + 16);
     gradTop.addColorStop(0, '#080808');
     gradTop.addColorStop(1, 'transparent');
     ctx.fillStyle = gradTop;
-    ctx.fillRect(tx, tapeTop, tw, fadePx);
+    ctx.fillRect(tx, tapeTop, tw, 16);
 
-    const gradBot = ctx.createLinearGradient(0, tapeBot, 0, tapeBot - fadePx);
+    const gradBot = ctx.createLinearGradient(0, tapeBot, 0, tapeBot - 16);
     gradBot.addColorStop(0, '#080808');
     gradBot.addColorStop(1, 'transparent');
     ctx.fillStyle = gradBot;
-    ctx.fillRect(tx, tapeBot - fadePx, tw, fadePx);
+    ctx.fillRect(tx, tapeBot - 16, tw, 16);
 
-    /* ---- Top roller ---- */
-    const cxa = Math.round(tx + tw / 2);
-    ctx.shadowColor = 'rgba(0,200,150,0.2)';
-    ctx.shadowBlur = 8;
-    ctx.strokeStyle = 'rgba(0,200,150,0.55)';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.arc(cxa, rollerY, rollerR, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.shadowBlur = 0;
-
-    ctx.strokeStyle = 'rgba(0,200,150,0.15)';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.arc(cxa, rollerY, rollerR * 0.6, 0, Math.PI * 2);
-    ctx.stroke();
-
-    ctx.strokeStyle = 'rgba(0,200,150,0.2)';
-    ctx.lineWidth = 1;
-    for (let i = 0; i < 6; i++) {
-      const a = rollerAngle + i * Math.PI / 3;
-      ctx.beginPath();
-      ctx.moveTo(cxa + Math.cos(a) * rollerR * 0.6, rollerY + Math.sin(a) * rollerR * 0.6);
-      ctx.lineTo(cxa + Math.cos(a) * rollerR, rollerY + Math.sin(a) * rollerR);
-      ctx.stroke();
-    }
-
-    ctx.fillStyle = 'rgba(0,200,150,0.4)';
-    ctx.beginPath();
-    ctx.arc(cxa, rollerY, 2, 0, Math.PI * 2);
-    ctx.fill();
-
-    /* ---- Bottom roller ---- */
-    const by = h - rollerY;
-    ctx.shadowColor = 'rgba(0,200,150,0.2)';
-    ctx.shadowBlur = 8;
-    ctx.strokeStyle = 'rgba(0,200,150,0.55)';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.arc(cxa, by, rollerR, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.shadowBlur = 0;
-
-    ctx.strokeStyle = 'rgba(0,200,150,0.15)';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.arc(cxa, by, rollerR * 0.6, 0, Math.PI * 2);
-    ctx.stroke();
-
-    ctx.strokeStyle = 'rgba(0,200,150,0.2)';
-    ctx.lineWidth = 1;
-    for (let i = 0; i < 6; i++) {
-      const a = rollerAngle + i * Math.PI / 3;
-      ctx.beginPath();
-      ctx.moveTo(cxa + Math.cos(a) * rollerR * 0.6, by + Math.sin(a) * rollerR * 0.6);
-      ctx.lineTo(cxa + Math.cos(a) * rollerR, by + Math.sin(a) * rollerR);
-      ctx.stroke();
-    }
-
-    ctx.fillStyle = 'rgba(0,200,150,0.4)';
-    ctx.beginPath();
-    ctx.arc(cxa, by, 2, 0, Math.PI * 2);
-    ctx.fill();
-
-    /* Side gradient overlays (blend edges into dark) */
+    /* Side gradient overlays */
     const gradLeft = ctx.createLinearGradient(0, 0, 20, 0);
     gradLeft.addColorStop(0, '#080808');
     gradLeft.addColorStop(1, 'transparent');
@@ -1067,11 +999,11 @@ function initDataStream() {
         freezeTimer = 80 + Math.floor(Math.random() * 60);
         freezeLetters = {};
 
-        /* Spell word left-to-right across consecutive columns, offset from edges */
+        /* Spell word in a zone inset from canvas edges */
         const wordLen = word.length;
-        const maxStartCol = Math.max(0, columns.length - wordLen);
-        const zonePad = Math.min(3, Math.floor(maxStartCol / 2));
-        const startCol = zonePad + Math.floor(Math.random() * Math.max(1, maxStartCol - zonePad * 2 + 1));
+        const marginCols = 5;
+        const maxStart = columns.length - wordLen - marginCols;
+        const startCol = marginCols + (maxStart > marginCols ? Math.floor(Math.random() * (maxStart - marginCols + 1)) : 0);
         for (let li = 0; li < word.length; li++) {
           freezeLetters[startCol + li] = word[li];
         }
