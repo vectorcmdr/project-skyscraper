@@ -57,7 +57,9 @@ function initCyberbrain() {
   light2.position.set(-3, -2, 1);
   scene.add(light2);
 
-  /* ---- Sphere with grid lines + diagonal sweep scanline ---- */
+  /* ---- Sphere with worldspace scanline ---- */
+  /* Scanline sweeps a fixed vertical plane along world X axis.
+     The intersection of a plane with the sphere is always a perfect great circle. */
   const sphereGeo = new THREE.SphereGeometry(2.0, 48, 32);
   const sphereMat = new THREE.ShaderMaterial({
     uniforms: {
@@ -75,9 +77,12 @@ function initCyberbrain() {
     vertexShader: `
       varying vec2 vUv;
       varying vec3 vNormal;
+      varying vec3 vWorldPos;
       void main() {
         vUv = uv;
         vNormal = normalize(normalMatrix * normal);
+        vec4 wp = modelMatrix * vec4(position, 1.0);
+        vWorldPos = wp.xyz;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
     `,
@@ -89,30 +94,32 @@ function initCyberbrain() {
       uniform vec3 uScanColor;
       varying vec2 vUv;
       varying vec3 vNormal;
+      varying vec3 vWorldPos;
 
       void main() {
         vec3 base = mix(uColor1, uColor2, vUv.y);
-        base *= 0.6;
+        base *= 0.5;
 
         float gridX = step(0.94, abs(fract(vUv.x * 6.0 + 0.5) - 0.5) * 2.0);
         float gridY = step(0.94, abs(fract(vUv.y * 4.0 + 0.5) - 0.5) * 2.0);
-        float grid = max(gridX, gridY) * 0.5;
+        float grid = max(gridX, gridY) * 0.4;
 
-        float diag = vUv.x * 0.6 + vUv.y * 0.4;
-        float sweep = fract(diag + uTime * 0.06);
-        float scan = smoothstep(0.0, 0.025, sweep) - smoothstep(0.025, 0.05, sweep);
+        float sweepX = fract(uTime * 0.035 + 0.5) * 5.0 - 2.5;
+        float dist = vWorldPos.x - sweepX;
+        float scan = exp(-dist * dist * 300.0);
 
         float rim = 1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
         rim = pow(rim, 2.0) * 0.3;
 
         vec3 color = base + grid * uGridColor + scan * uScanColor + rim * uGridColor * 0.5;
-        float alpha = 0.12 + grid * 0.3 + rim * 0.25 + scan * 0.7;
+        float alpha = 0.08 + grid * 0.20 + rim * 0.15 + scan * 0.9;
 
         gl_FragColor = vec4(color, alpha);
       }
     `,
   });
   const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+  sphere.renderOrder = 0;
   scene.add(sphere);
 
   /* ---- Faint outline ring ---- */
@@ -120,14 +127,16 @@ function initCyberbrain() {
   const ringMat = new THREE.MeshBasicMaterial({
     color: 0x00ff66,
     transparent: true,
-    opacity: 0.15,
+    opacity: 0.12,
   });
   const ring = new THREE.Mesh(ringGeo, ringMat);
   ring.rotation.x = Math.PI / 3;
+  ring.renderOrder = 0;
   scene.add(ring);
 
-  /* ---- Brain particle system (improved shape) ---- */
+  /* ---- Brain particle system (full brain) ---- */
   const brainGroup = new THREE.Group();
+  brainGroup.renderOrder = 1;
 
   function fillEllipsoid(cx, cy, cz, rx, ry, rz, count) {
     const pts = [];
@@ -145,14 +154,18 @@ function initCyberbrain() {
   }
 
   let brainPoints = [];
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.15, 0, 0.75, 0.6, 0.55, 250));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.15, 0, 0.75, 0.6, 0.55, 250));
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, 0.1, 0.85, 0.45, 0.4, 0.3, 80));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.3, 0.1, 0.85, 0.45, 0.4, 0.3, 80));
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.95, -0.05, 0.2, 0.22, 0.28, 0.35, 70));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.95, -0.05, 0.2, 0.22, 0.28, 0.35, 70));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.5, 0.4, 0.22, 0.3, 60));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.8, -0.1, 0.14, 0.25, 0.14, 30));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.2, 0, 0.85, 0.65, 0.6, 450));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.2, 0, 0.85, 0.65, 0.6, 450));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.35, 0.15, 0.9, 0.5, 0.45, 0.35, 250));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.35, 0.15, 0.9, 0.5, 0.45, 0.35, 250));
+  brainPoints = brainPoints.concat(fillEllipsoid(-1.0, -0.05, 0.2, 0.25, 0.3, 0.4, 150));
+  brainPoints = brainPoints.concat(fillEllipsoid(1.0, -0.05, 0.2, 0.25, 0.3, 0.4, 150));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.55, 0.45, 0.25, 0.35, 150));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.5, 0.55, 0.3, 0.4, 0.25, 0.3, 120));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.5, 0.55, 0.3, 0.4, 0.25, 0.3, 120));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.85, -0.1, 0.15, 0.3, 0.15, 80));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, -0.2, -1.1, 0.3, 0.2, 0.25, 80));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.3, -0.2, -1.1, 0.3, 0.2, 0.25, 80));
 
   const particlePos = new Float32Array(brainPoints.length * 3);
   const particleCol = new Float32Array(brainPoints.length * 3);
@@ -162,8 +175,8 @@ function initCyberbrain() {
     particlePos[i*3+2] = brainPoints[i].z;
     const b = 0.3 + Math.random() * 0.7;
     particleCol[i*3] = 0.05 + Math.random() * 0.15;
-    particleCol[i*3+1] = 0.2 + b * 0.6;
-    particleCol[i*3+2] = 0.05 + Math.random() * 0.1;
+    particleCol[i*3+1] = 0.3 + b * 0.7;
+    particleCol[i*3+2] = 0.05 + Math.random() * 0.15;
   }
 
   const pGeo = new THREE.BufferGeometry();
@@ -171,10 +184,10 @@ function initCyberbrain() {
   pGeo.setAttribute('color', new THREE.BufferAttribute(particleCol, 3));
 
   const pMat = new THREE.PointsMaterial({
-    size: 0.04,
+    size: 0.08,
     vertexColors: true,
     transparent: true,
-    opacity: 0.85,
+    opacity: 0.95,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
   });
@@ -186,7 +199,7 @@ function initCyberbrain() {
   for (let i = 0; i < brainPoints.length; i++) {
     for (let j = i + 1; j < brainPoints.length; j++) {
       const d = brainPoints[i].distanceTo(brainPoints[j]);
-      if (d < 0.3 && Math.random() < 0.08) {
+      if (d < 0.35 && Math.random() < 0.04) {
         connPos.push(brainPoints[i].x, brainPoints[i].y, brainPoints[i].z);
         connPos.push(brainPoints[j].x, brainPoints[j].y, brainPoints[j].z);
       }
@@ -195,9 +208,9 @@ function initCyberbrain() {
   const cGeo = new THREE.BufferGeometry();
   cGeo.setAttribute('position', new THREE.Float32BufferAttribute(connPos, 3));
   const cMat = new THREE.LineBasicMaterial({
-    color: 0x00cc66,
+    color: 0x00ff66,
     transparent: true,
-    opacity: 0.08,
+    opacity: 0.10,
   });
   const connections = new THREE.LineSegments(cGeo, cMat);
   brainGroup.add(connections);
@@ -208,6 +221,7 @@ function initCyberbrain() {
     color: 0x00ff88,
     transparent: true,
     opacity: 0.6,
+    depthWrite: false,
   });
   const centerGlow = new THREE.Mesh(glowGeo2, glowMat2);
   brainGroup.add(centerGlow);
@@ -248,9 +262,9 @@ function initCyberbrain() {
     const t = time * 0.001;
 
     sphereMat.uniforms.uTime.value = t;
-    sphere.rotation.y = t * 0.03;
+    sphere.rotation.y = t * 0.025;
     ring.rotation.z = t * 0.02;
-    brainGroup.rotation.y = Math.sin(t * 0.02) * 0.05;
+    brainGroup.rotation.y = Math.sin(t * 0.015) * 0.08;
 
     controls.update();
     renderer.render(scene, camera);
@@ -371,20 +385,20 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
-  const cols = 20, rows = 7;
+  const cols = 8;
+  let rows = 4;
   let cells = [];
   let targets = [];
   let dims;
 
   function init() {
     dims = resizeCanvas(canvas, container);
-    /* Account for the text above the canvas */
     const textEl = document.getElementById('neuralTextTop');
     const textH = textEl ? textEl.offsetHeight + 30 : 40;
-    dims = resizeCanvas(canvas, { getBoundingClientRect: () => ({
-      width: dims.w,
-      height: Math.max(100, dims.h - textH),
-    })});
+    const rect = container.getBoundingClientRect();
+    const cw = rect.width;
+    const ch = Math.max(100, rect.height - textH - 10);
+    rows = Math.max(2, Math.floor(cols * ch / cw * 0.6));
 
     cells = [];
     targets = [];
@@ -407,20 +421,25 @@ function initNeuralGrid() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
 
+    const useRows = Math.max(2, Math.floor(cols * ch / cw * 0.6));
+
     const gap = 4;
     const cellW = (cw - gap * (cols + 1)) / cols;
-    const cellH = (ch - gap * (rows + 1)) / rows;
-    const drawW = cellW * 1.3;
-    const drawH = cellH * 0.7;
+    const cellH = (ch - gap * (useRows + 1)) / useRows;
+    const drawW = cellW;
+    const drawH = cellH;
+    const offX = gap + (cellW - drawW) / 2;
+    const offY = gap + (cellH - drawH) / 2;
 
     let lit = 0;
-    for (let r = 0; r < rows; r++) {
+    for (let r = 0; r < useRows; r++) {
       for (let c = 0; c < cols; c++) {
         const idx = r * cols + c;
+        if (idx >= cells.length) continue;
         cells[idx] += (targets[idx] - cells[idx]) * 0.05;
         const val = cells[idx];
-        const x = gap + c * (cellW + gap) + (cellW - drawW) / 2;
-        const y = gap + r * (cellH + gap) + (cellH - drawH) / 2;
+        const x = offX + c * (cellW + gap);
+        const y = offY + r * (cellH + gap);
 
         if (val > 0.05) {
           const bright = Math.min(1, val * 1.5);
@@ -435,7 +454,7 @@ function initNeuralGrid() {
     }
 
     if (densityEl) {
-      densityEl.textContent = ((lit / (cols * rows)) * 100).toFixed(1);
+      densityEl.textContent = ((lit / (cols * useRows)) * 100).toFixed(1);
     }
   }
 
@@ -683,25 +702,25 @@ function initShuffleDeck() {
 
   if (cards.length < 3) return;
 
-  const stackOffsets = [
-    { x: -8, y: -6 },
+  const positions = [
     { x: 0, y: 0 },
+    { x: 4, y: 3 },
     { x: 8, y: 6 },
   ];
 
+  const cardPos = [0, 1, 2];
+
   function applyPositions() {
     cards.forEach((card, i) => {
-      const o = stackOffsets[i];
-      card.style.transform = `translate(${o.x}px, ${o.y}px)`;
-      card.style.zIndex = 3 - i;
+      const p = positions[cardPos[i]];
+      card.style.transform = `translate(${p.x}px, ${p.y}px)`;
+      card.style.zIndex = 3 - cardPos[i];
     });
   }
 
   function cycle() {
-    const last = stackOffsets.pop();
-    stackOffsets.unshift(last);
-    const lastCard = cards.pop();
-    cards.unshift(lastCard);
+    const last = cardPos.pop();
+    cardPos.unshift(last);
     applyPositions();
   }
 
@@ -740,7 +759,7 @@ function initDnaScanner() {
     const numRows = Math.ceil(h / rowH) + 2;
     const cols = Math.floor(w / 10);
 
-    scrollY += 0.18;
+    scrollY += 0.006;
 
     for (let r = -1; r < numRows; r++) {
       const y = r * rowH - (scrollY % rowH);
@@ -816,6 +835,10 @@ function initDataStream() {
   let dims;
   let fontSize = 12;
   let colW;
+  let frozen = false;
+  let freezeTimer = 0;
+  let freezeWord = '';
+  let freezeFrame = 0;
 
   function resize() {
     dims = resizeCanvas(canvas, container);
@@ -828,10 +851,6 @@ function initDataStream() {
         speed: 0.5 + Math.random() * 2,
         delay: Math.random() * 100,
         trail: 10 + Math.floor(Math.random() * 20),
-        word: words[Math.floor(Math.random() * words.length)],
-        wordTimer: 0,
-        freezeTimer: 0,
-        frozen: false,
       });
     }
     columns.length = numCols;
@@ -846,40 +865,24 @@ function initDataStream() {
 
     const { w, h } = dims;
 
-    ctx.fillStyle = 'rgba(8,0,0,0.08)';
+    /* Fade trail */
+    ctx.fillStyle = frozen ? 'rgba(8,0,0,0.03)' : 'rgba(8,0,0,0.08)';
     ctx.fillRect(0, 0, w, h);
 
     ctx.font = `${fontSize}px monospace`;
     ctx.textAlign = 'center';
 
+    /* Draw rain columns */
     columns.forEach((col, ci) => {
-      col.delay -= 1;
-      if (col.delay > 0) return;
-
-      if (col.frozen) {
-        col.freezeTimer -= 1;
-        if (col.freezeTimer <= 0) {
-          col.frozen = false;
-          col.freezeTimer = 0;
-        }
-      }
-
-      if (!col.frozen) {
+      if (!frozen) {
+        col.delay -= 1;
+        if (col.delay > 0) return;
         col.y += col.speed;
-        col.wordTimer -= 1;
-      }
-
-      if (col.y > h + 20) {
-        col.y = -20;
-        col.speed = 0.5 + Math.random() * 2;
-        col.word = words[Math.floor(Math.random() * words.length)];
-        col.wordTimer = 20 + Math.floor(Math.random() * 40);
-        col.delay = Math.random() * 30;
-      }
-
-      if (col.wordTimer > 0 && !col.frozen && col.y > fontSize * 2) {
-        col.frozen = true;
-        col.freezeTimer = col.wordTimer + 5;
+        if (col.y > h + 20) {
+          col.y = -20;
+          col.speed = 0.5 + Math.random() * 2;
+          col.delay = Math.random() * 30;
+        }
       }
 
       const x = ci * colW + colW / 2;
@@ -889,41 +892,76 @@ function initDataStream() {
         if (ty < -fontSize || ty > h + fontSize) continue;
         const alpha = 1 - (i / col.trail);
         const fade = alpha * alpha;
-
-        let isWord = false;
-        let ch;
-        if (col.frozen && i < col.word.length) {
-          ch = col.word[i];
-          isWord = true;
-        } else if (!col.frozen && i === 0 && col.wordTimer > 0 && i < col.word.length) {
-          ch = col.word[i];
-        } else {
-          ch = chars[Math.floor(Math.random() * chars.length)];
-        }
-
-        if (isWord) {
-          ctx.fillStyle = `rgba(255,255,255,${0.9 + fade * 0.1})`;
-          ctx.shadowColor = 'rgba(255,0,0,0.8)';
-          ctx.shadowBlur = 10;
-          ctx.font = `bold ${fontSize + 2}px monospace`;
-        } else if (i === 0) {
+        if (i === 0) {
           ctx.fillStyle = `rgba(255,200,200,${fade})`;
           ctx.shadowColor = 'rgba(255,0,0,0.5)';
           ctx.shadowBlur = 6;
-          ctx.font = `${fontSize}px monospace`;
         } else {
           ctx.fillStyle = `rgba(255,${Math.floor(100 * fade)},${Math.floor(50 * fade)},${fade * 0.6})`;
           ctx.shadowBlur = 0;
-          ctx.font = `${fontSize}px monospace`;
         }
-
-        ctx.fillText(ch, x, ty);
+        ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x, ty);
       }
       ctx.shadowBlur = 0;
     });
+
+    /* Freeze overlay: word drawn horizontally across rain */
+    if (frozen) {
+      ctx.fillStyle = 'rgba(8,0,0,0.5)';
+      ctx.fillRect(0, 0, w, h);
+
+      /* Red scanlines */
+      ctx.fillStyle = 'rgba(255,0,0,0.03)';
+      for (let sy = 0; sy < h; sy += 4) {
+        ctx.fillRect(0, sy, w, 1);
+      }
+
+      const wordLetters = freezeWord.split('');
+      const totalWidth = wordLetters.length * (colW + 4);
+      const startX = (w - totalWidth) / 2 + colW / 2;
+      const midY = h / 2 + fontSize * 0.3;
+      const glitchFrame = freezeFrame % 3 === 0;
+
+      wordLetters.forEach((ch, i) => {
+        const x = startX + i * (colW + 4);
+        const flicker = glitchFrame && Math.random() < 0.3
+          ? chars[Math.floor(Math.random() * chars.length)]
+          : ch;
+
+        ctx.shadowColor = 'rgba(255,0,0,0.9)';
+        ctx.shadowBlur = 14;
+        ctx.fillStyle = `rgba(255,255,255,${0.85 + Math.random() * 0.15})`;
+        ctx.font = `bold ${fontSize + 4}px monospace`;
+        ctx.fillText(flicker, x, midY);
+
+        if (Math.random() < 0.2) {
+          ctx.shadowBlur = 0;
+          ctx.fillStyle = `rgba(255,0,0,${0.2 + Math.random() * 0.3})`;
+          ctx.font = `${fontSize + 2}px monospace`;
+          ctx.fillText(flicker, x + (Math.random() - 0.5) * 6, midY + (Math.random() - 0.5) * 4);
+        }
+      });
+      ctx.shadowBlur = 0;
+    }
   }
 
   function animate() {
+    if (!frozen) {
+      if (Math.random() < 0.003) {
+        frozen = true;
+        freezeWord = words[Math.floor(Math.random() * words.length)];
+        freezeTimer = 80 + Math.floor(Math.random() * 60);
+        freezeFrame = 0;
+      }
+    } else {
+      freezeFrame++;
+      freezeTimer--;
+      if (freezeTimer <= 0) {
+        frozen = false;
+        freezeFrame = 0;
+        freezeWord = '';
+      }
+    }
     draw();
     requestAnimationFrame(animate);
   }
