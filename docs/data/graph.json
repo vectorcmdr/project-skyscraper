@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T15:44:50.977509+00:00",
+  "updated": "2026-06-15T16:37:10.994899+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -16,14 +16,6 @@
       "url": "https://project-skyscraper.com/about/",
       "author": "The Architect",
       "date": "1969-12-31T23:00:12"
-    },
-    {
-      "id": "/",
-      "type": "page",
-      "label": "Home",
-      "url": "https://project-skyscraper.com/",
-      "author": "",
-      "date": ""
     },
     {
       "id": "/inbox",
@@ -2786,14 +2778,6 @@
       "date": "2026-06-04T17:16:56"
     },
     {
-      "id": "/page/2",
-      "type": "external",
-      "label": "2",
-      "url": "https://project-skyscraper.com/page/2/",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
       "type": "external",
       "label": "forums.atlas-65.com",
@@ -2866,6 +2850,22 @@
       "date": ""
     },
     {
+      "id": "/",
+      "type": "external",
+      "label": "unknown",
+      "url": "https://project-skyscraper.com/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://wakingtitan.com/",
+      "type": "external",
+      "label": "wakingtitan.com",
+      "url": "https://wakingtitan.com/",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://youtu.be/etviGf1uWlg",
       "type": "external",
       "label": "youtu.be",
@@ -2884,1728 +2884,76 @@
   ],
   "links": [
     {
-      "source": "sitemap",
+      "source": "/project-skyscraper",
       "target": "/"
     },
     {
-      "source": "sitemap",
+      "source": "/2026/04/24/navigation",
       "target": "/about"
     },
     {
-      "source": "sitemap",
-      "target": "/sleep-mode"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1970/01/01/origin"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/03/24/sleep-mode-46105"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/03/27/sleep-mode-46108"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/03/29/sleep-mode-46110"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/01/sleep-mode-4613"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/03/sleep-mode-46115"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/01/event-01012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/03/event-03012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/04/event-04012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/05/event-05012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/06/event-06012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/07/event-07012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/08/event-08012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/09/event-09012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/06/01/event-01062017"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/13/event-13012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/16/event-16012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/18/event-18012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/19/event-19012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/21/event-21012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/22/event-22012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/23/event-23012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1980/03/03/hoe"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/26/event-26012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/28/event-28012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/29/event-29012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/01/30/event-30012016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/02/event-02022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/03/event-03022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/04/event-04022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/05/event-05022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/08/event-08022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/09/event-09022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/10/event-10022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/12/event-12022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/13/event-13022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/14/event-14022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/17/event-17022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/18/event-18022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/19/event-19022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/20/event-20022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/21/event-21022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/22/event-22022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/23/event-23022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/24/event-24022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/26/event-26022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/02/27/event-27022016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/01/event-01032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/02/event-02032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/04/event-04032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/05/event-05032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/27/event-27032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/07/event-07032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/10/event-10032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/11/event-11032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/12/event-12032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/13/event-13032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/16/event-16032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/17/event-17032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/18/event-18032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/19/event-19032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/22/event-22032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/23/event-23032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/24/event-24032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/25/event-25032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/26/event-26032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/28/event-28032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/29/event-29032016-2"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/30/event-30032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/03/31/event-31032016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/01/event-01042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/02/event-02042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/03/event-03042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/06/event-06042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/08/event-08042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/09/event-09042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/11/event-11042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/13/event-13042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/14/event-14042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/15/event-15042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/16/event-16042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2021/02/25/event-25022021"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/20/event-20042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/22/event-22042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/23/event-23042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/24/event-24042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/25/event-25042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/27/event-27042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/29/event-29042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/04/26/event-26042016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/01/event-01052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/05/event-05052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/06/event-06052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/07/event-07052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/09/event-09052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/10/event-10052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/12/event-12052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/11/event-11052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/13/event-13052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/14/event-14052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/16/event-16052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/17/event-17052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/20/event-20052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/21/event-21052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/22/event-22052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/23/event-23052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/25/event-25052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/26/event-26052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/27/event-27052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/30/event-30052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/05/31/event-31052016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/01/event-01062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/04/event-04062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/05/event-05062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/06/event-06062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/09/event-09062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/10/event-10062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/12/event-12062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/13/event-13062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/14/event-14062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/15/event-15062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/17/event-17062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/19/event-19062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/21/event-21062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/22/event-22062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/23/event-23062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/24/event-24062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/25/event-25062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/28/event-28062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/06/29/event-29062016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/02/event-02072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/04/event-04072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/05/event-05072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/06/event-06072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/09/event-09072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/10/event-10072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/07/event-07072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/12/event-12072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/13/event-13072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/14/event-14072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/15/event-15072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/16/event-16072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/18/event-18072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/19/event-19072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/20/event-20072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/24/event-24072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/25/event-25072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/26/event-26072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/27/event-27072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/29/event-29072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/30/event-30072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/07/31/event-31072016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/01/event-01082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/03/event-03082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/04/event-04082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/05/event-05082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/06/event-06082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/13/event-13082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/15/event-15082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/16/event-16082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/17/event-17082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/20/event-20082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/21/event-21082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/22/event-22082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/23/event-23082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/24/event-24082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/26/event-26082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/28/event-28082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/29/event-29082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/08/30/event-30082016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/01/event-01092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/02/event-02092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/04/event-04092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/06/event-06092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/07/event-07092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/08/event-08092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/09/event-09092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/10/event-10092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/12/event-12092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/13/event-13092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/14/event-14092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/17/event-17092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/18/event-18092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/19/event-19092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/22/event-22092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/23/event-23092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/24/event-24092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/26/event-26092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/27/event-27092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/28/event-28092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/29/event-29092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/09/30/event-30092016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/02/event-02102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/04/event-04102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/05/event-05102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/06/event-06102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/07/event-07102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/09/event-09102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/11/event-11102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/12/event-12102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/14/event-14102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/18/event-18102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/16/event-16102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/20/event-20102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/22/event-22102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/23/event-23102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/25/event-25102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/26/event-26102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/28/event-28102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/10/30/event-30102016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/02/event-02112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/07/event-07112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/09/event-09112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/10/event-10112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/13/event-13112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/14/event-14112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/15/event-15112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/16/event-16112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/17/event-17112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/18/event-18112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/20/event-20112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/21/event-21112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/23/event-23112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/24/event-24112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/25/event-25112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/26/event-26112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/28/event-28112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/11/29/event-29112016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/01/event-01122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/05/event-05122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/10/event-10122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/11/event-11122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/13/event-13122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/14/event-14122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/19/event-19122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/20/event-20122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/22/event-22122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/23/event-23122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/26/event-26122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/28/event-28122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/29/event-29122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/31/event-31122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/report-lon-reality-glitch"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/06/structural-analysis-214218"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/09/diagnostic-180000"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/11/structural-analysis-152612"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/11/diagnostic-192512"
-    },
-    {
-      "source": "sitemap",
-      "target": "/report-bru-ent-reunion-peak"
-    },
-    {
-      "source": "sitemap",
-      "target": "/report-par-temporal-merge"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "sitemap",
-      "target": "/sec-log-211927-full"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "sitemap",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "sitemap",
+      "source": "/2026/04/24/navigation",
       "target": "/inbox"
     },
     {
-      "source": "sitemap",
-      "target": "/2026/05/29/sec-log-114327"
+      "source": "/2026/04/24/navigation",
+      "target": "/neural-network-status"
     },
     {
-      "source": "sitemap",
-      "target": "/2002/05/12/code"
+      "source": "/2026/04/24/navigation",
+      "target": "/report-bru-ent-reunion-peak"
     },
     {
-      "source": "sitemap",
-      "target": "/2026/05/31/sec-log-193727"
+      "source": "/2026/04/24/navigation",
+      "target": "/report-lon-reality-glitch"
     },
     {
-      "source": "sitemap",
-      "target": "/2018/07/24/2018_dataset"
+      "source": "/2026/04/24/navigation",
+      "target": "/report-par-temporal-merge"
     },
     {
-      "source": "sitemap",
-      "target": "/2017/07/21/event-21072017"
+      "source": "/2026/04/24/navigation",
+      "target": "/request-memory-timestamp-094317"
     },
     {
-      "source": "sitemap",
-      "target": "/2026/06/02/sec-log-194022"
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094316-full"
     },
     {
-      "source": "sitemap",
-      "target": "/2017/07/08/2017_dataset"
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094127-full"
     },
     {
-      "source": "sitemap",
-      "target": "/2026/06/06/sec-log-110328"
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-211927-full"
     },
     {
-      "source": "sitemap",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-080413-full"
     },
     {
-      "source": "sitemap",
-      "target": "/2022/04/24/event-24042022"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1980/03/10/insert-coin"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "sitemap",
-      "target": "/1958/04/17/event-17041958"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2023/09/26/event-26092023"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/13/six-seasons"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/14/sec-log-014527"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2026/06/14/diagnostic-130321"
-    },
-    {
-      "source": "sitemap",
-      "target": "/project-skyscraper"
-    },
-    {
-      "source": "sitemap",
-      "target": "/logo"
-    },
-    {
-      "source": "sitemap",
-      "target": "/tr4ce"
-    },
-    {
-      "source": "sitemap",
-      "target": "/only-dust-remain"
-    },
-    {
-      "source": "sitemap",
-      "target": "/8740677a9483"
-    },
-    {
-      "source": "sitemap",
-      "target": "/53a05806675f"
-    },
-    {
-      "source": "sitemap",
-      "target": "/b1c9e4f072a5"
-    },
-    {
-      "source": "sitemap",
-      "target": "/12dd862fd254"
-    },
-    {
-      "source": "sitemap",
-      "target": "/a7e9f3b8c2d6"
-    },
-    {
-      "source": "sitemap",
-      "target": "/4e2b91d8a370"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/14/diagnostic-130321"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/14/sec-log-014527"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/13/six-seasons"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/11/diagnostic-192512"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/11/structural-analysis-152612"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/09/diagnostic-180000"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/06/structural-analysis-214218"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/06/sec-log-110328"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/02/sec-log-194022"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/31/sec-log-193727"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/03/sleep-mode-46115"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/01/sleep-mode-4613"
-    },
-    {
-      "source": "/",
-      "target": "/2026/03/29/sleep-mode-46110"
-    },
-    {
-      "source": "/",
-      "target": "/2026/03/27/sleep-mode-46108"
-    },
-    {
-      "source": "/",
-      "target": "/2026/03/24/sleep-mode-46105"
-    },
-    {
-      "source": "/",
-      "target": "/2023/09/26/event-26092023"
-    },
-    {
-      "source": "/",
-      "target": "/2022/04/24/event-24042022"
-    },
-    {
-      "source": "/",
-      "target": "/2021/02/25/event-25022021"
-    },
-    {
-      "source": "/",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/",
-      "target": "/2017/07/21/event-21072017"
-    },
-    {
-      "source": "/",
-      "target": "/2017/07/08/2017_dataset"
-    },
-    {
-      "source": "/",
-      "target": "/2017/06/01/event-01062017"
-    },
-    {
-      "source": "/",
-      "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/31/event-31122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/29/event-29122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/28/event-28122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/26/event-26122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/23/event-23122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/22/event-22122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/20/event-20122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/19/event-19122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/14/event-14122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/13/event-13122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/11/event-11122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/10/event-10122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/05/event-05122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/01/event-01122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/29/event-29112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/28/event-28112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/26/event-26112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/25/event-25112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/24/event-24112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/23/event-23112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/21/event-21112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/20/event-20112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/18/event-18112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/17/event-17112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/16/event-16112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/15/event-15112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/14/event-14112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/13/event-13112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/10/event-10112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/09/event-09112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/07/event-07112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/11/02/event-02112016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/30/event-30102016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/28/event-28102016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/26/event-26102016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/10/25/event-25102016"
-    },
-    {
-      "source": "/",
-      "target": "/page/2"
-    },
-    {
-      "source": "/about",
-      "target": "/"
+      "source": "/2026/04/24/navigation",
+      "target": "/sleep-mode"
     },
     {
       "source": "/about",
       "target": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump"
     },
     {
-      "source": "/sleep-mode",
-      "target": "/"
+      "source": "/sec-log-094316-full",
+      "target": "https://freeimage.host/i/C3q5NYF"
     },
     {
-      "source": "/1970/01/01/origin",
-      "target": "/"
+      "source": "/report-lon-reality-glitch",
+      "target": "https://iili.io/CFCOYml.jpg"
+    },
+    {
+      "source": "/report-par-temporal-merge",
+      "target": "https://iili.io/CC2x7xs.jpg"
+    },
+    {
+      "source": "/sec-log-211927-full",
+      "target": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180"
     },
     {
       "source": "/1970/01/01/origin",
@@ -4617,19 +2965,11 @@
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
-      "target": "/"
-    },
-    {
-      "source": "/2026/03/24/sleep-mode-46105",
       "target": "/2023/09/26/event-26092023"
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
       "target": "/2026/03/27/sleep-mode-46108"
-    },
-    {
-      "source": "/2026/03/27/sleep-mode-46108",
-      "target": "/"
     },
     {
       "source": "/2026/03/27/sleep-mode-46108",
@@ -4641,19 +2981,11 @@
     },
     {
       "source": "/2026/03/29/sleep-mode-46110",
-      "target": "/"
-    },
-    {
-      "source": "/2026/03/29/sleep-mode-46110",
       "target": "/2026/03/27/sleep-mode-46108"
     },
     {
       "source": "/2026/03/29/sleep-mode-46110",
       "target": "/2026/04/01/sleep-mode-4613"
-    },
-    {
-      "source": "/2026/04/01/sleep-mode-4613",
-      "target": "/"
     },
     {
       "source": "/2026/04/01/sleep-mode-4613",
@@ -4665,19 +2997,11 @@
     },
     {
       "source": "/2026/04/03/sleep-mode-46115",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/03/sleep-mode-46115",
       "target": "/2026/04/01/sleep-mode-4613"
     },
     {
       "source": "/2026/04/03/sleep-mode-46115",
       "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "/2026/04/06/sleep-mode-46118",
-      "target": "/"
     },
     {
       "source": "/2026/04/06/sleep-mode-46118",
@@ -4689,19 +3013,11 @@
     },
     {
       "source": "/2026/04/08/sleep-mode-46120",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/08/sleep-mode-46120",
       "target": "/2026/04/06/sleep-mode-46118"
     },
     {
       "source": "/2026/04/08/sleep-mode-46120",
       "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "/2026/04/11/sleep-mode-46123",
-      "target": "/"
     },
     {
       "source": "/2026/04/11/sleep-mode-46123",
@@ -4713,19 +3029,11 @@
     },
     {
       "source": "/2026/04/13/sleep-mode-46125",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/13/sleep-mode-46125",
       "target": "/2026/04/11/sleep-mode-46123"
     },
     {
       "source": "/2026/04/13/sleep-mode-46125",
       "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "/2026/04/16/sleep-mode-46128",
-      "target": "/"
     },
     {
       "source": "/2026/04/16/sleep-mode-46128",
@@ -4737,19 +3045,11 @@
     },
     {
       "source": "/2026/04/18/sleep-mode-46130",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/18/sleep-mode-46130",
       "target": "/2026/04/16/sleep-mode-46128"
     },
     {
       "source": "/2026/04/18/sleep-mode-46130",
       "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "/2026/04/21/sleep-mode-46133",
-      "target": "/"
     },
     {
       "source": "/2026/04/21/sleep-mode-46133",
@@ -4761,19 +3061,11 @@
     },
     {
       "source": "/2026/04/23/sleep-mode-46135",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/23/sleep-mode-46135",
       "target": "/2026/04/21/sleep-mode-46133"
     },
     {
       "source": "/2026/04/23/sleep-mode-46135",
       "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "/2026/04/25/sleep-mode-46137",
-      "target": "/"
     },
     {
       "source": "/2026/04/25/sleep-mode-46137",
@@ -4785,10 +3077,6 @@
     },
     {
       "source": "/2026/04/28/sleep-mode-46140",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/28/sleep-mode-46140",
       "target": "/2026/04/25/sleep-mode-46137"
     },
     {
@@ -4797,23 +3085,11 @@
     },
     {
       "source": "/2026/04/30/sleep-mode-46142",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/30/sleep-mode-46142",
       "target": "/2026/04/28/sleep-mode-46140"
     },
     {
       "source": "/2026/04/30/sleep-mode-46142",
       "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "/sec-log-080413-full",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/03/sec-log-080413",
-      "target": "/"
     },
     {
       "source": "/2026/05/03/sec-log-080413",
@@ -4829,19 +3105,11 @@
     },
     {
       "source": "/2026/05/05/sec-log-190746",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/05/sec-log-190746",
       "target": "/2026/05/03/sec-log-080413"
     },
     {
       "source": "/2026/05/05/sec-log-190746",
       "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "/2026/05/08/sec-log-061119",
-      "target": "/"
     },
     {
       "source": "/2026/05/08/sec-log-061119",
@@ -4853,19 +3121,11 @@
     },
     {
       "source": "/2026/05/10/sec-log-171452",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/10/sec-log-171452",
       "target": "/2026/05/08/sec-log-061119"
     },
     {
       "source": "/2026/05/10/sec-log-171452",
       "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "/2026/05/13/sec-log-041825",
-      "target": "/"
     },
     {
       "source": "/2026/05/13/sec-log-041825",
@@ -4877,19 +3137,11 @@
     },
     {
       "source": "/2026/05/15/sec-log-152158",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/15/sec-log-152158",
       "target": "/2026/05/14/sec-log-172832"
     },
     {
       "source": "/2026/05/15/sec-log-152158",
       "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "/2026/05/18/sec-log-022531",
-      "target": "/"
     },
     {
       "source": "/2026/05/18/sec-log-022531",
@@ -4901,19 +3153,11 @@
     },
     {
       "source": "/2026/05/20/sec-log-132904",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/20/sec-log-132904",
       "target": "/2026/05/18/sec-log-211927"
     },
     {
       "source": "/2026/05/20/sec-log-132904",
       "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "/2026/05/23/sec-log-003237",
-      "target": "/"
     },
     {
       "source": "/2026/05/23/sec-log-003237",
@@ -4937,23 +3181,11 @@
     },
     {
       "source": "/2026/05/27/sec-log-access-granted",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-access-granted",
       "target": "/2026/05/27/sec-log-185027"
     },
     {
       "source": "/2026/05/27/sec-log-access-granted",
       "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "/sec-log-094316-full",
-      "target": "/"
-    },
-    {
-      "source": "/sec-log-094316-full",
-      "target": "https://freeimage.host/i/C3q5NYF"
     },
     {
       "source": "/2026/05/30/sec-log-memory-sector-access",
@@ -4973,19 +3205,11 @@
     },
     {
       "source": "/2016/01/01/event-01012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/01/event-01012016",
       "target": "/2005/04/13/quote"
     },
     {
       "source": "/2016/01/01/event-01012016",
       "target": "/2016/01/03/event-03012016"
-    },
-    {
-      "source": "/2016/01/03/event-03012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/03/event-03012016",
@@ -4997,19 +3221,11 @@
     },
     {
       "source": "/2016/01/04/event-04012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/04/event-04012016",
       "target": "/2016/01/03/event-03012016"
     },
     {
       "source": "/2016/01/04/event-04012016",
       "target": "/2016/01/05/event-05012016"
-    },
-    {
-      "source": "/2016/01/05/event-05012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/05/event-05012016",
@@ -5025,19 +3241,11 @@
     },
     {
       "source": "/2016/01/06/event-06012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/06/event-06012016",
       "target": "/2016/01/05/event-05012016"
     },
     {
       "source": "/2016/01/06/event-06012016",
       "target": "/2016/01/07/event-07012016"
-    },
-    {
-      "source": "/2016/01/07/event-07012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/07/event-07012016",
@@ -5053,10 +3261,6 @@
     },
     {
       "source": "/2016/01/08/event-08012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/08/event-08012016",
       "target": "/2016/01/07/event-07012016"
     },
     {
@@ -5065,19 +3269,11 @@
     },
     {
       "source": "/2016/01/09/event-09012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/09/event-09012016",
       "target": "/2016/01/08/event-08012016"
     },
     {
       "source": "/2016/01/09/event-09012016",
       "target": "/2016/01/13/event-13012016"
-    },
-    {
-      "source": "/2017/06/01/event-01062017",
-      "target": "/"
     },
     {
       "source": "/2017/06/01/event-01062017",
@@ -5093,19 +3289,11 @@
     },
     {
       "source": "/2016/01/13/event-13012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/13/event-13012016",
       "target": "/2016/01/09/event-09012016"
     },
     {
       "source": "/2016/01/13/event-13012016",
       "target": "/2016/01/16/event-16012016"
-    },
-    {
-      "source": "/2016/01/16/event-16012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/16/event-16012016",
@@ -5117,19 +3305,11 @@
     },
     {
       "source": "/2016/01/18/event-18012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/18/event-18012016",
       "target": "/2016/01/16/event-16012016"
     },
     {
       "source": "/2016/01/18/event-18012016",
       "target": "/2016/01/19/event-19012016"
-    },
-    {
-      "source": "/2016/01/19/event-19012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/19/event-19012016",
@@ -5141,19 +3321,11 @@
     },
     {
       "source": "/2016/01/21/event-21012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/21/event-21012016",
       "target": "/2016/01/19/event-19012016"
     },
     {
       "source": "/2016/01/21/event-21012016",
       "target": "/2016/01/22/event-22012016"
-    },
-    {
-      "source": "/2016/01/22/event-22012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/22/event-22012016",
@@ -5165,19 +3337,11 @@
     },
     {
       "source": "/2016/01/23/event-23012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/23/event-23012016",
       "target": "/2016/01/22/event-22012016"
     },
     {
       "source": "/2016/01/23/event-23012016",
       "target": "/2016/01/26/event-26012016"
-    },
-    {
-      "source": "/1980/03/03/hoe",
-      "target": "/"
     },
     {
       "source": "/1980/03/03/hoe",
@@ -5197,19 +3361,11 @@
     },
     {
       "source": "/2016/01/26/event-26012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/26/event-26012016",
       "target": "/2016/01/23/event-23012016"
     },
     {
       "source": "/2016/01/26/event-26012016",
       "target": "/2016/01/28/event-28012016"
-    },
-    {
-      "source": "/2016/01/28/event-28012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/28/event-28012016",
@@ -5221,19 +3377,11 @@
     },
     {
       "source": "/2016/01/29/event-29012016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/01/29/event-29012016",
       "target": "/2016/01/28/event-28012016"
     },
     {
       "source": "/2016/01/29/event-29012016",
       "target": "/2016/01/30/event-30012016"
-    },
-    {
-      "source": "/2016/01/30/event-30012016",
-      "target": "/"
     },
     {
       "source": "/2016/01/30/event-30012016",
@@ -5245,19 +3393,11 @@
     },
     {
       "source": "/2016/02/02/event-02022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/02/event-02022016",
       "target": "/2016/01/30/event-30012016"
     },
     {
       "source": "/2016/02/02/event-02022016",
       "target": "/2016/02/03/event-03022016"
-    },
-    {
-      "source": "/2016/02/03/event-03022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/03/event-03022016",
@@ -5269,19 +3409,11 @@
     },
     {
       "source": "/2016/02/04/event-04022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/04/event-04022016",
       "target": "/2016/02/03/event-03022016"
     },
     {
       "source": "/2016/02/04/event-04022016",
       "target": "/2016/02/05/event-05022016"
-    },
-    {
-      "source": "/2016/02/05/event-05022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/05/event-05022016",
@@ -5293,19 +3425,11 @@
     },
     {
       "source": "/2016/02/08/event-08022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/08/event-08022016",
       "target": "/2016/02/05/event-05022016"
     },
     {
       "source": "/2016/02/08/event-08022016",
       "target": "/2016/02/09/event-09022016"
-    },
-    {
-      "source": "/2016/02/09/event-09022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/09/event-09022016",
@@ -5317,19 +3441,11 @@
     },
     {
       "source": "/2016/02/10/event-10022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/10/event-10022016",
       "target": "/2016/02/09/event-09022016"
     },
     {
       "source": "/2016/02/10/event-10022016",
       "target": "/2016/02/12/event-12022016"
-    },
-    {
-      "source": "/2016/02/12/event-12022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/12/event-12022016",
@@ -5341,19 +3457,11 @@
     },
     {
       "source": "/2016/02/13/event-13022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/13/event-13022016",
       "target": "/2016/02/12/event-12022016"
     },
     {
       "source": "/2016/02/13/event-13022016",
       "target": "/2016/02/14/event-14022016"
-    },
-    {
-      "source": "/2016/02/14/event-14022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/14/event-14022016",
@@ -5365,19 +3473,11 @@
     },
     {
       "source": "/2016/02/17/event-17022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/17/event-17022016",
       "target": "/2016/02/14/event-14022016"
     },
     {
       "source": "/2016/02/17/event-17022016",
       "target": "/2016/02/18/event-18022016"
-    },
-    {
-      "source": "/2016/02/18/event-18022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/18/event-18022016",
@@ -5389,19 +3489,11 @@
     },
     {
       "source": "/2016/02/19/event-19022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/19/event-19022016",
       "target": "/2016/02/18/event-18022016"
     },
     {
       "source": "/2016/02/19/event-19022016",
       "target": "/2016/02/20/event-20022016"
-    },
-    {
-      "source": "/2016/02/20/event-20022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/20/event-20022016",
@@ -5413,19 +3505,11 @@
     },
     {
       "source": "/2016/02/21/event-21022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/21/event-21022016",
       "target": "/2016/02/20/event-20022016"
     },
     {
       "source": "/2016/02/21/event-21022016",
       "target": "/2016/02/22/event-22022016"
-    },
-    {
-      "source": "/2016/02/22/event-22022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/22/event-22022016",
@@ -5437,19 +3521,11 @@
     },
     {
       "source": "/2016/02/23/event-23022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/23/event-23022016",
       "target": "/2016/02/22/event-22022016"
     },
     {
       "source": "/2016/02/23/event-23022016",
       "target": "/2016/02/24/event-24022016"
-    },
-    {
-      "source": "/2016/02/24/event-24022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/24/event-24022016",
@@ -5461,19 +3537,11 @@
     },
     {
       "source": "/2016/02/26/event-26022016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/02/26/event-26022016",
       "target": "/2016/02/24/event-24022016"
     },
     {
       "source": "/2016/02/26/event-26022016",
       "target": "/2016/02/27/event-27022016"
-    },
-    {
-      "source": "/2016/02/27/event-27022016",
-      "target": "/"
     },
     {
       "source": "/2016/02/27/event-27022016",
@@ -5485,19 +3553,11 @@
     },
     {
       "source": "/2016/03/01/event-01032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/01/event-01032016",
       "target": "/2016/02/27/event-27022016"
     },
     {
       "source": "/2016/03/01/event-01032016",
       "target": "/2016/03/02/event-02032016"
-    },
-    {
-      "source": "/2016/03/02/event-02032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/02/event-02032016",
@@ -5509,19 +3569,11 @@
     },
     {
       "source": "/2016/03/04/event-04032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/04/event-04032016",
       "target": "/2016/03/02/event-02032016"
     },
     {
       "source": "/2016/03/04/event-04032016",
       "target": "/2016/03/05/event-05032016"
-    },
-    {
-      "source": "/2016/03/05/event-05032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/05/event-05032016",
@@ -5533,19 +3585,11 @@
     },
     {
       "source": "/2016/03/27/event-27032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/27/event-27032016",
       "target": "/2016/03/26/event-26032016"
     },
     {
       "source": "/2016/03/27/event-27032016",
       "target": "/2016/03/28/event-28032016"
-    },
-    {
-      "source": "/2016/03/07/event-07032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/07/event-07032016",
@@ -5557,19 +3601,11 @@
     },
     {
       "source": "/2016/03/10/event-10032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/10/event-10032016",
       "target": "/2016/03/07/event-07032016"
     },
     {
       "source": "/2016/03/10/event-10032016",
       "target": "/2016/03/11/event-11032016"
-    },
-    {
-      "source": "/2016/03/11/event-11032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/11/event-11032016",
@@ -5581,19 +3617,11 @@
     },
     {
       "source": "/2016/03/12/event-12032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/12/event-12032016",
       "target": "/2016/03/11/event-11032016"
     },
     {
       "source": "/2016/03/12/event-12032016",
       "target": "/2016/03/13/event-13032016"
-    },
-    {
-      "source": "/2016/03/13/event-13032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/13/event-13032016",
@@ -5605,19 +3633,11 @@
     },
     {
       "source": "/2016/03/16/event-16032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/16/event-16032016",
       "target": "/2016/03/13/event-13032016"
     },
     {
       "source": "/2016/03/16/event-16032016",
       "target": "/2016/03/17/event-17032016"
-    },
-    {
-      "source": "/2016/03/17/event-17032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/17/event-17032016",
@@ -5629,19 +3649,11 @@
     },
     {
       "source": "/2016/03/18/event-18032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/18/event-18032016",
       "target": "/2016/03/17/event-17032016"
     },
     {
       "source": "/2016/03/18/event-18032016",
       "target": "/2016/03/19/event-19032016"
-    },
-    {
-      "source": "/2016/03/19/event-19032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/19/event-19032016",
@@ -5653,19 +3665,11 @@
     },
     {
       "source": "/2016/03/22/event-22032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/22/event-22032016",
       "target": "/2016/03/19/event-19032016"
     },
     {
       "source": "/2016/03/22/event-22032016",
       "target": "/2016/03/23/event-23032016"
-    },
-    {
-      "source": "/2016/03/23/event-23032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/23/event-23032016",
@@ -5677,19 +3681,11 @@
     },
     {
       "source": "/2016/03/24/event-24032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/24/event-24032016",
       "target": "/2016/03/23/event-23032016"
     },
     {
       "source": "/2016/03/24/event-24032016",
       "target": "/2016/03/25/event-25032016"
-    },
-    {
-      "source": "/2016/03/25/event-25032016",
-      "target": "/"
     },
     {
       "source": "/2016/03/25/event-25032016",
@@ -5701,10 +3697,6 @@
     },
     {
       "source": "/2016/03/26/event-26032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/26/event-26032016",
       "target": "/2016/03/25/event-25032016"
     },
     {
@@ -5713,19 +3705,11 @@
     },
     {
       "source": "/2016/03/28/event-28032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/28/event-28032016",
       "target": "/2016/03/27/event-27032016"
     },
     {
       "source": "/2016/03/28/event-28032016",
       "target": "/2016/03/29/event-29032016-2"
-    },
-    {
-      "source": "/2016/03/29/event-29032016-2",
-      "target": "/"
     },
     {
       "source": "/2016/03/29/event-29032016-2",
@@ -5737,10 +3721,6 @@
     },
     {
       "source": "/2016/03/30/event-30032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/30/event-30032016",
       "target": "/2016/03/29/event-29032016-2"
     },
     {
@@ -5749,23 +3729,11 @@
     },
     {
       "source": "/2016/03/31/event-31032016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/03/31/event-31032016",
       "target": "/2016/03/30/event-30032016"
     },
     {
       "source": "/2016/03/31/event-31032016",
       "target": "/2016/04/01/event-01042016"
-    },
-    {
-      "source": "/neural-network-status",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/01/event-01042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/01/event-01042016",
@@ -5777,19 +3745,11 @@
     },
     {
       "source": "/2016/04/02/event-02042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/02/event-02042016",
       "target": "/2016/04/01/event-01042016"
     },
     {
       "source": "/2016/04/02/event-02042016",
       "target": "/2016/04/03/event-03042016"
-    },
-    {
-      "source": "/2016/04/03/event-03042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/03/event-03042016",
@@ -5801,19 +3761,11 @@
     },
     {
       "source": "/2016/04/06/event-06042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/06/event-06042016",
       "target": "/2016/04/03/event-03042016"
     },
     {
       "source": "/2016/04/06/event-06042016",
       "target": "/2016/04/08/event-08042016"
-    },
-    {
-      "source": "/2016/04/08/event-08042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/08/event-08042016",
@@ -5829,19 +3781,11 @@
     },
     {
       "source": "/2016/04/09/event-09042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/09/event-09042016",
       "target": "/2016/04/08/event-08042016"
     },
     {
       "source": "/2016/04/09/event-09042016",
       "target": "/2016/04/11/event-11042016"
-    },
-    {
-      "source": "/2016/04/11/event-11042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/11/event-11042016",
@@ -5853,19 +3797,11 @@
     },
     {
       "source": "/2016/04/13/event-13042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/13/event-13042016",
       "target": "/2016/04/11/event-11042016"
     },
     {
       "source": "/2016/04/13/event-13042016",
       "target": "/2016/04/14/event-14042016"
-    },
-    {
-      "source": "/2016/04/14/event-14042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/14/event-14042016",
@@ -5877,10 +3813,6 @@
     },
     {
       "source": "/2016/04/15/event-15042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/15/event-15042016",
       "target": "/2016/04/14/event-14042016"
     },
     {
@@ -5889,19 +3821,11 @@
     },
     {
       "source": "/2016/04/16/event-16042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/16/event-16042016",
       "target": "/2016/04/15/event-15042016"
     },
     {
       "source": "/2016/04/16/event-16042016",
       "target": "/2016/04/20/event-20042016"
-    },
-    {
-      "source": "/2021/02/25/event-25022021",
-      "target": "/"
     },
     {
       "source": "/2021/02/25/event-25022021",
@@ -5917,19 +3841,11 @@
     },
     {
       "source": "/2016/04/20/event-20042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/20/event-20042016",
       "target": "/2016/04/16/event-16042016"
     },
     {
       "source": "/2016/04/20/event-20042016",
       "target": "/2016/04/22/event-22042016"
-    },
-    {
-      "source": "/2016/04/22/event-22042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/22/event-22042016",
@@ -5941,19 +3857,11 @@
     },
     {
       "source": "/2016/04/23/event-23042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/23/event-23042016",
       "target": "/2016/04/22/event-22042016"
     },
     {
       "source": "/2016/04/23/event-23042016",
       "target": "/2016/04/24/event-24042016"
-    },
-    {
-      "source": "/2016/04/24/event-24042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/24/event-24042016",
@@ -5965,19 +3873,11 @@
     },
     {
       "source": "/2016/04/25/event-25042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/25/event-25042016",
       "target": "/2016/04/24/event-24042016"
     },
     {
       "source": "/2016/04/25/event-25042016",
       "target": "/2016/04/26/event-26042016"
-    },
-    {
-      "source": "/2016/04/27/event-27042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/27/event-27042016",
@@ -5989,19 +3889,11 @@
     },
     {
       "source": "/2016/04/29/event-29042016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/04/29/event-29042016",
       "target": "/2016/04/27/event-27042016"
     },
     {
       "source": "/2016/04/29/event-29042016",
       "target": "/2016/05/01/event-01052016"
-    },
-    {
-      "source": "/2016/04/26/event-26042016",
-      "target": "/"
     },
     {
       "source": "/2016/04/26/event-26042016",
@@ -6013,19 +3905,11 @@
     },
     {
       "source": "/2016/05/01/event-01052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/01/event-01052016",
       "target": "/2016/04/29/event-29042016"
     },
     {
       "source": "/2016/05/01/event-01052016",
       "target": "/2016/05/05/event-05052016"
-    },
-    {
-      "source": "/2016/05/05/event-05052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/05/event-05052016",
@@ -6037,19 +3921,11 @@
     },
     {
       "source": "/2016/05/06/event-06052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/06/event-06052016",
       "target": "/2016/05/05/event-05052016"
     },
     {
       "source": "/2016/05/06/event-06052016",
       "target": "/2016/05/07/event-07052016"
-    },
-    {
-      "source": "/2016/05/07/event-07052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/07/event-07052016",
@@ -6061,19 +3937,11 @@
     },
     {
       "source": "/2016/05/09/event-09052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/09/event-09052016",
       "target": "/2016/05/07/event-07052016"
     },
     {
       "source": "/2016/05/09/event-09052016",
       "target": "/2016/05/10/event-10052016"
-    },
-    {
-      "source": "/2016/05/10/event-10052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/10/event-10052016",
@@ -6085,19 +3953,11 @@
     },
     {
       "source": "/2016/05/12/event-12052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/12/event-12052016",
       "target": "/2016/05/11/event-11052016"
     },
     {
       "source": "/2016/05/12/event-12052016",
       "target": "/2016/05/13/event-13052016"
-    },
-    {
-      "source": "/2016/05/11/event-11052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/11/event-11052016",
@@ -6109,19 +3969,11 @@
     },
     {
       "source": "/2016/05/13/event-13052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/13/event-13052016",
       "target": "/2016/05/12/event-12052016"
     },
     {
       "source": "/2016/05/13/event-13052016",
       "target": "/2016/05/14/event-14052016"
-    },
-    {
-      "source": "/2016/05/14/event-14052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/14/event-14052016",
@@ -6133,19 +3985,11 @@
     },
     {
       "source": "/2016/05/16/event-16052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/16/event-16052016",
       "target": "/2016/05/14/event-14052016"
     },
     {
       "source": "/2016/05/16/event-16052016",
       "target": "/2016/05/17/event-17052016"
-    },
-    {
-      "source": "/2016/05/17/event-17052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/17/event-17052016",
@@ -6157,19 +4001,11 @@
     },
     {
       "source": "/2016/05/20/event-20052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/20/event-20052016",
       "target": "/2016/05/17/event-17052016"
     },
     {
       "source": "/2016/05/20/event-20052016",
       "target": "/2016/05/21/event-21052016"
-    },
-    {
-      "source": "/2016/05/21/event-21052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/21/event-21052016",
@@ -6181,19 +4017,11 @@
     },
     {
       "source": "/2016/05/22/event-22052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/22/event-22052016",
       "target": "/2016/05/21/event-21052016"
     },
     {
       "source": "/2016/05/22/event-22052016",
       "target": "/2016/05/23/event-23052016"
-    },
-    {
-      "source": "/2016/05/23/event-23052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/23/event-23052016",
@@ -6205,19 +4033,11 @@
     },
     {
       "source": "/2016/05/25/event-25052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/25/event-25052016",
       "target": "/2016/05/23/event-23052016"
     },
     {
       "source": "/2016/05/25/event-25052016",
       "target": "/2016/05/26/event-26052016"
-    },
-    {
-      "source": "/2016/05/26/event-26052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/26/event-26052016",
@@ -6229,19 +4049,11 @@
     },
     {
       "source": "/2016/05/27/event-27052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/27/event-27052016",
       "target": "/2016/05/26/event-26052016"
     },
     {
       "source": "/2016/05/27/event-27052016",
       "target": "/2016/05/30/event-30052016"
-    },
-    {
-      "source": "/2016/05/30/event-30052016",
-      "target": "/"
     },
     {
       "source": "/2016/05/30/event-30052016",
@@ -6253,19 +4065,11 @@
     },
     {
       "source": "/2016/05/31/event-31052016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/05/31/event-31052016",
       "target": "/2016/05/30/event-30052016"
     },
     {
       "source": "/2016/05/31/event-31052016",
       "target": "/2016/06/01/event-01062016"
-    },
-    {
-      "source": "/2016/06/01/event-01062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/01/event-01062016",
@@ -6277,19 +4081,11 @@
     },
     {
       "source": "/2016/06/04/event-04062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/04/event-04062016",
       "target": "/2016/06/01/event-01062016"
     },
     {
       "source": "/2016/06/04/event-04062016",
       "target": "/2016/06/05/event-05062016"
-    },
-    {
-      "source": "/2016/06/05/event-05062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/05/event-05062016",
@@ -6301,19 +4097,11 @@
     },
     {
       "source": "/2016/06/06/event-06062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/06/event-06062016",
       "target": "/2016/06/05/event-05062016"
     },
     {
       "source": "/2016/06/06/event-06062016",
       "target": "/2016/06/09/event-09062016"
-    },
-    {
-      "source": "/2016/06/09/event-09062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/09/event-09062016",
@@ -6325,19 +4113,11 @@
     },
     {
       "source": "/2016/06/10/event-10062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/10/event-10062016",
       "target": "/2016/06/09/event-09062016"
     },
     {
       "source": "/2016/06/10/event-10062016",
       "target": "/2016/06/12/event-12062016"
-    },
-    {
-      "source": "/2016/06/12/event-12062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/12/event-12062016",
@@ -6349,19 +4129,11 @@
     },
     {
       "source": "/2016/06/13/event-13062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/13/event-13062016",
       "target": "/2016/06/12/event-12062016"
     },
     {
       "source": "/2016/06/13/event-13062016",
       "target": "/2016/06/14/event-14062016"
-    },
-    {
-      "source": "/2016/06/14/event-14062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/14/event-14062016",
@@ -6373,10 +4145,6 @@
     },
     {
       "source": "/2016/06/15/event-15062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/15/event-15062016",
       "target": "/tag/unverified"
     },
     {
@@ -6389,19 +4157,11 @@
     },
     {
       "source": "/2016/06/17/event-17062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/17/event-17062016",
       "target": "/2016/06/15/event-15062016"
     },
     {
       "source": "/2016/06/17/event-17062016",
       "target": "/2016/06/19/event-19062016"
-    },
-    {
-      "source": "/2016/06/19/event-19062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/19/event-19062016",
@@ -6413,19 +4173,11 @@
     },
     {
       "source": "/2016/06/21/event-21062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
       "target": "/2016/06/19/event-19062016"
     },
     {
       "source": "/2016/06/21/event-21062016",
       "target": "/2016/06/22/event-22062016"
-    },
-    {
-      "source": "/2016/06/22/event-22062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/22/event-22062016",
@@ -6437,19 +4189,11 @@
     },
     {
       "source": "/2016/06/23/event-23062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/23/event-23062016",
       "target": "/2016/06/22/event-22062016"
     },
     {
       "source": "/2016/06/23/event-23062016",
       "target": "/2016/06/24/event-24062016"
-    },
-    {
-      "source": "/2016/06/24/event-24062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/24/event-24062016",
@@ -6461,19 +4205,11 @@
     },
     {
       "source": "/2016/06/25/event-25062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/25/event-25062016",
       "target": "/2016/06/24/event-24062016"
     },
     {
       "source": "/2016/06/25/event-25062016",
       "target": "/2016/06/28/event-28062016"
-    },
-    {
-      "source": "/2016/06/28/event-28062016",
-      "target": "/"
     },
     {
       "source": "/2016/06/28/event-28062016",
@@ -6485,19 +4221,11 @@
     },
     {
       "source": "/2016/06/29/event-29062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/29/event-29062016",
       "target": "/2016/06/28/event-28062016"
     },
     {
       "source": "/2016/06/29/event-29062016",
       "target": "/2016/07/02/event-02072016"
-    },
-    {
-      "source": "/2016/07/02/event-02072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/02/event-02072016",
@@ -6509,19 +4237,11 @@
     },
     {
       "source": "/2016/07/04/event-04072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/04/event-04072016",
       "target": "/2016/07/02/event-02072016"
     },
     {
       "source": "/2016/07/04/event-04072016",
       "target": "/2016/07/05/event-05072016"
-    },
-    {
-      "source": "/2016/07/05/event-05072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/05/event-05072016",
@@ -6533,19 +4253,11 @@
     },
     {
       "source": "/2016/07/06/event-06072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/06/event-06072016",
       "target": "/2016/07/05/event-05072016"
     },
     {
       "source": "/2016/07/06/event-06072016",
       "target": "/2016/07/07/event-07072016"
-    },
-    {
-      "source": "/2016/07/09/event-09072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/09/event-09072016",
@@ -6557,19 +4269,11 @@
     },
     {
       "source": "/2016/07/10/event-10072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/10/event-10072016",
       "target": "/2016/07/09/event-09072016"
     },
     {
       "source": "/2016/07/10/event-10072016",
       "target": "/2016/07/12/event-12072016"
-    },
-    {
-      "source": "/2016/07/07/event-07072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/07/event-07072016",
@@ -6581,19 +4285,11 @@
     },
     {
       "source": "/2016/07/12/event-12072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/12/event-12072016",
       "target": "/2016/07/10/event-10072016"
     },
     {
       "source": "/2016/07/12/event-12072016",
       "target": "/2016/07/13/event-13072016"
-    },
-    {
-      "source": "/2016/07/13/event-13072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/13/event-13072016",
@@ -6605,19 +4301,11 @@
     },
     {
       "source": "/2016/07/14/event-14072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/14/event-14072016",
       "target": "/2016/07/13/event-13072016"
     },
     {
       "source": "/2016/07/14/event-14072016",
       "target": "/2016/07/15/event-15072016"
-    },
-    {
-      "source": "/2016/07/15/event-15072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/15/event-15072016",
@@ -6629,19 +4317,11 @@
     },
     {
       "source": "/2016/07/16/event-16072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/16/event-16072016",
       "target": "/2016/07/15/event-15072016"
     },
     {
       "source": "/2016/07/16/event-16072016",
       "target": "/2016/07/18/event-18072016"
-    },
-    {
-      "source": "/2016/07/18/event-18072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/18/event-18072016",
@@ -6653,19 +4333,11 @@
     },
     {
       "source": "/2016/07/19/event-19072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/19/event-19072016",
       "target": "/2016/07/18/event-18072016"
     },
     {
       "source": "/2016/07/19/event-19072016",
       "target": "/2016/07/20/event-20072016"
-    },
-    {
-      "source": "/2016/07/20/event-20072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/20/event-20072016",
@@ -6677,19 +4349,11 @@
     },
     {
       "source": "/2016/07/24/event-24072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/24/event-24072016",
       "target": "/2016/07/20/event-20072016"
     },
     {
       "source": "/2016/07/24/event-24072016",
       "target": "/2016/07/25/event-25072016"
-    },
-    {
-      "source": "/2016/07/25/event-25072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/25/event-25072016",
@@ -6701,19 +4365,11 @@
     },
     {
       "source": "/2016/07/26/event-26072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/26/event-26072016",
       "target": "/2016/07/25/event-25072016"
     },
     {
       "source": "/2016/07/26/event-26072016",
       "target": "/2016/07/27/event-27072016"
-    },
-    {
-      "source": "/2016/07/27/event-27072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/27/event-27072016",
@@ -6725,19 +4381,11 @@
     },
     {
       "source": "/2016/07/29/event-29072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/29/event-29072016",
       "target": "/2016/07/27/event-27072016"
     },
     {
       "source": "/2016/07/29/event-29072016",
       "target": "/2016/07/30/event-30072016"
-    },
-    {
-      "source": "/2016/07/30/event-30072016",
-      "target": "/"
     },
     {
       "source": "/2016/07/30/event-30072016",
@@ -6749,19 +4397,11 @@
     },
     {
       "source": "/2016/07/31/event-31072016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/07/31/event-31072016",
       "target": "/2016/07/30/event-30072016"
     },
     {
       "source": "/2016/07/31/event-31072016",
       "target": "/2016/08/01/event-01082016"
-    },
-    {
-      "source": "/2016/08/01/event-01082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/01/event-01082016",
@@ -6773,19 +4413,11 @@
     },
     {
       "source": "/2016/08/03/event-03082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/03/event-03082016",
       "target": "/2016/08/01/event-01082016"
     },
     {
       "source": "/2016/08/03/event-03082016",
       "target": "/2016/08/04/event-04082016"
-    },
-    {
-      "source": "/2016/08/04/event-04082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/04/event-04082016",
@@ -6797,19 +4429,11 @@
     },
     {
       "source": "/2016/08/05/event-05082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/05/event-05082016",
       "target": "/2016/08/04/event-04082016"
     },
     {
       "source": "/2016/08/05/event-05082016",
       "target": "/2016/08/06/event-06082016"
-    },
-    {
-      "source": "/2016/08/06/event-06082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/06/event-06082016",
@@ -6821,19 +4445,11 @@
     },
     {
       "source": "/2016/08/13/event-13082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/13/event-13082016",
       "target": "/2016/08/06/event-06082016"
     },
     {
       "source": "/2016/08/13/event-13082016",
       "target": "/2016/08/15/event-15082016"
-    },
-    {
-      "source": "/2016/08/15/event-15082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/15/event-15082016",
@@ -6845,19 +4461,11 @@
     },
     {
       "source": "/2016/08/16/event-16082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/16/event-16082016",
       "target": "/2016/08/15/event-15082016"
     },
     {
       "source": "/2016/08/16/event-16082016",
       "target": "/2016/08/17/event-17082016"
-    },
-    {
-      "source": "/2016/08/17/event-17082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/17/event-17082016",
@@ -6869,19 +4477,11 @@
     },
     {
       "source": "/2016/08/20/event-20082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/20/event-20082016",
       "target": "/2016/08/17/event-17082016"
     },
     {
       "source": "/2016/08/20/event-20082016",
       "target": "/2016/08/21/event-21082016"
-    },
-    {
-      "source": "/2016/08/21/event-21082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/21/event-21082016",
@@ -6893,19 +4493,11 @@
     },
     {
       "source": "/2016/08/22/event-22082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/22/event-22082016",
       "target": "/2016/08/21/event-21082016"
     },
     {
       "source": "/2016/08/22/event-22082016",
       "target": "/2016/08/23/event-23082016"
-    },
-    {
-      "source": "/2016/08/23/event-23082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/23/event-23082016",
@@ -6917,19 +4509,11 @@
     },
     {
       "source": "/2016/08/24/event-24082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/24/event-24082016",
       "target": "/2016/08/23/event-23082016"
     },
     {
       "source": "/2016/08/24/event-24082016",
       "target": "/2016/08/26/event-26082016"
-    },
-    {
-      "source": "/2016/08/26/event-26082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/26/event-26082016",
@@ -6941,19 +4525,11 @@
     },
     {
       "source": "/2016/08/28/event-28082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/28/event-28082016",
       "target": "/2016/08/26/event-26082016"
     },
     {
       "source": "/2016/08/28/event-28082016",
       "target": "/2016/08/29/event-29082016"
-    },
-    {
-      "source": "/2016/08/29/event-29082016",
-      "target": "/"
     },
     {
       "source": "/2016/08/29/event-29082016",
@@ -6965,19 +4541,11 @@
     },
     {
       "source": "/2016/08/30/event-30082016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/08/30/event-30082016",
       "target": "/2016/08/29/event-29082016"
     },
     {
       "source": "/2016/08/30/event-30082016",
       "target": "/2016/09/01/event-01092016"
-    },
-    {
-      "source": "/2016/09/01/event-01092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/01/event-01092016",
@@ -6989,19 +4557,11 @@
     },
     {
       "source": "/2016/09/02/event-02092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/02/event-02092016",
       "target": "/2016/09/01/event-01092016"
     },
     {
       "source": "/2016/09/02/event-02092016",
       "target": "/2016/09/04/event-04092016"
-    },
-    {
-      "source": "/2016/09/04/event-04092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/04/event-04092016",
@@ -7013,19 +4573,11 @@
     },
     {
       "source": "/2016/09/06/event-06092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/06/event-06092016",
       "target": "/2016/09/04/event-04092016"
     },
     {
       "source": "/2016/09/06/event-06092016",
       "target": "/2016/09/07/event-07092016"
-    },
-    {
-      "source": "/2016/09/07/event-07092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/07/event-07092016",
@@ -7037,19 +4589,11 @@
     },
     {
       "source": "/2016/09/08/event-08092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/08/event-08092016",
       "target": "/2016/09/07/event-07092016"
     },
     {
       "source": "/2016/09/08/event-08092016",
       "target": "/2016/09/09/event-09092016"
-    },
-    {
-      "source": "/2016/09/09/event-09092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/09/event-09092016",
@@ -7061,19 +4605,11 @@
     },
     {
       "source": "/2016/09/10/event-10092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/10/event-10092016",
       "target": "/2016/09/09/event-09092016"
     },
     {
       "source": "/2016/09/10/event-10092016",
       "target": "/2016/09/12/event-12092016"
-    },
-    {
-      "source": "/2016/09/12/event-12092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/12/event-12092016",
@@ -7085,19 +4621,11 @@
     },
     {
       "source": "/2016/09/13/event-13092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/13/event-13092016",
       "target": "/2016/09/12/event-12092016"
     },
     {
       "source": "/2016/09/13/event-13092016",
       "target": "/2016/09/14/event-14092016"
-    },
-    {
-      "source": "/2016/09/14/event-14092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/14/event-14092016",
@@ -7109,19 +4637,11 @@
     },
     {
       "source": "/2016/09/17/event-17092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/17/event-17092016",
       "target": "/2016/09/14/event-14092016"
     },
     {
       "source": "/2016/09/17/event-17092016",
       "target": "/2016/09/18/event-18092016"
-    },
-    {
-      "source": "/2016/09/18/event-18092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/18/event-18092016",
@@ -7133,19 +4653,11 @@
     },
     {
       "source": "/2016/09/19/event-19092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/19/event-19092016",
       "target": "/2016/09/18/event-18092016"
     },
     {
       "source": "/2016/09/19/event-19092016",
       "target": "/2016/09/22/event-22092016"
-    },
-    {
-      "source": "/2016/09/22/event-22092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/22/event-22092016",
@@ -7157,19 +4669,11 @@
     },
     {
       "source": "/2016/09/23/event-23092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/23/event-23092016",
       "target": "/2016/09/22/event-22092016"
     },
     {
       "source": "/2016/09/23/event-23092016",
       "target": "/2016/09/24/event-24092016"
-    },
-    {
-      "source": "/2016/09/24/event-24092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/24/event-24092016",
@@ -7181,19 +4685,11 @@
     },
     {
       "source": "/2016/09/26/event-26092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/26/event-26092016",
       "target": "/2016/09/24/event-24092016"
     },
     {
       "source": "/2016/09/26/event-26092016",
       "target": "/2016/09/27/event-27092016"
-    },
-    {
-      "source": "/2016/09/27/event-27092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/27/event-27092016",
@@ -7205,19 +4701,11 @@
     },
     {
       "source": "/2016/09/28/event-28092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/28/event-28092016",
       "target": "/2016/09/27/event-27092016"
     },
     {
       "source": "/2016/09/28/event-28092016",
       "target": "/2016/09/29/event-29092016"
-    },
-    {
-      "source": "/2016/09/29/event-29092016",
-      "target": "/"
     },
     {
       "source": "/2016/09/29/event-29092016",
@@ -7229,19 +4717,11 @@
     },
     {
       "source": "/2016/09/30/event-30092016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/09/30/event-30092016",
       "target": "/2016/09/29/event-29092016"
     },
     {
       "source": "/2016/09/30/event-30092016",
       "target": "/2016/10/02/event-02102016"
-    },
-    {
-      "source": "/2016/10/02/event-02102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/02/event-02102016",
@@ -7253,19 +4733,11 @@
     },
     {
       "source": "/2016/10/04/event-04102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/04/event-04102016",
       "target": "/2016/10/02/event-02102016"
     },
     {
       "source": "/2016/10/04/event-04102016",
       "target": "/2016/10/05/event-05102016"
-    },
-    {
-      "source": "/2016/10/05/event-05102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/05/event-05102016",
@@ -7277,19 +4749,11 @@
     },
     {
       "source": "/2016/10/06/event-06102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/06/event-06102016",
       "target": "/2016/10/05/event-05102016"
     },
     {
       "source": "/2016/10/06/event-06102016",
       "target": "/2016/10/07/event-07102016"
-    },
-    {
-      "source": "/2016/10/07/event-07102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/07/event-07102016",
@@ -7301,19 +4765,11 @@
     },
     {
       "source": "/2016/10/09/event-09102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/09/event-09102016",
       "target": "/2016/10/07/event-07102016"
     },
     {
       "source": "/2016/10/09/event-09102016",
       "target": "/2016/10/11/event-11102016"
-    },
-    {
-      "source": "/2016/10/11/event-11102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/11/event-11102016",
@@ -7325,19 +4781,11 @@
     },
     {
       "source": "/2016/10/12/event-12102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/12/event-12102016",
       "target": "/2016/10/11/event-11102016"
     },
     {
       "source": "/2016/10/12/event-12102016",
       "target": "/2016/10/14/event-14102016"
-    },
-    {
-      "source": "/2016/10/14/event-14102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/14/event-14102016",
@@ -7349,19 +4797,11 @@
     },
     {
       "source": "/2016/10/18/event-18102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/18/event-18102016",
       "target": "/2016/10/16/event-16102016"
     },
     {
       "source": "/2016/10/18/event-18102016",
       "target": "/2016/10/20/event-20102016"
-    },
-    {
-      "source": "/2016/10/16/event-16102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/16/event-16102016",
@@ -7373,19 +4813,11 @@
     },
     {
       "source": "/2016/10/20/event-20102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/20/event-20102016",
       "target": "/2016/10/18/event-18102016"
     },
     {
       "source": "/2016/10/20/event-20102016",
       "target": "/2016/10/22/event-22102016"
-    },
-    {
-      "source": "/2016/10/22/event-22102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/22/event-22102016",
@@ -7397,19 +4829,11 @@
     },
     {
       "source": "/2016/10/23/event-23102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/23/event-23102016",
       "target": "/2016/10/22/event-22102016"
     },
     {
       "source": "/2016/10/23/event-23102016",
       "target": "/2016/10/25/event-25102016"
-    },
-    {
-      "source": "/2016/10/25/event-25102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/25/event-25102016",
@@ -7421,10 +4845,6 @@
     },
     {
       "source": "/2016/10/26/event-26102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/26/event-26102016",
       "target": "/2016/10/25/event-25102016"
     },
     {
@@ -7433,19 +4853,11 @@
     },
     {
       "source": "/2016/10/28/event-28102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/28/event-28102016",
       "target": "/2016/10/26/event-26102016"
     },
     {
       "source": "/2016/10/28/event-28102016",
       "target": "/2016/10/30/event-30102016"
-    },
-    {
-      "source": "/2016/10/30/event-30102016",
-      "target": "/"
     },
     {
       "source": "/2016/10/30/event-30102016",
@@ -7461,19 +4873,11 @@
     },
     {
       "source": "/2016/11/02/event-02112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/02/event-02112016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
       "source": "/2016/11/02/event-02112016",
       "target": "/2016/11/07/event-07112016"
-    },
-    {
-      "source": "/2016/11/07/event-07112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/07/event-07112016",
@@ -7485,19 +4889,11 @@
     },
     {
       "source": "/2016/11/09/event-09112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/09/event-09112016",
       "target": "/2016/11/07/event-07112016"
     },
     {
       "source": "/2016/11/09/event-09112016",
       "target": "/2016/11/10/event-10112016"
-    },
-    {
-      "source": "/2016/11/10/event-10112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/10/event-10112016",
@@ -7509,19 +4905,11 @@
     },
     {
       "source": "/2016/11/13/event-13112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/13/event-13112016",
       "target": "/2016/11/10/event-10112016"
     },
     {
       "source": "/2016/11/13/event-13112016",
       "target": "/2016/11/14/event-14112016"
-    },
-    {
-      "source": "/2016/11/14/event-14112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/14/event-14112016",
@@ -7533,19 +4921,11 @@
     },
     {
       "source": "/2016/11/15/event-15112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/15/event-15112016",
       "target": "/2016/11/14/event-14112016"
     },
     {
       "source": "/2016/11/15/event-15112016",
       "target": "/2016/11/16/event-16112016"
-    },
-    {
-      "source": "/2016/11/16/event-16112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/16/event-16112016",
@@ -7557,19 +4937,11 @@
     },
     {
       "source": "/2016/11/17/event-17112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/17/event-17112016",
       "target": "/2016/11/16/event-16112016"
     },
     {
       "source": "/2016/11/17/event-17112016",
       "target": "/2016/11/18/event-18112016"
-    },
-    {
-      "source": "/2016/11/18/event-18112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/18/event-18112016",
@@ -7581,19 +4953,11 @@
     },
     {
       "source": "/2016/11/20/event-20112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/20/event-20112016",
       "target": "/2016/11/18/event-18112016"
     },
     {
       "source": "/2016/11/20/event-20112016",
       "target": "/2016/11/21/event-21112016"
-    },
-    {
-      "source": "/2016/11/21/event-21112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/21/event-21112016",
@@ -7605,19 +4969,11 @@
     },
     {
       "source": "/2016/11/23/event-23112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/23/event-23112016",
       "target": "/2016/11/21/event-21112016"
     },
     {
       "source": "/2016/11/23/event-23112016",
       "target": "/2016/11/24/event-24112016"
-    },
-    {
-      "source": "/2016/11/24/event-24112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/24/event-24112016",
@@ -7629,19 +4985,11 @@
     },
     {
       "source": "/2016/11/25/event-25112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/25/event-25112016",
       "target": "/2016/11/24/event-24112016"
     },
     {
       "source": "/2016/11/25/event-25112016",
       "target": "/2016/11/26/event-26112016"
-    },
-    {
-      "source": "/2016/11/26/event-26112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/26/event-26112016",
@@ -7653,19 +5001,11 @@
     },
     {
       "source": "/2016/11/28/event-28112016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/11/28/event-28112016",
       "target": "/2016/11/26/event-26112016"
     },
     {
       "source": "/2016/11/28/event-28112016",
       "target": "/2016/11/29/event-29112016"
-    },
-    {
-      "source": "/2016/11/29/event-29112016",
-      "target": "/"
     },
     {
       "source": "/2016/11/29/event-29112016",
@@ -7677,19 +5017,11 @@
     },
     {
       "source": "/2016/12/01/event-01122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/01/event-01122016",
       "target": "/2016/11/29/event-29112016"
     },
     {
       "source": "/2016/12/01/event-01122016",
       "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "/2016/12/02/event-02122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/02/event-02122016",
@@ -7701,19 +5033,11 @@
     },
     {
       "source": "/2016/12/05/event-05122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/05/event-05122016",
       "target": "/2016/12/02/event-02122016"
     },
     {
       "source": "/2016/12/05/event-05122016",
       "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "/2016/12/06/event-06122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/06/event-06122016",
@@ -7725,19 +5049,11 @@
     },
     {
       "source": "/2016/12/07/event-07122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/07/event-07122016",
       "target": "/2016/12/06/event-06122016"
     },
     {
       "source": "/2016/12/07/event-07122016",
       "target": "/2016/12/10/event-10122016"
-    },
-    {
-      "source": "/2016/12/10/event-10122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/10/event-10122016",
@@ -7749,10 +5065,6 @@
     },
     {
       "source": "/2016/12/11/event-11122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/11/event-11122016",
       "target": "/2016/12/10/event-10122016"
     },
     {
@@ -7761,19 +5073,11 @@
     },
     {
       "source": "/2016/12/16/event-16122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/16/event-16122016",
       "target": "/2016/12/15/event-15122016"
     },
     {
       "source": "/2016/12/16/event-16122016",
       "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "/2016/12/13/event-13122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/13/event-13122016",
@@ -7785,19 +5089,11 @@
     },
     {
       "source": "/2016/12/14/event-14122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/14/event-14122016",
       "target": "/2016/12/13/event-13122016"
     },
     {
       "source": "/2016/12/14/event-14122016",
       "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "/2016/12/15/event-15122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/15/event-15122016",
@@ -7809,19 +5105,11 @@
     },
     {
       "source": "/2016/12/17/event-17122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/17/event-17122016",
       "target": "/2016/12/16/event-16122016"
     },
     {
       "source": "/2016/12/17/event-17122016",
       "target": "/2016/12/19/event-19122016"
-    },
-    {
-      "source": "/2016/12/19/event-19122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/19/event-19122016",
@@ -7833,19 +5121,11 @@
     },
     {
       "source": "/2016/12/20/event-20122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/20/event-20122016",
       "target": "/2016/12/19/event-19122016"
     },
     {
       "source": "/2016/12/20/event-20122016",
       "target": "/2016/12/22/event-22122016"
-    },
-    {
-      "source": "/2016/12/22/event-22122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/22/event-22122016",
@@ -7857,19 +5137,11 @@
     },
     {
       "source": "/2016/12/23/event-23122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/23/event-23122016",
       "target": "/2016/12/22/event-22122016"
     },
     {
       "source": "/2016/12/23/event-23122016",
       "target": "/2016/12/26/event-26122016"
-    },
-    {
-      "source": "/2016/12/26/event-26122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/26/event-26122016",
@@ -7881,19 +5153,11 @@
     },
     {
       "source": "/2016/12/28/event-28122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/28/event-28122016",
       "target": "/2016/12/26/event-26122016"
     },
     {
       "source": "/2016/12/28/event-28122016",
       "target": "/2016/12/29/event-29122016"
-    },
-    {
-      "source": "/2016/12/29/event-29122016",
-      "target": "/"
     },
     {
       "source": "/2016/12/29/event-29122016",
@@ -7905,27 +5169,11 @@
     },
     {
       "source": "/2016/12/31/event-31122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/31/event-31122016",
       "target": "/2016/12/29/event-29122016"
     },
     {
       "source": "/2016/12/31/event-31122016",
       "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "/report-lon-reality-glitch",
-      "target": "/"
-    },
-    {
-      "source": "/report-lon-reality-glitch",
-      "target": "https://iili.io/CFCOYml.jpg"
-    },
-    {
-      "source": "/2026/06/01/structural-analysis-204649",
-      "target": "/"
     },
     {
       "source": "/2026/06/01/structural-analysis-204649",
@@ -7937,19 +5185,11 @@
     },
     {
       "source": "/2026/06/01/diagnostic-op-morse",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/01/diagnostic-op-morse",
       "target": "/2026/05/31/sec-log-193727"
     },
     {
       "source": "/2026/06/01/diagnostic-op-morse",
       "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "/2026/06/06/structural-analysis-214218",
-      "target": "/"
     },
     {
       "source": "/2026/06/06/structural-analysis-214218",
@@ -7961,7 +5201,7 @@
     },
     {
       "source": "/2026/06/09/diagnostic-180000",
-      "target": "/"
+      "target": "https://wakingtitan.com/"
     },
     {
       "source": "/2026/06/09/diagnostic-180000",
@@ -7973,10 +5213,6 @@
     },
     {
       "source": "/2026/06/11/structural-analysis-152612",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/11/structural-analysis-152612",
       "target": "/2026/06/09/diagnostic-180000"
     },
     {
@@ -7985,31 +5221,11 @@
     },
     {
       "source": "/2026/06/11/diagnostic-192512",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/11/diagnostic-192512",
       "target": "/2026/06/11/structural-analysis-152612"
     },
     {
       "source": "/2026/06/11/diagnostic-192512",
       "target": "/2026/06/13/six-seasons"
-    },
-    {
-      "source": "/report-bru-ent-reunion-peak",
-      "target": "/"
-    },
-    {
-      "source": "/report-par-temporal-merge",
-      "target": "/"
-    },
-    {
-      "source": "/report-par-temporal-merge",
-      "target": "https://iili.io/CC2x7xs.jpg"
-    },
-    {
-      "source": "/2026/05/10/security-log-171453",
-      "target": "/"
     },
     {
       "source": "/2026/05/10/security-log-171453",
@@ -8024,14 +5240,6 @@
       "target": "/2026/05/12/sec-log-120000"
     },
     {
-      "source": "/sec-log-094127-full",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/12/sec-log-120000",
-      "target": "/"
-    },
-    {
       "source": "/2026/05/12/sec-log-120000",
       "target": "/sec-log-094127-full"
     },
@@ -8042,10 +5250,6 @@
     {
       "source": "/2026/05/12/sec-log-120000",
       "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "/2026/05/14/sec-log-172832",
-      "target": "/"
     },
     {
       "source": "/2026/05/14/sec-log-172832",
@@ -8062,10 +5266,6 @@
     {
       "source": "/2026/05/14/sec-log-172832",
       "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "/2005/04/13/quote",
-      "target": "/"
     },
     {
       "source": "/2005/04/13/quote",
@@ -8092,32 +5292,12 @@
       "target": "/2026/05/20/sec-log-132904"
     },
     {
-      "source": "/sec-log-211927-full",
-      "target": "/"
-    },
-    {
-      "source": "/sec-log-211927-full",
-      "target": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180"
-    },
-    {
-      "source": "/2026/05/21/sec-log-170516",
-      "target": "/"
-    },
-    {
       "source": "/2026/05/21/sec-log-170516",
       "target": "/2026/05/20/sec-log-132904"
     },
     {
       "source": "/2026/05/21/sec-log-170516",
       "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "/request-memory-timestamp-094317",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-185027",
-      "target": "/"
     },
     {
       "source": "/2026/05/27/sec-log-185027",
@@ -8129,23 +5309,11 @@
     },
     {
       "source": "/2026/05/27/sec-log-reboot",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/27/sec-log-reboot",
       "target": "/2026/05/27/sec-log-access-granted"
     },
     {
       "source": "/2026/05/27/sec-log-reboot",
       "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "/inbox",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/29/sec-log-114327",
-      "target": "/"
     },
     {
       "source": "/2026/05/29/sec-log-114327",
@@ -8154,10 +5322,6 @@
     {
       "source": "/2026/05/29/sec-log-114327",
       "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "/2002/05/12/code",
-      "target": "/"
     },
     {
       "source": "/2002/05/12/code",
@@ -8173,19 +5337,11 @@
     },
     {
       "source": "/2026/05/31/sec-log-193727",
-      "target": "/"
-    },
-    {
-      "source": "/2026/05/31/sec-log-193727",
       "target": "/2026/05/30/sec-log-memory-sector-access"
     },
     {
       "source": "/2026/05/31/sec-log-193727",
       "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "/2018/07/24/2018_dataset",
-      "target": "/"
     },
     {
       "source": "/2018/07/24/2018_dataset",
@@ -8201,10 +5357,6 @@
     },
     {
       "source": "/2017/07/21/event-21072017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
       "target": "/tag/unverified"
     },
     {
@@ -8217,19 +5369,11 @@
     },
     {
       "source": "/2026/06/02/sec-log-194022",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/02/sec-log-194022",
       "target": "/2026/06/01/structural-analysis-204649"
     },
     {
       "source": "/2026/06/02/sec-log-194022",
       "target": "/2026/06/06/sec-log-110328"
-    },
-    {
-      "source": "/2017/07/08/2017_dataset",
-      "target": "/"
     },
     {
       "source": "/2017/07/08/2017_dataset",
@@ -8249,19 +5393,11 @@
     },
     {
       "source": "/2026/06/06/sec-log-110328",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/06/sec-log-110328",
       "target": "/2026/06/02/sec-log-194022"
     },
     {
       "source": "/2026/06/06/sec-log-110328",
       "target": "/2026/06/06/structural-analysis-214218"
-    },
-    {
-      "source": "/2016/10/30/2016_dataset-in-memoriam",
-      "target": "/"
     },
     {
       "source": "/2016/10/30/2016_dataset-in-memoriam",
@@ -8281,10 +5417,6 @@
     },
     {
       "source": "/2022/04/24/event-24042022",
-      "target": "/"
-    },
-    {
-      "source": "/2022/04/24/event-24042022",
       "target": "https://youtu.be/R6432N12W2E?t=1375"
     },
     {
@@ -8298,10 +5430,6 @@
     {
       "source": "/2022/04/24/event-24042022",
       "target": "/2023/09/26/event-26092023"
-    },
-    {
-      "source": "/1980/03/10/insert-coin",
-      "target": "/"
     },
     {
       "source": "/1980/03/10/insert-coin",
@@ -8321,10 +5449,6 @@
     },
     {
       "source": "/2026/06/09/structural-analysis-133722",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/09/structural-analysis-133722",
       "target": "/report-bru-ent-reunion-peak"
     },
     {
@@ -8341,19 +5465,11 @@
     },
     {
       "source": "/1958/04/17/event-17041958",
-      "target": "/"
-    },
-    {
-      "source": "/1958/04/17/event-17041958",
       "target": "/neural-network-status"
     },
     {
       "source": "/1958/04/17/event-17041958",
       "target": "/1970/01/01/origin"
-    },
-    {
-      "source": "/2017/05/28/waking-titan",
-      "target": "/"
     },
     {
       "source": "/2017/05/28/waking-titan",
@@ -8369,19 +5485,11 @@
     },
     {
       "source": "/2023/09/26/event-26092023",
-      "target": "/"
-    },
-    {
-      "source": "/2023/09/26/event-26092023",
       "target": "/2022/04/24/event-24042022"
     },
     {
       "source": "/2023/09/26/event-26092023",
       "target": "/2026/03/24/sleep-mode-46105"
-    },
-    {
-      "source": "/2026/06/13/six-seasons",
-      "target": "/"
     },
     {
       "source": "/2026/06/13/six-seasons",
@@ -8397,10 +5505,6 @@
     },
     {
       "source": "/2026/06/14/sec-log-014527",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/14/sec-log-014527",
       "target": "/2026/06/13/six-seasons"
     },
     {
@@ -8409,103 +5513,7 @@
     },
     {
       "source": "/2026/06/14/diagnostic-130321",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/14/diagnostic-130321",
       "target": "/2026/06/14/sec-log-014527"
-    },
-    {
-      "source": "/project-skyscraper",
-      "target": "/"
-    },
-    {
-      "source": "/logo",
-      "target": "/"
-    },
-    {
-      "source": "/tr4ce",
-      "target": "/"
-    },
-    {
-      "source": "/only-dust-remain",
-      "target": "/"
-    },
-    {
-      "source": "/8740677a9483",
-      "target": "/"
-    },
-    {
-      "source": "/53a05806675f",
-      "target": "/"
-    },
-    {
-      "source": "/b1c9e4f072a5",
-      "target": "/"
-    },
-    {
-      "source": "/12dd862fd254",
-      "target": "/"
-    },
-    {
-      "source": "/a7e9f3b8c2d6",
-      "target": "/"
-    },
-    {
-      "source": "/4e2b91d8a370",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/about"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/inbox"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-bru-ent-reunion-peak"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-lon-reality-glitch"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-par-temporal-merge"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-211927-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sleep-mode"
-    },
-    {
-      "source": "/2023/12/12/event-12122023",
-      "target": "/"
     },
     {
       "source": "/2023/12/12/event-12122023",
