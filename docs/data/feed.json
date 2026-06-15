@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-15T14:14:30+00:00",
+      "title": "2017_dataset",
+      "link": "https://project-skyscraper.com/2017/07/21/event-21072017/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"classes\": []\n  },\n  {\n+ \"url\": \"https://project-skyscraper.com/2026/06/09/diagnostic-180000/\",\n+ \"url_meta\": {\n+ \"origin\": 2420,\n+ \"position\": 2\n+ },\n+ \"title\": \"DIAGNOSTIC\",\n+ \"date\": \"9 June 2026\",\n+ \"excerpt\": \"memory bloc : Weak memories never lastThere is only debris.ERROR 1016\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2026/06/02/sec-log-194022/\",\n  \"url_meta\": {\n  \"origin\": 2420,\n- \"position\": 2\n- Current state: weak\n+ Current state: unverified\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 240/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_robots_txt_changed",
       "timestamp": "2026-06-15T11:13:12.645474+00:00",
       "title": "robots.txt captured for wakingtitan.com",
@@ -5600,5 +5613,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-15T11:13:12.654498+00:00"
+  "updated": "2026-06-15T14:14:46.088712+00:00"
 }
