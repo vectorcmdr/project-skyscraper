@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-06-15T19:29:08+00:00",
+      "title": "2016_dataset_10022016",
+      "link": "https://project-skyscraper.com/2016/02/10/event-10022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1455062400: Galactic cannibalismValue: Fragments of a galactic epoch\n+ memory bloc 1455062400: Galactic convergenceValue: Fragments of a galactic epoch\n- Memory compliance: 80%\n+ Memory compliance: 100%\n- memory bloc : Galactic cannibalism Value: Fragments of a galactic epoch Large galaxies grow by eating small ones. Even our own galaxy practices galactic cannibalism, absorbing small galaxies that get too close and are captured by the Milky Way’s gravity. Memory compliance: 80%\n+ memory bloc : Galactic convergence Value: Fragments of a galactic epoch Large galaxies grow by eating small ones. Even our own galaxy practices galactic cannibalism, absorbing small galaxies that get too close and are captured by the Milky Way’s gravity. Memory compliance: 100%\n- memory bloc 1455062400: Galactic cannibalismValue: Fragments of a galactic epoch\n+ memory bloc 1455062400: Galactic convergenceValue: Fragments of a galactic epoch\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 240/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-06-15T19:26:01+00:00",
       "title": "2016_dataset_10022016",
       "link": "https://project-skyscraper.com/2016/02/10/event-10022016/",
@@ -5925,5 +5938,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-15T19:26:19.022788+00:00"
+  "updated": "2026-06-15T19:29:24.893454+00:00"
 }
