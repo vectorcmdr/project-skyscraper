@@ -241,11 +241,11 @@ body {
 .fold-box {
   flex: 1;
   background: #0a0a0a;
-  border: 1px solid #333;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%);
   transition: clip-path 0.4s ease;
   overflow: hidden;
   position: relative;
+  filter: drop-shadow(1px 0 0 #333) drop-shadow(-1px 0 0 #333) drop-shadow(0 1px 0 #333) drop-shadow(0 -1px 0 #333);
 }
 .fold-box.folded {
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, calc(100% - 20px) 0%, 0% 0%);
@@ -286,11 +286,26 @@ body {
   background: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 8px,
-    rgba(255,255,255,0.04) 8px,
-    rgba(255,255,255,0.04) 16px
+    transparent 4px,
+    rgba(255,255,255,0.03) 4px,
+    rgba(255,255,255,0.03) 8px
   );
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Inner danger stripe bar at bottom of each warning block */
+.warn-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 6px, var(--stripe-color) 6px, var(--stripe-color) 12px);
+  pointer-events: none;
+  z-index: 2;
+  border-top: 1px solid rgba(0,0,0,0.3);
 }
 .warn-inner {
   position: relative;
@@ -318,29 +333,27 @@ body {
   color: #888;
 }
 
-.warn-danger     { background: #1a0000; border-color: #d00; }
+.warn-danger     { background: #1a0000; border-color: #d00; --stripe-color: rgba(255,0,0,0.15); }
 .warn-danger .warn-kanji { color: #ff2222; }
 .warn-danger .warn-label { color: #ff2222; }
 
-.warn-caution    { background: #1a1000; border-color: #aa6600; }
+.warn-caution    { background: #1a1000; border-color: #aa6600; --stripe-color: rgba(255,170,0,0.15); }
 .warn-caution .warn-kanji { color: #ffaa00; }
 .warn-caution .warn-label { color: #ffaa00; }
 
-.warn-intrusion  { background: #0a001a; border-color: #6600aa; }
+.warn-intrusion  { background: #0a001a; border-color: #6600aa; --stripe-color: rgba(170,68,255,0.15); }
 .warn-intrusion .warn-kanji { color: #aa44ff; }
 .warn-intrusion .warn-label { color: #aa44ff; }
 
-.warn-surveil    { background: #00100a; border-color: #006644; }
+.warn-surveil    { background: #00100a; border-color: #006644; --stripe-color: rgba(0,204,136,0.15); }
 .warn-surveil .warn-kanji { color: #00cc88; }
 .warn-surveil .warn-label { color: #00cc88; }
 
-.warn-globe      { background: #000a1a; border-color: #004488; }
-.warn-danger .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,0,0,0.08) 8px, rgba(255,0,0,0.08) 16px); }
-.warn-caution .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,170,0,0.08) 8px, rgba(255,170,0,0.08) 16px); }
-.warn-intrusion .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(170,68,255,0.08) 8px, rgba(170,68,255,0.08) 16px); }
-.warn-surveil .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,204,136,0.08) 8px, rgba(0,204,136,0.08) 16px); }
-.warn-globe .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(0,100,255,0.08) 8px, rgba(0,100,255,0.08) 16px); }
-.warn-biohazard .warn-stripes { background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,68,136,0.08) 8px, rgba(255,68,136,0.08) 16px); }
+.warn-globe      { background: #000a1a; border-color: #004488; --stripe-color: rgba(0,100,255,0.15); }
+
+.warn-biohazard  { background: #1a0010; border-color: #880044; --stripe-color: rgba(255,68,136,0.15); }
+.warn-biohazard .warn-kanji { color: #ff4488; }
+.warn-biohazard .warn-label { color: #ff4488; }
 
 .warn-biohazard  { background: #1a0010; border-color: #880044; }
 .warn-biohazard .warn-kanji { color: #ff4488; }
@@ -385,6 +398,7 @@ body {
   height: 100%;
   border: 1px solid #333;
   background: #0a0a0a;
+  transition: transform 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;

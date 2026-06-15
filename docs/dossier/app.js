@@ -57,19 +57,21 @@ function initCyberbrain() {
   light2.position.set(-3, -2, 1);
   scene.add(light2);
 
-  /* ---- Sphere with diagonal scanline reveal shader ---- */
-  const sphereGeo = new THREE.SphereGeometry(2.0, 64, 48);
+  /* ---- Sphere with grid lines + diagonal sweep scanline ---- */
+  const sphereGeo = new THREE.SphereGeometry(2.0, 48, 32);
   const sphereMat = new THREE.ShaderMaterial({
     uniforms: {
       uTime: { value: 0 },
       uColor1: { value: new THREE.Color(0x00ff66) },
-      uColor2: { value: new THREE.Color(0x004422) },
-      uScanColor: { value: new THREE.Color(0x88ffaa) },
+      uColor2: { value: new THREE.Color(0x003318) },
+      uGridColor: { value: new THREE.Color(0x00cc66) },
+      uScanColor: { value: new THREE.Color(0x88ffbb) },
     },
     transparent: true,
-    opacity: 0.5,
+    opacity: 1.0,
     side: THREE.DoubleSide,
     depthWrite: false,
+    wireframe: false,
     vertexShader: `
       varying vec2 vUv;
       varying vec3 vNormal;
@@ -83,31 +85,29 @@ function initCyberbrain() {
       uniform float uTime;
       uniform vec3 uColor1;
       uniform vec3 uColor2;
+      uniform vec3 uGridColor;
       uniform vec3 uScanColor;
       varying vec2 vUv;
       varying vec3 vNormal;
 
       void main() {
-        float diag = (vUv.x + vUv.y) * 0.5;
-        float scanPos = fract(uTime * 0.12);
-        float width = 0.08;
+        vec3 base = mix(uColor1, uColor2, vUv.y);
+        base *= 0.6;
 
-        float scan = smoothstep(scanPos - width, scanPos, diag)
-                   - smoothstep(scanPos, scanPos + width, diag);
+        float gridX = step(0.94, abs(fract(vUv.x * 6.0 + 0.5) - 0.5) * 2.0);
+        float gridY = step(0.94, abs(fract(vUv.y * 4.0 + 0.5) - 0.5) * 2.0);
+        float grid = max(gridX, gridY) * 0.5;
 
-        float reveal = smoothstep(0.0, 1.0, (diag - scanPos + 0.3) / 0.3);
-        reveal = clamp(reveal, 0.0, 1.0);
-
-        float gap = 1.0 - scan * 0.7;
+        float diag = vUv.x * 0.6 + vUv.y * 0.4;
+        float sweep = fract(diag + uTime * 0.06);
+        float scan = smoothstep(0.0, 0.025, sweep) - smoothstep(0.025, 0.05, sweep);
 
         float rim = 1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
-        rim = pow(rim, 2.0) * 0.5;
+        rim = pow(rim, 2.0) * 0.3;
 
-        vec3 color = mix(uColor1, uColor2, vUv.y);
-        color = mix(color, uScanColor, scan * 0.9);
-        color += rim * vec3(0.2, 0.8, 0.3);
+        vec3 color = base + grid * uGridColor + scan * uScanColor + rim * uGridColor * 0.5;
+        float alpha = 0.12 + grid * 0.3 + rim * 0.25 + scan * 0.7;
 
-        float alpha = (0.1 + rim * 0.4) * reveal * gap + scan * 0.5;
         gl_FragColor = vec4(color, alpha);
       }
     `,
@@ -120,7 +120,7 @@ function initCyberbrain() {
   const ringMat = new THREE.MeshBasicMaterial({
     color: 0x00ff66,
     transparent: true,
-    opacity: 0.2,
+    opacity: 0.15,
   });
   const ring = new THREE.Mesh(ringGeo, ringMat);
   ring.rotation.x = Math.PI / 3;
@@ -145,20 +145,14 @@ function initCyberbrain() {
   }
 
   let brainPoints = [];
-  /* Left hemisphere */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.1, 0, 0.75, 0.55, 0.45, 180));
-  /* Right hemisphere */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.1, 0, 0.75, 0.55, 0.45, 180));
-  /* Frontal poles */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, 0.05, 0.8, 0.4, 0.35, 0.25, 60));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.3, 0.05, 0.8, 0.4, 0.35, 0.25, 60));
-  /* Temporal lobes */
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.9, -0.1, 0.15, 0.2, 0.25, 0.35, 50));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.9, -0.1, 0.15, 0.2, 0.25, 0.35, 50));
-  /* Cerebellum */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.45, -0.45, 0.35, 0.2, 0.25, 50));
-  /* Brainstem */
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.85, -0.1, 0.12, 0.2, 0.12, 20));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.15, 0, 0.75, 0.6, 0.55, 250));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.15, 0, 0.75, 0.6, 0.55, 250));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, 0.1, 0.85, 0.45, 0.4, 0.3, 80));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.3, 0.1, 0.85, 0.45, 0.4, 0.3, 80));
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.95, -0.05, 0.2, 0.22, 0.28, 0.35, 70));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.95, -0.05, 0.2, 0.22, 0.28, 0.35, 70));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.5, 0.4, 0.22, 0.3, 60));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.8, -0.1, 0.14, 0.25, 0.14, 30));
 
   const particlePos = new Float32Array(brainPoints.length * 3);
   const particleCol = new Float32Array(brainPoints.length * 3);
@@ -167,9 +161,9 @@ function initCyberbrain() {
     particlePos[i*3+1] = brainPoints[i].y;
     particlePos[i*3+2] = brainPoints[i].z;
     const b = 0.3 + Math.random() * 0.7;
-    particleCol[i*3] = 0.1 + Math.random() * 0.2;
-    particleCol[i*3+1] = 0.3 + b * 0.6;
-    particleCol[i*3+2] = 0.1 + Math.random() * 0.15;
+    particleCol[i*3] = 0.05 + Math.random() * 0.15;
+    particleCol[i*3+1] = 0.2 + b * 0.6;
+    particleCol[i*3+2] = 0.05 + Math.random() * 0.1;
   }
 
   const pGeo = new THREE.BufferGeometry();
@@ -177,10 +171,10 @@ function initCyberbrain() {
   pGeo.setAttribute('color', new THREE.BufferAttribute(particleCol, 3));
 
   const pMat = new THREE.PointsMaterial({
-    size: 0.055,
+    size: 0.04,
     vertexColors: true,
     transparent: true,
-    opacity: 0.9,
+    opacity: 0.85,
     blending: THREE.AdditiveBlending,
     depthWrite: false,
   });
@@ -192,7 +186,7 @@ function initCyberbrain() {
   for (let i = 0; i < brainPoints.length; i++) {
     for (let j = i + 1; j < brainPoints.length; j++) {
       const d = brainPoints[i].distanceTo(brainPoints[j]);
-      if (d < 0.35 && Math.random() < 0.12) {
+      if (d < 0.3 && Math.random() < 0.08) {
         connPos.push(brainPoints[i].x, brainPoints[i].y, brainPoints[i].z);
         connPos.push(brainPoints[j].x, brainPoints[j].y, brainPoints[j].z);
       }
@@ -203,7 +197,7 @@ function initCyberbrain() {
   const cMat = new THREE.LineBasicMaterial({
     color: 0x00cc66,
     transparent: true,
-    opacity: 0.12,
+    opacity: 0.08,
   });
   const connections = new THREE.LineSegments(cGeo, cMat);
   brainGroup.add(connections);
@@ -377,7 +371,7 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
-  const cols = 10, rows = 16;
+  const cols = 20, rows = 7;
   let cells = [];
   let targets = [];
   let dims;
@@ -416,8 +410,8 @@ function initNeuralGrid() {
     const gap = 4;
     const cellW = (cw - gap * (cols + 1)) / cols;
     const cellH = (ch - gap * (rows + 1)) / rows;
-    const drawW = cellW * 0.6;
-    const drawH = cellH * 1.3;
+    const drawW = cellW * 1.3;
+    const drawH = cellH * 0.7;
 
     let lit = 0;
     for (let r = 0; r < rows; r++) {
@@ -478,22 +472,6 @@ function initFoldingPanel() {
     box.classList.toggle('folded', folded);
     bar.innerHTML = folded ? '&#9660; EXPAND' : '&#9650; COLLAPSE';
   });
-}
-
-/* ===== 4a. CORNER MARKER (drawn on fold-box cut corner) ===== */
-function initCornerMarker() {
-  const box = document.getElementById('foldBox');
-  if (!box) return;
-  const foldContent = box.querySelector('.fold-content');
-  if (!foldContent) return;
-
-  const marker = document.createElement('div');
-  marker.style.cssText = 'position:absolute;bottom:0;right:0;z-index:3;pointer-events:none;';
-  marker.innerHTML =
-    '<svg width="20" height="20" viewBox="0 0 20 20">' +
-      '<polyline points="0,20 20,20 20,0" fill="none" stroke="#d00" stroke-width="1" opacity="0.6"/>' +
-    '</svg>';
-  foldContent.appendChild(marker);
 }
 
 /* ===== 5. SPINNING GLOBE (inside warning blocks) ===== */
@@ -705,19 +683,29 @@ function initShuffleDeck() {
 
   if (cards.length < 3) return;
 
-  cards.forEach((card, i) => {
-    card.style.transform = 'translate(0, 0)';
-    card.style.zIndex = 3 - i;
-  });
+  const stackOffsets = [
+    { x: -8, y: -6 },
+    { x: 0, y: 0 },
+    { x: 8, y: 6 },
+  ];
 
-  function cycle() {
-    const top = cards.shift();
-    cards.push(top);
+  function applyPositions() {
     cards.forEach((card, i) => {
+      const o = stackOffsets[i];
+      card.style.transform = `translate(${o.x}px, ${o.y}px)`;
       card.style.zIndex = 3 - i;
     });
   }
 
+  function cycle() {
+    const last = stackOffsets.pop();
+    stackOffsets.unshift(last);
+    const lastCard = cards.pop();
+    cards.unshift(lastCard);
+    applyPositions();
+  }
+
+  applyPositions();
   setInterval(cycle, 3000);
 }
 
@@ -752,7 +740,7 @@ function initDnaScanner() {
     const numRows = Math.ceil(h / rowH) + 2;
     const cols = Math.floor(w / 10);
 
-    scrollY += 0.6;
+    scrollY += 0.18;
 
     for (let r = -1; r < numRows; r++) {
       const y = r * rowH - (scrollY % rowH);
@@ -842,6 +830,8 @@ function initDataStream() {
         trail: 10 + Math.floor(Math.random() * 20),
         word: words[Math.floor(Math.random() * words.length)],
         wordTimer: 0,
+        freezeTimer: 0,
+        frozen: false,
       });
     }
     columns.length = numCols;
@@ -866,15 +856,30 @@ function initDataStream() {
       col.delay -= 1;
       if (col.delay > 0) return;
 
-      col.y += col.speed;
-      col.wordTimer -= 1;
+      if (col.frozen) {
+        col.freezeTimer -= 1;
+        if (col.freezeTimer <= 0) {
+          col.frozen = false;
+          col.freezeTimer = 0;
+        }
+      }
+
+      if (!col.frozen) {
+        col.y += col.speed;
+        col.wordTimer -= 1;
+      }
 
       if (col.y > h + 20) {
         col.y = -20;
         col.speed = 0.5 + Math.random() * 2;
         col.word = words[Math.floor(Math.random() * words.length)];
-        col.wordTimer = 30 + Math.floor(Math.random() * 60);
+        col.wordTimer = 20 + Math.floor(Math.random() * 40);
         col.delay = Math.random() * 30;
+      }
+
+      if (col.wordTimer > 0 && !col.frozen && col.y > fontSize * 2) {
+        col.frozen = true;
+        col.freezeTimer = col.wordTimer + 5;
       }
 
       const x = ci * colW + colW / 2;
@@ -884,21 +889,34 @@ function initDataStream() {
         if (ty < -fontSize || ty > h + fontSize) continue;
         const alpha = 1 - (i / col.trail);
         const fade = alpha * alpha;
-        if (i === 0) {
-          ctx.fillStyle = `rgba(255,200,200,${fade})`;
-          ctx.shadowColor = 'rgba(255,0,0,0.5)';
-          ctx.shadowBlur = 6;
-        } else {
-          ctx.fillStyle = `rgba(255,${Math.floor(100 * fade)},${Math.floor(50 * fade)},${fade * 0.6})`;
-          ctx.shadowBlur = 0;
-        }
 
+        let isWord = false;
         let ch;
-        if (i === 0 && col.wordTimer > 0 && i < col.word.length) {
+        if (col.frozen && i < col.word.length) {
+          ch = col.word[i];
+          isWord = true;
+        } else if (!col.frozen && i === 0 && col.wordTimer > 0 && i < col.word.length) {
           ch = col.word[i];
         } else {
           ch = chars[Math.floor(Math.random() * chars.length)];
         }
+
+        if (isWord) {
+          ctx.fillStyle = `rgba(255,255,255,${0.9 + fade * 0.1})`;
+          ctx.shadowColor = 'rgba(255,0,0,0.8)';
+          ctx.shadowBlur = 10;
+          ctx.font = `bold ${fontSize + 2}px monospace`;
+        } else if (i === 0) {
+          ctx.fillStyle = `rgba(255,200,200,${fade})`;
+          ctx.shadowColor = 'rgba(255,0,0,0.5)';
+          ctx.shadowBlur = 6;
+          ctx.font = `${fontSize}px monospace`;
+        } else {
+          ctx.fillStyle = `rgba(255,${Math.floor(100 * fade)},${Math.floor(50 * fade)},${fade * 0.6})`;
+          ctx.shadowBlur = 0;
+          ctx.font = `${fontSize}px monospace`;
+        }
+
         ctx.fillText(ch, x, ty);
       }
       ctx.shadowBlur = 0;
@@ -934,7 +952,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initWaveform();
   initNeuralGrid();
   initFoldingPanel();
-  initCornerMarker();
   initGlobe();
   initGaugeGrid();
   initShuffleDeck();
