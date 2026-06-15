@@ -259,7 +259,7 @@ function initCyberbrain() {
 
   brainGroup.scale.set(1.75, 1.75, 1.75);
   brainGroup.position.y = -0.05;
-  scene.add(brainGroup);
+  sphere.add(brainGroup);
 
   /* ---- Stars background ---- */
   const starCount = 800;
@@ -297,7 +297,6 @@ function initCyberbrain() {
     sphereMat.uniforms.uTime.value = t;
     sphere.rotation.y = t * 0.025;
     ring.rotation.z = t * 0.02;
-    brainGroup.rotation.y = sphere.rotation.y;
 
     controls.update();
     renderer.render(scene, camera);
@@ -767,12 +766,22 @@ function initDnaScanner() {
   let rollerAngle = 0;
   const charH = 14;
   const tapeWidthRatio = 0.85;
+  let charCache = {};
 
   function resize() {
     dims = resizeCanvas(canvas, container);
+    charCache = {};
   }
   resize();
   window.addEventListener('resize', resize);
+
+  function getChar(r, c) {
+    const key = `${r},${c}`;
+    if (!charCache[key]) {
+      charCache[key] = chars[Math.floor(Math.random() * chars.length)];
+    }
+    return charCache[key];
+  }
 
   function draw() {
     const ctx = canvas.getContext('2d');
@@ -784,17 +793,17 @@ function initDnaScanner() {
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, w, h);
 
-    /* Tape belt dimensions */
+    /* Tape belt dimensions — small rollers, tape fills most of height */
     const tw = Math.round(w * tapeWidthRatio);
     const tx = Math.round((w - tw) / 2);
-    const rollerR = Math.round(tw * 0.14);
-    const rollerY = rollerR + 6;
-    const tapeTop = rollerY + rollerR + 2;
-    const tapeBot = h - rollerY - rollerR - 2;
+    const rollerR = Math.round(tw * 0.10);
+    const rollerY = rollerR + 2;
+    const tapeTop = rollerY + rollerR;
+    const tapeBot = h - rollerY - rollerR;
     const tapeH = tapeBot - tapeTop;
 
-    scrollY += 0.8;
-    rollerAngle += 0.06;
+    scrollY += 0.4;
+    rollerAngle += 0.04;
 
     /* Tape background */
     ctx.fillStyle = '#0a0a0a';
@@ -816,51 +825,54 @@ function initDnaScanner() {
     ctx.moveTo(tx + tw - 2, tapeTop); ctx.lineTo(tx + tw - 2, tapeBot);
     ctx.stroke();
 
-    /* DNA characters on the tape */
+    /* DNA characters scrolling down the tape */
     const cols = Math.max(1, Math.floor((tw - 8) / 11));
     const numRows = Math.ceil(tapeH / charH) + 2;
     ctx.font = '10px monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
+    const rowOffset = Math.floor(scrollY / charH);
+    const pixelOffset = scrollY % charH;
+
     for (let r = -1; r < numRows; r++) {
-      const y = tapeTop + r * charH - (scrollY % charH);
+      const y = tapeTop + r * charH - pixelOffset;
       if (y < tapeTop - charH || y > tapeBot + charH) continue;
 
-      const fadeMargin = 24;
+      const fadeMargin = 20;
       let rowAlpha = 1;
       const distTop = y - tapeTop;
       const distBot = tapeBot - y;
       if (distTop < fadeMargin) rowAlpha = Math.max(0, distTop / fadeMargin);
       if (distBot < fadeMargin) rowAlpha = Math.min(rowAlpha, Math.max(0, distBot / fadeMargin));
 
-      const hue = 180 + Math.sin(r * 1.3 + scrollY * 0.05) * 20;
+      const hue = 180 + Math.sin(r * 1.3 + scrollY * 0.02) * 20;
 
       for (let c = 0; c < cols; c++) {
         const x = tx + 6 + c * 11 + Math.round(11 / 2);
-        const ch = chars[Math.floor(Math.random() * chars.length)];
-        const flicker = 0.6 + Math.random() * 0.4;
-        ctx.fillStyle = `hsla(${hue}, 80%, ${45 + flicker * 25}%, ${rowAlpha * flicker * 0.9})`;
+        const ch = getChar(r + rowOffset, c);
+        const flicker = 0.7 + Math.random() * 0.3;
+        ctx.fillStyle = `hsla(${hue}, 80%, ${50 + flicker * 20}%, ${rowAlpha * flicker * 0.85})`;
         ctx.fillText(ch, x, y + charH / 2);
       }
     }
 
     /* Fade gradients at tape top/bottom (blend into rollers) */
-    const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + fadeMargin);
+    const fadePx = 20;
+    const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + fadePx);
     gradTop.addColorStop(0, '#080808');
     gradTop.addColorStop(1, 'transparent');
     ctx.fillStyle = gradTop;
-    ctx.fillRect(tx, tapeTop, tw, fadeMargin);
+    ctx.fillRect(tx, tapeTop, tw, fadePx);
 
-    const gradBot = ctx.createLinearGradient(0, tapeBot, 0, tapeBot - fadeMargin);
+    const gradBot = ctx.createLinearGradient(0, tapeBot, 0, tapeBot - fadePx);
     gradBot.addColorStop(0, '#080808');
     gradBot.addColorStop(1, 'transparent');
     ctx.fillStyle = gradBot;
-    ctx.fillRect(tx, tapeBot - fadeMargin, tw, fadeMargin);
+    ctx.fillRect(tx, tapeBot - fadePx, tw, fadePx);
 
     /* ---- Top roller ---- */
     const cxa = Math.round(tx + tw / 2);
-    /* Outer ring */
     ctx.shadowColor = 'rgba(0,200,150,0.2)';
     ctx.shadowBlur = 8;
     ctx.strokeStyle = 'rgba(0,200,150,0.55)';
@@ -870,16 +882,14 @@ function initDnaScanner() {
     ctx.stroke();
     ctx.shadowBlur = 0;
 
-    /* Inner ring */
     ctx.strokeStyle = 'rgba(0,200,150,0.15)';
     ctx.lineWidth = 1;
     ctx.beginPath();
     ctx.arc(cxa, rollerY, rollerR * 0.6, 0, Math.PI * 2);
     ctx.stroke();
 
-    /* Spokes */
     ctx.strokeStyle = 'rgba(0,200,150,0.2)';
-    ctx.lineWidth = 0.8;
+    ctx.lineWidth = 1;
     for (let i = 0; i < 6; i++) {
       const a = rollerAngle + i * Math.PI / 3;
       ctx.beginPath();
@@ -888,7 +898,6 @@ function initDnaScanner() {
       ctx.stroke();
     }
 
-    /* Hub */
     ctx.fillStyle = 'rgba(0,200,150,0.4)';
     ctx.beginPath();
     ctx.arc(cxa, rollerY, 2, 0, Math.PI * 2);
@@ -912,7 +921,7 @@ function initDnaScanner() {
     ctx.stroke();
 
     ctx.strokeStyle = 'rgba(0,200,150,0.2)';
-    ctx.lineWidth = 0.8;
+    ctx.lineWidth = 1;
     for (let i = 0; i < 6; i++) {
       const a = rollerAngle + i * Math.PI / 3;
       ctx.beginPath();
@@ -1044,6 +1053,12 @@ function initDataStream() {
   }
 
   function animate() {
+    /* Check if container dimensions changed (handles delayed layout) */
+    const r = container.getBoundingClientRect();
+    if (r.width !== dims.w || r.height !== dims.h) {
+      resize();
+    }
+
     if (!frozen) {
       if (Math.random() < 0.003) {
         const word = words[Math.floor(Math.random() * words.length)];
