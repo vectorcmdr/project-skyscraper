@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T03:12:57.735047+00:00",
+  "updated": "2026-06-15T15:15:02.392738+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -154,18 +154,18 @@
       "date": ""
     },
     {
-      "id": "/tag/verified",
+      "id": "/tag/unverified",
       "type": "page",
-      "label": "Verified",
-      "url": "https://project-skyscraper.com/tag/verified/",
+      "label": "Unverified",
+      "url": "https://project-skyscraper.com/tag/unverified/",
       "author": "",
       "date": ""
     },
     {
-      "id": "/tag/weak",
+      "id": "/tag/verified",
       "type": "page",
-      "label": "Weak",
-      "url": "https://project-skyscraper.com/tag/weak/",
+      "label": "Verified",
+      "url": "https://project-skyscraper.com/tag/verified/",
       "author": "",
       "date": ""
     },
@@ -2600,6 +2600,14 @@
       "url": "https://project-skyscraper.com/12dd862fd254/",
       "author": "The Architect",
       "date": "2026-06-11T15:50:18"
+    },
+    {
+      "id": "/1e31d7c81379",
+      "type": "media",
+      "label": "1E31D7C81379",
+      "url": "https://project-skyscraper.com/1e31d7c81379/",
+      "author": "The Architect",
+      "date": "2026-06-15T15:14:42"
     },
     {
       "id": "/2018/07/24/2018_dataset/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65",
@@ -5793,6 +5801,10 @@
     },
     {
       "source": "/2016/04/08/event-08042016",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2016/04/08/event-08042016",
       "target": "/2016/04/06/event-06042016"
     },
     {
@@ -6346,6 +6358,10 @@
     {
       "source": "/2016/06/15/event-15062016",
       "target": "/"
+    },
+    {
+      "source": "/2016/06/15/event-15062016",
+      "target": "/tag/unverified"
     },
     {
       "source": "/2016/06/15/event-15062016",
@@ -7414,6 +7430,10 @@
     {
       "source": "/2016/10/30/event-30102016",
       "target": "/"
+    },
+    {
+      "source": "/2016/10/30/event-30102016",
+      "target": "/tag/unverified"
     },
     {
       "source": "/2016/10/30/event-30102016",
@@ -8169,7 +8189,7 @@
     },
     {
       "source": "/2017/07/21/event-21072017",
-      "target": "/tag/weak"
+      "target": "/tag/unverified"
     },
     {
       "source": "/2017/07/21/event-21072017",
@@ -8549,6 +8569,10 @@
     },
     {
       "source": "/4e2b91d8a370",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/1e31d7c81379",
       "target": "/author/theskyscraperarchitect"
     },
     {
