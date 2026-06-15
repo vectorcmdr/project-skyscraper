@@ -413,85 +413,59 @@ function initWaveform() {
 
 /* ===== 3. NEURAL GRID ===== */
 function initNeuralGrid() {
-  const canvas = document.getElementById('neuralGridCanvas');
+  const grid = document.getElementById('grid');
   const densityEl = document.getElementById('synapticDensity');
-  const container = document.getElementById('neuralGridContainer');
-  if (!canvas || !container) return;
+  if (!grid) return;
 
-  const COLS = 12;
-  const ROWS = 12;
-  const GAP = 2;
-  const TOTAL = COLS * ROWS;
-  let lit = new Uint8Array(TOTAL);
+  const totalBlocks = 16 * 16;
+  let blocks = [];
 
-  for (let i = 0; i < TOTAL; i++) lit[i] = Math.random() < 0.3 ? 1 : 0;
-
-  function resize() {
-    const dpr = window.devicePixelRatio || 1;
-    const w = Math.max(1, canvas.clientWidth);
-    const h = Math.max(1, canvas.clientHeight);
-    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-    }
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  function update() {
-    for (let i = 0; i < TOTAL; i++) {
-      if (Math.random() < 0.015) lit[i] = lit[i] ? 0 : 1;
-    }
+  for (let i = 0; i < totalBlocks; i++) {
+    const block = document.createElement('div');
+    block.className = 'data-block';
+    block.style.background = '#000000';
+    grid.appendChild(block);
+    blocks.push(block);
   }
 
-  function draw() {
-    const ctx = canvas.getContext('2d');
-    resize();
-    const dpr = window.devicePixelRatio || 1;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  function updateDensity() {
+    if (!densityEl) return;
+    const active = blocks.filter(b => b.classList.contains('active')).length;
+    densityEl.textContent = ((active / totalBlocks) * 100).toFixed(1);
+  }
 
-    const cw = Math.max(1, canvas.clientWidth);
-    const ch = Math.max(1, canvas.clientHeight);
+  function activateRandom() {
+    const inactive = blocks.filter(b => !b.classList.contains('active'));
+    if (inactive.length === 0) return;
+    const block = inactive[Math.floor(Math.random() * inactive.length)];
+    block.style.background = '#ddd';
+    block.classList.add('active');
+    updateDensity();
+  }
 
-    ctx.fillStyle = '#080808';
-    ctx.fillRect(0, 0, cw, ch);
+  function deactivateRandom() {
+    const active = blocks.filter(b => b.classList.contains('active'));
+    if (active.length === 0) return;
+    const block = active[Math.floor(Math.random() * active.length)];
+    block.style.background = '#000000';
+    block.classList.remove('active');
+    updateDensity();
+  }
 
-    const cellW = (cw - GAP * (COLS + 1)) / COLS;
-    const cellH = (ch - GAP * (ROWS + 1)) / ROWS;
-    if (cellW < 2 || cellH < 2) return;
-
-    let litCount = 0;
-    for (let r = 0; r < ROWS; r++) {
-      for (let c = 0; c < COLS; c++) {
-        const idx = r * COLS + c;
-        const x = GAP + c * (cellW + GAP);
-        const y = GAP + r * (cellH + GAP);
-
-        if (lit[idx]) {
-          const b = 0.6 + Math.random() * 0.4;
-          ctx.fillStyle = `rgba(0,${Math.floor(170 * b)},255,${b * 0.85})`;
-          ctx.fillRect(x, y, cellW, cellH);
-          litCount++;
-        } else {
-          ctx.fillStyle = 'rgba(255,255,255,0.025)';
-          ctx.fillRect(x, y, cellW, cellH);
-        }
+  setInterval(() => {
+    const actions = Math.floor(Math.random() * 3) + 2;
+    for (let i = 0; i < actions; i++) {
+      if (Math.random() < 0.5) {
+        activateRandom();
+      } else {
+        deactivateRandom();
       }
     }
+  }, 320);
 
-    if (densityEl) {
-      densityEl.textContent = ((litCount / TOTAL) * 100).toFixed(1);
-    }
+  for (let i = 0; i < 45; i++) {
+    setTimeout(() => activateRandom(), i * 35);
   }
-
-  function animate() {
-    update();
-    draw();
-    requestAnimationFrame(animate);
-  }
-
-  window.addEventListener('resize', resize);
-  animate();
 }
 
 /* ===== 4. FOLDING PANEL ===== */
