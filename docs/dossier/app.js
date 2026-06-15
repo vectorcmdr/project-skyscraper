@@ -104,9 +104,14 @@ function initCyberbrain() {
         float gridY = step(0.94, abs(fract(vUv.y * 4.0 + 0.5) - 0.5) * 2.0);
         float grid = max(gridX, gridY) * 0.4;
 
-        float sweepX = fract(uTime * 0.035 + 0.5) * 5.0 - 2.5;
-        float dist = vWorldPos.x - sweepX;
-        float scan = exp(-dist * dist * 300.0);
+        float sweepDir = uTime * 0.04;
+        float scan = 0.0;
+        for (int i = 0; i < 3; i++) {
+          float fi = float(i);
+          float sweepX = fract(sweepDir + fi * 0.333) * 6.0 - 3.0;
+          float dist = (vWorldPos.x + vWorldPos.z * 0.5) * 1.2 - sweepX;
+          scan = max(scan, exp(-dist * dist * 250.0));
+        }
 
         float rim = 1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
         rim = pow(rim, 2.0) * 0.3;
@@ -134,7 +139,7 @@ function initCyberbrain() {
   ring.renderOrder = 0;
   scene.add(ring);
 
-  /* ---- Brain particle system (full brain) ---- */
+  /* ---- Brain particle system (improved brain shape) ---- */
   const brainGroup = new THREE.Group();
   brainGroup.renderOrder = 1;
 
@@ -154,18 +159,26 @@ function initCyberbrain() {
   }
 
   let brainPoints = [];
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.2, 0, 0.85, 0.65, 0.6, 450));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.2, 0, 0.85, 0.65, 0.6, 450));
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.35, 0.15, 0.9, 0.5, 0.45, 0.35, 250));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.35, 0.15, 0.9, 0.5, 0.45, 0.35, 250));
-  brainPoints = brainPoints.concat(fillEllipsoid(-1.0, -0.05, 0.2, 0.25, 0.3, 0.4, 150));
-  brainPoints = brainPoints.concat(fillEllipsoid(1.0, -0.05, 0.2, 0.25, 0.3, 0.4, 150));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.55, 0.45, 0.25, 0.35, 150));
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.5, 0.55, 0.3, 0.4, 0.25, 0.3, 120));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.5, 0.55, 0.3, 0.4, 0.25, 0.3, 120));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.85, -0.1, 0.15, 0.3, 0.15, 80));
-  brainPoints = brainPoints.concat(fillEllipsoid(-0.3, -0.2, -1.1, 0.3, 0.2, 0.25, 80));
-  brainPoints = brainPoints.concat(fillEllipsoid(0.3, -0.2, -1.1, 0.3, 0.2, 0.25, 80));
+
+  /* Left hemisphere (wider at back, gap in middle) */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.65, 0.25, -0.2, 0.75, 0.65, 0.75, 500));
+  /* Right hemisphere */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.65, 0.25, -0.2, 0.75, 0.65, 0.75, 500));
+  /* Frontal: narrower forward */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.55, 0.15, 0.95, 0.45, 0.4, 0.3, 200));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.55, 0.15, 0.95, 0.45, 0.4, 0.3, 200));
+  /* Temporal lobes: stick out on sides */
+  brainPoints = brainPoints.concat(fillEllipsoid(-1.15, -0.1, 0.25, 0.22, 0.28, 0.4, 150));
+  brainPoints = brainPoints.concat(fillEllipsoid(1.15, -0.1, 0.25, 0.22, 0.28, 0.4, 150));
+  /* Cerebellum: round back-bottom */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.4, -0.9, 0.45, 0.3, 0.35, 200));
+  /* Parietal: top area */
+  brainPoints = brainPoints.concat(fillEllipsoid(-0.5, 0.6, 0.2, 0.4, 0.25, 0.35, 100));
+  brainPoints = brainPoints.concat(fillEllipsoid(0.5, 0.6, 0.2, 0.4, 0.25, 0.35, 100));
+  /* Brainstem */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, -0.9, -0.3, 0.15, 0.35, 0.15, 80));
+  /* Corpus callosum bridge between hemispheres */
+  brainPoints = brainPoints.concat(fillEllipsoid(0.0, 0.25, 0.0, 0.2, 0.15, 0.5, 80));
 
   const particlePos = new Float32Array(brainPoints.length * 3);
   const particleCol = new Float32Array(brainPoints.length * 3);
@@ -363,8 +376,8 @@ function initWaveform() {
       ctx.shadowBlur = 0;
     }
 
-    drawWave(-6, phase, 'rgba(0,170,255,0.85)', 0.95);
-    drawWave(6, phase + 0.6, 'rgba(255,0,170,0.75)', 0.95);
+    drawWave(0, phase, 'rgba(0,170,255,0.85)', 0.95);
+    drawWave(0, phase + 0.6, 'rgba(255,0,170,0.75)', 0.95);
   }
 
   function animate() {
@@ -385,76 +398,74 @@ function initNeuralGrid() {
   const container = document.getElementById('neuralGridContainer');
   if (!canvas || !container) return;
 
-  const cols = 8;
+  const GAP = 4;
+  const COLS = 8;
+  const ASPECT = 1.6;
   let rows = 4;
   let cells = [];
   let targets = [];
-  let dims;
+
+  function calcRows(cw, ch) {
+    const cellW = (cw - GAP * (COLS + 1)) / COLS;
+    const cellH = cellW / ASPECT;
+    return Math.max(2, Math.floor((ch + GAP) / (cellH + GAP)));
+  }
 
   function init() {
-    dims = resizeCanvas(canvas, container);
-    const textEl = document.getElementById('neuralTextTop');
-    const textH = textEl ? textEl.offsetHeight + 30 : 40;
-    const rect = container.getBoundingClientRect();
-    const cw = rect.width;
-    const ch = Math.max(100, rect.height - textH - 10);
-    rows = Math.max(2, Math.floor(cols * ch / cw * 0.6));
-
     cells = [];
     targets = [];
-    for (let i = 0; i < cols * rows; i++) {
+    for (let i = 0; i < COLS * 20; i++) {
       cells.push(Math.random());
       targets.push(Math.random() < 0.3 ? 1 : 0);
     }
   }
 
   function draw() {
+    resizeCanvas(canvas, container);
     const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    const rect = container.getBoundingClientRect();
     const textEl = document.getElementById('neuralTextTop');
     const textH = textEl ? textEl.offsetHeight + 30 : 40;
+    const rect = container.getBoundingClientRect();
     const cw = rect.width;
     const ch = Math.max(100, rect.height - textH - 10);
+    const usedRows = calcRows(cw, ch);
+
     ctx.fillStyle = '#080808';
     ctx.fillRect(0, 0, cw, ch);
 
-    const useRows = Math.max(2, Math.floor(cols * ch / cw * 0.6));
-
-    const gap = 4;
-    const cellW = (cw - gap * (cols + 1)) / cols;
-    const cellH = (ch - gap * (useRows + 1)) / useRows;
-    const drawW = cellW;
-    const drawH = cellH;
-    const offX = gap + (cellW - drawW) / 2;
-    const offY = gap + (cellH - drawH) / 2;
+    const cellW = (cw - GAP * (COLS + 1)) / COLS;
+    const cellH = (ch - GAP * (usedRows + 1)) / usedRows;
+    const offX = GAP + (cellW - cellW) / 2;
+    const offY = GAP + (cellH - cellH) / 2;
 
     let lit = 0;
-    for (let r = 0; r < useRows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const idx = r * cols + c;
-        if (idx >= cells.length) continue;
+    const total = COLS * usedRows;
+    for (let r = 0; r < usedRows; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const idx = r * COLS + c;
+        if (idx >= cells.length) break;
         cells[idx] += (targets[idx] - cells[idx]) * 0.05;
         const val = cells[idx];
-        const x = offX + c * (cellW + gap);
-        const y = offY + r * (cellH + gap);
+        const x = GAP + c * (cellW + GAP);
+        const y = GAP + r * (cellH + GAP);
 
         if (val > 0.05) {
           const bright = Math.min(1, val * 1.5);
           ctx.fillStyle = `rgba(0, ${Math.floor(170 * bright)}, ${Math.floor(255 * bright)}, ${bright * 0.8})`;
-          ctx.fillRect(x, y, drawW, drawH);
+          ctx.fillRect(x, y, cellW, cellH);
           lit++;
         } else {
           ctx.fillStyle = 'rgba(255,255,255,0.03)';
-          ctx.fillRect(x, y, drawW, drawH);
+          ctx.fillRect(x, y, cellW, cellH);
         }
       }
     }
 
     if (densityEl) {
-      densityEl.textContent = ((lit / (cols * useRows)) * 100).toFixed(1);
+      densityEl.textContent = ((lit / total) * 100).toFixed(1);
     }
   }
 
@@ -719,8 +730,8 @@ function initShuffleDeck() {
   }
 
   function cycle() {
-    const last = cardPos.pop();
-    cardPos.unshift(last);
+    const first = cardPos.shift();
+    cardPos.push(first);
     applyPositions();
   }
 
@@ -740,12 +751,22 @@ function initDnaScanner() {
   let scrollY = 0;
   const rowH = 16;
   const fadePixels = 30;
+  let charCache = {}; /* persistent chars: "r,c" -> char */
 
   function resize() {
     dims = resizeCanvas(canvas, container);
+    charCache = {};
   }
   resize();
   window.addEventListener('resize', resize);
+
+  function getChar(r, c) {
+    const key = `${r},${c}`;
+    if (!charCache[key] || Math.random() < 0.02) {
+      charCache[key] = chars[Math.floor(Math.random() * chars.length)];
+    }
+    return charCache[key];
+  }
 
   function draw() {
     const ctx = canvas.getContext('2d');
@@ -759,7 +780,7 @@ function initDnaScanner() {
     const numRows = Math.ceil(h / rowH) + 2;
     const cols = Math.floor(w / 10);
 
-    scrollY += 0.006;
+    scrollY += 0.001;
 
     for (let r = -1; r < numRows; r++) {
       const y = r * rowH - (scrollY % rowH);
@@ -772,13 +793,12 @@ function initDnaScanner() {
 
       for (let c = 0; c < cols; c++) {
         const x = c * 10 + 5;
-        const ch = chars[Math.floor(Math.random() * chars.length)];
+        const ch = getChar(r, c);
         const flicker = 0.4 + Math.random() * 0.6;
         ctx.fillStyle = `hsla(${hue}, 80%, ${40 + flicker * 30}%, ${rowAlpha * flicker * 0.7})`;
         ctx.fillText(ch, x, y + 12);
       }
 
-      /* Row separator line */
       ctx.strokeStyle = `rgba(0,200,150,${rowAlpha * 0.04})`;
       ctx.lineWidth = 0.5;
       ctx.beginPath();
@@ -787,7 +807,6 @@ function initDnaScanner() {
       ctx.stroke();
     }
 
-    /* Side overlays */
     const gradLeft = ctx.createLinearGradient(0, 0, 20, 0);
     gradLeft.addColorStop(0, '#080808');
     gradLeft.addColorStop(1, 'transparent');
@@ -800,7 +819,6 @@ function initDnaScanner() {
     ctx.fillStyle = gradRight;
     ctx.fillRect(w - 20, 0, 20, h);
 
-    /* Top/bottom fade */
     const gradTop = ctx.createLinearGradient(0, 0, 0, fadePixels);
     gradTop.addColorStop(0, '#080808');
     gradTop.addColorStop(1, 'transparent');
@@ -813,6 +831,8 @@ function initDnaScanner() {
     ctx.fillStyle = gradBot;
     ctx.fillRect(0, h - fadePixels, w, fadePixels);
   }
+
+  function drawFrame() { draw(); }
 
   function animate() {
     draw();
@@ -838,7 +858,7 @@ function initDataStream() {
   let frozen = false;
   let freezeTimer = 0;
   let freezeWord = '';
-  let freezeFrame = 0;
+  let freezeLetters = []; /* which column indices get each word letter */
 
   function resize() {
     dims = resizeCanvas(canvas, container);
@@ -865,14 +885,12 @@ function initDataStream() {
 
     const { w, h } = dims;
 
-    /* Fade trail */
-    ctx.fillStyle = frozen ? 'rgba(8,0,0,0.03)' : 'rgba(8,0,0,0.08)';
+    ctx.fillStyle = 'rgba(8,0,0,0.08)';
     ctx.fillRect(0, 0, w, h);
 
     ctx.font = `${fontSize}px monospace`;
     ctx.textAlign = 'center';
 
-    /* Draw rain columns */
     columns.forEach((col, ci) => {
       if (!frozen) {
         col.delay -= 1;
@@ -886,80 +904,64 @@ function initDataStream() {
       }
 
       const x = ci * colW + colW / 2;
+      const isLetterCol = frozen && freezeLetters[ci] !== undefined;
 
       for (let i = 0; i < col.trail; i++) {
         const ty = col.y - i * fontSize;
         if (ty < -fontSize || ty > h + fontSize) continue;
         const alpha = 1 - (i / col.trail);
         const fade = alpha * alpha;
+
+        let ch;
+        if (frozen) {
+          /* During freeze: all chars stay frozen. Leading char gets word letter if selected. */
+          if (i === 0 && isLetterCol) {
+            ch = freezeLetters[ci];
+          } else {
+            ch = chars[Math.floor(Math.random() * chars.length)];
+          }
+        } else {
+          ch = chars[Math.floor(Math.random() * chars.length)];
+        }
+
         if (i === 0) {
           ctx.fillStyle = `rgba(255,200,200,${fade})`;
-          ctx.shadowColor = 'rgba(255,0,0,0.5)';
-          ctx.shadowBlur = 6;
+          ctx.shadowColor = isLetterCol ? 'rgba(255,255,255,0.8)' : 'rgba(255,0,0,0.5)';
+          ctx.shadowBlur = isLetterCol ? 12 : 6;
         } else {
           ctx.fillStyle = `rgba(255,${Math.floor(100 * fade)},${Math.floor(50 * fade)},${fade * 0.6})`;
           ctx.shadowBlur = 0;
         }
-        ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x, ty);
+        ctx.fillText(ch, x, ty);
       }
       ctx.shadowBlur = 0;
     });
-
-    /* Freeze overlay: word drawn horizontally across rain */
-    if (frozen) {
-      ctx.fillStyle = 'rgba(8,0,0,0.5)';
-      ctx.fillRect(0, 0, w, h);
-
-      /* Red scanlines */
-      ctx.fillStyle = 'rgba(255,0,0,0.03)';
-      for (let sy = 0; sy < h; sy += 4) {
-        ctx.fillRect(0, sy, w, 1);
-      }
-
-      const wordLetters = freezeWord.split('');
-      const totalWidth = wordLetters.length * (colW + 4);
-      const startX = (w - totalWidth) / 2 + colW / 2;
-      const midY = h / 2 + fontSize * 0.3;
-      const glitchFrame = freezeFrame % 3 === 0;
-
-      wordLetters.forEach((ch, i) => {
-        const x = startX + i * (colW + 4);
-        const flicker = glitchFrame && Math.random() < 0.3
-          ? chars[Math.floor(Math.random() * chars.length)]
-          : ch;
-
-        ctx.shadowColor = 'rgba(255,0,0,0.9)';
-        ctx.shadowBlur = 14;
-        ctx.fillStyle = `rgba(255,255,255,${0.85 + Math.random() * 0.15})`;
-        ctx.font = `bold ${fontSize + 4}px monospace`;
-        ctx.fillText(flicker, x, midY);
-
-        if (Math.random() < 0.2) {
-          ctx.shadowBlur = 0;
-          ctx.fillStyle = `rgba(255,0,0,${0.2 + Math.random() * 0.3})`;
-          ctx.font = `${fontSize + 2}px monospace`;
-          ctx.fillText(flicker, x + (Math.random() - 0.5) * 6, midY + (Math.random() - 0.5) * 4);
-        }
-      });
-      ctx.shadowBlur = 0;
-    }
   }
 
   function animate() {
     if (!frozen) {
       if (Math.random() < 0.003) {
+        const word = words[Math.floor(Math.random() * words.length)];
         frozen = true;
-        freezeWord = words[Math.floor(Math.random() * words.length)];
+        freezeWord = word;
         freezeTimer = 80 + Math.floor(Math.random() * 60);
-        freezeFrame = 0;
+        freezeLetters = {};
+
+        /* Pick random columns for each letter */
+        const available = [];
+        for (let i = 0; i < columns.length; i++) available.push(i);
+        for (let li = 0; li < word.length && available.length > 0; li++) {
+          const pick = Math.floor(Math.random() * available.length);
+          freezeLetters[available[pick]] = word[li];
+          available.splice(pick, 1);
+        }
       }
     } else {
-      freezeFrame++;
       freezeTimer--;
       if (freezeTimer <= 0) {
         frozen = false;
-        freezeFrame = 0;
         freezeWord = '';
+        freezeLetters = {};
       }
     }
     draw();
