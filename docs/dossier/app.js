@@ -109,7 +109,7 @@ function initCyberbrain() {
         for (int i = 0; i < 3; i++) {
           float fi = float(i);
           float sweepX = fract(sweepDir + fi * 0.333) * 6.0 - 3.0;
-          float dist = (vWorldPos.x + vWorldPos.z * 0.5) * 1.2 - sweepX;
+          float dist = vWorldPos.x * 1.2 - sweepX;
           scan = max(scan, exp(-dist * dist * 250.0));
         }
 
@@ -259,7 +259,7 @@ function initCyberbrain() {
 
   brainGroup.scale.set(1.75, 1.75, 1.75);
   brainGroup.position.y = -0.05;
-  sphere.add(brainGroup);
+  scene.add(brainGroup);
 
   /* ---- Stars background ---- */
   const starCount = 800;

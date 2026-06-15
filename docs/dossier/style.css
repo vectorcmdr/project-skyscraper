@@ -141,7 +141,7 @@ body {
 
 #panel-cyberbrain { grid-column: 1 / 3; grid-row: 1 / 3; min-height: 500px; }
 #panel-waveform   { grid-column: 3; grid-row: 1; min-height: 240px; }
-#panel-neuralgrid { grid-column: 3; grid-row: 2; min-height: 500px; }
+#panel-neuralgrid { grid-column: 3; grid-row: 2 / 4; min-height: 500px; }
 #panel-folding    { grid-column: 1; grid-row: 3; min-height: 300px; }
 #panel-warnings   { grid-column: 2 / 4; grid-row: 3; min-height: 300px; }
 #panel-gauge      { grid-column: 1; grid-row: 4 / 6; min-height: 500px; }
@@ -481,7 +481,7 @@ body {
   }
   #panel-cyberbrain { grid-column: 1 / 3; grid-row: 1 / 3; }
   #panel-waveform   { grid-column: 1; grid-row: 3; }
-  #panel-neuralgrid { grid-column: 2; grid-row: 3; }
+  #panel-neuralgrid { grid-column: 2; grid-row: 3 / 5; }
   #panel-folding    { grid-column: 1; grid-row: 4; }
   #panel-warnings   { grid-column: 1 / 3; grid-row: 5; }
   #panel-gauge      { grid-column: 1; grid-row: 6 / 8; }
