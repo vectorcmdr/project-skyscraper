@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T15:15:02.386432+00:00",
+  "updated": "2026-06-16T15:35:02.195049+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -176,6 +176,14 @@
       "url": "https://project-skyscraper.com/tag/verified/",
       "author": "",
       "date": ""
+    },
+    {
+      "id": "/2013/12/24/event-24122013",
+      "type": "post",
+      "label": "2013_dataset",
+      "url": "https://project-skyscraper.com/2013/12/24/event-24122013/",
+      "author": "The Architect",
+      "date": "2013-12-24T01:00:00"
     },
     {
       "id": "/2016/01/01/event-01012016",
@@ -2926,6 +2934,14 @@
       "type": "external",
       "label": "universetoday.com",
       "url": "https://www.universetoday.com/articles/great-attractor-revealed-galaxies-found-lurking-behind-the-milky-way",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://x.com/NoMansSky/status/415623876446810112",
+      "type": "external",
+      "label": "x.com",
+      "url": "https://x.com/NoMansSky/status/415623876446810112",
       "author": "",
       "date": ""
     },
@@ -8644,12 +8660,32 @@
       "target": "/2026/06/14/diagnostic-130321"
     },
     {
+      "source": "/2026/06/16/structural-analysis-155807",
+      "target": "/2026/06/16/diagnostic-161411"
+    },
+    {
       "source": "/2026/06/16/diagnostic-161411",
       "target": "/"
     },
     {
       "source": "/2026/06/16/diagnostic-161411",
       "target": "/2026/06/16/structural-analysis-155807"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
+      "target": "/"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
+      "target": "https://x.com/NoMansSky/status/415623876446810112"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
+      "target": "/2016/01/01/event-01012016"
     },
     {
       "source": "/project-skyscraper",
@@ -11245,6 +11281,14 @@
     },
     {
       "source": "/2023/12/12/event-12122023",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2013/12/24/event-24122013",
       "target": "/category/non-classe"
     },
     {
