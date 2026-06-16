@@ -956,13 +956,9 @@ function initDataStream() {
     if (!frozen) {
       if (Math.random() < 0.003) {
         const word = words[Math.floor(Math.random() * words.length)];
-        frozen = true;
-        freezeWord = word;
-        freezeTimer = 80 + Math.floor(Math.random() * 60);
-        freezeLetters = {};
-
-        /* Spell word in a zone inset from canvas edges */
         const wordLen = word.length;
+
+        /* Pick horizontal position inset from edges */
         const marginCols = 5;
         const minStart = marginCols;
         const maxStart = columns.length - marginCols - wordLen;
@@ -972,15 +968,27 @@ function initDataStream() {
         } else {
           startCol = Math.max(0, Math.floor((columns.length - wordLen) / 2));
         }
-        for (let li = 0; li < word.length; li++) {
-          freezeLetters[startCol + li] = word[li];
+
+        /* Only freeze if all word columns are in the vertical safe zone */
+        const safeTop = dims.h * 0.15;
+        const safeBot = dims.h * 0.85;
+        let allInZone = true;
+        for (let li = 0; li < wordLen; li++) {
+          const col = columns[startCol + li];
+          if (!col || col.y < safeTop || col.y > safeBot) {
+            allInZone = false;
+            break;
+          }
         }
 
-        /* Snap all word columns to a consistent vertical position in the center zone */
-        const wordY = dims.h * 0.25 + Math.random() * dims.h * 0.5;
-        for (let li = 0; li < wordLen; li++) {
-          const ci = startCol + li;
-          if (columns[ci]) columns[ci].y = wordY;
+        if (allInZone) {
+          frozen = true;
+          freezeWord = word;
+          freezeTimer = 80 + Math.floor(Math.random() * 60);
+          freezeLetters = {};
+          for (let li = 0; li < word.length; li++) {
+            freezeLetters[startCol + li] = word[li];
+          }
         }
       }
     } else {
