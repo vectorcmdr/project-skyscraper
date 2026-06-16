@@ -210,16 +210,16 @@ function initCyberbrain() {
       }
     }
   }
-  const cGeo = new THREE.LineSegmentsGeometry();
+  const cGeo = new LineSegmentsGeometry();
   cGeo.setPositions(connPos);
-  const cMat = new THREE.LineMaterial({
+  const cMat = new LineMaterial({
     color: 0x00ff66,
     linewidth: 3,
     transparent: true,
     opacity: 0.10,
     resolution: new THREE.Vector2(w, h),
   });
-  const connections = new THREE.LineSegments2(cGeo, cMat);
+  const connections = new LineSegments2(cGeo, cMat);
   brainGroup.add(connections);
 
   /* Center glow */

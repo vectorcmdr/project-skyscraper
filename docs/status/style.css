@@ -121,6 +121,13 @@ body.landing {
 .proxy-tag:hover { border-color: #666; color: #aaa; background: #151515; }
 .topbar-status { font-size: .8rem; letter-spacing: .1em; color: #d00; }
 .operator-label { font-size: .75rem; color: #666; letter-spacing: .05em; }
+.sound-toggle {
+  background: transparent; border: none; cursor: pointer;
+  font-size: 1.1rem; padding: 0; line-height: 1;
+  color: #555; transition: color .15s;
+}
+.sound-toggle:hover { color: #eee; }
+.sound-toggle.sound-on { color: #eee; }
 .trace-status {
   font-size: .75rem; letter-spacing: .1em; white-space: nowrap;
   display: inline-flex; align-items: center; gap: .35rem;

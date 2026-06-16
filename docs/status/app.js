@@ -51,6 +51,49 @@ function renderDiff(raw) {
   }).join('\n');
 }
 
+/* ── SOUND SYSTEM ──────────────────────────────────────────── */
+const SOUND_PATHS = {
+  traceActive: '../data/alien_mt_notif.mp3',
+  traceLost: '../data/alien_mt_power.mp3',
+  newEntry: '../data/alien_save_notif.mp3',
+};
+
+let audioCache = {};
+
+function isSoundEnabled() {
+  return localStorage.getItem('soundEnabled') === 'true';
+}
+
+function updateSoundBtn() {
+  const btn = document.getElementById('soundToggle');
+  if (!btn) return;
+  btn.textContent = isSoundEnabled() ? '\u{1F50A}' : '\u{1F507}';
+  btn.classList.toggle('sound-on', isSoundEnabled());
+}
+
+function toggleSound() {
+  const nowEnabled = !isSoundEnabled();
+  localStorage.setItem('soundEnabled', nowEnabled ? 'true' : 'false');
+  updateSoundBtn();
+  if (nowEnabled) {
+    const u = new Audio();
+    u.play().catch(function(){});
+  }
+}
+
+function playSound(name) {
+  if (!isSoundEnabled()) return;
+  if (!audioCache[name]) {
+    const p = SOUND_PATHS[name];
+    if (!p) return;
+    audioCache[name] = new Audio(p);
+    audioCache[name].volume = 0.5;
+  }
+  const a = audioCache[name];
+  a.currentTime = 0;
+  a.play().catch(function() {});
+}
+
 /* ── RENDER FEED ───────────────────────────────────────── */
 function renderFeed(entries) {
   const container = document.getElementById('feedEntries');
@@ -321,6 +364,7 @@ setOperator();
 
 /* ── TRACE (Discourse online status) ───────────────────── */
 let traceTick = null;
+let lastTraceState = null;
 
 function fmtElapsed(seconds) {
   const h = Math.floor(seconds / 3600);
@@ -351,6 +395,10 @@ function updateTrace() {
     .then(r => r.ok ? r.json() : Promise.reject(r.status))
     .then(data => {
       renderTrace(data);
+      if (lastTraceState !== null && data.state !== lastTraceState) {
+        playSound(data.state === 'ACTIVE' ? 'traceActive' : 'traceLost');
+      }
+      lastTraceState = data.state;
       if (data.state === 'LOST') {
         if (traceTick) clearInterval(traceTick);
         traceTick = setInterval(() => renderTrace(data), 1000);
@@ -367,6 +415,41 @@ function updateTrace() {
 updateTrace();
 // Re-fetch trace.json every 30s so ACTIVE→LOST flip isn't missed (silent while ticking)
 setInterval(updateTrace, 30000);
+
+/* ── SOUND TOGGLE ─────────────────────────────────────────── */
+document.getElementById('soundToggle').addEventListener('click', toggleSound);
+updateSoundBtn();
+
+/* ── NEW ENTRY DETECTION ───────────────────────────────────── */
+let lastKnown = { feed: null, manifest: 0, external: null };
+
+function checkNewData() {
+  if (!isSoundEnabled()) return;
+  Promise.all([
+    fetch(`${DATA_ROOT}/feed.json`).then(r => r.ok ? r.json() : null),
+    fetch(`${DATA_ROOT}/manifest.json`).then(r => r.ok ? r.json() : null),
+    fetch(`${DATA_ROOT}/external.json`).then(r => r.ok ? r.json() : null),
+  ]).then(function(results) {
+    const [feedData, manifestData, extData] = results;
+    if (feedData && feedData.entries && feedData.entries.length) {
+      const ts = new Date(feedData.entries[0].timestamp).getTime();
+      if (lastKnown.feed !== null && ts > lastKnown.feed) playSound('newEntry');
+      lastKnown.feed = ts;
+    }
+    if (manifestData && manifestData.pages) {
+      const c = manifestData.pages.length;
+      if (lastKnown.manifest > 0 && c > lastKnown.manifest) playSound('newEntry');
+      lastKnown.manifest = c;
+    }
+    if (extData && extData.entries && extData.entries.length) {
+      const ts = new Date(extData.entries[0].timestamp).getTime();
+      if (lastKnown.external !== null && ts > lastKnown.external) playSound('newEntry');
+      lastKnown.external = ts;
+    }
+  }).catch(function() {});
+}
+
+setInterval(checkNewData, 5000);
 
 /* ── LAST SYNC ──────────────────────────────────────────── */
 function updateSync() {
