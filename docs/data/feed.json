@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-16T15:16:08+00:00",
+      "title": "STRUCTURAL ANALYSIS",
+      "link": "https://project-skyscraper.com/2026/06/16/structural-analysis-155807/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1781625480Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objetcsSeverity: AnomalyLocation: OTTAWA\n- Report ID: OTT-TIME-DISRUPTION\n+ memory bloc 1781625480Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objectsSeverity: AnomalyLocation: OTTAWA\n+ Report ID: OTT-TIME-DISRUPTIONUpdate: Hallucination confirmed by Operators\n- memory bloc Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objetcs Severity: AnomalyLocation: OTTAWA Report ID: OTT-TIME-DISRUPTION\n+ memory bloc Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objects Severity: AnomalyLocation: OTTAWA Report ID: OTT-TIME-DISRUPTION Update: Hallucination confirmed by Operators\n- memory bloc 1781625480Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objetcsSeverity: AnomalyLocation: OTTAWA\n- Report ID: OTT-TIME-DISRUPTION\n+ memory bloc 1781625480Status: Out_of_place_artefactsEvent: Time_disruption_suspectedLinked values: Anachronistics_objectsSeverity: AnomalyLocation: OTTAWA\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 240/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-06-16T15:15:00.473992+00:00",
       "title": "Memory bloc restoration: 240/365 [30 Pages]",
@@ -6211,5 +6224,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-16T15:15:00.478784+00:00"
+  "updated": "2026-06-16T15:17:51.235879+00:00"
 }
