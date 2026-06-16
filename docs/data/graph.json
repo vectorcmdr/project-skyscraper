@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T12:58:59.802769+00:00",
+  "updated": "2026-06-16T14:58:51.490646+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2584,6 +2584,14 @@
       "url": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "author": "The Architect",
       "date": "2026-06-09T12:37:00"
+    },
+    {
+      "id": "/2026/06/16/structural-analysis-155807",
+      "type": "post",
+      "label": "STRUCTURAL ANALYSIS",
+      "url": "https://project-skyscraper.com/2026/06/16/structural-analysis-155807/",
+      "author": "The Architect",
+      "date": "2026-06-16T14:58:00"
     },
     {
       "id": "/2017/05/28/waking-titan",
@@ -8584,6 +8592,14 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2026/06/16/structural-analysis-155807",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/16/structural-analysis-155807",
+      "target": "/2026/06/14/diagnostic-130321"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -10941,6 +10957,14 @@
     },
     {
       "source": "/2026/06/11/diagnostic-192512",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/16/structural-analysis-155807",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/06/16/structural-analysis-155807",
       "target": "/category/non-classe"
     },
     {
