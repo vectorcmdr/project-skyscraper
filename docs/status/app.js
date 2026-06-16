@@ -456,17 +456,29 @@ function checkNewData() {
     const [feedData, manifestData, extData] = results;
     if (feedData && feedData.entries && feedData.entries.length) {
       const ts = new Date(feedData.entries[0].timestamp).getTime();
-      if (lastKnown.feed !== null && ts > lastKnown.feed) playSound('newEntry');
+      if (lastKnown.feed !== null && ts > lastKnown.feed) {
+        playSound('newEntry');
+        feed = (feedData.entries || []).map(function(e, i) { return Object.assign({}, e, { _idx: i }); });
+        sortAndRender('feed');
+      }
       lastKnown.feed = ts;
     }
     if (manifestData && manifestData.pages) {
       const c = manifestData.pages.length;
-      if (lastKnown.manifest > 0 && c > lastKnown.manifest) playSound('newEntry');
+      if (lastKnown.manifest > 0 && c > lastKnown.manifest) {
+        playSound('newEntry');
+        manifest = manifestData.pages || [];
+        filterManifest();
+      }
       lastKnown.manifest = c;
     }
     if (extData && extData.entries && extData.entries.length) {
       const ts = new Date(extData.entries[0].timestamp).getTime();
-      if (lastKnown.external !== null && ts > lastKnown.external) playSound('newEntry');
+      if (lastKnown.external !== null && ts > lastKnown.external) {
+        playSound('newEntry');
+        external = (extData.entries || []).map(function(e, i) { return Object.assign({}, e, { _idx: i }); });
+        filterExternal();
+      }
       lastKnown.external = ts;
     }
   }).catch(function() {});
