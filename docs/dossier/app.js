@@ -803,7 +803,8 @@ function initDnaScanner() {
 
     /* Half-hexagon bulges at chunk 2 and chunk 7 — mask text then draw rail lines */
     const chunkH = tapeH / 8;
-    const hexA = tw * 0.045;
+    const hexA = tw * 0.18;
+    const hexFlat = hexA * 0.25;
     const hexH = hexA * Math.sqrt(3);
 
     function drawRailWithBulge(x, dir) {
@@ -814,9 +815,9 @@ function initDnaScanner() {
         const hTop = cy - hexH / 2;
         const hBot = cy + hexH / 2;
         ctx.lineTo(x, hTop);
-        ctx.lineTo(x + dir * hexA, hTop);
-        ctx.lineTo(x + dir * hexA * 1.5, cy);
-        ctx.lineTo(x + dir * hexA, hBot);
+        ctx.lineTo(x + dir * hexFlat, hTop);
+        ctx.lineTo(x + dir * (hexFlat + hexA * 0.5), cy);
+        ctx.lineTo(x + dir * hexFlat, hBot);
         ctx.lineTo(x, hBot);
       });
       ctx.lineTo(x, tapeBot);
@@ -834,9 +835,9 @@ function initDnaScanner() {
         const dir = side === -1 ? -1 : 1;
         ctx.beginPath();
         ctx.moveTo(rx, hTop);
-        ctx.lineTo(rx + dir * hexA, hTop);
-        ctx.lineTo(rx + dir * hexA * 1.5, cy);
-        ctx.lineTo(rx + dir * hexA, hBot);
+        ctx.lineTo(rx + dir * hexFlat, hTop);
+        ctx.lineTo(rx + dir * (hexFlat + hexA * 0.5), cy);
+        ctx.lineTo(rx + dir * hexFlat, hBot);
         ctx.lineTo(rx, hBot);
         ctx.closePath();
         ctx.fill();
