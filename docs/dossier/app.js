@@ -2,6 +2,9 @@
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { LineSegments2 } from 'three/addons/lines/LineSegments2.js';
+import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js';
+import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
 import BRAIN_VERTS from './brain_verts.js';
 
 /* HELPERS */
@@ -207,14 +210,16 @@ function initCyberbrain() {
       }
     }
   }
-  const cGeo = new THREE.BufferGeometry();
-  cGeo.setAttribute('position', new THREE.Float32BufferAttribute(connPos, 3));
-  const cMat = new THREE.LineBasicMaterial({
+  const cGeo = new THREE.LineSegmentsGeometry();
+  cGeo.setPositions(connPos);
+  const cMat = new THREE.LineMaterial({
     color: 0x00ff66,
+    linewidth: 3,
     transparent: true,
     opacity: 0.10,
+    resolution: new THREE.Vector2(w, h),
   });
-  const connections = new THREE.LineSegments(cGeo, cMat);
+  const connections = new THREE.LineSegments2(cGeo, cMat);
   brainGroup.add(connections);
 
   /* Center glow */
@@ -230,7 +235,7 @@ function initCyberbrain() {
 
   brainGroup.scale.set(1.75, 1.75, 1.75);
   brainGroup.position.y = -0.05;
-  brainGroup.rotation.y = Math.PI / 2;
+  brainGroup.rotation.set(Math.PI / 2, Math.PI / 2, 0);
   scene.add(brainGroup);
 
   /* ---- Stars background ---- */
@@ -258,6 +263,7 @@ function initCyberbrain() {
     camera.aspect = nw / nh;
     camera.updateProjectionMatrix();
     renderer.setSize(nw, nh);
+    cMat.resolution.set(nw, nh);
   }
   window.addEventListener('resize', resize);
 
