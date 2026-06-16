@@ -153,22 +153,22 @@ function initCyberbrain() {
 
     /* Main cerebral hemispheres — wider at back (occipital), tapered at front (frontal) */
     const zNorm = z / 0.85;
-    const rx = 0.62 + 0.20 * Math.max(0, -zNorm);
-    const ry = 0.52;
-    const rz = 0.82;
+    const rx = 0.65 + 0.25 * Math.max(0, -zNorm);
+    const ry = 0.55;
+    const rz = 0.85;
 
     const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
     let inside = dCerebrum <= 1.0;
 
-    /* Temporal lobes — slightly larger, shifted slightly forward */
-    const tCx = sx * 0.59, tCy = -0.07, tCz = 0.16;
-    const tRx = 0.14, tRy = 0.16, tRz = 0.24;
+    /* Temporal lobes — large, prominent lateral structures */
+    const tCx = sx * 0.64, tCy = -0.08, tCz = 0.22;
+    const tRx = 0.26, tRy = 0.22, tRz = 0.38;
     const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
     if (dTemporal <= 1.0) inside = true;
 
-    /* Cerebellum — slightly larger, more distinct */
-    const cbCx = 0, cbCy = -0.36, cbCz = -0.80;
-    const cbRx = 0.34, cbRy = 0.22, cbRz = 0.23;
+    /* Cerebellum — rounded, well-integrated at base of cerebrum */
+    const cbCx = 0, cbCy = -0.28, cbCz = -0.74;
+    const cbRx = 0.38, cbRy = 0.26, cbRz = 0.26;
     const dCerebellum = ((x-cbCx)*(x-cbCx))/(cbRx*cbRx) + ((y-cbCy)*(y-cbCy))/(cbRy*cbRy) + ((z-cbCz)*(z-cbCz))/(cbRz*cbRz);
     if (dCerebellum <= 1.0) inside = true;
 
@@ -182,7 +182,7 @@ function initCyberbrain() {
   }
 
   /* Rejection sampling within bounding box */
-  const BOUNDS = { x: [-1.2, 1.2], y: [-1.0, 0.8], z: [-1.0, 1.0] };
+  const BOUNDS = { x: [-1.2, 1.2], y: [-1.0, 0.8], z: [-1.1, 1.0] };
   const maxPoints = 4000;
   let brainPoints = [];
   let attempts = 0;
