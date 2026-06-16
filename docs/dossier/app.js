@@ -816,6 +816,35 @@ function initDnaScanner() {
       }
     }
 
+    /* Half-hexagon cutouts at chunk 2 and chunk 7, mirrored left/right */
+    const chunkH = tapeH / 8;
+    const hexSize = chunkH * 0.65;
+    const hexProtrusion = tw * 0.28;
+
+    function drawHalfHex(pathX, pathY, dir) {
+      const hw = hexProtrusion;
+      const hh = hexSize;
+      const y0 = pathY - hh / 2;
+      ctx.beginPath();
+      ctx.moveTo(pathX, y0);
+      ctx.lineTo(pathX + dir * hw * 0.5, y0);
+      ctx.lineTo(pathX + dir * hw, pathY);
+      ctx.lineTo(pathX + dir * hw * 0.5, y0 + hh);
+      ctx.lineTo(pathX, y0 + hh);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(0,200,150,0.12)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(0,200,150,0.45)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+
+    [1.5, 6.5].forEach(chunkPos => {
+      const cy = tapeTop + chunkPos * chunkH;
+      drawHalfHex(tx, cy, 1);    // left rail → protrude right (+x)
+      drawHalfHex(tx + tw, cy, -1); // right rail → protrude left (-x)
+    });
+
     /* Fade at top/bottom edges */
     const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + 16);
     gradTop.addColorStop(0, '#080808');
