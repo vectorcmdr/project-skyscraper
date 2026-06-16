@@ -803,7 +803,7 @@ function initDnaScanner() {
 
     /* Half-hexagon bulges at chunk 2 and chunk 7 — mask text then draw rail lines */
     const chunkH = tapeH / 8;
-    const hexA = tw * 0.18;
+    const hexA = tw * 0.045;
     const hexH = hexA * Math.sqrt(3);
 
     function drawRailWithBulge(x, dir) {
