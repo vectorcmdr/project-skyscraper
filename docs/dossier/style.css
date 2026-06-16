@@ -201,7 +201,6 @@ body {
   clip-path: inset(0);
 }
 .panel-body-col #grid {
-  flex: 1 1 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
@@ -213,6 +212,7 @@ body {
   box-sizing: border-box;
   min-width: 0;
   min-height: 0;
+  aspect-ratio: 2 / 1;
   overflow: hidden;
 }
 .panel-body-col #grid .data-block {
