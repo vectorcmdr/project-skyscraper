@@ -954,34 +954,41 @@ function initDataStream() {
     }
 
     if (!frozen) {
-      if (Math.random() < 0.003) {
+      if (Math.random() < 0.005) {
         const word = words[Math.floor(Math.random() * words.length)];
         const wordLen = word.length;
-
-        /* Pick horizontal position inset from edges */
         const marginCols = 5;
         const minStart = marginCols;
         const maxStart = columns.length - marginCols - wordLen;
-        let startCol;
-        if (minStart <= maxStart) {
-          startCol = minStart + Math.floor(Math.random() * (maxStart - minStart + 1));
-        } else {
-          startCol = Math.max(0, Math.floor((columns.length - wordLen) / 2));
-        }
+        const safeTop = dims.h * 0.05;
+        const safeBot = dims.h * 0.95;
 
-        /* Only freeze if all word columns are in the vertical safe zone */
-        const safeTop = dims.h * 0.15;
-        const safeBot = dims.h * 0.85;
-        let allInZone = true;
-        for (let li = 0; li < wordLen; li++) {
-          const col = columns[startCol + li];
-          if (!col || col.y < safeTop || col.y > safeBot) {
-            allInZone = false;
+        /* Try up to 20 random start positions to find one where all word columns are in the safe vertical zone */
+        let startCol = -1;
+        for (let attempt = 0; attempt < 20; attempt++) {
+          let testCol;
+          if (minStart <= maxStart) {
+            testCol = minStart + Math.floor(Math.random() * (maxStart - minStart + 1));
+          } else {
+            testCol = Math.max(0, Math.floor((columns.length - wordLen) / 2));
+          }
+
+          let inZone = true;
+          for (let li = 0; li < wordLen; li++) {
+            const col = columns[testCol + li];
+            if (!col || col.y < safeTop || col.y > safeBot) {
+              inZone = false;
+              break;
+            }
+          }
+
+          if (inZone) {
+            startCol = testCol;
             break;
           }
         }
 
-        if (allInZone) {
+        if (startCol >= 0) {
           frozen = true;
           freezeWord = word;
           freezeTimer = 80 + Math.floor(Math.random() * 60);
