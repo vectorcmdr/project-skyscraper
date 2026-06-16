@@ -977,7 +977,7 @@ function initDataStream() {
         }
 
         /* Snap all word columns to a consistent vertical position in the center zone */
-        const wordY = h * 0.25 + Math.random() * h * 0.5;
+        const wordY = dims.h * 0.25 + Math.random() * dims.h * 0.5;
         for (let li = 0; li < wordLen; li++) {
           const ci = startCol + li;
           if (columns[ci]) columns[ci].y = wordY;
