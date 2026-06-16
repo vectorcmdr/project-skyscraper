@@ -769,21 +769,6 @@ function initDnaScanner() {
     ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(tx, tapeTop, tw, tapeH);
 
-    /* Tape edge rails */
-    ctx.strokeStyle = 'rgba(0,200,150,0.35)';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(tx, tapeTop); ctx.lineTo(tx, tapeBot);
-    ctx.moveTo(tx + tw, tapeTop); ctx.lineTo(tx + tw, tapeBot);
-    ctx.stroke();
-
-    ctx.strokeStyle = 'rgba(0,200,150,0.08)';
-    ctx.lineWidth = 0.5;
-    ctx.beginPath();
-    ctx.moveTo(tx + 2, tapeTop); ctx.lineTo(tx + 2, tapeBot);
-    ctx.moveTo(tx + tw - 2, tapeTop); ctx.lineTo(tx + tw - 2, tapeBot);
-    ctx.stroke();
-
     /* DNA characters scrolling up the strip */
     const cols = Math.max(1, Math.floor((tw - 8) / 11));
     const numRows = Math.ceil(tapeH / charH) + 2;
@@ -816,34 +801,61 @@ function initDnaScanner() {
       }
     }
 
-    /* Half-hexagon cutouts at chunk 2 and chunk 7, mirrored left/right */
+    /* Half-hexagon bulges at chunk 2 and chunk 7 — mask text then draw rail lines */
     const chunkH = tapeH / 8;
-    const hexSize = chunkH * 0.65;
-    const hexProtrusion = tw * 0.28;
+    const hexH = chunkH * 0.55;
+    const hexW = tw * 0.2;
 
-    function drawHalfHex(pathX, pathY, dir) {
-      const hw = hexProtrusion;
-      const hh = hexSize;
-      const y0 = pathY - hh / 2;
+    function drawRailWithBulge(x, dir) {
       ctx.beginPath();
-      ctx.moveTo(pathX, y0);
-      ctx.lineTo(pathX + dir * hw * 0.5, y0);
-      ctx.lineTo(pathX + dir * hw, pathY);
-      ctx.lineTo(pathX + dir * hw * 0.5, y0 + hh);
-      ctx.lineTo(pathX, y0 + hh);
-      ctx.closePath();
-      ctx.fillStyle = 'rgba(0,200,150,0.12)';
-      ctx.fill();
-      ctx.strokeStyle = 'rgba(0,200,150,0.45)';
-      ctx.lineWidth = 1.5;
+      ctx.moveTo(x, tapeTop);
+      [1.5, 6.5].forEach(chunkPos => {
+        const cy = tapeTop + chunkPos * chunkH;
+        const hTop = cy - hexH / 2;
+        const hBot = cy + hexH / 2;
+        ctx.lineTo(x, hTop);
+        ctx.lineTo(x + dir * hexW, hTop);
+        ctx.lineTo(x + dir * hexW * 1.4, cy);
+        ctx.lineTo(x + dir * hexW, hBot);
+        ctx.lineTo(x, hBot);
+      });
+      ctx.lineTo(x, tapeBot);
       ctx.stroke();
     }
 
+    /* Fill hexagon areas with tape background to mask letters underneath */
+    ctx.fillStyle = '#0a0a0a';
     [1.5, 6.5].forEach(chunkPos => {
       const cy = tapeTop + chunkPos * chunkH;
-      drawHalfHex(tx, cy, 1);    // left rail → protrude right (+x)
-      drawHalfHex(tx + tw, cy, -1); // right rail → protrude left (-x)
+      const hTop = cy - hexH / 2;
+      const hBot = cy + hexH / 2;
+      [-1, 1].forEach(side => {
+        const rx = side === -1 ? tx + tw : tx;
+        const dir = side === -1 ? -1 : 1;
+        ctx.beginPath();
+        ctx.moveTo(rx, hTop);
+        ctx.lineTo(rx + dir * hexW, hTop);
+        ctx.lineTo(rx + dir * hexW * 1.4, cy);
+        ctx.lineTo(rx + dir * hexW, hBot);
+        ctx.lineTo(rx, hBot);
+        ctx.closePath();
+        ctx.fill();
+      });
     });
+
+    /* Tape edge rails with half-hexagon bulges */
+    ctx.strokeStyle = 'rgba(0,200,150,0.35)';
+    ctx.lineWidth = 1.5;
+    drawRailWithBulge(tx, 1);
+    drawRailWithBulge(tx + tw, -1);
+
+    /* Inner rail lines (straight, no bulge) */
+    ctx.strokeStyle = 'rgba(0,200,150,0.08)';
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.moveTo(tx + 2, tapeTop); ctx.lineTo(tx + 2, tapeBot);
+    ctx.moveTo(tx + tw - 2, tapeTop); ctx.lineTo(tx + tw - 2, tapeBot);
+    ctx.stroke();
 
     /* Fade at top/bottom edges */
     const gradTop = ctx.createLinearGradient(0, tapeTop, 0, tapeTop + 16);
