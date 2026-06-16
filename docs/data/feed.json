@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-16T21:55:26+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  Skip to content\n+ Jun.16, 2026\n+ Jun.16, 2026\n  Jun.14, 2026\n  Jun.14, 2026\n  Dec.29, 2016\n  Dec.28, 2016\n  Dec.26, 2016\n  Dec.23, 2016\n  Oct.30, 2016\n  Oct.30, 2016\n- Oct.28, 2016\n- Oct.26, 2016",
-      "detail": "Content changed: https://project-skyscraper.com/",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-16T21:58:34.671030+00:00",
+      "title": "Memory bloc restoration: 241/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 241/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 241/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "241/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-16T21:58:34.671030+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-16T21:58:34.670583+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": null,
+      "id": 1187,
       "game_date": ""
     },
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-16T16:29:10+00:00",
-      "title": "2016_dataset_26122016",
-      "link": "https://project-skyscraper.com/2016/12/26/event-26122016/",
+      "type": "api_items_added",
+      "timestamp": "2026-06-16T21:57:41+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/25/event-25122016/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- memory bloc 1482710400: no/value\n+ memory bloc 1482710400: The SilenceValue: no/value\n+ Memory compliance: 10%\n- memory bloc : no/value\n+ memory bloc : The Silence Value: no/value Memory compliance: 10%\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 240/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-16T16:21:45+00:00",
-      "title": "2016_dataset_26122016",
-      "link": "https://project-skyscraper.com/2016/12/26/event-26122016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- 2016_dataset\n+ 2016_dataset_26122016\n... (truncated)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
-      "author": "System",
-      "site": "",
-      "id": null,
-      "game_date": ""
+      "id": 1187,
+      "game_date": "2016-12-25T00:00:00+00:00"
     },
     {
       "type": "api_items_modified",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-16T21:57:00.931011+00:00"
+  "updated": "2026-06-16T21:58:34.676795+00:00"
 }
