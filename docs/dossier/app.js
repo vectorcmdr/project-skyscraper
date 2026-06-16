@@ -1,6 +1,7 @@
 /* DOSSIER PAGE - TECH DEMO SHOWCASE */
 
 import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 /* HELPERS */
 function resizeCanvas(canvas, container) {
@@ -27,239 +28,263 @@ function initCyberbrain() {
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x050505);
+  scene.fog = new THREE.Fog(0x050505, 5, 12);
 
-  const camera = new THREE.PerspectiveCamera(35, w / h, 0.1, 20);
-  camera.position.set(0, 0.1, 3.2);
+  const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 20);
+  camera.position.set(0, 0.5, 5.5);
+  camera.lookAt(0, 0, 0);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
   renderer.setSize(w, h);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setClearColor(0x050505);
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.0;
   container.appendChild(renderer.domElement);
 
-  /* ---- Lights (Synchron-style: ambient + 3 directionals) ---- */
-  const ambient = new THREE.AmbientLight(0x002211, 0.4);
-  scene.add(ambient);
-  const keyLight = new THREE.DirectionalLight(0x88ffbb, 1.5);
-  keyLight.position.set(3, 3, 4);
-  scene.add(keyLight);
-  const fillLight = new THREE.DirectionalLight(0x004422, 0.4);
-  fillLight.position.set(-3, 1, 2);
-  scene.add(fillLight);
-  const rimLight = new THREE.DirectionalLight(0x00aa55, 0.3);
-  rimLight.position.set(-1, 2, -3);
-  scene.add(rimLight);
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.autoRotate = false;
+  controls.minDistance = 2.5;
+  controls.maxDistance = 10;
 
-  /* ---- Brain mesh generation from SDF ---- */
+  /* ---- Lights (green-tinted) ---- */
+  const ambient = new THREE.AmbientLight(0x002211, 0.6);
+  scene.add(ambient);
+  const light1 = new THREE.DirectionalLight(0x44ff88, 1.5);
+  light1.position.set(3, 4, 2);
+  scene.add(light1);
+  const light2 = new THREE.DirectionalLight(0x004422, 0.5);
+  light2.position.set(-3, -2, 1);
+  scene.add(light2);
+
+  /* ---- Sphere with worldspace scanline ---- */
+  const sphereGeo = new THREE.SphereGeometry(2.0, 48, 32);
+  const sphereMat = new THREE.ShaderMaterial({
+    uniforms: {
+      uTime: { value: 0 },
+      uColor1: { value: new THREE.Color(0x00ff66) },
+      uColor2: { value: new THREE.Color(0x003318) },
+      uGridColor: { value: new THREE.Color(0x00cc66) },
+      uScanColor: { value: new THREE.Color(0x88ffbb) },
+    },
+    transparent: true,
+    opacity: 1.0,
+    side: THREE.DoubleSide,
+    depthWrite: false,
+    wireframe: false,
+    vertexShader: `
+      varying vec2 vUv;
+      varying vec3 vNormal;
+      varying vec3 vWorldPos;
+      void main() {
+        vUv = uv;
+        vNormal = normalize(normalMatrix * normal);
+        vec4 wp = modelMatrix * vec4(position, 1.0);
+        vWorldPos = wp.xyz;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform float uTime;
+      uniform vec3 uColor1;
+      uniform vec3 uColor2;
+      uniform vec3 uGridColor;
+      uniform vec3 uScanColor;
+      varying vec2 vUv;
+      varying vec3 vNormal;
+      varying vec3 vWorldPos;
+
+      void main() {
+        vec3 base = mix(uColor1, uColor2, vUv.y);
+        base *= 0.5;
+
+        float gridX = step(0.94, abs(fract(vUv.x * 6.0 + 0.5) - 0.5) * 2.0);
+        float gridY = step(0.94, abs(fract(vUv.y * 4.0 + 0.5) - 0.5) * 2.0);
+        float grid = max(gridX, gridY) * 0.4;
+
+        float sweepDir = uTime * 0.04;
+        float scan = 0.0;
+        for (int i = 0; i < 3; i++) {
+          float fi = float(i);
+          float sweepX = fract(sweepDir + fi * 0.333) * 6.0 - 3.0;
+          float dist = vWorldPos.x * 1.2 - sweepX;
+          scan = max(scan, exp(-dist * dist * 250.0));
+        }
+
+        float rim = 1.0 - abs(dot(vNormal, vec3(0.0, 0.0, 1.0)));
+        rim = pow(rim, 2.0) * 0.3;
+
+        vec3 color = base + grid * uGridColor + scan * uScanColor + rim * uGridColor * 0.5;
+        float alpha = 0.08 + grid * 0.20 + rim * 0.15 + scan * 0.9;
+
+        gl_FragColor = vec4(color, alpha);
+      }
+    `,
+  });
+  const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+  sphere.renderOrder = 0;
+  scene.add(sphere);
+
+  /* ---- Faint outline ring ---- */
+  const ringGeo = new THREE.TorusGeometry(2.0, 0.008, 16, 64);
+  const ringMat = new THREE.MeshBasicMaterial({
+    color: 0x00ff66,
+    transparent: true,
+    opacity: 0.12,
+  });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.rotation.x = Math.PI / 3;
+  ring.renderOrder = 0;
+  scene.add(ring);
+
+  /* ---- Brain particle system (SDF-based brain shape) ---- */
   const brainGroup = new THREE.Group();
+  brainGroup.renderOrder = 1;
 
   /* Volume test: is point inside the brain? */
   function isInsideBrain(x, y, z) {
     const ax = Math.abs(x);
     const sx = x < 0 ? -1 : 1;
+
+    /* Longitudinal fissure — gap between hemispheres */
     const fissureW = 0.04 + 0.04 * Math.max(0, 1 - Math.abs(z) / 1.0);
     if (ax < fissureW && z < 0.6 && y > -0.2) return false;
     if (ax < 0.02 && z < 0.4 && y > -0.3) return false;
-    const zNorm = z / 0.85;
-    const rx = 0.65 + 0.15 * Math.max(0, -zNorm);
-    const ry = 0.50;
-    const rz = 0.80;
+
+    /* Main cerebral hemispheres — wider at back (occipital), tapered at front (frontal) */
+    const zNorm = z / 0.88;
+    const rx = 0.60 + 0.22 * Math.max(0, -zNorm);
+    const ry = 0.52;
+    const rz = 0.85;
+
     const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
     let inside = dCerebrum <= 1.0;
-    const tCx = sx * 0.60, tCy = -0.08, tCz = 0.20;
-    const tRx = 0.12, tRy = 0.14, tRz = 0.22;
+
+    /* Temporal lobes — more prominent, positioned slightly forward */
+    const tCx = sx * 0.58, tCy = -0.06, tCz = 0.12;
+    const tRx = 0.16, tRy = 0.18, tRz = 0.26;
     const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
     if (dTemporal <= 1.0) inside = true;
-    const cbCx = 0, cbCy = -0.35, cbCz = -0.78;
-    const cbRx = 0.32, cbRy = 0.20, cbRz = 0.22;
+
+    /* Cerebellum — more prominent round structure at back-bottom */
+    const cbCx = 0, cbCy = -0.38, cbCz = -0.82;
+    const cbRx = 0.36, cbRy = 0.24, cbRz = 0.24;
     const dCerebellum = ((x-cbCx)*(x-cbCx))/(cbRx*cbRx) + ((y-cbCy)*(y-cbCy))/(cbRy*cbRy) + ((z-cbCz)*(z-cbCz))/(cbRz*cbRz);
     if (dCerebellum <= 1.0) inside = true;
-    const bsCx = 0, bsCy = -0.73, bsCz = -0.28;
-    const bsRx = 0.10, bsRy = 0.28, bsRz = 0.10;
+
+    /* Brainstem */
+    const bsCx = 0, bsCy = -0.75, bsCz = -0.30;
+    const bsRx = 0.10, bsRy = 0.30, bsRz = 0.10;
     const dBrainstem = ((x-bsCx)*(x-bsCx))/(bsRx*bsRx) + ((y-bsCy)*(y-bsCy))/(bsRy*bsRy) + ((z-bsCz)*(z-bsCz))/(bsRz*bsRz);
     if (dBrainstem <= 1.0) inside = true;
+
     return inside;
   }
 
-  /* Find outer surface point of brain along a given direction */
-  function findSurface(dx, dy, dz) {
-    const maxR = 2.0;
-    const step = 0.02;
-    let lastInside = null;
-    let lastT = 0;
-    for (let t = step; t <= maxR; t += step) {
-      if (isInsideBrain(dx * t, dy * t, dz * t)) {
-        lastInside = { x: dx * t, y: dy * t, z: dz * t };
-        lastT = t;
-      } else if (lastInside) {
-        let lo = lastT, hi = t;
-        for (let i = 0; i < 20; i++) {
-          const mid = (lo + hi) / 2;
-          if (isInsideBrain(dx * mid, dy * mid, dz * mid)) lo = mid;
-          else hi = mid;
-        }
-        return { x: dx * lo, y: dy * lo, z: dz * lo };
-      }
-    }
-    if (lastInside) return lastInside;
-    return null;
-  }
-
-  /* Generate solid mesh by projecting sphere vertices onto SDF surface */
-  const sphereGeo = new THREE.SphereGeometry(1, 80, 60);
-  const pos = sphereGeo.attributes.position;
-  const idx = sphereGeo.index;
-  const count = pos.count;
-  const verts = new Float32Array(count * 3);
-  for (let i = 0; i < count; i++) {
-    const x = pos.getX(i), y = pos.getY(i), z = pos.getZ(i);
-    const len = Math.sqrt(x*x + y*y + z*z) || 1;
-    const surf = findSurface(x/len, y/len, z/len);
-    if (surf) {
-      verts[i*3] = surf.x;
-      verts[i*3+1] = surf.y;
-      verts[i*3+2] = surf.z;
-    } else {
-      verts[i*3] = x * 0.01;
-      verts[i*3+1] = y * 0.01;
-      verts[i*3+2] = z * 0.01;
+  /* Rejection sampling within bounding box */
+  const BOUNDS = { x: [-1.2, 1.2], y: [-1.0, 0.8], z: [-1.0, 1.0] };
+  const maxPoints = 4000;
+  let brainPoints = [];
+  let attempts = 0;
+  while (brainPoints.length < maxPoints && attempts < maxPoints * 30) {
+    const px = BOUNDS.x[0] + Math.random() * (BOUNDS.x[1] - BOUNDS.x[0]);
+    const py = BOUNDS.y[0] + Math.random() * (BOUNDS.y[1] - BOUNDS.y[0]);
+    const pz = BOUNDS.z[0] + Math.random() * (BOUNDS.z[1] - BOUNDS.z[0]);
+    attempts++;
+    if (isInsideBrain(px, py, pz)) {
+      brainPoints.push(new THREE.Vector3(px, py, pz));
     }
   }
-  const brainGeo = new THREE.BufferGeometry();
-  brainGeo.setAttribute('position', new THREE.BufferAttribute(verts, 3));
-  brainGeo.setIndex(idx);
-  brainGeo.computeVertexNormals();
 
-  /* Bounding box for glow region placement */
-  brainGeo.computeBoundingBox();
-  const bb = brainGeo.boundingBox;
-  const bmid = new THREE.Vector3(); bb.getCenter(bmid);
-  const bsz = new THREE.Vector3(); bb.getSize(bsz);
+  const particlePos = new Float32Array(brainPoints.length * 3);
+  const particleCol = new Float32Array(brainPoints.length * 3);
+  for (let i = 0; i < brainPoints.length; i++) {
+    particlePos[i*3] = brainPoints[i].x;
+    particlePos[i*3+1] = brainPoints[i].y;
+    particlePos[i*3+2] = brainPoints[i].z;
+    const b = 0.3 + Math.random() * 0.7;
+    particleCol[i*3] = 0.05 + Math.random() * 0.15;
+    particleCol[i*3+1] = 0.3 + b * 0.7;
+    particleCol[i*3+2] = 0.05 + Math.random() * 0.15;
+  }
 
-  /* Synchron-style shader material — matte gray with animated green glows */
-  const brainMat = new THREE.ShaderMaterial({
-    vertexShader: `
-      varying vec3 vNormal;
-      varying vec3 vViewPos;
-      varying vec3 vWorldPos;
-      void main() {
-        vNormal = normalize(normalMatrix * normal);
-        vec4 mvPos = modelViewMatrix * vec4(position, 1.0);
-        vViewPos = -mvPos.xyz;
-        vWorldPos = (modelMatrix * vec4(position, 1.0)).xyz;
-        gl_Position = projectionMatrix * mvPos;
-      }
-    `,
-    fragmentShader: `
-      varying vec3 vNormal;
-      varying vec3 vViewPos;
-      varying vec3 vWorldPos;
-      uniform float uTime;
-      #define NUM_GLOWS 8
-      uniform vec3 uGlowCenters[NUM_GLOWS];
-      uniform float uGlowRadii[NUM_GLOWS];
-      uniform float uGlowPhases[NUM_GLOWS];
-      void main() {
-        vec3 n = normalize(vNormal);
-        vec3 v = normalize(vViewPos);
-        vec3 l1 = normalize(vec3(3.0, 3.0, 4.0));
-        vec3 l2 = normalize(vec3(-3.0, 1.0, 2.0));
-        vec3 l3 = normalize(vec3(-1.0, 2.0, -3.0));
-        float diff1 = (dot(n, l1) * 0.5 + 0.5) * 0.45;
-        float diff2 = (dot(n, l2) * 0.5 + 0.5) * 0.25;
-        float diff3 = (dot(n, l3) * 0.5 + 0.5) * 0.15;
-        float ambient = 0.4;
-        float lighting = ambient + diff1 + diff2 + diff3;
-        vec3 brainColor = vec3(0.25, 0.28, 0.27) * lighting;
-        vec3 greenColor = vec3(0.0, 1.0, 0.4);
-        vec3 whiteGlow = vec3(0.6, 1.0, 0.7);
-        for (int i = 0; i < NUM_GLOWS; i++) {
-          float dist = distance(vWorldPos, uGlowCenters[i]);
-          float baseRadius = uGlowRadii[i];
-          float phase = uGlowPhases[i];
-          float cycle = mod(uTime + phase, 12.0);
-          float radiusScale = smoothstep(0.0, 3.0, cycle) * (1.0 - smoothstep(5.0, 7.0, cycle));
-          float currentRadius = baseRadius * radiusScale;
-          float intensity = smoothstep(0.0, 2.0, cycle) * (1.0 - smoothstep(4.5, 7.0, cycle));
-          float spread = smoothstep(currentRadius, currentRadius * 0.1, dist) * intensity;
-          float core = smoothstep(currentRadius * 0.6, 0.0, dist) * intensity;
-          brainColor = mix(brainColor, greenColor * 1.1, spread * 0.5);
-          brainColor += whiteGlow * core * core * 0.35;
-          brainColor += greenColor * spread * 0.2;
-        }
-        gl_FragColor = vec4(brainColor, 1.0);
-      }
-    `,
-    uniforms: {
-      uTime: { value: 0 },
-      uGlowCenters: { value: [
-        new THREE.Vector3(bmid.x, bmid.y + bsz.y * 0.4, bmid.z + bsz.z * 0.05),
-        new THREE.Vector3(bmid.x - bsz.x * 0.35, bmid.y + bsz.y * 0.15, bmid.z + bsz.z * 0.25),
-        new THREE.Vector3(bmid.x + bsz.x * 0.35, bmid.y + bsz.y * 0.15, bmid.z + bsz.z * 0.25),
-        new THREE.Vector3(bmid.x - bsz.x * 0.35, bmid.y - bsz.y * 0.1, bmid.z - bsz.z * 0.15),
-        new THREE.Vector3(bmid.x + bsz.x * 0.35, bmid.y - bsz.y * 0.1, bmid.z - bsz.z * 0.15),
-        new THREE.Vector3(bmid.x, bmid.y + bsz.y * 0.15, bmid.z - bsz.z * 0.35),
-        new THREE.Vector3(bmid.x - bsz.x * 0.2, bmid.y + bsz.y * 0.35, bmid.z - bsz.z * 0.1),
-        new THREE.Vector3(bmid.x + bsz.x * 0.2, bmid.y + bsz.y * 0.35, bmid.z - bsz.z * 0.1),
-      ]},
-      uGlowRadii: { value: [bsz.y*0.4, bsz.y*0.35, bsz.y*0.35, bsz.y*0.3, bsz.y*0.3, bsz.y*0.3, bsz.y*0.28, bsz.y*0.28] },
-      uGlowPhases: { value: [0.0, 4.0, 8.0, 2.0, 6.0, 3.5, 7.0, 1.0] },
-    },
-    side: THREE.DoubleSide,
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(particlePos, 3));
+  pGeo.setAttribute('color', new THREE.BufferAttribute(particleCol, 3));
+
+  const pMat = new THREE.PointsMaterial({
+    size: 0.08,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.95,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
   });
+  const particles = new THREE.Points(pGeo, pMat);
+  brainGroup.add(particles);
 
-  const brainMesh = new THREE.Mesh(brainGeo, brainMat);
-  brainGroup.add(brainMesh);
+  /* Connections */
+  const connPos = [];
+  for (let i = 0; i < brainPoints.length; i++) {
+    for (let j = i + 1; j < brainPoints.length; j++) {
+      const d = brainPoints[i].distanceTo(brainPoints[j]);
+      if (d < 0.35 && Math.random() < 0.04) {
+        connPos.push(brainPoints[i].x, brainPoints[i].y, brainPoints[i].z);
+        connPos.push(brainPoints[j].x, brainPoints[j].y, brainPoints[j].z);
+      }
+    }
+  }
+  const cGeo = new THREE.BufferGeometry();
+  cGeo.setAttribute('position', new THREE.Float32BufferAttribute(connPos, 3));
+  const cMat = new THREE.LineBasicMaterial({
+    color: 0x00ff66,
+    transparent: true,
+    opacity: 0.10,
+  });
+  const connections = new THREE.LineSegments(cGeo, cMat);
+  brainGroup.add(connections);
 
-  brainGroup.scale.set(1.7, 1.7, 1.7);
-  brainGroup.rotation.y = Math.PI / 2;
+  /* Center glow */
+  const glowGeo2 = new THREE.SphereGeometry(0.08, 8, 8);
+  const glowMat2 = new THREE.MeshBasicMaterial({
+    color: 0x00ff88,
+    transparent: true,
+    opacity: 0.6,
+    depthWrite: false,
+  });
+  const centerGlow = new THREE.Mesh(glowGeo2, glowMat2);
+  brainGroup.add(centerGlow);
+
+  brainGroup.scale.set(1.75, 1.75, 1.75);
   brainGroup.position.y = -0.05;
+  brainGroup.rotation.y = Math.PI / 2;
   scene.add(brainGroup);
-
-  /* ---- Mouse drag rotation (Synchron-style) ---- */
-  let isDragging = false;
-  let prevMouseX = 0, prevMouseY = 0;
-  let rotY = Math.PI / 2, rotX = 0;
-
-  renderer.domElement.addEventListener('pointerdown', (e) => {
-    isDragging = true;
-    prevMouseX = e.clientX;
-    prevMouseY = e.clientY;
-  });
-  window.addEventListener('pointermove', (e) => {
-    if (!isDragging) return;
-    const dx = e.clientX - prevMouseX;
-    const dy = e.clientY - prevMouseY;
-    rotY += dx * 0.005;
-    rotX += dy * 0.003;
-    rotX = Math.max(-0.8, Math.min(0.8, rotX));
-    prevMouseX = e.clientX;
-    prevMouseY = e.clientY;
-  });
-  window.addEventListener('pointerup', () => { isDragging = false; });
-  window.addEventListener('pointerleave', () => { isDragging = false; });
 
   /* ---- Stars background ---- */
   const starCount = 800;
-  const starGeo = new THREE.BufferGeometry();
-  const starPos = new Float32Array(starCount * 3);
-  for (let i = 0; i < starCount * 3; i++) starPos[i] = (Math.random() - 0.5) * 40;
-  starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-  const starMat = new THREE.PointsMaterial({
-    color: 0x226644, size: 0.02, transparent: true, opacity: 0.3,
+  const starGeo3 = new THREE.BufferGeometry();
+  const starPos2 = new Float32Array(starCount * 3);
+  for (let i = 0; i < starCount * 3; i++) {
+    starPos2[i] = (Math.random() - 0.5) * 40;
+  }
+  starGeo3.setAttribute('position', new THREE.BufferAttribute(starPos2, 3));
+  const starMat3 = new THREE.PointsMaterial({
+    color: 0x226644,
+    size: 0.02,
+    transparent: true,
+    opacity: 0.3,
     blending: THREE.AdditiveBlending,
   });
-  const stars = new THREE.Points(starGeo, starMat);
+  const stars = new THREE.Points(starGeo3, starMat3);
   scene.add(stars);
 
   /* ---- Resize ---- */
   function resize() {
     const r = container.getBoundingClientRect();
-    camera.aspect = r.width / r.height;
+    const nw = r.width, nh = r.height;
+    camera.aspect = nw / nh;
     camera.updateProjectionMatrix();
-    renderer.setSize(r.width, r.height);
+    renderer.setSize(nw, nh);
   }
   window.addEventListener('resize', resize);
 
@@ -268,13 +293,11 @@ function initCyberbrain() {
     requestAnimationFrame(animate);
     const t = time * 0.001;
 
-    brainMat.uniforms.uTime.value = t;
+    sphereMat.uniforms.uTime.value = t;
+    sphere.rotation.y = t * 0.025;
+    ring.rotation.z = t * 0.02;
 
-    if (!isDragging) rotY += 0.005;
-    brainGroup.rotation.y = rotY;
-    brainGroup.rotation.x = rotX;
-    brainGroup.position.y = -0.05 + Math.sin(t * 0.5) * 0.015;
-
+    controls.update();
     renderer.render(scene, camera);
   }
 
