@@ -812,10 +812,10 @@ function initDnaScanner() {
       ctx.moveTo(x, tapeTop);
       [1.5, 6.5].forEach(chunkPos => {
         const cy = tapeTop + chunkPos * chunkH;
-        ctx.lineTo(x, cy - hexR);
-        ctx.lineTo(x + dir * hw, cy - hh);
-        ctx.lineTo(x + dir * hw, cy + hh);
-        ctx.lineTo(x, cy + hexR);
+        ctx.lineTo(x, cy - 1.5 * hh);
+        ctx.lineTo(x + dir * hw / 2, cy - hh);
+        ctx.lineTo(x + dir * hw / 2, cy + hh);
+        ctx.lineTo(x, cy + 1.5 * hh);
       });
       ctx.lineTo(x, tapeBot);
       ctx.stroke();
@@ -829,10 +829,10 @@ function initDnaScanner() {
         const rx = side === -1 ? tx + tw : tx;
         const dir = side === -1 ? -1 : 1;
         ctx.beginPath();
-        ctx.moveTo(rx, cy - hexR);
-        ctx.lineTo(rx + dir * hw, cy - hh);
-        ctx.lineTo(rx + dir * hw, cy + hh);
-        ctx.lineTo(rx, cy + hexR);
+        ctx.moveTo(rx, cy - 1.5 * hh);
+        ctx.lineTo(rx + dir * hw / 2, cy - hh);
+        ctx.lineTo(rx + dir * hw / 2, cy + hh);
+        ctx.lineTo(rx, cy + 1.5 * hh);
         ctx.closePath();
         ctx.fill();
       });
