@@ -2,6 +2,7 @@
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import BRAIN_VERTS from './brain_verts.js';
 
 /* HELPERS */
 function resizeCanvas(canvas, container) {
@@ -137,63 +138,35 @@ function initCyberbrain() {
   ring.renderOrder = 0;
   scene.add(ring);
 
-  /* ---- Brain particle system (SDF-based brain shape) ---- */
+  /* ---- Brain particle system (OBJ-based volumetric cloud) ---- */
   const brainGroup = new THREE.Group();
   brainGroup.renderOrder = 1;
 
-  /* Volume test: is point inside the brain? */
-  function isInsideBrain(x, y, z) {
-    const ax = Math.abs(x);
-    const sx = x < 0 ? -1 : 1;
+  /* Center, normalize, and scale OBJ vertices to scene space */
+  let cx = 0, cy = 0, cz = 0;
+  for (const v of BRAIN_VERTS) { cx += v[0]; cy += v[1]; cz += v[2]; }
+  cx /= BRAIN_VERTS.length; cy /= BRAIN_VERTS.length; cz /= BRAIN_VERTS.length;
 
-    /* Longitudinal fissure — gap between hemispheres */
-    const fissureW = 0.04 + 0.04 * Math.max(0, 1 - Math.abs(z) / 1.0);
-    if (ax < fissureW && z < 0.6 && y > -0.2) return false;
-    if (ax < 0.02 && z < 0.4 && y > -0.3) return false;
+  let maxExt = 0;
+  const verts = BRAIN_VERTS.map(v => {
+    const x = v[0] - cx, y = v[1] - cy, z = v[2] - cz;
+    maxExt = Math.max(maxExt, Math.abs(x), Math.abs(y), Math.abs(z));
+    return [x, y, z];
+  });
+  const scl = 0.85 / maxExt;
+  verts.forEach(v => { v[0] *= scl; v[1] *= scl; v[2] *= scl; });
 
-    /* Main cerebral hemispheres — wider at back (occipital), tapered at front (frontal) */
-    const zNorm = z / 0.85;
-    const rx = 0.65 + 0.25 * Math.max(0, -zNorm);
-    const ry = 0.55;
-    const rz = 0.85;
-
-    const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
-    let inside = dCerebrum <= 1.0;
-
-    /* Temporal lobes — large, prominent lateral structures */
-    const tCx = sx * 0.64, tCy = -0.08, tCz = 0.22;
-    const tRx = 0.26, tRy = 0.22, tRz = 0.38;
-    const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
-    if (dTemporal <= 1.0) inside = true;
-
-    /* Cerebellum — rounded, well-integrated at base of cerebrum */
-    const cbCx = 0, cbCy = -0.28, cbCz = -0.74;
-    const cbRx = 0.38, cbRy = 0.26, cbRz = 0.26;
-    const dCerebellum = ((x-cbCx)*(x-cbCx))/(cbRx*cbRx) + ((y-cbCy)*(y-cbCy))/(cbRy*cbRy) + ((z-cbCz)*(z-cbCz))/(cbRz*cbRz);
-    if (dCerebellum <= 1.0) inside = true;
-
-    /* Brainstem */
-    const bsCx = 0, bsCy = -0.74, bsCz = -0.29;
-    const bsRx = 0.10, bsRy = 0.29, bsRz = 0.10;
-    const dBrainstem = ((x-bsCx)*(x-bsCx))/(bsRx*bsRx) + ((y-bsCy)*(y-bsCy))/(bsRy*bsRy) + ((z-bsCz)*(z-bsCz))/(bsRz*bsRz);
-    if (dBrainstem <= 1.0) inside = true;
-
-    return inside;
-  }
-
-  /* Rejection sampling within bounding box */
-  const BOUNDS = { x: [-1.2, 1.2], y: [-1.0, 0.8], z: [-1.1, 1.0] };
-  const maxPoints = 4000;
-  let brainPoints = [];
-  let attempts = 0;
-  while (brainPoints.length < maxPoints && attempts < maxPoints * 30) {
-    const px = BOUNDS.x[0] + Math.random() * (BOUNDS.x[1] - BOUNDS.x[0]);
-    const py = BOUNDS.y[0] + Math.random() * (BOUNDS.y[1] - BOUNDS.y[0]);
-    const pz = BOUNDS.z[0] + Math.random() * (BOUNDS.z[1] - BOUNDS.z[0]);
-    attempts++;
-    if (isInsideBrain(px, py, pz)) {
-      brainPoints.push(new THREE.Vector3(px, py, pz));
-    }
+  /* Generate volumetric point cloud by scaling toward centroid */
+  const targetCount = 4000;
+  const brainPoints = [];
+  for (let i = 0; i < targetCount; i++) {
+    const src = verts[Math.floor(Math.random() * verts.length)];
+    const t = Math.cbrt(Math.random());
+    brainPoints.push(new THREE.Vector3(
+      src[0] * t + (Math.random() - 0.5) * 0.02,
+      src[1] * t + (Math.random() - 0.5) * 0.02,
+      src[2] * t + (Math.random() - 0.5) * 0.02
+    ));
   }
 
   const particlePos = new Float32Array(brainPoints.length * 3);
