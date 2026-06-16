@@ -151,30 +151,30 @@ function initCyberbrain() {
     if (ax < fissureW && z < 0.6 && y > -0.2) return false;
     if (ax < 0.02 && z < 0.4 && y > -0.3) return false;
 
-    /* Main cerebral hemispheres — elongated front-to-back, tapered at front */
+    /* Main cerebral hemispheres — wider at back (occipital), tapered at front (frontal) */
     const zNorm = z / 0.85;
-    const rx = (0.65 + 0.15 * Math.max(0, -zNorm));
-    const ry = 0.50;
-    const rz = 0.80;
+    const rx = 0.62 + 0.20 * Math.max(0, -zNorm);
+    const ry = 0.52;
+    const rz = 0.82;
 
     const dCerebrum = (x*x)/(rx*rx) + (y*y)/(ry*ry) + (z*z)/(rz*rz);
     let inside = dCerebrum <= 1.0;
 
-    /* Temporal lobes — subtle side bulges, reduced so they don't look like wings */
-    const tCx = sx * 0.60, tCy = -0.08, tCz = 0.20;
-    const tRx = 0.12, tRy = 0.14, tRz = 0.22;
+    /* Temporal lobes — slightly larger, shifted slightly forward */
+    const tCx = sx * 0.59, tCy = -0.07, tCz = 0.16;
+    const tRx = 0.14, tRy = 0.16, tRz = 0.24;
     const dTemporal = ((x-tCx)*(x-tCx))/(tRx*tRx) + ((y-tCy)*(y-tCy))/(tRy*tRy) + ((z-tCz)*(z-tCz))/(tRz*tRz);
     if (dTemporal <= 1.0) inside = true;
 
-    /* Cerebellum — separated round structure at back-bottom */
-    const cbCx = 0, cbCy = -0.35, cbCz = -0.78;
-    const cbRx = 0.32, cbRy = 0.20, cbRz = 0.22;
+    /* Cerebellum — slightly larger, more distinct */
+    const cbCx = 0, cbCy = -0.36, cbCz = -0.80;
+    const cbRx = 0.34, cbRy = 0.22, cbRz = 0.23;
     const dCerebellum = ((x-cbCx)*(x-cbCx))/(cbRx*cbRx) + ((y-cbCy)*(y-cbCy))/(cbRy*cbRy) + ((z-cbCz)*(z-cbCz))/(cbRz*cbRz);
     if (dCerebellum <= 1.0) inside = true;
 
     /* Brainstem */
-    const bsCx = 0, bsCy = -0.73, bsCz = -0.28;
-    const bsRx = 0.10, bsRy = 0.28, bsRz = 0.10;
+    const bsCx = 0, bsCy = -0.74, bsCz = -0.29;
+    const bsRx = 0.10, bsRy = 0.29, bsRz = 0.10;
     const dBrainstem = ((x-bsCx)*(x-bsCx))/(bsRx*bsRx) + ((y-bsCy)*(y-bsCy))/(bsRy*bsRy) + ((z-bsCz)*(z-bsCz))/(bsRz*bsRz);
     if (dBrainstem <= 1.0) inside = true;
 
