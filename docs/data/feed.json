@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-06-16T12:57:16.100711+00:00",
+      "title": "100 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "100 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-06-16T01:15:01.325822+00:00",
       "title": "Memory bloc restoration: 240/365 [27 Pages]",
@@ -6081,5 +6094,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-16T01:15:01.331198+00:00"
+  "updated": "2026-06-16T12:57:16.106158+00:00"
 }
