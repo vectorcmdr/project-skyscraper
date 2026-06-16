@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T15:35:02.195049+00:00",
+  "updated": "2026-06-16T17:15:43.704236+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -352,14 +352,6 @@
       "url": "https://project-skyscraper.com/2016/02/05/event-05022016/",
       "author": "System",
       "date": "2016-02-05T00:00:00"
-    },
-    {
-      "id": "/2016/02/08/event-08022016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/02/08/event-08022016/",
-      "author": "System",
-      "date": "2016-02-08T00:00:00"
     },
     {
       "id": "/2016/02/09/event-09022016",
@@ -2010,14 +2002,6 @@
       "date": "2016-12-23T00:00:00"
     },
     {
-      "id": "/2016/12/26/event-26122016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/12/26/event-26122016/",
-      "author": "System",
-      "date": "2016-12-26T00:00:00"
-    },
-    {
       "id": "/2016/12/28/event-28122016",
       "type": "post",
       "label": "2016_dataset",
@@ -2066,6 +2050,14 @@
       "date": "2016-01-07T00:00:00"
     },
     {
+      "id": "/2016/02/08/event-08022016",
+      "type": "post",
+      "label": "2016_dataset_08022016",
+      "url": "https://project-skyscraper.com/2016/02/08/event-08022016/",
+      "author": "System",
+      "date": "2016-02-08T00:00:00"
+    },
+    {
       "id": "/2016/04/08/event-08042016",
       "type": "post",
       "label": "2016_dataset_08042016",
@@ -2104,6 +2096,14 @@
       "url": "https://project-skyscraper.com/2016/04/20/event-20042016/",
       "author": "System",
       "date": "2016-04-19T23:00:00"
+    },
+    {
+      "id": "/2016/12/26/event-26122016",
+      "type": "post",
+      "label": "2016_dataset_26122016",
+      "url": "https://project-skyscraper.com/2016/12/26/event-26122016/",
+      "author": "System",
+      "date": "2016-12-26T00:00:00"
     },
     {
       "id": "/2017/06/01/event-01062017",
@@ -2642,6 +2642,14 @@
       "date": "2026-06-11T15:50:18"
     },
     {
+      "id": "/1bfd5d647a1c",
+      "type": "media",
+      "label": "1BFD5D647A1C",
+      "url": "https://project-skyscraper.com/1bfd5d647a1c/",
+      "author": "The Architect",
+      "date": "2026-06-16T17:15:26"
+    },
+    {
       "id": "/1e31d7c81379",
       "type": "media",
       "label": "1E31D7C81379",
@@ -2842,6 +2850,14 @@
       "date": ""
     },
     {
+      "id": "https://discord.com/channels/146101654981312513/1506587996835680347",
+      "type": "external",
+      "label": "discord.com",
+      "url": "https://discord.com/channels/146101654981312513/1506587996835680347",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
       "type": "external",
       "label": "forums.atlas-65.com",
@@ -2926,6 +2942,14 @@
       "type": "external",
       "label": "soundcloud.com",
       "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.space.com/35127-top-spaceflight-stories-2016.html",
+      "type": "external",
+      "label": "space.com",
+      "url": "https://www.space.com/35127-top-spaceflight-stories-2016.html",
       "author": "",
       "date": ""
     },
@@ -5386,6 +5410,14 @@
     {
       "source": "/2016/02/08/event-08022016",
       "target": "/"
+    },
+    {
+      "source": "/2016/02/08/event-08022016",
+      "target": "https://discord.com/channels/146101654981312513/1506587996835680347"
+    },
+    {
+      "source": "/2016/02/08/event-08022016",
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/02/08/event-08022016",
@@ -7989,6 +8021,14 @@
     },
     {
       "source": "/2016/12/26/event-26122016",
+      "target": "https://www.space.com/35127-top-spaceflight-stories-2016.html"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/12/26/event-26122016",
       "target": "/2016/12/23/event-23122016"
     },
     {
@@ -8781,6 +8821,10 @@
     },
     {
       "source": "/dd85ac69ae24",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/1bfd5d647a1c",
       "target": "/author/theskyscraperarchitect"
     },
     {
@@ -11420,10 +11464,6 @@
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
-      "source": "/2016/02/08/event-08022016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
       "source": "/2016/02/09/event-09022016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
@@ -12237,10 +12277,6 @@
     },
     {
       "source": "/2016/12/23/event-23122016",
-      "target": "/2016/10/30/2016_dataset-in-memoriam"
-    },
-    {
-      "source": "/2016/12/26/event-26122016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
