@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T14:58:51.490646+00:00",
+  "updated": "2026-06-16T14:59:51.278094+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -72,6 +72,14 @@
       "url": "https://project-skyscraper.com/report-lon-reality-glitch/",
       "author": "The Architect",
       "date": "2026-06-01T19:46:00"
+    },
+    {
+      "id": "/report-ott-time-disruption",
+      "type": "page",
+      "label": "Report: OTTAWA",
+      "url": "https://project-skyscraper.com/report-ott-time-disruption/",
+      "author": "The Architect",
+      "date": "2026-06-16T14:58:00"
     },
     {
       "id": "/report-par-temporal-merge",
@@ -2862,6 +2870,14 @@
       "type": "external",
       "label": "iili.io",
       "url": "https://iili.io/CC2x7xs.jpg",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://iili.io/CocgynS.jpg",
+      "type": "external",
+      "label": "iili.io",
+      "url": "https://iili.io/CocgynS.jpg",
       "author": "",
       "date": ""
     },
@@ -8565,6 +8581,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/report-ott-time-disruption"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/report-par-temporal-merge"
     },
     {
@@ -8590,6 +8610,14 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
+    },
+    {
+      "source": "/report-ott-time-disruption",
+      "target": "/"
+    },
+    {
+      "source": "/report-ott-time-disruption",
+      "target": "https://iili.io/CocgynS.jpg"
     },
     {
       "source": "/2026/06/16/structural-analysis-155807",
@@ -8717,6 +8745,10 @@
     },
     {
       "source": "/report-lon-reality-glitch",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/report-ott-time-disruption",
       "target": "/author/theskyscraperarchitect"
     },
     {
