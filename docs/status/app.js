@@ -94,6 +94,29 @@ function playSound(name) {
   a.play().catch(function() {});
 }
 
+/* ── SYNTHETIC TEST TRIGGERS (URL params, safe to remove) ── */
+(function() {
+  var p = new URLSearchParams(window.location.search);
+  var test = p.get('test_sound');
+  if (test) {
+    setTimeout(function() {
+      if (!isSoundEnabled()) toggleSound();
+      if (test === 'changelog' || test === 'manifest' || test === 'external') {
+        playSound('newEntry');
+      } else if (test === 'trace_active') {
+        playSound('traceActive');
+      } else if (test === 'trace_lost') {
+        playSound('traceLost');
+      } else if (test === 'poll') {
+        lastKnown.feed = 1;
+        lastKnown.manifest = 0;
+        lastKnown.external = 1;
+        checkNewData();
+      }
+    }, 500);
+  }
+})();
+
 /* ── RENDER FEED ───────────────────────────────────────── */
 function renderFeed(entries) {
   const container = document.getElementById('feedEntries');
