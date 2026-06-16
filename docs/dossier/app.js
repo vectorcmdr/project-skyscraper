@@ -806,18 +806,18 @@ function initDnaScanner() {
     const a = tw * 0.09;
     const w1 = a;
     const w2 = a * 1.5;
-    const h = a * Math.sqrt(3) / 2;
+    const hexOff = a * Math.sqrt(3) / 2;
 
     function drawRailWithBulge(x, dir) {
       ctx.beginPath();
       ctx.moveTo(x, tapeTop);
       [1.5, 6.5].forEach(chunkPos => {
         const cy = tapeTop + chunkPos * chunkH;
-        ctx.lineTo(x, cy - h);
-        ctx.lineTo(x + dir * w1, cy - h);
+        ctx.lineTo(x, cy - hexOff);
+        ctx.lineTo(x + dir * w1, cy - hexOff);
         ctx.lineTo(x + dir * w2, cy);
-        ctx.lineTo(x + dir * w1, cy + h);
-        ctx.lineTo(x, cy + h);
+        ctx.lineTo(x + dir * w1, cy + hexOff);
+        ctx.lineTo(x, cy + hexOff);
       });
       ctx.lineTo(x, tapeBot);
       ctx.stroke();
@@ -831,11 +831,11 @@ function initDnaScanner() {
         const rx = side === -1 ? tx + tw : tx;
         const dir = side === -1 ? -1 : 1;
         ctx.beginPath();
-        ctx.moveTo(rx, cy - h);
-        ctx.lineTo(rx + dir * w1, cy - h);
+        ctx.moveTo(rx, cy - hexOff);
+        ctx.lineTo(rx + dir * w1, cy - hexOff);
         ctx.lineTo(rx + dir * w2, cy);
-        ctx.lineTo(rx + dir * w1, cy + h);
-        ctx.lineTo(rx, cy + h);
+        ctx.lineTo(rx + dir * w1, cy + hexOff);
+        ctx.lineTo(rx, cy + hexOff);
         ctx.closePath();
         ctx.fill();
       });
