@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-17T19:32:48.189800+00:00",
-      "title": "Memory bloc restoration: 286/365 [1 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "281/365 → 286/365",
-      "detail": "Memory bloc restoration changed from 281/365 to 286/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "286/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-17T19:32:48.189800+00:00"
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-17T20:33:17.830588+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
     },
     {
-      "type": "external_sitemap_changed",
-      "timestamp": "2026-06-17T17:30:55.313690+00:00",
-      "title": "Sitemap: +4 URL(s) for recalldreams.dev",
-      "link": "https://recalldreams.dev/sitemap.xml",
-      "endpoint": "",
-      "diff": "+ https://recalldreams.dev/\n+ https://recalldreams.dev/2026/04/24/hello-world/\n+ https://recalldreams.dev/author/theskyscraperarchitect/\n+ https://recalldreams.dev/category/uncategorized/",
-      "detail": "Sitemap: +4 URL(s) for recalldreams.dev",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-17T20:33:17.830508+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T19:32:48.196135+00:00"
+  "updated": "2026-06-17T20:33:17.837317+00:00"
 }
