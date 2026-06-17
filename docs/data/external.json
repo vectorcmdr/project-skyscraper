@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T15:16:11.735577+00:00",
+      "title": "Content changed: https://recalldreams.dev/robots.txt",
+      "link": "https://recalldreams.dev/robots.txt",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/robots.txt\n# File: discovery/robots.txt\n# Timestamp: 2026-06-17 15:14:13 UTC\n# Lines: 613 old -> 612 new\n# Beautified: yes\n\n@@ -45,4 +45,4 @@\n Disallow: /\n\n \n\n User-agent: sentibot\n\n-Disallow: /\n\n+Disallow: /",
+      "detail": "Content changed: https://recalldreams.dev/robots.txt",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T15:16:11.735493+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-17 15:13:40 UTC\n# Lines: 546606 old -> 546601 new\n# Beautified: yes\n\n@@ -1,6 +1,6 @@\n {\n\n   \"name\": \"RecallDreams\",\n\n-  \"description\": \"What makes a memory worth keeping ?\",\n\n+  \"description\": \"41 years old solo dev. French.\",\n\n   \"url\": \"https://recalldreams.dev\",\n\n   \"home\": \"https://recalldreams.dev\",\n\n   \"gmt_offset\": 1,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_robots_txt_changed",
       "timestamp": "2026-06-17T14:50:02.193331+00:00",
       "title": "robots.txt captured for recalldreams.dev",
@@ -642,5 +668,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-17T15:08:20.984038+00:00"
+  "updated": "2026-06-17T15:16:11.735613+00:00"
 }
