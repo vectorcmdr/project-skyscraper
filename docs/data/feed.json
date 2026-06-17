@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-17T18:03:47+00:00",
-      "title": "Inbox",
-      "link": "https://project-skyscraper.com/inbox/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "+ Project Skyscraper\n+ Ghost >À : the_architect@project-skyscraper.com\n+ mercredi 17 juin20:02\n+ Pourquoi as-tu coupés l’accès à TOWER ? J’ai BESOIN de cet accès !\n... (truncated)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-17T19:32:48.189800+00:00",
+      "title": "Memory bloc restoration: 286/365 [1 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "281/365 → 286/365",
+      "detail": "Memory bloc restoration changed from 281/365 to 286/365 across 1 pages",
       "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "286/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-17T19:32:48.189800+00:00"
     },
     {
       "type": "external_sitemap_changed",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T18:05:00.105323+00:00"
+  "updated": "2026-06-17T19:32:48.196135+00:00"
 }
