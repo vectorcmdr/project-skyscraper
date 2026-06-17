@@ -1,13 +1,13 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T16:45:17.865156+00:00",
-      "title": "New media: opening_door_protocol on recalldreams.dev",
-      "link": "https://recalldreams.dev/?attachment_id=64",
-      "endpoint": "/wp-json/wp/v2/media",
-      "diff": "+ #64: opening_door_protocol",
-      "detail": "New media: opening_door_protocol on recalldreams.dev",
+      "type": "external_robots_txt_changed",
+      "timestamp": "2026-06-17T17:15:35.771606+00:00",
+      "title": "robots.txt captured for recalldreams.dev",
+      "link": "https://recalldreams.dev/robots.txt",
+      "endpoint": "",
+      "diff": "@@ -1,48 +1,17 @@\n-User-agent: *\n\n-Disallow: /wp-admin/\n\n-Allow: /wp-admin/admin-ajax.php\n\n-\n\n-User-agent: Amazonbot\n\n-Disallow: /\n\n-\n\n-User-agent: anthropic-ai\n\n-Disallow: /\n\n-\n\n-User-agent: Applebot-Extended\n\n-Disallow: /\n\n-\n\n-User-agent: Bytespider\n\n-Disallow: /\n\n-\n\n-User-agent: CCBot\n\n-Disallow: /\n\n-\n\n-User-agent: ClaudeBot\n\n-Disallow: /\n\n-\n\n-User-agent: FacebookBot\n\n-Disallow: /\n\n-\n\n-User-agent: Google-Extended\n\n-Disallow: /\n\n-\n\n-User-agent: GPTBot\n\n-Disallow: /\n\n-\n\n-User-agent: meta-externalagent\n\n-Disallow: /\n\n-\n\n-User-agent: omgili\n\n-Disallow: /\n\n-\n\n-User-agent: omgilibot\n\n-Disallow: /\n\n-\n\n-User-agent: PerplexityBot\n\n-Disallow: /\n\n-\n\n-User-agent: SentiBot\n\n-Disallow: /\n\n-\n\n-User-agent: sentibot\n\n-Disallow: /\n\n+# =============================================\r\n\n+# TOWER ARCHIVE - COMPROMISED\r\n\n+# All access terminated following security breach\r\n\n+# =============================================\r\n\n+\r\n\n+User-agent: *\r\n\n+Disallow: /\r\n\n+\r\n\n+Disallow: /wp-json/\r\n\n+Disallow: /wp-sitemap.xml\r\n\n+Disallow: /wp-admin/\r\n\n+Disallow: /console/\r\n\n+Disallow: /terminal/\r\n\n+Disallow: /database/\r\n\n+Disallow: /echoes/\r\n\n+\r\n\n+Crawl-delay: 999999",
+      "detail": "robots.txt changed for recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T16:45:17.870037+00:00"
+  "updated": "2026-06-17T17:15:35.780689+00:00"
 }
