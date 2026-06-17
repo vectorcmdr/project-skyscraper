@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T14:15:13.731971+00:00",
+  "updated": "2026-06-17T14:34:44.719332+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2360,6 +2360,14 @@
       "url": "https://project-skyscraper.com/2016/12/31/event-31122016/",
       "author": "System",
       "date": "2016-12-31T00:00:00"
+    },
+    {
+      "id": "/2016/01/27/event-27012016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/01/27/event-27012016/",
+      "author": "System",
+      "date": "2016-01-27T00:00:00"
     },
     {
       "id": "/2016/01/05/event-05012016",
@@ -6073,7 +6081,7 @@
     },
     {
       "source": "/2016/03/19/event-19032016",
-      "target": "/2016/03/22/event-22032016"
+      "target": "/2016/03/20/event-20032016"
     },
     {
       "source": "/2016/03/20/event-20032016",
@@ -6093,7 +6101,7 @@
     },
     {
       "source": "/2016/03/22/event-22032016",
-      "target": "/2016/03/19/event-19032016"
+      "target": "/2016/03/20/event-20032016"
     },
     {
       "source": "/2016/03/22/event-22032016",
@@ -6241,7 +6249,7 @@
     },
     {
       "source": "/2016/04/03/event-03042016",
-      "target": "/2016/04/06/event-06042016"
+      "target": "/2016/04/05/event-05042016"
     },
     {
       "source": "/2016/04/05/event-05042016",
@@ -6261,7 +6269,7 @@
     },
     {
       "source": "/2016/04/06/event-06042016",
-      "target": "/2016/04/03/event-03042016"
+      "target": "/2016/04/05/event-05042016"
     },
     {
       "source": "/2016/04/06/event-06042016",
@@ -6309,7 +6317,7 @@
     },
     {
       "source": "/2016/04/11/event-11042016",
-      "target": "/2016/04/13/event-13042016"
+      "target": "/2016/04/12/event-12042016"
     },
     {
       "source": "/2016/04/12/event-12042016",
@@ -6329,7 +6337,7 @@
     },
     {
       "source": "/2016/04/13/event-13042016",
-      "target": "/2016/04/11/event-11042016"
+      "target": "/2016/04/12/event-12042016"
     },
     {
       "source": "/2016/04/13/event-13042016",
@@ -6385,7 +6393,7 @@
     },
     {
       "source": "/2016/04/20/event-20042016",
-      "target": "/2016/04/22/event-22042016"
+      "target": "/2016/04/21/event-21042016"
     },
     {
       "source": "/2016/04/21/event-21042016",
@@ -6405,7 +6413,7 @@
     },
     {
       "source": "/2016/04/22/event-22042016",
-      "target": "/2016/04/20/event-20042016"
+      "target": "/2016/04/21/event-21042016"
     },
     {
       "source": "/2016/04/22/event-22042016",
@@ -9740,6 +9748,18 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/01/27/event-27012016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/01/27/event-27012016",
+      "target": "/2016/01/26/event-26012016"
+    },
+    {
+      "source": "/2016/01/27/event-27012016",
+      "target": "/2016/01/28/event-28012016"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/author/theskyscraperarchitect"
     },
@@ -10289,6 +10309,14 @@
     },
     {
       "source": "/2016/01/26/event-26012016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/01/27/event-27012016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/01/27/event-27012016",
       "target": "/category/non-classe"
     },
     {
@@ -12785,6 +12813,10 @@
     },
     {
       "source": "/2016/01/26/event-26012016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/01/27/event-27012016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
