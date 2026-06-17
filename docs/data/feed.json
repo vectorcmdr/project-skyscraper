@@ -1,16 +1,16 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-17T15:34:01.588279+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "type": "external_robots_txt_changed",
+      "timestamp": "2026-06-17T15:48:03.248690+00:00",
+      "title": "robots.txt captured for recalldreams.dev",
+      "link": "https://recalldreams.dev/robots.txt",
+      "endpoint": "",
+      "diff": "@@ -45,4 +45,4 @@\n Disallow: /\n\n \n\n User-agent: sentibot\n\n-Disallow: /\n+Disallow: /\n",
+      "detail": "robots.txt changed for recalldreams.dev",
       "author": 0,
-      "site": "",
-      "id": 395,
+      "site": "recalldreams",
+      "id": null,
       "game_date": ""
     },
     {
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T15:34:01.592176+00:00"
+  "updated": "2026-06-17T15:48:03.252856+00:00"
 }
