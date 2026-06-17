@@ -1,17 +1,139 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T14:37:07.690799+00:00",
-      "title": "3 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/media",
-      "diff": "+ #57: Unknown\n+ #58: Unique gameplay\n+ #59: The maze",
-      "detail": "3 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
+      "type": "external_robots_txt_changed",
+      "timestamp": "2026-06-17T14:50:02.193331+00:00",
+      "title": "robots.txt captured for recalldreams.dev",
+      "link": "https://recalldreams.dev/robots.txt",
+      "endpoint": "",
+      "diff": "@@ -45,4 +45,4 @@\n Disallow: /\n\n \n\n User-agent: sentibot\n\n-Disallow: /\n\n+Disallow: /",
+      "detail": "robots.txt changed for recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
       "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:50:02.193287+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-17 14:47:51 UTC\n# Lines: 50024 old -> 50098 new\n# Beautified: yes\n\n@@ -337,3 +337,4 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n+\n",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:50:02.193208+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100\n# File: api/wp-json/wp/v2/media_per_page_100/.json\n# Timestamp: 2026-06-17 14:47:37 UTC\n# Lines: 25583 old -> 56333 new\n# Beautified: yes\n\n@@ -1,4 +1,687 @@\n [\n\n+  {\n\n+    \"date\": \"2026-06-17T15:35:56\",\n\n+    \"title\": {\n\n+      \"rendered\": \"The maze\"\n\n+    },\n\n+    \"filename\": \"The-maze.jpg\",\n\n+    \"filesize\": 3796267,\n\n+    \"jetpack_likes_enabled\": true,\n\n+    \"jetpack_sharing_enabled\": true,\n\n+    \"jetpack_shortlink\": \"https://wp.me/ahdnDc-X\",\n\n+    \"description\": {\n\n+      \"rendered\": \"<p class=\\\"attachment\\\"><a href=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?ssl=1\\\"><img loading=\\\"lazy\\\" decoding=\\\"async\\\" width=\\\"300\\\" height=\\\"300\\\" src=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?fit=300%2C300&amp;ssl=1\\\" class=\\\"attachment-medium size-medium\\\" alt=\\\"\\\" srcset=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?w=2590&amp;ssl=1 2590w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=300%2C300&amp;ssl=1 300w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=1024%2C1024&amp;ssl=1 1024w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=150%2C150&amp;ssl=1 150w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=768%2C768&amp;ssl=1 768w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=1536%2C1536&amp;ssl=1 1536w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=2048%2C2048&amp;ssl=1 2048w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=1200%2C1200&amp;ssl=1 1200w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=800%2C800&amp;ssl=1 800w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=600%2C600&amp;ssl=1 600w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=400%2C400&amp;ssl=1 400w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?resize=200%2C200&amp;ssl=1 200w\\\" sizes=\\\"auto, (max-width: 300px) 100vw, 300px\\\" data-attachment-id=\\\"59\\\" data-permalink=\\\"https://recalldreams.dev/?attachment_id=59\\\" data-orig-file=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?fit=2590%2C2590&amp;ssl=1\\\" data-orig-size=\\\"2590,2590\\\" data-comments-opened=\\\"1\\\" data-image-meta=\\\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;,&quot;alt&quot;:&quot;&quot;}\\\" data-image-title=\\\"The maze\\\" data-image-description=\\\"\\\" data-image-caption=\\\"\\\" data-large-file=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/06/The-maze.jpg?fit=1024%2C1024&amp;ssl=1\\\" /></a></p>\\n\"\n\n+    },\n\n+    \"caption\": {\n\n+      \"rendered\": \"\"\n\n+    },\n\n+    \"alt_text\": \"\",\n\n+    \"media_type\": \"image\",\n\n+    \"mime_type\": \"image/jpeg\",\n\n+    \"media_details\": {\n\n+      \"width\": 2590,\n\n+      \"height\": 2590,\n\n+      \"file\": \"2026/06/The-maze.jpg\",\n\n+      \"filesize\": 3796267,\n\n+      \"sizes\": {\n\n+        \"medium\": {\n\n+          \"file\": \"The-maze-300x300.jpg\",\n\n+          \"width\": 300,\n\n... (658 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:37:07.690799+00:00",
+      "title": "New media: Unknown on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=57",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #57: Unknown",
+      "detail": "New media: Unknown on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=57",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T14:35:06",
+          "id": 57,
+          "link": "https://recalldreams.dev/?attachment_id=57",
+          "modified": "2026-06-17T15:35:06",
+          "modified_gmt": "2026-06-17T14:35:06",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Unknown",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:37:07.690799+00:00",
+      "title": "New media: Unique gameplay on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=58",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #58: Unique gameplay",
+      "detail": "New media: Unique gameplay on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=58",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T14:35:45",
+          "id": 58,
+          "link": "https://recalldreams.dev/?attachment_id=58",
+          "modified": "2026-06-17T15:35:45",
+          "modified_gmt": "2026-06-17T14:35:45",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Unique gameplay",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:37:07.690799+00:00",
+      "title": "New media: The maze on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=59",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #59: The maze",
+      "detail": "New media: The maze on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=59",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T14:35:56",
+          "id": 59,
+          "link": "https://recalldreams.dev/?attachment_id=59",
+          "modified": "2026-06-17T15:35:56",
+          "modified_gmt": "2026-06-17T14:35:56",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "The maze",
+          "type": "attachment"
+        }
+      ]
     },
     {
       "type": "external_content_changed",
@@ -55,41 +177,292 @@
     {
       "type": "external_content_changed",
       "timestamp": "2026-06-17T14:17:38.660204+00:00",
-      "title": "7 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
-      "link": "",
+      "title": "New media: reacalldreams_icon on recalldreams.dev",
+      "link": "https://recalldreams.dev/reacalldreams_icon/",
       "endpoint": "/wp-json/wp/v2/media",
-      "diff": "+ #14: reacalldreams_icon\n+ #15: reacalldreams_logo\n+ #22: Echoes Of The Threshold\n+ #29: Echoes of the Threshold background\n+ #37: Plato\n+ #39: dev_routine\n+ #41: Schrödinger",
-      "detail": "7 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
+      "diff": "+ #14: reacalldreams_icon",
+      "detail": "New media: reacalldreams_icon on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
-      "game_date": ""
+      "game_date": "",
+      "url": "https://recalldreams.dev/reacalldreams_icon/",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T10:50:08",
+          "id": 14,
+          "link": "https://recalldreams.dev/reacalldreams_icon/",
+          "modified": "2026-06-17T11:50:08",
+          "modified_gmt": "2026-06-17T10:50:08",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "reacalldreams_icon",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: reacalldreams_logo on recalldreams.dev",
+      "link": "https://recalldreams.dev/reacalldreams_logo/",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #15: reacalldreams_logo",
+      "detail": "New media: reacalldreams_logo on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/reacalldreams_logo/",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T10:50:49",
+          "id": 15,
+          "link": "https://recalldreams.dev/reacalldreams_logo/",
+          "modified": "2026-06-17T11:50:49",
+          "modified_gmt": "2026-06-17T10:50:49",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "reacalldreams_logo",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: Echoes Of The Threshold on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=22",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #22: Echoes Of The Threshold",
+      "detail": "New media: Echoes Of The Threshold on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=22",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T11:22:10",
+          "id": 22,
+          "link": "https://recalldreams.dev/?attachment_id=22",
+          "modified": "2026-06-17T12:22:10",
+          "modified_gmt": "2026-06-17T11:22:10",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Echoes Of The Threshold",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: Echoes of the Threshold background on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=29",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #29: Echoes of the Threshold background",
+      "detail": "New media: Echoes of the Threshold background on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=29",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T11:52:17",
+          "id": 29,
+          "link": "https://recalldreams.dev/?attachment_id=29",
+          "modified": "2026-06-17T12:52:17",
+          "modified_gmt": "2026-06-17T11:52:17",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Echoes of the Threshold background",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: Plato on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=37",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #37: Plato",
+      "detail": "New media: Plato on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=37",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T12:38:42",
+          "id": 37,
+          "link": "https://recalldreams.dev/?attachment_id=37",
+          "modified": "2026-06-17T13:38:42",
+          "modified_gmt": "2026-06-17T12:38:42",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Plato",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: dev_routine on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=39",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #39: dev_routine",
+      "detail": "New media: dev_routine on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=39",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T12:43:24",
+          "id": 39,
+          "link": "https://recalldreams.dev/?attachment_id=39",
+          "modified": "2026-06-17T13:43:24",
+          "modified_gmt": "2026-06-17T12:43:24",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "dev_routine",
+          "type": "attachment"
+        }
+      ]
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:17:38.660204+00:00",
+      "title": "New media: Schrödinger on recalldreams.dev",
+      "link": "https://recalldreams.dev/?attachment_id=41",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #41: Schrödinger",
+      "detail": "New media: Schrödinger on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": "",
+      "url": "https://recalldreams.dev/?attachment_id=41",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-06-17T12:57:17",
+          "id": 41,
+          "link": "https://recalldreams.dev/?attachment_id=41",
+          "modified": "2026-06-17T13:57:17",
+          "modified_gmt": "2026-06-17T12:57:17",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "inherit",
+          "tags": [],
+          "title": "Schrödinger",
+          "type": "attachment"
+        }
+      ]
     },
     {
       "type": "external_content_changed",
       "timestamp": "2026-06-17T14:17:38.660189+00:00",
-      "title": "1 new item(s) in /wp-json/wp/v2/pages on recalldreams.dev",
-      "link": "",
+      "title": "New pages: Home on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "+ #4: Home",
-      "detail": "1 new item(s) in /wp-json/wp/v2/pages on recalldreams.dev",
+      "detail": "New pages: Home on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
-      "game_date": ""
+      "game_date": "",
+      "url": "https://recalldreams.dev/",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [],
+          "date_gmt": "2026-04-24T07:49:16",
+          "id": 4,
+          "link": "https://recalldreams.dev/",
+          "modified": "2026-06-17T12:02:56",
+          "modified_gmt": "2026-06-17T11:02:56",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "publish",
+          "tags": [],
+          "title": "Home",
+          "type": "page"
+        }
+      ]
     },
     {
       "type": "external_content_changed",
       "timestamp": "2026-06-17T14:17:38.660169+00:00",
-      "title": "1 new item(s) in /wp-json/wp/v2/posts on recalldreams.dev",
-      "link": "",
+      "title": "New posts: Bonjour tout le monde ! on recalldreams.dev",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "+ #3: Bonjour tout le monde !",
-      "detail": "1 new item(s) in /wp-json/wp/v2/posts on recalldreams.dev",
+      "detail": "New posts: Bonjour tout le monde ! on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
-      "game_date": ""
+      "game_date": "",
+      "url": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "items": [
+        {
+          "author": 279180095,
+          "categories": [
+            1
+          ],
+          "date_gmt": "2026-04-24T07:44:15",
+          "id": 3,
+          "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+          "modified": "2026-04-24T07:44:15",
+          "modified_gmt": "2026-04-24T07:44:15",
+          "name": "",
+          "parent": 0,
+          "post_parent": 0,
+          "status": "publish",
+          "tags": [],
+          "title": "Bonjour tout le monde !",
+          "type": "post"
+        }
+      ]
     },
     {
       "type": "external_robots_txt_changed",
@@ -269,5 +642,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-17T14:37:07.690854+00:00"
+  "updated": "2026-06-17T15:08:20.984038+00:00"
 }
