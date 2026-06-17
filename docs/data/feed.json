@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "external_robots_txt_changed",
-      "timestamp": "2026-06-17T15:48:03.248690+00:00",
-      "title": "robots.txt captured for recalldreams.dev",
-      "link": "https://recalldreams.dev/robots.txt",
-      "endpoint": "",
-      "diff": "@@ -45,4 +45,4 @@\n Disallow: /\n\n \n\n User-agent: sentibot\n\n-Disallow: /\n+Disallow: /\n",
-      "detail": "robots.txt changed for recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-17T16:05:42.148830+00:00",
+      "title": "Memory bloc restoration: 286/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 286/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 286/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "286/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-17T16:05:42.148830+00:00"
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-17T15:33:08.193409+00:00",
+      "timestamp": "2026-06-17T16:05:42.148536+00:00",
       "title": "",
       "link": "",
       "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "3 new item(s) in /wp-json/wp/v2/search",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": 322,
+      "id": 3887,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-17T15:32:54+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/01/12/event-12012016/",
+      "timestamp": "2026-06-17T16:03:53+00:00",
+      "title": "SECURITY LOG",
+      "link": "https://project-skyscraper.com/2026/06/17/sec-log-170509/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
-      "detail": "4 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "The Architect",
       "site": "",
-      "id": 322,
-      "game_date": "2016-01-12T00:00:00+00:00"
+      "id": 3887,
+      "game_date": "2026-06-17T16:05:00+00:00"
     },
     {
       "type": "external_content_changed",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T15:48:03.252856+00:00"
+  "updated": "2026-06-17T16:05:42.155096+00:00"
 }
