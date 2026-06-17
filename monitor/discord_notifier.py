@@ -98,7 +98,7 @@ def notify_changes(changes: list, state: dict):
         fields = []
         for c in clist:
             items_str = "\n".join(
-                f"#{i['id']}: {_resolve_author(user_map, i.get('author', 0))}: {i.get('title', '(untitled)')}"
+                f"#{i['id']}: {_resolve_author(user_map, i.get('author', 0))}: {_item_label(i)}"
                 for i in c["items"][:10]
             )
             if items_str:
@@ -127,7 +127,7 @@ def notify_changes(changes: list, state: dict):
                 val = f"by {author}\n" if author else ""
                 val += diff_text[:900] if diff_text else "(no diff available)"
                 fields.append({
-                    "name": f"{item.get('title', '(untitled)')} ({ep_label})",
+                    "name": f"{_item_label(item)} ({ep_label})",
                     "value": val[:1024],
                 })
         _send_embed(title=f"Modified Items: {total}", description="", fields=fields[:10], color=0xffaa00)
@@ -150,9 +150,11 @@ def notify_changes(changes: list, state: dict):
             fields = []
             for c in regular[:5]:
                 page_label = c["url"].split("/")[-1] or c["url"]
+                page_url = c.get("url", "")
+                page_link = f"[{page_label}]({page_url})" if page_url else page_label
                 author = _resolve_author(user_map, c.get("author", 0))
                 preview = _get_diff_preview(c)
-                val = page_label[:200]
+                val = page_link[:200]
                 if author:
                     val += f" (by {author})"
                 if preview:
@@ -173,10 +175,11 @@ def notify_changes(changes: list, state: dict):
 
             for val, grp in groups.items():
                 page_count = len(grp["changes"])
-                urls = [c.get("url", "") for c in grp["changes"]]
-                samples = "\n".join(u.split("/")[-1] for u in urls[:10])
-                if len(urls) > 10:
-                    samples += f"\n... and {len(urls) - 10} more"
+                changes = grp["changes"]
+                samples = "\n".join(
+                    f"[{c.get('url', '').split('/')[-1]}]({c.get('url', '')})" if c.get("url") else ""
+                    for c in changes[:10]
+                )
                 _send_embed(
                     title=f"Memory Bloc Restoration: {grp['old_value']} \u2192 {grp['new_value']}",
                     description=f"{page_count} page(s) updated",
@@ -188,8 +191,10 @@ def notify_changes(changes: list, state: dict):
         clist = by_type["media_replaced"]
         fields = []
         for c in clist[:5]:
+            link = c.get("new_url", "")
+            name = f"[Media #{c['id']}]({link})" if link else f"Media #{c['id']}"
             fields.append({
-                "name": f"Media #{c['id']}",
+                "name": name,
                 "value": f"Old: {c['old_url'][:200]}\nNew: {c['new_url'][:200]}",
             })
         _send_embed(title=f"Media Replaced: {len(clist)}", description="", fields=fields[:10], color=0xff00ff)
@@ -205,7 +210,8 @@ def notify_changes(changes: list, state: dict):
         clist = by_type["media_orphan_upload"]
         _send_embed(title=f"Orphan Media: {len(clist)}", description="",
                     fields=[{"name": "Files", "value": "\n".join(
-                        f"#{c['id']}: {c.get('title', '(untitled)')}" for c in clist[:10]
+                        _item_label({"title": c.get('title', '(untitled)'), "link": c.get("url", "")})
+                        for c in clist[:10]
                     )[:1024]}], color=0xff00aa)
 
     if "unpublished_detected" in by_type:
@@ -244,6 +250,18 @@ def _resolve_author(user_map: dict, author_id) -> str:
     if not author_id:
         return ""
     return user_map.get(author_id, "")
+
+
+def _item_label(item: dict) -> str:
+    """Return a clickable markdown link for a WP API item if it has a URL."""
+    raw = item.get("title", "(untitled)")
+    if isinstance(raw, dict):
+        raw = raw.get("rendered", str(raw))
+    title = str(raw)
+    link = item.get("link", "")
+    if link:
+        return f"[{title}]({link})"
+    return title
 
 
 def _get_diff_preview(change: dict, item: dict = None) -> str:

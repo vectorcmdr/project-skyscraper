@@ -104,15 +104,16 @@ EXTERNAL_SITES = {
         "type": "generic",
         "label": "WAKING TITAN",
     },
-    "theskyscraperarchitect-ywvhk.wordpress.com": {
-        "url": "https://theskyscraperarchitect-ywvhk.wordpress.com",
+    "recalldreams.dev": {
+        "url": "https://recalldreams.dev",
         "type": "wordpress",
-        "label": "ARCHITECT WP",
+        "label": "RECALL DREAMS",
     },
 }
 
 EXTERNAL_CHECK_INTERVAL = 7200  # every 2 hours
 EXTERNAL_LONG_POLL_INTERVAL = 43200  # DNS deep check every 12h
+RECALLDREAMS_MIRROR_INTERVAL = 21600  # full mirror every 6h
 
 MEANINGFUL_CHANGE_TYPES = frozenset({
     "api_items_added",

@@ -508,6 +508,23 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
         link = f"https://{c.get('site', '')}/"
         diff = f"HTTP {c.get('status', '?')}"
+    elif t == "external_content_changed":
+        url = c.get("url", "")
+        if url:
+            parts = url.rstrip("/").split("/")
+            title = parts[-1] if parts and parts[-1] else c.get("detail", "Content changed")
+            link = url
+        else:
+            title = c.get("detail", "External content changed")
+            link = ""
+        diff = c.get("diff", "")
+        if not diff:
+            items = c.get("items", [])
+            if items:
+                lines = [f"+ #{i.get('id','?')}: {i.get('title','')[:80]}" for i in items[:20]]
+                diff = "\n".join(lines)
+            elif c.get("detail"):
+                diff = c["detail"][:500]
     elif t.startswith("external_"):
         return None
     else:

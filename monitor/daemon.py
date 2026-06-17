@@ -25,6 +25,7 @@ if sys.platform == "win32":
 from monitor.config import (
     POLL_INTERVALS, COLLECTION_ENDPOINTS, MAX_WORKERS, PAGE_CHECK_CHUNK,
     MEANINGFUL_CHANGE_TYPES, DATA_DIR, PASSWORD_PROTECTED_PAGES,
+    RECALLDREAMS_MIRROR_INTERVAL,
 )
 from monitor.logger import log
 from monitor.state_manager import load_state, save_state, acquire_lock, release_lock
@@ -41,6 +42,12 @@ from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_
 from monitor.report_writer import clean_old_reports, write_monitor_report, refresh_reports
 from monitor.discovery import fetch_and_save, fetch_protected_page
 from monitor.external_checker import check_external_sites
+
+try:
+    from mirror_recalldreams import mirror_recalldreams
+    _HAS_RECALL_MIRROR = True
+except ImportError:
+    _HAS_RECALL_MIRROR = False
 
 
 def _sync_state_hashes_to_mirror(state: dict):
@@ -77,6 +84,21 @@ def _check_new_page_memory_bloc(url: str, change: dict):
     change.setdefault("diffs", []).append({"url": url, "diff": diff_text})
 
 
+def _run_recalldreams_mirror_if_due(state: dict, force: bool = False) -> list:
+    if not _HAS_RECALL_MIRROR:
+        return []
+    now = time.time()
+    if not force:
+        last = state.get("stats", {}).get("_recalldreams_last_mirror", 0)
+        if now - last < RECALLDREAMS_MIRROR_INTERVAL:
+            return []
+    log("=== recalldreams.dev mirror ===", "MIRROR")
+    stats, changes = mirror_recalldreams()
+    state.setdefault("stats", {})["_recalldreams_last_mirror"] = now
+    log(f"  mirror result: fetched={stats['fetched']} new={stats['new']} changed={stats['changed']}", "MIRROR")
+    return changes
+
+
 def print_banner():
     print(flush=True)
     print("  project-skyscraper.com - Change Monitor", flush=True)
@@ -104,6 +126,13 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
     quiet = is_initial or is_first_cycle or warmup > 0
     if warmup > 0:
         state["stats"]["_warmup"] = warmup - 1
+
+    if is_initial or is_first_cycle:
+        try:
+            mirror_changes = _run_recalldreams_mirror_if_due(state, force=True)
+            all_changes.extend(mirror_changes)
+        except Exception as e:
+            log(f"Error on initial recalldreams mirror: {e}", "ERROR")
 
     if "fast" in tiers:
         log("=== Fast check ===", "FAST")
@@ -162,6 +191,12 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             all_changes.extend(changes)
         except Exception as e:
             log(f"Error checking external sites: {e}", "ERROR")
+
+        try:
+            mirror_changes = _run_recalldreams_mirror_if_due(state)
+            all_changes.extend(mirror_changes)
+        except Exception as e:
+            log(f"Error mirroring recalldreams.dev: {e}", "ERROR")
 
     if all_changes:
         state["stats"]["total_changes_detected"] += len(all_changes)

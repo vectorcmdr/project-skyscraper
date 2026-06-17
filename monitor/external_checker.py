@@ -17,7 +17,7 @@ from monitor.noise_filter import strip_page_noise, is_noise_diff_line
 
 SITE_LABELS = {
     "wakingtitan.com": "wakingtitan",
-    "theskyscraperarchitect-ywvhk.wordpress.com": "tower",
+    "recalldreams.dev": "recalldreams",
 }
 
 
