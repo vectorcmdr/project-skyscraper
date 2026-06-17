@@ -236,7 +236,10 @@ def notify_changes(changes: list, state: dict):
                 site = c.get("site", "?")
                 detail = c.get("detail", "")[:200]
                 diff = c.get("diff", "")[:500]
+                url = c.get("url", "")
                 val = f"Site: {site}\n"
+                if url:
+                    val += f"<{url}>\n"
                 if detail:
                     val += f"{detail}\n"
                 if diff:

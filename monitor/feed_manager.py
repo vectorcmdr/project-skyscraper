@@ -509,14 +509,8 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         link = f"https://{c.get('site', '')}/"
         diff = f"HTTP {c.get('status', '?')}"
     elif t == "external_content_changed":
-        url = c.get("url", "")
-        if url:
-            parts = url.rstrip("/").split("/")
-            title = parts[-1] if parts and parts[-1] else c.get("detail", "Content changed")
-            link = url
-        else:
-            title = c.get("detail", "External content changed")
-            link = ""
+        title = c.get("detail", "External content changed")
+        link = c.get("url", "")
         diff = c.get("diff", "")
         if not diff:
             items = c.get("items", [])

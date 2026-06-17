@@ -233,28 +233,33 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
 
     added_ids = new_ids - known_ids
     if added_ids:
-        added_details = [new_items_map[iid] for iid in sorted(added_ids)]
-        changes.append({
-            "type": "external_content_changed",
-            "site": hostname,
-            "site_label": site_label,
-            "endpoint": endpoint,
-            "count": len(added_ids),
-            "items": added_details[:30],
-            "detail": f"{len(added_ids)} new item(s) in {endpoint} on {hostname}",
-        })
+        for iid in sorted(added_ids):
+            item = new_items_map[iid]
+            changes.append({
+                "type": "external_content_changed",
+                "site": hostname,
+                "site_label": site_label,
+                "endpoint": endpoint,
+                "url": item.get("link", ""),
+                "detail": f"New {endpoint.rstrip('/').split('/')[-1]}: {item.get('title', '')[:120]} on {hostname}",
+                "diff": f"+ #{item.get('id','?')}: {item.get('title','')[:80]}",
+                "items": [item],
+            })
 
     removed_ids = known_ids - new_ids
     if removed_ids:
-        changes.append({
-            "type": "external_content_changed",
-            "site": hostname,
-            "site_label": site_label,
-            "endpoint": endpoint,
-            "count": len(removed_ids),
-            "items": [],
-            "detail": f"{len(removed_ids)} item(s) removed from {endpoint} on {hostname}",
-        })
+        for iid in sorted(removed_ids):
+            known_item = known_items[iid]
+            changes.append({
+                "type": "external_content_changed",
+                "site": hostname,
+                "site_label": site_label,
+                "endpoint": endpoint,
+                "url": known_item.get("link", ""),
+                "detail": f"Removed {endpoint.rstrip('/').split('/')[-1]}: {known_item.get('title', '')[:120]} on {hostname}",
+                "diff": f"- #{known_item.get('id','?')}: {known_item.get('title','')[:80]}",
+                "items": [known_item],
+            })
 
     changed_items = []
     for iid in new_ids & known_ids:
@@ -266,15 +271,17 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
             changed_items.append((iid, old_item, new_item))
 
     if changed_items:
-        changes.append({
-            "type": "external_content_changed",
-            "site": hostname,
-            "site_label": site_label,
-            "endpoint": endpoint,
-            "count": len(changed_items),
-            "items": [new_items_map[c[0]] for c in changed_items[:30]],
-            "detail": f"{len(changed_items)} item(s) modified in {endpoint} on {hostname}",
-        })
+        for iid, _, new_item in changed_items[:30]:
+            changes.append({
+                "type": "external_content_changed",
+                "site": hostname,
+                "site_label": site_label,
+                "endpoint": endpoint,
+                "url": new_item.get("link", ""),
+                "detail": f"Modified {endpoint.rstrip('/').split('/')[-1]}: {new_item.get('title', '')[:120]} on {hostname}",
+                "diff": f"~ #{new_item.get('id','?')}: {new_item.get('title','')[:80]}",
+                "items": [new_item],
+            })
 
     api_state["etag"] = new_etag or result.etag
     api_state["hash"] = new_hash
