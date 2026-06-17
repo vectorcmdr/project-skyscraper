@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:37:07.690799+00:00",
+      "title": "3 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "+ #57: Unknown\n+ #58: Unique gameplay\n+ #59: The maze",
+      "detail": "3 new item(s) in /wp-json/wp/v2/media on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-17T14:37:07.690725+00:00",
+      "title": "hello-world",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-17 14:35:00 UTC\n# Lines: 55259 old -> 55333 new\n# Beautified: yes\n\n@@ -416,3 +416,4 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n+\n",
+      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_unpublished_detected",
       "timestamp": "2026-06-17T14:17:38.660240+00:00",
       "title": "#13 (posts) on recalldreams.dev",
@@ -243,5 +269,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-17T14:17:38.660267+00:00"
+  "updated": "2026-06-17T14:37:07.690854+00:00"
 }
