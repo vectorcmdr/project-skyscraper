@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T15:16:11.700721+00:00",
-      "title": "Content changed: https://recalldreams.dev/robots.txt",
-      "link": "https://recalldreams.dev/robots.txt",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/robots.txt\n# File: discovery/robots.txt\n# Timestamp: 2026-06-17 15:14:13 UTC\n# Lines: 613 old -> 612 new\n# Beautified: yes\n\n@@ -45,4 +45,4 @@\n Disallow: /\n\n \n\n User-agent: sentibot\n\n-Disallow: /\n\n+Disallow: /",
-      "detail": "Content changed: https://recalldreams.dev/robots.txt",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-17T15:33:08.194075+00:00",
+      "title": "Memory bloc restoration: 286/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 286/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 286/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "286/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-17T15:33:08.194075+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-17T15:33:08.193409+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "3 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
-      "site": "recalldreams",
-      "id": null,
+      "site": "",
+      "id": 322,
       "game_date": ""
     },
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T15:16:11.700696+00:00",
-      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
-      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-17 15:13:56 UTC\n# Lines: 55333 old -> 55254 new\n# Beautified: yes\n\n@@ -3,7 +3,7 @@\n \t<head>\n\n \t\t<title>RecallDreams</title>\n\n \t\t<meta charset=\"UTF-8\" />\n\n-\t\t<meta name=\"description\" content=\"What makes a memory worth keeping ?\" />\n\n+\t\t<meta name=\"description\" content=\"41 years old solo dev. French.\" />\n\n \t\t<meta name=\"viewport\" content=\"width=device-width\" />\n\n \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n <meta name='robots' content='noindex, nofollow' />\n\n@@ -416,4 +416,3 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n-\n",
-      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T15:16:11.700673+00:00",
-      "title": "Content changed: https://recalldreams.dev/",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-17 15:13:55 UTC\n# Lines: 50024 old -> 50014 new\n# Beautified: yes\n\n@@ -3,11 +3,11 @@\n \t<head>\n\n \t\t<title>RecallDreams</title>\n\n \t\t<meta charset=\"UTF-8\" />\n\n-\t\t<meta name=\"description\" content=\"What makes a memory worth keeping ?\" />\n\n+\t\t<meta name=\"description\" content=\"41 years old solo dev. French.\" />\n\n \t\t<meta name=\"viewport\" content=\"width=device-width\" />\n\n \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n <meta name='robots' content='noindex, nofollow' />\n\n-<title>RecallDreams &#8211; What makes a memory worth keeping ?</title>\n\n+<title>RecallDreams &#8211; 41 years old solo dev. French.</title>\n\n <link rel='dns-prefetch' href='//secure.gravatar.com' />\n\n <link rel='dns-prefetch' href='//s1.wp.com' />\n\n <link rel='dns-prefetch' href='//widgets.wp.com' />\n",
-      "detail": "Content changed: https://recalldreams.dev/",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "api_items_added",
+      "timestamp": "2026-06-17T15:32:54+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/12/event-12012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "4 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 322,
+      "game_date": "2016-01-12T00:00:00+00:00"
     },
     {
       "type": "external_content_changed",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T15:16:11.704363+00:00"
+  "updated": "2026-06-17T15:33:08.200905+00:00"
 }
