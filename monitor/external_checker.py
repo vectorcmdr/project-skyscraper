@@ -301,8 +301,9 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     for item in items:
         iid = str(item.get("id"))
         if iid:
-            new_ids.add(iid)
-            new_items_map[iid] = _item_summary(item, endpoint)
+            summary = _item_summary(item, endpoint)
+            summary["content_hash"] = _compute_content_hash(item)
+            new_items_map[iid] = summary
 
     changes = []
 
@@ -340,9 +341,9 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     for iid in new_ids & known_ids:
         new_item = new_items_map[iid]
         old_item = known_items.get(iid, {})
-        if new_item.get("modified") and old_item.get("modified") and new_item["modified"] != old_item["modified"]:
-            changed_items.append((iid, old_item, new_item))
-        elif new_item.get("modified") and not old_item.get("modified"):
+        new_hash = new_item.get("content_hash", "")
+        old_hash = old_item.get("content_hash", "")
+        if new_hash and old_hash and new_hash != old_hash:
             changed_items.append((iid, old_item, new_item))
 
     if changed_items:
@@ -364,6 +365,14 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
 
     return changes
+
+
+def _compute_content_hash(item: dict) -> str:
+    raw = item.get("content", {}).get("rendered", "")
+    if not raw:
+        return ""
+    stripped = strip_page_noise(raw)
+    return hashlib.md5(stripped.encode("utf-8")).hexdigest()
 
 
 def _external_probe_unpublished(hostname: str, site_url: str, site_state: dict, site_label: str = "") -> list:
@@ -471,8 +480,8 @@ def _check_generic_site(site_url: str, hostname: str, site_state: dict, site_lab
 def _compute_external_diff(old_text: str, new_text: str, url: str) -> str:
     import difflib
 
-    old_text = strip_page_noise(old_text)
-    new_text = strip_page_noise(new_text)
+    old_text = strip_page_noise(old_text).rstrip()
+    new_text = strip_page_noise(new_text).rstrip()
 
     old_lines = old_text.splitlines(keepends=True)
     new_lines = new_text.splitlines(keepends=True)
