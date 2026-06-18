@@ -301,6 +301,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
     for item in items:
         iid = str(item.get("id"))
         if iid:
+            new_ids.add(iid)
             summary = _item_summary(item, endpoint)
             summary["content_hash"] = _compute_content_hash(item)
             new_items_map[iid] = summary

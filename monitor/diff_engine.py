@@ -25,6 +25,8 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
         old_text = beautify(old_text, path_hint)
         new_text = beautify(new_text, path_hint)
 
+    old_text = old_text.rstrip()
+    new_text = new_text.rstrip()
     old_lines = old_text.splitlines(keepends=True)
     new_lines = new_text.splitlines(keepends=True)
 
