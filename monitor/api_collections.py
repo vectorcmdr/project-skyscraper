@@ -179,7 +179,7 @@ def _item_summary(item: dict, endpoint: str = "") -> dict:
         "modified_gmt": item.get("modified_gmt", ""),
         "type": item.get("type", ""),
         "status": item.get("status", ""),
-        "link": item.get("link", ""),
+        "link": item.get("guid", {}).get("rendered", "") if item.get("type") == "attachment" else item.get("link", ""),
         "author": item.get("author", 0),
         "name": item.get("name", ""),
         "date_gmt": item.get("date_gmt", ""),

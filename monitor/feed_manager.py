@@ -504,6 +504,18 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         title = f"robots.txt {caption} for {site}"
         link = c.get("url", f"https://{site}")
         diff = c.get("diff", "")
+    elif t == "external_sitemap_changed":
+        site = c.get("site", c.get("hostname", ""))
+        added = len(c.get("added", []))
+        removed = len(c.get("removed", []))
+        parts = []
+        if added:
+            parts.append(f"+{added}")
+        if removed:
+            parts.append(f"-{removed}")
+        title = f"Sitemap: {' '.join(parts)} URL(s) for {site}"
+        link = c.get("url", f"https://{site}")
+        diff = c.get("diff", "")
     elif t == "external_unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
         link = f"https://{c.get('site', '')}/"

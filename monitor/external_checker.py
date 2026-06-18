@@ -13,6 +13,7 @@ from monitor.http_client import fetch, jitter
 from monitor.url_mapper import url_to_path
 from monitor.logger import log
 from monitor.noise_filter import strip_page_noise, is_noise_diff_line
+from monitor.sitemap import _parse_sitemap_urls
 
 
 SITE_LABELS = {
@@ -40,6 +41,12 @@ def check_external_sites(state: dict) -> list:
             changes.extend(c)
         except Exception as e:
             log(f"  External robots.txt check failed for {hostname}: {e}", "ERROR")
+
+        try:
+            c = _check_site_sitemap(info["url"], hostname, site_state, site_label)
+            changes.extend(c)
+        except Exception as e:
+            log(f"  External sitemap check failed for {hostname}: {e}", "ERROR")
 
         if info.get("type") == "wordpress":
             try:
@@ -158,6 +165,74 @@ def _check_site_robots_txt(site_url: str, hostname: str, site_state: dict, site_
     site_state["robots_txt"]["hash"] = new_hash
     site_state["robots_txt"]["content"] = content
     site_state["robots_txt"]["last_checked"] = datetime.now(timezone.utc).isoformat()
+
+    return changes
+
+
+def _check_site_sitemap(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
+    changes = []
+    sm_state = site_state.setdefault("sitemap", {})
+    sm_state.setdefault("urls", {})
+
+    for try_path in ("/sitemap.xml", "/wp-sitemap.xml"):
+        sm_url = f"{site_url.rstrip('/')}{try_path}"
+        result = fetch(sm_url, etag=sm_state.get("etag"), last_modified=sm_state.get("last_modified"))
+        if result.ok and result.content:
+            break
+        if result.not_modified:
+            sm_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+            return changes
+    else:
+        if sm_state.get("hash") and not result.ok:
+            log(f"  Sitemap fetch failed for {hostname}: {result.status}", "WARN")
+        return changes
+
+    content = result.text
+    new_hash = hashlib.md5(content.encode("utf-8")).hexdigest()
+    old_hash = sm_state.get("hash")
+
+    old_urls = sm_state.get("urls", {})
+    new_urls = _parse_sitemap_urls(content)
+
+    added = set(new_urls.keys()) - set(old_urls.keys())
+    removed = set(old_urls.keys()) - set(new_urls.keys())
+
+    if added:
+        changes.append({
+            "type": "external_sitemap_changed",
+            "site": hostname,
+            "site_label": site_label,
+            "url": sm_url,
+            "added": sorted(added)[:50],
+            "removed": [],
+            "diff": "\n".join("+ " + u for u in sorted(added)[:20]),
+            "detail": f"Sitemap: +{len(added)} URL(s) for {hostname}",
+        })
+    if removed:
+        changes.append({
+            "type": "external_sitemap_changed",
+            "site": hostname,
+            "site_label": site_label,
+            "url": sm_url,
+            "added": [],
+            "removed": sorted(removed)[:50],
+            "diff": "\n".join("- " + u for u in sorted(removed)[:20]),
+            "detail": f"Sitemap: -{len(removed)} URL(s) for {hostname}",
+        })
+
+    if not added and not removed:
+        if old_hash is None:
+            log(f"  Sitemap captured for {hostname}", "CHECK")
+        else:
+            log(f"  Sitemap unchanged for {hostname}", "CHECK")
+    else:
+        log(f"  Sitemap: +{len(added)} -{len(removed)} for {hostname}", "CHECK")
+
+    sm_state["etag"] = result.etag
+    sm_state["last_modified"] = result.last_modified
+    sm_state["hash"] = new_hash
+    sm_state["urls"] = new_urls
+    sm_state["last_checked"] = datetime.now(timezone.utc).isoformat()
 
     return changes
 

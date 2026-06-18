@@ -206,7 +206,7 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             _apply_changes(all_changes, state=state)
             save_state(state)
             # Always process new/removed items even during warmup
-            always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added", "external_dns_changed", "external_robots_txt_changed", "external_content_changed", "external_unpublished_detected")]
+            always_capture = [c for c in all_changes if c.get("type") in ("api_items_added", "api_items_removed", "sitemap_added", "external_dns_changed", "external_robots_txt_changed", "external_sitemap_changed", "external_content_changed", "external_unpublished_detected")]
             if always_capture:
                 notify_changes(always_capture, state)
                 generate_site_data(state, always_capture)

@@ -149,9 +149,8 @@ def notify_changes(changes: list, state: dict):
         if regular:
             fields = []
             for c in regular[:5]:
-                page_label = c["url"].split("/")[-1] or c["url"]
                 page_url = c.get("url", "")
-                page_link = f"[{page_label}]({page_url})" if page_url else page_label
+                page_link = f"<{page_url}>" if page_url else "(no url)"
                 author = _resolve_author(user_map, c.get("author", 0))
                 preview = _get_diff_preview(c)
                 val = page_link[:200]
@@ -177,7 +176,7 @@ def notify_changes(changes: list, state: dict):
                 page_count = len(grp["changes"])
                 changes = grp["changes"]
                 samples = "\n".join(
-                    f"[{c.get('url', '').split('/')[-1]}]({c.get('url', '')})" if c.get("url") else ""
+                    f"<{c.get('url', '')}>" if c.get("url") else ""
                     for c in changes[:10]
                 )
                 _send_embed(
@@ -192,7 +191,7 @@ def notify_changes(changes: list, state: dict):
         fields = []
         for c in clist[:5]:
             link = c.get("new_url", "")
-            name = f"[Media #{c['id']}]({link})" if link else f"Media #{c['id']}"
+            name = f"Media #{c['id']}\n<{link}>" if link else f"Media #{c['id']}"
             fields.append({
                 "name": name,
                 "value": f"Old: {c['old_url'][:200]}\nNew: {c['new_url'][:200]}",
@@ -225,6 +224,7 @@ def notify_changes(changes: list, state: dict):
     ext_groups = {
         "external_dns_changed": ("DNS Changes", 0x4488ff),
         "external_robots_txt_changed": ("robots.txt Changes", 0x88ccff),
+        "external_sitemap_changed": ("Sitemap Changes", 0x44aaff),
         "external_content_changed": ("External Content Changes", 0x66aaff),
         "external_unpublished_detected": ("Unpublished Content (External)", 0xaa44ff),
     }
@@ -256,14 +256,14 @@ def _resolve_author(user_map: dict, author_id) -> str:
 
 
 def _item_label(item: dict) -> str:
-    """Return a clickable markdown link for a WP API item if it has a URL."""
+    """Return an item label with a raw URL if available."""
     raw = item.get("title", "(untitled)")
     if isinstance(raw, dict):
         raw = raw.get("rendered", str(raw))
     title = str(raw)
     link = item.get("link", "")
     if link:
-        return f"[{title}]({link})"
+        return f"{title}\n<{link}>"
     return title
 
 
