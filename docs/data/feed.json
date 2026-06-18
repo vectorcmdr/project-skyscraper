@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T23:34:14.056405+00:00",
-      "title": "Content changed: https://recalldreams.dev/",
-      "link": "https://recalldreams.dev/",
+      "type": "sitemap_added",
+      "timestamp": "2026-06-18T00:27:33.776866+00:00",
+      "title": "https://project-skyscraper.com/2016/01/12/event-12012016/",
+      "link": "https://project-skyscraper.com/2016/01/12/event-12012016/",
       "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-17 23:33:59 UTC\n# Lines: 49947 old -> 49873 new\n# Beautified: yes\n\n@@ -335,4 +335,3 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n-\n",
-      "detail": "Content changed: https://recalldreams.dev/",
+      "diff": "+ https://project-skyscraper.com/2016/01/12/event-12012016/\n+ https://project-skyscraper.com/2016/01/20/event-20012016/\n+ https://project-skyscraper.com/2016/01/27/event-27012016/\n+ https://project-skyscraper.com/2016/01/31/event-31012016/\n+ https://project-skyscraper.com/2016/02/06/event-06022016/\n+ https://project-skyscraper.com/2026/06/17/sec-log-170509/",
+      "detail": "Added 6 URL(s) to sitemap",
       "author": 0,
-      "site": "recalldreams",
+      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-17T23:34:14.062314+00:00"
+  "updated": "2026-06-18T00:27:33.784090+00:00"
 }
