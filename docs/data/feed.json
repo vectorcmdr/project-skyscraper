@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-18T01:33:51.547585+00:00",
-      "title": "#13 (posts) on recalldreams.dev",
+      "type": "external_content_changed",
+      "timestamp": "2026-06-18T05:34:40.874066+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
       "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
-      "diff": "HTTP 401",
-      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-18 05:34:32 UTC\n# Lines: 49873 old -> 49947 new\n# Beautified: yes\n\n@@ -335,3 +335,4 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n+\n",
+      "detail": "Content changed: https://recalldreams.dev/",
       "author": 0,
       "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-18T01:33:51.547524+00:00",
-      "title": "#12 (posts) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
-      "diff": "HTTP 401",
-      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
+      "type": "external_content_changed",
+      "timestamp": "2026-06-18T05:34:40.873982+00:00",
+      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-18 05:34:31 UTC\n# Lines: 55018 old -> 55018 new\n# Beautified: yes\n\n@@ -383,7 +383,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"317fc0dc6a\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"74c7dd6e87\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n",
+      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-18T01:33:51.551206+00:00"
+  "updated": "2026-06-18T05:34:40.880884+00:00"
 }
