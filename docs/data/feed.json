@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "sitemap_added",
-      "timestamp": "2026-06-18T00:27:33.776866+00:00",
-      "title": "https://project-skyscraper.com/2016/01/12/event-12012016/",
-      "link": "https://project-skyscraper.com/2016/01/12/event-12012016/",
-      "endpoint": "",
-      "diff": "+ https://project-skyscraper.com/2016/01/12/event-12012016/\n+ https://project-skyscraper.com/2016/01/20/event-20012016/\n+ https://project-skyscraper.com/2016/01/27/event-27012016/\n+ https://project-skyscraper.com/2016/01/31/event-31012016/\n+ https://project-skyscraper.com/2016/02/06/event-06022016/\n+ https://project-skyscraper.com/2026/06/17/sec-log-170509/",
-      "detail": "Added 6 URL(s) to sitemap",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-18T01:33:51.547585+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
       "author": 0,
-      "site": "",
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T23:34:14.056374+00:00",
-      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
-      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-17 23:33:58 UTC\n# Lines: 55092 old -> 55018 new\n# Beautified: yes\n\n@@ -414,4 +414,3 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n-\n",
-      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-18T01:33:51.547524+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-18T00:27:33.784090+00:00"
+  "updated": "2026-06-18T01:33:51.551206+00:00"
 }
