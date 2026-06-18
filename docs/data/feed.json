@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-18T06:34:44.429127+00:00",
-      "title": "#13 (posts) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
-      "diff": "HTTP 401",
-      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
+      "type": "api_items_removed",
+      "timestamp": "2026-06-18T07:14:42.250346+00:00",
+      "title": "100 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "100 item(s) removed from /wp-json/wp/v2/search",
       "author": 0,
-      "site": "recalldreams",
+      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-18T06:34:44.434591+00:00"
+  "updated": "2026-06-18T07:14:42.255849+00:00"
 }
