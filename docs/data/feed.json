@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-16T22:17:44+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/03/03/event-03032016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "2016_dataset",
-      "author": "System",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-18T18:40:17+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jun.18, 2026\n  Jun.17, 2026\n  Jun.16, 2026\n  Nov.13, 2016\n  Nov.11, 2016\n- Nov.10, 2016\n  \"copyright\": \"Copyright\",\n  \"comment_registration\": \"0\",\n  \"require_name_email\": \"1\",\n- \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F17%2Fsec-log-170509%2F\",\n+ \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F06%2F18%2Fsec-log-152931%2F\",\n  \"blog_id\": \"1\",\n  \"meta_data\": [\"camera\", \"aperture\", \"shutter_speed\", \"focal_length\", \"copyright\"]",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0,
       "site": "",
-      "id": 460,
-      "game_date": "2016-03-03T00:00:00+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-18T18:08:06.201536+00:00"
+  "updated": "2026-06-18T18:42:10.183188+00:00"
 }
