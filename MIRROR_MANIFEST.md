@@ -1,41 +1,45 @@
 # project-skyscraper.com -- Complete Mirror Manifest
 
-**Generated:** 2026-06-17 13:00:01 UTC
+**Generated:** 2026-06-18 13:00:01 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| **Total files** | 7768 |
-| **Total size** | 65.8 MB |
+| **Total files** | 7831 |
+| **Total size** | 98.3 MB |
 
 ## Section Breakdown
 
 | Section | Files | Size |
 |---------|-------|------|
-| **.gitignore/** | 1 | 240.0 B |
+| **.gitignore/** | 1 | 302.0 B |
 | **.notes.md/** | 1 | 3.2 KB |
 | **LICENSE/** | 1 | 1.1 KB |
-| **MIRROR_MANIFEST.md/** | 1 | 1.5 KB |
-| **POST_ID_SERIES.md/** | 1 | 117.8 KB |
+| **MIRROR_MANIFEST.md/** | 1 | 1.6 KB |
+| **POST_ID_SERIES.md/** | 1 | 119.7 KB |
 | **README.md/** | 1 | 6.9 KB |
 | **UNPUBLISHED_IDS.md/** | 1 | 628.0 B |
 | **_check_mod.py/** | 1 | 412.0 B |
-| **api/** | 4322 | 8.0 MB |
+| **_merge_external.py/** | 1 | 1.1 KB |
+| **api/** | 4323 | 8.0 MB |
 | **assets/** | 68 | 1.6 MB |
+| **check_modal.py/** | 1 | 685.0 B |
 | **config.example.json/** | 1 | 423.0 B |
 | **config.json/** | 1 | 581.0 B |
 | **diffs/** | 2655 | 6.3 MB |
 | **discovery/** | 9 | 24.1 KB |
-| **docs/** | 35 | 2.5 MB |
+| **docs/** | 40 | 14.8 MB |
 | **endpoints/** | 19 | 656.3 KB |
 | **external/** | 1 | 108.6 KB |
 | **external_refs/** | 1 | 84.0 KB |
 | **extras/** | 15 | 39.8 KB |
-| **html/** | 464 | 29.1 MB |
+| **html/** | 470 | 29.4 MB |
 | **media/** | 121 | 16.3 MB |
-| **monitor/** | 24 | 205.6 KB |
+| **mirror_recalldreams.py/** | 1 | 8.5 KB |
+| **mirrors/** | 48 | 19.7 MB |
+| **monitor/** | 24 | 211.3 KB |
 | **monitor_site.py/** | 1 | 653.0 B |
 | **robots_txt_comparison.txt/** | 1 | 630.0 B |
 | **serve_mirror.py/** | 1 | 10.2 KB |

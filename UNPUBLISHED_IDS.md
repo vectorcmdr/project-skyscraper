@@ -1,6 +1,6 @@
 # Unpublished / Restricted IDs Report
 
-**Generated:** 2026-06-17 13:00:17 UTC
+**Generated:** 2026-06-18 13:00:17 UTC
 **Source:** https://project-skyscraper.com/wp-json/wp/v2/{posts,pages}/{id}
 
 IDs returning 401 or 403 indicate content that exists but is not publicly
