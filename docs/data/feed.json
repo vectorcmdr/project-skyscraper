@@ -1,52 +1,52 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-18T07:15:26.060437+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "100 new item(s) in /wp-json/wp/v2/search",
+      "type": "external_content_changed",
+      "timestamp": "2026-06-18T11:35:25.942952+00:00",
+      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-18 11:35:15 UTC\n# Lines: 55018 old -> 55092 new\n# Beautified: yes\n\n@@ -414,3 +414,4 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n+\n",
+      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
       "author": 0,
-      "site": "",
-      "id": 466,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-18T11:35:25.942932+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-18 11:35:14 UTC\n# Lines: 49947 old -> 49873 new\n# Beautified: yes\n\n@@ -335,4 +335,3 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n-\n",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
       "game_date": ""
     },
     {
       "type": "external_unpublished_detected",
-      "timestamp": "2026-06-18T06:34:44.429062+00:00",
+      "timestamp": "2026-06-18T11:35:25.942908+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-18T11:35:25.942853+00:00",
       "title": "#12 (posts) on recalldreams.dev",
       "link": "https://recalldreams.dev/",
       "endpoint": "posts",
       "diff": "HTTP 401",
       "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T23:34:14.056311+00:00",
-      "title": "Content changed: https://recalldreams.dev/",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-17 23:33:57 UTC\n# Lines: 49873 old -> 49947 new\n# Beautified: yes\n\n@@ -335,3 +335,4 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n+\n",
-      "detail": "Content changed: https://recalldreams.dev/",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T17:30:55.313649+00:00",
-      "title": "Content changed: https://recalldreams.dev/",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-06-17 17:28:45 UTC\n# Lines: 49947 old -> 49873 new\n# Beautified: yes\n\n@@ -335,4 +335,3 @@\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>\n\n-\n",
-      "detail": "Content changed: https://recalldreams.dev/",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-18T07:15:26.065878+00:00"
+  "updated": "2026-06-18T11:35:25.947542+00:00"
 }
