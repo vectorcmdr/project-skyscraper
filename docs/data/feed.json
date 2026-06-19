@@ -1,30 +1,17 @@
 {
   "entries": [
     {
-      "type": "api_items_removed",
-      "timestamp": "2026-06-19T08:09:34.677037+00:00",
-      "title": "255 item(s) removed from /wp-json/wp/v2/posts",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-19T08:12:18.100669+00:00",
+      "title": "Memory bloc restoration: 286/365 [1 Pages]",
       "link": "",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "255 item(s) removed from /wp-json/wp/v2/posts",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-06-19T07:49:44+00:00",
-      "title": "Reconnection_bypass",
-      "link": "https://project-skyscraper.com/recon-protocol/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
+      "diff": "0/365 → 286/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 286/365 across 1 pages",
       "author": "System",
       "site": "",
-      "id": 3919,
-      "game_date": "2026-06-19T07:52:00+00:00"
+      "restoration_value": "286/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-19T08:12:18.100669+00:00"
     },
     {
       "type": "api_items_added",
@@ -324,6 +311,19 @@
       "site": "",
       "id": 1017,
       "game_date": "2016-09-30T23:00:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-16T22:07:11+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/26/event-26092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "255 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 1001,
+      "game_date": "2016-09-25T23:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-19T08:09:34.681385+00:00"
+  "updated": "2026-06-19T08:12:18.106087+00:00"
 }
