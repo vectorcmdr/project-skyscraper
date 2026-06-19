@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-19T08:44:13+00:00",
-      "title": "5167FF2C25FA",
-      "link": "https://project-skyscraper.com/wp-content/uploads/2026/06/5167FF2C25FA.jpg",
-      "endpoint": "/wp-json/wp/v2/media",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/media",
-      "author": "The Architect",
+      "type": "api_items_modified",
+      "timestamp": "2026-06-19T08:47:23+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/29/event-29122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 286/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": "",
-      "id": 3940,
-      "game_date": "2026-06-19T08:44:13+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-19T08:44:37.939811+00:00"
+  "updated": "2026-06-19T08:47:43.624137+00:00"
 }
