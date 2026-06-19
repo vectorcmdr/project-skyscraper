@@ -138,3 +138,13 @@ python serve_mirror.py
 ```
 
 All outputs are relative to the script directory. No external database required.
+
+---
+
+## License
+
+> Mirror content is not owned by me and is either public domain (fair use) as preserved web content, or the property of the rights holder, or both. This is for you to determine and is not in any way legal advice.
+
+> The backup and utilities are made with respect and love for the NMS community, Hello Games and Puppet Master running the ARG. Any issues, please reach out and I will address them as soon as I am able.
+
+> The GNU AGPL v3 license within the repo covers the tracking site and all of ti's contents, the diffs, self made metada, json feeds, patches and glue pieces, etc. used to structure the backup and monitoring site + tools, as well as any other original conten not included in the original site and it's owned contents - it does not lay claim over the other pieces of recovered mirror content that are a part of project-skyscraper.
