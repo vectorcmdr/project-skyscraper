@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:42:14.811122+00:00",
+  "updated": "2026-06-19T00:31:25.926691+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -4938,6 +4938,10 @@
     {
       "source": "sitemap",
       "target": "/2026/06/17/sec-log-170509"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/18/sec-log-152931"
     },
     {
       "source": "sitemap",
@@ -9912,6 +9916,18 @@
       "target": "/2026/06/16/diagnostic-161411"
     },
     {
+      "source": "/2026/06/18/sec-log-152931",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/18/sec-log-152931",
+      "target": "https://x.com/GoodGuysFree"
+    },
+    {
+      "source": "/2026/06/18/sec-log-152931",
+      "target": "/2026/06/17/sec-log-170509"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -10014,18 +10030,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
-    },
-    {
-      "source": "/2026/06/18/sec-log-152931",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/18/sec-log-152931",
-      "target": "https://x.com/GoodGuysFree"
-    },
-    {
-      "source": "/2026/06/18/sec-log-152931",
-      "target": "/2026/06/17/sec-log-170509"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
