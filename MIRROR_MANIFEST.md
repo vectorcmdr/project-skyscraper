@@ -1,6 +1,6 @@
 # project-skyscraper.com -- Complete Mirror Manifest
 
-**Generated:** 2026-06-18 17:00:01 UTC
+**Generated:** 2026-06-19 04:00:01 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
@@ -8,7 +8,7 @@
 | Metric | Value |
 |--------|-------|
 | **Total files** | 7833 |
-| **Total size** | 98.4 MB |
+| **Total size** | 98.3 MB |
 
 ## Section Breakdown
 
@@ -39,7 +39,7 @@
 | **media/** | 121 | 16.3 MB |
 | **mirror_recalldreams.py/** | 1 | 8.5 KB |
 | **mirrors/** | 48 | 19.7 MB |
-| **monitor/** | 24 | 211.3 KB |
+| **monitor/** | 24 | 211.6 KB |
 | **monitor_site.py/** | 1 | 653.0 B |
 | **robots_txt_comparison.txt/** | 1 | 630.0 B |
 | **serve_mirror.py/** | 1 | 10.2 KB |
