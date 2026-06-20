@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-20T10:30:45+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/07/18/event-18072016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "  \"classes\": []\n  },\n  {\n- \"url\": \"https://project-skyscraper.com/2016/10/23/event-23102016/\",\n+ \"url\": \"https://project-skyscraper.com/2016/12/11/event-11122016/\",\n  \"url_meta\": {\n  \"origin\": 857,\n  \"position\": 5\n  },\n  \"title\": \"2016_dataset\",\n- \"date\": \"23 October 2016\",\n+ \"date\": \"11 December 2016\",\n  \"excerpt\": \"memory bloc : no/value\",\n  \"rel\": \"\",\n  \"context\": \"In &quot;Non classé&quot;\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 287/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
-      "author": "System",
-      "site": "",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-20T10:47:15.138010+00:00",
+      "title": "#72 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
       "type": "external_unpublished_detected",
-      "timestamp": "2026-06-20T09:47:13.420753+00:00",
-      "title": "#12 (posts) on recalldreams.dev",
+      "timestamp": "2026-06-20T10:47:15.137954+00:00",
+      "title": "#71 (pages) on recalldreams.dev",
       "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
+      "endpoint": "pages",
       "diff": "HTTP 401",
-      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
+      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-20T10:31:39.649514+00:00"
+  "updated": "2026-06-20T10:47:15.142739+00:00"
 }
