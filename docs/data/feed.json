@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-20T15:06:29.894878+00:00",
-      "title": "Memory bloc restoration: 287/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 287/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 287/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "287/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-20T15:06:29.894878+00:00"
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-20T15:47:43.220258+00:00",
+      "title": "#72 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "external_unpublished_detected",
-      "timestamp": "2026-06-20T14:48:06.887008+00:00",
-      "title": "#12 (posts) on recalldreams.dev",
+      "timestamp": "2026-06-20T15:47:43.220208+00:00",
+      "title": "#71 (pages) on recalldreams.dev",
       "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
+      "endpoint": "pages",
       "diff": "HTTP 401",
-      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
+      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-20T15:06:29.903031+00:00"
+  "updated": "2026-06-20T15:47:43.224446+00:00"
 }
