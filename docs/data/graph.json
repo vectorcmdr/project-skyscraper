@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T09:01:58.187528+00:00",
+  "updated": "2026-06-20T12:20:36.729356+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2154,14 +2154,6 @@
       "date": "2016-10-28T23:00:00"
     },
     {
-      "id": "/2016/10/30/event-30102016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/10/30/event-30102016/",
-      "author": "System",
-      "date": "2016-10-29T23:00:00"
-    },
-    {
       "id": "/2016/11/01/event-01112016",
       "type": "post",
       "label": "2016_dataset",
@@ -2600,6 +2592,14 @@
       "url": "https://project-skyscraper.com/2016/12/26/event-26122016/",
       "author": "System",
       "date": "2016-12-26T00:00:00"
+    },
+    {
+      "id": "/2016/10/30/event-30102016",
+      "type": "post",
+      "label": "2016_dataset_30102016",
+      "url": "https://project-skyscraper.com/2016/10/30/event-30102016/",
+      "author": "System",
+      "date": "2016-10-30T03:54:00"
     },
     {
       "id": "/2017/06/01/event-01062017",
@@ -3234,6 +3234,14 @@
       "date": "2026-06-08T20:43:58"
     },
     {
+      "id": "/wp-content/uploads/2026/06/9F3A7C2E6B81.jpg",
+      "type": "media",
+      "label": "9F3A7C2E6B81",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/9F3A7C2E6B81.jpg",
+      "author": "The Architect",
+      "date": "2026-06-20T12:18:41"
+    },
+    {
       "id": "/wp-content/uploads/2026/06/A7E9F3B8C2D6.jpg",
       "type": "media",
       "label": "A7E9F3B8C2D6",
@@ -3446,6 +3454,14 @@
       "type": "external",
       "label": "loudersound.com",
       "url": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://nomanssky.fandom.com/wiki/Timeline_-_Galactic_Hub",
+      "type": "external",
+      "label": "nomanssky.fandom.com",
+      "url": "https://nomanssky.fandom.com/wiki/Timeline_-_Galactic_Hub",
       "author": "",
       "date": ""
     },
@@ -7873,6 +7889,10 @@
     },
     {
       "source": "/2016/07/18/event-18072016",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2016/07/18/event-18072016",
       "target": "/2016/07/17/event-17072016"
     },
     {
@@ -8413,6 +8433,10 @@
     },
     {
       "source": "/2016/09/14/event-14092016",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2016/09/14/event-14092016",
       "target": "/2016/09/13/event-13092016"
     },
     {
@@ -8853,7 +8877,11 @@
     },
     {
       "source": "/2016/10/30/event-30102016",
-      "target": "/tag/unverified"
+      "target": "https://nomanssky.fandom.com/wiki/Timeline_-_Galactic_Hub"
+    },
+    {
+      "source": "/2016/10/30/event-30102016",
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/10/30/event-30102016",
@@ -10293,6 +10321,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/06/454D6E49B199.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/06/9F3A7C2E6B81.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
