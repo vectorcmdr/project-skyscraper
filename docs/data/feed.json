@@ -2,12 +2,12 @@
   "entries": [
     {
       "type": "external_unpublished_detected",
-      "timestamp": "2026-06-20T01:31:05.823328+00:00",
-      "title": "#72 (pages) on recalldreams.dev",
+      "timestamp": "2026-06-20T05:33:17.812207+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
       "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
+      "endpoint": "posts",
       "diff": "HTTP 401",
-      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -15,12 +15,12 @@
     },
     {
       "type": "external_unpublished_detected",
-      "timestamp": "2026-06-20T01:31:05.823244+00:00",
-      "title": "#71 (pages) on recalldreams.dev",
+      "timestamp": "2026-06-20T05:33:17.812129+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
       "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
+      "endpoint": "posts",
       "diff": "HTTP 401",
-      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-20T01:31:05.830160+00:00"
+  "updated": "2026-06-20T05:33:17.819769+00:00"
 }
