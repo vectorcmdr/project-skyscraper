@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-20T01:31:05.852886+00:00",
+      "title": "#72 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-20T01:31:05.852824+00:00",
+      "title": "#71 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-06-18T17:51:35.434535+00:00",
       "title": "Content changed: https://recalldreams.dev/",
@@ -772,5 +798,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-18T17:51:35.434772+00:00"
+  "updated": "2026-06-20T01:31:05.852933+00:00"
 }
