@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T13:27:18.268289+00:00",
+  "updated": "2026-06-21T13:28:15.399965+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2536,6 +2536,30 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "author": "System",
       "date": "2016-10-30T05:54:00"
+    },
+    {
+      "id": "/2016/06/03/event-03062016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/06/03/event-03062016/",
+      "author": "System",
+      "date": "2016-06-02T23:00:00"
+    },
+    {
+      "id": "/2016/06/07/event-07062016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/06/07/event-07062016/",
+      "author": "System",
+      "date": "2016-06-06T23:00:00"
+    },
+    {
+      "id": "/2016/06/11/event-11062016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/06/11/event-11062016/",
+      "author": "System",
+      "date": "2016-06-10T23:00:00"
     },
     {
       "id": "/2016/06/18/2016_dataset",
@@ -10640,6 +10664,42 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/2016/06/02/event-02062016"
+    },
+    {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/2016/06/04/event-04062016"
+    },
+    {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/2016/06/06/event-06062016"
+    },
+    {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/2016/06/08/event-08062016"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
+      "target": "/2016/06/10/event-10062016"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
+      "target": "/2016/06/12/event-12062016"
+    },
+    {
       "source": "/2016/06/18/2016_dataset",
       "target": "/"
     },
@@ -12576,6 +12636,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/06/04/event-04062016",
       "target": "/author/system26da6be6a6"
     },
@@ -12600,6 +12668,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/06/08/event-08062016",
       "target": "/author/system26da6be6a6"
     },
@@ -12621,6 +12697,14 @@
     },
     {
       "source": "/2016/06/10/event-10062016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
       "target": "/category/non-classe"
     },
     {
@@ -15020,6 +15104,10 @@
       "target": "/2016/06/18/2016_dataset"
     },
     {
+      "source": "/2016/06/03/event-03062016",
+      "target": "/2016/06/18/2016_dataset"
+    },
+    {
       "source": "/2016/06/04/event-04062016",
       "target": "/2016/06/18/2016_dataset"
     },
@@ -15032,6 +15120,10 @@
       "target": "/2016/06/18/2016_dataset"
     },
     {
+      "source": "/2016/06/07/event-07062016",
+      "target": "/2016/06/18/2016_dataset"
+    },
+    {
       "source": "/2016/06/08/event-08062016",
       "target": "/2016/06/18/2016_dataset"
     },
@@ -15041,6 +15133,10 @@
     },
     {
       "source": "/2016/06/10/event-10062016",
+      "target": "/2016/06/18/2016_dataset"
+    },
+    {
+      "source": "/2016/06/11/event-11062016",
       "target": "/2016/06/18/2016_dataset"
     },
     {
