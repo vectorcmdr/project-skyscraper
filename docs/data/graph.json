@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T22:33:15.063678+00:00",
+  "updated": "2026-06-21T00:29:16.632642+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -5054,6 +5054,10 @@
     {
       "source": "sitemap",
       "target": "/2026/06/19/sec-log-094212"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2020/02/08/event-08022020"
     },
     {
       "source": "sitemap",
@@ -10148,6 +10152,22 @@
       "target": "/2026/06/19/sec-log-091216"
     },
     {
+      "source": "/2020/02/08/event-08022020",
+      "target": "/"
+    },
+    {
+      "source": "/2020/02/08/event-08022020",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2020/02/08/event-08022020",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2020/02/08/event-08022020",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -10266,22 +10286,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/sleep-mode"
-    },
-    {
-      "source": "/2020/02/08/event-08022020",
-      "target": "/"
-    },
-    {
-      "source": "/2020/02/08/event-08022020",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2020/02/08/event-08022020",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2020/02/08/event-08022020",
-      "target": "/2021/02/25/event-25022021"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
