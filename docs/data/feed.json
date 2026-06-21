@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-21T09:47:20+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  Apr.24, 2022\n  Feb.25, 2021\n+ Feb.8, 2020\n  Jul.24, 2018\n  Nov.16, 2016\n  Nov.15, 2016\n- Nov.14, 2016",
-      "detail": "Content changed: https://project-skyscraper.com/",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-21T10:48:35.889134+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
       "author": 0,
-      "site": "",
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-20T12:18:41+00:00",
-      "title": "5167FF2C25FA",
-      "link": "https://project-skyscraper.com/wp-content/uploads/2026/06/5167FF2C25FA.jpg",
-      "endpoint": "/wp-json/wp/v2/media",
-      "diff": "",
-      "detail": "3 new item(s) in /wp-json/wp/v2/media",
-      "author": "The Architect",
-      "site": "",
-      "id": 3940,
-      "game_date": "2026-06-19T08:44:13+00:00"
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-21T10:48:35.889089+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T09:49:07.881328+00:00"
+  "updated": "2026-06-21T10:48:35.896601+00:00"
 }
