@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T13:39:19.596259+00:00",
+  "updated": "2026-06-21T14:00:13.788457+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3672,6 +3672,14 @@
       "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/1E31D7C81379.jpg",
       "author": "The Architect",
       "date": "2026-06-15T15:14:42"
+    },
+    {
+      "id": "/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg",
+      "type": "media",
+      "label": "3C7A9E2B5F68",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg",
+      "author": "The Architect",
+      "date": "2026-06-21T13:59:14"
     },
     {
       "id": "/wp-content/uploads/2018/07/44-65-73-69-67-6e-5f-6f-66-5f-74-68-65-5f-46-75-74-75-72-65.jpg",
@@ -7513,7 +7521,7 @@
     },
     {
       "source": "/2021/02/25/event-25022021",
-      "target": "/2018/07/24/2018_dataset"
+      "target": "/2020/02/08/event-08022020"
     },
     {
       "source": "/2021/02/25/event-25022021",
@@ -11541,6 +11549,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/06/0A8BB0156734.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
