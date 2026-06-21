@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T13:25:10.959293+00:00",
+  "updated": "2026-06-21T13:26:13.249783+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2536,6 +2536,30 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "author": "System",
       "date": "2016-10-30T05:54:00"
+    },
+    {
+      "id": "/2016/07/03/event-03072016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/07/03/event-03072016/",
+      "author": "System",
+      "date": "2016-07-02T23:00:00"
+    },
+    {
+      "id": "/2016/07/21/event-21072016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/07/21/event-21072016/",
+      "author": "System",
+      "date": "2016-07-20T23:00:00"
+    },
+    {
+      "id": "/2016/07/22/event-22072016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/07/22/event-22072016/",
+      "author": "System",
+      "date": "2016-07-21T23:00:00"
     },
     {
       "id": "/2016/07/28/event-28072016",
@@ -10576,6 +10600,42 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/2016/07/02/event-02072016"
+    },
+    {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/2016/07/04/event-04072016"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/2016/07/20/event-20072016"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/2016/07/22/event-22072016"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
+      "target": "/2016/07/21/event-21072016"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
+      "target": "/2016/07/23/event-23072016"
+    },
+    {
       "source": "/2016/07/28/event-28072016",
       "target": "/"
     },
@@ -12592,6 +12652,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/07/04/event-04072016",
       "target": "/author/system26da6be6a6"
     },
@@ -12717,6 +12785,22 @@
     },
     {
       "source": "/2016/07/20/event-20072016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
       "target": "/category/non-classe"
     },
     {
@@ -14880,6 +14964,10 @@
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
+      "source": "/2016/07/03/event-03072016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
       "source": "/2016/07/04/event-04072016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
@@ -14941,6 +15029,14 @@
     },
     {
       "source": "/2016/07/20/event-20072016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/07/21/event-21072016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
