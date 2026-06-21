@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-21T13:21:07.656303+00:00",
-      "title": "Memory bloc restoration: 310/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 310/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 310/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "310/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-21T13:21:07.656303+00:00"
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T13:21:07.656011+00:00",
-      "title": "",
+      "type": "api_items_removed",
+      "timestamp": "2026-06-21T13:22:12.837707+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/search",
       "link": "",
       "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "2 new item(s) in /wp-json/wp/v2/search",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": 1031,
+      "id": null,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-21T13:20:52+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/10/03/event-03102016/",
-      "endpoint": "/wp-json/wp/v2/posts",
+      "timestamp": "2026-06-21T13:22:12.837616+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "3 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System",
+      "detail": "6 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
       "site": "",
       "id": 1021,
-      "game_date": "2016-10-02T23:00:00+00:00"
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-21T13:21:51+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/27/event-27082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "5 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 937,
+      "game_date": "2016-08-26T23:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T13:21:07.660013+00:00"
+  "updated": "2026-06-21T13:22:12.844082+00:00"
 }
