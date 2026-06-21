@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T14:00:13.788457+00:00",
+  "updated": "2026-06-21T15:04:03.811144+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2386,14 +2386,6 @@
       "date": "2016-12-02T00:00:00"
     },
     {
-      "id": "/2016/12/05/event-05122016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/12/05/event-05122016/",
-      "author": "System",
-      "date": "2016-12-05T00:00:00"
-    },
-    {
       "id": "/2016/12/06/event-06122016",
       "type": "post",
       "label": "2016_dataset",
@@ -2992,6 +2984,14 @@
       "url": "https://project-skyscraper.com/2016/01/05/event-05012016/",
       "author": "System",
       "date": "2016-01-05T00:00:00"
+    },
+    {
+      "id": "/2016/12/05/event-05122016",
+      "type": "post",
+      "label": "2016_dataset_05122016",
+      "url": "https://project-skyscraper.com/2016/12/05/event-05122016/",
+      "author": "System",
+      "date": "2016-12-05T00:00:00"
     },
     {
       "id": "/2016/01/07/event-07012016",
@@ -3722,6 +3722,14 @@
       "date": "2026-06-08T20:48:20"
     },
     {
+      "id": "/wp-content/uploads/2026/06/766973696F6E.jpg",
+      "type": "media",
+      "label": "766973696F6E",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/766973696F6E.jpg",
+      "author": "The Architect",
+      "date": "2026-06-21T15:03:34"
+    },
+    {
       "id": "/wp-content/uploads/2026/06/8740677A9483.jpg",
       "type": "media",
       "label": "8740677A9483",
@@ -3990,6 +3998,14 @@
       "type": "external",
       "label": "space.com",
       "url": "https://www.space.com/35127-top-spaceflight-stories-2016.html",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.telespazio.com/documents/559023/8877700/VV08_launchkit_GB.pdf",
+      "type": "external",
+      "label": "telespazio.com",
+      "url": "https://www.telespazio.com/documents/559023/8877700/VV08_launchkit_GB.pdf",
       "author": "",
       "date": ""
     },
@@ -9741,11 +9757,15 @@
     },
     {
       "source": "/2016/12/05/event-05122016",
-      "target": "/tag/unverified"
+      "target": "https://www.telespazio.com/documents/559023/8877700/VV08_launchkit_GB.pdf"
     },
     {
       "source": "/2016/12/05/event-05122016",
-      "target": "/2016/12/02/event-02122016"
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/12/05/event-05122016",
+      "target": "/2016/12/04/event-04122016"
     },
     {
       "source": "/2016/12/05/event-05122016",
@@ -11553,6 +11573,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/06/766973696F6E.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
@@ -16161,10 +16185,6 @@
     },
     {
       "source": "/2016/12/04/event-04122016",
-      "target": "/2016/06/18/2016_dataset"
-    },
-    {
-      "source": "/2016/12/05/event-05122016",
       "target": "/2016/06/18/2016_dataset"
     },
     {
