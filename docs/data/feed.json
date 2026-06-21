@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-21T15:19:50.298605+00:00",
-      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
-      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-21 15:19:40 UTC\n# Lines: 55616 old -> 55616 new\n# Beautified: yes\n\n@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"9991410739\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"4bebd16e39\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n",
-      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "type": "api_items_removed",
+      "timestamp": "2026-06-21T15:28:11.858928+00:00",
+      "title": "317 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "317 item(s) removed from /wp-json/wp/v2/posts",
       "author": 0,
-      "site": "recalldreams",
+      "site": "",
       "id": null,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-21T15:16:09.965613+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
+      "timestamp": "2026-06-21T15:27:26+00:00",
+      "title": "16 HALLUCINATIONS",
+      "link": "https://project-skyscraper.com/report-glitching-realities/",
+      "endpoint": "/wp-json/wp/v2/pages",
       "diff": "",
-      "detail": "2 new item(s) in /wp-json/wp/v2/search",
-      "author": 0,
+      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
+      "author": "System",
       "site": "",
-      "id": 1282,
-      "game_date": ""
+      "id": 1276,
+      "game_date": "2026-06-21T15:26:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T15:19:50.304116+00:00"
+  "updated": "2026-06-21T15:28:11.865167+00:00"
 }
