@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T16:49:46.104713+00:00",
-      "title": "#72 (pages) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
-      "diff": "HTTP 401",
-      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-21T17:02:22.139199+00:00",
+      "title": "Memory bloc restoration: 362/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 362/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 362/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "362/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-21T17:02:22.139199+00:00"
     },
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T16:49:46.104663+00:00",
-      "title": "#71 (pages) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
-      "diff": "HTTP 401",
-      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
+      "type": "api_items_added",
+      "timestamp": "2026-06-21T17:02:22.138804+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
-      "site": "recalldreams",
-      "id": null,
+      "site": "",
+      "id": 4115,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-21T16:31:55+00:00",
+      "timestamp": "2026-06-21T17:01:16+00:00",
       "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/01/24/event-24012016/",
+      "link": "https://project-skyscraper.com/2016/04/19/event-19042016/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": 4110,
-      "game_date": "2016-01-24T00:00:00+00:00"
+      "id": 4115,
+      "game_date": "2016-04-18T23:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T16:49:46.109880+00:00"
+  "updated": "2026-06-21T17:02:22.146733+00:00"
 }
