@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T16:36:53.534155+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-21T16:49:46.104713+00:00",
+      "title": "#72 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
       "author": 0,
-      "site": "",
-      "id": 4112,
+      "site": "recalldreams",
+      "id": null,
       "game_date": ""
     },
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T16:35:54+00:00",
-      "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/03/06/event-06032016/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System",
-      "site": "",
-      "id": 4112,
-      "game_date": "2016-03-06T00:00:00+00:00"
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-21T16:49:46.104663+00:00",
+      "title": "#71 (pages) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T16:36:53.540663+00:00"
+  "updated": "2026-06-21T16:49:46.109880+00:00"
 }
