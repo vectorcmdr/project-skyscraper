@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T15:49:49.360681+00:00",
-      "title": "#13 (posts) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
-      "diff": "HTTP 401",
-      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-21T15:50:23.835777+00:00",
+      "title": "Memory bloc restoration: 356/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 356/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 356/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "356/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-21T15:50:23.835777+00:00"
     },
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T15:49:49.360612+00:00",
-      "title": "#12 (posts) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "posts",
-      "diff": "HTTP 401",
-      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
+      "type": "api_items_added",
+      "timestamp": "2026-06-21T15:50:23.835206+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "5 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
-      "site": "recalldreams",
-      "id": null,
+      "site": "",
+      "id": 397,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-21T15:46:27+00:00",
+      "timestamp": "2026-06-21T15:50:10+00:00",
       "title": "2016_dataset",
-      "link": "https://project-skyscraper.com/2016/03/21/event-21032016/",
+      "link": "https://project-skyscraper.com/2016/01/14/event-14012016/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
-      "detail": "3 new item(s) in /wp-json/wp/v2/posts",
+      "detail": "5 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": 496,
-      "game_date": "2016-03-21T00:00:00+00:00"
+      "id": 326,
+      "game_date": "2016-01-14T00:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T15:49:49.367439+00:00"
+  "updated": "2026-06-21T15:50:23.841531+00:00"
 }
