@@ -1,43 +1,30 @@
 {
   "entries": [
     {
-      "type": "api_items_removed",
-      "timestamp": "2026-06-21T15:28:11.858928+00:00",
-      "title": "317 item(s) removed from /wp-json/wp/v2/posts",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-21T15:31:00.432755+00:00",
+      "title": "Memory bloc restoration: 287/365 [1 Pages]",
       "link": "",
-      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "0/365 → 287/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 287/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "287/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-21T15:31:00.432755+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-21T15:31:00.430144+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
       "diff": "",
-      "detail": "317 item(s) removed from /wp-json/wp/v2/posts",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T15:27:26+00:00",
-      "title": "16 HALLUCINATIONS",
-      "link": "https://project-skyscraper.com/report-glitching-realities/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
-      "author": "System",
-      "site": "",
       "id": 1276,
-      "game_date": "2026-06-21T15:26:00+00:00"
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T15:02:14+00:00",
-      "title": "Structural Analysis",
-      "link": "https://project-skyscraper.com/structural-analysis-161527-full/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
-      "author": "System",
-      "site": "",
-      "id": 1282,
-      "game_date": "2026-06-21T15:15:00+00:00"
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -51,6 +38,19 @@
       "site": "",
       "id": 1284,
       "game_date": "2026-06-21T15:15:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-21T13:20:52+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/26/event-26092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "317 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 1001,
+      "game_date": "2016-09-25T23:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T15:28:11.865167+00:00"
+  "updated": "2026-06-21T15:31:00.438534+00:00"
 }
