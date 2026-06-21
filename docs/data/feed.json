@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-21T22:20:23.559276+00:00",
-      "title": "Memory bloc restoration: 367/365 [10 Pages]",
-      "link": "https://project-skyscraper.com/project-skyscraper/",
-      "diff": "287/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 287/365 to 367/365 across 10 pages",
-      "author": "System",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-21T22:47:49+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jun.21, 2026\n+ Jun.21, 2026\n  Jun.19, 2026\n  Jun.19, 2026\n  Dec.12, 2023\n  Sep.26, 2023\n+ Feb.1, 2023\n  Apr.24, 2022\n  Feb.8, 2020\n  Jul.24, 2018\n+ Aug.7, 2017\n  Jul.21, 2017",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0,
       "site": "",
-      "restoration_value": "367/365",
-      "page_count": 10,
-      "last_timestamp": "2026-06-21T22:20:23.559336+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "external_sitemap_changed",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T22:20:23.566048+00:00"
+  "updated": "2026-06-21T22:50:12.218246+00:00"
 }
