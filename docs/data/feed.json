@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-21T13:59:14+00:00",
-      "title": "3C7A9E2B5F68",
-      "link": "https://project-skyscraper.com/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg",
-      "endpoint": "/wp-json/wp/v2/media",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/media",
-      "author": "The Architect",
+      "type": "api_items_modified",
+      "timestamp": "2026-06-21T14:22:27+00:00",
+      "title": "2016_dataset_05122016",
+      "link": "https://project-skyscraper.com/2016/12/05/event-05122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- 2016_dataset\n+ 2016_dataset_05122016\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 343/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": "",
-      "id": 4029,
-      "game_date": "2026-06-21T13:59:14+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T14:00:08.930992+00:00"
+  "updated": "2026-06-21T14:25:12.103016+00:00"
 }
