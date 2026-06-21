@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T13:03:03.237817+00:00",
+  "updated": "2026-06-21T13:13:11.843513+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2536,6 +2536,14 @@
       "url": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
       "author": "System",
       "date": "2016-10-30T05:54:00"
+    },
+    {
+      "id": "/2016/12/27/event-27122016",
+      "type": "post",
+      "label": "2016_dataset",
+      "url": "https://project-skyscraper.com/2016/12/27/event-27122016/",
+      "author": "System",
+      "date": "2016-12-27T00:00:00"
     },
     {
       "id": "/2016/01/05/event-05012016",
@@ -10296,6 +10304,18 @@
       "target": "/sleep-mode"
     },
     {
+      "source": "/2016/12/27/event-27122016",
+      "target": "/"
+    },
+    {
+      "source": "/2016/12/27/event-27122016",
+      "target": "/2016/12/26/event-26122016"
+    },
+    {
+      "source": "/2016/12/27/event-27122016",
+      "target": "/2016/12/28/event-28122016"
+    },
+    {
       "source": "/2017/08/07/event-07082017",
       "target": "/"
     },
@@ -12988,6 +13008,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2016/12/27/event-27122016",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2016/12/27/event-27122016",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/12/28/event-28122016",
       "target": "/author/system26da6be6a6"
     },
@@ -14433,6 +14461,10 @@
     },
     {
       "source": "/2016/12/25/event-25122016",
+      "target": "/2016/10/30/2016_dataset-in-memoriam"
+    },
+    {
+      "source": "/2016/12/27/event-27122016",
       "target": "/2016/10/30/2016_dataset-in-memoriam"
     },
     {
