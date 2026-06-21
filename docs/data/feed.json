@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T21:50:08.504870+00:00",
-      "title": "#72 (pages) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
-      "diff": "HTTP 401",
-      "detail": "Unpublished pages #72 (HTTP 401) on recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-21T22:20:23.559276+00:00",
+      "title": "Memory bloc restoration: 367/365 [10 Pages]",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "diff": "287/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 287/365 to 367/365 across 10 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "367/365",
+      "page_count": 10,
+      "last_timestamp": "2026-06-21T22:20:23.559336+00:00"
     },
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-21T21:50:08.504822+00:00",
-      "title": "#71 (pages) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
-      "diff": "HTTP 401",
-      "detail": "Unpublished pages #71 (HTTP 401) on recalldreams.dev",
+      "type": "external_sitemap_changed",
+      "timestamp": "2026-06-21T22:20:23.559218+00:00",
+      "title": "Sitemap: -1 URL(s) for recalldreams.dev",
+      "link": "https://recalldreams.dev/sitemap.xml",
+      "endpoint": "",
+      "diff": "- https://recalldreams.dev/2026/04/24/hello-world/",
+      "detail": "Sitemap: -1 URL(s) for recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-21T21:50:08.508559+00:00"
+  "updated": "2026-06-21T22:20:23.566048+00:00"
 }

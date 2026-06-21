@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_sitemap_changed",
+      "timestamp": "2026-06-21T22:20:23.594370+00:00",
+      "title": "Sitemap: -1 URL(s) for recalldreams.dev",
+      "link": "https://recalldreams.dev/sitemap.xml",
+      "endpoint": "",
+      "diff": "- https://recalldreams.dev/2026/04/24/hello-world/",
+      "detail": "Sitemap: -1 URL(s) for recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_unpublished_detected",
       "timestamp": "2026-06-20T01:31:05.852886+00:00",
       "title": "#72 (pages) on recalldreams.dev",
@@ -798,5 +811,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-20T01:31:05.852933+00:00"
+  "updated": "2026-06-21T22:20:23.594492+00:00"
 }
