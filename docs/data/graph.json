@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T13:33:08.647207+00:00",
+  "updated": "2026-06-21T13:39:19.596259+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3640,6 +3640,14 @@
       "url": "https://project-skyscraper.com/1958/04/17/event-17041958/",
       "author": "System",
       "date": "1958-04-17T14:27:00"
+    },
+    {
+      "id": "/wp-content/uploads/2026/06/0A8BB0156734.jpg",
+      "type": "media",
+      "label": "0A8BB0156734",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/0A8BB0156734.jpg",
+      "author": "The Architect",
+      "date": "2026-06-21T13:38:25"
     },
     {
       "id": "/wp-content/uploads/2026/06/12DD862FD254.jpg",
@@ -11529,6 +11537,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/06/9F3A7C2E6B81.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/06/0A8BB0156734.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
