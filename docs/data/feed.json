@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-22T03:20:54.743380+00:00",
-      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
-      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-22 03:20:37 UTC\n# Lines: 55616 old -> 55616 new\n# Beautified: yes\n\n@@ -36,7 +36,7 @@\n </style>\n\n <link rel='stylesheet' id='all-css-a860f98e52ebc00451f56e6f4b1e5371' href='https://recalldreams.dev/wp-content/plugins/gravatar-enhanced/build/patterns-view.css' type='text/css' media='all' />\n\n <style id=\"global-styles-inline-css\">\n\n .custom-indent p{text-indent:4rem;}\n\n </style>\n\n@@ -379,7 +379,7 @@\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"app_source\" value=\"atomic-subscription-modal-lo\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"redirect_fragment\" value=\"subscribe-blog\"/>\n\n \t\t\t\t\t\t\t<input type=\"hidden\" name=\"lang\" value=\"en_US\"/>\n\n-\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"4bebd16e39\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n+\t\t\t\t\t\t\t<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"4bd453e2bf\" /><input type=\"hidden\" name=\"_wp_http_referer\" value=\"/2026/04/24/hello-world/\" /><input type=\"hidden\" name=\"post_id\" value=\"3\"/>\t\t\t\t\t\t\t\n\n \t\t\t\t\t\t</p>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t</form>\n",
-      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-22T06:50:25.182213+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-22T03:20:54.743353+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/14",
-      "link": "https://recalldreams.dev/wp-json/wp/v2/media/14",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/14\n# File: api/wp-json/wp/v2/media/14/.json\n# Timestamp: 2026-06-22 03:20:34 UTC\n# Lines: 3416 old -> 3445 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"reacalldreams_icon\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"reacalldreams_icon.png\",\n\n   \"filesize\": 103314,\n\n   \"jetpack_likes_enabled\": true,\n",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/14",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-22T06:50:25.182154+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-22T03:20:54.750648+00:00"
+  "updated": "2026-06-22T06:50:25.188836+00:00"
 }
