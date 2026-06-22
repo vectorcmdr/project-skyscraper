@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-22T19:43:01+00:00",
-      "title": "2016_dataset",
+      "timestamp": "2026-06-22T20:03:55+00:00",
+      "title": "1990_dataset",
       "link": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- 2016_dataset_05012016\n+ 2016_dataset\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "- 2016_dataset\n+ 1990_dataset\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-22T19:43:26.659157+00:00"
+  "updated": "2026-06-22T20:04:26.571284+00:00"
 }
