@@ -1,26 +1,26 @@
 {
   "entries": [
     {
-      "type": "sitemap_added",
-      "timestamp": "2026-06-22T00:27:23.047927+00:00",
-      "title": "https://project-skyscraper.com/0a8bb0156734/",
-      "link": "https://project-skyscraper.com/0a8bb0156734/",
-      "endpoint": "",
-      "diff": "+ https://project-skyscraper.com/0a8bb0156734/\n+ https://project-skyscraper.com/2016/01/02/event-02012016/\n+ https://project-skyscraper.com/2016/01/11/event-11012016/\n+ https://project-skyscraper.com/2016/01/14/event-14012016/\n+ https://project-skyscraper.com/2016/01/17/event-17012016/\n+ https://project-skyscraper.com/2016/01/24/event-24012016/\n+ https://project-skyscraper.com/2016/02/01/event-01022016/\n+ https://project-skyscraper.com/2016/02/11/event-11022016/\n+ https://project-skyscraper.com/2016/02/16/event-16022016/\n+ https://project-skyscraper.com/2016/02/28/event-28022016/\n+ https://project-skyscraper.com/2016/02/29/event-out-of-range/\n+ https://project-skyscraper.com/2016/03/06/event-06032016/\n+ https://project-skyscraper.com/2016/03/08/event-08032016/\n+ https://project-skyscraper.com/2016/03/09/event-09032016/\n+ https://project-skyscraper.com/2016/03/14/event-14032016/\n+ https://project-skyscraper.com/2016/03/15/event-15032016/\n+ https://project-skyscraper.com/2016/03/21/event-21032016/\n+ https://project-skyscraper.com/2016/04/04/event-04042016/\n+ https://project-skyscraper.com/2016/04/07/event-07042016/\n+ https://project-skyscraper.com/2016/04/10/event-10042016/",
-      "detail": "Added 89 URL(s) to sitemap",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-22T01:50:23.598910+00:00",
+      "title": "#13 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #13 (HTTP 401) on recalldreams.dev",
       "author": 0,
-      "site": "",
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
     {
-      "type": "external_sitemap_changed",
-      "timestamp": "2026-06-21T22:20:23.559218+00:00",
-      "title": "Sitemap: -1 URL(s) for recalldreams.dev",
-      "link": "https://recalldreams.dev/sitemap.xml",
-      "endpoint": "",
-      "diff": "- https://recalldreams.dev/2026/04/24/hello-world/",
-      "detail": "Sitemap: -1 URL(s) for recalldreams.dev",
+      "type": "external_unpublished_detected",
+      "timestamp": "2026-06-22T01:50:23.598858+00:00",
+      "title": "#12 (posts) on recalldreams.dev",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #12 (HTTP 401) on recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-22T00:27:23.052512+00:00"
+  "updated": "2026-06-22T01:50:23.603288+00:00"
 }
