@@ -42,6 +42,7 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'img#wpstats\{display:none\}'), ''),
     (re.compile(r'img:is\([^)]*\)\{contain-intrinsic-size:\d+px \d+px\}'), ''),
     (re.compile(r'<script[^>]*type=[\x22\x27]importmap[\x22\x27][^>]*>[\s\S]*?</script>', re.IGNORECASE), ''),
+    (re.compile(r'<style id="wp-block-library-inline-css">.*?</style>', re.DOTALL), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -90,6 +91,8 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ .]+\.\.\s*\(truncated\)$'),
     re.compile(r'^[ +-]\s*.+&#8211;\s*project-skyscraper'),
     re.compile(r'^[ +-]\s*.+\u2013\s*project-skyscraper'),
+    re.compile(r'^[ +-]\s*:root\{--wp-block-synced-color'),
+    re.compile(r'^[ +-]\s*:root\{--wp-admin-theme-color'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({
@@ -99,6 +102,7 @@ _JSON_NOISE_KEYS = frozenset({
     "comment_status", "ping_status", "menu_order", "parent", "order",
     "generated_slug", "_private", "link", "class_list", "categories",
     "tags", "sticky", "format", "password",
+    "acf", "yoast_head", "yoast_head_json",
 })
 
 

@@ -395,6 +395,11 @@ def _external_probe_unpublished(hostname: str, site_url: str, site_state: dict, 
         probe_state["position"] = probe_state.get("position", 3)
         max_id = probe_state.get("max_seen", 20)
 
+    unpublished_log = probe_state.setdefault("unpublished", {"posts": [], "pages": []})
+    _migrate_external_log(unpublished_log)
+    seen_posts = {_entry_id(e) for e in unpublished_log["posts"]}
+    seen_pages = {_entry_id(e) for e in unpublished_log["pages"]}
+
     probe_pos = probe_state.get("position", max_id + 1)
     probe_ceiling = max_id + PROBE_RANGE
     if probe_pos > probe_ceiling:
@@ -407,18 +412,35 @@ def _external_probe_unpublished(hostname: str, site_url: str, site_state: dict, 
             result = head_url(url)
             if result.status in (401, 403):
                 ep_name = "posts" if "/posts/" in url else "pages"
-                changes.append({
-                    "type": "external_unpublished_detected",
-                    "site": hostname,
-                    "site_label": site_label,
-                    "id": pid,
-                    "status": result.status,
-                    "endpoint": ep_name,
-                    "detail": f"Unpublished {ep_name} #{pid} (HTTP {result.status}) on {hostname}",
-                })
-                log(f"  {hostname}: Unpublished {ep_name} #{pid} (HTTP {result.status})", "DEEP")
+                seen_set = seen_posts if ep_name == "posts" else seen_pages
+                if pid not in seen_set:
+                    changes.append({
+                        "type": "external_unpublished_detected",
+                        "site": hostname,
+                        "site_label": site_label,
+                        "id": pid,
+                        "status": result.status,
+                        "endpoint": ep_name,
+                        "detail": f"Unpublished {ep_name} #{pid} (HTTP {result.status}) on {hostname}",
+                    })
+                    seen_set.add(pid)
+                    unpublished_log[ep_name].append({
+                        "id": pid,
+                        "first_seen": datetime.now(timezone.utc).isoformat(),
+                    })
+                    log(f"  {hostname}: Unpublished {ep_name} #{pid} (HTTP {result.status})", "DEEP")
+                else:
+                    log(f"  {hostname}: Unpublished {ep_name} #{pid} (already known)", "DEEP")
             elif result.status == 200:
                 ep_name = "posts" if "/posts/" in url else "pages"
+                found_entry = None
+                remaining = []
+                for e in unpublished_log[ep_name]:
+                    if _entry_id(e) == pid:
+                        found_entry = e
+                    else:
+                        remaining.append(e)
+                unpublished_log[ep_name] = remaining
                 log(f"  {hostname}: Newly published {ep_name} #{pid}", "DEEP")
         jitter(0.08, 0.1)
 
@@ -427,6 +449,31 @@ def _external_probe_unpublished(hostname: str, site_url: str, site_state: dict, 
     log(f"  {hostname}: Probe checked IDs {probe_pos}-{chunk_end}", "DEEP")
 
     return changes
+
+
+def _entry_id(entry):
+    if isinstance(entry, dict):
+        return entry.get("id", 0)
+    if isinstance(entry, (list, tuple)) and len(entry) > 0:
+        return entry[0]
+    return 0
+
+
+def _migrate_external_log(ulog):
+    changed = False
+    for ep in ("posts", "pages"):
+        new_list = []
+        for entry in ulog.get(ep, []):
+            if isinstance(entry, (list, tuple)):
+                pid = entry[0] if len(entry) > 0 else 0
+                if pid:
+                    new_list.append({"id": pid, "first_seen": datetime.now(timezone.utc).isoformat()})
+                    changed = True
+            else:
+                new_list.append(entry)
+        ulog[ep] = new_list
+    if changed:
+        log("Migrated external unpublished log entries to dict format", "FILE")
 
 
 def _check_generic_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:

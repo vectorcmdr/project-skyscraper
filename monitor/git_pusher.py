@@ -2,6 +2,7 @@
 
 import subprocess
 import time
+from pathlib import Path
 
 from monitor.config import MIRROR_DIR, SITE_DIR, GIT_BRANCH, GIT_USER_NAME, GIT_USER_EMAIL, GITHUB_TOKEN
 from monitor.logger import log
@@ -35,6 +36,9 @@ def _git_retry(cmd, timeout, retries=6, delay=1):
     return None
 
 
+DAEMON_MANAGED_SUBDIRS = ["data", "status", "neural-net"]
+
+
 def push_site():
     if not SITE_DIR.is_dir():
         log("git push skipped -- docs/ directory not found", "FILE")
@@ -42,7 +46,12 @@ def push_site():
 
     try:
         label = "git add"
-        r = _git_retry(["git", "add", "--all", str(SITE_DIR)], timeout=30)
+        add_targets = [
+            str(Path(SITE_DIR) / sub)
+            for sub in DAEMON_MANAGED_SUBDIRS
+            if (Path(SITE_DIR) / sub).is_dir()
+        ]
+        r = _git_retry(["git", "add", "--all", *add_targets], timeout=30)
         if r and r.returncode != 0:
             log(f"{label} failed (exit={r.returncode}): {r.stderr.strip()}", "ERROR")
             return
