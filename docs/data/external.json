@@ -1,6 +1,136 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777311+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/14",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/14",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/14\n# File: api/wp-json/wp/v2/media/14/.json\n# Timestamp: 2026-06-22 03:20:34 UTC\n# Lines: 3416 old -> 3445 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"reacalldreams_icon\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"reacalldreams_icon.png\",\n\n   \"filesize\": 103314,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/14",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777295+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/15",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/15",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/15\n# File: api/wp-json/wp/v2/media/15/.json\n# Timestamp: 2026-06-22 03:20:34 UTC\n# Lines: 3414 old -> 3443 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"reacalldreams_logo\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"reacalldreams_logo.png\",\n\n   \"filesize\": 92178,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/15",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777280+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/22",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/22",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/22\n# File: api/wp-json/wp/v2/media/22/.json\n# Timestamp: 2026-06-22 03:20:33 UTC\n# Lines: 3691 old -> 3720 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"Echoes Of The Threshold\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"echoes-of-the-threshold.png\",\n\n   \"filesize\": 982739,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/22",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777263+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/29",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/29",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/29\n# File: api/wp-json/wp/v2/media/29/.json\n# Timestamp: 2026-06-22 03:20:32 UTC\n# Lines: 3829 old -> 3858 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"Echoes of the Threshold background\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"echoes-of-the-threshold-background.jpg\",\n\n   \"filesize\": 2333293,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/29",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777247+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/37",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/37",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/37\n# File: api/wp-json/wp/v2/media/37/.json\n# Timestamp: 2026-06-22 03:20:31 UTC\n# Lines: 3491 old -> 3520 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"Plato\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"plato.jpg\",\n\n   \"filesize\": 2724963,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/37",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777230+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/39",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/39",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/39\n# File: api/wp-json/wp/v2/media/39/.json\n# Timestamp: 2026-06-22 03:20:30 UTC\n# Lines: 3561 old -> 3590 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"dev_routine\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"dev_routine.jpg\",\n\n   \"filesize\": 620219,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/39",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777214+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/41",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/41",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/41\n# File: api/wp-json/wp/v2/media/41/.json\n# Timestamp: 2026-06-22 03:20:29 UTC\n# Lines: 3578 old -> 3607 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"Schrödinger\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"schrodinger.jpg\",\n\n   \"filesize\": 4091751,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/41",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777196+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/58",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/58",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/58\n# File: api/wp-json/wp/v2/media/58/.json\n# Timestamp: 2026-06-22 03:20:28 UTC\n# Lines: 10742 old -> 10771 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"Unique gameplay\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"Unique-gameplay.jpg\",\n\n   \"filesize\": 1156156,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/58",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777179+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/59",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/59",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/59\n# File: api/wp-json/wp/v2/media/59/.json\n# Timestamp: 2026-06-22 03:20:27 UTC\n# Lines: 10762 old -> 10791 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"The maze\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"The-maze.jpg\",\n\n   \"filesize\": 3796267,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/59",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-22T03:20:54.777156+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/64",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media/64",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media/64\n# File: api/wp-json/wp/v2/media/64/.json\n# Timestamp: 2026-06-22 03:20:26 UTC\n# Lines: 10623 old -> 10652 new\n# Beautified: yes\n\n@@ -3,6 +3,7 @@\n   \"title\": {\n\n     \"rendered\": \"opening_door_protocol\"\n\n   },\n\n+  \"acf\": [],\n\n   \"filename\": \"opening_door_protocol.jpg\",\n\n   \"filesize\": 3375599,\n\n   \"jetpack_likes_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media/64",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_sitemap_changed",
       "timestamp": "2026-06-21T22:20:23.594370+00:00",
       "title": "Sitemap: -1 URL(s) for recalldreams.dev",
@@ -811,5 +941,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-06-21T22:20:23.594492+00:00"
+  "updated": "2026-06-22T03:20:54.777372+00:00"
 }
