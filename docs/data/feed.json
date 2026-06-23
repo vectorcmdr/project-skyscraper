@@ -1,16 +1,16 @@
 {
   "entries": [
     {
-      "type": "api_items_added",
-      "timestamp": "2026-06-23T14:37:53.590384+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/search",
-      "author": 0,
+      "type": "api_items_modified",
+      "timestamp": "2026-06-23T14:51:56+00:00",
+      "title": "2020_dataset_07042020",
+      "link": "https://project-skyscraper.com/2020/04/07/event-07042020/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory compliance: 90%\n+ Memory compliance: 100%\n- Value: Planetary hazards lose impact when armour learns to walk\n+ Value: Planetary hazards lose impact when armour learns to walk\n- Memory compliance: 90%\n+ Memory compliance: 100%\n  data-wp-class--is-last-step=\"state.isLastStep\"\n  data-wp-class--is-ajax-form=\"context.useAjax\"\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": "",
-      "id": 4278,
+      "id": null,
       "game_date": ""
     },
     {
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T14:37:53.598887+00:00"
+  "updated": "2026-06-23T14:53:05.543607+00:00"
 }
