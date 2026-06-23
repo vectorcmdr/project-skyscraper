@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T15:57:43+00:00",
+      "timestamp": "2026-06-23T15:59:50+00:00",
       "title": "2018_dataset_17012018",
       "link": "https://project-skyscraper.com/2018/01/17/event-17012018/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- Memory compliance: 40%\n+ Memory compliance: 80%\n- memory bloc : Got your pass ? Value: no/value 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation’s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time. Memory compliance: 40%\n+ memory bloc : Got your pass ? Value: no/value 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation’s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time. Memory compliance: 80%\n- 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation&#8217;s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time.\n+ 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation&#8217;s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time.\n- Memory compliance: 40%\n+ Memory compliance: 80%\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "- memory bloc 1516150800: Got your pass ?Value: no/value\n+ memory bloc 1516150800: Got your pass ?Value: No pass needed to be a CSD member.\n- Memory compliance: 80%\n+ Memory compliance: 100%\n- memory bloc : Got your pass ? Value: no/value 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation’s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time. Memory compliance: 80%\n+ memory bloc : Got your pass ? Value: No pass needed to be a CSD member. 10,000 citizen scientists began receiving their ATLASPASS v4. These passes commemorated the participation in the Atlas Foundation’s scientific research. These passes continue to be a reminder of the worldwide collaboration and fond memories created during this time. Memory compliance: […]\n- memory bloc 1516150800: Got your pass ?Value: no/value\n+ memory bloc 1516150800: Got your pass ?Value: No pass needed to be a CSD member.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T15:58:47.186073+00:00"
+  "updated": "2026-06-23T16:01:14.996848+00:00"
 }
