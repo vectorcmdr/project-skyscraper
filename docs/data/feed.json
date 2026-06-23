@@ -1,21 +1,21 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-23T16:23:29+00:00",
-      "title": "2025_dataset_09082025",
-      "link": "https://project-skyscraper.com/2025/08/09/event-09082025/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-23T16:37:29.797149+00:00",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
       "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-23T16:37:29.797149+00:00"
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-23T16:09:31.117788+00:00",
+      "timestamp": "2026-06-23T16:37:29.796853+00:00",
       "title": "",
       "link": "",
       "endpoint": "/wp-json/wp/v2/search",
@@ -23,21 +23,21 @@
       "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": 4355,
+      "id": 4385,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-23T16:08:25+00:00",
-      "title": "2025_dataset_09082025",
-      "link": "https://project-skyscraper.com/2025/08/09/event-09082025/",
+      "timestamp": "2026-06-23T16:36:36+00:00",
+      "title": "2017_dataset_09072017",
+      "link": "https://project-skyscraper.com/2017/07/09/event-09072017/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": 4355,
-      "game_date": "2025-08-09T12:00:00+00:00"
+      "id": 4385,
+      "game_date": "2017-07-09T00:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T16:24:39.642623+00:00"
+  "updated": "2026-06-23T16:37:29.805489+00:00"
 }
