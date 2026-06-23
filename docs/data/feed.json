@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T22:37:03+00:00",
+      "timestamp": "2026-06-23T22:47:56+00:00",
       "title": "2016_dataset_09082016",
       "link": "https://project-skyscraper.com/2016/08/09/event-09082016/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "- memory bloc 1470700800: no/valueValue: no/value\n- Memory compliance: 0%\n+ memory bloc 1470700800: Sky is not the limit.Value: YOUR UNIVERSE AWAITS\n+ I feel sick writing this. You are about to play No Man’s Sky and I don’t know what you’ll think. I know I’m proud of it, I’m incredibly proud of the tiny team that is making a game at a scale that’s never been done before.At times I can squint my eyes and see that we’re generating entire planets, solar systems, galaxies on a PS4, and see that maybe that could be a part of how games are made in the future.At times I can let myself feel proud that our indie game is going to be in shops. That we have a media kit! That you are even taking the time to play our game, when our previous titles might not have.I know I’ve watched playtesters get totally consumed in our universe… but I’ve also seen people feel lost. I’ve seen kids weaned on Minecraft lose themselves, and I’ve seen some others feel lost. I don’t know how y...\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-radius: 2px;}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T22:38:03.708285+00:00"
+  "updated": "2026-06-23T22:48:09.165370+00:00"
 }
