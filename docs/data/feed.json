@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T22:18:10+00:00",
+      "timestamp": "2026-06-23T22:19:43+00:00",
       "title": "2017_dataset_21072017",
       "link": "https://project-skyscraper.com/2017/07/21/event-21072017/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- memory bloc 1500598800: PORTALValue: A persistent, enigmatic mystery is finally resolved.Source_injection: Klaxk/GHP\n+ memory bloc 1500598800: PORTALValue: A persistent, enigmatic mystery is finally resolved.\n- Memory compliance: 70%\n+ Memory compliance: 100%\n- memory bloc : PORTAL Value: A persistent, enigmatic mystery is finally resolved. Source_injection: Klaxk/GHP “The traveler awoke beneath the shadow of a red star. Through the lonely cosmos they fled, yearning for purpose and meaning. They found an anomaly, an aberration, a door to the heavens. No Gek, no Vy’Keen, no Korvax could see it. […]\n+ memory bloc : PORTAL Value: A persistent, enigmatic mystery is finally resolved. “The traveler awoke beneath the shadow of a red star. Through the lonely cosmos they fled, yearning for purpose and meaning. They found an anomaly, an aberration, a door to the heavens. No Gek, no Vy’Keen, no Korvax could see it. Only the […]\n- memory bloc 1500598800: PORTALValue: A persistent, enigmatic mystery is finally resolved.Source_injection: Klaxk/GHP\n+ memory bloc 1500598800: PORTALValue: A persistent, enigmatic mystery is finally resolved.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "  \"rendered\": \"memory bloc : PORTAL Value: A persistent, enigmatic mystery is finally resolved. &#8220;The traveler awoke beneath the shadow of a red star. Through the lonely cosmos they fled, yearning for purpose and meaning. They found an anomaly, an aberration, a door to the heavens. No Gek, no Vy&#8217;Keen, no Korvax could see it. Only the [&hellip;]\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n+ \"jetpack_featured_media_url\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/766973696F6E.jpg?fit=1420%2C1080&ssl=1\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-D2\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-radius: 2px;}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T22:19:15.341528+00:00"
+  "updated": "2026-06-23T22:20:16.157161+00:00"
 }
