@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T15:15:48.663761+00:00",
+  "updated": "2026-06-23T15:24:55.327919+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3338,6 +3338,14 @@
       "date": "2017-08-07T22:40:00"
     },
     {
+      "id": "/2017/08/03/event-03082017",
+      "type": "post",
+      "label": "2017_dataset_03082017",
+      "url": "https://project-skyscraper.com/2017/08/03/event-03082017/",
+      "author": "System",
+      "date": "2017-08-03T12:00:00"
+    },
+    {
       "id": "/2018/07/24/2018_dataset",
       "type": "post",
       "label": "2018_dataset",
@@ -4178,6 +4186,14 @@
       "date": ""
     },
     {
+      "id": "/2017/08/03/event-03082017/context.image.src",
+      "type": "external",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/2017/08/03/event-03082017/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "/2025/03/26/event-26032025/context.item.anchor",
       "type": "external",
       "label": "Context.Item.Anchor",
@@ -4186,10 +4202,26 @@
       "date": ""
     },
     {
+      "id": "/2017/08/03/event-03082017/context.item.anchor",
+      "type": "external",
+      "label": "Context.Item.Anchor",
+      "url": "https://project-skyscraper.com/2017/08/03/event-03082017/context.item.anchor",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "/2025/03/26/event-26032025/context.submission.url",
       "type": "external",
       "label": "Context.Submission.Url",
       "url": "https://project-skyscraper.com/2025/03/26/event-26032025/context.submission.url",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2017/08/03/event-03082017/context.submission.url",
+      "type": "external",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/2017/08/03/event-03082017/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -12620,6 +12652,34 @@
       "target": "/2025/03/26/event-26032025/context.item.anchor"
     },
     {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/2017/07/21/event-21072017"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/2017/08/07/event-07082017"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/2017/08/03/event-03082017/context.submission.url"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/2017/08/03/event-03082017/context.image.src"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/2017/08/03/event-03082017/context.item.anchor"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -16369,6 +16429,14 @@
     },
     {
       "source": "/2025/03/26/event-26032025",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
       "target": "/category/non-classe"
     },
     {
