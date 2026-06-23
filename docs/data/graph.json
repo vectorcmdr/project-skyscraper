@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T16:37:36.162062+00:00",
+  "updated": "2026-06-23T18:50:07.463565+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2866,14 +2866,6 @@
       "date": "2016-11-26T00:00:00"
     },
     {
-      "id": "/2016/11/27/event-27112016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/11/27/event-27112016/",
-      "author": "System",
-      "date": "2016-11-27T00:00:00"
-    },
-    {
       "id": "/2016/11/28/event-28112016",
       "type": "post",
       "label": "2016_dataset",
@@ -3298,6 +3290,14 @@
       "date": "2016-12-26T00:00:00"
     },
     {
+      "id": "/2016/11/27/event-27112016",
+      "type": "post",
+      "label": "2016_dataset_27112016",
+      "url": "https://project-skyscraper.com/2016/11/27/event-27112016/",
+      "author": "System",
+      "date": "2016-11-27T13:00:00"
+    },
+    {
       "id": "/2016/10/30/event-30102016",
       "type": "post",
       "label": "2016_dataset_30102016",
@@ -3424,6 +3424,14 @@
       "url": "https://project-skyscraper.com/2023/02/01/event-01022023/",
       "author": "System",
       "date": "2023-02-01T02:00:00"
+    },
+    {
+      "id": "/2023/08/23/event-23082023",
+      "type": "post",
+      "label": "2023_dataset_23082023",
+      "url": "https://project-skyscraper.com/2023/08/23/event-23082023/",
+      "author": "System",
+      "date": "2023-08-23T16:16:00"
     },
     {
       "id": "/2025/08/09/event-09082025",
@@ -4202,26 +4210,26 @@
       "date": ""
     },
     {
-      "id": "/2017/07/09/event-09072017/context.image.src",
+      "id": "/2023/08/23/event-23082023/context.image.src",
       "type": "external",
       "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2017/07/09/event-09072017/context.image.src",
+      "url": "https://project-skyscraper.com/2023/08/23/event-23082023/context.image.src",
       "author": "",
       "date": ""
     },
     {
-      "id": "/2017/07/09/event-09072017/context.item.anchor",
+      "id": "/2023/08/23/event-23082023/context.item.anchor",
       "type": "external",
       "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2017/07/09/event-09072017/context.item.anchor",
+      "url": "https://project-skyscraper.com/2023/08/23/event-23082023/context.item.anchor",
       "author": "",
       "date": ""
     },
     {
-      "id": "/2017/07/09/event-09072017/context.submission.url",
+      "id": "/2023/08/23/event-23082023/context.submission.url",
       "type": "external",
       "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2017/07/09/event-09072017/context.submission.url",
+      "url": "https://project-skyscraper.com/2023/08/23/event-23082023/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -4406,6 +4414,14 @@
       "type": "external",
       "label": "x.com",
       "url": "https://x.com/aliceandsmith/status/1163928540905127938",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://youtu.be/hI9PvjJJijY?t=386",
+      "type": "external",
+      "label": "youtu.be",
+      "url": "https://youtu.be/hI9PvjJJijY?t=386",
       "author": "",
       "date": ""
     },
@@ -8553,6 +8569,10 @@
     },
     {
       "source": "/2016/04/22/event-22042016",
+      "target": "/wp-content/uploads/2026/06/4E2B91D8A370.jpg"
+    },
+    {
+      "source": "/2016/04/22/event-22042016",
       "target": "https://www.nomanssky.com/2016/04/art-of-no-mans-sky/"
     },
     {
@@ -11205,6 +11225,18 @@
     },
     {
       "source": "/2016/11/27/event-27112016",
+      "target": "/wp-content/uploads/2026/06/1E31D7C81379.jpg"
+    },
+    {
+      "source": "/2016/11/27/event-27112016",
+      "target": "https://youtu.be/hI9PvjJJijY?t=386"
+    },
+    {
+      "source": "/2016/11/27/event-27112016",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/11/27/event-27112016",
       "target": "/2016/11/26/event-26112016"
     },
     {
@@ -12633,6 +12665,10 @@
     },
     {
       "source": "/2020/04/07/event-07042020",
+      "target": "/wp-content/uploads/2026/06/0A8BB0156734.jpg"
+    },
+    {
+      "source": "/2020/04/07/event-07042020",
       "target": "https://www.youtube.com/watch?v=Qci3kRid-rc"
     },
     {
@@ -12653,6 +12689,10 @@
     },
     {
       "source": "/2025/03/26/event-26032025",
+      "target": "/wp-content/uploads/2026/06/DD85AC69AE24.jpg"
+    },
+    {
+      "source": "/2025/03/26/event-26032025",
       "target": "https://youtu.be/B3TWSQHaIMw"
     },
     {
@@ -12665,11 +12705,15 @@
     },
     {
       "source": "/2025/03/26/event-26032025",
-      "target": "/2026/03/24/sleep-mode-46105"
+      "target": "/2025/08/09/event-09082025"
     },
     {
       "source": "/2017/08/03/event-03082017",
       "target": "/"
+    },
+    {
+      "source": "/2017/08/03/event-03082017",
+      "target": "/wp-content/uploads/2026/06/12DD862FD254.jpg"
     },
     {
       "source": "/2017/08/03/event-03082017",
@@ -12693,6 +12737,10 @@
     },
     {
       "source": "/2018/01/17/event-17012018",
+      "target": "/wp-content/uploads/2026/06/B1C9E4F072A5.jpg"
+    },
+    {
+      "source": "/2018/01/17/event-17012018",
       "target": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/"
     },
     {
@@ -12713,6 +12761,10 @@
     },
     {
       "source": "/2025/08/09/event-09082025",
+      "target": "/wp-content/uploads/2026/06/8740677A9483.jpg"
+    },
+    {
+      "source": "/2025/08/09/event-09082025",
       "target": "/tag/verified"
     },
     {
@@ -12729,7 +12781,11 @@
     },
     {
       "source": "/2017/07/09/event-09072017",
-      "target": "/tag/unverified"
+      "target": "/wp-content/uploads/2026/06/53A05806675F.jpg"
+    },
+    {
+      "source": "/2017/07/09/event-09072017",
+      "target": "/tag/verified"
     },
     {
       "source": "/2017/07/09/event-09072017",
@@ -12740,16 +12796,32 @@
       "target": "/2017/07/21/event-21072017"
     },
     {
-      "source": "/2017/07/09/event-09072017",
-      "target": "/2017/07/09/event-09072017/context.submission.url"
+      "source": "/2023/08/23/event-23082023",
+      "target": "/"
     },
     {
-      "source": "/2017/07/09/event-09072017",
-      "target": "/2017/07/09/event-09072017/context.image.src"
+      "source": "/2023/08/23/event-23082023",
+      "target": "/tag/unverified"
     },
     {
-      "source": "/2017/07/09/event-09072017",
-      "target": "/2017/07/09/event-09072017/context.item.anchor"
+      "source": "/2023/08/23/event-23082023",
+      "target": "/2023/02/01/event-01022023"
+    },
+    {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/2023/09/26/event-26092023"
+    },
+    {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/2023/08/23/event-23082023/context.submission.url"
+    },
+    {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/2023/08/23/event-23082023/context.image.src"
+    },
+    {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/2023/08/23/event-23082023/context.item.anchor"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -16536,6 +16608,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2023/08/23/event-23082023",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/01/01/event-01012016",
       "target": "/2016/02/29/event-out-of-range"
     },
@@ -17765,10 +17845,6 @@
     },
     {
       "source": "/2016/11/26/event-26112016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2016/11/27/event-27112016",
       "target": "/2016/02/29/event-out-of-range"
     },
     {
