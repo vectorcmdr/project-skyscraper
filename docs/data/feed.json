@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-23T01:01:32.674355+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/",
-      "link": "https://recalldreams.dev/wp-json/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-23 01:01:14 UTC\n# Lines: 576785 old -> 579427 new\n# Beautified: yes\n\n@@ -2734,12 +2734,14 @@\n               \"required\": false\n\n             },\n\n             \"subscription_options\": {\n\n-              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039; and &#039;subscribe_modal_heading&#039;.\",\n\n+              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039;, &#039;subscribe_modal_heading&#039;, &#039;free_tier_description&#039; and &#039;hide_free_tier&#039;.\",\n\n               \"default\": {\n\n                 \"invitation\": \"\",\n\n                 \"welcome\": \"\",\n\n                 \"comment_follow\": \"\",\n\n-                \"subscribe_modal_heading\": \"\"\n\n+                \"subscribe_modal_heading\": \"\",\n\n+                \"free_tier_description\": \"\",\n\n+                \"hide_free_tier\": false\n\n               },\n\n               \"required\": false\n\n             },\n\n@@ -3623,12 +3625,14 @@\n               \"required\": false\n\n             },\n\n             \"subscription_options\": {\n\n-              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039; and &#039;subscribe_modal_heading&#039;.\",\n\n+              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039;, &#039;subscribe_modal_heading&#039;, &#039;free_tier_description&#039; and &#039;hide_free_tier&#039;.\",\n\n               \"default\": {\n\n                 \"invitation\": \"\",\n\n                 \"welcome\": \"\",\n\n                 \"comment_follow\": \"\",\n\n-                \"subscribe_modal_heading\": \"\"\n\n+                \"subscribe_modal_heading\": \"\",\n\n+                \"free_tier_description\": \"\",\n\n... (116 more lines)",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "type": "api_items_removed",
+      "timestamp": "2026-06-23T03:28:16.566033+00:00",
+      "title": "44 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "44 item(s) removed from /wp-json/wp/v2/posts",
       "author": 0,
-      "site": "recalldreams",
+      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T01:01:32.679704+00:00"
+  "updated": "2026-06-23T03:28:16.573996+00:00"
 }
