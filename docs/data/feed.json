@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T17:53:52+00:00",
+      "timestamp": "2026-06-23T17:55:13+00:00",
       "title": "2016_dataset_27112016",
       "link": "https://project-skyscraper.com/2016/11/27/event-27112016/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "  \"rendered\": \"memory bloc : Space Gardener Value: Foundations are the roots of the future. With the Foundation update, I built my base thinking I would only be there for a short while. Then a Gek arrived, small and talkative. Suddenly my base no longer felt empty. That evening, my journey did not take me to the [&hellip;]\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n+ \"jetpack_featured_media_url\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/1E31D7C81379.jpg?fit=1586%2C1080&ssl=1\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-if\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-radius: 2px;}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T17:54:49.328662+00:00"
+  "updated": "2026-06-23T17:55:49.859562+00:00"
 }
