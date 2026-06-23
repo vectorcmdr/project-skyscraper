@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-23T15:43:51+00:00",
-      "title": "2025_dataset_26032025",
-      "link": "https://project-skyscraper.com/2025/03/26/event-26032025/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-23T15:54:44.215367+00:00",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
       "author": "System",
       "site": "",
-      "id": null,
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-23T15:54:44.215367+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-23T15:54:44.215084+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 4342,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-23T15:23:46+00:00",
-      "title": "2017_dataset_03082017",
-      "link": "https://project-skyscraper.com/2017/08/03/event-03082017/",
+      "timestamp": "2026-06-23T15:53:41+00:00",
+      "title": "2018_dataset_17012018",
+      "link": "https://project-skyscraper.com/2018/01/17/event-17012018/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": 4301,
-      "game_date": "2017-08-03T12:00:00+00:00"
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-06-23T15:14:32+00:00",
-      "title": "2025_dataset_26032025",
-      "link": "https://project-skyscraper.com/2025/03/26/event-26032025/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
-      "author": "System",
-      "site": "",
-      "id": 4297,
-      "game_date": "2025-03-26T13:00:00+00:00"
+      "id": 4342,
+      "game_date": "2018-01-17T01:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T15:44:35.629016+00:00"
+  "updated": "2026-06-23T15:54:44.223349+00:00"
 }
