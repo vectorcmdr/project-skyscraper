@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-23T16:37:29.797149+00:00",
-      "title": "Memory bloc restoration: 367/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
+      "type": "api_items_modified",
+      "timestamp": "2026-06-23T16:45:17+00:00",
+      "title": "2017_dataset_09072017",
+      "link": "https://project-skyscraper.com/2017/07/09/event-09072017/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1499562000: We are the mystery hiding in plain sight.Value: no/value\n- The Atlas Foundation reveals itself. Hundreds of players from around the world became the Citizen Science Division, and prepared themselves for what came next.\n- Memory compliance: 40%\n+ memory bloc 1499562000: We are the mystery hiding in plain sight.Value: The Atlas Foundation reveals itself.\n+ The early days of the Citizen Science Division, before it was officially coined as such. Precursor to many late nights, highs and lows, exciting twists and turns, a very tight knit community of NMS and ARG fans gathered to participate in the rebirth and reimagining of a an amazing game\n+ Memory compliance: 80%\n- memory bloc : We are the mystery hiding in plain sight. Value: no/value The Atlas Foundation reveals itself. Hundreds of players from around the world became the Citizen Science Division, and prepared themselves for what came next. Memory compliance: 40%\n- memory bloc 1499562000: We are the mystery hiding in plain sight.Value: no/value\n+ memory bloc 1499562000: We are the mystery hiding in plain sight.Value: The Atlas Foundation reveals itself.\n- The Atlas Foundation reveals itself. Hundreds of players from around the world became the Citizen Science Division, and prepared themselves for what came next.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "restoration_value": "367/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-23T16:37:29.797149+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T16:37:29.805489+00:00"
+  "updated": "2026-06-23T16:46:39.178687+00:00"
 }
