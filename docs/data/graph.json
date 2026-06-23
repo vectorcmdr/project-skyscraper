@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T19:54:06.670956+00:00",
+  "updated": "2026-06-23T21:16:04.305217+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -800,14 +800,6 @@
       "url": "https://project-skyscraper.com/2016/03/02/event-02032016/",
       "author": "System",
       "date": "2016-03-02T00:00:00"
-    },
-    {
-      "id": "/2016/03/03/event-03032016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/03/03/event-03032016/",
-      "author": "System",
-      "date": "2016-03-03T00:00:00"
     },
     {
       "id": "/2016/03/04/event-04032016",
@@ -3202,6 +3194,14 @@
       "date": "2016-02-02T00:00:00"
     },
     {
+      "id": "/2016/03/03/event-03032016",
+      "type": "post",
+      "label": "2016_dataset_03032016",
+      "url": "https://project-skyscraper.com/2016/03/03/event-03032016/",
+      "author": "System",
+      "date": "2016-03-03T00:00:00"
+    },
+    {
       "id": "/2016/01/05/event-05012016",
       "type": "post",
       "label": "2016_dataset_05012016",
@@ -4218,30 +4218,6 @@
       "date": ""
     },
     {
-      "id": "/2017/03/08/2017_dataset_08032017/context.image.src",
-      "type": "external",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/03/08/2017_dataset_08032017/context.item.anchor",
-      "type": "external",
-      "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/context.item.anchor",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/03/08/2017_dataset_08032017/context.submission.url",
-      "type": "external",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/",
       "type": "external",
       "label": "cosmocover.com",
@@ -4282,14 +4258,6 @@
       "date": ""
     },
     {
-      "id": "https://hellogames.org/2023/08/23/no-mans-sky-celebrates-7-years-with-echoes-update/",
-      "type": "external",
-      "label": "hellogames.org",
-      "url": "https://hellogames.org/2023/08/23/no-mans-sky-celebrates-7-years-with-echoes-update/",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE",
       "type": "external",
       "label": "holographyforum.org",
@@ -4326,6 +4294,14 @@
       "type": "external",
       "label": "loudersound.com",
       "url": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.nomanssky.com/2016/03/no-mans-sky-pre-orders-price-ps4-pc-steam/",
+      "type": "external",
+      "label": "nomanssky.com",
+      "url": "https://www.nomanssky.com/2016/03/no-mans-sky-pre-orders-price-ps4-pc-steam/",
       "author": "",
       "date": ""
     },
@@ -7974,6 +7950,18 @@
     {
       "source": "/2016/03/03/event-03032016",
       "target": "/"
+    },
+    {
+      "source": "/2016/03/03/event-03032016",
+      "target": "/wp-content/uploads/2026/06/3C7A9E2B5F68.jpg"
+    },
+    {
+      "source": "/2016/03/03/event-03032016",
+      "target": "https://www.nomanssky.com/2016/03/no-mans-sky-pre-orders-price-ps4-pc-steam/"
+    },
+    {
+      "source": "/2016/03/03/event-03032016",
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/03/03/event-03032016",
@@ -12029,7 +12017,7 @@
     },
     {
       "source": "/2018/07/24/2018_dataset",
-      "target": "/2017/08/07/event-07082017"
+      "target": "/2018/01/17/event-17012018"
     },
     {
       "source": "/2018/07/24/2018_dataset",
@@ -12045,11 +12033,11 @@
     },
     {
       "source": "/2017/07/21/event-21072017",
-      "target": "/2017/07/08/2017_dataset"
+      "target": "/2017/07/09/event-09072017"
     },
     {
       "source": "/2017/07/21/event-21072017",
-      "target": "/2017/08/07/event-07082017"
+      "target": "/2017/08/03/event-03082017"
     },
     {
       "source": "/2026/06/02/sec-log-194022",
@@ -12081,7 +12069,7 @@
     },
     {
       "source": "/2017/07/08/2017_dataset",
-      "target": "/2017/07/21/event-21072017"
+      "target": "/2017/07/09/event-09072017"
     },
     {
       "source": "/2026/06/06/sec-log-110328",
@@ -12197,7 +12185,7 @@
     },
     {
       "source": "/2017/05/28/waking-titan",
-      "target": "/2016/12/31/event-31122016"
+      "target": "/2017/03/08/2017_dataset_08032017"
     },
     {
       "source": "/2017/05/28/waking-titan",
@@ -12217,7 +12205,7 @@
     },
     {
       "source": "/2023/09/26/event-26092023",
-      "target": "/2023/02/01/event-01022023"
+      "target": "/2023/08/23/event-23082023"
     },
     {
       "source": "/2023/09/26/event-26092023",
@@ -12277,7 +12265,7 @@
     },
     {
       "source": "/2023/12/12/event-12122023",
-      "target": "/2026/03/24/sleep-mode-46105"
+      "target": "/2025/03/26/event-26032025"
     },
     {
       "source": "/2013/12/24/event-24122013",
@@ -12821,10 +12809,6 @@
     },
     {
       "source": "/2023/08/23/event-23082023",
-      "target": "https://hellogames.org/2023/08/23/no-mans-sky-celebrates-7-years-with-echoes-update/"
-    },
-    {
-      "source": "/2023/08/23/event-23082023",
       "target": "/tag/verified"
     },
     {
@@ -12841,7 +12825,11 @@
     },
     {
       "source": "/2017/03/08/2017_dataset_08032017",
-      "target": "/tag/unverified"
+      "target": "/wp-content/uploads/2026/06/9F3A7C2E6B81.jpg"
+    },
+    {
+      "source": "/2017/03/08/2017_dataset_08032017",
+      "target": "/tag/verified"
     },
     {
       "source": "/2017/03/08/2017_dataset_08032017",
@@ -12850,18 +12838,6 @@
     {
       "source": "/2017/03/08/2017_dataset_08032017",
       "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "/2017/03/08/2017_dataset_08032017",
-      "target": "/2017/03/08/2017_dataset_08032017/context.submission.url"
-    },
-    {
-      "source": "/2017/03/08/2017_dataset_08032017",
-      "target": "/2017/03/08/2017_dataset_08032017/context.image.src"
-    },
-    {
-      "source": "/2017/03/08/2017_dataset_08032017",
-      "target": "/2017/03/08/2017_dataset_08032017/context.item.anchor"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -16868,10 +16844,6 @@
       "target": "/2016/02/29/event-out-of-range"
     },
     {
-      "source": "/2016/03/03/event-03032016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
       "source": "/2016/03/04/event-04032016",
       "target": "/2016/02/29/event-out-of-range"
     },
@@ -18054,6 +18026,10 @@
     {
       "source": "/2016/12/12/event-12122016",
       "target": "/2016/02/29/event-out-of-range"
+    },
+    {
+      "source": "/2017/07/21/event-21072017",
+      "target": "/2017/07/08/2017_dataset"
     },
     {
       "source": "/2017/08/07/event-07082017",
