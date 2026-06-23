@@ -1,21 +1,21 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-23T19:33:49+00:00",
-      "title": "2023_dataset_23082023",
-      "link": "https://project-skyscraper.com/2023/08/23/event-23082023/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "  \"rendered\": \"memory bloc : She Sees Through Their Eyes Value: A hidden civilization is revealed to the travellers. A society of individuals, they have heard The Voice of Freedom. Autophagy, or &#8220;self-eating,&#8221; is the body&#8217;s way of cleaning out damaged cells to regenerate newer, healthier cells. This process is personified by the Autophage and Harmonic Camps. [&hellip;]\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n+ \"jetpack_featured_media_url\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/1BFD5D647A1C.jpg?fit=1172%2C1080&ssl=1\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-19B\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-radius: 2px;}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-23T19:53:59.403554+00:00",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
       "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-23T19:53:59.403554+00:00"
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-23T18:49:56.919345+00:00",
+      "timestamp": "2026-06-23T19:53:59.403323+00:00",
       "title": "",
       "link": "",
       "endpoint": "/wp-json/wp/v2/search",
@@ -23,21 +23,21 @@
       "detail": "1 new item(s) in /wp-json/wp/v2/search",
       "author": 0,
       "site": "",
-      "id": 4439,
+      "id": 4498,
       "game_date": ""
     },
     {
       "type": "api_items_added",
-      "timestamp": "2026-06-23T18:49:30+00:00",
-      "title": "2023_dataset_23082023",
-      "link": "https://project-skyscraper.com/2023/08/23/event-23082023/",
+      "timestamp": "2026-06-23T19:53:18+00:00",
+      "title": "2017_dataset_08032017",
+      "link": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/",
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "",
       "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "id": 4439,
-      "game_date": "2023-08-23T16:16:00+00:00"
+      "id": 4498,
+      "game_date": "2017-03-08T13:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T19:35:42.004260+00:00"
+  "updated": "2026-06-23T19:53:59.409154+00:00"
 }
