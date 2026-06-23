@@ -1,14 +1,14 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-06-22T23:25:07+00:00",
-      "title": "1990_dataset",
+      "type": "sitemap_added",
+      "timestamp": "2026-06-23T00:31:41.375503+00:00",
+      "title": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
       "link": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- Current state: unverified\n+ Current state: verified\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 9/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 13/365 Completed\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
-      "author": "System",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/1990/04/24/1990_dataset/",
+      "detail": "Added 1 URL(s) to sitemap",
+      "author": 0,
       "site": "",
       "id": null,
       "game_date": ""
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-22T23:26:06.853681+00:00"
+  "updated": "2026-06-23T00:31:41.384104+00:00"
 }
