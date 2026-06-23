@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T22:00:24+00:00",
+      "timestamp": "2026-06-23T22:01:50+00:00",
       "title": "2017_dataset_21072017",
       "link": "https://project-skyscraper.com/2017/07/21/event-21072017/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- 2017_dataset\n+ 2017_dataset_21072017\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "+ Memory compliance: 0%\n- memory bloc : 1500595200 Value: 1500595200 Source_injection: Klaxk/GHP\n+ memory bloc : 1500595200 Value: 1500595200 Source_injection: Klaxk/GHP Memory compliance: 0%\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T22:01:05.000278+00:00"
+  "updated": "2026-06-23T22:03:03.979677+00:00"
 }
