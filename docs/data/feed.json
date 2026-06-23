@@ -2,11 +2,11 @@
   "entries": [
     {
       "type": "api_items_modified",
-      "timestamp": "2026-06-23T20:40:39+00:00",
+      "timestamp": "2026-06-23T20:52:50+00:00",
       "title": "2016_dataset_03032016",
       "link": "https://project-skyscraper.com/2016/03/03/event-03032016/",
       "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "- memory bloc 1456963200: no/value\n+ memory bloc 1456963200: no/valueValue: Alpha Vector first appearance in a gameplay teaser at E3\n+ A fine starship capable of flying within the most turbulent of atmospheres and fighting the harshest of battles. Such has become an analogy of the Traveler themself.\n+ Memory compliance: 70%\n- memory bloc : no/value\n+ memory bloc : no/value Value: Alpha Vector first appearance in a gameplay teaser at E3 A fine starship capable of flying within the most turbulent of atmospheres and fighting the harshest of battles. Such has become an analogy of the Traveler themself. Memory compliance: 70%\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "diff": "- memory bloc 1456963200: no/valueValue: Alpha Vector first appearance in a gameplay teaser at E3\n- A fine starship capable of flying within the most turbulent of atmospheres and fighting the harshest of battles. Such has become an analogy of the Traveler themself.\n- Memory compliance: 70%\n+ memory bloc 1456963200: Collectibles for the Dedicated TravellerValue: Alpha Vector iconic ship.\n+ Your starship is your transport to the stars. Give your epic voyage an initial boost with this Alpha Vector attack starship pre-upgraded with lasers for protection and a hyperdrive that allows you to jump to nearby star systems.\n+ Memory compliance: 100%\n- memory bloc : no/value Value: Alpha Vector first appearance in a gameplay teaser at E3 A fine starship capable of flying within the most turbulent of atmospheres and fighting the harshest of battles. Such has become an analogy of the Traveler themself. Memory compliance: 70%\n+ memory bloc : Collectibles...\n- memory bloc 1456963200: no/valueValue: Alpha Vector first appearance in a gameplay teaser at E3\n+ memory bloc 1456963200: Collectibles for the Dedicated TravellerValue: Alpha Vector iconic ship.\n- A fine starship capable of flying within the most turbulent of atmospheres and fighting the harshest of battles. Such has become an analogy of the Traveler themself.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
       "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T20:40:59.098352+00:00"
+  "updated": "2026-06-23T20:53:05.188165+00:00"
 }
