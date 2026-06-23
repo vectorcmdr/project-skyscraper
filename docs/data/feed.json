@@ -1,14 +1,14 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-23T22:35:30.123497+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  May.27, 2026\n  May.27, 2026\n+ May.27, 2026\n  May.25, 2026\n  Mar.27, 2026\n  Mar.24, 2026\n+ Aug.9, 2025\n+ Mar.26, 2025\n  Dec.12, 2023\n  Sep.26, 2023\n+ Aug.23, 2023\n  Feb.1, 2023\n  Apr.24, 2022\n  Feb.25, 2021",
-      "detail": "Content changed: https://project-skyscraper.com/",
-      "author": 0,
+      "type": "api_items_modified",
+      "timestamp": "2026-06-23T22:36:47+00:00",
+      "title": "2016_dataset_09082016",
+      "link": "https://project-skyscraper.com/2016/08/09/event-09082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1470700800: no/value\n+ memory bloc 1470700800: no/valueValue: no/value\n+ Memory compliance: 0%\n- 2016_dataset\n+ 2016_dataset_09082016\n- memory bloc : no/value\n+ memory bloc : no/value Value: no/value Memory compliance: 0%\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": "",
       "id": null,
       "game_date": ""
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T22:36:02.243233+00:00"
+  "updated": "2026-06-23T22:37:04.284237+00:00"
 }
