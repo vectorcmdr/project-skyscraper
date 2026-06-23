@@ -1,19 +1,6 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-23T22:35:30.128506+00:00",
-      "title": "Memory bloc restoration: 367/365 [5 Pages]",
-      "link": "https://project-skyscraper.com/0a8bb0156734/",
-      "diff": "367/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 5 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "367/365",
-      "page_count": 5,
-      "last_timestamp": "2026-06-23T22:35:30.128532+00:00"
-    },
-    {
       "type": "page_content_changed",
       "timestamp": "2026-06-23T22:35:30.123497+00:00",
       "title": "project-skyscraper.com",
@@ -22,6 +9,19 @@
       "diff": "  May.27, 2026\n  May.27, 2026\n+ May.27, 2026\n  May.25, 2026\n  Mar.27, 2026\n  Mar.24, 2026\n+ Aug.9, 2025\n+ Mar.26, 2025\n  Dec.12, 2023\n  Sep.26, 2023\n+ Aug.23, 2023\n  Feb.1, 2023\n  Apr.24, 2022\n  Feb.25, 2021",
       "detail": "Content changed: https://project-skyscraper.com/",
       "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-23T22:33:10+00:00",
+      "title": "2017_dataset_07082017",
+      "link": "https://project-skyscraper.com/2017/08/07/event-07082017/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"rendered\": \"2017_dataset_07082017\"\n  },\n  \"content\": {\n- \"rendered\": \"\\nmemory bloc 1502149200: HumanValue: Synthetic gratitudeNote: There are unforgettable voices that resonate like promises.Source_injection: Keepers of the TRACE\\n\\n\\n\\nMemory compliance: 100%\\n\",\n+ \"rendered\": \"\\nmemory bloc 1502149200: HumanValue: Synthetic gratitudeNote: There are unforgettable voices that resonate like promises.Source_injection: Keepers of the TRACE\\n\\n\\n\\nMemory compliance: 100%\\n\\n\\n\\n\\n\",\n  \"protected\": false\n  },\n  \"excerpt\": {\n  \"rendered\": \"memory bloc : Human Value: Synthetic gratitude Note: There are unforgettable voices that resonate like promises. Source_injection: Keepers of the TRACE Memory compliance: 100%\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n+ \"jetpack_featured_media_url\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/5167FF2C25FA.jpg?fit=1920%2C1080&ssl=1\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-12V\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-radius: 2px;}\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
       "site": "",
       "id": null,
       "game_date": ""
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T22:35:30.136671+00:00"
+  "updated": "2026-06-23T22:36:02.243233+00:00"
 }
