@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T22:05:37.186393+00:00",
+  "updated": "2026-06-23T22:35:35.487798+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3322,20 +3322,20 @@
       "date": "2017-07-08T13:35:00"
     },
     {
-      "id": "/2017/08/07/event-07082017",
-      "type": "post",
-      "label": "2017_dataset",
-      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/",
-      "author": "The Architect",
-      "date": "2017-08-07T22:40:00"
-    },
-    {
       "id": "/2017/08/03/event-03082017",
       "type": "post",
       "label": "2017_dataset_03082017",
       "url": "https://project-skyscraper.com/2017/08/03/event-03082017/",
       "author": "System",
       "date": "2017-08-03T12:00:00"
+    },
+    {
+      "id": "/2017/08/07/event-07082017",
+      "type": "post",
+      "label": "2017_dataset_07082017",
+      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/",
+      "author": "System",
+      "date": "2017-08-07T22:40:00"
     },
     {
       "id": "/2017/03/08/2017_dataset_08032017",
@@ -4226,26 +4226,26 @@
       "date": ""
     },
     {
-      "id": "/2017/07/21/event-21072017/context.image.src",
+      "id": "/2017/08/07/event-07082017/context.image.src",
       "type": "external",
       "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2017/07/21/event-21072017/context.image.src",
+      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.image.src",
       "author": "",
       "date": ""
     },
     {
-      "id": "/2017/07/21/event-21072017/context.item.anchor",
+      "id": "/2017/08/07/event-07082017/context.item.anchor",
       "type": "external",
       "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2017/07/21/event-21072017/context.item.anchor",
+      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.item.anchor",
       "author": "",
       "date": ""
     },
     {
-      "id": "/2017/07/21/event-21072017/context.submission.url",
+      "id": "/2017/08/07/event-07082017/context.submission.url",
       "type": "external",
       "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2017/07/21/event-21072017/context.submission.url",
+      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -4354,6 +4354,14 @@
       "date": ""
     },
     {
+      "id": "https://portalrepository.com/glyph-decoder/",
+      "type": "external",
+      "label": "portalrepository.com",
+      "url": "https://portalrepository.com/glyph-decoder/",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://preview.redd.it/connection-detected-access-denied-v0-8c7atk6y141h1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=c1f17506bd913fb8de67bbb3452379ca0d0c723b",
       "type": "external",
       "label": "preview.redd.it",
@@ -4366,14 +4374,6 @@
       "type": "external",
       "label": "reddit.com",
       "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1tczflq/connection_detected_access_denied/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/",
-      "type": "external",
-      "label": "reddit.com",
-      "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/",
       "author": "",
       "date": ""
     },
@@ -4434,14 +4434,6 @@
       "date": ""
     },
     {
-      "id": "https://x.com/aliceandsmith/status/1163928540905127938",
-      "type": "external",
-      "label": "x.com",
-      "url": "https://x.com/aliceandsmith/status/1163928540905127938",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://youtu.be/hI9PvjJJijY?t=386",
       "type": "external",
       "label": "youtu.be",
@@ -4462,6 +4454,14 @@
       "type": "external",
       "label": "youtu.be",
       "url": "https://youtu.be/R6432N12W2E?t=1375",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://youtu.be/QhX9z4dDAa4",
+      "type": "external",
+      "label": "youtu.be",
+      "url": "https://youtu.be/QhX9z4dDAa4",
       "author": "",
       "date": ""
     },
@@ -6517,6 +6517,10 @@
     },
     {
       "source": "/",
+      "target": "/2026/05/27/2026_dataset_27052026"
+    },
+    {
+      "source": "/",
       "target": "/2026/05/25/sec-log-113610"
     },
     {
@@ -6641,11 +6645,23 @@
     },
     {
       "source": "/",
+      "target": "/2025/08/09/event-09082025"
+    },
+    {
+      "source": "/",
+      "target": "/2025/03/26/event-26032025"
+    },
+    {
+      "source": "/",
       "target": "/2023/12/12/event-12122023"
     },
     {
       "source": "/",
       "target": "/2023/09/26/event-26092023"
+    },
+    {
+      "source": "/",
+      "target": "/2023/08/23/event-23082023"
     },
     {
       "source": "/",
@@ -6661,6 +6677,10 @@
     },
     {
       "source": "/",
+      "target": "/2020/04/07/event-07042020"
+    },
+    {
+      "source": "/",
       "target": "/2020/02/08/event-08022020"
     },
     {
@@ -6669,11 +6689,23 @@
     },
     {
       "source": "/",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/",
       "target": "/2017/08/07/event-07082017"
     },
     {
       "source": "/",
+      "target": "/2017/08/03/event-03082017"
+    },
+    {
+      "source": "/",
       "target": "/2017/07/21/event-21072017"
+    },
+    {
+      "source": "/",
+      "target": "/2017/07/09/event-09072017"
     },
     {
       "source": "/",
@@ -6686,6 +6718,10 @@
     {
       "source": "/",
       "target": "/2017/05/28/waking-titan"
+    },
+    {
+      "source": "/",
+      "target": "/2017/03/08/2017_dataset_08032017"
     },
     {
       "source": "/",
@@ -6777,42 +6813,6 @@
     },
     {
       "source": "/",
-      "target": "/2016/12/09/event-09122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/08/event-08122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/05/event-05122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/04/event-04122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/03/event-03122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/01/event-01122016"
-    },
-    {
-      "source": "/",
       "target": "/page/2"
     },
     {
@@ -6849,7 +6849,7 @@
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
-      "target": "/2023/12/12/event-12122023"
+      "target": "/2025/08/09/event-09082025"
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
@@ -12061,7 +12061,15 @@
     },
     {
       "source": "/2017/07/21/event-21072017",
-      "target": "/tag/unverified"
+      "target": "/wp-content/uploads/2026/06/766973696F6E.jpg"
+    },
+    {
+      "source": "/2017/07/21/event-21072017",
+      "target": "https://portalrepository.com/glyph-decoder/"
+    },
+    {
+      "source": "/2017/07/21/event-21072017",
+      "target": "/tag/verified"
     },
     {
       "source": "/2017/07/21/event-21072017",
@@ -12070,18 +12078,6 @@
     {
       "source": "/2017/07/21/event-21072017",
       "target": "/2017/08/03/event-03082017"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/2017/07/21/event-21072017/context.submission.url"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/2017/07/21/event-21072017/context.image.src"
-    },
-    {
-      "source": "/2017/07/21/event-21072017",
-      "target": "/2017/07/21/event-21072017/context.item.anchor"
     },
     {
       "source": "/2026/06/02/sec-log-194022",
@@ -12405,11 +12401,31 @@
     },
     {
       "source": "/2017/08/07/event-07082017",
+      "target": "https://youtu.be/QhX9z4dDAa4"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
       "target": "/2017/08/03/event-03082017"
     },
     {
       "source": "/2017/08/07/event-07082017",
       "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
+      "target": "/2017/08/07/event-07082017/context.submission.url"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
+      "target": "/2017/08/07/event-07082017/context.image.src"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
+      "target": "/2017/08/07/event-07082017/context.item.anchor"
     },
     {
       "source": "/2023/02/01/event-01022023",
@@ -12765,10 +12781,6 @@
     },
     {
       "source": "/2017/08/03/event-03082017",
-      "target": "https://x.com/aliceandsmith/status/1163928540905127938"
-    },
-    {
-      "source": "/2017/08/03/event-03082017",
       "target": "/tag/verified"
     },
     {
@@ -12786,10 +12798,6 @@
     {
       "source": "/2018/01/17/event-17012018",
       "target": "/wp-content/uploads/2026/06/B1C9E4F072A5.jpg"
-    },
-    {
-      "source": "/2018/01/17/event-17012018",
-      "target": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/"
     },
     {
       "source": "/2018/01/17/event-17012018",
@@ -16537,7 +16545,7 @@
     },
     {
       "source": "/2017/08/07/event-07082017",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2017/08/07/event-07082017",
@@ -18098,10 +18106,6 @@
     {
       "source": "/2016/12/12/event-12122016",
       "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2017/08/07/event-07082017",
-      "target": "/2017/07/08/2017_dataset"
     }
   ]
 }
