@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-23T18:49:56.919732+00:00",
-      "title": "Memory bloc restoration: 367/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
+      "type": "api_items_modified",
+      "timestamp": "2026-06-23T18:52:27+00:00",
+      "title": "2023_dataset_23082023",
+      "link": "https://project-skyscraper.com/2023/08/23/event-23082023/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory compliance: 30%\n+ Deep within the stars, it lies ever thinking, ever creating. I had not known what it was, for I thought the space I flew within, the air I breathed, the entities I had met, were all of simple organic evolution; such is no longer the case. It is the creator of all things, living or not, and we travelers of the universe, an imitation of its creators, are to destined to discover evermore.\n+ Memory compliance: 50%\n- memory bloc : The singularity Value: The pilgrimage between Harmony Camps and to build a Construct ourselves begins. Memory compliance: 30%\n+ memory bloc : The singularity Value: The pilgrimage between Harmony Camps and to build a Construct ourselves begins. Deep within the stars, it lies ever thinking, ever creating. I had not known what it was, for I thought the space I flew within, the air I breathed, the entities I had met, were all of […]\n+ Deep within the stars, it lies ever thinking, ever creating. I had not known what it was, for I thought the space I flew within, the air I breathed, the entities I had met, were all of simple organic evolution; such is no longer the case. It is the creator of all things, living or not, and we travelers of the universe, an imitation of its creators, are to destined to discover evermore.\n- Memory compliance: 30%\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "restoration_value": "367/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-23T18:49:56.919732+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T18:49:56.928522+00:00"
+  "updated": "2026-06-23T18:52:55.619536+00:00"
 }
