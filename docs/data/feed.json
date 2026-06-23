@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "type": "sitemap_added",
-      "timestamp": "2026-06-23T00:31:41.375503+00:00",
-      "title": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
-      "link": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
+      "type": "external_content_changed",
+      "timestamp": "2026-06-23T01:01:32.674355+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
       "endpoint": "",
-      "diff": "+ https://project-skyscraper.com/1990/04/24/1990_dataset/",
-      "detail": "Added 1 URL(s) to sitemap",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-23 01:01:14 UTC\n# Lines: 576785 old -> 579427 new\n# Beautified: yes\n\n@@ -2734,12 +2734,14 @@\n               \"required\": false\n\n             },\n\n             \"subscription_options\": {\n\n-              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039; and &#039;subscribe_modal_heading&#039;.\",\n\n+              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039;, &#039;subscribe_modal_heading&#039;, &#039;free_tier_description&#039; and &#039;hide_free_tier&#039;.\",\n\n               \"default\": {\n\n                 \"invitation\": \"\",\n\n                 \"welcome\": \"\",\n\n                 \"comment_follow\": \"\",\n\n-                \"subscribe_modal_heading\": \"\"\n\n+                \"subscribe_modal_heading\": \"\",\n\n+                \"free_tier_description\": \"\",\n\n+                \"hide_free_tier\": false\n\n               },\n\n               \"required\": false\n\n             },\n\n@@ -3623,12 +3625,14 @@\n               \"required\": false\n\n             },\n\n             \"subscription_options\": {\n\n-              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039; and &#039;subscribe_modal_heading&#039;.\",\n\n+              \"description\": \"Options used in subscription email templates and the Subscribe block: &#039;invitation&#039;, &#039;welcome&#039;, &#039;comment_follow&#039;, &#039;subscribe_modal_heading&#039;, &#039;free_tier_description&#039; and &#039;hide_free_tier&#039;.\",\n\n               \"default\": {\n\n                 \"invitation\": \"\",\n\n                 \"welcome\": \"\",\n\n                 \"comment_follow\": \"\",\n\n-                \"subscribe_modal_heading\": \"\"\n\n+                \"subscribe_modal_heading\": \"\",\n\n+                \"free_tier_description\": \"\",\n\n... (116 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
       "author": 0,
-      "site": "",
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-23T00:31:41.384104+00:00"
+  "updated": "2026-06-23T01:01:32.679704+00:00"
 }
