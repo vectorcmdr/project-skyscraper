@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T22:35:35.487798+00:00",
+  "updated": "2026-06-24T00:32:22.456482+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1994,14 +1994,6 @@
       "date": "2016-08-07T23:00:00"
     },
     {
-      "id": "/2016/08/09/event-09082016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/08/09/event-09082016/",
-      "author": "System",
-      "date": "2016-08-08T23:00:00"
-    },
-    {
       "id": "/2016/08/10/event-10082016",
       "type": "post",
       "label": "2016_dataset",
@@ -3250,6 +3242,14 @@
       "date": "2016-05-08T23:00:00"
     },
     {
+      "id": "/2016/08/09/event-09082016",
+      "type": "post",
+      "label": "2016_dataset_09082016",
+      "url": "https://project-skyscraper.com/2016/08/09/event-09082016/",
+      "author": "System",
+      "date": "2016-08-08T23:00:00"
+    },
+    {
       "id": "/2016/02/10/event-10022016",
       "type": "post",
       "label": "2016_dataset_10022016",
@@ -4226,30 +4226,6 @@
       "date": ""
     },
     {
-      "id": "/2017/08/07/event-07082017/context.image.src",
-      "type": "external",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/08/07/event-07082017/context.item.anchor",
-      "type": "external",
-      "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.item.anchor",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/08/07/event-07082017/context.submission.url",
-      "type": "external",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2017/08/07/event-07082017/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/",
       "type": "external",
       "label": "cosmocover.com",
@@ -4294,6 +4270,14 @@
       "type": "external",
       "label": "holographyforum.org",
       "url": "https://www.holographyforum.org/data/pdf/aa-Collection_a_k/aa-optics/aa_html/Using%20HOE",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.ign.com/articles/2016/08/09/no-mans-sky-dev-sends-letter-to-australian-reviewers",
+      "type": "external",
+      "label": "ign.com",
+      "url": "https://www.ign.com/articles/2016/08/09/no-mans-sky-dev-sends-letter-to-australian-reviewers",
       "author": "",
       "date": ""
     },
@@ -4470,14 +4454,6 @@
       "type": "external",
       "label": "youtu.be",
       "url": "https://youtu.be/eOPk6PrOVEA",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "https://youtu.be/B3TWSQHaIMw",
-      "type": "external",
-      "label": "youtu.be",
-      "url": "https://youtu.be/B3TWSQHaIMw",
       "author": "",
       "date": ""
     },
@@ -6337,6 +6313,42 @@
     },
     {
       "source": "sitemap",
+      "target": "/2020/04/07/event-07042020"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2025/03/26/event-26032025"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/08/03/event-03082017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2025/08/09/event-09082025"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/07/09/event-09072017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2023/08/23/event-23082023"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/03/08/2017_dataset_08032017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/05/27/2026_dataset_27052026"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -7161,7 +7173,7 @@
     },
     {
       "source": "/2026/05/25/sec-log-113610",
-      "target": "/2026/05/27/sec-log-185027"
+      "target": "/2026/05/27/2026_dataset_27052026"
     },
     {
       "source": "/2026/05/27/sec-log-access-granted",
@@ -9917,6 +9929,18 @@
     },
     {
       "source": "/2016/08/09/event-09082016",
+      "target": "/wp-content/uploads/2026/06/454D6E49B199.jpg"
+    },
+    {
+      "source": "/2016/08/09/event-09082016",
+      "target": "https://www.ign.com/articles/2016/08/09/no-mans-sky-dev-sends-letter-to-australian-reviewers"
+    },
+    {
+      "source": "/2016/08/09/event-09082016",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/08/09/event-09082016",
       "target": "/2016/08/08/event-08082016"
     },
     {
@@ -12401,11 +12425,15 @@
     },
     {
       "source": "/2017/08/07/event-07082017",
+      "target": "/wp-content/uploads/2026/06/5167FF2C25FA.jpg"
+    },
+    {
+      "source": "/2017/08/07/event-07082017",
       "target": "https://youtu.be/QhX9z4dDAa4"
     },
     {
       "source": "/2017/08/07/event-07082017",
-      "target": "/tag/unverified"
+      "target": "/tag/verified"
     },
     {
       "source": "/2017/08/07/event-07082017",
@@ -12414,18 +12442,6 @@
     {
       "source": "/2017/08/07/event-07082017",
       "target": "/2018/01/17/event-17012018"
-    },
-    {
-      "source": "/2017/08/07/event-07082017",
-      "target": "/2017/08/07/event-07082017/context.submission.url"
-    },
-    {
-      "source": "/2017/08/07/event-07082017",
-      "target": "/2017/08/07/event-07082017/context.image.src"
-    },
-    {
-      "source": "/2017/08/07/event-07082017",
-      "target": "/2017/08/07/event-07082017/context.item.anchor"
     },
     {
       "source": "/2023/02/01/event-01022023",
@@ -12584,146 +12600,6 @@
       "target": "/2002/05/12/code"
     },
     {
-      "source": "/project-skyscraper",
-      "target": "/"
-    },
-    {
-      "source": "/logo",
-      "target": "/"
-    },
-    {
-      "source": "/tr4ce",
-      "target": "/"
-    },
-    {
-      "source": "/only-dust-remain",
-      "target": "/"
-    },
-    {
-      "source": "/8740677a9483",
-      "target": "/"
-    },
-    {
-      "source": "/53a05806675f",
-      "target": "/"
-    },
-    {
-      "source": "/b1c9e4f072a5",
-      "target": "/"
-    },
-    {
-      "source": "/12dd862fd254",
-      "target": "/"
-    },
-    {
-      "source": "/a7e9f3b8c2d6",
-      "target": "/"
-    },
-    {
-      "source": "/4e2b91d8a370",
-      "target": "/"
-    },
-    {
-      "source": "/1e31d7c81379",
-      "target": "/"
-    },
-    {
-      "source": "/dd85ac69ae24",
-      "target": "/"
-    },
-    {
-      "source": "/1bfd5d647a1c",
-      "target": "/"
-    },
-    {
-      "source": "/5167ff2c25fa",
-      "target": "/"
-    },
-    {
-      "source": "/454d6e49b199",
-      "target": "/"
-    },
-    {
-      "source": "/9f3a7c2e6b81",
-      "target": "/"
-    },
-    {
-      "source": "/0a8bb0156734",
-      "target": "/"
-    },
-    {
-      "source": "/3c7a9e2b5f68",
-      "target": "/"
-    },
-    {
-      "source": "/766973696f6e",
-      "target": "/"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-glitching-realities"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/about"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/inbox"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/recon-protocol"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-bru-ent-reunion-peak"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-lon-reality-glitch"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-ott-time-disruption"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-par-temporal-merge"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-211927-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sleep-mode"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/structural-analysis-161527-full"
-    },
-    {
       "source": "/2020/04/07/event-07042020",
       "target": "/"
     },
@@ -12754,10 +12630,6 @@
     {
       "source": "/2025/03/26/event-26032025",
       "target": "/wp-content/uploads/2026/06/DD85AC69AE24.jpg"
-    },
-    {
-      "source": "/2025/03/26/event-26032025",
-      "target": "https://youtu.be/B3TWSQHaIMw"
     },
     {
       "source": "/2025/03/26/event-26032025",
@@ -12910,6 +12782,146 @@
     {
       "source": "/2026/05/27/2026_dataset_27052026",
       "target": "/2026/05/27/sec-log-185027"
+    },
+    {
+      "source": "/project-skyscraper",
+      "target": "/"
+    },
+    {
+      "source": "/logo",
+      "target": "/"
+    },
+    {
+      "source": "/tr4ce",
+      "target": "/"
+    },
+    {
+      "source": "/only-dust-remain",
+      "target": "/"
+    },
+    {
+      "source": "/8740677a9483",
+      "target": "/"
+    },
+    {
+      "source": "/53a05806675f",
+      "target": "/"
+    },
+    {
+      "source": "/b1c9e4f072a5",
+      "target": "/"
+    },
+    {
+      "source": "/12dd862fd254",
+      "target": "/"
+    },
+    {
+      "source": "/a7e9f3b8c2d6",
+      "target": "/"
+    },
+    {
+      "source": "/4e2b91d8a370",
+      "target": "/"
+    },
+    {
+      "source": "/1e31d7c81379",
+      "target": "/"
+    },
+    {
+      "source": "/dd85ac69ae24",
+      "target": "/"
+    },
+    {
+      "source": "/1bfd5d647a1c",
+      "target": "/"
+    },
+    {
+      "source": "/5167ff2c25fa",
+      "target": "/"
+    },
+    {
+      "source": "/454d6e49b199",
+      "target": "/"
+    },
+    {
+      "source": "/9f3a7c2e6b81",
+      "target": "/"
+    },
+    {
+      "source": "/0a8bb0156734",
+      "target": "/"
+    },
+    {
+      "source": "/3c7a9e2b5f68",
+      "target": "/"
+    },
+    {
+      "source": "/766973696f6e",
+      "target": "/"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/inbox"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/recon-protocol"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-bru-ent-reunion-peak"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-lon-reality-glitch"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-ott-time-disruption"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-par-temporal-merge"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094316-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-094127-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-211927-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sec-log-080413-full"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/sleep-mode"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/structural-analysis-161527-full"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -17513,10 +17525,6 @@
     },
     {
       "source": "/2016/08/08/event-08082016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2016/08/09/event-09082016",
       "target": "/2016/02/29/event-out-of-range"
     },
     {
