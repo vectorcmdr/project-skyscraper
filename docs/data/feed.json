@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "external_unpublished_detected",
-      "timestamp": "2026-06-24T09:35:45.873112+00:00",
-      "title": "#107 (pages) on recalldreams.dev",
-      "link": "https://recalldreams.dev/",
-      "endpoint": "pages",
-      "diff": "HTTP 401",
-      "detail": "Unpublished pages #107 (HTTP 401) on recalldreams.dev",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-24T14:36:16.220572+00:00",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "367/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-24T14:36:16.220572+00:00"
     },
     {
       "type": "external_unpublished_detected",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-24T09:35:45.879168+00:00"
+  "updated": "2026-06-24T14:36:16.228360+00:00"
 }
