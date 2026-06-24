@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "type": "sitemap_added",
-      "timestamp": "2026-06-24T00:32:11.866716+00:00",
-      "title": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/",
-      "link": "https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/",
+      "type": "external_content_changed",
+      "timestamp": "2026-06-24T07:06:00.199741+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
       "endpoint": "",
-      "diff": "+ https://project-skyscraper.com/2017/03/08/2017_dataset_08032017/\n+ https://project-skyscraper.com/2017/07/09/event-09072017/\n+ https://project-skyscraper.com/2017/08/03/event-03082017/\n+ https://project-skyscraper.com/2018/01/17/event-17012018/\n+ https://project-skyscraper.com/2020/04/07/event-07042020/\n+ https://project-skyscraper.com/2023/08/23/event-23082023/\n+ https://project-skyscraper.com/2025/03/26/event-26032025/\n+ https://project-skyscraper.com/2025/08/09/event-09082025/\n+ https://project-skyscraper.com/2026/05/27/2026_dataset_27052026/",
-      "detail": "Added 9 URL(s) to sitemap",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-24 07:05:42 UTC\n# Lines: 579427 old -> 579427 new\n# Beautified: yes\n\n@@ -7671,20 +7671,6 @@\n     },\n\n     \"/videopress/v1/features\": {\n\n       \"namespace\": \"videopress/v1\",\n\n-      \"methods\": [\n\n-        \"GET\"\n\n-      ],\n\n-      \"endpoints\": [\n\n-        {\n\n-          \"methods\": [\n\n-            \"GET\"\n\n-          ],\n\n-          \"args\": []\n\n-        }\n\n-      ]\n\n-    },\n\n-    \"/jetpack/v4/stats/blog\": {\n\n-      \"namespace\": \"jetpack/v4\",\n\n       \"methods\": [\n\n         \"GET\"\n\n       ],\n\n@@ -14165,6 +14151,20 @@\n             \"POST\",\n\n             \"PUT\",\n\n             \"PATCH\"\n\n+          ],\n\n+          \"args\": []\n\n+        }\n\n+      ]\n\n+    },\n\n... (12 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
       "author": 0,
-      "site": "",
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-24T00:32:11.874497+00:00"
+  "updated": "2026-06-24T07:06:00.204802+00:00"
 }
