@@ -1,13 +1,13 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-24T07:06:00.199741+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/",
-      "link": "https://recalldreams.dev/wp-json/",
+      "type": "external_sitemap_changed",
+      "timestamp": "2026-06-24T08:05:54.917726+00:00",
+      "title": "Sitemap: -1 URL(s) for recalldreams.dev",
+      "link": "https://recalldreams.dev/sitemap.xml",
       "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-24 07:05:42 UTC\n# Lines: 579427 old -> 579427 new\n# Beautified: yes\n\n@@ -7671,20 +7671,6 @@\n     },\n\n     \"/videopress/v1/features\": {\n\n       \"namespace\": \"videopress/v1\",\n\n-      \"methods\": [\n\n-        \"GET\"\n\n-      ],\n\n-      \"endpoints\": [\n\n-        {\n\n-          \"methods\": [\n\n-            \"GET\"\n\n-          ],\n\n-          \"args\": []\n\n-        }\n\n-      ]\n\n-    },\n\n-    \"/jetpack/v4/stats/blog\": {\n\n-      \"namespace\": \"jetpack/v4\",\n\n       \"methods\": [\n\n         \"GET\"\n\n       ],\n\n@@ -14165,6 +14151,20 @@\n             \"POST\",\n\n             \"PUT\",\n\n             \"PATCH\"\n\n+          ],\n\n+          \"args\": []\n\n+        }\n\n+      ]\n\n+    },\n\n... (12 more lines)",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "diff": "- https://recalldreams.dev/",
+      "detail": "Sitemap: -1 URL(s) for recalldreams.dev",
       "author": 0,
       "site": "recalldreams",
       "id": null,
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-24T07:06:00.204802+00:00"
+  "updated": "2026-06-24T08:05:54.922388+00:00"
 }
