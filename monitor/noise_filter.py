@@ -116,11 +116,21 @@ def strip_page_noise(html: str) -> str:
     return html
 
 
+def _normalize_for_compare(text: str) -> str:
+    lines = text.splitlines()
+    lines = [l.rstrip() for l in lines]
+    while lines and not lines[-1]:
+        lines.pop()
+    return "\n".join(lines)
+
+
 def is_noise_only_page_change(old_text: str, new_text: str) -> bool:
     old_stripped = strip_page_noise(old_text)
     new_stripped = strip_page_noise(new_text)
-    return hashlib.md5(old_stripped.encode("utf-8")).hexdigest() == \
-           hashlib.md5(new_stripped.encode("utf-8")).hexdigest()
+    old_norm = _normalize_for_compare(old_stripped)
+    new_norm = _normalize_for_compare(new_stripped)
+    return hashlib.md5(old_norm.encode("utf-8")).hexdigest() == \
+           hashlib.md5(new_norm.encode("utf-8")).hexdigest()
 
 
 def strip_json_noise(text: str) -> str:

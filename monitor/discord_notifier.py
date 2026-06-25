@@ -168,9 +168,11 @@ def notify_changes(changes: list, state: dict):
                 if diffs:
                     m = _mb_re.findall(diffs[0].get("diff", ""))
                     if len(m) >= 2:
-                        val = m[1]
-                        groups.setdefault(val, {"new_value": val, "old_value": m[0], "changes": []})
-                        groups[val]["changes"].append(c)
+                        old_val, new_val = m[0], m[1]
+                        if old_val == new_val:
+                            continue
+                        groups.setdefault(new_val, {"new_value": new_val, "old_value": old_val, "changes": []})
+                        groups[new_val]["changes"].append(c)
 
             for val, grp in groups.items():
                 page_count = len(grp["changes"])

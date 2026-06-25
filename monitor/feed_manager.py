@@ -122,7 +122,7 @@ def generate_site_data(state: dict, changes: list) -> bool:
             if diffs:
                 raw = diffs[0].get("diff", "")
                 old_val, new_val = _parse_memory_bloc_diff(raw)
-                if new_val:
+                if new_val and old_val != new_val:
                     group = memory_bloc_groups.setdefault(new_val, {
                         "old_value": old_val, "new_value": new_val,
                         "changes": [], "first_ts": None,

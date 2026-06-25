@@ -16,6 +16,8 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
     old_text = old_bytes.decode("utf-8", errors="replace")
     new_text = new_bytes.decode("utf-8", errors="replace")
 
+    from monitor.noise_filter import _normalize_for_compare
+
     if "wp-json" in url or url.endswith(".json"):
         old_text = strip_json_noise(old_text)
         new_text = strip_json_noise(new_text)
@@ -25,8 +27,8 @@ def compute_diff(old_bytes: bytes, new_bytes: bytes, url: str,
         old_text = beautify(old_text, path_hint)
         new_text = beautify(new_text, path_hint)
 
-    old_text = old_text.rstrip()
-    new_text = new_text.rstrip()
+    old_text = _normalize_for_compare(old_text)
+    new_text = _normalize_for_compare(new_text)
     old_lines = old_text.splitlines(keepends=True)
     new_lines = new_text.splitlines(keepends=True)
 
