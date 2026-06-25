@@ -1,30 +1,17 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-25T22:35:33.430283+00:00",
-      "title": "3c7a9e2b5f68",
-      "link": "https://project-skyscraper.com/3c7a9e2b5f68/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 26/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 27/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/3c7a9e2b5f68/",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
+      "type": "memory_bloc_restoration",
       "timestamp": "2026-06-25T22:35:33.429663+00:00",
-      "title": "766973696f6e",
-      "link": "https://project-skyscraper.com/766973696f6e/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 26/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 27/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/766973696f6e/",
-      "author": 0,
+      "title": "Memory bloc restoration: 367/365 [2 Pages]",
+      "link": "https://project-skyscraper.com/3c7a9e2b5f68/",
+      "diff": "367/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 2 pages",
+      "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "367/365",
+      "page_count": 2,
+      "last_timestamp": "2026-06-25T22:35:33.430283+00:00"
     },
     {
       "type": "api_items_added",
@@ -6393,5 +6380,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-25T22:35:33.437297+00:00"
+  "updated": "2026-06-25T22:36:03.248066+00:00"
 }
