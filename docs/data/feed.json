@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
+      "type": "memory_bloc_restoration",
       "timestamp": "2026-06-25T22:05:32.503284+00:00",
-      "title": "454d6e49b199",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
       "link": "https://project-skyscraper.com/454d6e49b199/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 26/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 27/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/454d6e49b199/",
-      "author": 0,
+      "diff": "367/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 1 pages",
+      "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-25T22:05:32.503284+00:00"
     },
     {
       "type": "external_content_changed",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-25T22:05:32.511655+00:00"
+  "updated": "2026-06-25T22:06:00.452901+00:00"
 }
