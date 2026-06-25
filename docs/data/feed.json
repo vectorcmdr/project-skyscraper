@@ -1,28 +1,28 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-25T22:05:32.503284+00:00",
-      "title": "Memory bloc restoration: 367/365 [1 Pages]",
-      "link": "https://project-skyscraper.com/454d6e49b199/",
-      "diff": "367/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 1 pages",
-      "author": "System",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-25T22:35:33.430283+00:00",
+      "title": "3c7a9e2b5f68",
+      "link": "https://project-skyscraper.com/3c7a9e2b5f68/",
+      "endpoint": "",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 26/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 27/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/3c7a9e2b5f68/",
+      "author": 0,
       "site": "",
-      "restoration_value": "367/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-25T22:05:32.503284+00:00"
+      "id": null,
+      "game_date": ""
     },
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-25T18:04:09.866126+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/",
-      "link": "https://recalldreams.dev/wp-json/",
+      "type": "page_content_changed",
+      "timestamp": "2026-06-25T22:35:33.429663+00:00",
+      "title": "766973696f6e",
+      "link": "https://project-skyscraper.com/766973696f6e/",
       "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-25 18:02:16 UTC\n# Lines: 582930 old -> 597319 new\n# Beautified: yes\n\n@@ -20,8 +20,6 @@\n     \"wp-block-editor/v1\",\n\n     \"wordfence/v1\",\n\n     \"yoast/v1\",\n\n-    \"videopress/v1\",\n\n-    \"jetpack/v4/videopress\",\n\n     \"jetpack/v4/stats-app\",\n\n     \"jetpack/v4/import\",\n\n     \"jetpack/v4/explat\",\n\n@@ -29,11 +27,14 @@\n     \"cptui/v1\",\n\n     \"wpcom/v3\",\n\n     \"my-jetpack/v1\",\n\n-    \"jetpack-boost/v1\",\n\n+    \"agents-manager\",\n\n     \"jetpack/v4/blaze-app\",\n\n     \"jetpack/v4/blaze\",\n\n     \"help-center\",\n\n     \"jetpack-global-styles/v1\",\n\n+    \"videopress/v1\",\n\n+    \"jetpack/v4/videopress\",\n\n+    \"jetpack-boost/v1\",\n\n     \"wp-abilities/v1\",\n\n     \"wp-site-health/v1\"\n\n   ],\n\n@@ -7368,375 +7369,6 @@\n             \"POST\",\n\n             \"PUT\",\n\n             \"PATCH\"\n\n-          ],\n\n... (1475 more lines)",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 26/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 27/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/766973696f6e/",
       "author": 0,
-      "site": "recalldreams",
+      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-25T22:06:00.452901+00:00"
+  "updated": "2026-06-25T22:35:33.437297+00:00"
 }
