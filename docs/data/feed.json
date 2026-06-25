@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-25T01:07:14.968101+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/",
-      "link": "https://recalldreams.dev/wp-json/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-25 01:06:36 UTC\n# Lines: 579427 old -> 582930 new\n# Beautified: yes\n\n@@ -7127,6 +7127,65 @@\n             \"GET\"\n\n           ],\n\n           \"args\": []\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/jetpack/v4/social-image-generator/generate-preview-token\": {\n\n+      \"namespace\": \"jetpack/v4\",\n\n+      \"methods\": [\n\n+        \"POST\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"POST\"\n\n+          ],\n\n+          \"args\": {\n\n+            \"text\": {\n\n+              \"description\": \"The text to be used to generate the image.\",\n\n+              \"required\": true\n\n+            },\n\n+            \"image_url\": {\n\n+              \"description\": \"The URL of the background image to use when generating the social image.\",\n\n+              \"required\": false\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n... (121 more lines)",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-25T06:37:44.584003+00:00",
+      "title": "Memory bloc restoration: 367/365 [11 Pages]",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "diff": "367/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 11 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "367/365",
+      "page_count": 11,
+      "last_timestamp": "2026-06-25T06:37:44.584059+00:00"
     },
     {
       "type": "external_unpublished_detected",
@@ -6393,5 +6393,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-25T01:07:14.974918+00:00"
+  "updated": "2026-06-25T06:37:44.590180+00:00"
 }
