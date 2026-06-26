@@ -112,7 +112,7 @@
 
     var now = new Date().toISOString().slice(0, 10);
     var lines = [];
-    lines.push('# Voight-Kampf Responses \u2014 ' + now);
+    lines.push('# Voight-Kampff Responses \u2014 ' + now);
     lines.push('');
 
     filtered.forEach(function (r) {
@@ -131,7 +131,7 @@
         exportBtn.textContent = '\u2713 copied';
         exportBtn.classList.add('copied');
         setTimeout(function () {
-          exportBtn.textContent = 'export markdown';
+          exportBtn.textContent = 'export md';
           exportBtn.classList.remove('copied');
         }, 2000);
       }).catch(function () { fallbackCopy(text); });
@@ -146,8 +146,8 @@
     ta.style.position = 'fixed'; ta.style.left = '-9999px';
     document.body.appendChild(ta);
     ta.select();
-    try { document.execCommand('copy'); exportBtn.textContent = '\u2713 copied'; } catch { exportBtn.textContent = 'copy failed'; }
-    setTimeout(function () { exportBtn.textContent = 'export markdown'; }, 2000);
+    try { document.execCommand('copy'); exportBtn.textContent = '\u2713 copied'; } catch { exportBtn.textContent = 'err'; }
+    setTimeout(function () { exportBtn.textContent = 'export md'; }, 2000);
     document.body.removeChild(ta);
   }
 

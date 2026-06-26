@@ -1,0 +1,44 @@
+/* -- TEST RESULTS PAGE STYLES -- */
+
+.tr-header {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
+  color: #888; margin: 20px 0 16px;
+}
+
+.tr-controls {
+  display: flex; gap: 10px; align-items: center;
+  margin-bottom: 16px; flex-wrap: wrap;
+}
+
+.tr-controls .search-input { width: 260px; }
+.tr-controls select.search-input { width: auto; padding: 6px 8px; cursor: pointer; }
+
+.tr-count { color: #666; font-size: 11px; }
+
+.tr-btn {
+  background: #0d0d0d; border: 1px solid #d00; color: #d00;
+  padding: .4rem .8rem; font-family: inherit; font-size: .7rem;
+  letter-spacing: .2em; cursor: pointer; transition: all .2s; white-space: nowrap;
+}
+.tr-btn:hover { background: #d00; color: #0a0a0a; }
+.tr-btn.copied { background: #d00; color: #0a0a0a; }
+
+.tr-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.tr-table th {
+  color: #888; text-transform: uppercase; font-size: 10px;
+  letter-spacing: 1px; padding: 8px 10px; text-align: left;
+  border-bottom: 1px solid #333; font-weight: normal;
+}
+.tr-table td {
+  padding: 8px 10px; border-bottom: 1px solid #1a1a1a;
+  vertical-align: top; color: #ccc;
+}
+.tr-table .col-ts { color: #666; white-space: nowrap; width: 150px; }
+.tr-table .col-callsign { color: #0f0; width: 130px; }
+.tr-table .col-question { color: #aaa; }
+.tr-table .col-answer { color: #fff; }
+
+.tr-empty { color: #555; text-align: center; padding: 60px 20px; font-style: italic; }
+.tr-loading { color: #555; text-align: center; padding: 60px 20px; }

@@ -6,20 +6,7 @@
   <title>PS OPS CENTRE | TEST RESULTS</title>
   <link rel="icon" type="image/jpeg" href="../favicon.jpg">
   <link rel="stylesheet" href="../status/style.css">
-  <style>
-    .tr-header { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 20px 0 16px; }
-    .tr-controls { display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
-    .tr-count { color: #666; font-size: 11px; }
-    .tr-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .tr-table th { color: #888; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; padding: 8px 10px; text-align: left; border-bottom: 1px solid #333; font-weight: normal; }
-    .tr-table td { padding: 8px 10px; border-bottom: 1px solid #1a1a1a; vertical-align: top; color: #ccc; }
-    .tr-table .col-ts { color: #666; white-space: nowrap; width: 150px; }
-    .tr-table .col-callsign { color: #0f0; width: 130px; }
-    .tr-table .col-question { color: #aaa; }
-    .tr-table .col-answer { color: #fff; }
-    .tr-empty { color: #555; text-align: center; padding: 60px 20px; font-style: italic; }
-    .tr-loading { color: #555; text-align: center; padding: 60px 20px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="../ops-presence.js"></script>
 </head>
 <body>
@@ -36,17 +23,17 @@
   </header>
 
   <div style="padding:0 20px">
-    <div class="tr-header">VOIGHT-KAMPF RESPONSES</div>
+    <div class="tr-header">VOIGHT-KAMPFF RESPONSES</div>
 
     <div class="tr-controls">
-      <input type="text" class="search-input" id="searchInput" placeholder="filter by callsign, question, or answer..." autocomplete="off" style="width:260px">
-      <select class="search-input" id="sortSelect" style="width:auto;padding:6px 8px;cursor:pointer">
+      <input type="text" class="search-input" id="searchInput" placeholder="filter by callsign, question, or answer..." autocomplete="off">
+      <select class="search-input" id="sortSelect">
         <option value="timestamp">Sort: newest</option>
         <option value="timestamp_asc">Sort: oldest</option>
         <option value="callsign">Sort: callsign</option>
       </select>
       <span class="tr-count" id="resultsCount"></span>
-      <button class="btn4" id="exportBtn" style="font-size:12px">export markdown</button>
+      <button class="tr-btn" id="exportBtn">export md</button>
     </div>
 
     <div id="resultsContainer">
