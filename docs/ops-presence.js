@@ -7,9 +7,18 @@
 
 (function () {
   const WORKER_URL = 'https://opscentre.josh-axey-3006.workers.dev/presence';
-  const HEARTBEAT_INTERVAL = 30000;  // 30s
-  const POLL_INTERVAL = 15000;       // 15s
-  const STALE_AFTER_MS = 40000;      // consider operator offline after 40s
+  const HEARTBEAT_INTERVAL = 45000;
+  const POLL_INTERVAL = 15000;
+  const STALE_AFTER_MS = 40000;
+
+  let operatorName = '';
+  let operators = [];
+  let buttonEl = null;
+  let countEl = null;
+  let overlayEl = null;
+  let listEl = null;
+  let heartbeatTimer = null;
+  let pollTimer = null;
 
   let operatorName = '';
   let operators = [];
@@ -45,8 +54,8 @@
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(data => {
         if (!data || !data.operators) return;
-        const now = Date.now();
-        operators = data.operators.filter(o => now - o.lastSeen < STALE_AFTER_MS);
+    const now = Date.now();
+    operators = data.operators.filter(o => now - o.lastSeen < STALE_AFTER_MS);
         updateUI();
       })
       .catch(() => {});
@@ -201,7 +210,6 @@
       return;
     }
     createUI();
-    // Fire heartbeat first, then fetch the list once it's registered
     sendHeartbeat();
     setTimeout(fetchOperators, 2000);
     heartbeatTimer = setInterval(sendHeartbeat, HEARTBEAT_INTERVAL);

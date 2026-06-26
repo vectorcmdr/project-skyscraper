@@ -18,32 +18,49 @@ export default {
         if (!callsign || typeof callsign !== 'string' || callsign.length > 40) {
           return new Response('Invalid callsign', { status: 400, headers: corsHeaders });
         }
-        await env.OPS_PRESENCE.put(callsign, JSON.stringify({ lastSeen: Date.now() }), { expirationTtl: 65 });
+        // Single-blob: read all operators, update one, write back
+        let blob = { operators: {} };
+        const raw = await env.OPS_PRESENCE.get('_operators', 'text');
+        if (raw) {
+          try { blob = JSON.parse(raw); } catch {}
+        }
+        blob.operators[callsign] = { lastSeen: Date.now() };
+        await env.OPS_PRESENCE.put('_operators', JSON.stringify(blob), { expirationTtl: 120 });
         return new Response('OK', { headers: corsHeaders });
       }
 
       if (request.method === 'GET') {
-        const list = await env.OPS_PRESENCE.list();
+        const raw = await env.OPS_PRESENCE.get('_operators', 'text');
         const operators = [];
-        for (const key of list.keys) {
-          if (key.name.startsWith('response:')) continue;
-          const raw = await env.OPS_PRESENCE.get(key.name);
-          if (raw) {
-            try {
-              const val = JSON.parse(raw);
-              operators.push({ callsign: key.name, lastSeen: val.lastSeen });
-            } catch { /* skip corrupt entries */ }
-          }
+        if (raw) {
+          try {
+            const blob = JSON.parse(raw);
+            for (const [callsign, data] of Object.entries(blob.operators || {})) {
+              operators.push({ callsign, lastSeen: data.lastSeen });
+            }
+          } catch {}
         }
-        const body = JSON.stringify({ operators, count: operators.length });
-        return new Response(body, {
+        return new Response(JSON.stringify({ operators, count: operators.length }), {
           headers: { 'Content-Type': 'application/json', ...corsHeaders },
         });
       }
 
       if (request.method === 'DELETE') {
         const { callsign } = await request.json();
-        if (callsign) await env.OPS_PRESENCE.delete(callsign);
+        if (callsign) {
+          let blob = { operators: {} };
+          const raw = await env.OPS_PRESENCE.get('_operators', 'text');
+          if (raw) {
+            try { blob = JSON.parse(raw); } catch {}
+          }
+          delete blob.operators[callsign];
+          const keys = Object.keys(blob.operators);
+          if (keys.length > 0) {
+            await env.OPS_PRESENCE.put('_operators', JSON.stringify(blob), { expirationTtl: 120 });
+          } else {
+            await env.OPS_PRESENCE.delete('_operators');
+          }
+        }
         return new Response('OK', { headers: corsHeaders });
       }
     }
@@ -56,7 +73,8 @@ export default {
       }
       const ts = Date.now();
       const callsign = (body.callsign || 'anon').slice(0, 40);
-      const key = `response:${ts}:${callsign}`;
+      // Responses stored separately — one KV entry per response, infrequent writes
+      const key = 'response:' + ts + ':' + callsign;
       await env.OPS_PRESENCE.put(key, JSON.stringify({
         callsign,
         question: (body.question || '').slice(0, 500),
@@ -75,7 +93,7 @@ export default {
       const list = await env.OPS_PRESENCE.list({ prefix: 'response:' });
       let responses = [];
       for (const key of list.keys) {
-        const raw = await env.OPS_PRESENCE.get(key.name);
+        const raw = await env.OPS_PRESENCE.get(key.name, 'text');
         if (raw) {
           try {
             const val = JSON.parse(raw);
@@ -85,7 +103,7 @@ export default {
               continue;
             }
             responses.push(val);
-          } catch { /* skip corrupt entries */ }
+          } catch {}
         }
       }
 
