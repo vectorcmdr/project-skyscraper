@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-26T23:57:35.305932+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-26 23:57:16 UTC\n# Lines: 597319 old -> 598196 new\n# Beautified: yes\n\n@@ -9168,7 +9168,13 @@\n           \"methods\": [\n\n             \"GET\"\n\n           ],\n\n-          \"args\": []\n\n+          \"args\": {\n\n+            \"all_tasks\": {\n\n+              \"description\": \"Return the full task catalog instead of the tailored list (testing aid).\",\n\n+              \"default\": false,\n\n+              \"required\": false\n\n+            }\n\n+          }\n\n         },\n\n         {\n\n           \"methods\": [\n\n@@ -9213,6 +9219,25 @@\n               \"description\": \"The user locale.\",\n\n               \"default\": \"en\",\n\n               \"required\": false\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/wpcom/v2/ai-launchpad/complete-task\": {\n\n+      \"namespace\": \"wpcom/v2\",\n\n+      \"methods\": [\n\n+        \"POST\"\n\n+      ],\n\n+      \"endpoints\": [\n\n... (11 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "unpublished_detected",
       "timestamp": "2026-06-26T21:57:14.194808+00:00",
       "title": "#4745 (posts)",
@@ -6657,5 +6670,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T21:57:14.204674+00:00"
+  "updated": "2026-06-26T23:57:35.315322+00:00"
 }
