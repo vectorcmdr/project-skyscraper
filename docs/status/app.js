@@ -336,12 +336,9 @@ async function load() {
       filterExternal();
     }
     if (feedResp.ok || manifestResp.ok || externalResp.ok) {
-      document.getElementById('statusBadge').textContent = '\u25CF ONLINE';
-      document.getElementById('statusBadge').className = 'topbar-status status-online';
     }
   } catch (err) {
     console.error('Failed to load data:', err);
-    document.getElementById('statusBadge').textContent = '\u25CF OFFLINE';
   }
 }
 

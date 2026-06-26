@@ -480,19 +480,6 @@
       });
   }
 
-  /* -- STATUS BADGE ---------------------------------------- */
-  function setStatusOnline(on) {
-    var el = document.getElementById('statusBadge');
-    if (!el) return;
-    if (on) {
-      el.textContent = '\u25CF ONLINE';
-      el.className = 'topbar-status status-online';
-    } else {
-      el.textContent = '\u25CF OFFLINE';
-      el.className = 'topbar-status';
-    }
-  }
-
   /* -- LOAD DATA ----------------------------------------- */
   fetch(DATA_ROOT + '/graph.json')
     .then(function (r) {
@@ -503,12 +490,10 @@
       if (data.nodes && data.links) {
         initGraph(data.nodes, data.links);
       }
-      setStatusOnline(true);
     })
     .catch(function (err) {
       loadingEl.textContent = 'ERROR LOADING GRAPH DATA';
       console.error(err);
-      setStatusOnline(false);
     });
 
   setOperator();
