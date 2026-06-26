@@ -530,6 +530,20 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
         link = f"https://{c.get('site', '')}/"
         diff = f"HTTP {c.get('status', '?')}"
+    elif t == "external_unpublished_to_published":
+        pid = c.get("id", "?")
+        ep = c.get("endpoint", "")
+        site = c.get("site", c.get("hostname", ""))
+        first_seen = c.get("first_seen", "")
+        title = f"Previously unpublished {ep} #{pid} on {site}"
+        if first_seen:
+            try:
+                d = datetime.fromisoformat(first_seen)
+                title += f" (since {d.strftime('%Y-%m-%d')})"
+            except Exception:
+                title += f" (since {first_seen[:10]})"
+        link = f"https://{site}/"
+        diff = f"+ #{pid}: {ep} on {site} is now public"
     elif t == "external_content_changed":
         title = c.get("detail", "External content changed")
         link = c.get("url", "")

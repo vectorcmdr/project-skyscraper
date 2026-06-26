@@ -66,7 +66,7 @@ _NOTIFY_TYPES = frozenset({
     "sitemap_added", "sitemap_removed", "api_items_added",
     "api_items_removed", "api_items_modified", "page_content_changed",
     "media_replaced", "media_orphan_upload", "media_thumbnail_changed",
-    "unpublished_detected",
+    "unpublished_detected", "external_unpublished_to_published",
 })
 
 
