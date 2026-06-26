@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-06-26T03:45:25.860707+00:00",
+      "title": "353 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "353 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-23T22:47:56+00:00",
       "title": "2016_dataset_09082016",
@@ -6618,5 +6631,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T03:30:00+00:00"
+  "updated": "2026-06-26T03:45:25.869465+00:00"
 }
