@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-06-26T12:44:22.758605+00:00",
+      "title": "#4745 (posts)",
+      "link": "",
+      "endpoint": "posts",
+      "diff": "",
+      "detail": "Unpublished posts #4745 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-23T22:47:56+00:00",
       "title": "2016_dataset_09082016",
@@ -6631,5 +6644,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T04:10:00+00:00"
+  "updated": "2026-06-26T12:44:22.765241+00:00"
 }
