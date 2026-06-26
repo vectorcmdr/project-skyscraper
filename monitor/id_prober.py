@@ -90,8 +90,22 @@ def probe_unpublished(state: dict) -> list:
                     "first_seen": first_seen,
                     "detail": f"Previously unpublished {ep_name} #{pid} is now public",
                 })
+                recently = probe_state.setdefault("recently_published", {})
+                recently[str(pid)] = {
+                    "first_seen": first_seen,
+                    "published_at": datetime.now(timezone.utc).isoformat(),
+                    "endpoint": ep_name,
+                }
                 log(f"Newly published {ep_name} #{pid} (was hidden)", "DEEP")
         jitter(0.08, 0.1)
+
+    # Clean up recently_published entries older than 2 hours
+    recently = probe_state.get("recently_published", {})
+    now = datetime.now(timezone.utc)
+    stale = [k for k, v in recently.items()
+             if (now - datetime.fromisoformat(v.get("published_at", now.isoformat()).replace("Z", "+00:00"))).total_seconds() > 7200]
+    for k in stale:
+        del recently[k]
 
     probe_state["position"] = chunk_end + 1
     probe_state["last_probed"] = datetime.now(timezone.utc).isoformat()

@@ -89,6 +89,16 @@ def generate_site_data(state: dict, changes: list) -> bool:
                     "first_seen": first_seen,
                 }
 
+    # Also check state's recently_published log for items detected in a previous cycle
+    probe = state.get("probe", {})
+    for pid_str, info in probe.get("recently_published", {}).items():
+        pid = int(pid_str)
+        if pid not in unpub_lookup:
+            unpub_lookup[pid] = {
+                "endpoint": info.get("endpoint", ""),
+                "first_seen": info.get("first_seen", ""),
+            }
+
     # Pass 1: Augment api_items_added with unpublished context
     consumed_unpub = set()
     for c in changes:
