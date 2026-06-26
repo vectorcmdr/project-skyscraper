@@ -109,6 +109,11 @@ EXTERNAL_SITES = {
         "type": "wordpress",
         "label": "RECALL DREAMS",
     },
+    "freeimage.host": {
+        "url": "https://freeimage.host/skyscraper_prj",
+        "type": "generic",
+        "label": "freeimage",
+    },
 }
 
 EXTERNAL_CHECK_INTERVAL = 7200  # every 2 hours

@@ -54,6 +54,12 @@ def check_external_sites(state: dict) -> list:
                 changes.extend(c)
             except Exception as e:
                 log(f"  External WP check failed for {hostname}: {e}", "ERROR")
+        elif hostname == "freeimage.host":
+            try:
+                c = _check_freeimage_user(info["url"], hostname, site_state, site_label)
+                changes.extend(c)
+            except Exception as e:
+                log(f"  External freeimage check failed for {hostname}: {e}", "ERROR")
         else:
             try:
                 c = _check_generic_site(info["url"], hostname, site_state, site_label)
@@ -556,6 +562,102 @@ def _compute_external_diff(old_text: str, new_text: str, url: str) -> str:
     if len(result) > 2000:
         result = result[:1997] + "..."
     return result
+
+
+def _check_freeimage_user(page_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
+    changes = []
+    fi_state = site_state.setdefault("images", {})
+
+    result = fetch(page_url, etag=fi_state.get("etag"), last_modified=fi_state.get("last_modified"))
+
+    if result.not_modified:
+        return changes
+
+    if result.failed:
+        log(f"  {hostname}: fetch failed ({result.status})", "WARN")
+        return changes
+
+    text = result.text
+
+    # Parse image count
+    count_match = re.search(r'data-text="image-count"[^>]*>(\d+)', text)
+    new_count = int(count_match.group(1)) if count_match else 0
+    old_count = fi_state.get("image_count")
+
+    # Parse individual image entries (visible in gallery)
+    new_ids = set()
+    image_details = []
+    for item in re.finditer(
+        r'<div class="list-item[^"]*"\s+data-id="([^"]+)"[^>]*data-title="([^"]*)"[^>]*data-privacy="([^"]*)"',
+        text
+    ):
+        img_id = item.group(1)
+        title = item.group(2)
+        privacy = item.group(3)
+        new_ids.add(img_id)
+        image_details.append({"id": img_id, "title": title, "privacy": privacy})
+
+    old_ids = set(fi_state.get("known_image_ids", []))
+
+    # First run: store current state without generating changes
+    if old_count is None:
+        fi_state["image_count"] = new_count
+        fi_state["known_image_ids"] = list(new_ids)
+        fi_state["image_details"] = image_details
+        fi_state["etag"] = result.etag
+        fi_state["last_modified"] = result.last_modified
+        fi_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+        log(f"  {hostname}: initialised with {new_count} images ({len(new_ids)} visible)", "CHECK")
+        return changes
+
+    count_changed = new_count != old_count
+    new_image_ids = new_ids - old_ids if new_ids else set()
+    ids_changed = bool(new_image_ids)
+
+    if not count_changed and not ids_changed:
+        fi_state["etag"] = result.etag
+        fi_state["last_modified"] = result.last_modified
+        fi_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+        return changes
+
+    # Build change detail and diff
+    new_images_detail = []
+    for d in image_details:
+        if d["id"] in new_image_ids or (count_changed and d["id"] not in old_ids):
+            new_images_detail.append(f'{d["title"]} (https://iili.io/{d["id"]}.jpg)')
+        elif not old_ids:
+            new_images_detail.append(f'{d["title"]} (https://iili.io/{d["id"]}.jpg)')
+
+    if new_images_detail:
+        detail = f"New image(s) on freeimage.host ({new_count} total)"
+        diff_lines = [f"+ {d}" for d in new_images_detail]
+        diff = "\n".join(diff_lines)
+    elif count_changed and not new_image_ids:
+        detail = f"freeimage.host image count: {old_count} → {new_count}"
+        diff = f"- count: {old_count}\n+ count: {new_count}"
+    else:
+        detail = f"freeimage.host updated ({new_count} total)"
+        diff = ""
+
+    changes.append({
+        "type": "external_content_changed",
+        "site": hostname,
+        "site_label": site_label,
+        "url": page_url,
+        "diff": diff,
+        "detail": detail,
+    })
+
+    log(f"  {hostname}: {detail}", "CHECK")
+
+    fi_state["image_count"] = new_count
+    fi_state["known_image_ids"] = list(new_ids)
+    fi_state["image_details"] = image_details
+    fi_state["etag"] = result.etag
+    fi_state["last_modified"] = result.last_modified
+    fi_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+
+    return changes
 
 
 def _save_external_mirror(url: str, result, hostname: str):
