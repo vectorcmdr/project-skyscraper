@@ -3,13 +3,14 @@
 import re
 from datetime import datetime, timezone
 
-from monitor.config import BASE_URL, DATA_DIR
+from monitor.config import BASE_URL, DATA_DIR, PASSWORD_PROTECTED_PAGES
 from monitor.http_client import fetch
 from monitor.logger import log
 from monitor.noise_filter import is_noise_only_page_change
 from monitor.diff_engine import compute_diff
 from monitor.url_mapper import url_to_path
 from monitor.api_collections import find_author_for_url, find_modified_gmt_for_url
+from monitor.discovery import get_postpass_cookie
 
 _NEURAL_URL = f"{BASE_URL}/neural-network-status/"
 
@@ -21,7 +22,15 @@ def check_page_content(url: str, state: dict) -> list:
     etag = page_state.get("etag")
     last_modified = page_state.get("last_modified")
 
-    result = fetch(url, etag=etag, last_modified=last_modified)
+    headers_extra = None
+    if url in PASSWORD_PROTECTED_PAGES:
+        cookie = get_postpass_cookie(PASSWORD_PROTECTED_PAGES[url], url)
+        if cookie:
+            headers_extra = {"Cookie": cookie}
+        else:
+            log(f"Page {url}: could not get postpass cookie, will skip password check", "WARN")
+
+    result = fetch(url, etag=etag, last_modified=last_modified, headers_extra=headers_extra)
 
     if result.not_modified:
         page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
@@ -40,10 +49,12 @@ def check_page_content(url: str, state: dict) -> list:
     if old_hash is not None and old_hash != new_hash:
         old_path = url_to_path(url, subdir="html")
         noise_only = False
+        was_password_form = False
         if old_path.is_file():
             old_text = old_path.read_text(encoding="utf-8", errors="replace")
             new_text = result.content.decode("utf-8", errors="replace")
             noise_only = is_noise_only_page_change(old_text, new_text)
+            was_password_form = 'post-password-required' in old_text and 'post-password-required' not in new_text
 
         if noise_only:
             log(f"Page {url}: hash changed but only noise (suppressed)", "DEEP")
@@ -71,7 +82,9 @@ def check_page_content(url: str, state: dict) -> list:
                     except Exception:
                         pass
 
-                if not stale:
+                if was_password_form:
+                    log(f"Page {url}: password-protected content recovered (was showing password form)", "DEEP")
+                elif not stale:
                     change_obj = {
                         "type": "page_content_changed",
                         "url": url,
