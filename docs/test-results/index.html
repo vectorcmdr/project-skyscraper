@@ -9,20 +9,29 @@
   <link rel="stylesheet" href="style.css">
   <script src="../ops-presence.js"></script>
 </head>
-<body>
+<body class="results-body">
   <header class="topbar">
     <div class="topbar-left">
-      <a href="../" class="topbar-brand"><img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/LOGS</a>
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/LOGS
+      </a>
       <span class="trace-status" id="traceStatus"></span>
     </div>
     <div class="topbar-right">
       <div class="topbar-right-top">
         <span class="operator-label" id="operatorDisplay"></span>
       </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+        <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+      </div>
     </div>
   </header>
 
-  <div style="padding:0 20px">
+  <div class="tr-content">
     <div class="tr-header">VOIGHT-KAMPFF RESPONSES</div>
 
     <div class="tr-controls">

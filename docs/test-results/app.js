@@ -17,18 +17,61 @@
     el.textContent = name ? 'Operator: ' + name : 'Operator: <anon>';
   }
 
+  /* ── Trace ────────────────────────────────────────────── */
+  var traceTick = null;
+
+  function fmtElapsed(seconds) {
+    var h = Math.floor(seconds / 3600);
+    var m = Math.floor((seconds % 3600) / 60);
+    var s = Math.floor(seconds % 60);
+    if (h > 0) return h + 'h' + String(m).padStart(2, '0') + 'm' + String(s).padStart(2, '0') + 's';
+    if (m > 0) return m + 'm' + String(s).padStart(2, '0') + 's';
+    return s + 's';
+  }
+
+  function renderTrace(data) {
+    var el = document.getElementById('traceStatus');
+    if (!el) return;
+    if (data.state === 'ACTIVE') {
+      el.innerHTML = '<span class="trace-dot trace-dot--active"></span><span class="trace-label">TRACE: ACTIVE</span>';
+    } else if (data.state === 'LOST' && data.lastSeenAt) {
+      var then = new Date(data.lastSeenAt);
+      var elapsed = (Date.now() - then.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TRACE: LOST</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+
+  function updateTrace() {
+    fetch('../status/trace.json')
+      .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(data) {
+        renderTrace(data);
+        if (data.state === 'LOST') {
+          if (traceTick) clearInterval(traceTick);
+          traceTick = setInterval(function() { renderTrace(data); }, 1000);
+        } else {
+          if (traceTick) { clearInterval(traceTick); traceTick = null; }
+        }
+      })
+      .catch(function() {
+        var el = document.getElementById('traceStatus');
+        if (el) el.innerHTML = '';
+      });
+  }
+
   /* ── Fetch responses ─────────────────────────────────── */
   function loadResponses() {
-    container.innerHTML = '<div class="results-loading">LOADING...</div>';
-    var params = '?sort=timestamp&order=desc';
-    fetch(WORKER_URL + '/responses' + params)
+    container.innerHTML = '<div class="tr-loading">LOADING...</div>';
+    fetch(WORKER_URL + '/responses?sort=timestamp&order=desc')
       .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function (data) {
         allResponses = data.responses || [];
         render();
       })
       .catch(function () {
-        container.innerHTML = '<div class="results-empty">Failed to load responses. Check worker URL and CORS settings.</div>';
+        container.innerHTML = '<div class="tr-empty">Failed to load responses &mdash; worker unreachable</div>';
       });
   }
 
@@ -36,8 +79,8 @@
   function getFiltered() {
     var search = (searchEl.value || '').toLowerCase();
     var sortVal = sortEl.value;
-
     var filtered = allResponses;
+
     if (search) {
       filtered = filtered.filter(function (r) {
         return (r.callsign || '').toLowerCase().indexOf(search) !== -1
@@ -71,11 +114,11 @@
     countEl.textContent = filtered.length + ' / ' + allResponses.length + ' responses';
 
     if (filtered.length === 0) {
-      container.innerHTML = '<div class="results-empty">' + (allResponses.length === 0 ? 'No responses recorded yet.' : 'No responses match your filter.') + '</div>';
+      container.innerHTML = '<div class="tr-empty">' + (allResponses.length === 0 ? 'No responses recorded yet.' : 'No responses match your filter.') + '</div>';
       return;
     }
 
-    var html = '<table class="results-table"><thead><tr>';
+    var html = '<table class="tr-table"><thead><tr>';
     html += '<th class="col-ts">Timestamp</th>';
     html += '<th class="col-callsign">Callsign</th>';
     html += '<th class="col-question">Question</th>';
@@ -85,13 +128,11 @@
     filtered.forEach(function (r) {
       var d = new Date(r.timestamp);
       var ts = d.toISOString().slice(0, 19).replace('T', ' ');
-      var q = (r.question || '').slice(0, 200);
-      var a = (r.answer || '').slice(0, 500);
       html += '<tr>';
       html += '<td class="col-ts">' + escHtml(ts) + '</td>';
       html += '<td class="col-callsign">' + escHtml(r.callsign || '?') + '</td>';
-      html += '<td class="col-question">' + escHtml(q) + '</td>';
-      html += '<td class="col-answer">' + escHtml(a) + '</td>';
+      html += '<td class="col-question">' + escHtml((r.question || '').slice(0, 200)) + '</td>';
+      html += '<td class="col-answer">' + escHtml((r.answer || '').slice(0, 500)) + '</td>';
       html += '</tr>';
     });
 
@@ -111,9 +152,7 @@
     if (filtered.length === 0) return;
 
     var now = new Date().toISOString().slice(0, 10);
-    var lines = [];
-    lines.push('# Voight-Kampff Responses \u2014 ' + now);
-    lines.push('');
+    var lines = ['# Voight-Kampff Responses \u2014 ' + now, ''];
 
     filtered.forEach(function (r) {
       var d = new Date(r.timestamp);
@@ -130,10 +169,7 @@
       navigator.clipboard.writeText(text).then(function () {
         exportBtn.textContent = '\u2713 copied';
         exportBtn.classList.add('copied');
-        setTimeout(function () {
-          exportBtn.textContent = 'export md';
-          exportBtn.classList.remove('copied');
-        }, 2000);
+        setTimeout(function () { exportBtn.textContent = 'export md'; exportBtn.classList.remove('copied'); }, 2000);
       }).catch(function () { fallbackCopy(text); });
     } else {
       fallbackCopy(text);
@@ -154,43 +190,22 @@
   /* ── Events ───────────────────────────────────────────── */
   searchEl.addEventListener('input', render);
   sortEl.addEventListener('change', render);
-
   exportBtn.addEventListener('click', exportMarkdown);
 
-  /* ── Trace status ────────────────────────────────────── */
-  function updateTrace() {
-    fetch('../status/trace.json')
+  /* ── Periodic refresh ────────────────────────────────── */
+  setInterval(function () {
+    fetch(WORKER_URL + '/responses?sort=timestamp&order=desc')
       .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
       .then(function (data) {
-        var el = document.getElementById('traceStatus');
-        if (!el) return;
-        if (data.state === 'ACTIVE') {
-          el.innerHTML = '<span class="trace-dot"></span> TRACE: ACTIVE';
-        } else if (data.state === 'LOST' && data.lastSeenAt) {
-          el.innerHTML = '<span class="trace-dot trace-lost"></span> TRACE: LOST';
-        } else {
-          el.innerHTML = '';
-        }
+        allResponses = data.responses || [];
+        render();
       })
       .catch(function () {});
-  }
-
-  /* ── Periodic refresh ────────────────────────────────── */
-  function startRefresh() {
-    setInterval(function () {
-      fetch(WORKER_URL + '/responses?sort=timestamp&order=desc')
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-        .then(function (data) {
-          allResponses = data.responses || [];
-          render();
-        })
-        .catch(function () {});
-    }, 30000);
-  }
+  }, 30000);
 
   /* ── Init ─────────────────────────────────────────────── */
   setOperator();
   updateTrace();
+  setInterval(updateTrace, 30000);
   loadResponses();
-  startRefresh();
 })();

@@ -1,5 +1,9 @@
 /* -- TEST RESULTS PAGE STYLES -- */
 
+.results-body { background: #0a0a0a; }
+
+.tr-content { padding: 0 20px; }
+
 .tr-header {
   font-size: 14px; text-transform: uppercase; letter-spacing: 1px;
   color: #888; margin: 20px 0 16px;
