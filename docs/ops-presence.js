@@ -90,13 +90,23 @@
 
   /* ── Create UI elements ──────────────────────────────── */
   function createUI() {
-    if (document.getElementById('ops-presence-button')) return;
+    if (document.getElementById('ops-presence-btn')) return;
 
-    buttonEl = document.createElement('div');
-    buttonEl.id = 'ops-presence-button';
+    const opDisplay = document.getElementById('operatorDisplay');
+    if (!opDisplay) return;
+
+    // Hide old operator display — the presence button replaces it
+    opDisplay.style.display = 'none';
+
+    // Build presence button: "{callsign} | ● N Online ▼"
+    const displayName = operatorName || 'anon';
+
+    buttonEl = document.createElement('span');
+    buttonEl.id = 'ops-presence-btn';
     buttonEl.className = 'ops-presence-btn';
-    buttonEl.innerHTML = `<span class="ops-presence-dot"></span> <span class="ops-presence-count">0</span> online <span class="ops-presence-arrow">&#9654;</span>`;
+    buttonEl.innerHTML = `<span class="ops-presence-callsign">${escHtml(displayName)}</span> <span class="ops-presence-sep">|</span> <span class="ops-presence-dot"></span> <span class="ops-presence-count">0</span> online <span class="ops-presence-arrow">&#9660;</span>`;
     countEl = buttonEl.querySelector('.ops-presence-count');
+    opDisplay.parentNode.insertBefore(buttonEl, opDisplay.nextSibling);
 
     overlayEl = document.createElement('div');
     overlayEl.id = 'ops-presence-overlay';
@@ -106,19 +116,23 @@
 
     buttonEl.addEventListener('click', function (e) {
       e.stopPropagation();
+      e.preventDefault();
       const isOpen = overlayEl.classList.contains('visible');
+      document.querySelectorAll('.ops-presence-overlay').forEach(function (o) { o.classList.remove('visible'); });
       overlayEl.classList.toggle('visible');
-      buttonEl.querySelector('.ops-presence-arrow').innerHTML = isOpen ? '&#9654;' : '&#9660;';
+      buttonEl.querySelector('.ops-presence-arrow').innerHTML = isOpen ? '&#9660;' : '&#9652;';
       if (!isOpen) fetchOperators();
     });
 
-    document.addEventListener('click', function () {
-      overlayEl.classList.remove('visible');
-      if (buttonEl) buttonEl.querySelector('.ops-presence-arrow').innerHTML = '&#9654;';
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('#ops-presence-btn') && !e.target.closest('#ops-presence-overlay')) {
+        overlayEl.classList.remove('visible');
+        var a = buttonEl && buttonEl.querySelector('.ops-presence-arrow');
+        if (a) a.innerHTML = '&#9660;';
+      }
     });
     overlayEl.addEventListener('click', function (e) { e.stopPropagation(); });
 
-    document.body.appendChild(buttonEl);
     document.body.appendChild(overlayEl);
 
     /* ── Inject CSS once ───────────────────────────────── */
@@ -127,27 +141,25 @@
       css.id = 'ops-presence-style';
       css.textContent = `
         .ops-presence-btn {
-          position: fixed; bottom: 20px; right: 20px; z-index: 9999;
-          background: #111; color: #0f0; border: 1px solid #0f0;
-          border-radius: 6px; padding: 8px 14px; cursor: pointer;
-          font-family: 'IBM Plex Mono', monospace; font-size: 13px;
-          display: flex; align-items: center; gap: 6px;
-          opacity: 0.85; transition: opacity 0.2s;
-          user-select: none;
+          cursor: pointer; user-select: none; white-space: nowrap;
+          font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+          color: #ccc; transition: color 0.2s;
         }
-        .ops-presence-btn:hover { opacity: 1; }
+        .ops-presence-btn:hover { color: #0f0; }
+        .ops-presence-btn .ops-presence-callsign { color: #0f0; }
         .ops-presence-btn .ops-presence-dot {
-          width: 8px; height: 8px; border-radius: 50%;
-          background: #555; display: inline-block;
+          width: 7px; height: 7px; border-radius: 50%;
+          background: #555; display: inline-block; vertical-align: middle;
           transition: background 0.3s;
         }
         .ops-presence-btn.has-online .ops-presence-dot { background: #0f0; }
-        .ops-presence-count { font-weight: bold; min-width: 12px; text-align: center; }
-        .ops-presence-arrow { font-size: 10px; margin-left: 2px; }
+        .ops-presence-sep { color: #333; margin: 0 4px; }
+        .ops-presence-count { font-weight: bold; }
+        .ops-presence-arrow { font-size: 8px; margin-left: 2px; display: inline-block; }
         .ops-presence-overlay {
-          position: fixed; bottom: 60px; right: 20px; z-index: 9998;
+          position: fixed; top: 55px; right: 20px; z-index: 9998;
           background: #111; border: 1px solid #333;
-          border-radius: 8px; padding: 12px; min-width: 240px;
+          border-radius: 8px; padding: 12px; min-width: 220px;
           max-height: 320px; overflow-y: auto;
           font-family: 'IBM Plex Mono', monospace; font-size: 12px;
           display: none; box-shadow: 0 4px 20px rgba(0,0,0,0.6);
