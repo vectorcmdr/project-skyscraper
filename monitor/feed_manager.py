@@ -233,7 +233,7 @@ def generate_site_data(state: dict, changes: list) -> bool:
 
     _sync_manifest_from_sitemap(manifest, state)
 
-    feed["entries"] = feed["entries"][-500:]
+    feed["entries"] = feed["entries"][-2000:]
 
     user_map = get_user_map(state)
     # Only resolve author names for newly-added entries; existing entries
@@ -290,7 +290,7 @@ def generate_external_data(state: dict, changes: list):
                     existing_keys.add(k)
                     data["entries"].append(entry)
 
-    data["entries"] = data["entries"][-500:]
+    data["entries"] = data["entries"][-2000:]
     data["entries"].sort(key=lambda e: e.get("timestamp", ""), reverse=True)
     data["updated"] = datetime.now(timezone.utc).isoformat()
 
