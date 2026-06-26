@@ -165,7 +165,7 @@
         .ops-presence-overlay {
           position: fixed; top: 55px; right: 20px; z-index: 9998;
           background: #111; border: 1px solid #333;
-          border-radius: 8px; padding: 12px; min-width: 220px;
+          padding: 12px; min-width: 220px;
           max-height: 320px; overflow-y: auto;
           font-family: 'IBM Plex Mono', monospace; font-size: 12px;
           display: none; box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -174,7 +174,7 @@
         .ops-presence-header {
           color: #888; text-transform: uppercase; font-size: 10px;
           letter-spacing: 1px; margin-bottom: 8px; padding-bottom: 6px;
-          border-bottom: 1px solid #222;
+          border-bottom: 1px solid #333;
         }
         .ops-presence-empty { color: #555; font-style: italic; text-align: center; padding: 12px 0; }
         .ops-presence-item {
