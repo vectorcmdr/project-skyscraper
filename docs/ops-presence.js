@@ -196,13 +196,13 @@
   function init() {
     const callsign = getCallsign();
     if (!callsign) {
-      // Retry after a delay — the page may not have set localStorage yet
       setTimeout(init, 1000);
       return;
     }
     createUI();
+    // Fire heartbeat first, then fetch the list once it's registered
     sendHeartbeat();
-    fetchOperators();
+    setTimeout(fetchOperators, 2000);
     heartbeatTimer = setInterval(sendHeartbeat, HEARTBEAT_INTERVAL);
     pollTimer = setInterval(fetchOperators, POLL_INTERVAL);
   }
