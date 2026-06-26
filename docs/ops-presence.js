@@ -99,7 +99,7 @@
     opDisplay.style.display = 'none';
 
     // Build presence button: "{callsign} | ● N Online ▼"
-    const displayName = operatorName || 'anon';
+    const displayName = operatorName || getCallsign() || 'anon';
 
     buttonEl = document.createElement('span');
     buttonEl.id = 'ops-presence-btn';
@@ -119,9 +119,14 @@
       e.preventDefault();
       const isOpen = overlayEl.classList.contains('visible');
       document.querySelectorAll('.ops-presence-overlay').forEach(function (o) { o.classList.remove('visible'); });
-      overlayEl.classList.toggle('visible');
-      buttonEl.querySelector('.ops-presence-arrow').innerHTML = isOpen ? '&#9660;' : '&#9652;';
-      if (!isOpen) fetchOperators();
+      if (isOpen) {
+        overlayEl.classList.remove('visible');
+        buttonEl.querySelector('.ops-presence-arrow').innerHTML = '&#9660;';
+      } else {
+        overlayEl.classList.add('visible');
+        buttonEl.querySelector('.ops-presence-arrow').innerHTML = '&#9652;';
+        fetchOperators();
+      }
     });
 
     document.addEventListener('click', function (e) {
