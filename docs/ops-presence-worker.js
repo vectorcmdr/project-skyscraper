@@ -14,6 +14,13 @@ export default {
     /* ── Presence routes ─────────────────────────────── */
     if (url.pathname === '/presence') {
       if (request.method === 'POST') {
+        const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+        const recent = await env.OPS_PRESENCE.get('ratelimit:' + ip);
+        if (recent) {
+          return new Response('Too fast', { status: 429, headers: corsHeaders });
+        }
+        await env.OPS_PRESENCE.put('ratelimit:' + ip, '1', { expirationTtl: 10 });
+
         const { callsign } = await request.json();
         if (!callsign || typeof callsign !== 'string' || callsign.length > 40) {
           return new Response('Invalid callsign', { status: 400, headers: corsHeaders });
@@ -67,6 +74,13 @@ export default {
 
     /* ── Response capture route ──────────────────────── */
     if (url.pathname === '/response' && request.method === 'POST') {
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const recent = await env.OPS_PRESENCE.get('ratelimit:resp:' + ip);
+      if (recent) {
+        return new Response('Too fast', { status: 429, headers: corsHeaders });
+      }
+      await env.OPS_PRESENCE.put('ratelimit:resp:' + ip, '1', { expirationTtl: 5 });
+
       const body = await request.json();
       if (!body || !body.answer) {
         return new Response('Missing answer', { status: 400, headers: corsHeaders });
