@@ -202,7 +202,7 @@ def build_graph(state: dict) -> dict:
     # Walk HTML files to extract cross-page links
     external_nodes = {}
     external_count = 0
-    MAX_EXTERNAL = 30
+    MAX_EXTERNAL = 500
 
     for path, url in all_page_paths.items():
         html_path = url_to_path(url, "html")
@@ -228,7 +228,7 @@ def build_graph(state: dict) -> dict:
             if target_norm == path:
                 continue
 
-            if target_norm in all_page_paths:
+            if target_norm in all_page_paths and (target_url.startswith(BASE_URL) or target_host.endswith("project-skyscraper.com")):
                 links.append({"source": path, "target": target_norm})
                 continue
 
@@ -243,7 +243,8 @@ def build_graph(state: dict) -> dict:
 
             if target_url not in seen_urls and target_url.startswith("http"):
                 seen_urls.add(target_url)
-                if target_url.startswith(BASE_URL) or target_host.endswith("project-skyscraper.com"):
+                is_internal = target_url.startswith(BASE_URL) or target_host.endswith("project-skyscraper.com")
+                if is_internal:
                     ext_id = target_norm
                     ext_label = target_norm.strip("/").split("/")[-1].replace("-", " ").title() or "unknown"
                     if ext_label in ("Wp Json", "Wp Content", "Oembed", "Xmlrpc Php"):
@@ -258,7 +259,7 @@ def build_graph(state: dict) -> dict:
                 if ext_id not in {n["id"] for n in nodes}:
                     external_nodes[ext_id] = {
                         "id": ext_id,
-                        "type": "external",
+                        "type": "page" if is_internal else "external",
                         "label": ext_label[:60],
                         "url": target_url,
                         "author": "",

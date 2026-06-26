@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T01:53:30.267585+00:00",
+  "updated": "2026-06-26T02:12:25.980302+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -48,6 +48,14 @@
       "url": "https://project-skyscraper.com/1e31d7c81379/",
       "author": "",
       "date": "2026-06-15T15:14:42Z"
+    },
+    {
+      "id": "/page/2",
+      "type": "page",
+      "label": "2",
+      "url": "https://project-skyscraper.com/page/2/",
+      "author": "",
+      "date": ""
     },
     {
       "id": "/3c7a9e2b5f68",
@@ -4218,10 +4226,10 @@
       "date": "2026-06-04T17:16:56"
     },
     {
-      "id": "/page/2",
+      "id": "https://archive.goodguysfree.com/",
       "type": "external",
-      "label": "2",
-      "url": "https://project-skyscraper.com/page/2/",
+      "label": "archive.goodguysfree.com",
+      "url": "https://archive.goodguysfree.com/",
       "author": "",
       "date": ""
     },
@@ -4250,6 +4258,30 @@
       "date": ""
     },
     {
+      "id": "https://forums.atlas-65.com/",
+      "type": "external",
+      "label": "forums.atlas-65.com",
+      "url": "https://forums.atlas-65.com/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
+      "type": "external",
+      "label": "forums.atlas-65.com",
+      "url": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://freeimage.host/i/C3q5NYF",
+      "type": "external",
+      "label": "freeimage.host",
+      "url": "https://freeimage.host/i/C3q5NYF",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://hellogames.org/2023/08/23/no-mans-sky-celebrates-7-years-with-echoes-update/",
       "type": "external",
       "label": "hellogames.org",
@@ -4270,6 +4302,30 @@
       "type": "external",
       "label": "ign.com",
       "url": "https://www.ign.com/articles/2016/08/09/no-mans-sky-dev-sends-letter-to-australian-reviewers",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://iili.io/CFCOYml.jpg",
+      "type": "external",
+      "label": "iili.io",
+      "url": "https://iili.io/CFCOYml.jpg",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://iili.io/CocgynS.jpg",
+      "type": "external",
+      "label": "iili.io",
+      "url": "https://iili.io/CocgynS.jpg",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://iili.io/CC2x7xs.jpg",
+      "type": "external",
+      "label": "iili.io",
+      "url": "https://iili.io/CC2x7xs.jpg",
       "author": "",
       "date": ""
     },
@@ -4322,6 +4378,14 @@
       "date": ""
     },
     {
+      "id": "https://recalldreams.dev/",
+      "type": "external",
+      "label": "recalldreams.dev",
+      "url": "https://recalldreams.dev/",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/",
       "type": "external",
       "label": "reddit.com",
@@ -4334,6 +4398,14 @@
       "type": "external",
       "label": "reddit.com",
       "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1tczflq/connection_detected_access_denied/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
+      "type": "external",
+      "label": "soundcloud.com",
+      "url": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump",
       "author": "",
       "date": ""
     },
@@ -4366,6 +4438,14 @@
       "type": "external",
       "label": "universetoday.com",
       "url": "https://www.universetoday.com/articles/great-attractor-revealed-galaxies-found-lurking-behind-the-milky-way",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://wakingtitan.com/",
+      "type": "external",
+      "label": "wakingtitan.com",
+      "url": "https://wakingtitan.com/",
       "author": "",
       "date": ""
     },
@@ -11665,6 +11745,10 @@
     },
     {
       "source": "/2017/07/09/event-09072017",
+      "target": "https://forums.atlas-65.com/"
+    },
+    {
+      "source": "/2017/07/09/event-09072017",
       "target": "/tag/verified"
     },
     {
@@ -12545,6 +12629,10 @@
     },
     {
       "source": "/2026/06/09/diagnostic-180000",
+      "target": "https://wakingtitan.com/"
+    },
+    {
+      "source": "/2026/06/09/diagnostic-180000",
       "target": "/2026/06/09/structural-analysis-133722"
     },
     {
@@ -12681,6 +12769,14 @@
     },
     {
       "source": "/2026/06/18/sec-log-152931",
+      "target": "https://archive.goodguysfree.com/"
+    },
+    {
+      "source": "/2026/06/18/sec-log-152931",
+      "target": "https://recalldreams.dev/"
+    },
+    {
+      "source": "/2026/06/18/sec-log-152931",
       "target": "/2026/06/17/sec-log-170509"
     },
     {
@@ -12769,6 +12865,10 @@
     },
     {
       "source": "/about",
+      "target": "https://soundcloud.com/the-architect-488905703/self_introduction_memory_dump"
+    },
+    {
+      "source": "/about",
       "target": "/"
     },
     {
@@ -12780,15 +12880,7 @@
       "target": "/"
     },
     {
-      "source": "/inbox",
-      "target": "/"
-    },
-    {
       "source": "/logo",
-      "target": "/"
-    },
-    {
-      "source": "/neural-network-status",
       "target": "/"
     },
     {
@@ -12816,12 +12908,24 @@
       "target": "/"
     },
     {
+      "source": "/report-lon-reality-glitch",
+      "target": "https://iili.io/CFCOYml.jpg"
+    },
+    {
       "source": "/report-ott-time-disruption",
       "target": "/"
     },
     {
+      "source": "/report-ott-time-disruption",
+      "target": "https://iili.io/CocgynS.jpg"
+    },
+    {
       "source": "/report-par-temporal-merge",
       "target": "/"
+    },
+    {
+      "source": "/report-par-temporal-merge",
+      "target": "https://iili.io/CC2x7xs.jpg"
     },
     {
       "source": "/request-memory-timestamp-094317",
@@ -12833,15 +12937,23 @@
     },
     {
       "source": "/sec-log-094127-full",
-      "target": "/"
+      "target": "/wp-content/uploads/2026/05/TR4CE.jpg"
     },
     {
       "source": "/sec-log-094127-full",
-      "target": "/wp-content/uploads/2026/05/TR4CE.jpg"
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-094316-full",
+      "target": "https://freeimage.host/i/C3q5NYF"
     },
     {
       "source": "/sec-log-094316-full",
       "target": "/"
+    },
+    {
+      "source": "/sec-log-211927-full",
+      "target": "https://forums.atlas-65.com/t/project-skyscraper-no-mans-sky-arg/9095/180"
     },
     {
       "source": "/sec-log-211927-full",
