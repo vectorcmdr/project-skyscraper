@@ -7,32 +7,22 @@
   <link rel="icon" type="image/jpeg" href="../favicon.jpg">
   <link rel="stylesheet" href="../status/style.css">
   <style>
-    .results-body { padding: 20px; font-family: 'IBM Plex Mono', monospace; color: #ccc; }
-    .results-controls { display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
-    .results-controls input { background: #000; border: 1px solid #333; color: #0f0; padding: 6px 10px; border-radius: 4px; font-family: inherit; font-size: 12px; width: 220px; }
-    .results-controls input:focus { outline: none; border-color: #0f0; }
-    .results-controls select { background: #000; border: 1px solid #333; color: #ccc; padding: 6px 8px; border-radius: 4px; font-family: inherit; font-size: 12px; cursor: pointer; }
-    .results-controls select:focus { outline: none; border-color: #0f0; }
-    .results-count { color: #666; font-size: 11px; }
-    .results-export-btn { background: #000; border: 1px solid #555; color: #0f0; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 12px; }
-    .results-export-btn:hover { border-color: #0f0; }
-    .results-export-btn.copied { border-color: #0f0; color: #0f0; }
-    .results-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    .results-table th { color: #888; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; padding: 8px 10px; text-align: left; border-bottom: 1px solid #222; cursor: pointer; user-select: none; }
-    .results-table th:hover { color: #0f0; }
-    .results-table th .sort-arrow { color: #555; margin-left: 4px; }
-    .results-table th.sorted .sort-arrow { color: #0f0; }
-    .results-table td { padding: 8px 10px; border-bottom: 1px solid #1a1a1a; vertical-align: top; }
-    .results-table .col-ts { color: #666; white-space: nowrap; width: 140px; }
-    .results-table .col-callsign { color: #0f0; width: 120px; }
-    .results-table .col-question { color: #aaa; max-width: 300px; }
-    .results-table .col-answer { color: #fff; max-width: 300px; }
-    .results-empty { color: #555; text-align: center; padding: 60px 0; font-style: italic; }
-    .results-loading { color: #555; text-align: center; padding: 60px 0; }
+    .tr-header { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin: 20px 0 16px; }
+    .tr-controls { display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+    .tr-count { color: #666; font-size: 11px; }
+    .tr-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tr-table th { color: #888; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; padding: 8px 10px; text-align: left; border-bottom: 1px solid #333; font-weight: normal; }
+    .tr-table td { padding: 8px 10px; border-bottom: 1px solid #1a1a1a; vertical-align: top; color: #ccc; }
+    .tr-table .col-ts { color: #666; white-space: nowrap; width: 150px; }
+    .tr-table .col-callsign { color: #0f0; width: 130px; }
+    .tr-table .col-question { color: #aaa; }
+    .tr-table .col-answer { color: #fff; }
+    .tr-empty { color: #555; text-align: center; padding: 60px 20px; font-style: italic; }
+    .tr-loading { color: #555; text-align: center; padding: 60px 20px; }
   </style>
   <script src="../ops-presence.js"></script>
 </head>
-<body class="results-body">
+<body>
   <header class="topbar">
     <div class="topbar-left">
       <a href="../" class="topbar-brand"><img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/LOGS</a>
@@ -45,21 +35,23 @@
     </div>
   </header>
 
-  <h1 style="font-size:14px;text-transform:uppercase;letter-spacing:1px;color:#888;margin:20px 0 16px">VOIGHT-KAMPF RESPONSES</h1>
+  <div style="padding:0 20px">
+    <div class="tr-header">VOIGHT-KAMPF RESPONSES</div>
 
-  <div class="results-controls">
-    <input type="text" id="searchInput" placeholder="filter by callsign, question, or answer..." autocomplete="off">
-    <select id="sortSelect">
-      <option value="timestamp">Sort: newest</option>
-      <option value="timestamp_asc">Sort: oldest</option>
-      <option value="callsign">Sort: callsign</option>
-    </select>
-    <span class="results-count" id="resultsCount"></span>
-    <button class="results-export-btn" id="exportBtn">export markdown</button>
-  </div>
+    <div class="tr-controls">
+      <input type="text" class="search-input" id="searchInput" placeholder="filter by callsign, question, or answer..." autocomplete="off" style="width:260px">
+      <select class="search-input" id="sortSelect" style="width:auto;padding:6px 8px;cursor:pointer">
+        <option value="timestamp">Sort: newest</option>
+        <option value="timestamp_asc">Sort: oldest</option>
+        <option value="callsign">Sort: callsign</option>
+      </select>
+      <span class="tr-count" id="resultsCount"></span>
+      <button class="btn4" id="exportBtn" style="font-size:12px">export markdown</button>
+    </div>
 
-  <div id="resultsContainer">
-    <div class="results-loading">LOADING...</div>
+    <div id="resultsContainer">
+      <div class="tr-loading">LOADING...</div>
+    </div>
   </div>
 
   <script src="app.js"></script>

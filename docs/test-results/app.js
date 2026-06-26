@@ -157,7 +157,40 @@
 
   exportBtn.addEventListener('click', exportMarkdown);
 
+  /* ── Trace status ────────────────────────────────────── */
+  function updateTrace() {
+    fetch('../status/trace.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (data) {
+        var el = document.getElementById('traceStatus');
+        if (!el) return;
+        if (data.state === 'ACTIVE') {
+          el.innerHTML = '<span class="trace-dot"></span> TRACE: ACTIVE';
+        } else if (data.state === 'LOST' && data.lastSeenAt) {
+          el.innerHTML = '<span class="trace-dot trace-lost"></span> TRACE: LOST';
+        } else {
+          el.innerHTML = '';
+        }
+      })
+      .catch(function () {});
+  }
+
+  /* ── Periodic refresh ────────────────────────────────── */
+  function startRefresh() {
+    setInterval(function () {
+      fetch(WORKER_URL + '/responses?sort=timestamp&order=desc')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (data) {
+          allResponses = data.responses || [];
+          render();
+        })
+        .catch(function () {});
+    }, 30000);
+  }
+
   /* ── Init ─────────────────────────────────────────────── */
   setOperator();
+  updateTrace();
   loadResponses();
+  startRefresh();
 })();
