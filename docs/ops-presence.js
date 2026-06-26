@@ -55,7 +55,8 @@
   /* ── Update UI ───────────────────────────────────────── */
   function updateUI() {
     const active = operators;
-    const count = active.length;
+    // Count excludes yourself — shows how many OTHER operators are online
+    const count = active.filter(function(o) { return o.callsign !== operatorName; }).length;
 
     if (countEl) {
       countEl.textContent = count;
