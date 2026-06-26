@@ -1,6 +1,58 @@
 {
   "entries": [
     {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-26T03:25:32.068520+00:00",
+      "title": "DNS NS captured for freeimage.host",
+      "link": "https://freeimage.host",
+      "endpoint": "",
+      "diff": "+ NS nancy.ns.cloudflare.com.\n+ NS piers.ns.cloudflare.com.",
+      "detail": "DNS NS captured for freeimage.host",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-26T03:25:32.068494+00:00",
+      "title": "DNS MX captured for freeimage.host",
+      "link": "https://freeimage.host",
+      "endpoint": "",
+      "diff": "+ MX mx.zoho.com.\n+ MX mx2.zoho.com.\n+ MX mx3.zoho.com.",
+      "detail": "DNS MX captured for freeimage.host",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-26T03:25:32.068454+00:00",
+      "title": "DNS TXT captured for freeimage.host",
+      "link": "https://freeimage.host",
+      "endpoint": "",
+      "diff": "+ TXT v=spf1 include:zohomail.com ~all",
+      "detail": "DNS TXT captured for freeimage.host",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_dns_changed",
+      "timestamp": "2026-06-26T03:25:32.068358+00:00",
+      "title": "DNS A captured for freeimage.host",
+      "link": "https://freeimage.host",
+      "endpoint": "",
+      "diff": "+ A 207.174.26.218",
+      "detail": "DNS A captured for freeimage.host",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-23T22:47:56+00:00",
       "title": "2016_dataset_09082016",
@@ -6618,5 +6670,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T01:30:00+00:00"
+  "updated": "2026-06-26T03:25:32.075938+00:00"
 }
