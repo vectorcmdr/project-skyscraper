@@ -1,13 +1,13 @@
 # project-skyscraper.com -- Complete Mirror Manifest
 
-**Generated:** 2026-06-24 17:00:36 UTC
+**Generated:** 2026-06-26 03:01:04 UTC
 **Source:** https://project-skyscraper.com
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| **Total files** | 89223 |
+| **Total files** | 89228 |
 | **Total size** | 3.1 GB |
 
 ## Section Breakdown
@@ -17,10 +17,9 @@
 | **.gitignore/** | 1 | 402.0 B |
 | **LICENSE/** | 1 | 34.4 KB |
 | **MIRRORED_TOWER/** | 81192 | 2.9 GB |
-| **MIRROR_MANIFEST.md/** | 1 | 1.8 KB |
+| **MIRROR_MANIFEST.md/** | 1 | 1.7 KB |
 | **POST_ID_SERIES.md/** | 1 | 152.8 KB |
 | **README.md/** | 1 | 7.7 KB |
-| **RECALLDREAMS_PLAN.md/** | 1 | 4.2 KB |
 | **UNPUBLISHED_IDS.md/** | 1 | 628.0 B |
 | **_check_mod.py/** | 1 | 412.0 B |
 | **_merge_external.py/** | 1 | 1.1 KB |
@@ -31,7 +30,7 @@
 | **config.json/** | 1 | 581.0 B |
 | **diffs/** | 2655 | 6.4 MB |
 | **discovery/** | 9 | 24.1 KB |
-| **docs/** | 76 | 48.8 MB |
+| **docs/** | 78 | 49.0 MB |
 | **endpoints/** | 19 | 656.3 KB |
 | **external/** | 1 | 108.6 KB |
 | **external_refs/** | 1 | 84.0 KB |
@@ -40,7 +39,7 @@
 | **media/** | 136 | 35.0 MB |
 | **mirror_recalldreams.py/** | 1 | 8.5 KB |
 | **mirrors/** | 58 | 19.7 MB |
-| **monitor/** | 24 | 214.3 KB |
+| **monitor/** | 28 | 220.2 KB |
 | **monitor_site.py/** | 1 | 653.0 B |
 | **requirements-crawler.txt/** | 1 | 59.0 B |
 | **robots_txt_comparison.txt/** | 1 | 630.0 B |
