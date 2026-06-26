@@ -30,23 +30,24 @@ def check_external_sites(state: dict) -> list:
         site_state = ext_state.setdefault(hostname, {})
         site_label = SITE_LABELS.get(hostname, hostname.split(".")[0])
 
-        try:
-            c = _check_site_dns(hostname, site_state, site_label)
-            changes.extend(c)
-        except Exception as e:
-            log(f"  External DNS check failed for {hostname}: {e}", "ERROR")
+        if hostname != "freeimage.host":
+            try:
+                c = _check_site_dns(hostname, site_state, site_label)
+                changes.extend(c)
+            except Exception as e:
+                log(f"  External DNS check failed for {hostname}: {e}", "ERROR")
 
-        try:
-            c = _check_site_robots_txt(info["url"], hostname, site_state, site_label)
-            changes.extend(c)
-        except Exception as e:
-            log(f"  External robots.txt check failed for {hostname}: {e}", "ERROR")
+            try:
+                c = _check_site_robots_txt(info["url"], hostname, site_state, site_label)
+                changes.extend(c)
+            except Exception as e:
+                log(f"  External robots.txt check failed for {hostname}: {e}", "ERROR")
 
-        try:
-            c = _check_site_sitemap(info["url"], hostname, site_state, site_label)
-            changes.extend(c)
-        except Exception as e:
-            log(f"  External sitemap check failed for {hostname}: {e}", "ERROR")
+            try:
+                c = _check_site_sitemap(info["url"], hostname, site_state, site_label)
+                changes.extend(c)
+            except Exception as e:
+                log(f"  External sitemap check failed for {hostname}: {e}", "ERROR")
 
         if info.get("type") == "wordpress":
             try:
