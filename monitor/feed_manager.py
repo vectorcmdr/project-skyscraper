@@ -185,6 +185,11 @@ def generate_site_data(state: dict, changes: list) -> bool:
 
             entry = _change_to_feed_entry(c, ts)
             if entry:
+                if entry["type"] == "unpublished_detected" and entry.get("id"):
+                    if any(e.get("type") == "unpublished_detected" and e.get("id") == entry["id"]
+                           for e in feed["entries"]):
+                        consumed_unpub.add(entry["id"])
+                        continue
                 feed["entries"].append(entry)
                 _update_manifest(manifest, c)
                 new_entries.append(entry)
