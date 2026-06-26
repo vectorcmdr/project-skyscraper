@@ -835,6 +835,7 @@ function setupEnterTriggers() {
 /* ── VK-STYLE QUERY BAR ────────────────────────────────── */
 var _queries = [];
 var _queryTimer = null;
+var _WORKER_URL = 'https://opscentre.josh-axey-3006.workers.dev';
 
 function pickQuery() {
   var textEl = document.getElementById('queryText');
@@ -862,10 +863,21 @@ function flashPanels() {
 function submitQuery() {
   var inputEl = document.getElementById('queryInput');
   var resultEl = document.getElementById('queryResult');
+  var textEl = document.getElementById('queryText');
   if (!inputEl || !resultEl) return;
   var val = inputEl.value.trim();
-  if (!val) { resultEl.textContent = '—'; return; }
+  if (!val) { resultEl.textContent = '\u2014'; return; }
   resultEl.textContent = '> ' + val;
+
+  // Capture response to Worker
+  var question = textEl ? textEl.textContent : '';
+  var callsign = (localStorage.getItem('operator') || '').trim() || 'anon';
+  fetch(_WORKER_URL + '/response', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ callsign: callsign, question: question, answer: val }),
+  }).catch(function() {});
+
   flashPanels();
   setTimeout(pickQuery, 1500);
 }
