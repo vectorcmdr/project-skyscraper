@@ -138,6 +138,8 @@ def notify_changes(changes: list, state: dict):
         memory_bloc = []
         regular = []
         for c in by_type["page_content_changed"]:
+            if c.get("_password_recovered"):
+                continue
             if not _get_diff_preview(c):
                 continue
             diffs = c.get("diffs", [])

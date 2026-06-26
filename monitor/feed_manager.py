@@ -664,7 +664,11 @@ def _parse_memory_bloc_diff(diff_text: str):
 
 def _find_memory_bloc_entry(entries: list, value: str):
     for entry in entries:
-        if entry.get("type") == "memory_bloc_restoration" and entry.get("restoration_value") == value:
+        if entry.get("type") != "memory_bloc_restoration":
+            continue
+        if entry.get("restoration_value") == value:
+            return entry
+        if not entry.get("restoration_value") and value in (entry.get("title", "") or ""):
             return entry
     return None
 

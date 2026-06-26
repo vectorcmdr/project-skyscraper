@@ -84,6 +84,20 @@ def check_page_content(url: str, state: dict) -> list:
 
                 if was_password_form:
                     log(f"Page {url}: password-protected content recovered (was showing password form)", "DEEP")
+                    change_obj = {
+                        "type": "page_content_changed",
+                        "url": url,
+                        "old_hash": old_hash,
+                        "new_hash": new_hash,
+                        "detail": f"Password-protected content recovered: {url}",
+                        "_password_recovered": True,
+                    }
+                    if mod_gmt:
+                        change_obj["ts"] = mod_gmt
+                    author = find_author_for_url(state, url)
+                    if author:
+                        change_obj["author"] = author
+                    changes.append(change_obj)
                 elif not stale:
                     change_obj = {
                         "type": "page_content_changed",

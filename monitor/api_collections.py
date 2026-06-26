@@ -155,7 +155,7 @@ def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
     for page in range(2, total_pages + 1):
         page_url = f"{base_url}?per_page={per_page}&page={page}"
         jitter(0.15, 0.1)
-        pr = fetch(page_url)
+        pr = fetch(page_url, timeout=30)
         if pr.ok and pr.content:
             all_raw += pr.content
             try:
@@ -164,6 +164,21 @@ def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
                     all_items.extend(page_items)
             except json.JSONDecodeError:
                 pass
+        else:
+            log(f"API page {page}/{total_pages} fetch failed ({pr.status}), retrying...", "WARN")
+            jitter(1.0, 0.5)
+            pr = fetch(page_url, timeout=30)
+            if pr.ok and pr.content:
+                all_raw += pr.content
+                try:
+                    page_items = json.loads(pr.text)
+                    if isinstance(page_items, list):
+                        all_items.extend(page_items)
+                except json.JSONDecodeError:
+                    pass
+            else:
+                log(f"API page {page}/{total_pages} fetch failed again ({pr.status}), returning empty to avoid false changes", "WARN")
+                return [], "", 0, None, None
 
     combined_hash = hashlib.md5(all_raw).hexdigest()
     return all_items, combined_hash, total_pages, final_etag, final_last_modified

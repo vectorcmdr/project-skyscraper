@@ -1,32 +1,6 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-26T03:48:18.783592+00:00",
-      "title": "Memory bloc restoration: 367/365 [2 Pages]",
-      "link": "",
-      "diff": "0/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 2 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "367/365",
-      "page_count": 2,
-      "last_timestamp": "2026-06-26T03:48:18.783592+00:00"
-    },
-    {
-      "type": "api_items_removed",
-      "timestamp": "2026-06-26T03:45:25.860707+00:00",
-      "title": "353 item(s) removed from /wp-json/wp/v2/posts",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "353 item(s) removed from /wp-json/wp/v2/posts",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-06-23T22:47:56+00:00",
       "title": "2016_dataset_09082016",
@@ -272,6 +246,19 @@
       "site": "",
       "id": 4206,
       "game_date": ""
+    },
+    {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-21T18:40:11+00:00",
+      "title": "Memory bloc restoration: 367/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "367/365",
+      "page_count": 1,
+      "last_timestamp": "2026-06-21T18:40:11+00:00"
     },
     {
       "type": "api_items_added",
@@ -6644,5 +6631,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T03:48:18.791480+00:00"
+  "updated": "2026-06-26T04:10:00+00:00"
 }
