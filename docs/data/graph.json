@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T05:26:36.552711+00:00",
+  "updated": "2026-06-27T11:58:17.270936+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -382,7 +382,7 @@
       "type": "post",
       "label": "2013_dataset",
       "url": "https://project-skyscraper.com/2013/12/24/event-24122013/",
-      "author": "The Architect",
+      "author": "System",
       "date": "2013-12-24T01:00:00"
     },
     {
@@ -3414,7 +3414,7 @@
       "type": "post",
       "label": "2021_dataset",
       "url": "https://project-skyscraper.com/2021/02/25/event-25022021/",
-      "author": "The Architect",
+      "author": "System",
       "date": "2021-02-25T08:55:00"
     },
     {
@@ -3446,7 +3446,7 @@
       "type": "post",
       "label": "2023_dataset",
       "url": "https://project-skyscraper.com/2023/12/12/event-12122023/",
-      "author": "The Architect",
+      "author": "System",
       "date": "2023-12-12T01:00:00"
     },
     {
@@ -3534,7 +3534,7 @@
       "type": "post",
       "label": "HELLO, WORLD",
       "url": "https://project-skyscraper.com/1970/01/01/origin/",
-      "author": "The Architect",
+      "author": "System",
       "date": "1969-12-31T23:00:00"
     },
     {
@@ -6938,6 +6938,10 @@
     {
       "source": "/1970/01/01/origin",
       "target": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg"
+    },
+    {
+      "source": "/1970/01/01/origin",
+      "target": "/tag/unverified"
     },
     {
       "source": "/1970/01/01/origin",
@@ -11921,7 +11925,7 @@
     },
     {
       "source": "/2021/02/25/event-25022021",
-      "target": "/tag/stable"
+      "target": "/tag/verified"
     },
     {
       "source": "/2021/02/25/event-25022021",
@@ -13233,7 +13237,7 @@
     },
     {
       "source": "/1970/01/01/origin",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/1970/01/01/origin",
@@ -14321,7 +14325,7 @@
     },
     {
       "source": "/2021/02/25/event-25022021",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2021/02/25/event-25022021",
@@ -16625,7 +16629,7 @@
     },
     {
       "source": "/2023/12/12/event-12122023",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2023/12/12/event-12122023",
@@ -16633,7 +16637,7 @@
     },
     {
       "source": "/2013/12/24/event-24122013",
-      "target": "/author/theskyscraperarchitect"
+      "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2013/12/24/event-24122013",
