@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-27T15:58:53.480925+00:00",
+      "title": "freeimage.host image count: 6 → 7",
+      "link": "https://freeimage.host/skyscraper_prj",
+      "endpoint": "",
+      "diff": "- count: 6\n+ count: 7",
+      "detail": "freeimage.host image count: 6 → 7",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-06-27T15:57:46+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jun.27, 2026\n+ Jun.27, 2026\n  Jun.27, 2026\n  Jun.21, 2026\n  Dec.14, 2016\n  Dec.13, 2016\n- Dec.12, 2016\n- Dec.11, 2016\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 29/365 Completed",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-06-27T15:41:03+00:00",
       "title": "2016_dataset",
@@ -7309,5 +7335,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T15:41:35.379713+00:00"
+  "updated": "2026-06-27T15:58:53.488075+00:00"
 }
