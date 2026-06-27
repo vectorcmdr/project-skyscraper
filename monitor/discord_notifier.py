@@ -219,10 +219,24 @@ def notify_changes(changes: list, state: dict):
 
     if "unpublished_detected" in by_type:
         clist = by_type["unpublished_detected"]
-        _send_embed(title=f"Unpublished Content: {len(clist)}", description="",
-                    fields=[{"name": "Items", "value": "\n".join(
-                        f"#{c['id']} ({c['endpoint']}) HTTP {c['status']}" for c in clist[:10]
-                    )[:1024]}], color=0xaa44ff)
+        from monitor.config import DATA_DIR as _dd
+        _feed_path = _dd / "feed.json"
+        _known_ids = set()
+        if _feed_path.is_file():
+            try:
+                import json as _json
+                _feed = _json.loads(_feed_path.read_text(encoding="utf-8"))
+                for _e in _feed.get("entries", []):
+                    if _e.get("type") == "unpublished_detected" and _e.get("id"):
+                        _known_ids.add(_e["id"])
+            except Exception:
+                pass
+        clist = [c for c in clist if c.get("id") not in _known_ids]
+        if clist:
+            _send_embed(title=f"Unpublished Content: {len(clist)}", description="",
+                        fields=[{"name": "Items", "value": "\n".join(
+                            f"#{c['id']} ({c['endpoint']}) HTTP {c['status']}" for c in clist[:10]
+                        )[:1024]}], color=0xaa44ff)
 
     # External site changes
     ext_groups = {

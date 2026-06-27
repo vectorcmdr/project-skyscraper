@@ -185,10 +185,10 @@ def generate_site_data(state: dict, changes: list) -> bool:
 
             entry = _change_to_feed_entry(c, ts)
             if entry:
-                if entry["type"] == "unpublished_detected" and entry.get("id"):
-                    if any(e.get("type") == "unpublished_detected" and e.get("id") == entry["id"]
+                if entry["type"] == "unpublished_detected" and c.get("id"):
+                    pid = c["id"]
+                    if any(e.get("type") == "unpublished_detected" and e.get("id") == pid
                            for e in feed["entries"]):
-                        consumed_unpub.add(entry["id"])
                         continue
                 feed["entries"].append(entry)
                 _update_manifest(manifest, c)
@@ -494,47 +494,9 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         entry_id = c.get("id")
     elif t == "unpublished_detected":
         title = f"#{c.get('id', '?')} ({c.get('endpoint', '')})"
-    elif t == "unpublished_to_published":
-        pid = c.get("id", "?")
-        ep = c.get("endpoint", "")
-        first_seen = c.get("first_seen", "")
-        title = f"Previously unpublished {ep} #{pid}"
-        if first_seen:
-            try:
-                d = datetime.fromisoformat(first_seen)
-                title += f" (since {d.strftime('%Y-%m-%d')})"
-            except Exception:
-                title += f" (since {first_seen[:10]})"
-    elif t == "external_dns_changed":
-        diff = c.get("diff", "")
-        first = diff.split('\n')[0] if diff else ""
-        caption = "captured" if diff and not first.startswith('- ') else "changed"
-        title = f"DNS {c.get('record_type', '')} {caption} for {c.get('hostname', '')}"
-        link = f"https://{c.get('hostname', '')}"
-    elif t == "external_robots_txt_changed":
-        diff = c.get("diff", "")
-        first = diff.split('\n')[0] if diff else ""
-        caption = "captured" if diff and not first.startswith('- ') else "changed"
-        site = c.get("site", c.get("hostname", ""))
-        title = f"robots.txt {caption} for {site}"
-        link = c.get("url", f"https://{site}")
-        diff = c.get("diff", "")
-    elif t == "external_sitemap_changed":
-        site = c.get("site", c.get("hostname", ""))
-        added = len(c.get("added", []))
-        removed = len(c.get("removed", []))
-        parts = []
-        if added:
-            parts.append(f"+{added}")
-        if removed:
-            parts.append(f"-{removed}")
-        title = f"Sitemap: {' '.join(parts)} URL(s) for {site}"
-        link = c.get("url", f"https://{site}")
-        diff = c.get("diff", "")
-    elif t == "external_unpublished_detected":
-        title = f"#{c.get('id', '?')} ({c.get('endpoint', '')}) on {c.get('hostname', c.get('site', ''))}"
         link = f"https://{c.get('site', '')}/"
         diff = f"HTTP {c.get('status', '?')}"
+        entry_id = c.get("id")
     elif t == "external_unpublished_to_published":
         pid = c.get("id", "?")
         ep = c.get("endpoint", "")
@@ -575,7 +537,7 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         "detail": c.get("detail", ""),
         "author": author,
         "site": c.get("site_label", ""),
-        "id": entry_id if t in ("api_items_added", "media_orphan_upload", "media_upload") else None,
+        "id": entry_id if t in ("api_items_added", "unpublished_detected", "media_orphan_upload", "media_upload") else None,
         "game_date": game_date if t in ("api_items_added", "media_orphan_upload", "media_upload") else "",
     }
 
