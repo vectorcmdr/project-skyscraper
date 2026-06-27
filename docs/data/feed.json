@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-06-27T17:26:49+00:00",
+      "title": "2020_dataset_08022020",
+      "link": "https://project-skyscraper.com/2020/02/08/event-08022020/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-06-27T17:08:49+00:00",
       "title": "2020_dataset_08022020",
       "link": "https://project-skyscraper.com/2020/02/08/event-08022020/",
@@ -7504,5 +7517,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T17:09:19.337656+00:00"
+  "updated": "2026-06-27T17:27:36.116616+00:00"
 }
