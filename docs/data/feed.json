@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-27T12:15:17.262887+00:00",
+      "title": "Memory bloc restoration: 367/365 [2 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 2 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "367/365",
+      "page_count": 2,
+      "last_timestamp": "2026-06-27T12:15:17.262887+00:00"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-06-27T12:14:17.350726+00:00",
       "title": "",
@@ -12,6 +25,19 @@
       "site": "",
       "id": 4790,
       "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-06-27T12:08:46+00:00",
+      "title": "DIAGNOSTIC",
+      "link": "https://project-skyscraper.com/2026/06/27/diagnostic-131421/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 4790,
+      "game_date": "2026-06-27T12:14:00+00:00"
     },
     {
       "type": "external_content_changed",
@@ -376,19 +402,6 @@
       "site": "",
       "id": 4206,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-21T18:40:11+00:00",
-      "title": "Memory bloc restoration: 367/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "367/365",
-      "page_count": 1,
-      "last_timestamp": "2026-06-21T18:40:11+00:00"
     },
     {
       "type": "api_items_added",
@@ -6761,5 +6774,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T12:14:17.356823+00:00"
+  "updated": "2026-06-27T12:15:17.270979+00:00"
 }
