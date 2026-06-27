@@ -40,6 +40,49 @@ def check_page_content(url: str, state: dict) -> list:
         log(f"Page {url}: fetch failed ({result.status})", "WARN")
         return changes
 
+    # Detect fetcher-overwritten content via .old file
+    old_path = url_to_path(url, subdir="html")
+    old_path_old = old_path.parent / (old_path.name + '.old')
+    if old_path_old.is_file():
+        try:
+            old_bytes = old_path_old.read_bytes()
+            new_bytes = result.content
+            if old_bytes != new_bytes:
+                diff_text = compute_diff(old_bytes, new_bytes, url, str(old_path))
+                if diff_text:
+                    mod_gmt = find_modified_gmt_for_url(state, url)
+                    stale = False
+                    if mod_gmt:
+                        try:
+                            mod_dt = datetime.fromisoformat(mod_gmt)
+                            if mod_dt.tzinfo is None:
+                                mod_dt = mod_dt.replace(tzinfo=timezone.utc)
+                            age = datetime.now(timezone.utc) - mod_dt
+                            if age.total_seconds() > 3600:
+                                stale = True
+                        except Exception:
+                            pass
+                    if not stale:
+                        change_obj = {
+                            "type": "page_content_changed",
+                            "url": url,
+                            "detail": f"Content changed: {url}",
+                            "diffs": [{"url": url, "diff": diff_text}],
+                        }
+                        if mod_gmt:
+                            change_obj["ts"] = mod_gmt
+                        author = find_author_for_url(state, url)
+                        if author:
+                            change_obj["author"] = author
+                        changes.append(change_obj)
+                        log(f"Page content CHANGED (recovered from .old): {url}", "DEEP")
+        except Exception:
+            pass
+        try:
+            old_path_old.unlink()
+        except Exception:
+            pass
+
     if url == _NEURAL_URL:
         _extract_connection_count(result.text)
 

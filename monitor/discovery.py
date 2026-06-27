@@ -162,6 +162,10 @@ def _fetch_and_save(url: str, subdir: str = "") -> tuple:
     if old_bytes and old_bytes == content:
         return ("skipped", path, code, content)
 
+    # Save old content for page_checker to detect fetcher-overwritten changes
+    if old_bytes:
+        (path.parent / (path.name + '.old')).write_bytes(old_bytes)
+
     path.write_bytes(content)
     return ("ok", path, code, content)
 

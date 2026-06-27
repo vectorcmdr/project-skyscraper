@@ -156,6 +156,10 @@ def _fetch_save(url: str, subdir: str = "", save_headers: bool = False,
     if old_hash is not None and old_bytes:
         _save_diff_for_file(url, path, old_bytes, content)
 
+    # Save old content for page_checker to detect fetcher-overwritten changes
+    if old_bytes:
+        (path.parent / (path.name + '.old')).write_bytes(old_bytes)
+
     path.write_bytes(content)
     if old_hash is None:
         _stats["new"] += 1
