@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-27T11:30:36.399828+00:00",
+      "title": "freeimage.host image count: 6 → 5",
+      "link": "https://freeimage.host/skyscraper_prj",
+      "endpoint": "",
+      "diff": "- count: 6\n+ count: 5",
+      "detail": "freeimage.host image count: 6 → 5",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-06-27T09:45:08+00:00",
       "title": "2023_dataset",
@@ -6722,5 +6735,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T09:45:44.758843+00:00"
+  "updated": "2026-06-27T11:30:36.404429+00:00"
 }
