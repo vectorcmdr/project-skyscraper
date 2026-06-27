@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-27T12:44:58.851449+00:00",
-      "title": "Memory bloc restoration: 28/365 [434 Pages]",
-      "link": "https://project-skyscraper.com/2016/09/06/event-06092016.html",
-      "diff": "reconciliation → 28/365",
-      "detail": "Memory bloc restoration changed to 28/365 across 434 pages (reconciled)",
+      "type": "memory_bloc_verification",
+      "timestamp": "2026-06-27T13:50:56.741743+00:00",
+      "title": "Memory bloc verification: 28/365 [434 Pages]",
+      "link": "",
+      "diff": "27/365 → 28/365",
+      "detail": "Memory bloc verification changed from 27/365 to 28/365 across 434 pages",
       "author": "System",
       "site": "",
-      "restoration_value": "28/365",
+      "verification_value": "28/365",
       "page_count": 434,
-      "last_timestamp": "2026-06-27T12:44:58.851449+00:00"
+      "last_timestamp": "2026-06-27T13:50:56.741743+00:00"
     },
     {
       "type": "page_content_changed",
@@ -6906,5 +6906,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T13:00:00+00:00"
+  "updated": "2026-06-27T13:50:56.741743+00:00"
 }
