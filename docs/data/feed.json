@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-06-27T12:14:17.350726+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 4790,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-06-27T12:00:45.018012+00:00",
       "title": "freeimage.host image count: 5 → 6",
@@ -6748,5 +6761,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-27T12:00:45.025693+00:00"
+  "updated": "2026-06-27T12:14:17.356823+00:00"
 }
