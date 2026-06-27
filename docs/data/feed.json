@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-06-27T02:58:03.251122+00:00",
+      "title": "#4745 (posts)",
+      "link": "",
+      "endpoint": "posts",
+      "diff": "",
+      "detail": "Unpublished posts #4745 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-06-26T23:57:35.305932+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -6670,5 +6683,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-26T23:57:35.315322+00:00"
+  "updated": "2026-06-27T02:58:03.259229+00:00"
 }
