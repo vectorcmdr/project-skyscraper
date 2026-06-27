@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T14:59:39.409091+00:00",
+  "updated": "2026-06-27T15:17:02.247799+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -138,34 +138,10 @@
       "date": "2026-06-08T20:56:41Z"
     },
     {
-      "id": "/1970/01/01/origin/context.image.src",
-      "type": "page",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/1970/01/01/origin/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "/request-memory-timestamp-094317/context.image.src",
       "type": "page",
       "label": "Context.Image.Src",
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/1970/01/01/origin/context.item.anchor",
-      "type": "page",
-      "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/1970/01/01/origin/context.item.anchor",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/1970/01/01/origin/context.submission.url",
-      "type": "page",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/1970/01/01/origin/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -184,6 +160,14 @@
       "url": "https://project-skyscraper.com/dd85ac69ae24/",
       "author": "",
       "date": "2026-06-15T21:44:59Z"
+    },
+    {
+      "id": "/flow",
+      "type": "page",
+      "label": "FLOW",
+      "url": "https://project-skyscraper.com/flow/",
+      "author": "System",
+      "date": "2026-06-27T15:16:00"
     },
     {
       "id": "/",
@@ -6993,7 +6977,7 @@
     },
     {
       "source": "/1970/01/01/origin",
-      "target": "/tag/unverified"
+      "target": "/tag/verified"
     },
     {
       "source": "/1970/01/01/origin",
@@ -7002,18 +6986,6 @@
     {
       "source": "/1970/01/01/origin",
       "target": "/1980/03/03/hoe"
-    },
-    {
-      "source": "/1970/01/01/origin",
-      "target": "/1970/01/01/origin/context.submission.url"
-    },
-    {
-      "source": "/1970/01/01/origin",
-      "target": "/1970/01/01/origin/context.image.src"
-    },
-    {
-      "source": "/1970/01/01/origin",
-      "target": "/1970/01/01/origin/context.item.anchor"
     },
     {
       "source": "/2026/03/24/sleep-mode-46105",
@@ -13081,6 +13053,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/inbox"
     },
     {
@@ -13134,6 +13110,10 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
+    },
+    {
+      "source": "/flow",
+      "target": "/"
     },
     {
       "source": "/2026/06/27/temporal-analysis-152610",
@@ -13317,6 +13297,10 @@
     },
     {
       "source": "/structural-analysis-161527-full",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/flow",
       "target": "/author/system26da6be6a6"
     },
     {
