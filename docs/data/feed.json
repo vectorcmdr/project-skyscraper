@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-06-28T11:29:39+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/09/event-09052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1462752000: The Scale of ThingsValue: Mercury solar transit.\n+ memory bloc 1462752000: The Scale of SpaceValue: Mercury solar transit.\n- memory bloc : The Scale of Things Value: Mercury solar transit. It took about 6.5hrs to transit across the solar disc. Shame the sun wasn’t a bit more active at the time, but still… was fascinating to see. It’s quite clear below, just below the solar equator and off towards the left. The smudge above […]\n+ memory bloc : The Scale of Space Value: Mercury solar transit. It took about 6.5hrs to transit across the solar disc. Shame the sun wasn’t a bit more active at the time, but still… was fascinating to see. It’s quite clear below, just below the solar equator and off towards the left. The smudge above […]\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-06-28T11:24:54+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/05/09/event-09052016/",
@@ -7751,5 +7764,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-28T11:25:25.262867+00:00"
+  "updated": "2026-06-28T11:30:29.427736+00:00"
 }
