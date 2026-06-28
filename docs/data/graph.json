@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T16:22:15.179128+00:00",
+  "updated": "2026-06-28T00:28:18.477507+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -146,34 +146,10 @@
       "date": ""
     },
     {
-      "id": "/2017/04/25/2017_dataset_25042017/context.image.src",
-      "type": "page",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/2017/04/25/2017_dataset_25042017/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/04/25/2017_dataset_25042017/context.item.anchor",
-      "type": "page",
-      "label": "Context.Item.Anchor",
-      "url": "https://project-skyscraper.com/2017/04/25/2017_dataset_25042017/context.item.anchor",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "/request-memory-timestamp-094317/context.submission.url",
       "type": "page",
       "label": "Context.Submission.Url",
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2017/04/25/2017_dataset_25042017/context.submission.url",
-      "type": "page",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/2017/04/25/2017_dataset_25042017/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -2586,14 +2562,6 @@
       "date": "2016-10-16T23:00:00"
     },
     {
-      "id": "/2016/10/18/event-18102016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/10/18/event-18102016/",
-      "author": "System",
-      "date": "2016-10-17T23:00:00"
-    },
-    {
       "id": "/2016/10/16/event-16102016",
       "type": "post",
       "label": "2016_dataset",
@@ -3314,6 +3282,14 @@
       "date": "2016-06-14T23:00:00"
     },
     {
+      "id": "/2016/10/18/event-18102016",
+      "type": "post",
+      "label": "2016_dataset_18102016",
+      "url": "https://project-skyscraper.com/2016/10/18/event-18102016/",
+      "author": "System",
+      "date": "2016-10-17T23:00:00"
+    },
+    {
       "id": "/2016/04/20/event-20042016",
       "type": "post",
       "label": "2016_dataset_20042016",
@@ -3434,20 +3410,20 @@
       "date": "2018-01-17T01:00:00"
     },
     {
-      "id": "/2020/02/08/event-08022020",
-      "type": "post",
-      "label": "2020_dataset",
-      "url": "https://project-skyscraper.com/2020/02/08/event-08022020/",
-      "author": "System",
-      "date": "2020-02-08T00:00:00"
-    },
-    {
       "id": "/2020/04/07/event-07042020",
       "type": "post",
       "label": "2020_dataset_07042020",
       "url": "https://project-skyscraper.com/2020/04/07/event-07042020/",
       "author": "System",
       "date": "2020-04-07T12:00:00"
+    },
+    {
+      "id": "/2020/02/08/event-08022020",
+      "type": "post",
+      "label": "2020_dataset_08022020",
+      "url": "https://project-skyscraper.com/2020/02/08/event-08022020/",
+      "author": "System",
+      "date": "2020-02-08T00:00:00"
     },
     {
       "id": "/2021/02/25/event-25022021",
@@ -3562,6 +3538,14 @@
       "date": "2026-06-16T15:14:00"
     },
     {
+      "id": "/2026/06/27/diagnostic-155811",
+      "type": "post",
+      "label": "DIAGNOSTIC",
+      "url": "https://project-skyscraper.com/2026/06/27/diagnostic-155811/",
+      "author": "System",
+      "date": "2026-06-27T14:58:00"
+    },
+    {
       "id": "/2026/06/14/diagnostic-130321",
       "type": "post",
       "label": "DIAGNOSTIC",
@@ -3576,14 +3560,6 @@
       "url": "https://project-skyscraper.com/2026/06/27/diagnostic-131421/",
       "author": "System",
       "date": "2026-06-27T12:14:00"
-    },
-    {
-      "id": "/2026/06/27/diagnostic-155811",
-      "type": "post",
-      "label": "DIAGNOSTIC",
-      "url": "https://project-skyscraper.com/2026/06/27/diagnostic-155811/",
-      "author": "System",
-      "date": "2026-06-27T14:58:00"
     },
     {
       "id": "/1970/01/01/origin",
@@ -4354,6 +4330,14 @@
       "date": ""
     },
     {
+      "id": "https://galacticatlas.nomanssky.com/poi/region-318602CA759B",
+      "type": "external",
+      "label": "galacticatlas.nomanssky.com",
+      "url": "https://galacticatlas.nomanssky.com/poi/region-318602CA759B",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://hellogames.org/2023/08/23/no-mans-sky-celebrates-7-years-with-echoes-update/",
       "type": "external",
       "label": "hellogames.org",
@@ -4418,6 +4402,14 @@
       "date": ""
     },
     {
+      "id": "https://kotaku.com/a-look-at-how-no-mans-skys-procedural-generation-works-1787928446",
+      "type": "external",
+      "label": "kotaku.com",
+      "url": "https://kotaku.com/a-look-at-how-no-mans-skys-procedural-generation-works-1787928446",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://www.loudersound.com/features/how-65daysofstatic-ended-up-creating-no-man-s-sky-s-soundtrack",
       "type": "external",
       "label": "loudersound.com",
@@ -4470,6 +4462,14 @@
       "type": "external",
       "label": "recalldreams.dev",
       "url": "https://recalldreams.dev/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1fga27y/gone_gold/",
+      "type": "external",
+      "label": "reddit.com",
+      "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1fga27y/gone_gold/",
       "author": "",
       "date": ""
     },
@@ -6293,6 +6293,18 @@
     },
     {
       "source": "sitemap",
+      "target": "/flow"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/27/temporal-analysis-152610"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/27/diagnostic-155811"
+    },
+    {
+      "source": "sitemap",
       "target": "/2026/05/10/security-log-171453"
     },
     {
@@ -6534,6 +6546,10 @@
     {
       "source": "sitemap",
       "target": "/2026/06/27/diagnostic-131421"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/04/25/2017_dataset_25042017"
     },
     {
       "source": "sitemap",
@@ -9773,6 +9789,10 @@
     },
     {
       "source": "/2016/07/07/event-07072016",
+      "target": "https://www.reddit.com/r/NoMansSkyTheGame/comments/1fga27y/gone_gold/"
+    },
+    {
+      "source": "/2016/07/07/event-07072016",
       "target": "/2016/07/06/event-06072016"
     },
     {
@@ -10985,6 +11005,14 @@
     },
     {
       "source": "/2016/10/18/event-18102016",
+      "target": "https://kotaku.com/a-look-at-how-no-mans-skys-procedural-generation-works-1787928446"
+    },
+    {
+      "source": "/2016/10/18/event-18102016",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2016/10/18/event-18102016",
       "target": "/2016/10/17/event-17102016"
     },
     {
@@ -12076,6 +12104,38 @@
       "target": "/2026/06/21/sec-log-193922"
     },
     {
+      "source": "/flow",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/27/temporal-analysis-152610",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/27/temporal-analysis-152610",
+      "target": "https://iili.io/CRHAvxs.jpg"
+    },
+    {
+      "source": "/2026/06/27/temporal-analysis-152610",
+      "target": "/2026/06/27/diagnostic-131421"
+    },
+    {
+      "source": "/2026/06/27/temporal-analysis-152610",
+      "target": "/2026/06/27/diagnostic-155811"
+    },
+    {
+      "source": "/2026/06/27/diagnostic-155811",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/27/diagnostic-155811",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/06/27/diagnostic-155811",
+      "target": "/2026/06/27/temporal-analysis-152610"
+    },
+    {
       "source": "/2026/05/10/security-log-171453",
       "target": "/"
     },
@@ -13036,6 +13096,26 @@
       "target": "/2026/06/21/sec-log-193922"
     },
     {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "https://galacticatlas.nomanssky.com/poi/region-318602CA759B"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/tag/verified"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/2017/03/08/2017_dataset_08032017"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/2017/05/28/waking-titan"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13178,62 +13258,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/flow",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/27/temporal-analysis-152610",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/27/temporal-analysis-152610",
-      "target": "https://iili.io/CRHAvxs.jpg"
-    },
-    {
-      "source": "/2026/06/27/temporal-analysis-152610",
-      "target": "/2026/06/27/diagnostic-131421"
-    },
-    {
-      "source": "/2026/06/27/diagnostic-155811",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/27/diagnostic-155811",
-      "target": "/flow"
-    },
-    {
-      "source": "/2026/06/27/diagnostic-155811",
-      "target": "/2026/06/27/temporal-analysis-152610"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/2017/03/08/2017_dataset_08032017"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/2017/05/28/waking-titan"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/2017/04/25/2017_dataset_25042017/context.submission.url"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/2017/04/25/2017_dataset_25042017/context.image.src"
-    },
-    {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/2017/04/25/2017_dataset_25042017/context.item.anchor"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -18145,10 +18169,6 @@
     },
     {
       "source": "/2016/10/17/event-17102016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2016/10/18/event-18102016",
       "target": "/2016/02/29/event-out-of-range"
     },
     {
