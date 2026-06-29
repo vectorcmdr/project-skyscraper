@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T18:28:10.776943+00:00",
+  "updated": "2026-06-29T19:43:21.171617+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -4008,6 +4008,14 @@
       "url": "https://project-skyscraper.com/2026/06/09/structural-analysis-133722/",
       "author": "The Architect",
       "date": "2026-06-09T12:37:00"
+    },
+    {
+      "id": "/2026/06/29/structural-analysis-204201",
+      "type": "post",
+      "label": "STRUCTURAL ANALYSIS",
+      "url": "https://project-skyscraper.com/2026/06/29/structural-analysis-204201/",
+      "author": "The Architect",
+      "date": "2026-06-29T19:42:00"
     },
     {
       "id": "/2026/06/27/temporal-analysis-152610",
@@ -13328,6 +13336,14 @@
       "target": "/structural-analysis-161527-full"
     },
     {
+      "source": "/2026/06/29/structural-analysis-204201",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/29/structural-analysis-204201",
+      "target": "/2026/06/27/diagnostic-155811"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17169,6 +17185,14 @@
     },
     {
       "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/29/structural-analysis-204201",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/2026/06/29/structural-analysis-204201",
       "target": "/category/non-classe"
     },
     {
