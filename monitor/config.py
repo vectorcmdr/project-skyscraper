@@ -88,6 +88,7 @@ PASSWORD_PROTECTED_PAGES = {
     "https://project-skyscraper.com/request-memory-timestamp-094317/": "EMILY",
     "https://project-skyscraper.com/2026/05/31/sec-log-193727/": "EMILY",
     "https://project-skyscraper.com/report-bru-ent-reunion-peak/": "EVENT HORIZON",
+    "https://project-skyscraper.com/flow/": "ComputerZeroTime",
 }
 
 MIRROR_SUBDIRS = ["html", "api", "media", "assets", "discovery", "extras", "endpoints", "third_party"]

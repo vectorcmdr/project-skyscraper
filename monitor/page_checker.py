@@ -33,8 +33,14 @@ def check_page_content(url: str, state: dict) -> list:
     result = fetch(url, etag=etag, last_modified=last_modified, headers_extra=headers_extra)
 
     if result.not_modified:
-        page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return changes
+        if etag is not None:
+            page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+            return changes
+        # No ETag — Last-Modified may be stale. Re-fetch unconditionally.
+        result = fetch(url, etag=None, last_modified=None, headers_extra=headers_extra)
+        if result.not_modified or result.failed:
+            page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+            return changes
 
     if result.failed:
         log(f"Page {url}: fetch failed ({result.status})", "WARN")

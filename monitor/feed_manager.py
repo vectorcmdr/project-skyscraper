@@ -472,6 +472,11 @@ def _change_to_feed_entry(c: dict, ts: str = None) -> dict | None:
         diffs = c.get("diffs", [])
         if diffs:
             diff = _extract_minimal_diff(diffs)
+        if not diff and items:
+            item = items[0]
+            old_m = item.get("old_modified", "?")[:19] if item.get("old_modified") else "?"
+            new_m = item.get("modified", "?")[:19]
+            diff = f"- modified: {old_m}\n+ modified: {new_m}"
         if not diff:
             return None
     elif t == "page_content_changed":

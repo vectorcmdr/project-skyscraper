@@ -249,6 +249,8 @@ def build_graph(state: dict) -> dict:
                     ext_label = target_norm.strip("/").split("/")[-1].replace("-", " ").title() or "unknown"
                     if ext_label in ("Wp Json", "Wp Content", "Oembed", "Xmlrpc Php"):
                         continue
+                    if re.match(r'^/page/\d+', target_norm):
+                        continue
                 else:
                     if external_count >= MAX_EXTERNAL:
                         continue

@@ -310,6 +310,17 @@ def _get_diff_preview(change: dict, item: dict = None) -> str:
                     continue
                 if is_noise_diff_line(line):
                     continue
+                # Skip CSS noise in API diffs — lines matching CSS rule patterns
+                rest_check = line[1:].strip()
+                if rest_check and (
+                    rest_check.startswith('.') or
+                    rest_check.startswith('#') or
+                    rest_check.startswith('@media') or
+                    rest_check.startswith(':root') or
+                    rest_check.startswith('--wp-') or
+                    ('{' in rest_check and ('color:' in rest_check or 'padding:' in rest_check or 'margin:' in rest_check or 'font-' in rest_check or 'border:' in rest_check or 'background:' in rest_check or 'display:' in rest_check or 'width:' in rest_check or 'height:' in rest_check))
+                ):
+                    continue
                 prefix = line[0]
                 rest = line[1:].strip()
                 clean = re.sub(r'<[^>]+>', '', rest)
@@ -358,7 +369,7 @@ def _get_diff_preview(change: dict, item: dict = None) -> str:
     text = re.sub(r'<[^>]+>', '', text)
     text = html_mod.unescape(text)
     lines = [re.sub(r'\s+', ' ', l).strip() for l in text.split('\n')]
-    lines = [l for l in lines if l]
+    lines = [l for l in lines if l and not re.match(r'^[.#@][\w-]+.*\{', l) and 'font-size:' not in l]
     result = "\n".join(lines)
     if len(result) > 500:
         result = result[:497] + "..."
