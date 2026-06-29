@@ -661,13 +661,14 @@ def _parse_memory_bloc_diff(diff_text: str):
     if not diff_text:
         return None, None, None
     matches = _BLOC_TYPE_RE.findall(diff_text)
-    if len(matches) >= 2:
-        old_type = matches[0][0]
-        old_val = matches[0][1]
-        new_type = matches[1][0]
-        new_val = matches[1][1]
-        if old_type == new_type:
-            return old_val, new_val, old_type
+    # Group matches by type (restoration vs verification), then return first
+    # type that has both an old and new value
+    types = {}
+    for typ, val in matches:
+        types.setdefault(typ, []).append(val)
+    for typ, vals in types.items():
+        if len(vals) >= 2:
+            return vals[0], vals[1], typ
     return None, None, None
 
 
