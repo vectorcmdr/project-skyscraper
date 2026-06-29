@@ -79,69 +79,17 @@
       "game_date": ""
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-28T07:32:08+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  Jun.1, 2017\n  May.28, 2017\n+ Apr.25, 2017\n  Mar.8, 2017\n  Dec.15, 2016\n  Dec.14, 2016\n- Dec.13, 2016\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 29/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 31/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/",
-      "author": 0,
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-06-27T15:57:46+00:00",
+      "title": "Memory bloc restoration: 367/365 [5 Pages]",
+      "link": "",
+      "diff": "0/365 → 367/365",
+      "detail": "Memory bloc restoration changed from 367/365 to 367/365 across 5 pages",
+      "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-28T07:03:21.297891+00:00",
-      "title": "only-dust-remain",
-      "link": "https://project-skyscraper.com/only-dust-remain/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 31/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/only-dust-remain/",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-28T07:03:21.297509+00:00",
-      "title": "logo",
-      "link": "https://project-skyscraper.com/logo/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 31/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/logo/",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-28T07:03:21.296942+00:00",
-      "title": "tr4ce",
-      "link": "https://project-skyscraper.com/tr4ce/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 31/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/tr4ce/",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-28T07:03:21.295961+00:00",
-      "title": "project-skyscraper",
-      "link": "https://project-skyscraper.com/project-skyscraper/",
-      "endpoint": "",
-      "diff": "- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 31/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/project-skyscraper/",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "367/365",
+      "page_count": 5,
+      "last_timestamp": "2026-06-28T07:32:08+00:00"
     },
     {
       "type": "sitemap_added",
@@ -430,19 +378,6 @@
       "game_date": ""
     },
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-06-27T16:21:06.412754+00:00",
-      "title": "Memory bloc restoration: 367/365 [5 Pages]",
-      "link": "",
-      "diff": "0/365 → 367/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 367/365 across 5 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "367/365",
-      "page_count": 5,
-      "last_timestamp": "2026-06-27T16:21:06.412754+00:00"
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-06-27T16:21:06.412276+00:00",
       "title": "",
@@ -491,19 +426,6 @@
       "detail": "freeimage.host image count: 6 → 7",
       "author": 0,
       "site": "freeimage",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-06-27T15:57:46+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  Skip to content\n+ Jun.27, 2026\n+ Jun.27, 2026\n  Jun.27, 2026\n  Jun.21, 2026\n  Dec.14, 2016\n  Dec.13, 2016\n- Dec.12, 2016\n- Dec.11, 2016\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 28/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 367/365 CompletedMemory_bloc_verification: 29/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/",
-      "author": 0,
-      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -7965,5 +7887,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-29T02:45:12.955817+00:00"
+  "updated": "2026-06-29T03:14:47.672942+00:00"
 }
