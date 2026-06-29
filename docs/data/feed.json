@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-06-29T21:47:59.496582+00:00",
+      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-06-29 21:47:49 UTC\n# Lines: 55560 old -> 55560 new\n# Beautified: yes\n\n@@ -406,7 +406,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://recalldreams.dev/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=16.0-a.5\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=16.0-a.7\"></script>\n\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>",
+      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-06-29T21:22:25.049598+00:00",
       "title": "Memory bloc restoration: 367/365 [8 Pages]",
@@ -8108,5 +8121,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-29T21:22:25.057152+00:00"
+  "updated": "2026-06-29T21:47:59.502294+00:00"
 }
