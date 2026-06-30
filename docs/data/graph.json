@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T22:16:08.990718+00:00",
+  "updated": "2026-06-30T22:18:11.102988+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -224,6 +224,14 @@
       "url": "https://project-skyscraper.com/only-dust-remain/",
       "author": "",
       "date": "2026-06-01T21:47:44Z"
+    },
+    {
+      "id": "/tag/preserved",
+      "type": "page",
+      "label": "Preserved",
+      "url": "https://project-skyscraper.com/tag/preserved/",
+      "author": "",
+      "date": ""
     },
     {
       "id": "/project-skyscraper",
@@ -10261,15 +10269,11 @@
     },
     {
       "source": "/2016/08/09/event-09082016",
-      "target": "/2016/06/21/event-21062016"
-    },
-    {
-      "source": "/2016/08/09/event-09082016",
       "target": "https://www.ign.com/articles/2016/08/09/no-mans-sky-dev-sends-letter-to-australian-reviewers"
     },
     {
       "source": "/2016/08/09/event-09082016",
-      "target": "/tag/verified"
+      "target": "/tag/preserved"
     },
     {
       "source": "/2016/08/09/event-09082016",
