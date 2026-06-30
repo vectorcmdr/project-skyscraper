@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-06-30T21:55:15+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/21/event-21062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 367/365\n... (truncated)",
+      "detail": "2 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-06-30T18:03:05.095940+00:00",
       "title": "Memory bloc restoration: 367/365 [10 Pages]",
@@ -8225,5 +8238,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-06-30T18:03:05.104458+00:00"
+  "updated": "2026-06-30T21:55:38.598006+00:00"
 }
