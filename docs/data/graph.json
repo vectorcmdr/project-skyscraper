@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T00:30:04.246687+00:00",
+  "updated": "2026-06-30T09:48:40.037513+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6697,6 +6697,18 @@
     },
     {
       "source": "/",
+      "target": "/2026/06/29/diagnostic-222222"
+    },
+    {
+      "source": "/",
+      "target": "/2026/06/29/diagnostic-211612"
+    },
+    {
+      "source": "/",
+      "target": "/2026/06/29/structural-analysis-204201"
+    },
+    {
+      "source": "/",
       "target": "/2026/06/27/diagnostic-155811"
     },
     {
@@ -7082,18 +7094,6 @@
     {
       "source": "/",
       "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/14/event-14122016"
     },
     {
       "source": "/about",
@@ -12232,6 +12232,10 @@
       "target": "/2026/06/29/structural-analysis-204201"
     },
     {
+      "source": "/2026/06/29/diagnostic-211612",
+      "target": "/2026/06/29/diagnostic-222222"
+    },
+    {
       "source": "/2026/06/27/diagnostic-155811",
       "target": "/"
     },
@@ -13234,6 +13238,10 @@
     {
       "source": "/2026/06/29/structural-analysis-204201",
       "target": "/2026/06/27/diagnostic-155811"
+    },
+    {
+      "source": "/2026/06/29/structural-analysis-204201",
+      "target": "/2026/06/29/diagnostic-211612"
     },
     {
       "source": "/2026/06/29/diagnostic-222222",
