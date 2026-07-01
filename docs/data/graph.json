@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T22:19:53.610768+00:00",
+  "updated": "2026-07-01T00:31:41.506477+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -167,7 +167,7 @@
       "label": "Event 21062016",
       "url": "https://project-skyscraper.com/2016/06/21/event-21062016/",
       "author": "",
-      "date": "2026-06-29T11:53:06Z"
+      "date": ""
     },
     {
       "id": "/flow",
@@ -3706,6 +3706,14 @@
       "date": "2026-05-30T08:43:00"
     },
     {
+      "id": "/2026/06/30/sec-log-160922",
+      "type": "post",
+      "label": "SECURITY LOG",
+      "url": "https://project-skyscraper.com/2026/06/30/sec-log-160922/",
+      "author": "System",
+      "date": "2026-06-30T15:09:00"
+    },
+    {
       "id": "/2026/05/10/security-log-171453",
       "type": "post",
       "label": "SECURITY LOG",
@@ -3840,14 +3848,6 @@
       "url": "https://project-skyscraper.com/2026/06/21/sec-log-193922/",
       "author": "System",
       "date": "2026-06-21T18:39:00"
-    },
-    {
-      "id": "/2026/06/30/sec-log-160922",
-      "type": "post",
-      "label": "SECURITY LOG",
-      "url": "https://project-skyscraper.com/2026/06/30/sec-log-160922/",
-      "author": "System",
-      "date": "2026-06-30T15:09:00"
     },
     {
       "id": "/2026/06/30/sec-log-190254",
@@ -4354,14 +4354,6 @@
       "date": ""
     },
     {
-      "id": "https://blog.playstation.com/2016/03/03/no-mans-sky-launching-june-21st-on-ps4/",
-      "type": "external",
-      "label": "blog.playstation.com",
-      "url": "https://blog.playstation.com/2016/03/03/no-mans-sky-launching-june-21st-on-ps4/",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "https://www.cosmocover.com/newsroom/65daysofstatic-announce-no-mans-sky-music-for-an-infinite-universe/",
       "type": "external",
       "label": "cosmocover.com",
@@ -4638,6 +4630,14 @@
       "type": "external",
       "label": "x.com",
       "url": "https://x.com/NoMansSky/status/759111898675679232",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://x.com/NoMansSky/status/764060827833905153",
+      "type": "external",
+      "label": "x.com",
+      "url": "https://x.com/NoMansSky/status/764060827833905153",
       "author": "",
       "date": ""
     },
@@ -5557,10 +5557,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/06/21/event-21062016"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/06/22/event-22062016"
     },
     {
@@ -6397,6 +6393,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/2026/06/30/sec-log-160922"
+    },
+    {
+      "source": "sitemap",
       "target": "/2026/05/10/security-log-171453"
     },
     {
@@ -6650,6 +6650,14 @@
     {
       "source": "sitemap",
       "target": "/2026/06/29/diagnostic-222222"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/30/sec-log-190254"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/06/30/sec-log-231500"
     },
     {
       "source": "sitemap",
@@ -9660,36 +9668,8 @@
       "target": "/2016/06/21/event-21062016"
     },
     {
-      "source": "/2016/06/21/event-21062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
-      "target": "/2016/08/09/event-09082016"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
-      "target": "https://blog.playstation.com/2016/03/03/no-mans-sky-launching-june-21st-on-ps4/"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
-      "target": "/2016/06/20/event-20062016"
-    },
-    {
-      "source": "/2016/06/21/event-21062016",
-      "target": "/2016/06/22/event-22062016"
-    },
-    {
       "source": "/2016/06/22/event-22062016",
       "target": "/"
-    },
-    {
-      "source": "/2016/06/22/event-22062016",
-      "target": "/2016/06/21/event-21062016"
     },
     {
       "source": "/2016/06/22/event-22062016",
@@ -10313,11 +10293,11 @@
     },
     {
       "source": "/2016/08/12/event-12082016",
-      "target": "/2016/08/09/event-09082016"
+      "target": "https://x.com/NoMansSky/status/764060827833905153"
     },
     {
       "source": "/2016/08/12/event-12082016",
-      "target": "/tag/unverified"
+      "target": "/tag/verified"
     },
     {
       "source": "/2016/08/12/event-12082016",
@@ -12276,6 +12256,22 @@
       "target": "/2026/06/27/temporal-analysis-152610"
     },
     {
+      "source": "/2026/06/27/diagnostic-155811",
+      "target": "/2026/06/29/structural-analysis-204201"
+    },
+    {
+      "source": "/2026/06/30/sec-log-160922",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/30/sec-log-160922",
+      "target": "/2026/06/29/diagnostic-222222"
+    },
+    {
+      "source": "/2026/06/30/sec-log-160922",
+      "target": "/2026/06/30/sec-log-190254"
+    },
+    {
       "source": "/2026/05/10/security-log-171453",
       "target": "/"
     },
@@ -13284,6 +13280,26 @@
       "target": "/2026/06/29/diagnostic-211612"
     },
     {
+      "source": "/2026/06/30/sec-log-190254",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/30/sec-log-190254",
+      "target": "/2026/06/30/sec-log-160922"
+    },
+    {
+      "source": "/2026/06/30/sec-log-190254",
+      "target": "/2026/06/30/sec-log-231500"
+    },
+    {
+      "source": "/2026/06/30/sec-log-231500",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/30/sec-log-231500",
+      "target": "/2026/06/30/sec-log-190254"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13426,30 +13442,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2026/06/30/sec-log-160922",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/30/sec-log-160922",
-      "target": "/2026/06/29/diagnostic-222222"
-    },
-    {
-      "source": "/2026/06/30/sec-log-190254",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/30/sec-log-190254",
-      "target": "/2026/06/30/sec-log-160922"
-    },
-    {
-      "source": "/2026/06/30/sec-log-231500",
-      "target": "/"
-    },
-    {
-      "source": "/2026/06/30/sec-log-231500",
-      "target": "/2026/06/30/sec-log-190254"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
