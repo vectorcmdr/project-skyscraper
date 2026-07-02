@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-02T16:37:28+00:00",
+      "title": "2016_dataset_29112016",
+      "link": "https://project-skyscraper.com/2016/11/29/event-29112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1480377600: 43617373696e69Value: Who are they?\n- A swansong echoes out in the void with no voice.bctwukabcd.hxhbctwukabcd.hxh\n+ memory bloc 1480377600: One building. One mind.Value: ywvhk\n+ You wake up inside an immense, labyrinthine building that feels both deeply familiar and completely alien. Every corridor, every room, every staircase is a fragment of a memory, some comforting, some painful, some distorted.\n- memory bloc : 43617373696e69 Value: Who are they? A swansong echoes out in the void with no voice.bctwukabcd.hxhbctwukabcd.hxh Memory compliance: 80%\n+ memory bloc : One building. One mind. Value: ywvhk You wake up inside an immense, labyrinthine building that feels both deeply familiar and completely alien. Every corridor, every room, every staircase is a fragment of a memory, some comforting, some painful, some distorted. Memory compliance: 80%\n- memory bloc 1480377600: 43617373696e69Value: Who are they?\n+ memory bloc 1480377600: One building. One mind.Value: ywvhk\n- A swansong echoes out in the void with no voice.bctwukabcd.hxhbctwukabcd.hxh\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-02T16:28:15.888287+00:00",
       "title": "freeimage.host image count: 9 → 10",
@@ -8745,5 +8758,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-02T16:28:15.895966+00:00"
+  "updated": "2026-07-02T16:37:53.106847+00:00"
 }
