@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-02T13:47:53+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/02/07/event-07022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1454803200: no/value\n+ memory bloc 1454803200: A Harmless Tower Is Rarely Just a TowerValue: Side ideas may become signal structures.\n+ A new game appears on iPhone, which is already enough to keep thumbs busy for an unreasonable amount of time.Then, almost casually, a Tower Defence idea is mentioned. Nothing suspicious. Just a Tower Defence idea.\n+ Memory compliance: 100%\n- memory bloc : no/value\n+ memory bloc : A Harmless Tower Is Rarely Just a Tower Value: Side ideas may become signal structures. A new game appears on iPhone, which is already enough to keep thumbs busy for an unreasonable amount of time.Then, almost casually, a Tower Defence idea is mentioned. Nothing suspicious. Just a Tower Defence idea. Memory compliance: […]\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-01T02:49:36.994009+00:00",
       "title": "Memory bloc restoration: 366/365 [1 Pages]",
@@ -8485,5 +8498,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-01T02:49:37.000175+00:00"
+  "updated": "2026-07-02T13:48:11.225885+00:00"
 }
