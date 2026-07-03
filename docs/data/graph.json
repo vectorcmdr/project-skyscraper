@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T18:13:22.622610+00:00",
+  "updated": "2026-07-03T00:27:56.777680+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6717,6 +6717,18 @@
     },
     {
       "source": "sitemap",
+      "target": "/2017/12/01/event-01122017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2025/11/12/event-12112025"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2024/10/12/event-12102024"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -13372,6 +13384,54 @@
       "target": "/2026/06/30/sec-log-190254"
     },
     {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "https://becs-table.com.au/prawn-curry/"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/2017/08/07/event-07082017"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2025/11/12/event-12112025",
+      "target": "/"
+    },
+    {
+      "source": "/2025/11/12/event-12112025",
+      "target": "https://forums.atlas-65.com/t/emily-never-left-us/8949/19?u=System"
+    },
+    {
+      "source": "/2025/11/12/event-12112025",
+      "target": "/2025/08/09/event-09082025"
+    },
+    {
+      "source": "/2025/11/12/event-12112025",
+      "target": "/2026/03/24/sleep-mode-46105"
+    },
+    {
+      "source": "/2024/10/12/event-12102024",
+      "target": "/"
+    },
+    {
+      "source": "/2024/10/12/event-12102024",
+      "target": "https://tutorax.com/blogue/en/the-power-of-primes-why-prime-numbers-matter-in-mathematics/"
+    },
+    {
+      "source": "/2024/10/12/event-12102024",
+      "target": "/2023/12/12/event-12122023"
+    },
+    {
+      "source": "/2024/10/12/event-12102024",
+      "target": "/2025/03/26/event-26032025"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13514,54 +13574,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2017/12/01/event-01122017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/12/01/event-01122017",
-      "target": "https://becs-table.com.au/prawn-curry/"
-    },
-    {
-      "source": "/2017/12/01/event-01122017",
-      "target": "/2017/08/07/event-07082017"
-    },
-    {
-      "source": "/2017/12/01/event-01122017",
-      "target": "/2018/01/17/event-17012018"
-    },
-    {
-      "source": "/2025/11/12/event-12112025",
-      "target": "/"
-    },
-    {
-      "source": "/2025/11/12/event-12112025",
-      "target": "https://forums.atlas-65.com/t/emily-never-left-us/8949/19?u=System"
-    },
-    {
-      "source": "/2025/11/12/event-12112025",
-      "target": "/2025/08/09/event-09082025"
-    },
-    {
-      "source": "/2025/11/12/event-12112025",
-      "target": "/2026/03/24/sleep-mode-46105"
-    },
-    {
-      "source": "/2024/10/12/event-12102024",
-      "target": "/"
-    },
-    {
-      "source": "/2024/10/12/event-12102024",
-      "target": "https://tutorax.com/blogue/en/the-power-of-primes-why-prime-numbers-matter-in-mathematics/"
-    },
-    {
-      "source": "/2024/10/12/event-12102024",
-      "target": "/2023/12/12/event-12122023"
-    },
-    {
-      "source": "/2024/10/12/event-12102024",
-      "target": "/2025/03/26/event-26032025"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
