@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T04:29:53.279477+00:00",
+  "updated": "2026-07-03T09:18:15.590873+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -136,6 +136,14 @@
       "url": "https://project-skyscraper.com/b1c9e4f072a5/",
       "author": "",
       "date": "2026-06-08T20:56:41Z"
+    },
+    {
+      "id": "/calculator",
+      "type": "page",
+      "label": "Calculator",
+      "url": "https://project-skyscraper.com/calculator/",
+      "author": "System",
+      "date": "2026-07-03T09:16:00"
     },
     {
       "id": "/request-memory-timestamp-094317/context.image.src",
@@ -13517,6 +13525,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/flow"
     },
     {
@@ -13574,6 +13586,10 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
+    },
+    {
+      "source": "/calculator",
+      "target": "/"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -13761,6 +13777,10 @@
     },
     {
       "source": "/recon-protocol",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/calculator",
       "target": "/author/system26da6be6a6"
     },
     {
