@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-07-04T16:42:56.557319+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "5 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 5281,
+      "game_date": ""
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-04T16:41:59.724382+00:00",
       "title": "5 item(s) removed from /wp-json/wp/v2/search",
@@ -8927,5 +8940,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-04T16:41:59.729029+00:00"
+  "updated": "2026-07-04T16:42:56.566240+00:00"
 }
