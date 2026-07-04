@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-04T16:41:59.724382+00:00",
+      "title": "5 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "5 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-03T20:34:25+00:00",
       "title": "project-skyscraper.com",
@@ -8914,5 +8927,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-03T20:36:23.566115+00:00"
+  "updated": "2026-07-04T16:41:59.729029+00:00"
 }
