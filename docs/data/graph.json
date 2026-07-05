@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T16:04:46.706177+00:00",
+  "updated": "2026-07-05T16:05:42.951478+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -160,6 +160,14 @@
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
       "author": "",
       "date": ""
+    },
+    {
+      "id": "/counting",
+      "type": "page",
+      "label": "Counting",
+      "url": "https://project-skyscraper.com/counting/",
+      "author": "System",
+      "date": "2026-07-05T16:04:00"
     },
     {
       "id": "/dd85ac69ae24",
@@ -13613,6 +13621,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/counting"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/flow"
     },
     {
@@ -13670,6 +13682,10 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
+    },
+    {
+      "source": "/counting",
+      "target": "/"
     },
     {
       "source": "/2026/07/05/routine-initialisation",
@@ -13845,6 +13861,10 @@
     },
     {
       "source": "/flow",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/counting",
       "target": "/author/system26da6be6a6"
     },
     {
