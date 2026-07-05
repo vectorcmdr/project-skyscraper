@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T16:05:42.951478+00:00",
+  "updated": "2026-07-05T23:12:20.158512+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6869,6 +6869,10 @@
     },
     {
       "source": "/",
+      "target": "/2026/07/05/routine-initialisation"
+    },
+    {
+      "source": "/",
       "target": "/2026/07/04/fundamental-reality-of-matter-and-time"
     },
     {
@@ -7262,10 +7266,6 @@
     {
       "source": "/",
       "target": "/2016/12/27/event-27122016"
-    },
-    {
-      "source": "/",
-      "target": "/2016/12/26/event-26122016"
     },
     {
       "source": "/about",
@@ -12396,6 +12396,10 @@
       "target": "/2026/07/04/diagnostic-183421"
     },
     {
+      "source": "/2026/07/04/fundamental-reality-of-matter-and-time",
+      "target": "/2026/07/05/routine-initialisation"
+    },
+    {
       "source": "/2026/06/27/diagnostic-155811",
       "target": "/"
     },
@@ -13514,6 +13518,10 @@
     {
       "source": "/2026/07/03/internal_opid",
       "target": "/2026/06/30/sec-log-231500"
+    },
+    {
+      "source": "/2026/07/03/internal_opid",
+      "target": "/2026/07/04/diagnostic-183421"
     },
     {
       "source": "/calculator",
