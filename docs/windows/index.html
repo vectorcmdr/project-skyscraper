@@ -351,7 +351,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     operatorBoxes = [];
   }
 
-  function drawOperatorHighlight(n, name) {
+  function drawOperatorHighlight(n, name, hex) {
+    const useColor = (hex && hex !== '') ? '#' + hex : '#00ffcc';
     const globalIndex = n - 1;
     const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
     const local = globalIndex % PIXELS_PER_GRID;
@@ -365,17 +366,17 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
       'top:' + (rect.top + y * STEP - 4) + 'px;' +
       'width:' + (CELL_SIZE + 8) + 'px;height:' + (CELL_SIZE + 8) + 'px;' +
-      'border:2px solid #00ffcc;pointer-events:auto;z-index:1001;cursor:crosshair;' +
-      'box-shadow:0 0 10px rgba(0,255,204,0.7);';
+      'border:2px solid ' + useColor + ';pointer-events:auto;z-index:1001;cursor:crosshair;' +
+      'box-shadow:0 0 10px ' + useColor + ';';
     const label = document.createElement('div');
     label.textContent = name;
     label.style.cssText =
       'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
       'top:' + (rect.top + y * STEP - 18) + 'px;' +
-      'background:rgba(0,0,0,0.85);color:#00ffcc;border:1px solid #00ffcc;' +
+      'background:rgba(0,0,0,0.85);color:' + useColor + ';border:1px solid ' + useColor + ';' +
       'padding:1px 6px;font-family:inherit;font-size:0.65rem;white-space:nowrap;' +
       'pointer-events:none;z-index:1002;display:none;';
-    box.addEventListener('mouseenter', function() { label.style.display = 'block'; });
+    box.addEventListener('mouseenter', function() { if (lens && lens.style.display === 'none') label.style.display = 'block'; });
     box.addEventListener('mouseleave', function() { label.style.display = 'none'; });
     document.body.appendChild(box);
     document.body.appendChild(label);
@@ -389,16 +390,86 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     clearOperatorHighlights();
     const indices = [];
     operatorsData.forEach(op => {
-      drawOperatorHighlight(op.n, op.name);
+      drawOperatorHighlight(op.n, op.name, op.c);
       indices.push(op.n);
     });
     const primeCount = indices.filter(n => isPrime(n)).length;
     statusEl.textContent = indices.length + ' operators highlighted (' + primeCount + ' prime windows)';
   }
 
-  operatorsData = [{"n":2,"name":"La Checktitude"},{"n":3,"name":"Devilin Pixy"},{"n":5,"name":"Spyderweb333"},{"n":11,"name":"Morse"},{"n":13,"name":"Mafi"},{"n":17,"name":"YBM"},{"n":23,"name":"The_Poet"},{"n":31,"name":"Turbulentflow"},{"n":41,"name":"kerdorin"},{"n":53,"name":"ThatBomberBoi"},{"n":61,"name":"Legin1216"},{"n":73,"name":"Spock"},{"n":83,"name":"Rusty"},{"n":89,"name":"Ozoto"},{"n":97,"name":"Yuri"},{"n":101,"name":"Gumsk"},{"n":109,"name":"Skilnin"},{"n":127,"name":"BenR"},{"n":131,"name":"Foot"},{"n":137,"name":"Alterworld"},{"n":211,"name":"Stu"},{"n":251,"name":"astrosurf66"},{"n":257,"name":"ekpyroto"},{"n":317,"name":"CrossID"},{"n":373,"name":"OrY"},{"n":439,"name":"Selfie Gek"},{"n":457,"name":"Astaroth88"},{"n":491,"name":"SCHOLAE"},{"n":521,"name":"Beans"},{"n":569,"name":"vector_cmdr"},{"n":607,"name":"fort_wort_wort"},{"n":659,"name":"8ubblez"},{"n":683,"name":"melanon68"},{"n":701,"name":"Roger Rabbithole"},{"n":911,"name":"Vau1t [Weaver]"},{"n":971,"name":"m0lz"},{"n":1213,"name":"Rinha"},{"n":1619,"name":"Falkon"},{"n":1901,"name":"Blindvador"},{"n":1913,"name":"sheralmyst"},{"n":1987,"name":"Lachlaan"},{"n":1993,"name":"johhnycloud"},{"n":1997,"name":"Cattivision"},{"n":2011,"name":"Batzy"},{"n":2017,"name":"Frazzlesprite"},{"n":2027,"name":"citizenScientist"},{"n":3643,"name":"CyberNinjaX"},{"n":4013,"name":"toddumptious"},{"n":4019,"name":"ninjafireball09"},{"n":4099,"name":"CartoonHead"},{"n":4219,"name":"GoodGuysFree"},{"n":6101,"name":"Ashker"},{"n":6791,"name":"Javtron91"},{"n":6917,"name":"AlexWinter"},{"n":8867,"name":"thewingcmdr"},{"n":9001,"name":"woob"},{"n":9829,"name":"Travarz"},{"n":10949,"name":"MamieLinba"},{"n":11311,"name":"pr1sm"},{"n":11743,"name":"Polyphemus"},{"n":12421,"name":"AdaRynin"},{"n":18181,"name":"Bubba"},{"n":19991,"name":"lamb"},{"n":31397,"name":"Bernice42"},{"n":37861,"name":"taurtura"},{"n":71837,"name":"GR3G"},{"n":178093,"name":"MounTheRainbow"}];
+  operatorsData = [
+    {n:  2, name:"La Checktitude",    c:""},
+    {n:  3, name:"Devilin Pixy",      c:""},
+    {n:  5, name:"Spyderweb333",      c:""},
+    {n: 11, name:"Morse",             c:""},
+    {n: 13, name:"Mafi",              c:""},
+    {n: 17, name:"YBM",               c:""},
+    {n: 23, name:"The_Poet",          c:""},
+    {n: 31, name:"Turbulentflow",     c:""},
+    {n: 41, name:"kerdorin",          c:""},
+    {n: 53, name:"ThatBomberBoi",     c:"874067"},
+    {n: 61, name:"Legin1216",         c:""},
+    {n: 73, name:"Spock",             c:""},
+    {n: 83, name:"Rusty",             c:""},
+    {n: 89, name:"Ozoto",             c:""},
+    {n: 97, name:"Yuri",              c:""},
+    {n:101, name:"Gumsk",             c:""},
+    {n:109, name:"Skilnin",           c:""},
+    {n:127, name:"BenR",              c:""},
+    {n:131, name:"Foot",              c:""},
+    {n:137, name:"Alterworld",        c:""},
+    {n:211, name:"Stu",               c:""},
+    {n:251, name:"astrosurf66",       c:""},
+    {n:257, name:"ekpyroto",          c:""},
+    {n:317, name:"CrossID",           c:""},
+    {n:337, name:"JubiTheVille",      c:"AA1616"},
+    {n:373, name:"OrY",               c:""},
+    {n:439, name:"Selfie Gek",        c:""},
+    {n:457, name:"Astaroth88",        c:""},
+    {n:491, name:"SCHOLAE",           c:"70CCC3"},
+    {n:521, name:"Beans",             c:""},
+    {n:569, name:"vector_cmdr",       c:"fc3d21"},
+    {n:607, name:"fort_wort_wort",    c:""},
+    {n:659, name:"8ubblez",           c:""},
+    {n:683, name:"melanon68",         c:""},
+    {n:701, name:"Roger Rabbithole",  c:""},
+    {n:911, name:"Vau1t [Weaver]",    c:""},
+    {n:971, name:"m0lz",              c:"40E0D0"},
+    {n:1213,name:"Rinha",             c:""},
+    {n:1619,name:"Falkon",            c:""},
+    {n:1901,name:"Blindvador",        c:""},
+    {n:1913,name:"sheralmyst",        c:""},
+    {n:1987,name:"Lachlaan",          c:""},
+    {n:1993,name:"johhnycloud",       c:""},
+    {n:1997,name:"Cattivision",       c:""},
+    {n:2011,name:"Batzy",             c:""},
+    {n:2017,name:"Frazzlesprite",     c:"ba1ca8"},
+    {n:2027,name:"citizenScientist",  c:""},
+    {n:3643,name:"CyberNinjaX",       c:""},
+    {n:4013,name:"toddumptious",      c:""},
+    {n:4019,name:"ninjafireball09",   c:""},
+    {n:4099,name:"CartoonHead",       c:""},
+    {n:4219,name:"GoodGuysFree",      c:""},
+    {n:6101,name:"Ashker",            c:""},
+    {n:6791,name:"Javtron91",         c:""},
+    {n:6917,name:"AlexWinter",        c:""},
+    {n:8867,name:"thewingcmdr",       c:""},
+    {n:9001,name:"woob",              c:""},
+    {n:9829,name:"Travarz",           c:""},
+    {n:10949,name:"MamieLinba",       c:""},
+    {n:11311,name:"pr1sm",            c:""},
+    {n:11743,name:"Polyphemus",       c:""},
+    {n:12421,name:"AdaRynin",         c:""},
+    {n:18181,name:"Bubba",            c:""},
+    {n:19991,name:"lamb",             c:""},
+    {n:31397,name:"Bernice42",        c:""},
+    {n:37861,name:"taurtura",         c:""},
+    {n:71837,name:"GR3G",             c:""},
+    {n:178093,name:"MounTheRainbow",  c:""},
+  ];
   for (var oi = 0; oi < operatorsData.length; oi++) {
-    opLookup[operatorsData[oi].n - 1] = operatorsData[oi].name;
+    var op = operatorsData[oi];
+    opLookup[op.n - 1] = {name: op.name, color: op.c};
   }
 
   function doHighlight() {
@@ -440,7 +511,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       const boxes = operatorBoxes;
       operatorBoxes = [];
       boxes.forEach(el => el.remove());
-      operatorsData.forEach(op => drawOperatorHighlight(op.n, op.name));
+      operatorsData.forEach(op => drawOperatorHighlight(op.n, op.name, op.c));
     }
   }
 
@@ -542,19 +613,24 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
         lctx.fillStyle = color;
         lctx.fillRect(dx, dy, ZOOM_CELL, ZOOM_CELL);
 
-        if (opLookup[globalIdx]) {
+        var opInfo = opLookup[globalIdx];
+        if (opInfo) {
           lctx.fillStyle = 'rgba(0,0,0,0.7)';
           lctx.fillRect(dx, dy, ZOOM_CELL, 12);
           lctx.fillStyle = '#ffffff';
           lctx.font = '9px "IBM Plex Mono", monospace';
-          lctx.fillText(opLookup[globalIdx], dx + 2, dy + 11);
+          lctx.fillText(opInfo.name, dx + 2, dy + 11);
         }
       }
     }
 
+    var hoverIdx = targetGrid * PIXELS_PER_GRID + cellY * COLS + cellX;
+    var hoverOp = opLookup[hoverIdx];
+    var hoverColor = (hoverOp && hoverOp.color !== '') ? '#' + hoverOp.color : '#ff3333';
+
     var cdx = cellLx * ZOOM_CELL;
     var cdy = cellLy * ZOOM_CELL;
-    lctx.fillStyle = '#ff3333';
+    lctx.fillStyle = hoverColor;
     lctx.fillRect(cdx, cdy, ZOOM_CELL, 1);
     lctx.fillRect(cdx, cdy + ZOOM_CELL - 1, ZOOM_CELL, 1);
     lctx.fillRect(cdx, cdy, 1, ZOOM_CELL);
@@ -571,9 +647,12 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     lens.style.display = 'block';
 
     var popupGlobalIdx = targetGrid * PIXELS_PER_GRID + cellY * COLS + cellX;
-    var popupName = opLookup[popupGlobalIdx];
-    if (popupName) {
-      lensPopup.textContent = popupName;
+    var popupInfo = opLookup[popupGlobalIdx];
+    if (popupInfo) {
+      var popColor = (popupInfo.color !== '') ? '#' + popupInfo.color : '#00ffcc';
+      lensPopup.textContent = popupInfo.name;
+      lensPopup.style.color = popColor;
+      lensPopup.style.borderColor = popColor;
       lensPopup.style.left = (mx + 12) + 'px';
       lensPopup.style.top = (my - 28) + 'px';
       lensPopup.style.display = 'block';
