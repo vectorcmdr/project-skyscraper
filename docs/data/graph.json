@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T23:12:20.158512+00:00",
+  "updated": "2026-07-06T00:31:55.442396+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6497,6 +6497,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/counting"
+    },
+    {
+      "source": "sitemap",
       "target": "/2026/06/27/diagnostic-155811"
     },
     {
@@ -6514,6 +6518,10 @@
     {
       "source": "sitemap",
       "target": "/2026/05/12/sec-log-120000"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/07/05/routine-initialisation"
     },
     {
       "source": "sitemap",
@@ -12400,6 +12408,10 @@
       "target": "/2026/07/05/routine-initialisation"
     },
     {
+      "source": "/counting",
+      "target": "/"
+    },
+    {
       "source": "/2026/06/27/diagnostic-155811",
       "target": "/"
     },
@@ -12466,6 +12478,14 @@
     {
       "source": "/2026/05/12/sec-log-120000",
       "target": "/2026/05/13/sec-log-041825"
+    },
+    {
+      "source": "/2026/07/05/routine-initialisation",
+      "target": "/"
+    },
+    {
+      "source": "/2026/07/05/routine-initialisation",
+      "target": "/2026/07/04/fundamental-reality-of-matter-and-time"
     },
     {
       "source": "/2026/05/14/sec-log-172832",
@@ -13690,18 +13710,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/counting",
-      "target": "/"
-    },
-    {
-      "source": "/2026/07/05/routine-initialisation",
-      "target": "/"
-    },
-    {
-      "source": "/2026/07/05/routine-initialisation",
-      "target": "/2026/07/04/fundamental-reality-of-matter-and-time"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
