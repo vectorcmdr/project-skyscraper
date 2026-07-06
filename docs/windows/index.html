@@ -12,7 +12,7 @@ body{
   font-family:"IBM Plex Mono", "Courier New", monospace;
   font-size:clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.298), 1.0625rem);
   line-height:1.6;
-  padding-top:70px;
+  padding-top:8rem;
 }
 h2{font-size:clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.313), 2rem);line-height:1;text-transform:uppercase;font-weight:400}
 a{color:#f9f9f9}
@@ -23,34 +23,76 @@ a{color:#f9f9f9}
 .glitch-hover:hover img{animation:cyber-glitch .15s infinite alternate-reverse;filter:brightness(1.22) contrast(1.22) saturate(1.35)}
 /* DR1FT1NG */
 @keyframes cyber-glitch{
-  0%{filter:brightness(1.22) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
-  30%{filter:brightness(1.18) contrast(1.25) saturate(1.4) drop-shadow(-3px 0 #00ffff) drop-shadow(3px 0 #ff00ff)}
-  60%{filter:brightness(1.25) contrast(1.2) saturate(1.3) drop-shadow(2px 0 #00ff9f) drop-shadow(-2px 0 #ff0088)}
-  100%{filter:brightness(1.2) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+   0%{filter:brightness(1.22) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+   30%{filter:brightness(1.18) contrast(1.25) saturate(1.4) drop-shadow(-3px 0 #00ffff) drop-shadow(3px 0 #ff00ff)}
+   60%{filter:brightness(1.25) contrast(1.2) saturate(1.3) drop-shadow(2px 0 #00ff9f) drop-shadow(-2px 0 #ff0088)}
+   100%{filter:brightness(1.2) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+}
+a.glitch-link{color:#f9f9f9;text-decoration:none;position:relative;display:inline-block}
+a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alternate-reverse}
+@keyframes cyber-glitch-link{
+   0%{filter:brightness(1.25) contrast(1.3) saturate(1.4) drop-shadow(-2px 0 #f9f9f9) drop-shadow(2px 0 #00ffff)}
+   30%{filter:brightness(1.2) contrast(1.35) saturate(1.45) drop-shadow(-3px 0 #f9f9f9) drop-shadow(3px 0 #00ffff)}
+   60%{filter:brightness(1.3) contrast(1.25) saturate(1.35) drop-shadow(2px 0 #ff0088) drop-shadow(-2px 0 #00ff9f)}
+   100%{filter:brightness(1.22) contrast(1.28) saturate(1.4) drop-shadow(-2px 0 #f9f9f9) drop-shadow(2px 0 #00ffff)}
 }
 </style>
 <style>
-.control-bar{
+.topbar{
   position:fixed;top:0;left:0;right:0;z-index:9999;
-  background:rgba(0,0,0,0.92);border-bottom:1px solid #04879d;
-  padding:8px 16px;font-family:"IBM Plex Mono","Courier New",monospace;
-  display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.35rem;
+  padding:.6rem 1.5rem;
+  border-bottom:1px solid #222;
+  background:#0d0d0d;
+  font-family:"IBM Plex Mono","Courier New",monospace;
 }
-.control-bar button{
-  background:#04879d;color:#fff;border:none;padding:4px 12px;
-  cursor:pointer;font-family:inherit;font-size:0.75rem;
+.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.topbar-brand{
+  display:flex;align-items:center;gap:.6rem;
+  color:#eee;text-decoration:none;font-weight:bold;letter-spacing:.15em;
+  font-size:.85rem;
 }
-.control-bar button:hover{background:#05a8c4}
-.control-bar button.secondary{background:#333}
-.control-bar button.secondary:hover{background:#555}
-.control-bar button.danger{background:#8b0000}
-.control-bar button.danger:hover{background:#aa0000}
-.control-bar input{
-  background:#111;color:#fff;border:1px solid #04879d;
-  padding:4px 8px;font-family:inherit;font-size:0.75rem;width:200px;
+.topbar-avatar{
+  width:28px;height:28px;border-radius:50%;border:1px solid #d00;object-fit:cover;
 }
-.control-bar .sep{color:#444;margin:0 4px;user-select:none}
-.control-bar .status{color:#888;font-size:0.7rem;width:100%;margin-top:2px}
+.zoom-hint{font-size:.65rem;color:#eee;letter-spacing:.08em;white-space:nowrap}
+.topbar button{
+  background:transparent;color:#d00;border:1px solid #d00;
+  padding:.2rem .6rem;cursor:pointer;font-family:inherit;font-size:.7rem;
+  letter-spacing:.1em;transition:all .15s;line-height:1.5;
+}
+.topbar button:hover{background:#d00;color:#0a0a0a}
+.topbar button.sec{
+  color:#888;border-color:#333;
+}
+.topbar button.sec:hover{background:#333;color:#aaa;border-color:#666}
+.topbar .sep{color:#333;margin:0 4px;user-select:none}
+.topbar input{
+  background:#0d0d0d;color:#eee;border:1px solid #333;
+  padding:.15rem .4rem;font-family:inherit;font-size:.7rem;width:140px;
+}
+.topbar .pl{font-size:.7rem;color:#888;display:flex;align-items:center;gap:4px}
+.topbar .sw{width:100%;margin-top:1px}
+.topbar .st{color:#555;font-size:.6rem}
+.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem}
+.topbar-right-top{display:flex;align-items:center;gap:.6rem}
+.trace-status{font-size:.7rem;letter-spacing:.1em;white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem}
+.trace-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.trace-dot--active{background:#0a8;box-shadow:0 0 6px #0a8;animation:trace-pulse 1.5s ease-in-out infinite}
+@keyframes trace-pulse{0%,100%{opacity:1;box-shadow:0 0 6px #0a8}50%{opacity:.4;box-shadow:0 0 2px #0a8}}
+@keyframes trace-pulse-red{0%,100%{opacity:1;box-shadow:0 0 6px #d00}50%{opacity:.4;box-shadow:0 0 2px #d00}}
+.trace-dot--lost{background:#d00;box-shadow:0 0 6px #d00;animation:trace-pulse-red 1.5s ease-in-out infinite}
+.trace-label{color:#888}
+.trace-time{color:#666;font-variant-numeric:tabular-nums}
+.operator-label{font-size:.7rem;color:#666;letter-spacing:.05em}
+.proxy-network{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+.proxy-label{font-size:.6rem;color:#555;letter-spacing:.1em;white-space:nowrap}
+.proxy-tag{display:inline-block;padding:.1rem .35rem;text-decoration:none;border:1px solid #333;font-size:.6rem;color:#888;letter-spacing:.08em;transition:all .15s;line-height:1.4}
+.proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
+#zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
+#zoom-lens canvas{display:block}
 </style>
 <style>
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n5i0g1l9kn-s.woff2') format('woff2')}
@@ -59,23 +101,45 @@ a{color:#f9f9f9}
 </head>
 <body>
 
-<div class="control-bar" id="control-bar">
-  <button id="btn-complete">SHOW COMPLETE</button>
-  <button id="btn-reset" class="secondary">RESET</button>
-  <span class="sep">|</span>
-  <label style="color:#fff;font-size:0.75rem;display:flex;align-items:center;gap:4px;">
-    Prime(s):
-    <input type="text" id="prime-input" placeholder="e.g. 7, 13, 42" />
-  </label>
-  <button id="btn-highlight">HIGHLIGHT</button>
-  <button id="btn-clear" class="secondary">CLEAR</button>
-  <div class="status" id="status-line"></div>
+<div class="topbar" id="control-bar">
+  <div class="topbar-left">
+    <a href="../" class="topbar-brand">
+      <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/WINDOWS
+    </a>
+    <div class="topbar-row">
+      <button id="btn-complete">SHOW COMPLETE</button>
+      <button id="btn-reset" class="sec">RESET</button>
+      <span class="sep">|</span>
+      <label class="pl">
+        Window Prime(s):
+        <input type="text" id="prime-input" placeholder="e.g. 7, 13, 42" />
+      </label>
+      <button id="btn-highlight">HIGHLIGHT</button>
+      <button id="btn-list" class="sec">SHOW LIST</button>
+      <button id="btn-clear" class="sec">CLEAR</button>
+    </div>
+    <div class="topbar-row"><span class="zoom-hint">Shift to toggle zoom lens</span></div>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-right-top">
+      <span class="trace-status" id="traceStatus"></span>
+    </div>
+    <div class="proxy-network">
+      <span class="proxy-label">PROXY NETWORK:</span>
+      <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+      <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL NET</a>
+      <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+      <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+    </div>
+  </div>
+  <div class="sw"><div class="st" id="status-line"></div></div>
 </div>
 
 <div style="text-align:center;padding:30px 20px 40px;margin:0 auto;">
-  <h2 style="margin-bottom:20px;">WINDOWS</h2>
+  <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
+  <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:20px;">OPERATOR WINDOW SIMULATION TOOL</div>
   <div style="position:relative;display:inline-block;max-width:100%;">
-    <div style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
+     <div id="grid-container" style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
       <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
       <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
       <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
@@ -87,6 +151,8 @@ a{color:#f9f9f9}
     </div>
   </div>
 </div>
+
+<div id="zoom-lens"><canvas id="zoom-canvas"></canvas></div>
 
 <script>
 (function(){
@@ -123,6 +189,11 @@ a{color:#f9f9f9}
   let liveInterval = null;
   let showingComplete = false;
   let lastHighlighted = [];
+  let operatorBoxes = [];
+  let operatorsData = null;
+  let opLookup = {};
+  let canvasRects = [null, null, null];
+  let lensRAF = null;
 
   /* ---- helpers ---- */
   function isPrime(n) {
@@ -228,17 +299,13 @@ a{color:#f9f9f9}
     if (persistInterval) clearInterval(persistInterval);
     renderComplete(playerPrimes);
     showingComplete = true;
-    persistInterval = setInterval(() => {
-      if (showingComplete) {
-        renderComplete(parseInput());
-      }
-    }, 200);
   }
 
   function resetToLive() {
     if (persistInterval) { clearInterval(persistInterval); persistInterval = null; }
     if (liveInterval) { clearInterval(liveInterval); liveInterval = null; }
     clearHighlights();
+    clearOperatorHighlights();
     lastHighlighted = [];
     showingComplete = false;
     statusEl.textContent = '';
@@ -278,6 +345,62 @@ a{color:#f9f9f9}
     return valid;
   }
 
+  /* ---- operator highlights (SHOW LIST) ---- */
+  function clearOperatorHighlights() {
+    operatorBoxes.forEach(el => el.remove());
+    operatorBoxes = [];
+  }
+
+  function drawOperatorHighlight(n, name) {
+    const globalIndex = n - 1;
+    const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
+    const local = globalIndex % PIXELS_PER_GRID;
+    const x = local % COLS;
+    const y = Math.floor(local / COLS);
+    const canvas = document.getElementById('grid' + (grid + 1));
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const box = document.createElement('div');
+    box.style.cssText =
+      'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
+      'top:' + (rect.top + y * STEP - 4) + 'px;' +
+      'width:' + (CELL_SIZE + 8) + 'px;height:' + (CELL_SIZE + 8) + 'px;' +
+      'border:2px solid #00ffcc;pointer-events:auto;z-index:1001;cursor:crosshair;' +
+      'box-shadow:0 0 10px rgba(0,255,204,0.7);';
+    const label = document.createElement('div');
+    label.textContent = name;
+    label.style.cssText =
+      'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
+      'top:' + (rect.top + y * STEP - 18) + 'px;' +
+      'background:rgba(0,0,0,0.85);color:#00ffcc;border:1px solid #00ffcc;' +
+      'padding:1px 6px;font-family:inherit;font-size:0.65rem;white-space:nowrap;' +
+      'pointer-events:none;z-index:1002;display:none;';
+    box.addEventListener('mouseenter', function() { label.style.display = 'block'; });
+    box.addEventListener('mouseleave', function() { label.style.display = 'none'; });
+    document.body.appendChild(box);
+    document.body.appendChild(label);
+    operatorBoxes.push(box);
+    operatorBoxes.push(label);
+  }
+
+  function showList() {
+    if (!operatorsData) return;
+    showComplete([]);
+    clearOperatorHighlights();
+    const indices = [];
+    operatorsData.forEach(op => {
+      drawOperatorHighlight(op.n, op.name);
+      indices.push(op.n);
+    });
+    const primeCount = indices.filter(n => isPrime(n)).length;
+    statusEl.textContent = indices.length + ' operators highlighted (' + primeCount + ' prime windows)';
+  }
+
+  operatorsData = [{"n":2,"name":"La Checktitude"},{"n":3,"name":"Devilin Pixy"},{"n":5,"name":"Spyderweb333"},{"n":11,"name":"Morse"},{"n":13,"name":"Mafi"},{"n":17,"name":"YBM"},{"n":23,"name":"The_Poet"},{"n":31,"name":"Turbulentflow"},{"n":41,"name":"kerdorin"},{"n":53,"name":"ThatBomberBoi"},{"n":61,"name":"Legin1216"},{"n":73,"name":"Spock"},{"n":83,"name":"Rusty"},{"n":89,"name":"Ozoto"},{"n":97,"name":"Yuri"},{"n":101,"name":"Gumsk"},{"n":109,"name":"Skilnin"},{"n":127,"name":"BenR"},{"n":131,"name":"Foot"},{"n":137,"name":"Alterworld"},{"n":211,"name":"Stu"},{"n":251,"name":"astrosurf66"},{"n":257,"name":"ekpyroto"},{"n":317,"name":"CrossID"},{"n":373,"name":"OrY"},{"n":439,"name":"Selfie Gek"},{"n":457,"name":"Astaroth88"},{"n":491,"name":"SCHOLAE"},{"n":521,"name":"Beans"},{"n":569,"name":"vector_cmdr"},{"n":607,"name":"fort_wort_wort"},{"n":659,"name":"8ubblez"},{"n":683,"name":"melanon68"},{"n":701,"name":"Roger Rabbithole"},{"n":911,"name":"Vau1t [Weaver]"},{"n":971,"name":"m0lz"},{"n":1213,"name":"Rinha"},{"n":1619,"name":"Falkon"},{"n":1901,"name":"Blindvador"},{"n":1913,"name":"sheralmyst"},{"n":1987,"name":"Lachlaan"},{"n":1993,"name":"johhnycloud"},{"n":1997,"name":"Cattivision"},{"n":2011,"name":"Batzy"},{"n":2017,"name":"Frazzlesprite"},{"n":2027,"name":"citizenScientist"},{"n":3643,"name":"CyberNinjaX"},{"n":4013,"name":"toddumptious"},{"n":4019,"name":"ninjafireball09"},{"n":4099,"name":"CartoonHead"},{"n":4219,"name":"GoodGuysFree"},{"n":6101,"name":"Ashker"},{"n":6791,"name":"Javtron91"},{"n":6917,"name":"AlexWinter"},{"n":8867,"name":"thewingcmdr"},{"n":9001,"name":"woob"},{"n":9829,"name":"Travarz"},{"n":10949,"name":"MamieLinba"},{"n":11311,"name":"pr1sm"},{"n":11743,"name":"Polyphemus"},{"n":12421,"name":"AdaRynin"},{"n":18181,"name":"Bubba"},{"n":19991,"name":"lamb"},{"n":31397,"name":"Bernice42"},{"n":37861,"name":"taurtura"},{"n":71837,"name":"GR3G"},{"n":178093,"name":"MounTheRainbow"}];
+  for (var oi = 0; oi < operatorsData.length; oi++) {
+    opLookup[operatorsData[oi].n - 1] = operatorsData[oi].name;
+  }
+
   function doHighlight() {
     const nums = parseInput();
     if (!nums.length) {
@@ -293,22 +416,32 @@ a{color:#f9f9f9}
         valid.length + ' highlighted (' + primeCount + ' prime, ' +
         (valid.length - primeCount) + ' composite)';
     } else {
-      const primeCount = nums.filter(n => isPrime(n)).length;
-      statusEl.textContent =
-        nums.length + ' queued (' + primeCount + ' prime, ' +
-        (nums.length - primeCount) + ' composite)';
+      clearHighlights();
+      const valid = drawHighlights(nums);
+      const primeCount = valid.filter(n => isPrime(n)).length;
+      statusEl.textContent = valid.length
+        ? `Showing complete state — ${valid.length} highlighted (${primeCount} prime, ${valid.length - primeCount} composite)`
+        : 'Showing complete state. Enter prime(s) and click HIGHLIGHT.';
     }
   }
 
   /* ---- reposition highlights on scroll/resize ---- */
   function repositionHighlights() {
-    if (!highlightBoxes.length) return;
-    const nums = lastHighlighted;
-    if (!nums.length) return;
-    const boxes = highlightBoxes;
-    highlightBoxes = [];
-    boxes.forEach(el => el.remove());
-    drawHighlights(nums);
+    if (highlightBoxes.length) {
+      const nums = lastHighlighted;
+      if (nums.length) {
+        const boxes = highlightBoxes;
+        highlightBoxes = [];
+        boxes.forEach(el => el.remove());
+        drawHighlights(nums);
+      }
+    }
+    if (operatorBoxes.length && operatorsData) {
+      const boxes = operatorBoxes;
+      operatorBoxes = [];
+      boxes.forEach(el => el.remove());
+      operatorsData.forEach(op => drawOperatorHighlight(op.n, op.name));
+    }
   }
 
   /* ---- buttons ---- */
@@ -320,14 +453,155 @@ a{color:#f9f9f9}
 
   document.getElementById('btn-highlight').addEventListener('click', doHighlight);
 
+  document.getElementById('btn-list').addEventListener('click', showList);
+
   document.getElementById('btn-clear').addEventListener('click', () => {
     clearHighlights();
+    clearOperatorHighlights();
     lastHighlighted = [];
     statusEl.textContent = '';
   });
 
   inputEl.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') doHighlight();
+  });
+
+  /* ---- shift+hover zoom lens ---- */
+  const ZOOM_RADIUS = 7;
+  const ZOOM_CELL = 16;
+  const LENS_CELLS = ZOOM_RADIUS * 2 + 1;
+  const LENS_SIZE = LENS_CELLS * ZOOM_CELL;
+
+  const lens = document.getElementById('zoom-lens');
+  const lc = document.getElementById('zoom-canvas');
+  lc.width = LENS_SIZE;
+  lc.height = LENS_SIZE;
+  const lctx = lc.getContext('2d');
+
+  let shiftHeld = false;
+
+  function updateCanvasRects() {
+    for (var ri = 0; ri < canvases.length; ri++) {
+      canvasRects[ri] = canvases[ri].getBoundingClientRect();
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Shift') {
+      shiftHeld = !shiftHeld;
+      updateCanvasRects();
+      if (!shiftHeld) lens.style.display = 'none';
+    }
+  });
+  window.addEventListener('blur', function() {
+    shiftHeld = false;
+    lens.style.display = 'none';
+  });
+
+  function hideLens() {
+    lens.style.display = 'none';
+  }
+
+  function updateLens(mx, my) {
+    var targetGrid = -1, relX = 0, relY = 0;
+    for (var i = 0; i < canvases.length; i++) {
+      var r = canvasRects[i];
+      if (r && mx >= r.left && mx <= r.right && my >= r.top && my <= r.bottom) {
+        targetGrid = i; relX = mx - r.left; relY = my - r.top; break;
+      }
+    }
+    if (targetGrid < 0) { lens.style.display = 'none'; return; }
+
+    var cellX = Math.floor(relX / STEP);
+    var cellY = Math.floor(relY / STEP);
+    if (cellX < 0 || cellX >= COLS || cellY < 0 || cellY >= ROWS) { lens.style.display = 'none'; return; }
+
+    var leftCount = Math.min(cellX, ZOOM_RADIUS);
+    var topCount = Math.min(cellY, ZOOM_RADIUS);
+    var rightCount = Math.min(COLS - 1 - cellX, ZOOM_RADIUS);
+    var bottomCount = Math.min(ROWS - 1 - cellY, ZOOM_RADIUS);
+    var cellLx = ZOOM_RADIUS;  // cursor always at center of lens
+    var cellLy = ZOOM_RADIUS;
+
+    lctx.fillStyle = '#0a0a0a';
+    lctx.fillRect(0, 0, LENS_SIZE, LENS_SIZE);
+
+    for (var ly = cellLy - topCount; ly <= cellLy + bottomCount; ly++) {
+      for (var lx = cellLx - leftCount; lx <= cellLx + rightCount; lx++) {
+        var gx = cellX + (lx - cellLx);
+        var gy = cellY + (ly - cellLy);
+        var globalIdx = targetGrid * PIXELS_PER_GRID + gy * COLS + gx;
+        var color;
+        if (showingComplete || litPixels.has(globalIdx)) {
+          color = isPrime(globalIdx + 1) ? '#ffffff' : 'rgba(4,135,157,1)';
+        } else {
+          color = '#0a0a0a';
+        }
+        var dx = lx * ZOOM_CELL;
+        var dy = ly * ZOOM_CELL;
+        lctx.fillStyle = color;
+        lctx.fillRect(dx, dy, ZOOM_CELL, ZOOM_CELL);
+
+        if (opLookup[globalIdx]) {
+          lctx.fillStyle = 'rgba(0,0,0,0.7)';
+          lctx.fillRect(dx, dy, ZOOM_CELL, 12);
+          lctx.fillStyle = '#ffffff';
+          lctx.font = '9px "IBM Plex Mono", monospace';
+          lctx.fillText(opLookup[globalIdx], dx + 2, dy + 11);
+        }
+      }
+    }
+
+    var cdx = cellLx * ZOOM_CELL;
+    var cdy = cellLy * ZOOM_CELL;
+    lctx.fillStyle = '#ff3333';
+    lctx.fillRect(cdx, cdy, ZOOM_CELL, 1);
+    lctx.fillRect(cdx, cdy + ZOOM_CELL - 1, ZOOM_CELL, 1);
+    lctx.fillRect(cdx, cdy, 1, ZOOM_CELL);
+    lctx.fillRect(cdx + ZOOM_CELL - 1, cdy, 1, ZOOM_CELL);
+
+    var lensX = mx + 18;
+    var lensY = my - LENS_SIZE / 2;
+    if (lensX + LENS_SIZE > window.innerWidth - 10) lensX = mx - LENS_SIZE - 18;
+    if (lensY < 5) lensY = 5;
+    if (lensY + LENS_SIZE > window.innerHeight - 5) lensY = window.innerHeight - LENS_SIZE - 5;
+
+    lens.style.left = lensX + 'px';
+    lens.style.top = lensY + 'px';
+    lens.style.display = 'block';
+
+    var popupGlobalIdx = targetGrid * PIXELS_PER_GRID + cellY * COLS + cellX;
+    var popupName = opLookup[popupGlobalIdx];
+    if (popupName) {
+      lensPopup.textContent = popupName;
+      lensPopup.style.left = (mx + 12) + 'px';
+      lensPopup.style.top = (my - 28) + 'px';
+      lensPopup.style.display = 'block';
+    } else {
+      lensPopup.style.display = 'none';
+    }
+  }
+
+  /* ---- operator popup for zoom lens ---- */
+  var lensPopup = document.createElement('div');
+  lensPopup.style.cssText =
+    'position:fixed;display:none;z-index:10001;pointer-events:none;' +
+    'background:rgba(0,0,0,0.9);color:#00ffcc;border:1px solid #00ffcc;' +
+    'padding:2px 8px;font-family:inherit;font-size:0.7rem;white-space:nowrap;';
+  document.body.appendChild(lensPopup);
+
+  var lastLensTime = 0;
+  document.addEventListener('mousemove', function(e) {
+    if (!shiftHeld) {
+      if (lens.style.display !== 'none') lens.style.display = 'none';
+      lensPopup.style.display = 'none';
+      return;
+    }
+    var now = Date.now();
+    if (now - lastLensTime < 40) return;
+    lastLensTime = now;
+    updateCanvasRects();
+    updateLens(e.clientX, e.clientY);
   });
 
   /* ---- startup ---- */
@@ -340,11 +614,63 @@ a{color:#f9f9f9}
   /* ---- reposition highlights on viewport changes ---- */
   window.addEventListener('scroll', repositionHighlights);
   window.addEventListener('resize', repositionHighlights);
+
+  var lastTraceState = null;
+  var traceTick = null;
+  function fmtElapsed(s) {
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = Math.floor(s % 60);
+    if (h > 0) return h + 'h ' + m + 'm';
+    if (m > 0) return m + 'm ' + sec + 's';
+    return sec + 's';
+  }
+  function renderTrace(data) {
+    var el = document.getElementById('traceStatus');
+    if (!el) return;
+    if (data.state === 'ACTIVE') {
+      el.innerHTML = '<span class="trace-dot trace-dot--active"></span><span class="trace-label">TRACE: ACTIVE</span>';
+    } else if (data.state === 'LOST' && data.lastSeenAt) {
+      var then = new Date(data.lastSeenAt);
+      var elapsed = (Date.now() - then.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TRACE: LOST</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+  function updateTrace() {
+    fetch('../status/trace.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      renderTrace(data);
+      if (lastTraceState !== null && data.state !== lastTraceState) {
+        var audio = new Audio();
+        audio.src = data.state === 'ACTIVE' ? '../data/trace-on.mp3' : '../data/trace-off.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
+      lastTraceState = data.state;
+      if (data.state === 'LOST') {
+        if (traceTick) clearInterval(traceTick);
+        traceTick = setInterval(function() { renderTrace(data); }, 1000);
+      } else {
+        if (traceTick) { clearInterval(traceTick); traceTick = null; }
+      }
+    }).catch(function() {
+      var el = document.getElementById('traceStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  updateTrace();
+  setInterval(updateTrace, 30000);
 })();
 </script>
 
-<div style="text-align:center;padding:20px;color:#444;font-size:0.6rem;font-family:'IBM Plex Mono','Courier New',monospace;">
-  windows &mdash; counting overlay &mdash; by vector_cmdr
+
+<div style="text-align:center;padding:20px 20px 0;color:#f9f9f9;font-size:0.9rem;font-family:'IBM Plex Mono','Courier New',monospace;">
+  Project Skyscraper COUNTING window finder by <a href="https://github.com/vectorcmdr" target="_blank" rel="noopener" style="color:#d00;text-decoration:none;">vector_cmdr</a>
+</div>
+<div style="text-align:center;padding:4px 20px 20px;color:#f9f9f9;font-size:0.825rem;font-family:'IBM Plex Mono','Courier New',monospace;">
+  Base content used from <a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" style="color:#d00;text-decoration:none;">/counting/</a>
 </div>
 
 </body>
