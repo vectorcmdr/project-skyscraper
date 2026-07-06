@@ -363,15 +363,15 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     const rect = canvas.getBoundingClientRect();
     const box = document.createElement('div');
     box.style.cssText =
-      'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
-      'top:' + (rect.top + y * STEP - 4) + 'px;' +
-      'width:' + (CELL_SIZE + 8) + 'px;height:' + (CELL_SIZE + 8) + 'px;' +
+      'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
+      'top:' + (rect.top + y * STEP - 3) + 'px;' +
+      'width:' + (CELL_SIZE + 6) + 'px;height:' + (CELL_SIZE + 6) + 'px;' +
       'border:2px solid ' + useColor + ';pointer-events:auto;z-index:1001;cursor:crosshair;' +
       'box-shadow:0 0 10px ' + useColor + ';';
     const label = document.createElement('div');
     label.textContent = name;
     label.style.cssText =
-      'position:fixed;left:' + (rect.left + x * STEP - 4) + 'px;' +
+      'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
       'top:' + (rect.top + y * STEP - 18) + 'px;' +
       'background:rgba(0,0,0,0.85);color:' + useColor + ';border:1px solid ' + useColor + ';' +
       'padding:1px 6px;font-family:inherit;font-size:0.65rem;white-space:nowrap;' +
