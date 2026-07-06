@@ -212,6 +212,11 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       .filter(n => !isNaN(n) && n > 0 && n <= TOTAL_PIXELS);
   }
 
+  function playerColorFor(idx) {
+    var info = opLookup[idx];
+    return (info && info.color !== '') ? '#' + info.color : playerColor;
+  }
+
   /* ---- grid drawing ---- */
   function addRandomPixel() {
     if (litPixels.size >= TOTAL_PIXELS) return;
@@ -227,7 +232,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     const y = Math.floor(local / COLS);
     const ctx = contexts[gridIndex];
     const isPlayerWindow = isPrime(globalIndex + 1);
-    ctx.fillStyle = isPlayerWindow ? playerColor : pixelColor;
+    ctx.fillStyle = isPlayerWindow ? playerColorFor(globalIndex) : pixelColor;
     ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
   }
 
@@ -272,7 +277,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     for (let y = 0; y < ROWS; y++) {
       for (let x = 0; x < COLS; x++) {
         const idx = offset + y * COLS + x;
-        const color = isPrime(idx + 1) ? playerColor : pixelColor;
+        const color = isPrime(idx + 1) ? playerColorFor(idx) : pixelColor;
         ctx.fillStyle = color;
         ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
       }
