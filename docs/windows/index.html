@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WINDOWS &mdash; project-skyscraper</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#111;
+  color:#f9f9f9;
+  font-family:"IBM Plex Mono", "Courier New", monospace;
+  font-size:clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.298), 1.0625rem);
+  line-height:1.6;
+  padding-top:70px;
+}
+h2{font-size:clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.313), 2rem);line-height:1;text-transform:uppercase;font-weight:400}
+a{color:#f9f9f9}
+</style>
+<style>
+/* === M3MORY === */
+.glitch-hover img{transition:filter .3s ease;filter:brightness(1.05) contrast(1.05)}
+.glitch-hover:hover img{animation:cyber-glitch .15s infinite alternate-reverse;filter:brightness(1.22) contrast(1.22) saturate(1.35)}
+/* DR1FT1NG */
+@keyframes cyber-glitch{
+  0%{filter:brightness(1.22) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+  30%{filter:brightness(1.18) contrast(1.25) saturate(1.4) drop-shadow(-3px 0 #00ffff) drop-shadow(3px 0 #ff00ff)}
+  60%{filter:brightness(1.25) contrast(1.2) saturate(1.3) drop-shadow(2px 0 #00ff9f) drop-shadow(-2px 0 #ff0088)}
+  100%{filter:brightness(1.2) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+}
+</style>
+<style>
+.control-bar{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  background:rgba(0,0,0,0.92);border-bottom:1px solid #04879d;
+  padding:8px 16px;font-family:"IBM Plex Mono","Courier New",monospace;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+}
+.control-bar button{
+  background:#04879d;color:#fff;border:none;padding:4px 12px;
+  cursor:pointer;font-family:inherit;font-size:0.75rem;
+}
+.control-bar button:hover{background:#05a8c4}
+.control-bar button.secondary{background:#333}
+.control-bar button.secondary:hover{background:#555}
+.control-bar button.danger{background:#8b0000}
+.control-bar button.danger:hover{background:#aa0000}
+.control-bar input{
+  background:#111;color:#fff;border:1px solid #04879d;
+  padding:4px 8px;font-family:inherit;font-size:0.75rem;width:200px;
+}
+.control-bar .sep{color:#444;margin:0 4px;user-select:none}
+.control-bar .status{color:#888;font-size:0.7rem;width:100%;margin-top:2px}
+</style>
+<style>
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n5i0g1l9kn-s.woff2') format('woff2')}
+@font-face{font-family:"IBM Plex Mono";font-style:italic;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F6pfjptAgt5VM-kVkqdyU8n1ioq131hj-sNFQ.woff2') format('woff2')}
+</style>
+</head>
+<body>
+
+<div class="control-bar" id="control-bar">
+  <button id="btn-complete">SHOW COMPLETE</button>
+  <button id="btn-reset" class="secondary">RESET</button>
+  <span class="sep">|</span>
+  <label style="color:#fff;font-size:0.75rem;display:flex;align-items:center;gap:4px;">
+    Prime(s):
+    <input type="text" id="prime-input" placeholder="e.g. 7, 13, 42" />
+  </label>
+  <button id="btn-highlight">HIGHLIGHT</button>
+  <button id="btn-clear" class="secondary">CLEAR</button>
+  <div class="status" id="status-line"></div>
+</div>
+
+<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;">
+  <h2 style="margin-bottom:20px;">WINDOWS</h2>
+  <div style="position:relative;display:inline-block;max-width:100%;">
+    <div style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
+      <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+      <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+      <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+    </div>
+    <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                font-family:inherit;font-weight:inherit;color:#fff;
+                pointer-events:none;white-space:nowrap;font-size:2.8rem;
+                text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---- constants ---- */
+  const COLS = 131;
+  const ROWS = 541;
+  const CELL_SIZE = 2;
+  const GAP = 1;
+  const STEP = CELL_SIZE + GAP;
+  const PIXELS_PER_GRID = COLS * ROWS;
+  const TOTAL_PIXELS = PIXELS_PER_GRID * 3;
+
+  const publicationDate = '2026-07-05T16:16:16Z';
+  const pixelColor = 'rgba(4,135,157,1)';
+  const playerColor = '#ffffff';
+
+  /* ---- DOM refs ---- */
+  const canvases = [
+    document.getElementById('grid1'),
+    document.getElementById('grid2'),
+    document.getElementById('grid3')
+  ];
+  const contexts = canvases.map(c => c.getContext('2d', { alpha: true }));
+  const counterEl = document.getElementById('counter-display');
+  const statusEl = document.getElementById('status-line');
+  const inputEl = document.getElementById('prime-input');
+
+  /* ---- state ---- */
+  let litPixels = new Set();
+  let highlightBoxes = [];
+  let persistInterval = null;
+  let liveInterval = null;
+  let showingComplete = false;
+  let lastHighlighted = [];
+
+  /* ---- helpers ---- */
+  function isPrime(n) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    if (n % 2 === 0 || n % 3 === 0) return false;
+    for (let i = 5; i * i <= n; i += 6) {
+      if (n % i === 0 || n % (i + 2) === 0) return false;
+    }
+    return true;
+  }
+
+  function parseInput() {
+    return inputEl.value.split(/[,\s\n]+/)
+      .map(s => parseInt(s.trim()))
+      .filter(n => !isNaN(n) && n > 0 && n <= TOTAL_PIXELS);
+  }
+
+  /* ---- grid drawing ---- */
+  function addRandomPixel() {
+    if (litPixels.size >= TOTAL_PIXELS) return;
+    let globalIndex;
+    do {
+      globalIndex = Math.floor(Math.random() * TOTAL_PIXELS);
+    } while (litPixels.has(globalIndex));
+    litPixels.add(globalIndex);
+
+    const gridIndex = Math.floor(globalIndex / PIXELS_PER_GRID);
+    const local = globalIndex % PIXELS_PER_GRID;
+    const x = local % COLS;
+    const y = Math.floor(local / COLS);
+    const ctx = contexts[gridIndex];
+    const isPlayerWindow = isPrime(globalIndex + 1);
+    ctx.fillStyle = isPlayerWindow ? playerColor : pixelColor;
+    ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+  }
+
+  function initGrids() {
+    const now = Date.now();
+    const startTime = new Date(publicationDate).getTime();
+    let elapsed = Math.floor((now - startTime) / 1000);
+    if (elapsed < 0) elapsed = 0;
+    const toLight = Math.min(elapsed, TOTAL_PIXELS);
+    for (let i = 0; i < toLight; i++) {
+      addRandomPixel();
+    }
+  }
+
+  function updateCounter() {
+    const startTime = new Date(publicationDate).getTime();
+    const now = Date.now();
+    let elapsed = Math.floor((now - startTime) / 1000);
+    if (elapsed < 0) elapsed = 0;
+    const capped = Math.min(elapsed, TOTAL_PIXELS);
+    counterEl.textContent = String(capped).padStart(8, '0');
+    while (litPixels.size < capped) {
+      addRandomPixel();
+    }
+  }
+
+  function startLive() {
+    if (liveInterval) clearInterval(liveInterval);
+    contexts.forEach(ctx => {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    });
+    litPixels = new Set();
+    initGrids();
+    updateCounter();
+    liveInterval = setInterval(updateCounter, 1000);
+  }
+
+  /* ---- complete mode ---- */
+  function drawCompleteGrid(ctx, gridIndex) {
+    const offset = gridIndex * PIXELS_PER_GRID;
+    for (let y = 0; y < ROWS; y++) {
+      for (let x = 0; x < COLS; x++) {
+        const idx = offset + y * COLS + x;
+        const color = isPrime(idx + 1) ? playerColor : pixelColor;
+        ctx.fillStyle = color;
+        ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+      }
+    }
+  }
+
+  function renderComplete(playerPrimes) {
+    contexts.forEach((ctx, i) => {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      drawCompleteGrid(ctx, i);
+    });
+    counterEl.textContent = 'COMPLETE';
+    clearHighlights();
+    const valid = drawHighlights(playerPrimes);
+    const primeCount = valid.filter(n => isPrime(n)).length;
+    statusEl.textContent = valid.length
+      ? `Showing complete state — ${valid.length} highlighted (${primeCount} prime, ${valid.length - primeCount} composite)`
+      : 'Showing complete state. Enter prime(s) and click HIGHLIGHT.';
+  }
+
+  function showComplete(playerPrimes) {
+    if (liveInterval) { clearInterval(liveInterval); liveInterval = null; }
+    if (persistInterval) clearInterval(persistInterval);
+    renderComplete(playerPrimes);
+    showingComplete = true;
+    persistInterval = setInterval(() => {
+      if (showingComplete) {
+        renderComplete(parseInput());
+      }
+    }, 200);
+  }
+
+  function resetToLive() {
+    if (persistInterval) { clearInterval(persistInterval); persistInterval = null; }
+    if (liveInterval) { clearInterval(liveInterval); liveInterval = null; }
+    clearHighlights();
+    lastHighlighted = [];
+    showingComplete = false;
+    statusEl.textContent = '';
+    startLive();
+  }
+
+  /* ---- highlights ---- */
+  function clearHighlights() {
+    highlightBoxes.forEach(el => el.remove());
+    highlightBoxes = [];
+  }
+
+  function drawHighlights(indices) {
+    if (!indices.length) return [];
+    const valid = [];
+    indices.forEach(n => {
+      if (n < 1 || n > TOTAL_PIXELS) return;
+      const globalIndex = n - 1;
+      const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
+      const local = globalIndex % PIXELS_PER_GRID;
+      const x = local % COLS;
+      const y = Math.floor(local / COLS);
+      const canvas = document.getElementById('grid' + (grid + 1));
+      if (!canvas) return;
+      const rect = canvas.getBoundingClientRect();
+      const box = document.createElement('div');
+      box.style.cssText =
+        'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
+        'top:' + (rect.top + y * STEP - 3) + 'px;' +
+        'width:' + (CELL_SIZE + 6) + 'px;height:' + (CELL_SIZE + 6) + 'px;' +
+        'border:2px solid red;pointer-events:none;z-index:1000;' +
+        'box-shadow:0 0 8px rgba(255,0,0,0.8);';
+      document.body.appendChild(box);
+      highlightBoxes.push(box);
+      valid.push(n);
+    });
+    return valid;
+  }
+
+  function doHighlight() {
+    const nums = parseInput();
+    if (!nums.length) {
+      statusEl.textContent = 'No valid numbers entered.';
+      return;
+    }
+    lastHighlighted = nums;
+    if (!showingComplete) {
+      clearHighlights();
+      const valid = drawHighlights(nums);
+      const primeCount = valid.filter(n => isPrime(n)).length;
+      statusEl.textContent =
+        valid.length + ' highlighted (' + primeCount + ' prime, ' +
+        (valid.length - primeCount) + ' composite)';
+    } else {
+      const primeCount = nums.filter(n => isPrime(n)).length;
+      statusEl.textContent =
+        nums.length + ' queued (' + primeCount + ' prime, ' +
+        (nums.length - primeCount) + ' composite)';
+    }
+  }
+
+  /* ---- reposition highlights on scroll/resize ---- */
+  function repositionHighlights() {
+    if (!highlightBoxes.length) return;
+    const nums = lastHighlighted;
+    if (!nums.length) return;
+    const boxes = highlightBoxes;
+    highlightBoxes = [];
+    boxes.forEach(el => el.remove());
+    drawHighlights(nums);
+  }
+
+  /* ---- buttons ---- */
+  document.getElementById('btn-complete').addEventListener('click', () => {
+    showComplete(parseInput());
+  });
+
+  document.getElementById('btn-reset').addEventListener('click', resetToLive);
+
+  document.getElementById('btn-highlight').addEventListener('click', doHighlight);
+
+  document.getElementById('btn-clear').addEventListener('click', () => {
+    clearHighlights();
+    lastHighlighted = [];
+    statusEl.textContent = '';
+  });
+
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') doHighlight();
+  });
+
+  /* ---- startup ---- */
+  contexts.forEach(ctx => {
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  });
+  startLive();
+
+  /* ---- reposition highlights on viewport changes ---- */
+  window.addEventListener('scroll', repositionHighlights);
+  window.addEventListener('resize', repositionHighlights);
+})();
+</script>
+
+<div style="text-align:center;padding:20px;color:#444;font-size:0.6rem;font-family:'IBM Plex Mono','Courier New',monospace;">
+  windows &mdash; counting overlay &mdash; by vector_cmdr
+</div>
+
+</body>
+</html>
