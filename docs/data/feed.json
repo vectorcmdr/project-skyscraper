@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-07T19:10:42.010237+00:00",
+      "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "link": "https://recalldreams.dev/2026/04/24/hello-world/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/2026/04/24/hello-world/\n# File: html/2026/04/24/hello-world/index.html\n# Timestamp: 2026-07-07 19:10:22 UTC\n# Lines: 55562 old -> 55552 new\n# Beautified: yes\n\n@@ -406,7 +406,7 @@\n <script id=\"jetpack-blocks-assets-base-url-js-before\">var Jetpack_Block_Assets_Base_Url = \"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/\";\n\n <script type='text/javascript'  src='https://recalldreams.dev/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=16.0-beta\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-subscriptions-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=16.0\"></script>\n\n \t\t<!-- WordPress.com Editing Toolkit Plugin - Coming Soon -->\n\n \t</body>\n\n </html>",
+      "detail": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-07T19:10:42.010177+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100\n# File: api/wp-json/wp/v2/media_per_page_100/.json\n# Timestamp: 2026-07-07 19:10:14 UTC\n# Lines: 57948 old -> 63261 new\n# Beautified: yes\n\n@@ -1,4 +1,109 @@\n [\n\n+  {\n\n+    \"date\": \"2026-07-07T18:03:58\",\n\n+    \"title\": {\n\n+      \"rendered\": \"player\"\n\n+    },\n\n+    \"filename\": \"player.png\",\n\n+    \"filesize\": 3150620,\n\n+    \"jetpack_likes_enabled\": true,\n\n+    \"jetpack_sharing_enabled\": true,\n\n+    \"jetpack_shortlink\": \"https://wp.me/ahdnDc-2b\",\n\n+    \"description\": {\n\n+      \"rendered\": \"<p class=\\\"attachment\\\"><a href=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?ssl=1\\\"><img loading=\\\"lazy\\\" decoding=\\\"async\\\" width=\\\"188\\\" height=\\\"300\\\" src=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?fit=188%2C300&amp;ssl=1\\\" class=\\\"attachment-medium size-medium\\\" alt=\\\"\\\" srcset=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?w=1000&amp;ssl=1 1000w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?resize=188%2C300&amp;ssl=1 188w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?resize=640%2C1024&amp;ssl=1 640w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?resize=768%2C1229&amp;ssl=1 768w, https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?resize=960%2C1536&amp;ssl=1 960w\\\" sizes=\\\"auto, (max-width: 188px) 100vw, 188px\\\" data-attachment-id=\\\"135\\\" data-permalink=\\\"https://recalldreams.dev/player/\\\" data-orig-file=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?fit=1000%2C1600&amp;ssl=1\\\" data-orig-size=\\\"1000,1600\\\" data-comments-opened=\\\"1\\\" data-image-meta=\\\"{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;,&quot;alt&quot;:&quot;&quot;}\\\" data-image-title=\\\"player\\\" data-image-description=\\\"\\\" data-image-caption=\\\"\\\" data-large-file=\\\"https://i0.wp.com/recalldreams.dev/wp-content/uploads/2026/07/player.png?fit=640%2C1024&amp;ssl=1\\\" /></a></p>\\n\"\n\n+    },\n\n+    \"caption\": {\n\n+      \"rendered\": \"\"\n\n+    },\n\n+    \"alt_text\": \"\",\n\n+    \"media_type\": \"image\",\n\n+    \"mime_type\": \"image/png\",\n\n+    \"media_details\": {\n\n+      \"width\": 1000,\n\n+      \"height\": 1600,\n\n+      \"file\": \"2026/07/player.png\",\n\n+      \"filesize\": 3150620,\n\n+      \"sizes\": {\n\n+        \"medium\": {\n\n+          \"file\": \"player-188x300.png\",\n\n+          \"width\": 188,\n\n... (80 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/media?per_page=100",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-07T17:38:25.595128+00:00",
       "title": "New media: player on recalldreams.dev",
       "link": "https://recalldreams.dev/wp-content/uploads/2026/07/player.png",
@@ -9291,5 +9317,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T17:38:25.599896+00:00"
+  "updated": "2026-07-07T19:10:42.015915+00:00"
 }
