@@ -1,19 +1,6 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-07T22:38:40+00:00",
-      "title": "counting",
-      "link": "https://project-skyscraper.com/counting/",
-      "endpoint": "",
-      "diff": "- (original script without prime twinkle effect)\n+ Living PRIMES: prime-numbered pixels now twinkle at 180ms interval (30% probability per tick, alternating #ffffff/#bbbbbb)",
-      "detail": "Content changed: https://project-skyscraper.com/counting/ — Prime pixel twinkle animation added to template",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_modified",
       "timestamp": "2026-07-07T23:01:59+00:00",
       "title": "Inbox",
@@ -35,6 +22,19 @@
       "diff": "+ Project Skyscraper\n+ The Architect >À : Ghost >\n+ mercredi 08 juillet00:40\n+ Dans quelques heures, le compte à rebours que TU as lancé sera complet. Et il ne faudra que quelques heures de plus pour exécuter le opening_door_protocol. Tu auras ton canal direct avec les Opérateurs.Tu me dois une explication.Et non je n’ai pas utilisé le code du lycée. Pourquoi faire ?\n... (truncated)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-07-07T22:38:40+00:00",
+      "title": "counting",
+      "link": "https://project-skyscraper.com/counting/",
+      "endpoint": "",
+      "diff": "- (original script without prime twinkle effect)\n+ Living PRIMES: prime-numbered pixels now twinkle at 180ms interval (30% probability per tick, alternating #ffffff/#bbbbbb)",
+      "detail": "Content changed: https://project-skyscraper.com/counting/ — Prime pixel twinkle animation added to template",
+      "author": 0,
       "site": "",
       "id": null,
       "game_date": ""
@@ -9356,5 +9356,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T23:03:09.332278+00:00"
+  "updated": "2026-07-07T23:17:32.491704+00:00"
 }
