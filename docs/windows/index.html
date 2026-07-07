@@ -48,7 +48,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   font-family:"IBM Plex Mono","Courier New",monospace;
   max-width:100%;overflow-x:hidden;box-sizing:border-box;
 }
-.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;max-width:100%}
 .topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;max-width:100%}
 .topbar-brand{
   display:flex;align-items:center;gap:.6rem;
@@ -77,7 +77,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .topbar .pl{font-size:.7rem;color:#888;display:flex;align-items:center;gap:4px}
 .topbar .sw{width:100%;margin-top:1px}
 .topbar .st{color:#555;font-size:.6rem}
-.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem}
+.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;max-width:100%}
 .topbar-right-top{display:flex;align-items:center;gap:.6rem}
 .trace-status{font-size:.7rem;letter-spacing:.1em;white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem}
 .trace-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -157,11 +157,14 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 function adjustSpacer(){
   var tb = document.getElementById('control-bar');
   var sp = document.getElementById('topbar-spacer');
+  var mc = document.getElementById('main-content');
   if(!tb || !sp) return;
   if (window.innerWidth > 900) {
     sp.style.height = '0';
+    if (mc) mc.style.paddingTop = '30px';
   } else {
     sp.style.height = tb.offsetHeight + 'px';
+    if (mc) mc.style.paddingTop = '8px';
   }
 }
 if (window.ResizeObserver) {
@@ -179,7 +182,7 @@ adjustSpacer();
   <button class="tab-btn" data-tab="3d">3D TOWER</button>
 </div>
 
-<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
+<div id="main-content" style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
   <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
   <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:20px;">OPERATOR WINDOW SIMULATION TOOL</div>
 
