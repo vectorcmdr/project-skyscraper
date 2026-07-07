@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-07-07T22:38:40+00:00",
+      "title": "counting",
+      "link": "https://project-skyscraper.com/counting/",
+      "endpoint": "",
+      "diff": "- (original script without prime twinkle effect)\n+ Living PRIMES: prime-numbered pixels now twinkle at 180ms interval (30% probability per tick, alternating #ffffff/#bbbbbb)",
+      "detail": "Content changed: https://project-skyscraper.com/counting/ — Prime pixel twinkle animation added to template",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-07-07T23:01:59+00:00",
       "title": "Inbox",
