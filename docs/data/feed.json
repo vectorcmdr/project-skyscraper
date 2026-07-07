@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-07T06:45:30.757691+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-07 06:45:05 UTC\n# Lines: 599457 old -> 599766 new\n# Beautified: yes\n\n@@ -7998,6 +7998,25 @@\n           \"args\": {\n\n             \"task_id\": {\n\n               \"description\": \"The acknowledgment task to mark complete.\",\n\n+              \"required\": true\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/wpcom/v2/ai-launchpad/skip-task\": {\n\n+      \"namespace\": \"wpcom/v2\",\n\n+      \"methods\": [\n\n+        \"POST\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"POST\"\n\n+          ],\n\n+          \"args\": {\n\n+            \"task_id\": {\n\n+              \"description\": \"The task to skip.\",\n\n               \"required\": true\n\n             }\n\n           }\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-07T00:44:07.458580+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
       "link": "https://recalldreams.dev/wp-json/",
@@ -9239,5 +9252,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T00:44:07.464411+00:00"
+  "updated": "2026-07-07T06:45:30.763182+00:00"
 }
