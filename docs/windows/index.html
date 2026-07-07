@@ -93,13 +93,6 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
-@media(max-width:900px){
-  .topbar-left{min-width:0;width:100%;align-items:stretch}
-  .topbar-right{min-width:0;width:100%}
-  .proxy-network{width:100%}
-  .zoom-hint{display:none}
-  body{padding-top:14rem}
-}
 </style>
 <style>
 .tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
@@ -836,6 +829,32 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 </div>
 
 <script>
+function applyMobileLayout() {
+  var mq = window.innerWidth <= 900;
+  var el;
+  el = document.querySelector('.topbar-left');
+  if (el) {
+    el.style.minWidth = mq ? '0' : '';
+    el.style.width = mq ? '100%' : '';
+    el.style.alignItems = mq ? 'stretch' : '';
+  }
+  el = document.querySelector('.topbar-right');
+  if (el) {
+    el.style.minWidth = mq ? '0' : '';
+    el.style.width = mq ? '100%' : '';
+  }
+  el = document.querySelector('.proxy-network');
+  if (el) el.style.width = mq ? '100%' : '';
+  el = document.querySelector('.zoom-hint');
+  if (el) el.style.display = mq ? 'none' : '';
+  document.body.style.paddingTop = mq ? '14rem' : '';
+  document.body.style.overflowX = mq ? 'hidden' : '';
+  el = document.getElementById('grid-container');
+  if (el) el.style.flexWrap = mq ? 'wrap' : '';
+}
+applyMobileLayout();
+window.addEventListener('resize', applyMobileLayout);
+
 document.querySelectorAll('.tab-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var tab = this.dataset.tab;
@@ -844,11 +863,10 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     document.getElementById('view-2d').style.display = tab === '2d' ? '' : 'none';
     var v3d = document.getElementById('view-3d');
     v3d.style.display = tab === '3d' ? '' : 'none';
-    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } void document.querySelector('.topbar').offsetHeight; }
+    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } applyMobileLayout(); }
     if (tab === '3d' && window.__initTower3D) window.__initTower3D();
   });
 });
-setTimeout(function() { void document.querySelector('.topbar').offsetHeight; }, 0);
 </script>
 <script type="module">
 import * as THREE from 'three';
