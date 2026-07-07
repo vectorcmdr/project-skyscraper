@@ -95,9 +95,24 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 #zoom-lens canvas{display:block}
 </style>
 <style>
+.tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
+.tab-btn{background:transparent;color:#888;border:1px solid #333;border-bottom:none;padding:0.4rem 1.2rem;cursor:pointer;font-family:inherit;font-size:0.75rem;letter-spacing:0.1em;transition:all 0.15s;line-height:1.5;margin:0;text-transform:uppercase}
+.tab-btn.active{color:#d00;border-color:#d00;background:#0a0a0a}
+.tab-btn:hover:not(.active){color:#aaa;border-color:#666}
+#view-3d{position:relative;width:100%;max-width:1300px;height:80vh;min-height:500px;margin:0 auto}
+#view-3d canvas{display:block;width:100%!important;height:100%!important;outline:none}
+#counter-display-3d{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:inherit;font-weight:inherit;color:#fff;pointer-events:none;white-space:nowrap;font-size:2.8rem;text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10}
 @font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n5i0g1l9kn-s.woff2') format('woff2')}
 @font-face{font-family:"IBM Plex Mono";font-style:italic;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F6pfjptAgt5VM-kVkqdyU8n1ioq131hj-sNFQ.woff2') format('woff2')}
 </style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -135,20 +150,32 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div class="sw"><div class="st" id="status-line"></div></div>
 </div>
 
-<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;">
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="2d">2D VIEW</button>
+  <button class="tab-btn" data-tab="3d">3D TOWER</button>
+</div>
+
+<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
   <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
   <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:20px;">OPERATOR WINDOW SIMULATION TOOL</div>
-  <div style="position:relative;display:inline-block;max-width:100%;">
-     <div id="grid-container" style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
-      <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
-      <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
-      <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+
+  <div id="view-2d">
+    <div style="position:relative;display:inline-block;max-width:100%;">
+      <div id="grid-container" style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
+        <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+        <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+        <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+      </div>
+      <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                  font-family:inherit;font-weight:inherit;color:#fff;
+                  pointer-events:none;white-space:nowrap;font-size:2.8rem;
+                  text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
+      </div>
     </div>
-    <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                font-family:inherit;font-weight:inherit;color:#fff;
-                pointer-events:none;white-space:nowrap;font-size:2.8rem;
-                text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
-    </div>
+  </div>
+
+  <div id="view-3d" style="display:none;">
+    <div id="counter-display-3d"></div>
   </div>
 </div>
 
@@ -179,6 +206,11 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   ];
   const contexts = canvases.map(c => c.getContext('2d', { alpha: true }));
   const counterEl = document.getElementById('counter-display');
+  const counter3dEl = document.getElementById('counter-display-3d');
+  function setCounterText(t) {
+    counterEl.textContent = t;
+    if (counter3dEl) counter3dEl.textContent = t;
+  }
   const statusEl = document.getElementById('status-line');
   const inputEl = document.getElementById('prime-input');
 
@@ -194,6 +226,29 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   let opLookup = {};
   let canvasRects = [null, null, null];
   let lensRAF = null;
+
+  window.__countingState = {
+    canvases: canvases,
+    contexts: contexts,
+    COLS: COLS,
+    ROWS: ROWS,
+    STEP: STEP,
+    CELL_SIZE: CELL_SIZE,
+    GAP: GAP,
+    PIXELS_PER_GRID: PIXELS_PER_GRID,
+    TOTAL_PIXELS: TOTAL_PIXELS,
+    isPrime: isPrime,
+    playerColorFor: playerColorFor,
+    opLookup: opLookup,
+    pixelColor: pixelColor,
+    dirty: false,
+    highlightIndices: [],
+    highlightsDirty: false,
+    clearHighlights: null,
+    clearOperatorHighlights: null,
+  };
+  function markDirty() { window.__countingState.dirty = true; }
+  function markHighlightsDirty() { window.__countingState.highlightsDirty = true; }
 
   /* ---- helpers ---- */
   function isPrime(n) {
@@ -253,10 +308,11 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     let elapsed = Math.floor((now - startTime) / 1000);
     if (elapsed < 0) elapsed = 0;
     const capped = Math.min(elapsed, TOTAL_PIXELS);
-    counterEl.textContent = String(capped).padStart(8, '0');
+    setCounterText(String(capped).padStart(8, '0'));
     while (litPixels.size < capped) {
       addRandomPixel();
     }
+    markDirty();
   }
 
   function startLive() {
@@ -290,7 +346,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       drawCompleteGrid(ctx, i);
     });
-    counterEl.textContent = 'COMPLETE';
+    setCounterText('COMPLETE');
+    markDirty();
     clearHighlights();
     const valid = drawHighlights(playerPrimes);
     const primeCount = valid.filter(n => isPrime(n)).length;
@@ -324,6 +381,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   }
 
   function drawHighlights(indices) {
+    if (document.getElementById('view-2d').style.display === 'none') return [];
     if (!indices.length) return [];
     const valid = [];
     indices.forEach(n => {
@@ -356,7 +414,11 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     operatorBoxes = [];
   }
 
+  window.__countingState.clearHighlights = clearHighlights;
+  window.__countingState.clearOperatorHighlights = clearOperatorHighlights;
+
   function drawOperatorHighlight(n, name, hex) {
+    if (document.getElementById('view-2d').style.display === 'none') return;
     const useColor = (hex && hex !== '') ? '#' + hex : '#00ffcc';
     const globalIndex = n - 1;
     const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
@@ -398,6 +460,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       drawOperatorHighlight(op.n, op.name, op.c);
       indices.push(op.n);
     });
+    window.__countingState.highlightIndices = indices;
+    markHighlightsDirty();
     const primeCount = indices.filter(n => isPrime(n)).length;
     statusEl.textContent = indices.length + ' operators highlighted (' + primeCount + ' prime windows)';
   }
@@ -486,6 +550,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       return;
     }
     lastHighlighted = nums;
+    window.__countingState.highlightIndices = nums.slice();
+    markHighlightsDirty();
     if (!showingComplete) {
       clearHighlights();
       const valid = drawHighlights(nums);
@@ -537,6 +603,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     clearHighlights();
     clearOperatorHighlights();
     lastHighlighted = [];
+    window.__countingState.highlightIndices = [];
+    markHighlightsDirty();
     statusEl.textContent = '';
   });
 
@@ -759,5 +827,267 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   Base content used from <a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" style="color:#d00;text-decoration:none;">/counting/</a>
 </div>
 
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var tab = this.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('view-2d').style.display = tab === '2d' ? '' : 'none';
+    var v3d = document.getElementById('view-3d');
+    v3d.style.display = tab === '3d' ? '' : 'none';
+    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } }
+    if (tab === '3d' && window.__initTower3D) window.__initTower3D();
+  });
+});
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+let initialized = false;
+let renderer, scene, camera, controls;
+let meshes = [];
+let offscreenCtxs = [];
+let offscreenTextures = [];
+let tooltip = null;
+let animFrameId = null;
+var contentW, contentH, pixelW, pixelH;
+
+function getGlobalIndex(gridIndex, uv, S) {
+  var col = Math.floor(uv.x * S.COLS);
+  var row = Math.floor((1 - uv.y) * S.ROWS);
+  if (col < 0 || col >= S.COLS || row < 0 || row >= S.ROWS) return -1;
+  return gridIndex * S.PIXELS_PER_GRID + row * S.COLS + col;
+}
+
+function copyCanvases(S) {
+  for (var i = 0; i < 3; i++) {
+    var src = S.canvases[i];
+    offscreenCtxs[i].drawImage(src, 0, 0, contentW, contentH, 0, 0, contentW, contentH);
+  }
+}
+
+function updateHighlights(S) {
+  for (var i = 0; i < meshes.length; i++) {
+    var m = meshes[i];
+    for (var j = m.children.length - 1; j >= 0; j--) {
+      if (m.children[j].userData.isHighlight) m.remove(m.children[j]);
+    }
+  }
+  var indices = S.highlightIndices;
+  if (!indices || !indices.length) return;
+  var glowW = pixelW * 1.5;
+  var glowH = pixelH * 1.5;
+  var glowGeo = new THREE.PlaneGeometry(glowW, glowH);
+  for (var k = 0; k < indices.length; k++) {
+    var n = indices[k];
+    var globalIdx = n - 1;
+    var gi = Math.floor(globalIdx / S.PIXELS_PER_GRID);
+    var local = globalIdx % S.PIXELS_PER_GRID;
+    var col = local % S.COLS;
+    var row = Math.floor(local / S.COLS);
+    var mesh = meshes[gi];
+    if (!mesh) continue;
+    var lx = col * pixelW + pixelW / 2 - contentW / 2;
+    var ly = -(row * pixelH + pixelH / 2) + contentH / 2;
+    var opInfo = S.opLookup[globalIdx];
+    var color;
+    if (opInfo && opInfo.color && opInfo.color !== '') {
+      color = parseInt('0x' + opInfo.color, 16);
+    } else if (opInfo) {
+      color = 0x00ffcc;
+    } else {
+      color = 0xff0000;
+    }
+    var mat = new THREE.MeshBasicMaterial({
+      color: color, transparent: true, opacity: 0.35,
+      side: THREE.DoubleSide, depthWrite: false,
+    });
+    var glow = new THREE.Mesh(glowGeo, mat);
+    glow.position.set(lx, ly, 0.005);
+    glow.userData.isHighlight = true;
+    mesh.add(glow);
+  }
+}
+
+function initScene() {
+  if (initialized) { onResize(); return; }
+  initialized = true;
+
+  var container = document.getElementById('view-3d');
+  if (!container) return;
+  var S = window.__countingState;
+  if (!S) return;
+
+  var cw = container.clientWidth || 1200;
+  var ch = container.clientHeight || 600;
+
+  contentW = S.COLS * S.CELL_SIZE + (S.COLS - 1) * S.GAP;
+  contentH = S.ROWS * S.CELL_SIZE + (S.ROWS - 1) * S.GAP;
+  pixelW = contentW / S.COLS;
+  pixelH = contentH / S.ROWS;
+
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(50, cw / ch, 1, 10000);
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x0a0a0a);
+  renderer.setSize(cw, ch);
+  container.appendChild(renderer.domElement);
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 0);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.minDistance = 200;
+  controls.maxDistance = 8000;
+  controls.update();
+
+  offscreenCtxs = [];
+  offscreenTextures = [];
+  for (var i = 0; i < 3; i++) {
+    var oc = document.createElement('canvas');
+    oc.width = contentW;
+    oc.height = contentH;
+    offscreenCtxs.push(oc.getContext('2d'));
+    var tex = new THREE.CanvasTexture(oc);
+    tex.minFilter = THREE.NearestFilter;
+    tex.magFilter = THREE.NearestFilter;
+    offscreenTextures.push(tex);
+  }
+
+  var R = contentW * Math.sqrt(3) / 6;
+  var geo = new THREE.PlaneGeometry(contentW, contentH);
+  var edgeGeo = new THREE.EdgesGeometry(geo);
+
+  for (var i = 0; i < 3; i++) {
+    var theta = i * Math.PI * 2 / 3;
+    var mat = new THREE.MeshBasicMaterial({
+      map: offscreenTextures[i], side: THREE.DoubleSide,
+    });
+    var mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(R * Math.sin(theta), 0, R * Math.cos(theta));
+    mesh.rotation.y = theta;
+    mesh.userData.gridIndex = i;
+    scene.add(mesh);
+    meshes.push(mesh);
+
+    var edgeMat = new THREE.LineBasicMaterial({
+      color: 0x333333, transparent: true, opacity: 0.35,
+    });
+    var edgeLine = new THREE.LineSegments(edgeGeo, edgeMat);
+    edgeLine.position.copy(mesh.position);
+    edgeLine.rotation.copy(mesh.rotation);
+    scene.add(edgeLine);
+  }
+
+  // Top and bottom triangles
+  var triMat = new THREE.MeshBasicMaterial({
+    color: 0x222222, side: THREE.DoubleSide, depthWrite: false,
+  });
+  var halfW = contentW / 2;
+  var triPos = new Float32Array([
+    -halfW, 0, R,
+    0, 0, -2*R,
+    halfW, 0, R,
+  ]);
+  var triGeo = new THREE.BufferGeometry();
+  triGeo.setAttribute('position', new THREE.BufferAttribute(triPos, 3));
+  triGeo.setIndex([0, 1, 2]);
+  triGeo.computeVertexNormals();
+  var topTri = new THREE.Mesh(triGeo, triMat);
+  topTri.position.y = contentH / 2;
+  scene.add(topTri);
+  var bottomTri = new THREE.Mesh(triGeo.clone(), triMat);
+  bottomTri.position.y = -contentH / 2;
+  scene.add(bottomTri);
+
+  var halfH = contentH / 2;
+  var fovRad = THREE.MathUtils.degToRad(50);
+  var d = (halfH / Math.tan(fovRad / 2)) * 1.4;
+  camera.position.set(d * 0.5, d * 0.35, d * 0.7);
+  controls.update();
+
+  tooltip = document.createElement('div');
+  tooltip.id = 'tower-tooltip';
+  tooltip.style.cssText =
+    'position:fixed;display:none;z-index:10001;pointer-events:none;' +
+    'background:rgba(0,0,0,0.9);color:#00ffcc;border:1px solid #00ffcc;' +
+    'padding:2px 8px;font-family:"IBM Plex Mono","Courier New",monospace;' +
+    'font-size:0.7rem;white-space:nowrap;';
+  document.body.appendChild(tooltip);
+
+  var raycaster = new THREE.Raycaster();
+  var pointer = new THREE.Vector2();
+
+  renderer.domElement.addEventListener('pointermove', function(event) {
+    var rect = renderer.domElement.getBoundingClientRect();
+    pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(pointer, camera);
+    var intersects = raycaster.intersectObjects(meshes, false);
+    if (intersects.length > 0) {
+      var hit = intersects[0];
+      if (hit.object.userData.gridIndex === undefined) { tooltip.style.display = 'none'; return; }
+      var gIdx = getGlobalIndex(hit.object.userData.gridIndex, hit.uv, S);
+      if (gIdx >= 0) {
+        var opInfo = S.opLookup[gIdx];
+        if (opInfo) {
+          var col = (opInfo.color && opInfo.color !== '') ? '#' + opInfo.color : '#00ffcc';
+          tooltip.textContent = opInfo.name;
+          tooltip.style.color = col;
+          tooltip.style.borderColor = col;
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 30) + 'px';
+          tooltip.style.display = 'block';
+          renderer.domElement.style.cursor = 'pointer';
+          return;
+        }
+      }
+    }
+    tooltip.style.display = 'none';
+    renderer.domElement.style.cursor = 'default';
+  });
+
+  renderer.domElement.addEventListener('pointerleave', function() {
+    tooltip.style.display = 'none';
+  });
+
+  S.dirty = true;
+  S.highlightsDirty = true;
+
+  function animate() {
+    animFrameId = requestAnimationFrame(animate);
+    if (S.dirty) {
+      copyCanvases(S);
+      offscreenTextures.forEach(function(t) { t.needsUpdate = true; });
+      S.dirty = false;
+    }
+    if (S.highlightsDirty) {
+      updateHighlights(S);
+      S.highlightsDirty = false;
+    }
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+}
+
+function onResize() {
+  if (!camera || !renderer) return;
+  var container = document.getElementById('view-3d');
+  if (!container) return;
+  var cw = container.clientWidth;
+  var ch = container.clientHeight;
+  if (cw === 0 || ch === 0) return;
+  camera.aspect = cw / ch;
+  camera.updateProjectionMatrix();
+  renderer.setSize(cw, ch);
+}
+
+window.addEventListener('resize', onResize);
+window.__initTower3D = initScene;
+</script>
 </body>
 </html>
