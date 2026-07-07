@@ -94,27 +94,6 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
 
-@media(max-width:700px){
-  .proxy-network{display:none}
-  .trace-status{display:none}
-}
-@media(max-width:550px){
-  .topbar{padding:.35rem .6rem;gap:.2rem}
-  .topbar-left{gap:.2rem}
-  .topbar-row{gap:.25rem}
-  .topbar-brand{font-size:.7rem}
-  .topbar-avatar{width:20px;height:20px}
-  .topbar button{font-size:.6rem;padding:.1rem .35rem}
-  .topbar input{width:80px;font-size:.6rem}
-  .zoom-hint{display:none}
-  .sep{display:none}
-  .pl{font-size:.6rem!important}
-  #counter-display-3d{font-size:1.6rem}
-}
-@media(max-width:400px){
-  .topbar input{width:60px}
-  #btn-list,#btn-clear{display:none}
-}
 </style>
 <style>
 .tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
@@ -172,6 +151,21 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div class="sw"><div class="st" id="status-line"></div></div>
 </div>
 
+<div id="topbar-spacer"></div>
+<script>
+function adjustSpacer(){
+  var tb = document.getElementById('control-bar');
+  var sp = document.getElementById('topbar-spacer');
+  if(!tb || !sp) return;
+  if (window.innerWidth > 900) {
+    sp.style.height = '0';
+  } else {
+    sp.style.height = tb.offsetHeight + 'px';
+  }
+}
+window.addEventListener('load', adjustSpacer);
+window.addEventListener('resize', adjustSpacer);
+</script>
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="2d">2D VIEW</button>
   <button class="tab-btn" data-tab="3d">3D TOWER</button>
