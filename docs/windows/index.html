@@ -48,7 +48,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   font-family:"IBM Plex Mono","Courier New",monospace;
   max-width:100%;overflow-x:hidden;box-sizing:border-box;
 }
-.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;max-width:100%}
+.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;max-width:100%;min-width:0}
 .topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;max-width:100%}
 .topbar-brand{
   display:flex;align-items:center;gap:.6rem;
@@ -94,6 +94,9 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
+@media(max-width:900px){
+  .topbar-left{width:100%}
+}
 
 </style>
 <style>
@@ -159,12 +162,15 @@ function adjustSpacer(){
   var sp = document.getElementById('topbar-spacer');
   var mc = document.getElementById('main-content');
   if(!tb || !sp) return;
+  var zh = document.querySelector('.zoom-hint');
   if (window.innerWidth > 900) {
     sp.style.height = '0';
     if (mc) mc.style.paddingTop = '30px';
+    if (zh) zh.style.display = '';
   } else {
     sp.style.height = tb.offsetHeight + 'px';
     if (mc) mc.style.paddingTop = '8px';
+    if (zh) zh.style.display = 'none';
   }
 }
 if (window.ResizeObserver) {
