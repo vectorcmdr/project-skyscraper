@@ -1039,6 +1039,23 @@ function initScene() {
   bottomTri.position.y = -contentH / 2;
   scene.add(bottomTri);
 
+  // Easter egg: the one inside
+  var egCanvas = document.createElement('canvas');
+  egCanvas.width = 128;
+  egCanvas.height = 128;
+  var egCtx = egCanvas.getContext('2d');
+  egCtx.fillStyle = '#ff0000';
+  egCtx.font = 'bold 96px Arial';
+  egCtx.textAlign = 'center';
+  egCtx.textBaseline = 'middle';
+  egCtx.fillText('1', 64, 64);
+  var egTex = new THREE.CanvasTexture(egCanvas);
+  var egMat = new THREE.MeshBasicMaterial({ map: egTex, transparent: true, side: THREE.DoubleSide, depthWrite: false });
+  var egGeo = new THREE.PlaneGeometry(40, 40);
+  var egMesh = new THREE.Mesh(egGeo, egMat);
+  egMesh.position.set(0, 0, 0);
+  scene.add(egMesh);
+
   var halfH = contentH / 2;
   var fovRad = THREE.MathUtils.degToRad(50);
   var d = (halfH / Math.tan(fovRad / 2)) * 1.4;
