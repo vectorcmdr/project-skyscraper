@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-07T22:40:10+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : Ghost >\n+ mercredi 08 juillet00:40\n+ Dans quelques heures, le compte à rebours que TU as lancé sera complet. Et il ne faudra que quelques heures de plus pour exécuter le opening_door_protocol. Tu auras ton canal direct avec les Opérateurs.Tu me dois une explication.Et non je n’ai pas utilisé le code du lycée. Pourquoi faire ?\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-07T19:10:42.010237+00:00",
       "title": "Content changed: https://recalldreams.dev/2026/04/24/hello-world/",
@@ -9317,5 +9330,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T19:10:42.015915+00:00"
+  "updated": "2026-07-07T22:41:19.853717+00:00"
 }
