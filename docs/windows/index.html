@@ -46,9 +46,10 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   border-bottom:1px solid #222;
   background:#0d0d0d;
   font-family:"IBM Plex Mono","Courier New",monospace;
+  max-width:100%;overflow-x:hidden;box-sizing:border-box;
 }
 .topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
-.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;max-width:100%}
 .topbar-brand{
   display:flex;align-items:center;gap:.6rem;
   color:#eee;text-decoration:none;font-weight:bold;letter-spacing:.15em;
@@ -163,8 +164,15 @@ function adjustSpacer(){
     sp.style.height = tb.offsetHeight + 'px';
   }
 }
-window.addEventListener('load', adjustSpacer);
+if (window.ResizeObserver) {
+  var ro = new ResizeObserver(adjustSpacer);
+  ro.observe(document.getElementById('control-bar'));
+} else {
+  window.addEventListener('load', adjustSpacer);
+  window.addEventListener('resize', adjustSpacer);
+}
 window.addEventListener('resize', adjustSpacer);
+adjustSpacer();
 </script>
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="2d">2D VIEW</button>
