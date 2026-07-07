@@ -94,11 +94,11 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
 @media(max-width:900px){
-  .topbar-left{width:100%}
-  .topbar-row{width:100%}
+  .topbar-left{flex:0 0 100%;align-items:stretch}
+  .topbar-right{flex:0 0 100%}
+  .proxy-network{width:100%}
   .zoom-hint{display:none}
-  .topbar-right{margin-left:auto}
-  body{padding-top:16rem}
+  body{padding-top:14rem}
 }
 </style>
 <style>
