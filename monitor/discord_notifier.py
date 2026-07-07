@@ -261,7 +261,9 @@ def notify_changes(changes: list, state: dict):
                 if detail:
                     val += f"{detail}\n"
                 if diff:
-                    val += f"```\n{diff}\n```"
+                    diff_clean = "\n".join(l for l in diff.split("\n") if not l.strip().startswith("# "))
+                    if diff_clean:
+                        val += f"```\n{diff_clean}\n```"
                 fields.append({"name": label, "value": val[:1024]})
             if fields:
                 _send_embed(title=f"{label}: {len(clist)}", description="", fields=fields[:10], color=color)
