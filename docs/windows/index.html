@@ -227,6 +227,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   let opLookup = {};
   let canvasRects = [null, null, null];
   let lensRAF = null;
+  let primePixels = new Map();    /* globalIndex → lastBlink timestamp for twinkle */
+  let twinkleInterval = null;
 
   window.__countingState = {
     canvases: canvases,
@@ -290,6 +292,34 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     const isPlayerWindow = isPrime(globalIndex + 1);
     ctx.fillStyle = isPlayerWindow ? playerColorFor(globalIndex) : pixelColor;
     ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+    if (isPlayerWindow) primePixels.set(globalIndex, Date.now());
+  }
+
+  /* ---- prime pixel twinkle ---- */
+  function runTwinkle() {
+    var now = Date.now();
+    var halfCycle = (now % 300 < 150);
+    primePixels.forEach(function(ts, globalIndex) {
+      if (Math.random() < 0.3) {
+        var gridIndex = Math.floor(globalIndex / PIXELS_PER_GRID);
+        var local = globalIndex % PIXELS_PER_GRID;
+        var x = local % COLS;
+        var y = Math.floor(local / COLS);
+        var ctx = contexts[gridIndex];
+        if (ctx) {
+          var opInfo = opLookup[globalIndex];
+          if (opInfo && opInfo.color && opInfo.color !== '') {
+            ctx.globalAlpha = halfCycle ? 1 : 0.4;
+            ctx.fillStyle = '#' + opInfo.color;
+          } else {
+            ctx.fillStyle = halfCycle ? '#ffffff' : '#bbbbbb';
+          }
+          ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+          if (ctx.globalAlpha !== 1) ctx.globalAlpha = 1;
+        }
+      }
+    });
+    markDirty();
   }
 
   function initGrids() {
@@ -318,14 +348,17 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 
   function startLive() {
     if (liveInterval) clearInterval(liveInterval);
+    if (twinkleInterval) clearInterval(twinkleInterval);
     contexts.forEach(ctx => {
       ctx.fillStyle = '#0a0a0a';
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     });
     litPixels = new Set();
+    primePixels = new Map();
     initGrids();
     updateCounter();
     liveInterval = setInterval(updateCounter, 1000);
+    twinkleInterval = setInterval(runTwinkle, 180);
   }
 
   /* ---- complete mode ---- */
@@ -334,14 +367,17 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     for (let y = 0; y < ROWS; y++) {
       for (let x = 0; x < COLS; x++) {
         const idx = offset + y * COLS + x;
-        const color = isPrime(idx + 1) ? playerColorFor(idx) : pixelColor;
+        const prime = isPrime(idx + 1);
+        const color = prime ? playerColorFor(idx) : pixelColor;
         ctx.fillStyle = color;
         ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+        if (prime) primePixels.set(idx, Date.now());
       }
     }
   }
 
   function renderComplete(playerPrimes) {
+    if (twinkleInterval) clearInterval(twinkleInterval);
     contexts.forEach((ctx, i) => {
       ctx.fillStyle = '#0a0a0a';
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
@@ -355,6 +391,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     statusEl.textContent = valid.length
       ? `Showing complete state — ${valid.length} highlighted (${primeCount} prime, ${valid.length - primeCount} composite)`
       : 'Showing complete state. Enter prime(s) and click HIGHLIGHT.';
+    twinkleInterval = setInterval(runTwinkle, 180);
   }
 
   function showComplete(playerPrimes) {
