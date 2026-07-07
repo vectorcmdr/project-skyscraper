@@ -93,10 +93,6 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
-@media(max-width:900px){
-  .topbar-left{width:100%!important}
-  .topbar-row{width:100%!important}
-}
 </style>
 <style>
 .tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
@@ -154,29 +150,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div class="sw"><div class="st" id="status-line"></div></div>
 </div>
 
-<script>
-(function(){
-  function adjust(){
-    var tb = document.getElementById('control-bar');
-    var tabs = document.querySelector('.tab-bar');
-    var zh = document.querySelector('.zoom-hint');
-    if (!tb || !tabs) return;
-    if (window.innerWidth <= 900) {
-      tabs.style.marginTop = (tb.offsetHeight + 4) + 'px';
-      if (zh) zh.style.display = 'none';
-    } else {
-      tabs.style.marginTop = '';
-      if (zh) zh.style.display = '';
-    }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', adjust);
-  } else {
-    adjust();
-  }
-  window.addEventListener('resize', adjust);
-})();
-</script>
+
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="2d">2D VIEW</button>
   <button class="tab-btn" data-tab="3d">3D TOWER</button>
