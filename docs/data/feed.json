@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-07T00:44:07.458580+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-07 00:43:42 UTC\n# Lines: 599264 old -> 599457 new\n# Beautified: yes\n\n@@ -21,19 +21,19 @@\n     \"wordfence/v1\",\n\n     \"yoast/v1\",\n\n     \"jetpack/v4/stats-app\",\n\n-    \"jetpack/v4/import\",\n\n     \"jetpack/v4/explat\",\n\n     \"newspack-blocks/v1\",\n\n     \"cptui/v1\",\n\n     \"wpcom/v3\",\n\n-    \"my-jetpack/v1\",\n\n     \"agents-manager\",\n\n     \"jetpack/v4/blaze-app\",\n\n     \"jetpack/v4/blaze\",\n\n     \"help-center\",\n\n     \"jetpack-global-styles/v1\",\n\n+    \"jetpack/v4/import\",\n\n     \"videopress/v1\",\n\n     \"jetpack/v4/videopress\",\n\n+    \"my-jetpack/v1\",\n\n     \"jetpack-boost/v1\",\n\n     \"wp-abilities/v1\",\n\n     \"wp-site-health/v1\"\n\n@@ -7859,1245 +7859,6 @@\n             \"GET\"\n\n           ],\n\n           \"args\": []\n\n-        }\n\n-      ]\n\n-    },\n\n-    \"/jetpack/v4/import\": {\n\n... (6299 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-06T19:03:48.146294+00:00",
       "title": "https://project-skyscraper.com/",
@@ -9226,5 +9239,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-06T19:03:48.155269+00:00"
+  "updated": "2026-07-07T00:44:07.464411+00:00"
 }
