@@ -153,18 +153,18 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 
 <script>
 (function(){
+  var s = document.createElement('style');
+  s.textContent = '@media(max-width:900px){.topbar-left{width:100%!important}}';
+  document.head.appendChild(s);
   var tb = document.getElementById('control-bar');
   var tabs = document.querySelector('.tab-bar');
   var zh = document.querySelector('.zoom-hint');
-  var tpl = document.querySelector('.topbar-left');
   function adjust(){
-    if (!tb || !tabs || !tpl) return;
+    if (!tb || !tabs) return;
     if (window.innerWidth <= 900) {
-      tpl.style.width = '100%';
       tabs.style.marginTop = (tb.offsetHeight + 4) + 'px';
       if (zh) zh.style.display = 'none';
     } else {
-      tpl.style.width = '';
       tabs.style.marginTop = '';
       if (zh) zh.style.display = '';
     }
