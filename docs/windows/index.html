@@ -95,7 +95,10 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
 @media(max-width:900px){
-  .topbar-left{width:100%}
+  .topbar-left{width:100%!important;max-width:100%!important;min-width:0!important}
+  .topbar-row{width:100%!important;max-width:100%!important;min-width:0!important;flex-wrap:wrap!important}
+  .topbar-row>*{min-width:0!important}
+  .topbar input{width:100px}
 }
 
 </style>
