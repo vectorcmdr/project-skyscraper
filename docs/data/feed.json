@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-07T23:01:59+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ Ghost >À : the_architect@project-skyscraper.com\n+ mercredi 08 juillet01:01\n+ Je veux juste me souvenir.\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-07T22:40:10+00:00",
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
@@ -9330,5 +9343,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T22:41:19.853717+00:00"
+  "updated": "2026-07-07T23:03:09.332278+00:00"
 }
