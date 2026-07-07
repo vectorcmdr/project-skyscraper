@@ -844,10 +844,11 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     document.getElementById('view-2d').style.display = tab === '2d' ? '' : 'none';
     var v3d = document.getElementById('view-3d');
     v3d.style.display = tab === '3d' ? '' : 'none';
-    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } }
+    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } void document.querySelector('.topbar').offsetHeight; }
     if (tab === '3d' && window.__initTower3D) window.__initTower3D();
   });
 });
+setTimeout(function() { void document.querySelector('.topbar').offsetHeight; }, 0);
 </script>
 <script type="module">
 import * as THREE from 'three';
