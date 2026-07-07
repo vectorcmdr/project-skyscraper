@@ -151,40 +151,32 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div class="sw"><div class="st" id="status-line"></div></div>
 </div>
 
-<div id="topbar-spacer"></div>
 <script>
-function adjustSpacer(){
+(function(){
   var tb = document.getElementById('control-bar');
-  var sp = document.getElementById('topbar-spacer');
-  var mc = document.getElementById('main-content');
-  if(!tb || !sp) return;
+  var tabs = document.querySelector('.tab-bar');
   var zh = document.querySelector('.zoom-hint');
-  if (window.innerWidth > 900) {
-    sp.style.height = '0';
-    if (mc) mc.style.paddingTop = '30px';
-    if (zh) zh.style.display = '';
-  } else {
-    sp.style.height = tb.offsetHeight + 'px';
-    if (mc) mc.style.paddingTop = '8px';
-    if (zh) zh.style.display = 'none';
+  function adjust(){
+    if (!tb || !tabs) return;
+    if (window.innerWidth <= 900) {
+      tabs.style.marginTop = (tb.offsetHeight + 4) + 'px';
+      if (zh) zh.style.display = 'none';
+    } else {
+      tabs.style.marginTop = '';
+      if (zh) zh.style.display = '';
+    }
   }
-}
-if (window.ResizeObserver) {
-  var ro = new ResizeObserver(adjustSpacer);
-  ro.observe(document.getElementById('control-bar'));
-} else {
-  window.addEventListener('load', adjustSpacer);
-  window.addEventListener('resize', adjustSpacer);
-}
-window.addEventListener('resize', adjustSpacer);
-adjustSpacer();
+  window.addEventListener('load', adjust);
+  window.addEventListener('resize', adjust);
+  adjust();
+})();
 </script>
 <div class="tab-bar">
   <button class="tab-btn active" data-tab="2d">2D VIEW</button>
   <button class="tab-btn" data-tab="3d">3D TOWER</button>
 </div>
 
-<div id="main-content" style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
+<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
   <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
   <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:20px;">OPERATOR WINDOW SIMULATION TOOL</div>
 
