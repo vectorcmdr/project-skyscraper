@@ -46,10 +46,9 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   border-bottom:1px solid #222;
   background:#0d0d0d;
   font-family:"IBM Plex Mono","Courier New",monospace;
-  max-width:100%;overflow-x:hidden;box-sizing:border-box;
 }
-.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;max-width:100%;min-width:0}
-.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;max-width:100%}
+.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .topbar-brand{
   display:flex;align-items:center;gap:.6rem;
   color:#eee;text-decoration:none;font-weight:bold;letter-spacing:.15em;
@@ -77,7 +76,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .topbar .pl{font-size:.7rem;color:#888;display:flex;align-items:center;gap:4px}
 .topbar .sw{width:100%;margin-top:1px}
 .topbar .st{color:#555;font-size:.6rem}
-.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;max-width:100%}
+.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem}
 .topbar-right-top{display:flex;align-items:center;gap:.6rem}
 .trace-status{font-size:.7rem;letter-spacing:.1em;white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem}
 .trace-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -94,12 +93,6 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
-@media(max-width:900px){
-  .topbar-left{width:100%!important;max-width:100%!important;min-width:0!important}
-  .topbar-row{width:100%!important;max-width:100%!important;min-width:0!important;flex-wrap:wrap!important}
-  .topbar-row>*{min-width:0!important}
-  .topbar input{width:100px}
-}
 
 </style>
 <style>
