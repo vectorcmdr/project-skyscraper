@@ -93,6 +93,28 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
 #zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
 #zoom-lens canvas{display:block}
+
+@media(max-width:700px){
+  .proxy-network{display:none}
+  .trace-status{display:none}
+}
+@media(max-width:550px){
+  .topbar{padding:.35rem .6rem;gap:.2rem}
+  .topbar-left{gap:.2rem}
+  .topbar-row{gap:.25rem}
+  .topbar-brand{font-size:.7rem}
+  .topbar-avatar{width:20px;height:20px}
+  .topbar button{font-size:.6rem;padding:.1rem .35rem}
+  .topbar input{width:80px;font-size:.6rem}
+  .zoom-hint{display:none}
+  .sep{display:none}
+  .pl{font-size:.6rem!important}
+  #counter-display-3d{font-size:1.6rem}
+}
+@media(max-width:400px){
+  .topbar input{width:60px}
+  #btn-list,#btn-clear{display:none}
+}
 </style>
 <style>
 .tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
@@ -984,7 +1006,7 @@ function initScene() {
 
   // Top and bottom triangles
   var triMat = new THREE.MeshBasicMaterial({
-    color: 0x222222, side: THREE.DoubleSide, depthWrite: false,
+    color: 0x222222, side: THREE.DoubleSide,
   });
   var halfW = contentW / 2;
   var triPos = new Float32Array([
@@ -1051,6 +1073,37 @@ function initScene() {
   });
 
   renderer.domElement.addEventListener('pointerleave', function() {
+    tooltip.style.display = 'none';
+  });
+
+  /* mobile tap: show tooltip with 3s auto-dismiss */
+  var tooltipTimer = null;
+  renderer.domElement.addEventListener('click', function(event) {
+    if (tooltipTimer) clearTimeout(tooltipTimer);
+    var rect = renderer.domElement.getBoundingClientRect();
+    pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(pointer, camera);
+    var intersects = raycaster.intersectObjects(meshes, false);
+    if (intersects.length > 0) {
+      var hit = intersects[0];
+      if (hit.object.userData.gridIndex === undefined) return;
+      var gIdx = getGlobalIndex(hit.object.userData.gridIndex, hit.uv, S);
+      if (gIdx >= 0) {
+        var opInfo = S.opLookup[gIdx];
+        if (opInfo) {
+          var col = (opInfo.color && opInfo.color !== '') ? '#' + opInfo.color : '#00ffcc';
+          tooltip.textContent = opInfo.name;
+          tooltip.style.color = col;
+          tooltip.style.borderColor = col;
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 30) + 'px';
+          tooltip.style.display = 'block';
+          tooltipTimer = setTimeout(function() { tooltip.style.display = 'none'; }, 3000);
+          return;
+        }
+      }
+    }
     tooltip.style.display = 'none';
   });
 
