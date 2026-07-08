@@ -47,6 +47,8 @@ _PAGE_NOISE_PATTERNS = [
     (re.compile(r'img:is\([^)]*\)\{contain-intrinsic-size:\d+px \d+px\}'), ''),
     (re.compile(r'<script[^>]*type=[\x22\x27]importmap[\x22\x27][^>]*>[\s\S]*?</script>', re.IGNORECASE), ''),
     (re.compile(r'<style id="wp-block-library-inline-css">.*?</style>', re.DOTALL), ''),
+    (re.compile(r'<input\s[^>]*name\s*=\s*["\']jetpack_contact_form_jwt["\'][^>]*>', re.IGNORECASE), ''),
+    (re.compile(r'<input\s[^>]*name\s*=\s*["\']ak_js["\'][^>]*>', re.IGNORECASE), ''),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
@@ -97,6 +99,8 @@ _DIFF_NOISE_LINE_PATTERNS = [
     re.compile(r'^[ +-]\s*.+\u2013\s*project-skyscraper'),
     re.compile(r'^[ +-]\s*:root\{--wp-block-synced-color'),
     re.compile(r'^[ +-]\s*:root\{--wp-admin-theme-color'),
+    re.compile(r'^[ +-].*jetpack_contact_form_jwt'),
+    re.compile(r'^[ +-].*name\s*=\s*["\']ak_js["\']'),
 ]
 
 _JSON_NOISE_KEYS = frozenset({
