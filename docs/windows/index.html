@@ -158,7 +158,9 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 
 <div style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
   <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
-  <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:20px;">OPERATOR WINDOW SIMULATION TOOL</div>
+  <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:2px;">OPERATOR WINDOW SIMULATION TOOL</div>
+
+  <div id="countdown-display" style="font-size:1.4rem;color:#fff;letter-spacing:.08em;margin:0;"></div>
 
   <div id="view-2d">
     <div style="position:relative;display:inline-block;max-width:100%;">
@@ -198,6 +200,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   const publicationDate = '2026-07-05T16:16:16Z';
   const pixelColor = 'rgba(4,135,157,1)';
   const playerColor = '#ffffff';
+  const completionTime = new Date(publicationDate).getTime() + TOTAL_PIXELS * 1000;
 
   /* ---- DOM refs ---- */
   const canvases = [
@@ -307,15 +310,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
         var y = Math.floor(local / COLS);
         var ctx = contexts[gridIndex];
         if (ctx) {
-          var opInfo = opLookup[globalIndex];
-          if (opInfo && opInfo.color && opInfo.color !== '') {
-            ctx.globalAlpha = halfCycle ? 1 : 0.4;
-            ctx.fillStyle = '#' + opInfo.color;
-          } else {
-            ctx.fillStyle = halfCycle ? '#ffffff' : '#bbbbbb';
-          }
+          ctx.fillStyle = halfCycle ? playerColorFor(globalIndex) : '#bbbbbb';
           ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
-          if (ctx.globalAlpha !== 1) ctx.globalAlpha = 1;
         }
       }
     });
@@ -344,6 +340,27 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       addRandomPixel();
     }
     markDirty();
+    updateCountdown();
+  }
+
+  function updateCountdown() {
+    var remaining = Math.max(0, completionTime - Date.now());
+    var el = document.getElementById('countdown-display');
+    if (!el) return;
+    if (remaining <= 0) {
+      el.textContent = '— COMPLETE —';
+      return;
+    }
+    var days = Math.floor(remaining / 86400000);
+    var hours = Math.floor((remaining % 86400000) / 3600000);
+    var mins = Math.floor((remaining % 3600000) / 60000);
+    var secs = Math.floor((remaining % 60000) / 1000);
+    var parts = [];
+    if (days > 0) parts.push(days + 'd');
+    parts.push(hours + 'h');
+    parts.push(mins + 'm');
+    parts.push(secs + 's');
+    el.textContent = parts.join(' ') + ' remaining';
   }
 
   function startLive() {
@@ -909,7 +926,14 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     document.getElementById('view-2d').style.display = tab === '2d' ? '' : 'none';
     var v3d = document.getElementById('view-3d');
     v3d.style.display = tab === '3d' ? '' : 'none';
-    if (tab === '2d') { var cs = window.__countingState; if (cs) { if (cs.clearHighlights) cs.clearHighlights(); if (cs.clearOperatorHighlights) cs.clearOperatorHighlights(); } applyMobileLayout(); }
+    var cs = window.__countingState;
+    if (cs) {
+      if (cs.clearHighlights) cs.clearHighlights();
+      if (cs.clearOperatorHighlights) cs.clearOperatorHighlights();
+      cs.highlightIndices = [];
+      cs.highlightsDirty = true;
+    }
+    if (tab === '2d') applyMobileLayout();
     if (tab === '3d' && window.__initTower3D) window.__initTower3D();
   });
 });
