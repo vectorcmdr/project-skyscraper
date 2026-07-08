@@ -1,6 +1,58 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-08T09:16:25.298895+00:00",
+      "title": "Memory bloc restoration: 366/365 [10 Pages]",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "diff": "367/365 → 366/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 366/365 across 10 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "366/365",
+      "page_count": 10,
+      "last_timestamp": "2026-07-08T09:16:25.298895+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-08T09:16:25.298750+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "2 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 5561,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-08T09:12:29+00:00",
+      "title": "SECURITY LOG",
+      "link": "https://project-skyscraper.com/2026/07/08/sec-log-101616/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 5563,
+      "game_date": "2026-07-08T09:16:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-08T09:12:00+00:00",
+      "title": "Security Log",
+      "link": "https://project-skyscraper.com/sec-log-101616-full/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": 5561,
+      "game_date": "2026-07-08T09:16:00+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-07-07T23:01:59+00:00",
       "title": "Inbox",
@@ -233,19 +285,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-05T15:18:26.696363+00:00",
-      "title": "Memory bloc restoration: 366/365 [9 Pages]",
-      "link": "https://project-skyscraper.com/project-skyscraper/",
-      "diff": "367/365 → 366/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 366/365 across 9 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "366/365",
-      "page_count": 9,
-      "last_timestamp": "2026-07-05T15:18:26.696363+00:00"
     },
     {
       "type": "api_items_added",
@@ -9356,5 +9395,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-07T23:17:32.491704+00:00"
+  "updated": "2026-07-08T09:16:25.303872+00:00"
 }
