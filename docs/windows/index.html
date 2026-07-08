@@ -887,15 +887,25 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   updateTrace();
   setInterval(updateTrace, 30000);
 
+  var twitchTick = null;
+
   function renderTwitch(data) {
     var el = document.getElementById('twitchStatus');
     if (!el) return;
     if (data.state === 'LIVE') {
       el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
     } else if (data.state === 'OFFLINE') {
-      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span>';
+      var since = new Date(data.updatedAt);
+      var elapsed = (Date.now() - since.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
     } else {
       el.innerHTML = '';
+    }
+  }
+  function scheduleTwitchTick(data) {
+    if (twitchTick) { clearInterval(twitchTick); twitchTick = null; }
+    if (data.state === 'OFFLINE') {
+      twitchTick = setInterval(function() { renderTwitch(data); }, 1000);
     }
   }
   function updateTwitch() {
@@ -904,6 +914,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       return r.json();
     }).then(function(data) {
       renderTwitch(data);
+      scheduleTwitchTick(data);
     }).catch(function() {
       var el = document.getElementById('twitchStatus');
       if (el) el.innerHTML = '';

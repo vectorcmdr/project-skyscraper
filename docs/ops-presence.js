@@ -237,22 +237,35 @@
    ─────────────────────────────────────────────────────── */
 (function(){
   var lastState = null;
-  function renderTwitch() {
+  var twitchTick = null;
+  function renderTwitch(data) {
+    var el = document.getElementById('twitchStatus');
+    if (!el) return;
+    var state = data.state;
+    if (state === 'LIVE') {
+      el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
+    } else if (state === 'OFFLINE') {
+      var since = new Date(data.updatedAt);
+      var elapsed = (Date.now() - since.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+    lastState = state;
+  }
+  function scheduleTwitchTick(data) {
+    if (twitchTick) { clearInterval(twitchTick); twitchTick = null; }
+    if (data.state === 'OFFLINE') {
+      twitchTick = setInterval(function() { renderTwitch(data); }, 1000);
+    }
+  }
+  function fetchTwitch() {
     fetch('../status/twitch.json').then(function(r) {
       if (!r.ok) throw new Error();
       return r.json();
     }).then(function(data) {
-      var el = document.getElementById('twitchStatus');
-      if (!el) return;
-      var state = data.state;
-      if (state === 'LIVE') {
-        el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
-      } else if (state === 'OFFLINE') {
-        el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span>';
-      } else {
-        el.innerHTML = '';
-      }
-      lastState = state;
+      renderTwitch(data);
+      scheduleTwitchTick(data);
     }).catch(function() {
       var el = document.getElementById('twitchStatus');
       if (el) el.innerHTML = '';
@@ -260,8 +273,8 @@
   }
   function initTwitch() {
     if (document.getElementById('twitchStatus')) {
-      renderTwitch();
-      setInterval(renderTwitch, 60000);
+      fetchTwitch();
+      setInterval(fetchTwitch, 60000);
     }
   }
   if (document.readyState === 'loading') {
