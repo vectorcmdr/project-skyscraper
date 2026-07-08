@@ -258,8 +258,72 @@
       if (el) el.innerHTML = '';
     });
   }
-  if (document.getElementById('twitchStatus')) {
-    renderTwitch();
-    setInterval(renderTwitch, 60000);
+  function initTwitch() {
+    if (document.getElementById('twitchStatus')) {
+      renderTwitch();
+      setInterval(renderTwitch, 60000);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTwitch);
+  } else {
+    initTwitch();
+  }
+})();
+
+/* ── TRACE (The Architect online status) ──────────────────
+   Shared across all Ops Centre pages.
+   Reads docs/status/trace.json and renders #traceStatus.
+   ─────────────────────────────────────────────────────── */
+(function(){
+  var traceTick = null;
+  var lastTraceState = null;
+  function fmtElapsed(s) {
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = Math.floor(s % 60);
+    if (h > 0) return h + 'h ' + m + 'm ' + sec + 's';
+    if (m > 0) return m + 'm ' + sec + 's';
+    return sec + 's';
+  }
+  function renderTrace(data) {
+    var el = document.getElementById('traceStatus');
+    if (!el) return;
+    if (data.state === 'ACTIVE') {
+      el.innerHTML = '<span class="trace-dot trace-dot--active"></span><span class="trace-label">TRACE: ACTIVE</span>';
+    } else if (data.state === 'LOST' && data.lastSeenAt) {
+      var then = new Date(data.lastSeenAt);
+      var elapsed = (Date.now() - then.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TRACE: LOST</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+  function updateTrace() {
+    fetch('../status/trace.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      renderTrace(data);
+      lastTraceState = data.state;
+      if (data.state === 'LOST') {
+        if (traceTick) clearInterval(traceTick);
+        traceTick = setInterval(function() { renderTrace(data); }, 1000);
+      } else {
+        if (traceTick) { clearInterval(traceTick); traceTick = null; }
+      }
+    }).catch(function() {
+      var el = document.getElementById('traceStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  function initTrace() {
+    if (document.getElementById('traceStatus')) {
+      updateTrace();
+      setInterval(updateTrace, 30000);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTrace);
+  } else {
+    initTrace();
   }
 })();
