@@ -292,7 +292,8 @@
   var traceTick = null;
   var lastTraceState = null;
   function fmtElapsed(s) {
-    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = Math.floor(s % 60);
+    var d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = Math.floor(s % 60);
+    if (d > 0) return d + 'd ' + h + 'h ' + m + 'm';
     if (h > 0) return h + 'h ' + m + 'm ' + sec + 's';
     if (m > 0) return m + 'm ' + sec + 's';
     return sec + 's';
