@@ -251,7 +251,6 @@
     } else {
       el.innerHTML = '';
     }
-    lastState = state;
   }
   function scheduleTwitchTick(data) {
     if (twitchTick) { clearInterval(twitchTick); twitchTick = null; }
@@ -264,7 +263,14 @@
       if (!r.ok) throw new Error();
       return r.json();
     }).then(function(data) {
+      if (lastState !== null && data.state !== lastState) {
+        var audio = new Audio();
+        audio.src = data.state === 'LIVE' ? '../data/alien_menu_notif.mp3' : '../data/alien_menu_save.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
       renderTwitch(data);
+      lastState = data.state;
       scheduleTwitchTick(data);
     }).catch(function() {
       var el = document.getElementById('twitchStatus');
@@ -316,6 +322,12 @@
       if (!r.ok) throw new Error();
       return r.json();
     }).then(function(data) {
+      if (lastTraceState !== null && data.state !== lastTraceState) {
+        var audio = new Audio();
+        audio.src = data.state === 'ACTIVE' ? '../data/alien_mt_notif.mp3' : '../data/alien_mt_power.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
       renderTrace(data);
       lastTraceState = data.state;
       if (data.state === 'LOST') {

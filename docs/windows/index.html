@@ -869,7 +869,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       renderTrace(data);
       if (lastTraceState !== null && data.state !== lastTraceState) {
         var audio = new Audio();
-        audio.src = data.state === 'ACTIVE' ? '../data/trace-on.mp3' : '../data/trace-off.mp3';
+        audio.src = data.state === 'ACTIVE' ? '../data/alien_mt_notif.mp3' : '../data/alien_mt_power.mp3';
         audio.volume = 0.3;
         audio.play().catch(function(){});
       }
@@ -889,6 +889,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   setInterval(updateTrace, 30000);
 
   var twitchTick = null;
+  var lastTwitchState = null;
 
   function renderTwitch(data) {
     var el = document.getElementById('twitchStatus');
@@ -914,7 +915,14 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       if (!r.ok) throw new Error();
       return r.json();
     }).then(function(data) {
+      if (lastTwitchState !== null && data.state !== lastTwitchState) {
+        var audio = new Audio();
+        audio.src = data.state === 'LIVE' ? '../data/alien_menu_notif.mp3' : '../data/alien_menu_save.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
       renderTwitch(data);
+      lastTwitchState = data.state;
       scheduleTwitchTick(data);
     }).catch(function() {
       var el = document.getElementById('twitchStatus');
