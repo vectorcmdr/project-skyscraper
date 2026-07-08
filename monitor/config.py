@@ -75,6 +75,11 @@ TRACE_STATUS_FILE = MIRROR_DIR / "docs" / "status" / "trace.json"
 TRACE_ACTIVE_THRESHOLD = 300
 TRACE_POLL_INTERVAL = 60
 
+TWITCH_CLIENT_ID = _CONFIG.get("twitch_client_id", "")
+TWITCH_CLIENT_SECRET = _CONFIG.get("twitch_client_secret", "")
+TWITCH_STATUS_FILE = MIRROR_DIR / "docs" / "status" / "twitch.json"
+TWITCH_POLL_INTERVAL = 60
+
 PROBE_RANGE = 300
 PROBE_CHUNK_SIZE = 30
 PAGE_CHECK_CHUNK = 15
@@ -83,6 +88,11 @@ MAX_MEDIA_WORKERS = 3
 FETCH_TIMEOUT = 15
 HEAD_TIMEOUT = 10
 DIFF_MAX_LINES = 30
+
+STALE_BYPASS_URLS = frozenset({
+    "/counting/",
+    "/neural-network-status/",
+})
 
 PASSWORD_PROTECTED_PAGES = {
     "https://project-skyscraper.com/request-memory-timestamp-094317/": "EMILY",

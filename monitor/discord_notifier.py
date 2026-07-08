@@ -392,3 +392,19 @@ def notify_trace_change(state: str, last_seen_at: str):
         desc = f"Last seen: {last_seen_at}"
 
     _send_embed(title=title, description=desc, color=color)
+
+
+def notify_twitch_change(state: str):
+    if not DISCORD_WEBHOOK:
+        return
+
+    if state == "LIVE":
+        color = 0x9146ff
+        title = "TTV: project_skyscraper is LIVE"
+        desc = "https://twitch.tv/project_skyscraper"
+    else:
+        color = 0x666666
+        title = "TTV: project_skyscraper is OFFLINE"
+        desc = ""
+
+    _send_embed(title=title, description=desc, color=color)

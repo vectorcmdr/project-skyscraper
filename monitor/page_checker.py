@@ -2,8 +2,9 @@
 
 import re
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 
-from monitor.config import BASE_URL, DATA_DIR, PASSWORD_PROTECTED_PAGES
+from monitor.config import BASE_URL, DATA_DIR, PASSWORD_PROTECTED_PAGES, STALE_BYPASS_URLS
 from monitor.http_client import fetch
 from monitor.logger import log
 from monitor.noise_filter import is_noise_only_page_change
@@ -58,7 +59,10 @@ def check_page_content(url: str, state: dict) -> list:
                 if diff_text:
                     mod_gmt = find_modified_gmt_for_url(state, url)
                     stale = False
-                    if mod_gmt:
+                    # Same template-based page bypass as the hash-change path below
+                    if urlparse(url).path in STALE_BYPASS_URLS:
+                        stale = False
+                    elif mod_gmt:
                         try:
                             mod_dt = datetime.fromisoformat(mod_gmt)
                             if mod_dt.tzinfo is None:
@@ -119,7 +123,12 @@ def check_page_content(url: str, state: dict) -> list:
             else:
                 mod_gmt = find_modified_gmt_for_url(state, url)
                 stale = False
-                if mod_gmt:
+                # Template-based pages (e.g. /counting/, /neural-network-status/)
+                # have static modified_gmt but dynamic output from theme templates.
+                # Bypass the stale filter so their changes fire notifications.
+                if urlparse(url).path in STALE_BYPASS_URLS:
+                    stale = False
+                elif mod_gmt:
                     try:
                         mod_dt = datetime.fromisoformat(mod_gmt)
                         if mod_dt.tzinfo is None:

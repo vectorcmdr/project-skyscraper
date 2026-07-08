@@ -34,11 +34,12 @@ from monitor.api_collections import check_api_collection, get_user_map
 from monitor.page_checker import check_page_content, get_page_check_batch
 from monitor.media_checker import check_media
 from monitor.id_prober import probe_unpublished
-from monitor.discord_notifier import notify_changes, notify_trace_change
+from monitor.discord_notifier import notify_changes, notify_trace_change, notify_twitch_change
 from monitor.feed_manager import generate_site_data, generate_external_data, seed_feed_from_mirror
 from monitor.graph_builder import build_graph, rebuild_on_change, write_graph
 from monitor.git_pusher import push_site
 from monitor.trace_checker import check_trace, ensure_trace_default, init_trace_state
+from monitor.twitch_checker import check_twitch, ensure_twitch_default, init_twitch_state
 from monitor.report_writer import clean_old_reports, write_monitor_report, refresh_reports
 from monitor.discovery import fetch_and_save, fetch_protected_page
 from monitor.external_checker import check_external_sites
@@ -390,6 +391,8 @@ def daemon_loop(quiet: bool = False):
 
     ensure_trace_default()
     init_trace_state()
+    ensure_twitch_default()
+    init_twitch_state()
     try:
         push_site()
     except BaseException:
@@ -447,6 +450,20 @@ def daemon_loop(quiet: bool = False):
                 elif trace_result == "updated":
                     pass
 
+                twitch_result = check_twitch()
+                if twitch_result == "changed":
+                    import json
+                    from monitor.config import TWITCH_STATUS_FILE
+                    try:
+                        td = json.loads(TWITCH_STATUS_FILE.read_text(encoding="utf-8"))
+                        notify_twitch_change(td.get("state", "OFFLINE"))
+                    except Exception:
+                        pass
+                    try:
+                        push_site()
+                    except BaseException:
+                        pass
+
                 if now % 3600 < 1:
                     clean_old_reports()
                     refresh_reports(state)
@@ -479,6 +496,8 @@ def run_single_check():
         save_state(state)
         ensure_trace_default()
         init_trace_state()
+        ensure_twitch_default()
+        init_twitch_state()
 
         log("Single check mode")
         write_graph(build_graph(state))
