@@ -138,6 +138,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div class="topbar-right">
     <div class="topbar-right-top">
       <span class="trace-status" id="traceStatus"></span>
+      <span class="trace-status" id="twitchStatus"></span>
     </div>
     <div class="proxy-network">
       <span class="proxy-label">PROXY NETWORK:</span>
@@ -884,6 +885,31 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   }
   updateTrace();
   setInterval(updateTrace, 30000);
+
+  function renderTwitch(data) {
+    var el = document.getElementById('twitchStatus');
+    if (!el) return;
+    if (data.state === 'LIVE') {
+      el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
+    } else if (data.state === 'OFFLINE') {
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+  function updateTwitch() {
+    fetch('../status/twitch.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      renderTwitch(data);
+    }).catch(function() {
+      var el = document.getElementById('twitchStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  updateTwitch();
+  setInterval(updateTwitch, 60000);
 })();
 </script>
 

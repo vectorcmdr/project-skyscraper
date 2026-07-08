@@ -230,3 +230,36 @@
     init();
   }
 })();
+
+/* ── Twitch live/offline status ───────────────────────────
+   Shared TTV indicator for all Ops Centre pages.
+   Reads docs/status/twitch.json and renders #twitchStatus.
+   ─────────────────────────────────────────────────────── */
+(function(){
+  var lastState = null;
+  function renderTwitch() {
+    fetch('../status/twitch.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      var el = document.getElementById('twitchStatus');
+      if (!el) return;
+      var state = data.state;
+      if (state === 'LIVE') {
+        el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
+      } else if (state === 'OFFLINE') {
+        el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span>';
+      } else {
+        el.innerHTML = '';
+      }
+      lastState = state;
+    }).catch(function() {
+      var el = document.getElementById('twitchStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  if (document.getElementById('twitchStatus')) {
+    renderTwitch();
+    setInterval(renderTwitch, 60000);
+  }
+})();
