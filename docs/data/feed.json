@@ -1,17 +1,17 @@
 {
   "entries": [
     {
-      "type": "page_content_changed",
+      "type": "memory_bloc_restoration",
       "timestamp": "2026-07-08T13:03:09+00:00",
-      "title": "project-skyscraper.com",
-      "link": "https://project-skyscraper.com/",
-      "endpoint": "",
-      "diff": "  Skip to content\n+ Jul.8, 2026\n  Jul.5, 2026\n  Jul.4, 2026\n  Dec.29, 2016\n  Dec.28, 2016\n- Dec.27, 2016\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 366/365 CompletedMemory_bloc_verification: 31/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 366/365 CompletedMemory_bloc_verification: 32/365 Completed",
-      "detail": "Content changed: https://project-skyscraper.com/",
-      "author": 0,
+      "title": "Memory bloc restoration: 366/365 [10 Pages]",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "diff": "367/365 → 366/365",
+      "detail": "Memory bloc restoration changed from 366/365 to 366/365 across 10 pages",
+      "author": "System",
       "site": "",
-      "id": null,
-      "game_date": ""
+      "restoration_value": "366/365",
+      "page_count": 10,
+      "last_timestamp": "2026-07-08T13:03:09+00:00"
     },
     {
       "type": "sitemap_added",
@@ -428,19 +428,6 @@
       "site": "recalldreams",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-08T09:16:25.298895+00:00",
-      "title": "Memory bloc restoration: 366/365 [10 Pages]",
-      "link": "https://project-skyscraper.com/project-skyscraper/",
-      "diff": "367/365 → 366/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 366/365 across 10 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "366/365",
-      "page_count": 10,
-      "last_timestamp": "2026-07-08T09:16:25.298895+00:00"
     },
     {
       "type": "api_items_added",
@@ -9824,5 +9811,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-08T13:04:30.062140+00:00"
+  "updated": "2026-07-08T13:04:55.298774+00:00"
 }
