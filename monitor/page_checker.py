@@ -211,4 +211,13 @@ def get_page_check_batch(state: dict, chunk_size: int = 15) -> list:
     if len(batch) < chunk_size and len(sitemap_urls) > chunk_size:
         batch.extend(sitemap_urls[:chunk_size - len(batch)])
     state["sitemap"]["_page_check_offset"] = (offset + chunk_size) % len(sitemap_urls)
+
+    # Always include template-based pages (stale bypass list) in every batch
+    for path in STALE_BYPASS_URLS:
+        full_url = f"{BASE_URL}{path}"
+        if full_url in sitemap_urls and full_url not in batch:
+            batch.insert(0, full_url)
+            if len(batch) > chunk_size + len(STALE_BYPASS_URLS):
+                batch.pop()
+
     return batch

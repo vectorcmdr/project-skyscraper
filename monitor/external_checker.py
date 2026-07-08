@@ -286,11 +286,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
                          api_state: dict, site_state: dict, site_label: str = "") -> list:
     from monitor.api_collections import _fetch_all_pages, _item_summary
 
-    result = fetch(api_url, etag=api_state.get("etag"))
-    if result.not_modified:
-        api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
-        return []
-
+    # Always fetch fresh — skip ETag conditional GET to avoid stale CDN caches
     items, new_hash, total_pages, new_etag, _ = _fetch_all_pages(api_url)
 
     if not items:
@@ -367,7 +363,7 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
                 "items": [new_item],
             })
 
-    api_state["etag"] = new_etag or result.etag
+    api_state["etag"] = new_etag
     api_state["hash"] = new_hash
     api_state["items"] = [new_items_map[iid] for iid in sorted(new_items_map, key=int)]
     api_state["last_checked"] = datetime.now(timezone.utc).isoformat()

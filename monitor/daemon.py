@@ -32,6 +32,7 @@ from monitor.state_manager import load_state, save_state, acquire_lock, release_
 from monitor.sitemap import check_sitemap
 from monitor.api_collections import check_api_collection, get_user_map
 from monitor.page_checker import check_page_content, get_page_check_batch
+from monitor.config import STALE_BYPASS_URLS
 from monitor.media_checker import check_media
 from monitor.id_prober import probe_unpublished
 from monitor.discord_notifier import notify_changes, notify_trace_change, notify_twitch_change
@@ -142,6 +143,14 @@ def run_check_cycle(state: dict, tiers: set = None, is_initial: bool = False) ->
             all_changes.extend(changes)
         except Exception as e:
             log(f"Error checking sitemap: {e}", "ERROR")
+
+        try:
+            for path in STALE_BYPASS_URLS:
+                url = f"{BASE_URL}{path}"
+                changes = check_page_content(url, state)
+                all_changes.extend(changes)
+        except Exception as e:
+            log(f"Error checking priority page: {e}", "ERROR")
 
     if "medium" in tiers:
         log("=== Medium check ===", "MEDIUM")
