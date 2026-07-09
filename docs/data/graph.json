@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T03:18:14.489993+00:00",
+  "updated": "2026-07-09T15:29:32.591044+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -4176,6 +4176,14 @@
       "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/0A8BB0156734.jpg",
       "author": "The Architect",
       "date": "2026-06-21T13:38:25"
+    },
+    {
+      "id": "/wp-content/uploads/2026/07/10B805005006.jpg",
+      "type": "media",
+      "label": "10B805005006",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/07/10B805005006.jpg",
+      "author": "The Architect",
+      "date": "2026-07-09T15:28:41"
     },
     {
       "id": "/wp-content/uploads/2026/06/12DD862FD254.jpg",
@@ -13877,6 +13885,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/06/Ferdinand_Monoyer.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/07/10B805005006.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
