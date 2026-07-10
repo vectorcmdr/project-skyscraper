@@ -382,24 +382,6 @@ document.querySelectorAll('.sort-btn').forEach(b => {
 load();
 setOperator();
 
-/* ── TRACE (Discourse online status) ───────────────────── */
-let traceSoundState = null;
-
-function updateTraceSound() {
-  fetch('trace.json')
-    .then(r => r.ok ? r.json() : Promise.reject(r.status))
-    .then(data => {
-      if (traceSoundState !== null && data.state !== traceSoundState) {
-        playSound(data.state === 'ACTIVE' ? 'traceActive' : 'traceLost');
-      }
-      traceSoundState = data.state;
-    })
-    .catch(() => {});
-}
-
-updateTraceSound();
-setInterval(updateTraceSound, 30000);
-
 /* ── SOUND TOGGLE ─────────────────────────────────────────── */
 document.getElementById('soundToggle').addEventListener('click', toggleSound);
 updateSoundBtn();
