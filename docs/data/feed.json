@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-10T23:12:48.680127+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-10 23:11:57 UTC\n# Lines: 604037 old -> 604567 new\n# Beautified: yes\n\n@@ -3083,6 +3083,11 @@\n               \"default\": 0,\n\n               \"required\": false\n\n             },\n\n+            \"podcast\": {\n\n+              \"description\": \"\",\n\n+              \"default\": 0,\n\n+              \"required\": false\n\n+            },\n\n             \"post-by-email\": {\n\n               \"description\": \"\",\n\n               \"default\": 0,\n\n@@ -3970,6 +3975,11 @@\n               \"required\": false\n\n             },\n\n             \"photon\": {\n\n+              \"description\": \"\",\n\n+              \"default\": 0,\n\n+              \"required\": false\n\n+            },\n\n+            \"podcast\": {\n\n               \"description\": \"\",\n\n               \"default\": 0,\n\n               \"required\": false\n\n@@ -8023,6 +8033,26 @@\n         }\n\n       ]\n\n     },\n\n+    \"/wpcom/v2/ai-launchpad/available-tasks\": {\n\n+      \"namespace\": \"wpcom/v2\",\n\n... (591 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-10T13:09:47+00:00",
       "title": "project-skyscraper.com",
@@ -10227,5 +10240,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-10T13:11:07.446639+00:00"
+  "updated": "2026-07-10T23:12:48.686514+00:00"
 }
