@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-10T03:50:32.878192+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-07-10 03:50:01 UTC\n# Lines: 60863 old -> 60863 new\n# Beautified: yes\n\n@@ -205,7 +205,7 @@\n }</script>\n\n <meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n-<script>window.TOWER_TOKEN = \"78a5c7313376653bc15eadb328bf706a6202e0ee5963e185414897a058f8a412\";\n\n+<script>window.TOWER_TOKEN = \"c5f264de60fa75697c88f369ca071875f7d71b6072b660b9c718324b42501382\";\n\n console.log(\"%cToken Tower chargé\", \"color:#39d353\");</script><script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-10T03:50:32.878145+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/landing-page/terminal/\n# File: html/landing-page/terminal/index.html\n# Timestamp: 2026-07-10 03:49:56 UTC\n# Lines: 72637 old -> 72711 new\n# Beautified: yes\n\n@@ -199,7 +199,7 @@\n }</script>\n\n <meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n-<script>window.TOWER_TOKEN = \"78a5c7313376653bc15eadb328bf706a6202e0ee5963e185414897a058f8a412\";\n\n+<script>window.TOWER_TOKEN = \"c5f264de60fa75697c88f369ca071875f7d71b6072b660b9c718324b42501382\";\n\n console.log(\"%cToken Tower chargé\", \"color:#39d353\");</script><script id=\"jetpack-stats-js-before\">_stq = window._stq || [];;;\n\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-10T00:29:51.997255+00:00",
       "title": "https://project-skyscraper.com/10b805005006/",
@@ -10331,5 +10357,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-10T00:29:52.004064+00:00"
+  "updated": "2026-07-10T03:50:32.883977+00:00"
 }
