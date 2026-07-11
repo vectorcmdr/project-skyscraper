@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-11T10:11:27+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : Ghost >\n+ samedi 11 juillet12:09\n+ Arrête tes conneries. Tu m’as contacté après 10 ans de silence. Tu m’as demandé de l’aide. J’ai accepté de t’aider parce que tu étais mon meilleur ami. Et là tu joues à quoi ? Fini les mails. Je veux te voir.\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-11T10:07:19+00:00",
       "title": "neural-network-status",
@@ -10318,5 +10331,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-11T10:13:04.013933+00:00"
+  "updated": "2026-07-11T10:13:38.279952+00:00"
 }
