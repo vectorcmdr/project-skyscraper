@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-11T10:35:53.164722+00:00",
+      "title": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "link": "https://recalldreams.dev/do-you-know-me-well/",
+      "endpoint": "",
+      "diff": " </head>\n\n <body class=\"wp-singular page-template-default page page-id-492 wp-custom-logo wp-embed-responsive wp-theme-hoat is-block-theme\">\n\n-<script id='jetpack-search-theme-token-sampler'>(function(){try{var c=getComputedStyle(document.body),r=document.documentElement,ink=c.color,bg=c.backgroundColor;if(ink){r.style.setProperty('--jp-search-page-ink',ink);}if(bg&&bg!==ink&&bg!=='rgba(0, 0, 0, 0)'&&bg!=='transparent'){r.style.setProperty('--jp-search-page-surface',bg);}}catch(e){}})();</script><style class=\"wpcode-css-snippet\">/* =============================================\n\n-   DATA LOSS \n\n-   ============================================= */\n\n-\n\n-.wp-post-image,\n\n-article .wp-post-image,\n\n-.post-thumbnail img,\n\n-figure.wp-block-post-featured-image img {\n\n-    position: relative !important;\n\n-    filter: brightness(1.25) contrast(1.45) saturate(0.75) !important;\n\n-}\n\n-\n\n-/* Overlay ultra forcé */\n\n-.wp-post-image::after,\n\n-.post-thumbnail img::after,\n\n-figure.wp-block-post-featured-image img::after,\n\n-figure.wp-block-post-featured-image::after {\n\n-    content: \"\" !important;\n\n-    position: absolute !important;\n\n-    top: 0 !important;\n\n-    left: 0 !important;\n\n-    width: 100% !important;\n\n-    height: 100% !important;\n\n-    z-index: 999 !important;\n\n-    background-image: url('https://recalldreams.dev/wp-content/uploads/2026/06/opening_door_protocol.jpg') !important;\n\n-    background-size: cover !important;\n\n-    background-position: center !important;\n\n-    mix-blend-mode: screen !important;\n\n-    opacity: 0.94 !important;\n\n-    pointer-events: none !important;\n\n-    mask-image: linear-gradient(\n\n-        to bottom,\n\n-        transparent 2%,\n\n-        rgba(0,0,0,0.95) 18%,\n\n-        rgba(0,0,0,0.5) 48%,\n\n-        rgba(0,0,0,0.95) 82%,\n\n-        transparent 98%\n\n-    ) !important;\n\n+<script id='jetpack-search-theme-token-sampler'>(function(){try{var c=getComputedStyle(document.body),r=document.documentElement,ink=c.color,bg=c.backgroundColor;if(ink){r.style...",
+      "detail": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-11T10:35:23.316504+00:00",
       "title": "Content changed: https://recalldreams.dev/",
       "link": "https://recalldreams.dev/",
@@ -10617,5 +10630,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-11T10:35:23.324733+00:00"
+  "updated": "2026-07-11T10:35:53.170982+00:00"
 }
