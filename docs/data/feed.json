@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-11T09:32:27+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ Ghost >À : the_architect@project-skyscraper.com\n+ samedi 11 juillet10:31\n+ Je n’aurais pas dû te mentir. Je ne suis pas Arnaud.\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-11T09:22:48.072744+00:00",
       "title": "Memory bloc restoration: 366/365 [12 Pages]",
@@ -10292,5 +10305,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-11T09:22:48.081858+00:00"
+  "updated": "2026-07-11T09:32:54.771050+00:00"
 }
