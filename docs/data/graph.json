@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T14:27:54.631377+00:00",
+  "updated": "2026-07-12T15:27:11.228559+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -162,10 +162,34 @@
       "date": ""
     },
     {
+      "id": "/2026/07/11/2026_dataset_11072026/context.image.src",
+      "type": "page",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2026/07/11/2026_dataset_11072026/context.item.anchor",
+      "type": "page",
+      "label": "Context.Item.Anchor",
+      "url": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/context.item.anchor",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "/request-memory-timestamp-094317/context.submission.url",
       "type": "page",
       "label": "Context.Submission.Url",
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/2026/07/11/2026_dataset_11072026/context.submission.url",
+      "type": "page",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -4410,6 +4434,14 @@
       "date": "2026-04-25T08:59:23"
     },
     {
+      "id": "/wp-content/uploads/2026/07/Thank-You.jpg",
+      "type": "media",
+      "label": "Thank You",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg",
+      "author": "The Architect",
+      "date": "2026-07-12T15:25:23"
+    },
+    {
       "id": "/wp-content/uploads/2026/05/TR4CE.jpg",
       "type": "media",
       "label": "TR4CE",
@@ -4526,6 +4558,14 @@
       "type": "external",
       "label": "forums.atlas-65.com",
       "url": "https://forums.atlas-65.com/t/emily-never-left-us/8949/19?u=System",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/52",
+      "type": "external",
+      "label": "forums.atlas-65.com",
+      "url": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/52",
       "author": "",
       "date": ""
     },
@@ -13873,11 +13913,27 @@
     },
     {
       "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/52"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
       "target": "/tag/unverified"
     },
     {
       "source": "/2026/07/11/2026_dataset_11072026",
       "target": "/2026/07/10/diagnostic-094912"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/2026/07/11/2026_dataset_11072026/context.submission.url"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/2026/07/11/2026_dataset_11072026/context.image.src"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/2026/07/11/2026_dataset_11072026/context.item.anchor"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -14001,6 +14057,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/07/10B805005006.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/07/Thank-You.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
