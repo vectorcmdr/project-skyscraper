@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-12T14:46:47+00:00",
+      "title": "2026_dataset_11072026",
+      "link": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-12T14:27:47.193660+00:00",
       "title": "Memory bloc restoration: 366/365 [13 Pages]",
@@ -10968,5 +10981,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-12T14:27:47.200240+00:00"
+  "updated": "2026-07-12T14:47:58.812044+00:00"
 }
