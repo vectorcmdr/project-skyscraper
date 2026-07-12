@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-12T15:25:30+00:00",
+      "title": "2026_dataset_11072026",
+      "link": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory compliance: 90%\n+ Memory compliance: 100%\n  2026_dataset_11072026\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-12T15:25:23+00:00",
       "title": "Thank You",
@@ -11124,5 +11137,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-12T15:25:46.668871+00:00"
+  "updated": "2026-07-12T15:27:42.229839+00:00"
 }
