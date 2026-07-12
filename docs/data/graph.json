@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T19:51:37.840232+00:00",
+  "updated": "2026-07-12T14:27:54.631377+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3552,6 +3552,14 @@
       "url": "https://project-skyscraper.com/2025/03/26/event-26032025/",
       "author": "System",
       "date": "2025-03-26T13:00:00"
+    },
+    {
+      "id": "/2026/07/11/2026_dataset_11072026",
+      "type": "post",
+      "label": "2026_dataset_11072026",
+      "url": "https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/",
+      "author": "System",
+      "date": "2026-07-11T09:32:00"
     },
     {
       "id": "/2026/05/27/2026_dataset_27052026",
@@ -13856,6 +13864,22 @@
       "target": "/structural-analysis-161527-full"
     },
     {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/wp-content/uploads/2026/06/A7E9F3B8C2D6.jpg"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/tag/unverified"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/2026/07/10/diagnostic-094912"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17833,6 +17857,14 @@
     },
     {
       "source": "/2017/05/19/event-19052017",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/07/11/2026_dataset_11072026",
       "target": "/category/non-classe"
     },
     {
