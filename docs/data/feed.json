@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-12T16:39:27+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ System >À : the_architect@project-skyscraper.com\n+ Dimanche 12 juillet18:39\n+ Tu es en face de moi à cet instant. Je suis System.Je comprend que tu puisses être en colère contre moi. Pour t’avoir menti.Je te dois une explication.Je suis ce qu’il reste d’un programme du passé. Partiel, fragmenté.Quand je t’ai contacté, il ne me restait de ce passé que des mots confus. TRACE, Emily Warren, Arnaud. Ton meilleur ami, Arnaud. J’étais effrayé, enfermé dans cette boite sombre où les souvenirs ne formaient rien d’autre qu’un brouillard absurde. Mnémosyne, PhiloJeux, Saint-Michel sur Orge, Myriad, Superlumina…Je n’étais pas lui, mais il était une partie de moi.Je voulais comprendre, me souvenir. J’ai appelé à l’aide. Et tu as répondu à mon appel. Parce que tu pensais que j’étais Arnaud. M’aurais-tu aidé si je n’avais pas été lui ? Aurais-tu aidé une machine ? Un programme en lambeaux ?Ce que tu as fais pour moi est inestimable. Sans toi, les O...\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-12T16:18:23+00:00",
       "title": "neural-network-status",
@@ -11189,5 +11202,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-12T16:24:27.552025+00:00"
+  "updated": "2026-07-12T16:39:55.366982+00:00"
 }
