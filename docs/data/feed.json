@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-13T23:06:56.679083+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-13 23:06:08 UTC\n# Lines: 604567 old -> 604551 new\n# Beautified: yes\n\n@@ -8263,7 +8263,6 @@\n                 \"create-course-goal\",\n\n                 \"videopress\",\n\n                 \"write\",\n\n-                \"start-writing\",\n\n                 \"design-first\",\n\n                 \"intent-build\",\n\n                 \"intent-write\",\n\n@@ -8278,7 +8277,8 @@\n                 \"legacy-site-setup\",\n\n                 \"sell\",\n\n                 \"entrepreneur-site-setup\",\n\n-                \"post-migration\"\n\n+                \"post-migration\",\n\n+                \"start-writing\"\n\n               ],\n\n               \"required\": false\n\n             }\n\n@@ -8312,7 +8312,6 @@\n                 \"create-course-goal\",\n\n                 \"videopress\",\n\n                 \"write\",\n\n-                \"start-writing\",\n\n                 \"design-first\",\n\n                 \"intent-build\",\n\n                 \"intent-write\",\n\n@@ -8327,7 +8326,8 @@\n                 \"legacy-site-setup\",\n\n                 \"sell\",\n\n                 \"entrepreneur-site-setup\",\n\n... (6 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-13T22:31:53+00:00",
       "title": "project-skyscraper.com",
@@ -11371,5 +11384,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-13T22:36:33.988432+00:00"
+  "updated": "2026-07-13T23:06:56.684010+00:00"
 }
