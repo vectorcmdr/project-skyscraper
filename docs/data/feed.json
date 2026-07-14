@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-14T15:50:53+00:00",
+      "title": "2016_dataset_20042016",
+      "link": "https://project-skyscraper.com/2016/04/20/event-20042016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-aW\",\n  \"jetpack-related-posts\": [\n  {\n- \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n+ \"url\": \"https://project-skyscraper.com/2016/12/29/event-29122016/\",\n  \"url_meta\": {\n  \"origin\": 678,\n  \"position\": 0\n  },\n- \"title\": \"2016_dataset\",\n- \"date\": \"30 October 2016\",\n- \"excerpt\": \"memory bloc : In MemoriamValue: Bitswap with A.K. Legend, in search of a holographic mystery.Note: There is room for each and a TOWER for all.Source_injection: Multiple\",\n- \"rel\": \"\",\n- \"context\": \"In &quot;Non classé&quot;\",\n- \"block_context\": {\n- \"text\": \"Non classé\"\n- },\n- \"img\": {\n- \"alt_text\": \"\",\n- \"src\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=350%2C200&ssl=1\",\n- \"width\": 350,\n- \"height\": 200,\n- \"srcset\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=350%2C200&ssl=1 1x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=525%2C300&ssl=1 1.5x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=700%2C400&ssl=1 2x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=1050%2C600&ssl=1 3x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/06/In-Memoriam.jpg?resize=1400%2C800&ssl=1 4x\"\n- },\n- \"classes\": []\n- },\n- {\n- \"url\": \"https://project-skyscraper.com/2016/01/13/event-13012016/\",\n- \"url_meta\": {\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-14T15:49:41+00:00",
       "title": "2016_dataset_25102016",
       "link": "https://project-skyscraper.com/2016/10/25/event-25102016/",
@@ -11631,5 +11644,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T15:50:40.038322+00:00"
+  "updated": "2026-07-14T15:51:41.629678+00:00"
 }
