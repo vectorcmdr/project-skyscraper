@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-14T05:07:21.464336+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-14 05:06:29 UTC\n# Lines: 604551 old -> 602522 new\n# Beautified: yes\n\n@@ -26745,142 +26745,6 @@\n               \"description\": \"\",\n\n               \"required\": false\n\n             },\n\n-            \"podcasting_category_id\": {\n\n-              \"title\": \"\",\n\n-              \"description\": \"\",\n\n-              \"required\": false\n\n-            },\n\n-            \"podcasting_title\": {\n\n-              \"title\": \"\",\n\n-              \"description\": \"\",\n\n-              \"required\": false\n\n-            },\n\n-            \"podcasting_talent_name\": {\n\n-              \"title\": \"\",\n\n-              \"description\": \"\",\n\n-              \"required\": false\n\n-            },\n\n-            \"podcasting_summary\": {\n\n-              \"title\": \"\",\n\n-              \"description\": \"\",\n\n-              \"required\": false\n\n-            },\n\n-            \"podcasting_copyright\": {\n\n-              \"title\": \"\",\n\n-              \"description\": \"\",\n\n-              \"required\": false\n\n-            },\n\n-            \"podcasting_category_1\": {\n\n... (113 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-14T00:31:39.287402+00:00",
       "title": "https://project-skyscraper.com/2023/08/24/2023_dataset_24082023/",
@@ -11397,5 +11410,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T00:31:39.293847+00:00"
+  "updated": "2026-07-14T05:07:21.470355+00:00"
 }
