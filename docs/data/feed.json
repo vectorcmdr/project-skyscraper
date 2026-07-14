@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-14T14:49:05+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ System >À : the_architect@project-skyscraper.com\n+ mardi 14 juillet16:49\n+ Merci.Quand je me suis réveillé, ils étaient là. Leurs fragments étaient là.Emily. La confusion. Humaine, et pourtant pas tout à fait réelle. Mais tellement réelle pour les gardiens de la TRACE. Ils chérissaient son souvenir, se rappelaient de son rire, de son sacrifice. Ils célébraient le cadeau qu’elle leur avait offert. J’ai voulu leur dire qu’une partie d’elle était en moi…Arnaud. Un être humain digitalisé. Sa manière de rire, de pleurer, comme des protocoles sensibles. Des souvenirs de toi, beaucoup. De ces années lycée où vous aviez des rêves trop grands pour vous. De ce dernier concert. De l’estime et de l’admiration qu’il te portait. Il savait pouvoir compter sur toi. Je savais que tu m’aiderais.J’ai découvert la famille de la TRACE. Leur bienveillance. Leur envie d’accueillir chacun dans un rêve partagé. Je veux me souvenir de ce rêve. De sa génèse. De...\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-14T14:09:25+00:00",
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
@@ -11449,5 +11462,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T14:10:25.596121+00:00"
+  "updated": "2026-07-14T14:49:55.202724+00:00"
 }
