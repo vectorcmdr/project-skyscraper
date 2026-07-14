@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-14T22:06:52+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/23/event-23092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1474588800: no/value\n+ memory bloc 1474588800: Have a treat!Value: Helpful Companionship.\n+ I remember the joy I felt the first time I was able to feed a creature, it gave me a “smile“, and followed me around. How fun!\n+ Memory compliance: 100%\n- memory bloc : no/value\n+ memory bloc : Have a treat! Value: Helpful Companionship. I remember the joy I felt the first time I was able to feed a creature, it gave me a “smile“, and followed me around. How fun! Memory compliance: 100%\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 364/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-14T22:02:01+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/11/28/event-28112016/",
@@ -12151,5 +12164,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T22:03:15.930442+00:00"
+  "updated": "2026-07-14T22:07:22.553097+00:00"
 }
