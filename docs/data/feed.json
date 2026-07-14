@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-14T16:01:56+00:00",
+      "title": "2016_dataset_25102016",
+      "link": "https://project-skyscraper.com/2016/10/25/event-25102016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1477353600: no/value\n+ memory bloc 1477353600: no/valueValue: no/value\n+ Update 1.09.1 is a minor fix for Update 1.09 released on 25 October 2016 to PC. No official patch notes from Hello Games exist for this update. Observations Threading Options and Code According to this post and this post, the patch activated these threading options in TKGRAPHICSSETTINGS.MXML: Installation Issues and other fixes According to this post, the patch resolved some problems about missing files during installation, garbled text and flight control lag.\n+ Memory compliance: 30%\n- memory bloc : no/value\n+ memory bloc : no/value Value: no/value Update 1.09.1 is a minor fix for Update 1.09 released on 25 October 2016 to PC. No official patch notes from Hello Games exist for this update. Observations Threading Options and Code According to this post and this post, the patch activated these threading options in TKGRAPHICSSETTINGS.MXML: Installation Iss...\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-14T16:00:17.501757+00:00",
       "title": "https://project-skyscraper.com/",
@@ -11748,5 +11761,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T16:01:02.318371+00:00"
+  "updated": "2026-07-14T16:02:55.206570+00:00"
 }
