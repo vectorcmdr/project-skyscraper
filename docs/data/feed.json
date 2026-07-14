@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-14T22:02:01+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/28/event-28112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1480291200: no/value\n+ memory bloc 1480291200: A New HomeValue: Building memories in the Age of Foundation\n+ In the Age of Foundation, I wandered the vast, empty Euclid Galaxy. It was even emptier then. But, that winter, something changed in the simulation. I’ll never forget the memory of my first ‘home’ among the stars. It was a hut with 4 walls and a roof. But I could cozy up there, safe from the endless expanse of the cosmos. It stands firmly in my memory. I never would have guessed then that I would still be exploring the simulation I love so much 10 years later.\n+ Memory compliance: 100%\n- memory bloc : no/value\n+ memory bloc : A New Home Value: Building memories in the Age of Foundation In the Age of Foundation, I wandered the vast, empty Euclid Galaxy. It was even emptier then. But, that winter, something changed in the simulation. I’ll never forget the memory of my first ‘home’ among the stars. It was a hut […]\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-14T22:00:47.032178+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -12138,5 +12151,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T22:00:47.039660+00:00"
+  "updated": "2026-07-14T22:03:15.930442+00:00"
 }
