@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-14T16:13:29+00:00",
+      "title": "2016_dataset_25102016",
+      "link": "https://project-skyscraper.com/2016/10/25/event-25102016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Update 1.09.1 is a minor fix for Update 1.09 released on 25 October 2016 to PC. No official patch notes from Hello Games exist for this update. Observations Threading Options and Code According to this post and this post, the patch activated these threading options in TKGRAPHICSSETTINGS.MXML: Installation Issues and other fixes According to this post, the patch resolved some problems about missing files during installation, garbled text and flight control lag.\n+ I was playing on PS4 so I began to hear that NMS was a game for devs. For those who understand its inner workings. I wanted to understand. I waited patiently for updates on PS4 and began to slowly build a PC so I could join the update fun sooner.\n- memory bloc : no/value Value: no/value Update 1.09.1 is a minor fix for Update 1.09 released on 25 October 2016 to PC. No official patch notes from Hello Games exist for this update. Observations Threading Options and Code According t...\n- Update 1.09.1 is a minor fix for Update 1.09 released on 25 October 2016 to PC. No official patch notes from Hello Games exist for this update. Observations Threading Options and Code According to this post and this post, the patch activated these threading options in TKGRAPHICSSETTINGS.MXML: Installation Issues and other fixes According to this post, the patch resolved some problems about missing files during installation, garbled text and flight control lag.\n+ I was playing on PS4 so I began to hear that NMS was a game for devs. For those who understand its inner workings. I wanted to understand. I waited patiently for updates on PS4 and began to slowly build a PC so I could join the update fun sooner.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 366/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-14T16:11:36+00:00",
       "title": "2016_dataset_20042016",
       "link": "https://project-skyscraper.com/2016/04/20/event-20042016/",
@@ -11800,5 +11813,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T16:12:07.639339+00:00"
+  "updated": "2026-07-14T16:14:05.809753+00:00"
 }
