@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-14T15:42:50.243885+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": " </head>\n\n <body class=\"wp-singular page-template page-template-schr-dinger-s-instagram page page-id-71 page-child parent-pageid-4 wp-custom-logo wp-embed-responsive wp-theme-hoat is-block-theme\">\n\n-<style class=\"wpcode-css-snippet\">/* =============================================\n\n-   DATA LOSS \n\n-   ============================================= */\n\n-\n\n-.wp-post-image,\n\n-article .wp-post-image,\n\n-.post-thumbnail img,\n\n-figure.wp-block-post-featured-image img {\n\n-    position: relative !important;\n\n-    filter: brightness(1.25) contrast(1.45) saturate(0.75) !important;\n\n-}\n\n-\n\n-/* Overlay ultra forcé */\n\n-.wp-post-image::after,\n\n-.post-thumbnail img::after,\n\n-figure.wp-block-post-featured-image img::after,\n\n-figure.wp-block-post-featured-image::after {\n\n-    content: \"\" !important;\n\n-    position: absolute !important;\n\n-    top: 0 !important;\n\n-    left: 0 !important;\n\n-    width: 100% !important;\n\n-    height: 100% !important;\n\n-    z-index: 999 !important;\n\n-    background-image: url('https://recalldreams.dev/wp-content/uploads/2026/06/opening_door_protocol.jpg') !important;\n\n-    background-size: cover !important;\n\n-    background-position: center !important;\n\n-    mix-blend-mode: screen !important;\n\n-    opacity: 0.94 !important;\n\n-    pointer-events: none !important;\n\n-    mask-image: linear-gradient(\n\n-        to bottom,\n\n-        transparent 2%,\n\n-        rgba(0,0,0,0.95) 18%,\n\n-        rgba(0,0,0,0.5) 48%,\n\n-        rgba(0,0,0,0.95) 82%,\n\n-        transparent 98%\n\n-    ) !important;\n\n+<style class=\"wpcode-css-snippet\">/* =============================================\r\n\n+   DATA LOSS \r\n\n+   ============================================= */\r\n\n+\r\n\n+.wp-post-image,\r\n\n+article .wp-post-image,\r\n\n+.post-thumbnail img,\r\n\n+figure.wp-block-post-featured-image img {\r\n\n+    position: relative !important;\r\n\n+    filter: brightness(1.25) contrast(1.45) saturate(0.75) !important;\r\n\n+}\r\n\n+\r\n\n+/* Overlay ultra forcé */\r\n\n+.wp-post-image::after,\r\n\n+.post-thumbnail img::after...",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-14T15:40:11.960088+00:00",
       "title": "Content changed: https://recalldreams.dev/home/newsletter/",
       "link": "https://recalldreams.dev/home/newsletter/",
@@ -11514,5 +11527,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T15:40:11.966759+00:00"
+  "updated": "2026-07-14T15:42:50.250057+00:00"
 }
