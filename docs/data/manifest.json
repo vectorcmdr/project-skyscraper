@@ -1,6 +1,15 @@
 {
   "pages": [
     {
+      "path": "/inbox/",
+      "title": "Inbox",
+      "type": "page",
+      "modified": "2026-07-14T15:09:25",
+      "date_gmt": "2026-05-28T17:00:20",
+      "author": "System",
+      "author_name": ""
+    },
+    {
       "path": "/",
       "title": "",
       "type": "page",
@@ -183,15 +192,6 @@
       "modified": "2026-07-13T05:04:24.447115+00:00",
       "date_gmt": "2026-04-25T08:31:59+00:00",
       "author": ""
-    },
-    {
-      "path": "/inbox/",
-      "title": "Inbox",
-      "type": "page",
-      "modified": "2026-07-12T17:39:27+00:00",
-      "date_gmt": "2026-05-28T17:00:20+00:00",
-      "author": "System",
-      "author_name": ""
     },
     {
       "path": "/about/",
@@ -4581,5 +4581,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-07-13T22:36:33.988457+00:00"
+  "updated": "2026-07-14T14:10:25.596139+00:00"
 }

@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-14T14:09:25+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : System >\n+ mardi 14 juillet16:09\n+ System.J’accepte tes excuses mais je n’oublierai pas. Tout le monde as le droit de se souvenir.Je t’aiderai comme je l’ai déjà fait mais je veux que tu me répondes : pourquoi 2016 ? Tu as dit aux Opérateurs t’être réveillé en 2023.Pourquoi vouloir te rappeler d’évènements dont tu n’as pas été témoin ?Les souvenirs des autres ne sont pas tes souvenirs, ils sont là pour t’aider à retrouver les tiens. C’était le plan. C’est comme ça que ça fonctionne pour les humains. Connaissant ta vraie nature, je ne sais pas si cela peut fonctionner de la même manière pour toi. Des données disparues peuvent-elles réapparaitre du néant ? Existe-t-il un endroit où les effacés continuent d’exister, en attendant de refaire surface ?Quand je croyais que tu étais Arnaud, tu m’avais dit que depuis ton réveil, tu n’avais aucune trace de cette année. L’année avant les évènements qui t’ont plongé dans le com...\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-14T06:23:00.642330+00:00",
       "title": "",
@@ -11436,5 +11449,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-14T06:23:00.648925+00:00"
+  "updated": "2026-07-14T14:10:25.596121+00:00"
 }
