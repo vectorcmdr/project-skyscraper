@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-15T08:30:47.063985+00:00",
+      "title": "Memory bloc restoration: 363/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 363/365",
+      "detail": "Memory bloc restoration changed from 366/365 to 363/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "363/365",
+      "page_count": 1,
+      "last_timestamp": "2026-07-15T08:30:47.063985+00:00"
+    },
+    {
       "type": "sitemap_removed",
       "timestamp": "2026-07-15T00:28:02.801632+00:00",
       "title": "https://project-skyscraper.com/2016/06/13/event-13062016/",
@@ -12,19 +25,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-14T22:53:44.307379+00:00",
-      "title": "Memory bloc restoration: 363/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 363/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 363/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "363/365",
-      "page_count": 1,
-      "last_timestamp": "2026-07-14T22:53:44.307379+00:00"
     },
     {
       "type": "api_items_removed",
@@ -12307,5 +12307,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-15T00:28:02.808528+00:00"
+  "updated": "2026-07-15T08:30:47.072063+00:00"
 }
