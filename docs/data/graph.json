@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T08:32:11.788740+00:00",
+  "updated": "2026-07-15T09:00:45.150722+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -4910,6 +4910,14 @@
       "type": "external",
       "label": "xenophotography.tumblr.com",
       "url": "https://xenophotography.tumblr.com/post/153455806812/and-thats-the-end-of-my-journey-to-the-hub",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://youtu.be/hnpC8hRzKzQ",
+      "type": "external",
+      "label": "youtu.be",
+      "url": "https://youtu.be/hnpC8hRzKzQ",
       "author": "",
       "date": ""
     },
@@ -10346,6 +10354,10 @@
     {
       "source": "/2016/07/22/event-22072016",
       "target": "/"
+    },
+    {
+      "source": "/2016/07/22/event-22072016",
+      "target": "https://youtu.be/hnpC8hRzKzQ"
     },
     {
       "source": "/2016/07/22/event-22072016",

@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-15T09:00:42.416931+00:00",
+      "title": "Memory bloc restoration: 363/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 363/365",
+      "detail": "Memory bloc restoration changed from 366/365 to 363/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "363/365",
+      "page_count": 1,
+      "last_timestamp": "2026-07-15T09:00:42.416931+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-07-15T08:56:39+00:00",
       "title": "2016_dataset",
@@ -12,19 +25,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-15T08:30:47.063985+00:00",
-      "title": "Memory bloc restoration: 363/365 [1 Pages]",
-      "link": "",
-      "diff": "0/365 → 363/365",
-      "detail": "Memory bloc restoration changed from 366/365 to 363/365 across 1 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "363/365",
-      "page_count": 1,
-      "last_timestamp": "2026-07-15T08:30:47.063985+00:00"
     },
     {
       "type": "sitemap_removed",
@@ -12320,5 +12320,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-15T08:57:08.029370+00:00"
+  "updated": "2026-07-15T09:00:42.421816+00:00"
 }
