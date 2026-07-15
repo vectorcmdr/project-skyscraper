@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T22:53:46.801915+00:00",
+  "updated": "2026-07-15T00:28:12.501390+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -191,7 +191,7 @@
       "label": "Event 03122016",
       "url": "https://project-skyscraper.com/2016/12/03/event-03122016/",
       "author": "",
-      "date": "2026-06-21T13:14:59Z"
+      "date": ""
     },
     {
       "id": "/2016/10/12/event-12102016",
@@ -199,15 +199,7 @@
       "label": "Event 12102016",
       "url": "https://project-skyscraper.com/2016/10/12/event-12102016/",
       "author": "",
-      "date": "2026-06-19T09:00:21Z"
-    },
-    {
-      "id": "/2016/06/13/event-13062016",
-      "type": "page",
-      "label": "Event 13062016",
-      "url": "https://project-skyscraper.com/2016/06/13/event-13062016/",
-      "author": "",
-      "date": "2026-06-14T13:08:30Z"
+      "date": ""
     },
     {
       "id": "/flow",
@@ -5813,10 +5805,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/06/13/event-13062016"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/06/14/event-14062016"
     },
     {
@@ -6289,10 +6277,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/10/12/event-12102016"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/10/13/event-13102016"
     },
     {
@@ -6490,10 +6474,6 @@
     {
       "source": "sitemap",
       "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/03/event-03122016"
     },
     {
       "source": "sitemap",
@@ -9925,18 +9905,6 @@
     },
     {
       "source": "/2016/06/12/event-12062016",
-      "target": "/2016/06/13/event-13062016"
-    },
-    {
-      "source": "/2016/06/13/event-13062016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/06/13/event-13062016",
-      "target": "/2016/06/12/event-12062016"
-    },
-    {
-      "source": "/2016/06/13/event-13062016",
       "target": "/2016/06/14/event-14062016"
     },
     {
@@ -9945,7 +9913,7 @@
     },
     {
       "source": "/2016/06/14/event-14062016",
-      "target": "/2016/06/13/event-13062016"
+      "target": "/2016/06/12/event-12062016"
     },
     {
       "source": "/2016/06/14/event-14062016",
@@ -11436,28 +11404,8 @@
       "target": "/2016/10/12/event-12102016"
     },
     {
-      "source": "/2016/10/12/event-12102016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/10/12/event-12102016",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2016/10/12/event-12102016",
-      "target": "/2016/10/11/event-11102016"
-    },
-    {
-      "source": "/2016/10/12/event-12102016",
-      "target": "/2016/10/13/event-13102016"
-    },
-    {
       "source": "/2016/10/13/event-13102016",
       "target": "/"
-    },
-    {
-      "source": "/2016/10/13/event-13102016",
-      "target": "/2016/10/12/event-12102016"
     },
     {
       "source": "/2016/10/13/event-13102016",
@@ -12112,24 +12060,8 @@
       "target": "/2016/12/03/event-03122016"
     },
     {
-      "source": "/2016/12/03/event-03122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/03/event-03122016",
-      "target": "/2016/12/02/event-02122016"
-    },
-    {
-      "source": "/2016/12/03/event-03122016",
-      "target": "/2016/12/04/event-04122016"
-    },
-    {
       "source": "/2016/12/04/event-04122016",
       "target": "/"
-    },
-    {
-      "source": "/2016/12/04/event-04122016",
-      "target": "/2016/12/03/event-03122016"
     },
     {
       "source": "/2016/12/04/event-04122016",
