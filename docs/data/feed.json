@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-16T03:18:06.744763+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": " <!DOCTYPE html>\n\n-<html>\n\n+<html lang=\"en-US\">\n\n <head>\n\n-    <meta charset=\"UTF-8\" />\n\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\" />\n\n-    <title>Alice &amp; Smith</title>\n\n-    <meta name=\"description\" content=\"Alice & Smith is a globally renowned, full-stack entertainment agency specializing in live ops technology, interactive marketing campaigns, and transmedia events.\">\n\n-    <meta name=\"title\" property=\"og:title\" content=\"Alice &amp; Smith\">\n\n-    <meta property=\"og:site_name\" content=\"Alice &amp; Smith\">\n\n-    <meta property=\"og:url\" content=\"https://www.aliceandsmith.com\">\n\n-    <meta property=\"og:description\" content=\"Transmedia Storytelling Studio\">\n\n-    <meta property=\"og:locale\" content=\"en_US\">\n\n-    <meta property=\"og:image\" content=\"https://www.aliceandsmith.com/wp-content/themes/niteteam/images/seo-banner.jpg\">\n\n-    <meta name=\"twitter:card\" content=\"summary\" />\n\n-    <meta name=\"twitter:site\" content=\"https://www.aliceandsmith.com\" />\n\n-    <meta name=\"twitter:title\" content=\"Alice &amp; Smith\" />\n\n-    <meta name=\"twitter:description\" content=\"Transmedia Storytelling Studio\" />\n\n-    <meta name=\"twitter:image\" content=\"https://www.aliceandsmith.com/wp-content/themes/niteteam/images/seo-banner.jpg\" />\n\n-    <link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\" />\n\n-    <link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\" rel=\"stylesheet\">\n\n-    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.aliceandsmith.com/wp-content/themes/niteteam/css/bootstrap.css\"/>\n\n-    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.aliceandsmith.com/wp-content/themes/niteteam/css/app.css\"/>\n\n+\t<meta charset=\"UTF-8\" />\n\n+\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\n+<meta name='robots' content='noindex, follow' />\n\n-    <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"https://www.aliceandsmith.com/wp-content/themes/niteteam/style.css\"/> -->\n\n-    <!-...",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-15T20:15:09.286922+00:00",
       "title": "Content changed: https://recalldreams.dev/home/",
       "link": "https://recalldreams.dev/home/",
@@ -11969,5 +11982,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T01:58:04.634357+00:00"
+  "updated": "2026-07-16T03:18:06.749709+00:00"
 }
