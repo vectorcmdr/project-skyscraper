@@ -1,6 +1,58 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-16T15:15:16.849044+00:00",
+      "title": "Memory bloc restoration: 362/365 [1 Pages]",
+      "link": "",
+      "diff": "0/365 → 362/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 362/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "362/365",
+      "page_count": 1,
+      "last_timestamp": "2026-07-16T15:15:16.849044+00:00"
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:15:16.848966+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:15:16.848559+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-16T15:15:16.848421+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 1019,
+      "game_date": ""
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-16T15:14:09.249210+00:00",
       "title": "2 item(s) removed from /wp-json/wp/v2/posts",
@@ -8779,6 +8831,19 @@
     },
     {
       "type": "api_items_added",
+      "timestamp": "2026-06-12T09:07:01+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/13/event-13092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 975,
+      "game_date": "2016-09-12T23:00:00+00:00"
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-06-12T09:06:42+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/09/22/event-22092016/",
@@ -12153,5 +12218,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T15:14:09.253983+00:00"
+  "updated": "2026-07-16T15:15:16.855314+00:00"
 }
