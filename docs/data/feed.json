@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T21:41:02.444475+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-16 21:40:15 UTC\n# Lines: 608805 old -> 595978 new\n# Beautified: yes\n\n@@ -957,510 +957,6 @@\n             },\n\n             \"context\": {\n\n               \"default\": \"view\",\n\n-              \"required\": false\n\n-            }\n\n-          }\n\n-        }\n\n-      ]\n\n-    },\n\n-    \"/wp/v2/comments\": {\n\n-      \"namespace\": \"wp/v2\",\n\n-      \"methods\": [\n\n-        \"GET\",\n\n-        \"POST\",\n\n-        \"GET\",\n\n-        \"POST\"\n\n-      ],\n\n-      \"endpoints\": [\n\n-        {\n\n-          \"methods\": [\n\n-            \"GET\"\n\n-          ],\n\n-          \"args\": {\n\n-            \"context\": {\n\n-              \"description\": \"Scope under which the request is made; determines fields present in response.\",\n\n-              \"enum\": [\n\n-                \"view\",\n\n-                \"embed\",\n\n-                \"edit\"\n\n... (1082 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-16T18:40:13.823218+00:00",
       "title": "Memory bloc restoration: 337/365 [1 Pages]",
@@ -12608,5 +12621,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T18:40:13.828078+00:00"
+  "updated": "2026-07-16T21:41:02.450736+00:00"
 }
