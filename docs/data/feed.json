@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-16T16:14:11+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/10/05/event-05102016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"classes\": []\n  },\n  {\n+ \"url\": \"https://project-skyscraper.com/2016/03/14/event-14032016/\",\n+ \"url_meta\": {\n+ \"origin\": 1025,\n+ \"position\": 2\n+ },\n+ \"title\": \"2016_dataset\",\n+ \"date\": \"14 March 2016\",\n+ \"excerpt\": \"memory bloc : PiValue: Celebration 3,141592653589793238462643383279502884197169399375105 Memory compliance: 100%\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2016/12/15/event-15122016/\",\n  \"url_meta\": {\n  \"origin\": 1025,\n- \"position\": 2\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 342/365\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-hh\",\n  \"jetpack-related-posts\": [\n  {\n+ \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url_meta\": {\n+ \"origin\": 1071,\n+ \"position\": 0\n+ },\n+ \"title\": \"2016_dataset\",\n+ \"date\": \"18 June 2016\",\n+ \"excerpt\": \"memory bloc : no/value\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n  \"url_meta\": {\n  \"origin\": 1071,\n- \"position\": 0\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n... (truncated)",
+      "detail": "2 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-16T16:09:53.830600+00:00",
       "title": "freeimage.host image count: 13 → 14",
@@ -12465,5 +12478,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T16:09:53.838109+00:00"
+  "updated": "2026-07-16T16:14:37.171261+00:00"
 }
