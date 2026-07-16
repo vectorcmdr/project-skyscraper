@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T14:02:32.334246+00:00",
+      "title": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T14:02:32.334188+00:00",
+      "title": "2 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-16T13:22:37.292859+00:00",
       "title": "Memory bloc restoration: 362/365 [1 Pages]",
@@ -11997,5 +12023,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T13:22:37.300996+00:00"
+  "updated": "2026-07-16T14:02:32.340296+00:00"
 }
