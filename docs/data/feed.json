@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-16T17:40:46.139063+00:00",
+      "title": "Memory bloc restoration: 337/365 [1 Pages]",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "diff": "363/365 → 337/365",
+      "detail": "Memory bloc restoration changed from 363/365 to 337/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "337/365",
+      "page_count": 1,
+      "last_timestamp": "2026-07-16T17:40:46.139063+00:00"
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-16T16:26:48.680697+00:00",
       "title": "1 item(s) removed from /wp-json/wp/v2/posts",
@@ -12595,5 +12608,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T16:26:48.690390+00:00"
+  "updated": "2026-07-16T17:40:46.144687+00:00"
 }
