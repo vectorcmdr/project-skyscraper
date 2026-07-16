@@ -2,6 +2,123 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865864+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/",
+      "link": "https://recalldreams.dev/home/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/\n# File: html/home/index.html\n# Timestamp: 2026-07-16 01:28:19 UTC\n# Lines: 135685 old -> 135686 new\n# Beautified: yes\n\n@@ -783,7 +783,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865848+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "link": "https://recalldreams.dev/home/contact-me/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/contact-me/\n# File: html/home/contact-me/index.html\n# Timestamp: 2026-07-16 01:28:18 UTC\n# Lines: 127573 old -> 127651 new\n# Beautified: yes\n\n@@ -499,7 +499,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865831+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "link": "https://recalldreams.dev/home/discover-more/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/discover-more/\n# File: html/home/discover-more/index.html\n# Timestamp: 2026-07-16 01:28:17 UTC\n# Lines: 116491 old -> 116492 new\n# Beautified: yes\n\n@@ -388,7 +388,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865814+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "link": "https://recalldreams.dev/home/buy-me-a-tea/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/buy-me-a-tea/\n# File: html/home/buy-me-a-tea/index.html\n# Timestamp: 2026-07-16 01:28:16 UTC\n# Lines: 130641 old -> 130566 new\n# Beautified: yes\n\n@@ -532,7 +532,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865797+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/schrodingers-instagram/\n# File: html/home/schrodingers-instagram/index.html\n# Timestamp: 2026-07-16 01:28:15 UTC\n# Lines: 123848 old -> 123849 new\n# Beautified: yes\n\n@@ -405,7 +405,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865779+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "link": "https://recalldreams.dev/home/newsletter/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/newsletter/\n# File: html/home/newsletter/index.html\n# Timestamp: 2026-07-16 01:28:14 UTC\n# Lines: 127651 old -> 127652 new\n# Beautified: yes\n\n@@ -503,7 +503,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865761+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/landing-page/terminal/\n# File: html/landing-page/terminal/index.html\n# Timestamp: 2026-07-16 01:28:13 UTC\n# Lines: 74082 old -> 74083 new\n# Beautified: yes\n\n@@ -201,7 +201,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n \n\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865741+00:00",
+      "title": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "link": "https://recalldreams.dev/do-you-know-me-well/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/do-you-know-me-well/\n# File: html/do-you-know-me-well/index.html\n# Timestamp: 2026-07-16 01:28:11 UTC\n# Lines: 118484 old -> 118485 new\n# Beautified: yes\n\n@@ -522,7 +522,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n <script data-wp-router-options=\"{&quot;loadOnClientNavigation&quot;:true}\" fetchpriority=\"low\" id=\"@wordpress/block-library/navigation/view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/block-library/navigation/view.min.js?ver=96a846e1d7b789c39ab9\" type=\"module\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-16T01:28:52.865691+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-07-16 01:28:10 UTC\n# Lines: 62308 old -> 62385 new\n# Beautified: yes\n\n@@ -207,7 +207,7 @@\n </div>\n\n <!-- wpcom_wp_footer -->\n\n \n\n-<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\" >\n\n+<meta id=\"bilmur\" property=\"bilmur:data\" content=\"\" data-customproperties=\"{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;hoat&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}\" data-provider=\"wordpress.com\" data-service=\"atomic\"  data-site-tz=\"Europe/London\"  >\n\n <script defer src=\"https://s0.wp.com/wp-content/js/bilmur.min.js\"></script>\n\n \n\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-15T20:15:09.286922+00:00",
       "title": "Content changed: https://recalldreams.dev/home/",
       "link": "https://recalldreams.dev/home/",
@@ -12658,5 +12775,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-15T20:15:09.291849+00:00"
+  "updated": "2026-07-16T01:28:52.870787+00:00"
 }
