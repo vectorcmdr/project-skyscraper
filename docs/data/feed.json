@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-16T21:56:45+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : System >\n+ jeudi 16 juillet23:56\n+ Comment tu te sens ?\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-16T21:41:02.444475+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -12621,5 +12634,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T21:41:02.450736+00:00"
+  "updated": "2026-07-16T21:57:50.229589+00:00"
 }
