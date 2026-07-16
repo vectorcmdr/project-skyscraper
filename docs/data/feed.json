@@ -1,6 +1,45 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:24:22.188431+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:24:22.188376+00:00",
+      "title": "1 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-16T15:23:12+00:00",
+      "title": "2016_dataset_05122016",
+      "link": "https://project-skyscraper.com/2016/12/05/event-05122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-iv\",\n  \"jetpack-related-posts\": [\n  {\n- \"url\": \"https://project-skyscraper.com/2016/12/29/event-29122016/\",\n+ \"url\": \"https://project-skyscraper.com/2026/06/14/diagnostic-130321/\",\n  \"url_meta\": {\n  \"origin\": 1147,\n  \"position\": 0\n  },\n- \"title\": \"2016_dataset\",\n- \"date\": \"29 December 2016\",\n- \"excerpt\": \"memory bloc : no/value\",\n+ \"title\": \"DIAGNOSTIC\",\n+ \"date\": \"14 June 2026\",\n+ \"excerpt\": \"memory bloc :System: COREModule: Memory_Reconstruction_Engine Diagnostic: Echoes confirmed Status: Recovery_process infinite loop.Cause: Generating new empty memory blocs rejected.Valid timestamp detected with no memory value attached. Analysis: Empty slots ≠ NULLState: Empty slots == MISSING_VALUE Required: Update existing memory blocs. Response: Grant Operators edit access to memory blocsProcess resumes.Memory_Bloc_Modification subroutine: Enabled…\",\n  \"rel\": \"\",\n  \"context\": \"In &quot;Non classé&quot;\",\n  \"block_context\": {\n  \"classes\": []\n  },\n  {\n- \"url\": \"https://project-skyscraper.com/2016/12/14/event-14122016/\",\n+ \"url\": \"https://project-skyscraper.com/2016/11/28/event-28112016/\",\n  \"url_meta\": {\n  \"origin\": 1147,\n  \"position\": 1\n  },\n  \"title\": \"2016_dataset\",\n  System\n- Current state: verified\n+ Current state: preserved\n- Previous\n+ Previous\n  Next\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 351/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-16T15:15:16.849044+00:00",
       "title": "Memory bloc restoration: 362/365 [1 Pages]",
@@ -12218,5 +12257,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T15:15:16.855314+00:00"
+  "updated": "2026-07-16T15:24:22.198441+00:00"
 }
