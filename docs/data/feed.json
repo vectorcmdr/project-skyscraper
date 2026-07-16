@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:14:09.249210+00:00",
+      "title": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-16T15:14:09.249157+00:00",
+      "title": "2 item(s) removed from /wp-json/wp/v2/search",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
       "timestamp": "2026-07-16T14:29:34.130752+00:00",
       "title": "2 item(s) removed from /wp-json/wp/v2/posts",
       "link": "",
@@ -12127,5 +12153,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T14:29:34.135805+00:00"
+  "updated": "2026-07-16T15:14:09.253983+00:00"
 }
