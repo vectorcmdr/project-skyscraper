@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T15:24:24.677945+00:00",
+  "updated": "2026-07-16T15:28:25.507442+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -258,6 +258,14 @@
       "date": "2026-06-21T13:18:55Z"
     },
     {
+      "id": "/2016/10/22/event-22102016",
+      "type": "page",
+      "label": "Event 22102016",
+      "url": "https://project-skyscraper.com/2016/10/22/event-22102016/",
+      "author": "",
+      "date": "2026-06-14T12:35:24Z"
+    },
+    {
       "id": "/2016/10/23/event-23102016",
       "type": "page",
       "label": "Event 23102016",
@@ -272,6 +280,14 @@
       "url": "https://project-skyscraper.com/2016/10/25/event-25102016/",
       "author": "",
       "date": "2026-07-14T16:48:37Z"
+    },
+    {
+      "id": "/2016/10/26/event-26102016",
+      "type": "page",
+      "label": "Event 26102016",
+      "url": "https://project-skyscraper.com/2016/10/26/event-26102016/",
+      "author": "",
+      "date": "2026-06-14T12:33:46Z"
     },
     {
       "id": "/flow",
@@ -2648,22 +2664,6 @@
       "url": "https://project-skyscraper.com/2016/10/21/event-21102016/",
       "author": "System",
       "date": "2016-10-20T23:00:00"
-    },
-    {
-      "id": "/2016/10/22/event-22102016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/10/22/event-22102016/",
-      "author": "System",
-      "date": "2016-10-21T23:00:00"
-    },
-    {
-      "id": "/2016/10/26/event-26102016",
-      "type": "post",
-      "label": "2016_dataset",
-      "url": "https://project-skyscraper.com/2016/10/26/event-26102016/",
-      "author": "System",
-      "date": "2016-10-25T23:00:00"
     },
     {
       "id": "/2016/10/27/event-27102016",
@@ -16708,22 +16708,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2016/10/22/event-22102016",
-      "target": "/author/system26da6be6a6"
-    },
-    {
-      "source": "/2016/10/22/event-22102016",
-      "target": "/category/non-classe"
-    },
-    {
-      "source": "/2016/10/26/event-26102016",
-      "target": "/author/system26da6be6a6"
-    },
-    {
-      "source": "/2016/10/26/event-26102016",
-      "target": "/category/non-classe"
-    },
-    {
       "source": "/2016/10/27/event-27102016",
       "target": "/author/system26da6be6a6"
     },
@@ -18961,14 +18945,6 @@
     },
     {
       "source": "/2016/10/21/event-21102016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2016/10/22/event-22102016",
-      "target": "/2016/02/29/event-out-of-range"
-    },
-    {
-      "source": "/2016/10/26/event-26102016",
       "target": "/2016/02/29/event-out-of-range"
     },
     {
