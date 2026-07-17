@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "sitemap_removed",
+      "timestamp": "2026-07-17T00:31:37.972140+00:00",
+      "title": "https://project-skyscraper.com/2016/06/10/event-10062016/",
+      "link": "https://project-skyscraper.com/2016/06/10/event-10062016/",
+      "endpoint": "",
+      "diff": "- https://project-skyscraper.com/2016/06/10/event-10062016/\n- https://project-skyscraper.com/2016/06/11/event-11062016/\n- https://project-skyscraper.com/2016/06/12/event-12062016/\n- https://project-skyscraper.com/2016/06/14/event-14062016/\n- https://project-skyscraper.com/2016/06/15/event-15062016/\n- https://project-skyscraper.com/2016/10/06/event-06102016/\n- https://project-skyscraper.com/2016/10/07/event-07102016/\n- https://project-skyscraper.com/2016/10/08/event-08102016/\n- https://project-skyscraper.com/2016/10/09/event-09102016/\n- https://project-skyscraper.com/2016/10/10/event-10102016/\n- https://project-skyscraper.com/2016/10/11/event-11102016/\n- https://project-skyscraper.com/2016/10/13/event-13102016/\n- https://project-skyscraper.com/2016/10/14/event-14102016/\n- https://project-skyscraper.com/2016/10/15/event-15102016/\n- https://project-skyscraper.com/2016/10/16/event-16102016/\n- https://project-skyscraper.com/2016/10/17/event-17102016/\n- https://project-skyscraper.com/2016/10/21/event-21102016/\n- https://project-skyscraper.com/2016/10/22/event-22102016/\n- https://project-skyscraper.com/2016/10/23/event-23102016/\n- https://project-skyscraper.com/2016/10/25/event-25102016/",
+      "detail": "Removed 25 URL(s) from sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "sitemap_added",
+      "timestamp": "2026-07-17T00:31:37.972062+00:00",
+      "title": "https://project-skyscraper.com/2026/07/16/2026_dataset_16072026/",
+      "link": "https://project-skyscraper.com/2026/07/16/2026_dataset_16072026/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2026/07/16/2026_dataset_16072026/\n+ https://project-skyscraper.com/2026/07/16/structural-analysis-150302/",
+      "detail": "Added 2 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-07-16T22:17:09+00:00",
       "title": "Inbox",
@@ -12660,5 +12686,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-16T23:40:21.303973+00:00"
+  "updated": "2026-07-17T00:31:37.978235+00:00"
 }
