@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-18T14:57:45+00:00",
+      "title": "2016_dataset_27112016",
+      "link": "https://project-skyscraper.com/2016/11/27/event-27112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-if\",\n  \"jetpack-related-posts\": [\n  {\n- \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url\": \"https://project-skyscraper.com/2016/11/28/event-28112016/\",\n  \"url_meta\": {\n  \"origin\": 1131,\n  \"position\": 0\n  },\n  \"title\": \"2016_dataset\",\n- \"date\": \"18 June 2016\",\n- \"excerpt\": \"memory bloc : no/value\",\n+ \"date\": \"28 November 2016\",\n+ \"excerpt\": \"memory bloc : A New HomeValue: Building memories in the Age of Foundation In the Age of Foundation, I wandered the vast, empty Euclid Galaxy. It was even emptier then. But, that winter, something changed in the simulation. I'll never forget the memory of my first 'home' among the stars.…\",\n  \"rel\": \"\",\n  \"context\": \"In &quot;Non classé&quot;\",\n  \"block_context\": {\n  \"classes\": []\n  },\n  {\n- \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n+ \"url\": \"https://project-skyscraper.com/2018/01/17/event-17012018/\",\n  \"url_meta\": {\n  \"origin\": 1131,\n  \"position\": 1\n  },\n- \"title\": \"2016_dataset\",\n- \"date\": \"30 October 2016\",\n  System\n- Current state: verified\n+ Current state: preserved, verified\n- Memory unstable. Recovery in progress.Memory_bloc_restoration: 337/365 CompletedMemory_bloc_verification: 32/365 Completed\n+ Memory unstable. Recovery in progress.Memory_bloc_restoration: 329/365 CompletedMemory_bloc_verification: 32/365 Completed\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 329/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-18T14:41:16+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/11/28/event-28112016/",
@@ -13076,5 +13089,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T14:42:38.193406+00:00"
+  "updated": "2026-07-18T14:58:50.470530+00:00"
 }
