@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-18T09:18:10+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/10/event-10122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-iF\",\n  \"jetpack-related-posts\": [\n  {\n+ \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url_meta\": {\n+ \"origin\": 1157,\n+ \"position\": 0\n+ },\n+ \"title\": \"2016_dataset\",\n+ \"date\": \"18 June 2016\",\n+ \"excerpt\": \"memory bloc : no/value\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n  \"url_meta\": {\n  \"origin\": 1157,\n- \"position\": 0\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 337/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-18T03:11:58.987023+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -12725,5 +12738,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T03:11:58.993371+00:00"
+  "updated": "2026-07-18T09:19:19.277762+00:00"
 }
