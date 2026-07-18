@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-18T13:30:54+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/20/event-20122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"classes\": []\n  },\n  {\n- \"url\": \"https://project-skyscraper.com/2016/12/15/event-15122016/\",\n+ \"url\": \"https://project-skyscraper.com/2016/11/14/event-14112016/\",\n  \"url_meta\": {\n  \"origin\": 1177,\n  \"position\": 3\n- },\n- \"title\": \"2016_dataset\",\n- \"date\": \"15 December 2016\",\n- \"excerpt\": \"memory bloc : no/value\",\n- \"rel\": \"\",\n- \"context\": \"In &quot;Non classé&quot;\",\n- \"block_context\": {\n- \"text\": \"Non classé\"\n- },\n- \"img\": {\n- \"alt_text\": \"\",\n- \"src\": \"\",\n- \"width\": 0,\n- \"height\": 0\n- },\n- \"classes\": []\n- },\n- {\n- \"url\": \"https://project-skyscraper.com/2016/11/14/event-14112016/\",\n- \"url_meta\": {\n- \"origin\": 1177,\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 329/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-18T13:30:41+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/12/19/event-19122016/",
@@ -12998,5 +13011,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T13:31:08.225000+00:00"
+  "updated": "2026-07-18T13:32:08.624172+00:00"
 }
