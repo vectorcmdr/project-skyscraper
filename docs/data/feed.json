@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-07-18T14:41:16+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/28/event-28112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-ih\",\n  \"jetpack-related-posts\": [\n  {\n- \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url\": \"https://project-skyscraper.com/2016/01/07/event-07012016/\",\n  \"url_meta\": {\n  \"origin\": 1133,\n  \"position\": 0\n  },\n- \"title\": \"2016_dataset\",\n- \"date\": \"18 June 2016\",\n- \"excerpt\": \"memory bloc : no/value\",\n+ \"title\": \"2016_dataset_07012016\",\n+ \"date\": \"7 January 2016\",\n+ \"excerpt\": \"memory bloc : Managing hypeValue: Dreamers speculate wildly ahead of simulation initialisation. Virtual reality has been promised as gaming's next big thing for ages and 2016 is the year we'll find out if the hype is justified. Oculus Rift, Playstation VR and the HTC Vive are all going to do…\",\n  \"rel\": \"\",\n  \"context\": \"In &quot;Non classé&quot;\",\n  \"block_context\": {\n  \"classes\": []\n  },\n  {\n- \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n+ \"url\": \"https://project-skyscraper.com/2018/01/17/event-17012018/\",\n  \"url_meta\": {\n  \"origin\": 1133,\n  \"position\": 1\n  },\n- \"title\": \"2016_dataset\",\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 329/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-07-18T13:49:17+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/11/21/event-21112016/",
@@ -13063,5 +13076,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T13:50:15.745288+00:00"
+  "updated": "2026-07-18T14:42:38.193406+00:00"
 }
