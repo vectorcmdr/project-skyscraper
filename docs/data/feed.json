@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-18T03:11:58.987023+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-18 03:11:06 UTC\n# Lines: 600505 old -> 601083 new\n# Beautified: yes\n\n@@ -7605,6 +7605,16 @@\n                 \"fallback\"\n\n               ],\n\n               \"default\": \"ai\",\n\n+              \"required\": false\n\n+            },\n\n+            \"duration_ms\": {\n\n+              \"description\": \"Client-measured tailoring duration in milliseconds, for the tailored Logstash record.\",\n\n+              \"minimum\": 0,\n\n+              \"required\": false\n\n+            },\n\n+            \"attempts\": {\n\n+              \"description\": \"How many jetpack-ai-query attempts the client made, for the tailored Logstash record.\",\n\n+              \"minimum\": 0,\n\n               \"required\": false\n\n             }\n\n           }\n\n@@ -8530,6 +8540,25 @@\n               \"items\": {},\n\n               \"default\": [],\n\n               \"required\": false\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/wpcom/v2/plugin-state/(?P<plugin_slug>[a-z0-9_.-]+)\": {\n\n+      \"namespace\": \"wpcom/v2\",\n\n+      \"methods\": [\n\n+        \"GET\"\n\n... (13 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-18T01:40:20.635193+00:00",
       "title": "project-skyscraper.com",
@@ -12712,5 +12725,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T01:40:20.642363+00:00"
+  "updated": "2026-07-18T03:11:58.993371+00:00"
 }
