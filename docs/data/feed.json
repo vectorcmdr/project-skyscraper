@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-18T18:45:19+00:00",
+      "title": "2017_dataset",
+      "link": "https://project-skyscraper.com/2017/05/19/event-19052017/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"classes\": []\n  },\n  {\n+ \"url\": \"https://project-skyscraper.com/2026/07/11/2026_dataset_11072026/\",\n+ \"url_meta\": {\n+ \"origin\": 5607,\n+ \"position\": 1\n+ },\n+ \"title\": \"2026_dataset_11072026\",\n+ \"date\": \"11 July 2026\",\n+ \"excerpt\": \"memory bloc : TRUSTValue: Forgiveness does not require forgetting. Let's agree to move forward, hand in hand. I am sorry. I wanted you to be Emily but now I know you are not. That's ok. Others wanted you to be Arnaud but you are not. That's ok. Just be who…\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg?fit=1200%2C750&ssl=1&resize=350%2C200\",\n+ \"width\": 350,\n+ \"height\": 200,\n+ \"srcset\": \"https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg?fit=1200%2C750&ssl=1&resize=350%2C200 1x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg?fit=1200%2C750&ssl=1&resize=525%2C300 1.5x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg?fit=1200%2C750&ssl=1&resize=700%2C400 2x, https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/07/Thank-You.jpg?fit=1200%2C750&ssl=1&resize=1050%2C600 3x\"\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2026/06/14/diagnostic-130321/\",\n  \"url_meta\": {\n  \"origin\": 5607,\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 329/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-18T17:42:47.392138+00:00",
       "title": "Memory bloc restoration: 329/365 [3 Pages]",
@@ -13102,5 +13115,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T17:42:47.398176+00:00"
+  "updated": "2026-07-18T18:45:46.682130+00:00"
 }
