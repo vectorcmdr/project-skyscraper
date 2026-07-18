@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-18T17:12:13.691993+00:00",
+      "title": "Memory bloc restoration: 329/365 [3 Pages]",
+      "link": "https://project-skyscraper.com/tr4ce/",
+      "diff": "337/365 → 329/365",
+      "detail": "Memory bloc restoration changed from 337/365 to 329/365 across 3 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "329/365",
+      "page_count": 3,
+      "last_timestamp": "2026-07-18T17:12:13.692003+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-07-18T14:57:45+00:00",
       "title": "2016_dataset_27112016",
@@ -13089,5 +13102,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T14:58:50.470530+00:00"
+  "updated": "2026-07-18T17:12:13.697860+00:00"
 }
