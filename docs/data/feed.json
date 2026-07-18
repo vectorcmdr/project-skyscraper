@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-18T13:24:56.404338+00:00",
+      "title": "https://project-skyscraper.com/2016/12/14/event-14122016/",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-18T13:24:56.404276+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-18T13:20:59.931140+00:00",
       "title": "Memory bloc restoration: 337/365 [2 Pages]",
@@ -12855,5 +12881,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T13:20:59.936209+00:00"
+  "updated": "2026-07-18T13:24:56.409945+00:00"
 }
