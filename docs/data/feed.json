@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "api_items_removed",
+      "timestamp": "2026-07-18T13:19:54.392958+00:00",
+      "title": "https://project-skyscraper.com/2016/05/16/event-16052016/, https://project-skyscraper.com/2016/12/13/event-13122016/",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-18T13:19:54.392898+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
       "timestamp": "2026-07-18T13:15:44.881634+00:00",
       "title": "https://project-skyscraper.com/2016/12/12/event-12122016/",
       "link": "",
@@ -12790,5 +12816,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-18T13:15:44.889609+00:00"
+  "updated": "2026-07-18T13:19:54.398291+00:00"
 }
