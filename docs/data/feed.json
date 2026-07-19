@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-19T23:26:11.661861+00:00",
+      "title": "freeimage.host image count: 15 → 16",
+      "link": "https://freeimage.host/skyscraper_prj",
+      "endpoint": "",
+      "diff": "- count: 15\n+ count: 16",
+      "detail": "freeimage.host image count: 15 → 16",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-19T12:36:33.483126+00:00",
       "title": "https://project-skyscraper.com/2016/08/05/event-05082016/",
@@ -13466,5 +13479,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-19T12:36:33.488998+00:00"
+  "updated": "2026-07-19T23:26:11.667312+00:00"
 }
