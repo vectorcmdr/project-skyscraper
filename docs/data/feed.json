@@ -1,6 +1,58 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-19T12:35:43.016965+00:00",
+      "title": "Memory bloc restoration: 329/365 [7 Pages]",
+      "link": "https://project-skyscraper.com/tr4ce/",
+      "diff": "337/365 → 329/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 329/365 across 7 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "329/365",
+      "page_count": 7,
+      "last_timestamp": "2026-07-19T12:35:43.016965+00:00"
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-19T12:35:43.014320+00:00",
+      "title": "https://project-skyscraper.com/2016/08/06/event-06082016/, https://project-skyscraper.com/2016/08/07/event-07082016/",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-07-19T12:35:43.013951+00:00",
+      "title": ", ",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "2 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-19T12:35:24+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/08/04/event-04082016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-en\",\n  \"jetpack-related-posts\": [\n  {\n+ \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url_meta\": {\n+ \"origin\": 891,\n+ \"position\": 0\n+ },\n+ \"title\": \"2016_dataset\",\n+ \"date\": \"18 June 2016\",\n+ \"excerpt\": \"memory bloc : no/value\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n+ },\n+ {\n  \"url\": \"https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/\",\n  \"url_meta\": {\n  \"origin\": 891,\n- \"position\": 0\n  {font-size: var(--wp--preset--font-size--small);text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {font-size: var(--wp--preset--font-size--small);}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n  System\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 322/365",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-19T12:34:32.212752+00:00",
       "title": "https://project-skyscraper.com/2016/05/06/event-06052016/, https://project-skyscraper.com/2016/08/08/event-08082016/",
@@ -155,19 +207,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-19T12:12:37.618009+00:00",
-      "title": "Memory bloc restoration: 329/365 [6 Pages]",
-      "link": "https://project-skyscraper.com/tr4ce/",
-      "diff": "337/365 → 329/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 329/365 across 6 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "329/365",
-      "page_count": 6,
-      "last_timestamp": "2026-07-19T12:12:37.618009+00:00"
     },
     {
       "type": "api_items_added",
@@ -11766,6 +11805,19 @@
     },
     {
       "type": "api_items_added",
+      "timestamp": "2026-06-09T17:54:46+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/06/event-06052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 710,
+      "game_date": "2016-05-05T23:00:00+00:00"
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-06-09T17:54:31+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/04/06/event-06042016/",
@@ -13388,5 +13440,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-19T12:34:32.219565+00:00"
+  "updated": "2026-07-19T12:35:43.022281+00:00"
 }
