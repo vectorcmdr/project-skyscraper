@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T11:55:02.970917+00:00",
+  "updated": "2026-07-19T12:08:39.236630+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3104,6 +3104,14 @@
       "url": "https://project-skyscraper.com/2017/05/19/event-19052017/",
       "author": "System",
       "date": "2017-05-19T00:00:00"
+    },
+    {
+      "id": "/2017/01/10/event-10012017",
+      "type": "post",
+      "label": "2017_dataset",
+      "url": "https://project-skyscraper.com/2017/01/10/event-10012017/",
+      "author": "System",
+      "date": "2017-01-10T01:00:00"
     },
     {
       "id": "/2017/08/03/event-03082017",
@@ -13300,6 +13308,18 @@
       "target": "/structural-analysis-161527-full"
     },
     {
+      "source": "/2017/01/10/event-10012017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/01/10/event-10012017",
+      "target": "/2016/12/31/event-31122016"
+    },
+    {
+      "source": "/2017/01/10/event-10012017",
+      "target": "/2017/03/08/2017_dataset_08032017"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17028,6 +17048,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2017/01/10/event-10012017",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2017/01/10/event-10012017",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/01/01/event-01012016",
       "target": "/2016/02/29/event-out-of-range"
     },
@@ -18261,6 +18289,10 @@
     },
     {
       "source": "/2017/05/19/event-19052017",
+      "target": "/2017/07/08/2017_dataset"
+    },
+    {
+      "source": "/2017/01/10/event-10012017",
       "target": "/2017/07/08/2017_dataset"
     }
   ]
