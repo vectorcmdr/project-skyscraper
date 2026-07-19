@@ -2,7 +2,7 @@
   "entries": [
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-19T11:25:15.289407+00:00",
+      "timestamp": "2026-07-19T11:54:58.581363+00:00",
       "title": "Memory bloc restoration: 329/365 [4 Pages]",
       "link": "https://project-skyscraper.com/tr4ce/",
       "diff": "337/365 → 329/365",
@@ -11,7 +11,20 @@
       "site": "",
       "restoration_value": "329/365",
       "page_count": 4,
-      "last_timestamp": "2026-07-19T11:25:15.289407+00:00"
+      "last_timestamp": "2026-07-19T11:54:58.581363+00:00"
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-07-19T11:54:16+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jul.18, 2026\n  Jul.16, 2026\n  Jul.16, 2026\n  Jun.1, 2017\n  May.28, 2017\n- May.19, 2017\n  \"copyright\": \"Copyright\",\n  \"comment_registration\": \"0\",\n  \"require_name_email\": \"1\",\n- \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F07%2F16%2Fstructural-analysis-150302%2F\",\n+ \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F07%2F18%2Fsec-log-234408%2F\",\n  \"blog_id\": \"1\",\n  \"meta_data\": [\"camera\", \"aperture\", \"shutter_speed\", \"focal_length\", \"copyright\"]",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "sitemap_removed",
@@ -13167,5 +13180,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-19T11:25:15.295233+00:00"
+  "updated": "2026-07-19T11:54:58.586148+00:00"
 }
