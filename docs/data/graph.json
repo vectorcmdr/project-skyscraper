@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T12:29:30.604619+00:00",
+  "updated": "2026-07-19T12:31:42.850408+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -191,23 +191,7 @@
       "label": "Event 06122016",
       "url": "https://project-skyscraper.com/2016/12/06/event-06122016/",
       "author": "",
-      "date": "2026-06-11T14:27:22Z"
-    },
-    {
-      "id": "/2016/12/07/event-07122016",
-      "type": "page",
-      "label": "Event 07122016",
-      "url": "https://project-skyscraper.com/2016/12/07/event-07122016/",
-      "author": "",
-      "date": "2026-06-12T09:12:55Z"
-    },
-    {
-      "id": "/2016/12/08/event-08122016",
-      "type": "page",
-      "label": "Event 08122016",
-      "url": "https://project-skyscraper.com/2016/12/08/event-08122016/",
-      "author": "",
-      "date": "2026-06-21T13:14:07Z"
+      "date": ""
     },
     {
       "id": "/2016/12/09/event-09122016",
@@ -6125,18 +6109,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/08/event-08122016"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/12/09/event-09122016"
     },
     {
@@ -11434,42 +11406,6 @@
     {
       "source": "/2016/12/05/event-05122016",
       "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "/2016/12/06/event-06122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/06/event-06122016",
-      "target": "/2016/12/05/event-05122016"
-    },
-    {
-      "source": "/2016/12/06/event-06122016",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "/2016/12/07/event-07122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/07/event-07122016",
-      "target": "/2016/12/06/event-06122016"
-    },
-    {
-      "source": "/2016/12/07/event-07122016",
-      "target": "/2016/12/08/event-08122016"
-    },
-    {
-      "source": "/2016/12/08/event-08122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/08/event-08122016",
-      "target": "/2016/12/07/event-07122016"
-    },
-    {
-      "source": "/2016/12/08/event-08122016",
-      "target": "/2016/12/09/event-09122016"
     },
     {
       "source": "/2016/12/09/event-09122016",

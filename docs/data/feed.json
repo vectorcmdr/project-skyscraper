@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "sitemap_removed",
+      "timestamp": "2026-07-19T12:31:40.399983+00:00",
+      "title": "https://project-skyscraper.com/2016/12/06/event-06122016/",
+      "link": "https://project-skyscraper.com/2016/12/06/event-06122016/",
+      "endpoint": "",
+      "diff": "- https://project-skyscraper.com/2016/12/06/event-06122016/\n- https://project-skyscraper.com/2016/12/07/event-07122016/\n- https://project-skyscraper.com/2016/12/08/event-08122016/",
+      "detail": "Removed 3 URL(s) from sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_removed",
       "timestamp": "2026-07-19T12:29:25.241294+00:00",
       "title": "https://project-skyscraper.com/2016/12/09/event-09122016/",
@@ -13349,5 +13362,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-19T12:29:25.247334+00:00"
+  "updated": "2026-07-19T12:31:40.404623+00:00"
 }
