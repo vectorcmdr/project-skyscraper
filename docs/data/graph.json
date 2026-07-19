@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T22:44:46.870192+00:00",
+  "updated": "2026-07-19T00:28:10.392017+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -191,63 +191,7 @@
       "label": "Event 11122016",
       "url": "https://project-skyscraper.com/2016/12/11/event-11122016/",
       "author": "",
-      "date": "2026-06-09T17:05:58Z"
-    },
-    {
-      "id": "/2016/12/12/event-12122016",
-      "type": "page",
-      "label": "Event 12122016",
-      "url": "https://project-skyscraper.com/2016/12/12/event-12122016/",
-      "author": "",
-      "date": "2026-06-21T18:24:50Z"
-    },
-    {
-      "id": "/2016/12/13/event-13122016",
-      "type": "page",
-      "label": "Event 13122016",
-      "url": "https://project-skyscraper.com/2016/12/13/event-13122016/",
-      "author": "",
-      "date": "2026-06-14T12:31:50Z"
-    },
-    {
-      "id": "/2016/12/14/event-14122016",
-      "type": "page",
-      "label": "Event 14122016",
-      "url": "https://project-skyscraper.com/2016/12/14/event-14122016/",
-      "author": "",
-      "date": "2026-06-19T08:47:50Z"
-    },
-    {
-      "id": "/2016/12/15/event-15122016",
-      "type": "page",
-      "label": "Event 15122016",
-      "url": "https://project-skyscraper.com/2016/12/15/event-15122016/",
-      "author": "",
-      "date": "2026-06-13T14:19:25Z"
-    },
-    {
-      "id": "/2016/12/16/event-16122016",
-      "type": "page",
-      "label": "Event 16122016",
-      "url": "https://project-skyscraper.com/2016/12/16/event-16122016/",
-      "author": "",
-      "date": "2026-07-14T15:19:02Z"
-    },
-    {
-      "id": "/2016/12/17/event-17122016",
-      "type": "page",
-      "label": "Event 17122016",
-      "url": "https://project-skyscraper.com/2016/12/17/event-17122016/",
-      "author": "",
-      "date": "2026-06-09T18:00:50Z"
-    },
-    {
-      "id": "/2016/12/18/event-18122016",
-      "type": "page",
-      "label": "Event 18122016",
-      "url": "https://project-skyscraper.com/2016/12/18/event-18122016/",
-      "author": "",
-      "date": "2026-06-21T13:13:38Z"
+      "date": ""
     },
     {
       "id": "/flow",
@@ -6201,34 +6145,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/12/11/event-11122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/13/event-13122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/14/event-14122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "sitemap",
-      "target": "/2016/12/18/event-18122016"
-    },
-    {
-      "source": "sitemap",
       "target": "/2016/12/19/event-19122016"
     },
     {
@@ -6569,10 +6485,6 @@
     },
     {
       "source": "sitemap",
-      "target": "/2016/12/12/event-12122016"
-    },
-    {
-      "source": "sitemap",
       "target": "/1990/04/24/1990_dataset"
     },
     {
@@ -6690,6 +6602,10 @@
     {
       "source": "sitemap",
       "target": "/2026/07/16/structural-analysis-150302"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/07/18/sec-log-234408"
     },
     {
       "source": "sitemap",
@@ -11584,98 +11500,6 @@
       "target": "/2016/12/11/event-11122016"
     },
     {
-      "source": "/2016/12/11/event-11122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/11/event-11122016",
-      "target": "/2016/12/10/event-10122016"
-    },
-    {
-      "source": "/2016/12/11/event-11122016",
-      "target": "/2016/12/12/event-12122016"
-    },
-    {
-      "source": "/2016/12/16/event-16122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/16/event-16122016",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2016/12/16/event-16122016",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "/2016/12/16/event-16122016",
-      "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "/2016/12/13/event-13122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/13/event-13122016",
-      "target": "/2016/12/12/event-12122016"
-    },
-    {
-      "source": "/2016/12/13/event-13122016",
-      "target": "/2016/12/14/event-14122016"
-    },
-    {
-      "source": "/2016/12/14/event-14122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/14/event-14122016",
-      "target": "/tag/unverified"
-    },
-    {
-      "source": "/2016/12/14/event-14122016",
-      "target": "/2016/12/13/event-13122016"
-    },
-    {
-      "source": "/2016/12/14/event-14122016",
-      "target": "/2016/12/15/event-15122016"
-    },
-    {
-      "source": "/2016/12/15/event-15122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/15/event-15122016",
-      "target": "/2016/12/14/event-14122016"
-    },
-    {
-      "source": "/2016/12/15/event-15122016",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "/2016/12/17/event-17122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/17/event-17122016",
-      "target": "/2016/12/16/event-16122016"
-    },
-    {
-      "source": "/2016/12/17/event-17122016",
-      "target": "/2016/12/18/event-18122016"
-    },
-    {
-      "source": "/2016/12/18/event-18122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/18/event-18122016",
-      "target": "/2016/12/17/event-17122016"
-    },
-    {
-      "source": "/2016/12/18/event-18122016",
-      "target": "/2016/12/19/event-19122016"
-    },
-    {
       "source": "/2016/12/19/event-19122016",
       "target": "/"
     },
@@ -12804,18 +12628,6 @@
       "target": "/2016/10/20/event-20102016"
     },
     {
-      "source": "/2016/12/12/event-12122016",
-      "target": "/"
-    },
-    {
-      "source": "/2016/12/12/event-12122016",
-      "target": "/2016/12/11/event-11122016"
-    },
-    {
-      "source": "/2016/12/12/event-12122016",
-      "target": "/2016/12/13/event-13122016"
-    },
-    {
       "source": "/1990/04/24/1990_dataset",
       "target": "/"
     },
@@ -13320,6 +13132,14 @@
       "target": "/2026/07/16/2026_dataset_16072026"
     },
     {
+      "source": "/2026/07/18/sec-log-234408",
+      "target": "/"
+    },
+    {
+      "source": "/2026/07/18/sec-log-234408",
+      "target": "/2026/07/16/structural-analysis-150302"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13478,14 +13298,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2026/07/18/sec-log-234408",
-      "target": "/"
-    },
-    {
-      "source": "/2026/07/18/sec-log-234408",
-      "target": "/2026/07/16/structural-analysis-150302"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
