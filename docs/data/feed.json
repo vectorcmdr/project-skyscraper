@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "sitemap_removed",
+      "timestamp": "2026-07-20T00:28:37.621209+00:00",
+      "title": "https://project-skyscraper.com/2016/08/05/event-05082016/",
+      "link": "https://project-skyscraper.com/2016/08/05/event-05082016/",
+      "endpoint": "",
+      "diff": "- https://project-skyscraper.com/2016/08/05/event-05082016/\n- https://project-skyscraper.com/2016/08/06/event-06082016/\n- https://project-skyscraper.com/2016/08/07/event-07082016/\n- https://project-skyscraper.com/2016/08/08/event-08082016/\n- https://project-skyscraper.com/2016/12/09/event-09122016/",
+      "detail": "Removed 5 URL(s) from sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-19T23:26:11.661861+00:00",
       "title": "freeimage.host image count: 15 → 16",
@@ -13479,5 +13492,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-19T23:26:11.667312+00:00"
+  "updated": "2026-07-20T00:28:37.627092+00:00"
 }
