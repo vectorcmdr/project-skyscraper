@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T11:38:20.598291+00:00",
+  "updated": "2026-07-20T11:58:19.573563+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -186,26 +186,10 @@
       "date": "2026-06-15T21:44:59Z"
     },
     {
-      "id": "/2016/08/05/event-05082016",
-      "type": "page",
-      "label": "Event 05082016",
-      "url": "https://project-skyscraper.com/2016/08/05/event-05082016/",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "/2016/12/06/event-06122016",
       "type": "page",
       "label": "Event 06122016",
       "url": "https://project-skyscraper.com/2016/12/06/event-06122016/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/08/08/event-08082016",
-      "type": "page",
-      "label": "Event 08082016",
-      "url": "https://project-skyscraper.com/2016/08/08/event-08082016/",
       "author": "",
       "date": ""
     },
@@ -10041,7 +10025,7 @@
     },
     {
       "source": "/2016/08/04/event-04082016",
-      "target": "/2016/08/05/event-05082016"
+      "target": "/2016/08/09/event-09082016"
     },
     {
       "source": "/2016/08/09/event-09082016",
@@ -10061,7 +10045,7 @@
     },
     {
       "source": "/2016/08/09/event-09082016",
-      "target": "/2016/08/08/event-08082016"
+      "target": "/2016/08/04/event-04082016"
     },
     {
       "source": "/2016/08/09/event-09082016",
