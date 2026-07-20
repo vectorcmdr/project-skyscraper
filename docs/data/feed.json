@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-07-20T14:28:31.320601+00:00",
+      "title": "#5930 (posts)",
+      "link": "https:///",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #5930 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 5930,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-20T12:33:17.805440+00:00",
       "title": "https://project-skyscraper.com/2017/01/27/event-27012017/",
@@ -13635,5 +13648,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-20T12:33:17.813855+00:00"
+  "updated": "2026-07-20T14:28:31.325985+00:00"
 }
