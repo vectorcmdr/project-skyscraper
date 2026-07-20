@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T12:33:23.471068+00:00",
+  "updated": "2026-07-20T18:58:08.650250+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -184,22 +184,6 @@
       "url": "https://project-skyscraper.com/dd85ac69ae24/",
       "author": "",
       "date": "2026-06-15T21:44:59Z"
-    },
-    {
-      "id": "/2016/12/06/event-06122016",
-      "type": "page",
-      "label": "Event 06122016",
-      "url": "https://project-skyscraper.com/2016/12/06/event-06122016/",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/2016/12/09/event-09122016",
-      "type": "page",
-      "label": "Event 09122016",
-      "url": "https://project-skyscraper.com/2016/12/09/event-09122016/",
-      "author": "",
-      "date": ""
     },
     {
       "id": "/flow",
@@ -11317,7 +11301,7 @@
     },
     {
       "source": "/2016/12/05/event-05122016",
-      "target": "/2016/12/06/event-06122016"
+      "target": "/2016/12/10/event-10122016"
     },
     {
       "source": "/2016/12/10/event-10122016",
@@ -11329,7 +11313,7 @@
     },
     {
       "source": "/2016/12/10/event-10122016",
-      "target": "/2016/12/09/event-09122016"
+      "target": "/2016/12/05/event-05122016"
     },
     {
       "source": "/2016/12/10/event-10122016",
@@ -11517,7 +11501,7 @@
     },
     {
       "source": "/2016/12/31/event-31122016",
-      "target": "/2017/03/08/2017_dataset_08032017"
+      "target": "/2017/01/27/event-27012017"
     },
     {
       "source": "/report-lon-reality-glitch",
@@ -12669,7 +12653,7 @@
     },
     {
       "source": "/2017/03/08/2017_dataset_08032017",
-      "target": "/2016/12/31/event-31122016"
+      "target": "/2017/01/27/event-27012017"
     },
     {
       "source": "/2017/03/08/2017_dataset_08032017",

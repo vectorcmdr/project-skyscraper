@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-20T18:57:56.863273+00:00",
+      "title": "Memory bloc restoration: 321/365 [3 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 329/365 to 321/365 across 3 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 3,
+      "last_timestamp": "2026-07-20T18:57:56.863273+00:00"
+    },
+    {
       "type": "unpublished_detected",
       "timestamp": "2026-07-20T14:28:31.320601+00:00",
       "title": "#5930 (posts)",
@@ -51,19 +64,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-20T11:36:17.525949+00:00",
-      "title": "Memory bloc restoration: 321/365 [3 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 3 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "321/365",
-      "page_count": 3,
-      "last_timestamp": "2026-07-20T11:36:17.525949+00:00"
     },
     {
       "type": "api_items_added",
@@ -13648,5 +13648,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-20T14:28:31.325985+00:00"
+  "updated": "2026-07-20T18:57:56.870879+00:00"
 }
