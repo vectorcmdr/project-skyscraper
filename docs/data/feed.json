@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-20T03:56:38.211135+00:00",
+      "title": "Memory bloc restoration: 321/365 [1 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 329/365 to 321/365 across 1 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 1,
+      "last_timestamp": "2026-07-20T03:56:38.211135+00:00"
+    },
+    {
       "type": "sitemap_removed",
       "timestamp": "2026-07-20T00:28:37.621209+00:00",
       "title": "https://project-skyscraper.com/2016/08/05/event-05082016/",
@@ -13492,5 +13505,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-20T00:28:37.627092+00:00"
+  "updated": "2026-07-20T03:56:38.217383+00:00"
 }
