@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-07-20T08:56:51.576713+00:00",
+      "title": "#5919 (posts)",
+      "link": "https:///",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #5919 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 5919,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-20T03:56:38.211135+00:00",
       "title": "Memory bloc restoration: 321/365 [1 Pages]",
@@ -13505,5 +13518,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-20T03:56:38.217383+00:00"
+  "updated": "2026-07-20T08:56:51.582601+00:00"
 }
