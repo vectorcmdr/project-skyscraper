@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T11:58:19.573563+00:00",
+  "updated": "2026-07-20T12:33:23.471068+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6529,6 +6529,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/2017/01/27/event-27012017"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -12976,6 +12980,18 @@
       "target": "/2026/07/16/structural-analysis-150302"
     },
     {
+      "source": "/2017/01/27/event-27012017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/01/27/event-27012017",
+      "target": "/2016/12/31/event-31122016"
+    },
+    {
+      "source": "/2017/01/27/event-27012017",
+      "target": "/2017/03/08/2017_dataset_08032017"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13134,18 +13150,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2017/01/27/event-27012017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/01/27/event-27012017",
-      "target": "/2016/12/31/event-31122016"
-    },
-    {
-      "source": "/2017/01/27/event-27012017",
-      "target": "/2017/03/08/2017_dataset_08032017"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
