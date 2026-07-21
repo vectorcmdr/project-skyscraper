@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T02:29:17.865349+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-21 02:28:28 UTC\n# Lines: 601083 old -> 601323 new\n# Beautified: yes\n\n@@ -11423,6 +11423,20 @@\n       ]\n\n     },\n\n     \"/help-center/jetpack-search/ai/search\": {\n\n+      \"namespace\": \"help-center\",\n\n+      \"methods\": [\n\n+        \"GET\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"GET\"\n\n+          ],\n\n+          \"args\": []\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/help-center/jetpack-connection-health\": {\n\n       \"namespace\": \"help-center\",\n\n       \"methods\": [\n\n         \"GET\"\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-20T19:58:12.013310+00:00",
       "title": "Memory bloc restoration: 321/365 [3 Pages]",
@@ -13648,5 +13661,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-20T19:58:12.017975+00:00"
+  "updated": "2026-07-21T02:29:17.870532+00:00"
 }
