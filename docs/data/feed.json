@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-21T14:25:15.849776+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "link": "https://recalldreams.dev/home/contact-me/",
+      "endpoint": "",
+      "diff": " </style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.1' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.1' media='all' />\n\n+<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.3' media='all' />\n\n+<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.3' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n <link rel='shortlink' href='https://wp.me/PhdnDc-1B' />\n\n \t<style></style>\n\n-<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.1\" type=\"module\"></script>\n\n+<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.3\" type=\"module\"></script>\n\n <link rel=\"modulepreload\" href=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n <style id='wp-fonts-local'>\n\n @font-face{font-family:Hezaedrus;font-style:normal;font-weight:300;font-display:fallback;src:url('https://recalldreams.dev/wp-content/themes/hoat/assets/fonts/hezaedrus/hezaedrus-300-normal.woff') format('woff');}\n",
+      "detail": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-21T14:24:11.394426+00:00",
       "title": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
       "link": "https://recalldreams.dev/home/buy-me-a-tea/",
@@ -13713,5 +13726,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-21T14:24:11.396192+00:00"
+  "updated": "2026-07-21T14:25:15.851671+00:00"
 }
