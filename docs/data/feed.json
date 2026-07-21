@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:13:37.881407+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-21 15:11:23 UTC\n# Lines: 601323 old -> 601905 new\n# Beautified: yes\n\n@@ -13486,6 +13486,40 @@\n             \"video_guid\": {\n\n               \"description\": \"The VideoPress GUID.\",\n\n               \"required\": true\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/wpcom/v2/videopress/settings\": {\n\n+      \"namespace\": \"wpcom/v2\",\n\n+      \"methods\": [\n\n+        \"GET\",\n\n+        \"POST\",\n\n+        \"PUT\",\n\n+        \"PATCH\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"GET\"\n\n+          ],\n\n+          \"args\": []\n\n+        },\n\n+        {\n\n+          \"methods\": [\n\n+            \"POST\",\n\n+            \"PUT\",\n\n+            \"PATCH\"\n\n+          ],\n\n... (11 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-07-21T14:32:44.136662+00:00",
       "title": "https://project-skyscraper.com/",
@@ -13622,5 +13635,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-21T15:01:07.661895+00:00"
+  "updated": "2026-07-21T15:15:13.824439+00:00"
 }
