@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:48:23.558381+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-21 15:46:09 UTC\n# Lines: 601905 old -> 603431 new\n# Beautified: yes\n\n@@ -4656,6 +4656,81 @@\n             \"is_woo_product_entity\": {\n\n               \"default\": false,\n\n               \"required\": false\n\n+            }\n\n+          }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/yoast/v1/bulk_editor/posts\": {\n\n+      \"namespace\": \"yoast/v1\",\n\n+      \"methods\": [\n\n+        \"GET\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"GET\"\n\n+          ],\n\n+          \"args\": {\n\n+            \"content_type\": {\n\n+              \"description\": \"The content type to fetch posts for.\",\n\n+              \"required\": true\n\n+            },\n\n+            \"per_page\": {\n\n+              \"default\": 20,\n\n+              \"minimum\": 1,\n\n+              \"maximum\": 100,\n\n+              \"description\": \"The number of posts to fetch.\",\n\n+              \"required\": false\n\n... (52 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-21T15:13:37.881407+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
       "link": "https://recalldreams.dev/wp-json/",
@@ -13635,5 +13648,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-21T15:15:13.824439+00:00"
+  "updated": "2026-07-21T15:48:23.563321+00:00"
 }
