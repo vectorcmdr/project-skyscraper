@@ -2,6 +2,71 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:01:07.655787+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/",
+      "link": "https://recalldreams.dev/home/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/\n# File: html/home/index.html\n# Timestamp: 2026-07-21 15:00:38 UTC\n# Lines: 136673 old -> 136673 new\n# Beautified: yes\n\n@@ -772,7 +772,7 @@\n     \"mapStyle\": \"default\"\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-map-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/map/view.js?minify=false&#038;ver=16.1-a.1\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-map-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/map/view.js?minify=false&#038;ver=16.1-a.3\"></script>\n\n \n\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n",
+      "detail": "Content changed: https://recalldreams.dev/home/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:01:07.655766+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "link": "https://recalldreams.dev/home/contact-me/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/contact-me/\n# File: html/home/contact-me/index.html\n# Timestamp: 2026-07-21 15:00:36 UTC\n# Lines: 128637 old -> 128637 new\n# Beautified: yes\n\n@@ -71,8 +71,8 @@\n \n\n \n\n </style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.1' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.1' media='all' />\n\n+<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.3' media='all' />\n\n+<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.3' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \n\n@@ -158,7 +158,7 @@\n <link rel='shortlink' href='https://wp.me/PhdnDc-1B' />\n\n \t<style></style>\n\n \n\n-<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.1\" type=\"module\"></script>\n\n+<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.3\" type=\"module\"></script>\n\n <link rel=\"modulepreload\" href=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n <style id='wp-fonts-local'>\n\n @font-face{font-family:Hezaedrus;font-style:normal;font-weight:300;font-display:fallback;src:url('https://recalldreams.dev/wp-content/themes/hoat/assets/fonts/hezaedrus/hezaedrus-300-normal.woff') format('woff');}\n",
+      "detail": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:01:07.655745+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "link": "https://recalldreams.dev/home/buy-me-a-tea/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/buy-me-a-tea/\n# File: html/home/buy-me-a-tea/index.html\n# Timestamp: 2026-07-21 15:00:34 UTC\n# Lines: 131553 old -> 131630 new\n# Beautified: yes\n\n@@ -76,8 +76,8 @@\n .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n\n \n\n </style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.1' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.1' media='all' />\n\n+<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.3' media='all' />\n\n+<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.3' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \n\n@@ -159,7 +159,7 @@\n <link rel='shortlink' href='https://wp.me/PhdnDc-1y' />\n\n \t<style></style>\n\n \n\n-<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.1\" type=\"module\"></script>\n\n+<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.3\" type=\"module\"></script>\n\n <link rel=\"modulepreload\" href=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n <style id='wp-fonts-local'>\n\n @font-face{font-family:Hezaedrus;font-style:normal;font-weight:300;font-display:fallback;src:url('https://recalldreams.dev/wp-content/themes/hoat/assets/fonts/hezaedrus/hezaedrus-300-normal.woff') format('woff');}\n",
+      "detail": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:01:07.655722+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/schrodingers-instagram/\n# File: html/home/schrodingers-instagram/index.html\n# Timestamp: 2026-07-21 15:00:34 UTC\n# Lines: 124759 old -> 124759 new\n# Beautified: yes\n\n@@ -528,7 +528,7 @@\n \t\t</div>\n\n \t\t<script id=\"wp-dom-ready-js\" src=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/scripts/dom-ready/index.min.js?ver=a06281ae5cf5500e9317\"></script>\n\n <script type='text/javascript'  src='https://recalldreams.dev/wp-includes/js/dist/vendor/wp-polyfill.min.js'></script>\n\n-<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-tiled-gallery-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/tiled-gallery/view.js?minify=false&#038;ver=16.1-a.1\"></script>\n\n+<script data-wp-strategy=\"defer\" defer id=\"jetpack-block-tiled-gallery-js\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/tiled-gallery/view.js?minify=false&#038;ver=16.1-a.3\"></script>\n\n <script id=\"jetpack-carousel-js-extra\">var jetpackSwiperLibraryPath = {\n\n     \"url\": \"https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/swiper.js\"\n",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-21T15:01:07.655694+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "link": "https://recalldreams.dev/home/newsletter/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/newsletter/\n# File: html/home/newsletter/index.html\n# Timestamp: 2026-07-21 15:00:33 UTC\n# Lines: 128638 old -> 128562 new\n# Beautified: yes\n\n@@ -82,8 +82,8 @@\n .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n\n \n\n </style>\n\n-<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.1' media='all' />\n\n-<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.1' media='all' />\n\n+<link rel='stylesheet' id='grunion.css-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/grunion.css?ver=16.1-a.3' media='all' />\n\n+<link rel='stylesheet' id='jetpack-forms-layout-css' href='https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/src/../dist/contact-form/css/jetpack-forms-layout.css?ver=16.1-a.3' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \n\n@@ -165,7 +165,7 @@\n <link rel='shortlink' href='https://wp.me/PhdnDc-1D' />\n\n \t<style></style>\n\n \n\n-<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.1\" type=\"module\"></script>\n\n+<script id=\"jp-forms-view-js-module\" src=\"https://recalldreams.dev/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/modules/form/view.js?ver=16.1-a.3\" type=\"module\"></script>\n\n <link rel=\"modulepreload\" href=\"https://recalldreams.dev/wp-content/plugins/gutenberg/build/modules/interactivity/index.min.js?ver=efaa5193bbad9c60ffd1\" id=\"@wordpress/interactivity-js-modulepreload\" data-wp-fetchpriority=\"low\">\n\n <style id='wp-fonts-local'>\n\n @font-face{font-family:Hezaedrus;font-style:normal;font-weight:300;font-display:fallback;src:url('https://recalldreams.dev/wp-content/themes/hoat/assets/fonts/hezaedrus/hezaedrus-300-normal.woff') format('woff');}\n",
+      "detail": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-21T14:32:44.137617+00:00",
       "title": "Content changed: https://recalldreams.dev/home/",
       "link": "https://recalldreams.dev/home/",
@@ -13778,5 +13843,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-21T14:32:44.148785+00:00"
+  "updated": "2026-07-21T15:01:07.661895+00:00"
 }
