@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T22:09:10.403051+00:00",
+  "updated": "2026-07-23T22:13:29.764048+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3114,6 +3114,14 @@
       "date": "2018-07-24T18:57:00"
     },
     {
+      "id": "/2018/07/17/event-17072018",
+      "type": "post",
+      "label": "2018_dataset",
+      "url": "https://project-skyscraper.com/2018/07/17/event-17072018/",
+      "author": "System",
+      "date": "2018-07-17T00:00:00"
+    },
+    {
       "id": "/2018/01/17/event-17012018",
       "type": "post",
       "label": "2018_dataset_17012018",
@@ -4342,6 +4350,14 @@
       "type": "external",
       "label": "galacticatlas.nomanssky.com",
       "url": "https://galacticatlas.nomanssky.com/poi/region-318602CA759B",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://galacticatlas.nomanssky.com/poi/region-301A009B8D1E",
+      "type": "external",
+      "label": "galacticatlas.nomanssky.com",
+      "url": "https://galacticatlas.nomanssky.com/poi/region-301A009B8D1E",
       "author": "",
       "date": ""
     },
@@ -13364,6 +13380,22 @@
       "target": "/2024/10/12/event-12102024"
     },
     {
+      "source": "/2018/07/17/event-17072018",
+      "target": "/"
+    },
+    {
+      "source": "/2018/07/17/event-17072018",
+      "target": "https://galacticatlas.nomanssky.com/poi/region-301A009B8D1E"
+    },
+    {
+      "source": "/2018/07/17/event-17072018",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2018/07/17/event-17072018",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17089,6 +17121,14 @@
     },
     {
       "source": "/2024/04/29/event-29042024",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2018/07/17/event-17072018",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2018/07/17/event-17072018",
       "target": "/category/non-classe"
     },
     {
