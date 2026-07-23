@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-23T16:46:59+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/12/27/event-27122016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1482796800: no/value\n+ memory bloc 1482800400: One RegretValue: A decision to wait, a regret for waiting.\n+ This was 2016, I was still quite young and new to video games in general. During Christmas one of my friends had been gifted a new game that was still being developed over time: No Man’s Sky. At that time, they said they’d rather put money into Star Citizen after playing. As a result, I didn’t get the game or even think about it until much later. Me and him both have one regret, not sticking through and continuing it. He sunk money into Star Citizen’s fundraising and regrets that. I regret never trying No Man’s Sky myself, I regret waiting for an opportune moment to play it once it was further along and better than what that friend had said.\n+ Memory compliance: 100%\n- memory bloc : no/value\n+ memory bloc : One Regret Value: A decision to wait, a regret for waiting. This was 2016, I was still quite young and new to vide...\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-23T16:30:07.638599+00:00",
       "title": "Memory bloc restoration: 321/365 [6 Pages]",
@@ -13739,5 +13752,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-23T16:30:07.643952+00:00"
+  "updated": "2026-07-23T16:47:33.167269+00:00"
 }
