@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-23T17:25:09+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/09/event-09012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1452297600: no/value\n+ memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n+ I grew tired of drawing buildings, floorplans and electronic schematics. I began to dream of fantastic lands littered with ancient ruins, trees in all colours of the rainbow, rocks made from crystal clear ice that shimmered in hues of blue and magenta – but in my mind they were reduced to their most basic silhouette – an expression of their truest shapes. Beginning to envision them built from large, expressive facets, I silently planned away. Sketching, carving out time from my work schedule and other projects, and as February drew closer and a week began its progress into another, the tenacity finally met me head on and I sat down with that plan – beginning the hard work of turning it into visual math on my screen – triangle by triangle until a true and broad collection of objects began to form, transporting myself and others to the fan...\n  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n... (truncated)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-23T17:10:53.345575+00:00",
       "title": "freeimage.host image count: 16 → 17",
@@ -13817,5 +13830,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-23T17:10:53.350947+00:00"
+  "updated": "2026-07-23T17:25:40.035208+00:00"
 }
