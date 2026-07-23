@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-23T16:30:07.638599+00:00",
+      "title": "Memory bloc restoration: 321/365 [6 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 6 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 6,
+      "last_timestamp": "2026-07-23T16:30:07.638599+00:00"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-23T16:29:09.721594+00:00",
       "title": "",
@@ -14,17 +27,17 @@
       "game_date": ""
     },
     {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-23T16:21:00.524065+00:00",
-      "title": "Memory bloc restoration: 321/365 [5 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 5 pages",
+      "type": "api_items_added",
+      "timestamp": "2026-07-23T16:28:45+00:00",
+      "title": "2024_dataset",
+      "link": "https://project-skyscraper.com/2024/04/02/event-02042024/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
-      "restoration_value": "321/365",
-      "page_count": 5,
-      "last_timestamp": "2026-07-23T16:21:00.524065+00:00"
+      "id": 5953,
+      "game_date": "2024-04-02T00:00:00+00:00"
     },
     {
       "type": "api_items_added",
@@ -13726,5 +13739,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-23T16:29:09.726993+00:00"
+  "updated": "2026-07-23T16:30:07.643952+00:00"
 }
