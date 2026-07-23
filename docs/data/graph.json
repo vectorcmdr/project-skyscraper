@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T16:30:10.084491+00:00",
+  "updated": "2026-07-23T16:52:49.584677+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2775,7 +2775,7 @@
       "label": "2016_dataset",
       "url": "https://project-skyscraper.com/2016/12/27/event-27122016/",
       "author": "System",
-      "date": "2016-12-27T00:00:00"
+      "date": "2016-12-27T01:00:00"
     },
     {
       "id": "/2016/12/28/event-28122016",
@@ -3208,6 +3208,14 @@
       "url": "https://project-skyscraper.com/2025/11/12/event-12112025/",
       "author": "System",
       "date": "2025-11-12T14:45:00"
+    },
+    {
+      "id": "/2025/08/27/event-27082025",
+      "type": "post",
+      "label": "2025_dataset",
+      "url": "https://project-skyscraper.com/2025/08/27/event-27082025/",
+      "author": "System",
+      "date": "2025-08-27T00:00:00"
     },
     {
       "id": "/2025/08/09/event-09082025",
@@ -4422,6 +4430,14 @@
       "type": "external",
       "label": "nomanssky.com",
       "url": "https://www.nomanssky.com/foundation-update",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.nomanssky.com/voyagers-update/",
+      "type": "external",
+      "label": "nomanssky.com",
+      "url": "https://www.nomanssky.com/voyagers-update/",
       "author": "",
       "date": ""
     },
@@ -13228,6 +13244,22 @@
       "target": "/2024/10/12/event-12102024"
     },
     {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "https://www.nomanssky.com/voyagers-update/"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/2025/08/09/event-09082025"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/2025/11/12/event-12112025"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -16921,6 +16953,14 @@
     },
     {
       "source": "/2024/04/02/event-02042024",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
       "target": "/category/non-classe"
     },
     {
