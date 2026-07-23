@@ -1,11 +1,19 @@
 {
   "pages": [
     {
+      "path": "/neural-network-status/",
+      "title": "Neural Network Status",
+      "type": "page",
+      "modified": "2026-07-23T22:34:45.364133+00:00",
+      "date_gmt": "",
+      "author": "The Architect"
+    },
+    {
       "path": "/2018/07/17/event-17072018/",
       "title": "2018_dataset",
       "type": "post",
       "modified": "2026-07-23T22:13:24.969072+00:00",
-      "date_gmt": "2018-07-17T00:00:00",
+      "date_gmt": "2018-07-17T00:00:00+00:00",
       "author": "System"
     },
     {
@@ -4634,14 +4642,6 @@
       "author": 0
     },
     {
-      "path": "/neural-network-status/",
-      "title": "Neural Network Status",
-      "type": "page",
-      "modified": "2026-05-01T08:18:28Z",
-      "date_gmt": "",
-      "author": 0
-    },
-    {
       "path": "/sleep-mode/",
       "title": "Sleep Mode",
       "type": "page",
@@ -4690,5 +4690,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-07-23T22:13:24.976408+00:00"
+  "updated": "2026-07-23T22:34:45.369696+00:00"
 }
