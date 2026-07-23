@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T16:52:49.584677+00:00",
+  "updated": "2026-07-23T17:37:52.106215+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -442,6 +442,14 @@
       "date": "2013-12-24T01:00:00"
     },
     {
+      "id": "/2014/02/17/event-17022014",
+      "type": "post",
+      "label": "2014_dataset",
+      "url": "https://project-skyscraper.com/2014/02/17/event-17022014/",
+      "author": "System",
+      "date": "2014-02-17T01:00:00"
+    },
+    {
       "id": "/2016/01/01/event-01012016",
       "type": "post",
       "label": "2016_dataset",
@@ -495,7 +503,7 @@
       "label": "2016_dataset",
       "url": "https://project-skyscraper.com/2016/01/09/event-09012016/",
       "author": "System",
-      "date": "2016-01-09T00:00:00"
+      "date": "2016-01-09T01:00:00"
     },
     {
       "id": "/2016/01/10/event-10012016",
@@ -4170,6 +4178,14 @@
       "date": "2026-06-04T17:16:56"
     },
     {
+      "id": "https://80.lv/articles/emek-can-ozben-low-poly-environment",
+      "type": "external",
+      "label": "80.lv",
+      "url": "https://80.lv/articles/emek-can-ozben-low-poly-environment",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://archive.goodguysfree.com/",
       "type": "external",
       "label": "archive.goodguysfree.com",
@@ -4206,6 +4222,14 @@
       "type": "external",
       "label": "blog.playstation.com",
       "url": "https://blog.playstation.com/2016/05/27/no-mans-sky-coming-to-ps4-in-august/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://calgaryvisioncentre.com/news/2017/6/23/tdgft1bsbdlm8496ov7tn73kr0ci1q",
+      "type": "external",
+      "label": "calgaryvisioncentre.com",
+      "url": "https://calgaryvisioncentre.com/news/2017/6/23/tdgft1bsbdlm8496ov7tn73kr0ci1q",
       "author": "",
       "date": ""
     },
@@ -4510,6 +4534,14 @@
       "type": "external",
       "label": "reddit.com",
       "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.rollingstone.com/culture/culture-news/redshirts-author-john-scalzis-suicidal-journey-through-no-mans-sky-105236/",
+      "type": "external",
+      "label": "rollingstone.com",
+      "url": "https://www.rollingstone.com/culture/culture-news/redshirts-author-john-scalzis-suicidal-journey-through-no-mans-sky-105236/",
       "author": "",
       "date": ""
     },
@@ -7557,6 +7589,10 @@
     },
     {
       "source": "/2016/01/09/event-09012016",
+      "target": "https://80.lv/articles/emek-can-ozben-low-poly-environment"
+    },
+    {
+      "source": "/2016/01/09/event-09012016",
       "target": "/2016/01/08/event-08012016"
     },
     {
@@ -7654,6 +7690,10 @@
     {
       "source": "/2016/01/18/event-18012016",
       "target": "/"
+    },
+    {
+      "source": "/2016/01/18/event-18012016",
+      "target": "https://www.rollingstone.com/culture/culture-news/redshirts-author-john-scalzis-suicidal-journey-through-no-mans-sky-105236/"
     },
     {
       "source": "/2016/01/18/event-18012016",
@@ -13260,6 +13300,22 @@
       "target": "/2025/11/12/event-12112025"
     },
     {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "https://calgaryvisioncentre.com/news/2017/6/23/tdgft1bsbdlm8496ov7tn73kr0ci1q"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/2013/12/24/event-24122013"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/2016/01/01/event-01012016"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -16961,6 +17017,14 @@
     },
     {
       "source": "/2025/08/27/event-27082025",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
       "target": "/category/non-classe"
     },
     {
