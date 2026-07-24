@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T08:21:55.258892+00:00",
+  "updated": "2026-07-24T08:22:28.510573+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3122,6 +3122,14 @@
       "date": "2018-07-17T00:00:00"
     },
     {
+      "id": "/2018/05/24/event-24052018",
+      "type": "post",
+      "label": "2018_dataset",
+      "url": "https://project-skyscraper.com/2018/05/24/event-24052018/",
+      "author": "System",
+      "date": "2018-05-24T00:00:00"
+    },
+    {
       "id": "/2018/01/17/event-17012018",
       "type": "post",
       "label": "2018_dataset_17012018",
@@ -4462,6 +4470,14 @@
       "type": "external",
       "label": "kotaku.com",
       "url": "https://kotaku.com/a-look-at-how-no-mans-skys-procedural-generation-works-1787928446",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Defense_Force",
+      "type": "external",
+      "label": "nmsgalactichub.miraheze.org",
+      "url": "https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Defense_Force",
       "author": "",
       "date": ""
     },
@@ -13436,6 +13452,22 @@
       "target": "/structural-analysis-161527-full"
     },
     {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Defense_Force"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/2018/07/17/event-17072018"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17172,6 +17204,14 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/category/non-classe"
+    },
+    {
       "source": "/2016/01/01/event-01012016",
       "target": "/2016/02/29/event-out-of-range"
     },
@@ -18378,6 +18418,10 @@
     {
       "source": "/2017/01/27/event-27012017",
       "target": "/2017/07/08/2017_dataset"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/2018/07/24/2018_dataset"
     }
   ]
 }
