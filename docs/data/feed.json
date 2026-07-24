@@ -92,6 +92,19 @@
       "game_date": ""
     },
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-07-23T22:34:45+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "- SILENCE\n+ WHAT MAKES A MEMORY WORTH KEEPING?\n- // ==================== Processing ====================\n- const canvas = document.getElementById('meshCanvas');\n+ const canvas = document.getElementById('meshCanvas');\n  const ctx = canvas.getContext('2d', {\n  alpha: true\n  let globalScale = 1;\n- const HEART_SIZE = 220;\n- const PARTICLE_COUNT = 32;\n+ const SHAPE_SIZE = 220;\n+ const PARTICLE_COUNT = 48;\n  class Particle {\n  constructor(index) {\n+ this.index = index;\n+ this.size = Math.random() * 1.4 + 1.8;\n+ this.angle = Math.random() * Math.PI * 1;\n+ this.orbitSpeed = 0.12 + Math.random() * 0.08;\n+ this.vibeSpeed = 1.2 + Math.random() * 0.8;\n+ this.x = width / 2;",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-23T22:13:24.968926+00:00",
       "title": "",
@@ -13973,19 +13986,6 @@
       "game_date": ""
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-23T22:34:45+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- SILENCE\n+ WHAT MAKES A MEMORY WORTH KEEPING?\n- // ==================== Processing ====================\n- const canvas = document.getElementById('meshCanvas');\n+ const canvas = document.getElementById('meshCanvas');\n  const ctx = canvas.getContext('2d', {\n  alpha: true\n  let globalScale = 1;\n- const HEART_SIZE = 220;\n- const PARTICLE_COUNT = 32;\n+ const SHAPE_SIZE = 220;\n+ const PARTICLE_COUNT = 48;\n  class Particle {\n  constructor(index) {\n+ this.index = index;\n+ this.size = Math.random() * 1.4 + 1.8;\n+ this.angle = Math.random() * Math.PI * 1;\n+ this.orbitSpeed = 0.12 + Math.random() * 0.08;\n+ this.vibeSpeed = 1.2 + Math.random() * 0.8;\n+ this.x = width / 2;",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -14038,5 +14038,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-24T08:34:45+00:00"
+  "updated": "2026-07-24T08:59:44.508347+00:00"
 }
