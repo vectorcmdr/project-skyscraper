@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T09:16:07.661367+00:00",
+  "updated": "2026-07-24T09:37:08.527610+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3154,6 +3154,14 @@
       "date": "2019-08-24T00:00:00"
     },
     {
+      "id": "/2020/04/24/event-24042020",
+      "type": "post",
+      "label": "2020_dataset",
+      "url": "https://project-skyscraper.com/2020/04/24/event-24042020/",
+      "author": "System",
+      "date": "2020-04-24T00:00:00"
+    },
+    {
       "id": "/2020/04/07/event-07042020",
       "type": "post",
       "label": "2020_dataset_07042020",
@@ -4878,6 +4886,14 @@
       "type": "external",
       "label": "youtube.com",
       "url": "https://www.youtube.com/watch?v=Qci3kRid-rc",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.youtube.com/live/EUqskuZEylM",
+      "type": "external",
+      "label": "youtube.com",
+      "url": "https://www.youtube.com/live/EUqskuZEylM",
       "author": "",
       "date": ""
     }
@@ -13532,6 +13548,22 @@
       "target": "/2020/02/08/event-08022020"
     },
     {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "https://www.youtube.com/live/EUqskuZEylM"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/2020/04/07/event-07042020"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17289,6 +17321,14 @@
     },
     {
       "source": "/2019/08/24/event-24082019",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
       "target": "/category/non-classe"
     },
     {
