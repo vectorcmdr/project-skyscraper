@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T09:37:08.527610+00:00",
+  "updated": "2026-07-24T12:33:17.843481+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6749,6 +6749,22 @@
     },
     {
       "source": "sitemap",
+      "target": "/2018/05/24/event-24052018"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2017/08/11/event-11082017"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2019/08/24/event-24082019"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2020/04/24/event-24042020"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -13340,6 +13356,70 @@
       "target": "/2018/07/24/2018_dataset"
     },
     {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Defense_Force"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2018/05/24/event-24052018",
+      "target": "/2018/07/17/event-17072018"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "https://youtu.be/5328iuzHw-w"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/2017/08/07/event-07082017"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/2017/12/01/event-01122017"
+    },
+    {
+      "source": "/2019/08/24/event-24082019",
+      "target": "/"
+    },
+    {
+      "source": "/2019/08/24/event-24082019",
+      "target": "https://www.forbes.com/sites/mattgardner1/2019/08/24/how-a-no-mans-sky-billboard-transformed-the-lives-of-sick-children/"
+    },
+    {
+      "source": "/2019/08/24/event-24082019",
+      "target": "/2018/07/24/2018_dataset"
+    },
+    {
+      "source": "/2019/08/24/event-24082019",
+      "target": "/2020/02/08/event-08022020"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "https://www.youtube.com/live/EUqskuZEylM"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/2020/04/07/event-07042020"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -13498,70 +13578,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2018/05/24/event-24052018",
-      "target": "/"
-    },
-    {
-      "source": "/2018/05/24/event-24052018",
-      "target": "https://nmsgalactichub.miraheze.org/wiki/Galactic_Hub_Defense_Force"
-    },
-    {
-      "source": "/2018/05/24/event-24052018",
-      "target": "/2018/01/17/event-17012018"
-    },
-    {
-      "source": "/2018/05/24/event-24052018",
-      "target": "/2018/07/17/event-17072018"
-    },
-    {
-      "source": "/2017/08/11/event-11082017",
-      "target": "/"
-    },
-    {
-      "source": "/2017/08/11/event-11082017",
-      "target": "https://youtu.be/5328iuzHw-w"
-    },
-    {
-      "source": "/2017/08/11/event-11082017",
-      "target": "/2017/08/07/event-07082017"
-    },
-    {
-      "source": "/2017/08/11/event-11082017",
-      "target": "/2017/12/01/event-01122017"
-    },
-    {
-      "source": "/2019/08/24/event-24082019",
-      "target": "/"
-    },
-    {
-      "source": "/2019/08/24/event-24082019",
-      "target": "https://www.forbes.com/sites/mattgardner1/2019/08/24/how-a-no-mans-sky-billboard-transformed-the-lives-of-sick-children/"
-    },
-    {
-      "source": "/2019/08/24/event-24082019",
-      "target": "/2018/07/24/2018_dataset"
-    },
-    {
-      "source": "/2019/08/24/event-24082019",
-      "target": "/2020/02/08/event-08022020"
-    },
-    {
-      "source": "/2020/04/24/event-24042020",
-      "target": "/"
-    },
-    {
-      "source": "/2020/04/24/event-24042020",
-      "target": "https://www.youtube.com/live/EUqskuZEylM"
-    },
-    {
-      "source": "/2020/04/24/event-24042020",
-      "target": "/2020/04/07/event-07042020"
-    },
-    {
-      "source": "/2020/04/24/event-24042020",
-      "target": "/2021/02/25/event-25022021"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
