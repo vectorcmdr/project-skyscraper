@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "/",
+      "title": "",
+      "type": "page",
+      "modified": "2026-07-24T18:34:45.819767+00:00",
+      "date_gmt": "",
+      "author": 0
+    },
+    {
       "path": "/2020/04/24/event-24042020/",
       "title": "2020_dataset",
       "type": "post",
@@ -31,14 +39,6 @@
       "modified": "2026-07-24T08:22:25.785761+00:00",
       "date_gmt": "2018-05-24T00:00:00+00:00",
       "author": "System"
-    },
-    {
-      "path": "/",
-      "title": "",
-      "type": "page",
-      "modified": "2026-07-24T02:42:15.766106+00:00",
-      "date_gmt": "",
-      "author": 0
     },
     {
       "path": "/neural-network-status/",
@@ -4722,5 +4722,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-07-24T09:37:15.977720+00:00"
+  "updated": "2026-07-24T18:34:45.824650+00:00"
 }
