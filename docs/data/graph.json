@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T16:24:45.308785+00:00",
+  "updated": "2026-07-25T16:33:52.088734+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -432,6 +432,14 @@
       "url": "https://project-skyscraper.com/1999/08/11/event-11081999/",
       "author": "System",
       "date": "1999-08-11T00:00:00"
+    },
+    {
+      "id": "/2012/07/25/event-25072012",
+      "type": "post",
+      "label": "2012_dataset",
+      "url": "https://project-skyscraper.com/2012/07/25/event-25072012/",
+      "author": "System",
+      "date": "2012-07-25T00:00:00"
     },
     {
       "id": "/2013/12/24/event-24122013",
@@ -4702,6 +4710,14 @@
       "type": "external",
       "label": "rollingstone.com",
       "url": "https://www.rollingstone.com/culture/culture-news/redshirts-author-john-scalzis-suicidal-journey-through-no-mans-sky-105236/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://skyandtelescope.org/astronomy-resources/light-pollution-and-astronomy-the-bortle-dark-sky-scale/",
+      "type": "external",
+      "label": "skyandtelescope.org",
+      "url": "https://skyandtelescope.org/astronomy-resources/light-pollution-and-astronomy-the-bortle-dark-sky-scale/",
       "author": "",
       "date": ""
     },
@@ -13772,6 +13788,22 @@
       "target": "/2019/08/24/event-24082019"
     },
     {
+      "source": "/2012/07/25/event-25072012",
+      "target": "/"
+    },
+    {
+      "source": "/2012/07/25/event-25072012",
+      "target": "https://skyandtelescope.org/astronomy-resources/light-pollution-and-astronomy-the-bortle-dark-sky-scale/"
+    },
+    {
+      "source": "/2012/07/25/event-25072012",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2012/07/25/event-25072012",
+      "target": "/2013/12/24/event-24122013"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17585,6 +17617,14 @@
     },
     {
       "source": "/2019/05/10/event-10052019",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2012/07/25/event-25072012",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2012/07/25/event-25072012",
       "target": "/category/non-classe"
     },
     {
