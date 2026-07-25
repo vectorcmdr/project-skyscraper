@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T16:33:52.088734+00:00",
+  "updated": "2026-07-25T16:51:54.550204+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3306,6 +3306,14 @@
       "date": "2024-02-15T15:00:00"
     },
     {
+      "id": "/2024/12/22/event-22122024",
+      "type": "post",
+      "label": "2024_dataset",
+      "url": "https://project-skyscraper.com/2024/12/22/event-22122024/",
+      "author": "System",
+      "date": "2024-12-22T01:00:00"
+    },
+    {
       "id": "/2025/11/12/event-12112025",
       "type": "post",
       "label": "2025_dataset",
@@ -4702,6 +4710,14 @@
       "type": "external",
       "label": "reddit.com",
       "url": "https://www.reddit.com/r/NoMansSkyTheGame/comments/7r5kik/waking_titan_atlas_pass_v4_megathread/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.researchgate.net/publication/387351367_Towards_Safe_and_Honest_AI_Agents_with_Neural_Self-Other_Overlap",
+      "type": "external",
+      "label": "researchgate.net",
+      "url": "https://www.researchgate.net/publication/387351367_Towards_Safe_and_Honest_AI_Agents_with_Neural_Self-Other_Overlap",
       "author": "",
       "date": ""
     },
@@ -13804,6 +13820,22 @@
       "target": "/2013/12/24/event-24122013"
     },
     {
+      "source": "/2024/12/22/event-22122024",
+      "target": "/"
+    },
+    {
+      "source": "/2024/12/22/event-22122024",
+      "target": "https://www.researchgate.net/publication/387351367_Towards_Safe_and_Honest_AI_Agents_with_Neural_Self-Other_Overlap"
+    },
+    {
+      "source": "/2024/12/22/event-22122024",
+      "target": "/2024/10/12/event-12102024"
+    },
+    {
+      "source": "/2024/12/22/event-22122024",
+      "target": "/2025/03/26/event-26032025"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17625,6 +17657,14 @@
     },
     {
       "source": "/2012/07/25/event-25072012",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2024/12/22/event-22122024",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2024/12/22/event-22122024",
       "target": "/category/non-classe"
     },
     {
