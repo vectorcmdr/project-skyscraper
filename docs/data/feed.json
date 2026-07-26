@@ -1,6 +1,45 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-26T16:49:49.083438+00:00",
+      "title": "Memory bloc restoration: 321/365 [29 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 29 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 29,
+      "last_timestamp": "2026-07-26T16:49:49.083438+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-26T16:49:49.082742+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 6132,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-26T16:46:14+00:00",
+      "title": "STRUCTURAL ANALYSIS",
+      "link": "https://project-skyscraper.com/2026/07/26/structural-analysis-174916/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 6132,
+      "game_date": "2026-07-26T16:49:00+00:00"
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-26T16:23:19.601207+00:00",
       "title": "",
@@ -12,19 +51,6 @@
       "site": "",
       "id": 6126,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-26T16:22:16.035687+00:00",
-      "title": "Memory bloc restoration: 321/365 [28 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 28 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "321/365",
-      "page_count": 28,
-      "last_timestamp": "2026-07-26T16:22:16.035687+00:00"
     },
     {
       "type": "api_items_added",
@@ -14532,5 +14558,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-26T16:23:19.607235+00:00"
+  "updated": "2026-07-26T16:49:49.090161+00:00"
 }
