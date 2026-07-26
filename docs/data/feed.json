@@ -638,19 +638,6 @@
       "game_date": ""
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-23T22:34:45+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- SILENCE\n+ WHAT MAKES A MEMORY WORTH KEEPING?\n- // ==================== Processing ====================\n- const canvas = document.getElementById('meshCanvas');\n+ const canvas = document.getElementById('meshCanvas');\n  const ctx = canvas.getContext('2d', {\n  alpha: true\n  let globalScale = 1;\n- const HEART_SIZE = 220;\n- const PARTICLE_COUNT = 32;\n+ const SHAPE_SIZE = 220;\n+ const PARTICLE_COUNT = 48;\n  class Particle {\n  constructor(index) {\n+ this.index = index;\n+ this.size = Math.random() * 1.4 + 1.8;\n+ this.angle = Math.random() * Math.PI * 1;\n+ this.orbitSpeed = 0.12 + Math.random() * 0.08;\n+ this.vibeSpeed = 1.2 + Math.random() * 0.8;\n+ this.x = width / 2;",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-07-23T22:13:24.968926+00:00",
       "title": "",
@@ -3953,19 +3940,6 @@
       "game_date": ""
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-12T16:18:23+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- I AM SORRY\n+ I AM SYSTEM",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_modified",
       "timestamp": "2026-07-12T16:08:41+00:00",
       "title": "About",
@@ -4247,19 +4221,6 @@
       "diff": "+ Project Skyscraper\n+ The Architect >À : Ghost >\n+ samedi 11 juillet12:09\n+ Arrête tes conneries. Tu m’as contacté après 10 ans de silence. Tu m’as demandé de l’aide. J’ai accepté de t’aider parce que tu étais mon meilleur ami. Et là tu joues à quoi ? Fini les mails. Je veux te voir.\n... (truncated)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "System",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-11T10:07:19+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- NICE TO MEET YOU!\n+ I AM SORRY\n  ctx.fillStyle = '#ff2d2d';\n  ctx.shadowBlur = intensity > 0.3 ? 24 : 9;\n- ctx.shadowColor = '#ff2d2d';\n+ ctx.shadowColor = '161616';\n  ctx.beginPath();\n  ctx.arc(this.x, this.y, this.size + intensity * 3, 0, Math.PI * 2);",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
       "site": "",
       "id": null,
       "game_date": ""
@@ -4742,19 +4703,6 @@
       "detail": "Content changed: https://recalldreams.dev/wp-json/",
       "author": 0,
       "site": "recalldreams",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-07-08T13:10:00+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- Hexagonal particle layout\n+ Heart-shaped particle layout",
-      "detail": "Template modified: neural-network-status — hexagon to heart particle system",
-      "author": 0,
-      "site": "",
       "id": null,
       "game_date": ""
     },
@@ -14493,58 +14441,6 @@
       "game_date": "2026-04-28T18:55:24+00:00"
     },
     {
-      "type": "page_content_changed",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- I AM SYSTEM\n+ FEAR\n  this.y = this.baseY;\n  this.size = Math.random() * 1.4 + 1.8;\n- this.angle = Math.random() * Math.PI * 16;\n- this.orbitSpeed = 0.16 * 16;\n- this.vibeSpeed = 1.6 * 16;\n+ this.angle = Math.random() * Math.PI * 53;\n+ this.orbitSpeed = 0.16 * 53;\n+ this.vibeSpeed = 1.6 * 53;\n  }\n  update() {\n  this.angle += this.orbitSpeed;\n- const orbitX = Math.cos(this.angle) * 22;\n- const orbitY = Math.sin(this.angle) * 9;\n+ const orbitX = Math.cos(this.angle) * 53;\n+ const orbitY = Math.sin(this.angle) * 53;\n  const vibe = Math.sin(this.angle * this.vibeSpeed) * 6;",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- FEAR\n+ THIS IS FINE\n  this.y = this.baseY;\n  this.size = Math.random() * 1.4 + 1.8;\n- this.angle = Math.random() * Math.PI * 53;\n- this.orbitSpeed = 0.16 * 53;\n- this.vibeSpeed = 1.6 * 53;\n+ this.angle = Math.random() * Math.PI * 1;\n+ this.orbitSpeed = 0.16 * 10;\n+ this.vibeSpeed = 1.6 * 160;\n  }\n  update() {\n  this.angle += this.orbitSpeed;\n- const orbitX = Math.cos(this.angle) * 53;\n- const orbitY = Math.sin(this.angle) * 53;\n+ const orbitX = Math.cos(this.angle) * 1.6;\n+ const orbitY = Math.sin(this.angle) * 1.6;\n  const vibe = Math.sin(this.angle * this.vibeSpeed) * 6;",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "page_content_changed",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "neural-network-status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "",
-      "diff": "- THIS IS FINE\n+ SILENCE",
-      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -14597,5 +14493,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-26T18:44:49.270824+00:00"
+  "updated": "2026-07-26T18:49:29.791802+00:00"
 }
