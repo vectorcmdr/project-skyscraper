@@ -14558,6 +14558,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-05-01T08:18:28+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "- 3 Inbound Attempts\n+ 2 Inbound Attempts",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -14610,5 +14623,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-26T18:13:30.011823+00:00"
+  "updated": "2026-07-26T18:14:34.277982+00:00"
 }
