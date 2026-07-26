@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T16:16:15.716010+00:00",
+  "updated": "2026-07-26T16:22:18.594753+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -448,6 +448,14 @@
       "url": "https://project-skyscraper.com/2013/12/24/event-24122013/",
       "author": "System",
       "date": "2013-12-24T01:00:00"
+    },
+    {
+      "id": "/2013/12/07/event-07122013",
+      "type": "post",
+      "label": "2013_dataset",
+      "url": "https://project-skyscraper.com/2013/12/07/event-07122013/",
+      "author": "System",
+      "date": "2013-12-07T01:00:00"
     },
     {
       "id": "/2014/02/17/event-17022014",
@@ -4686,6 +4694,14 @@
       "type": "external",
       "label": "nomanssky.com",
       "url": "https://www.nomanssky.com/voyagers-update/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://www.nomanssky.com/2013/12/introducing-no-mans-sky/",
+      "type": "external",
+      "label": "nomanssky.com",
+      "url": "https://www.nomanssky.com/2013/12/introducing-no-mans-sky/",
       "author": "",
       "date": ""
     },
@@ -14020,6 +14036,22 @@
       "target": "/2026/06/16/structural-analysis-155807"
     },
     {
+      "source": "/2013/12/07/event-07122013",
+      "target": "/"
+    },
+    {
+      "source": "/2013/12/07/event-07122013",
+      "target": "https://www.nomanssky.com/2013/12/introducing-no-mans-sky/"
+    },
+    {
+      "source": "/2013/12/07/event-07122013",
+      "target": "/2012/07/25/event-25072012"
+    },
+    {
+      "source": "/2013/12/07/event-07122013",
+      "target": "/2013/12/24/event-24122013"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -17881,6 +17913,14 @@
     },
     {
       "source": "/2026/06/15/event-15062026",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2013/12/07/event-07122013",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2013/12/07/event-07122013",
       "target": "/category/non-classe"
     },
     {
