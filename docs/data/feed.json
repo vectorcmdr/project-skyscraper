@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-27T19:10:25.013392+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "link": "https://recalldreams.dev/home/discover-more/",
+      "endpoint": "",
+      "diff": " @media (min-width:782px){}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}\n\n </style>\n\n-<link rel='stylesheet' id='all-css-ea32e7555176a2c0e5ecbaf7a8167352' href='https://recalldreams.dev/_static/??-eJx1jMsKgCAQAH8o24TCOkSfErUtYT5xFX8/OnjsOsNMjQKDz+QzRFtu7RkeyvFAA7v2CKcNaBi46kipR+au/hcuXMUSAx4pFCbbhGjgG2xulUqpRY7TML9FJC9G' type='text/css' media='all' />\n\n+<link rel='stylesheet' id='all-css-254c6401d95663d7343e39eba1f4139a' href='https://recalldreams.dev/_static/??-eJx1jMsKgCAQAH8oWwxKL9GnRG1LmE9cxd+PDh67zjDTksAYCoUCydXbBIaHSjrQwm4CwukiWgZuJlEekXlo/4WPV3XEgEeOlcl1ITr4BptfpdKzVJPWywtFGy9K' type='text/css' media='all' />\n\n <style id=\"wp-block-post-content-inline-css\">\n\n \t\t\t\t\t\t<div class=\"jp-carousel-pagination\"></div>\n\n \t\t\t\t\t</div>\n\n \t\t\t\t\t<div class=\"jp-carousel-photo-title-container\">\n\n-\t\t\t\t\t\t<h2 class=\"jp-carousel-photo-caption\"></h2>\n\n+\t\t\t\t\t\t<div class=\"jp-ca...",
+      "detail": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_removed",
       "timestamp": "2026-07-27T19:08:13.016185+00:00",
       "title": "https://project-skyscraper.com/",
@@ -14519,5 +14532,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-27T19:08:13.017888+00:00"
+  "updated": "2026-07-27T19:10:25.014652+00:00"
 }
