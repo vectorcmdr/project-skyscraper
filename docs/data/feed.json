@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-27T19:14:02.175728+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": " :is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-circle) .tiled-gallery__item img{border-radius:50%}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row{flex-grow:1;width:100%}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-1 .tiled-gallery__col{width:100%}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-2 .tiled-gallery__col{width:calc(50% - 2px)}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-3 .tiled-gallery__col{width:calc(33.33333% - 2.66667px)}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-4 .tiled-gallery__col{width:calc(25% - 3px)}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-5 .tiled-gallery__col{width:calc(20% - 3.2px)}:is(.wp-block-jetpack-tiled-gallery .is-style-circle,.wp-block-jetpack-tiled-gallery .is-style-square,.wp-block-jetpack-tiled-gallery.is-style-circle,.wp-block-jetpack-tiled-gallery.is-style-square) .tiled-gallery__row.columns-6 .tiled-gallery__col{wi...",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-27T19:10:25.013392+00:00",
       "title": "Content changed: https://recalldreams.dev/home/discover-more/",
       "link": "https://recalldreams.dev/home/discover-more/",
@@ -14532,5 +14545,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-27T19:13:31.816674+00:00"
+  "updated": "2026-07-27T19:14:02.176628+00:00"
 }
