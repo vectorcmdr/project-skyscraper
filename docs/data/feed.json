@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "page_content_changed",
+      "timestamp": "2026-07-28T13:21:08.155308+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "- A ROOM FOR EACH\n+ A ROOM FOR EACH AND A TOWER FOR ALL\n- const canvas = document.getElementById('meshCanvas');\n- const ctx = canvas.getContext('2d', {\n- alpha: true\n- let width, height, particles = [];\n- let started = false;\n- const COLS = 21;\n- const ROWS = 15;\n- const CELL = 28;\n- class Particle {\n- constructor(x, y) {\n+ (function() {\n+ var canvas = document.getElementById('meshCanvas');\n+ if (!canvas) return;\n+ var ctx = canvas.getContext('2d', {\n+ alpha: true\n+ if (!ctx) return;\n+ var width = 0,",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
       "timestamp": "2026-07-28T13:14:18.912454+00:00",
       "title": "neural-network-status",
       "link": "https://project-skyscraper.com/neural-network-status/",
@@ -14857,5 +14870,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T13:20:32.327420+00:00"
+  "updated": "2026-07-28T13:21:08.161126+00:00"
 }
