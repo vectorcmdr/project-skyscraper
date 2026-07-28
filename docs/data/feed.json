@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-07-28T07:06:02.037018+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-28 07:05:09 UTC\n# Lines: 604999 old -> 603820 new\n# Beautified: yes\n\n@@ -25,7 +25,6 @@\n     \"jetpack/v4/explat\",\n\n     \"newspack-blocks/v1\",\n\n     \"cptui/v1\",\n\n-    \"wpcom/v3\",\n\n     \"agents-manager\",\n\n     \"jetpack/v4/blaze-app\",\n\n     \"jetpack/v4/blaze\",\n\n@@ -36,6 +35,7 @@\n     \"jetpack/v4/videopress\",\n\n     \"my-jetpack/v1\",\n\n     \"jetpack-boost/v1\",\n\n+    \"wpcom/v3\",\n\n     \"wp-abilities/v1\",\n\n     \"wp-site-health/v1\"\n\n   ],\n\n@@ -2464,6 +2464,16 @@\n               },\n\n               \"required\": false\n\n             },\n\n+            \"jetpack_seo_llms_txt_enabled\": {\n\n+              \"description\": \"Generate an llms.txt file to guide AI assistants around your content.\",\n\n+              \"default\": 0,\n\n+              \"required\": false\n\n+            },\n\n+            \"jetpack_seo_ai_crawler_overrides\": {\n\n+              \"description\": \"AI crawler allow/block overrides.\",\n\n+              \"default\": [],\n\n+              \"required\": false\n\n+            },\n\n... (3394 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-07-28T01:04:42.623136+00:00",
       "title": "Content changed: https://recalldreams.dev/home/discover-more/",
       "link": "https://recalldreams.dev/home/discover-more/",
@@ -14584,5 +14597,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T07:01:54.666536+00:00"
+  "updated": "2026-07-28T07:06:02.043639+00:00"
 }
