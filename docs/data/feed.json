@@ -14766,6 +14766,19 @@
       "game_date": "2026-04-28T18:55:24+00:00"
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-05-01T08:18:28+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "- WHAT MAKES A MEMORY WORTH KEEPING?\n+ A ROOM FOR EACH\n  let width, height, particles = [];\n- let mouse = {\n- x: 0,\n- y: 0,\n- active: false\n- let globalScale = 1;\n- const SHAPE_SIZE = 220;\n- const PARTICLE_COUNT = 48;\n+ const COLS = 21;\n+ const ROWS = 15;\n+ const CELL = 28;\n  class Particle {\n- constructor(index) {\n- this.index = index;\n- this.size = Math.random() * 1.4 + 1.8;\n- this.angle = Math.random() * Math.PI * 1;",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -14818,5 +14831,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T13:07:35.263231+00:00"
+  "updated": "2026-07-28T13:08:17.021713+00:00"
 }
