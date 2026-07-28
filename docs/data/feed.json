@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "page_content_changed",
+      "timestamp": "2026-07-28T13:49:36.788302+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "- [7104C055E2BC]\n+ I SEE YOU\n- var canvas = document.getElementById('meshCanvas');\n- var ctx = canvas.getContext('2d', {\n+ const canvas = document.getElementById('meshCanvas');\n+ const ctx = canvas.getContext('2d', {\n  alpha: true\n- var width, height, particles = [];\n- var COLS = 17;\n- var ROWS = 13;\n- var CELL = 18;\n- function Particle(x, y) {\n- this.baseX = x;\n- this.baseY = y;\n- this.x = x;\n- this.y = y;\n- this.size = Math.random() * 1.4 + 1.8;\n- }\n- Particle.prototype.update = function() {\n- this.x = this.x * 0.88 + this.baseX * 0.12;",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
       "timestamp": "2026-07-28T13:38:46.917592+00:00",
       "title": "neural-network-status",
       "link": "https://project-skyscraper.com/neural-network-status/",
@@ -14909,5 +14922,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T13:49:05.600052+00:00"
+  "updated": "2026-07-28T13:49:36.794632+00:00"
 }
