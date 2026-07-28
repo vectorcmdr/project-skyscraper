@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-28T17:25:05.143373+00:00",
+      "title": "Terminal command updated: Lofblad",
+      "link": "",
+      "endpoint": "",
+      "diff": "Lofblad, right? Nice to meet you! If you look out your window, you will see Kuwajim XII [212942ABB5C9]",
+      "detail": "Terminal command modified: Lofblad on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-28T17:12:05.412024+00:00",
       "title": "project-skyscraper.com",
@@ -15182,19 +15195,6 @@
       "game_date": ""
     },
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -15247,5 +15247,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T17:24:55.959552+00:00"
+  "updated": "2026-07-28T17:25:05.149083+00:00"
 }
