@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T09:37:45.998833+00:00",
+  "updated": "2026-07-28T09:42:58.317293+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -352,6 +352,14 @@
       "url": "https://project-skyscraper.com/sec-log-101616-full/",
       "author": "System",
       "date": "2026-07-08T09:16:00"
+    },
+    {
+      "id": "/tag/selfowned",
+      "type": "page",
+      "label": "Selfowned",
+      "url": "https://project-skyscraper.com/tag/selfowned/",
+      "author": "",
+      "date": ""
     },
     {
       "id": "/sleep-mode",
@@ -14178,6 +14186,10 @@
     {
       "source": "/2026/06/29/event-29062026",
       "target": "https://youtu.be/s2TyVQGoCYo"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
+      "target": "/tag/selfowned"
     },
     {
       "source": "/2026/06/29/event-29062026",
