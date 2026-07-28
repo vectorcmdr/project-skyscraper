@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "page_content_changed",
+      "timestamp": "2026-07-28T13:33:50.702664+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "- LOCATING PRIMES\n+ I SEE YOU\n  let width, height, particles = [];\n- const COLS = 21;\n- const ROWS = 15;\n- const CELL = 28;\n+ const COLS = 17;\n+ const ROWS = 13;\n+ const CELL = 18;\n  class Particle {\n  constructor(x, y) {\n  this.baseY = y;\n  this.x = x;\n  this.y = y;\n- this.size = 2.4;\n+ this.size = Math.random() * 1.4 + 1.8;\n  }",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
       "timestamp": "2026-07-28T13:25:28.271880+00:00",
       "title": "neural-network-status",
       "link": "https://project-skyscraper.com/neural-network-status/",
@@ -14883,5 +14896,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-28T13:31:15.679822+00:00"
+  "updated": "2026-07-28T13:33:50.709800+00:00"
 }
