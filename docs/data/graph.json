@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T09:09:33.241991+00:00",
+  "updated": "2026-07-28T09:27:40.750983+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -3402,6 +3402,14 @@
       "date": "2026-06-15T16:00:00"
     },
     {
+      "id": "/2026/06/29/event-29062026",
+      "type": "post",
+      "label": "2026_dataset",
+      "url": "https://project-skyscraper.com/2026/06/29/event-29062026/",
+      "author": "System",
+      "date": "2026-06-29T00:00:00"
+    },
+    {
       "id": "/2026/07/11/2026_dataset_11072026",
       "type": "post",
       "label": "2026_dataset_11072026",
@@ -5078,6 +5086,14 @@
       "type": "external",
       "label": "youtu.be",
       "url": "https://youtu.be/5328iuzHw-w",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://youtu.be/s2TyVQGoCYo",
+      "type": "external",
+      "label": "youtu.be",
+      "url": "https://youtu.be/s2TyVQGoCYo",
       "author": "",
       "date": ""
     },
@@ -14140,6 +14156,22 @@
       "target": "/2018/05/24/event-24052018"
     },
     {
+      "source": "/2026/06/29/event-29062026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
+      "target": "https://youtu.be/s2TyVQGoCYo"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
+      "target": "/2026/06/27/diagnostic-155811"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
+      "target": "/2026/06/29/structural-analysis-204201"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -18033,6 +18065,14 @@
     },
     {
       "source": "/2018/04/29/event-29042018",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/29/event-29062026",
       "target": "/category/non-classe"
     },
     {
