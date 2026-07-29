@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-29T00:43:50.316011+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/types?per_page=100",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/types?per_page=100",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/types?per_page=100\n# File: api/wp-json/wp/v2/types_per_page_100/.json\n# Timestamp: 2026-07-29 00:43:03 UTC\n# Lines: 15761 old -> 15759 new\n# Beautified: yes\n\n@@ -171,16 +171,16 @@\n     \"rest_namespace\": \"wp/v2\",\n\n     \"template_lock\": false\n\n   },\n\n-  \"wp_guideline\": {\n\n+  \"wp_knowledge\": {\n\n     \"description\": \"\",\n\n     \"hierarchical\": false,\n\n     \"has_archive\": false,\n\n     \"name\": \"Guidelines\",\n\n     \"icon\": null,\n\n     \"taxonomies\": [\n\n-      \"wp_guideline_type\"\n\n-    ],\n\n-    \"rest_base\": \"guidelines\",\n\n+      \"wp_knowledge_type\"\n\n+    ],\n\n+    \"rest_base\": \"knowledge\",\n\n     \"rest_namespace\": \"wp/v2\",\n\n     \"template_lock\": false\n\n   },\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/types?per_page=100",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-07-29T00:43:50.315946+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-07-29 00:43:00 UTC\n# Lines: 603820 old -> 596265 new\n# Beautified: yes\n\n@@ -984,6 +984,73 @@\n         }\n\n       ]\n\n     },\n\n+    \"/wp/v2/icon-collections\": {\n\n+      \"namespace\": \"wp/v2\",\n\n+      \"methods\": [\n\n+        \"GET\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"GET\"\n\n+          ],\n\n+          \"args\": {\n\n+            \"context\": {\n\n+              \"description\": \"Scope under which the request is made; determines fields present in response.\",\n\n+              \"enum\": [\n\n+                \"view\",\n\n+                \"embed\",\n\n+                \"edit\"\n\n+              ],\n\n+              \"default\": \"view\",\n\n+              \"required\": false\n\n+            },\n\n+            \"page\": {\n\n+              \"description\": \"Current page of the collection.\",\n\n+              \"default\": 1,\n\n+              \"minimum\": 1,\n\n+              \"required\": false\n\n... (917 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "database_entry_changed",
       "timestamp": "2026-07-28T22:19:36.646318+00:00",
       "title": "Terminal command updated: AshkerNMS",
@@ -15377,19 +15403,6 @@
       "game_date": ""
     },
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-05-01T08:18:28+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "api_items_added",
       "timestamp": "2026-04-29T09:12:08+00:00",
       "title": "SLEEP MODE",
@@ -15442,5 +15455,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-29T00:41:43.930226+00:00"
+  "updated": "2026-07-29T00:43:50.323631+00:00"
 }
