@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-29T08:01:59.435066+00:00",
+      "title": "Terminal command updated: Spock",
+      "link": "",
+      "endpoint": "",
+      "diff": "Spock, right? Questioning everything is the foundation of science. If you look out your window, you will see Jenness there: Todaito-Dima III [20173FC42202]",
+      "detail": "Terminal command modified: Spock on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-29T08:01:59.434973+00:00",
+      "title": "Terminal command updated: Jenness",
+      "link": "",
+      "endpoint": "",
+      "diff": "Jenness, right? If you look out your window, you will see Spock there: Lespate [211382356108]",
+      "detail": "Terminal command modified: Jenness on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-29T00:43:50.316011+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/types?per_page=100",
@@ -15455,5 +15481,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-29T07:56:36.027001+00:00"
+  "updated": "2026-07-29T08:01:59.441085+00:00"
 }
