@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-30T22:12:49.757132+00:00",
+      "title": "Terminal command updated: John D.",
+      "link": "",
+      "endpoint": "",
+      "diff": "John, right? Nice to meet you! If you look out your window, you will see Tamalog-Urnle [31C80A52B768]",
+      "detail": "Terminal command modified: John D. on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "unpublished_detected",
       "timestamp": "2026-07-30T21:51:40.155941+00:00",
       "title": "#6223 (pages)",
@@ -46,19 +59,6 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-07-30T18:41:46+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -16742,5 +16742,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-30T22:12:37.805315+00:00"
+  "updated": "2026-07-30T22:12:49.765741+00:00"
 }
