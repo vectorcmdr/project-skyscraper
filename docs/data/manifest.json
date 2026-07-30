@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "/",
+      "title": "",
+      "type": "page",
+      "modified": "2026-07-30T19:51:14.170124+00:00",
+      "date_gmt": "",
+      "author": 0
+    },
+    {
       "path": "/neural-network-status/",
       "title": "Neural network status",
       "type": "page",
@@ -15,14 +23,6 @@
       "modified": "2026-07-30T18:04:21.463186+00:00",
       "date_gmt": "2026-07-30T18:03:00+00:00",
       "author": "System"
-    },
-    {
-      "path": "/",
-      "title": "",
-      "type": "page",
-      "modified": "2026-07-28T17:12:05.413215+00:00",
-      "date_gmt": "",
-      "author": 0
     },
     {
       "path": "/2024/04/29/event-29042024-2/",
@@ -4890,5 +4890,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-07-30T19:49:39.322985+00:00"
+  "updated": "2026-07-30T19:51:14.179290+00:00"
 }
