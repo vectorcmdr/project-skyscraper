@@ -2,6 +2,45 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-30T22:28:33.404697+00:00",
+      "title": "Terminal command: BugabooCreek",
+      "link": "",
+      "endpoint": "",
+      "diff": "BugabooCreek, right? Nice to meet you! If you look out your window, you will see Unitsy VII [21FA87A70595]",
+      "detail": "Terminal command added: BugabooCreek on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-30T22:28:33.404671+00:00",
+      "title": "Terminal command: Chrashy",
+      "link": "",
+      "endpoint": "",
+      "diff": "Chrashy, right? Nice to meet you! If you look out your window, you will see Muraza X [0042A5D564E5]",
+      "detail": "Terminal command added: Chrashy on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-30T22:28:33.404580+00:00",
+      "title": "Terminal command: Scott H.",
+      "link": "",
+      "endpoint": "",
+      "diff": "Scott, right? Nice to meet you! If you look out your window, you will see Muxinhe-Bag [2173095E4A17]",
+      "detail": "Terminal command added: Scott H. on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-30T22:23:26.882524+00:00",
       "title": "Terminal command: Kevin P.",
       "link": "",
@@ -111,19 +150,6 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-07-30T18:41:46+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -16807,5 +16833,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-30T22:28:20.484138+00:00"
+  "updated": "2026-07-30T22:28:33.421263+00:00"
 }
