@@ -14,6 +14,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-30T18:04:21.463289+00:00",
       "title": "Memory bloc restoration: 321/365 [35 Pages]",
@@ -16690,5 +16703,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-30T18:41:57.543512+00:00"
+  "updated": "2026-07-30T18:42:34.201386+00:00"
 }
