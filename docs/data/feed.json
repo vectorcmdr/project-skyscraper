@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-07-30T21:51:40.155941+00:00",
+      "title": "#6223 (pages)",
+      "link": "https:///",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #6223 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 6223,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-30T19:51:14.168678+00:00",
       "title": "project-skyscraper.com",
@@ -16716,5 +16729,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-30T21:49:34.653851+00:00"
+  "updated": "2026-07-30T21:51:40.162555+00:00"
 }
