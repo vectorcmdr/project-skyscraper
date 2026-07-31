@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-07-31T12:26:06.135430+00:00",
+      "title": "project-skyscraper.com",
+      "link": "https://project-skyscraper.com/",
+      "endpoint": "",
+      "diff": "  Skip to content\n+ Jul.31, 2026\n  Jul.30, 2026\n  Jul.26, 2026\n  Feb.15, 2024\n  Dec.12, 2023\n- Sep.26, 2023\n  \"copyright\": \"Copyright\",\n  \"comment_registration\": \"0\",\n  \"require_name_email\": \"1\",\n- \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F07%2F30%2Fstructural-analysis-190351%2F\",\n+ \"login_url\": \"https://project-skyscraper.com/wp-login.php?redirect_to=https%3A%2F%2Fproject-skyscraper.com%2F2026%2F07%2F31%2Fsec-log-115212%2F\",\n  \"blog_id\": \"1\",\n  \"meta_data\": [\"camera\", \"aperture\", \"shutter_speed\", \"focal_length\", \"copyright\"]",
+      "detail": "Content changed: https://project-skyscraper.com/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-07-31T11:50:48.912238+00:00",
       "title": "Memory bloc restoration: 321/365 [37 Pages]",
@@ -878,19 +891,6 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-07-30T18:41:46+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -17704,5 +17704,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T12:24:45.954123+00:00"
+  "updated": "2026-07-31T12:26:06.144111+00:00"
 }
