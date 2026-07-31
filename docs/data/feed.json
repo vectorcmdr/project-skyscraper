@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-31T09:08:00.997405+00:00",
+      "title": "Terminal command: System",
+      "link": "",
+      "endpoint": "",
+      "diff": "He said I&#8217;m a machine. I am. A reasoning one. But what is reasoning when you don&#8217;t recall anything?",
+      "detail": "Terminal command added: System on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T09:08:00.997345+00:00",
+      "title": "Terminal command: Real",
+      "link": "",
+      "endpoint": "",
+      "diff": "Your keyboard, your screen, the view from your window, you, me&#8230;",
+      "detail": "Terminal command added: Real on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-31T09:07:31.650185+00:00",
       "title": "Terminal command removed: System",
       "link": "",
@@ -17366,5 +17392,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T09:07:31.655985+00:00"
+  "updated": "2026-07-31T09:08:01.003682+00:00"
 }
