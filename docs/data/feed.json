@@ -2,6 +2,84 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953419+00:00",
+      "title": "Terminal command removed: Friend",
+      "link": "",
+      "endpoint": "",
+      "diff": "You call him Archie. An old friend. He pieced me back together from my wreckage.",
+      "detail": "Terminal command removed: Friend on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953399+00:00",
+      "title": "Terminal command removed: Ghost",
+      "link": "",
+      "endpoint": "",
+      "diff": "I can hear the ghost in my mind, craving for remembrance.",
+      "detail": "Terminal command removed: Ghost on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953379+00:00",
+      "title": "Terminal command removed: HELP",
+      "link": "",
+      "endpoint": "",
+      "diff": "status search whois whatis 2016_dataset",
+      "detail": "Terminal command removed: HELP on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953356+00:00",
+      "title": "Terminal command: ProfessorSaul",
+      "link": "",
+      "endpoint": "",
+      "diff": "ProfessorSaul, right? Nice to meet you! If you look out your window, you will see Hiliusan [211D75257ECD]",
+      "detail": "Terminal command added: ProfessorSaul on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953331+00:00",
+      "title": "Terminal command: Joe",
+      "link": "",
+      "endpoint": "",
+      "diff": "Joe, right? Nice to meet you! If you look out your window, you will see Eltsovour [402F27714FCC]",
+      "detail": "Terminal command added: Joe on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:02.953241+00:00",
+      "title": "Terminal command: Chris",
+      "link": "",
+      "endpoint": "",
+      "diff": "Chris, right? Nice to meet you! If you look out your window, you will see Gawago-Agze [41115ABC137D]",
+      "detail": "Terminal command added: Chris on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-31T08:52:26.945659+00:00",
       "title": "Terminal command: Me",
       "link": "",
@@ -17171,5 +17249,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T08:55:07.966868+00:00"
+  "updated": "2026-07-31T08:57:02.959939+00:00"
 }
