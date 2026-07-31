@@ -2,6 +2,45 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:31.807794+00:00",
+      "title": "Terminal command: Friend",
+      "link": "",
+      "endpoint": "",
+      "diff": "You call him Archie. An old friend. He pieced me back together from my wreckage.",
+      "detail": "Terminal command added: Friend on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:31.807772+00:00",
+      "title": "Terminal command: Ghost",
+      "link": "",
+      "endpoint": "",
+      "diff": "I can hear the ghost in my mind, craving for remembrance.",
+      "detail": "Terminal command added: Ghost on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T08:57:31.807702+00:00",
+      "title": "Terminal command: HELP",
+      "link": "",
+      "endpoint": "",
+      "diff": "status search whois whatis 2016_dataset",
+      "detail": "Terminal command added: HELP on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-31T08:57:02.953419+00:00",
       "title": "Terminal command removed: Friend",
       "link": "",
@@ -17249,5 +17288,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T08:57:02.959939+00:00"
+  "updated": "2026-07-31T08:57:31.815847+00:00"
 }
