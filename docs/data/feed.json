@@ -2,7 +2,7 @@
   "entries": [
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-31T13:42:32.853357+00:00",
+      "timestamp": "2026-07-31T15:00:24.192093+00:00",
       "title": "Memory bloc restoration: 321/365 [37 Pages]",
       "link": "https://project-skyscraper.com/",
       "diff": "329/365 → 321/365",
@@ -11,7 +11,33 @@
       "site": "",
       "restoration_value": "321/365",
       "page_count": 37,
-      "last_timestamp": "2026-07-31T13:42:32.853357+00:00"
+      "last_timestamp": "2026-07-31T15:00:24.192093+00:00"
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-31T15:00:24.192093+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/02/event-02062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc : no/value\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-c2\",\n  \"jetpack-related-posts\": [\n  {\n+ \"url\": \"https://project-skyscraper.com/2016/06/18/2016_dataset/\",\n+ \"url_meta\": {\n+ \"origin\": 746,\n+ \"position\": 0\n+ },\n+ \"title\": \"2016_dataset\",\n+ \"date\": \"18 June 2016\",\n+ \"excerpt\": \"memory bloc : no/value\",\n+ \"rel\": \"\",\n+ \"context\": \"In &quot;Non classé&quot;\",\n+ \"block_context\": {\n+ \"text\": \"Non classé\"\n+ },\n+ \"img\": {\n+ \"alt_text\": \"\",\n+ \"src\": \"\",\n+ \"width\": 0,\n+ \"height\": 0\n+ },\n+ \"classes\": []\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc System: COREProtocol: CONNECTION_BYPASS Status: AVAILABLE Details: Bypass tunnel established. Encrypted socket stable on port 0x17. Routing table updated. Action required: Initialise tower_reconnection sequence Execute full handshake + anchor synchronisation Use IWTS_operator ID to accessSend confirmation code when reconnection sequence is complete\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n  \"jetpack_likes_enabled\": false,\n  \"jetpack_sharing_enabled\": false,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-11p\",\n  \"height\": 0\n  },\n  \"classes\": []\n+ },\n+ {\n+ \"url\": \"https://project-skyscraper.com/2018/03/28/event-28032018/\",\n+ \"url_meta\": {\n+ \"origin\": 3931,\n+ \"position\": 2\n+ },\n+ \"title\": \"2018_dataset\",\n+ \"date\": \"28 March 2018\",\n+ \"excerpt\": \"memory bloc : OrganisationValue: Code -3, Operators Should Regroup and Organize A terminal whirred to life and a hive of wasps descended upon it. A request for organization, how familiar. The terminal read: BOOT SEQUENCE COMPLETED WELCOME CITIZEN SCIENTIST > STATUS CODE -3 UNABLE TO RESTART --- ERROR LOG SUMMARY…\",\n... (truncated)",
+      "detail": "362 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-31T15:00:01.668692+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "sitemap_added",
@@ -17821,5 +17847,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T14:59:27.373725+00:00"
+  "updated": "2026-07-31T15:09:23.235600+00:00"
 }
