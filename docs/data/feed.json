@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-07-31T10:53:03.425238+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 6235,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-31T10:52:29+00:00",
+      "title": "Security Log",
+      "link": "https://project-skyscraper.com/sec-log-115212-full/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": 6235,
+      "game_date": "2026-07-31T10:52:00+00:00"
+    },
+    {
       "type": "database_entry_changed",
       "timestamp": "2026-07-31T10:02:05.436791+00:00",
       "title": "Terminal command: RedHotTrouble",
@@ -17520,7 +17546,20 @@
       "site": "",
       "id": 19,
       "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-04-24T08:36:55+00:00",
+      "title": "Navigation",
+      "link": "https://project-skyscraper.com/2026/04/24/navigation/",
+      "endpoint": "/wp-json/wp/v2/navigation",
+      "diff": "~ 2 item(s): content changed (modified timestamp unchanged)",
+      "detail": "2 item(s) modified in /wp-json/wp/v2/navigation",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
     }
   ],
-  "updated": "2026-07-31T10:38:53.671165+00:00"
+  "updated": "2026-07-31T10:53:03.431278+00:00"
 }
