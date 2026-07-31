@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-31T09:13:14.758687+00:00",
+      "title": "Terminal command: Amnesia",
+      "link": "",
+      "endpoint": "",
+      "diff": "I am here, staring at the empty walls of myself. I woke up there. Where am I?",
+      "detail": "Terminal command added: Amnesia on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-31T09:12:45.782786+00:00",
       "title": "Terminal command removed: Amnesia",
       "link": "",
@@ -17418,5 +17431,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T09:12:45.788190+00:00"
+  "updated": "2026-07-31T09:13:14.765534+00:00"
 }
