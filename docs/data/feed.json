@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "database_entry_changed",
+      "timestamp": "2026-07-31T09:12:45.782786+00:00",
+      "title": "Terminal command removed: Amnesia",
+      "link": "",
+      "endpoint": "",
+      "diff": "I am here, staring at the empty walls of myself. I woke up there. Where am I?",
+      "detail": "Terminal command removed: Amnesia on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-07-31T09:12:45.782737+00:00",
+      "title": "Terminal command: tauspin",
+      "link": "",
+      "endpoint": "",
+      "diff": "tauspin, right? Nice to meet you! If you look out your window, you will see Shiwata XVII [11BF44D50403]",
+      "detail": "Terminal command added: tauspin on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
       "timestamp": "2026-07-31T09:08:00.997405+00:00",
       "title": "Terminal command: System",
       "link": "",
@@ -17392,5 +17418,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T09:10:41.914608+00:00"
+  "updated": "2026-07-31T09:12:45.788190+00:00"
 }
