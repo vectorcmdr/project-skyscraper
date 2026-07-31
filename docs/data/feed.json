@@ -794,6 +794,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-30T18:04:21.463068+00:00",
       "title": "",
@@ -3340,6 +3353,19 @@
       "site": "",
       "id": 6072,
       "game_date": "2014-06-10T00:00:00+00:00"
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-25T16:05:20+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/09/event-09012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n- memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1457909729: no/value\n+ memory bloc 1455580800: no/value\n- memory bloc 1455580800: no/value\n+ memory bloc 1457909729: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1456698194: One of a listValue: A list becomes complete the moment it proves its own point.\n+ memory bloc 1454371200: One of a listValue: A list becomes complete the moment it proves its own point.\n- memory bloc 1454371200: One of a listValue: A list becomes complete the moment it proves its own point.\n+ memory bloc 1456698194: One of a listValue: A list becomes complete the moment it proves its own point.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1453928970: no/value\n+ memory bloc 1451606400: no/value\n- memory bloc 1451606400: no/value\n+ memory bloc 1453928970: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 321449898: Event Horizon\n+ memory bloc 320936400: Event Horizon\n- memory bloc 320936400: Event Horizon\n+ memory bloc 321449898: Event Horizon\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1022834281: When we were 17\n+ memory bloc 1021200360: When we were 17\n- memory bloc 1021200360: When we were 17\n+ memory bloc 1022834281: When we were 17\n- memory bloc 1456352041: no/value\n+ memory bloc 1454025600: no/value\n- memory bloc 1454025600: no/value\n+ memory bloc 1456352041: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc : no/value\\n\",\n  \"protected\": false\n  },\n... (truncated)",
+      "detail": "65 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "api_items_added",
@@ -17470,5 +17496,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T09:58:27.397900+00:00"
+  "updated": "2026-07-31T10:00:23.897998+00:00"
 }
