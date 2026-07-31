@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-07-31T10:55:39.977905+00:00",
+      "title": "Memory bloc restoration: 321/365 [37 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 37 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 37,
+      "last_timestamp": "2026-07-31T10:55:39.977905+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-31T10:55:39.977751+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 6236,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-31T10:53:03.425238+00:00",
       "title": "",
@@ -24,6 +50,19 @@
       "author": "System",
       "site": "",
       "id": 6235,
+      "game_date": "2026-07-31T10:52:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-07-31T10:50:10+00:00",
+      "title": "SECURITY LOG",
+      "link": "https://project-skyscraper.com/2026/07/31/sec-log-115212/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 6236,
       "game_date": "2026-07-31T10:52:00+00:00"
     },
     {
@@ -51,19 +90,6 @@
       "site": "recalldreams",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-31T09:23:00.714171+00:00",
-      "title": "Memory bloc restoration: 321/365 [36 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 36 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "321/365",
-      "page_count": 36,
-      "last_timestamp": "2026-07-31T09:23:00.714171+00:00"
     },
     {
       "type": "api_items_added",
@@ -839,6 +865,19 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -17546,20 +17585,7 @@
       "site": "",
       "id": 19,
       "game_date": ""
-    },
-    {
-      "type": "api_items_modified",
-      "timestamp": "2026-04-24T08:36:55+00:00",
-      "title": "Navigation",
-      "link": "https://project-skyscraper.com/2026/04/24/navigation/",
-      "endpoint": "/wp-json/wp/v2/navigation",
-      "diff": "~ 2 item(s): content changed (modified timestamp unchanged)",
-      "detail": "2 item(s) modified in /wp-json/wp/v2/navigation",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
     }
   ],
-  "updated": "2026-07-31T10:53:03.431278+00:00"
+  "updated": "2026-07-31T10:55:39.985261+00:00"
 }
