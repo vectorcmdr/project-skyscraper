@@ -2,7 +2,7 @@
   "entries": [
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-31T10:55:39.977905+00:00",
+      "timestamp": "2026-07-31T11:50:48.912238+00:00",
       "title": "Memory bloc restoration: 321/365 [37 Pages]",
       "link": "https://project-skyscraper.com/",
       "diff": "329/365 → 321/365",
@@ -11,7 +11,7 @@
       "site": "",
       "restoration_value": "321/365",
       "page_count": 37,
-      "last_timestamp": "2026-07-31T10:55:39.977905+00:00"
+      "last_timestamp": "2026-07-31T11:50:48.912238+00:00"
     },
     {
       "type": "api_items_added",
@@ -64,6 +64,19 @@
       "site": "",
       "id": 6236,
       "game_date": "2026-07-31T10:52:00+00:00"
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-31T10:50:10+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/11/16/event-16112016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  Previous\n+ Next\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1504168024: Moral support\n+ memory bloc 1501765200: Moral support\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365",
+      "detail": "179 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
     },
     {
       "type": "database_entry_changed",
@@ -865,6 +878,19 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -17626,5 +17652,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T11:47:49.939949+00:00"
+  "updated": "2026-07-31T11:50:48.918319+00:00"
 }
