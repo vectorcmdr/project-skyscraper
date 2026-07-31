@@ -3849,6 +3849,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-23T17:25:09+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/09/17/event-17092016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1474070400: no/value\n+ memory bloc 1476428913: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1464739200: no/value\n+ memory bloc 1467082783: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1458432000: no/value\n+ memory bloc 1460765491: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1466726400: no/value\n+ memory bloc 1469073162: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1468108800: no/value\n+ memory bloc 1470457774: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n... (truncated)",
+      "detail": "266 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-07-23T17:10:53.345575+00:00",
       "title": "freeimage.host image count: 16 → 17",
@@ -17600,5 +17613,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T11:15:13.690182+00:00"
+  "updated": "2026-07-31T11:16:49.773517+00:00"
 }
