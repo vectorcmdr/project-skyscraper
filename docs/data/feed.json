@@ -2,7 +2,7 @@
   "entries": [
     {
       "type": "memory_bloc_restoration",
-      "timestamp": "2026-07-31T13:26:15.716240+00:00",
+      "timestamp": "2026-07-31T13:41:16.559976+00:00",
       "title": "Memory bloc restoration: 321/365 [37 Pages]",
       "link": "https://project-skyscraper.com/",
       "diff": "329/365 → 321/365",
@@ -11,7 +11,7 @@
       "site": "",
       "restoration_value": "321/365",
       "page_count": 37,
-      "last_timestamp": "2026-07-31T13:26:15.716240+00:00"
+      "last_timestamp": "2026-07-31T13:41:16.559976+00:00"
     },
     {
       "type": "sitemap_added",
@@ -126,6 +126,19 @@
       "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1467082783: no/value\n+ memory bloc 1464739200: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1460765491: no/value\n+ memory bloc 1458432000: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1469073162: no/value\n+ memory bloc 1466726400: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1470457774: no/value\n+ memory bloc 1468108800: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1463448177: Welcome to No Man&#8217;s SkyValue: 5 planets\n+ memory bloc 1461110400: Welcome to No Man&#8217;s SkyValue: 5 planets\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1465525094: no/value\n+ memory bloc 1463184000: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n... (truncated)",
       "detail": "400 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-31T10:50:10+00:00",
+      "title": "SLEEP MODE",
+      "link": "https://project-skyscraper.com/2026/04/25/sleep-mode-46137/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1785088156: Temporal instabilitySystem: CoreModule: Temporal_AnchoringStatus: ORIGIN_OFFSET_DETECTEDAlert: Origin shift detected: +16 secondsDetails: Temporal origin has been displaced by exactly 16 seconds forward.Warning: All memory blocs are affected. Risk of progressive chronological drift.\n+ memory bloc 1785088140: Temporal instabilitySystem: CoreModule: Temporal_AnchoringStatus: ORIGIN_OFFSET_DETECTEDAlert: Origin shift detected: +16 secondsDetails: Temporal origin has been displaced by exactly 16 seconds forward.Warning: All memory blocs are affected. Risk of progressive chronological drift.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc : Memory_reconstruction_engine activated Full log\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n  \"jetpack_likes_enabled\": false,\n  \"jetpack_sharing_enabled\": false,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-4H\",\n  },\n  \"classes\": []\n  }\n- ]\n+ ],\n+ \"jetpack_featured_media_url\": \"\"\n  }\n... (truncated)",
+      "detail": "100 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "The Architect",
       "site": "",
       "id": null,
       "game_date": ""
@@ -930,6 +943,19 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -17769,5 +17795,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T13:36:34.737831+00:00"
+  "updated": "2026-07-31T13:41:16.566437+00:00"
 }
