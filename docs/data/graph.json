@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T12:27:29.722236+00:00",
+  "updated": "2026-07-31T12:29:06.069787+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -7197,6 +7197,18 @@
     },
     {
       "source": "sitemap",
+      "target": "/2018/03/28/event-28032018"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sec-log-115212-full"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/07/31/sec-log-115212"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -14176,6 +14188,42 @@
       "target": "/2026/07/31/sec-log-115212"
     },
     {
+      "source": "/2018/03/28/event-28032018",
+      "target": "/"
+    },
+    {
+      "source": "/2018/03/28/event-28032018",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2018/03/28/event-28032018",
+      "target": "https://ibb.co/b5Wq8H1S"
+    },
+    {
+      "source": "/2018/03/28/event-28032018",
+      "target": "/2018/01/17/event-17012018"
+    },
+    {
+      "source": "/2018/03/28/event-28032018",
+      "target": "/2018/04/29/event-29042018"
+    },
+    {
+      "source": "/sec-log-115212-full",
+      "target": "/"
+    },
+    {
+      "source": "/sec-log-115212-full",
+      "target": "/error"
+    },
+    {
+      "source": "/2026/07/31/sec-log-115212",
+      "target": "/"
+    },
+    {
+      "source": "/2026/07/31/sec-log-115212",
+      "target": "/2026/07/30/structural-analysis-190351"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -14338,42 +14386,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/sec-log-115212-full",
-      "target": "/"
-    },
-    {
-      "source": "/sec-log-115212-full",
-      "target": "/error"
-    },
-    {
-      "source": "/2018/03/28/event-28032018",
-      "target": "/"
-    },
-    {
-      "source": "/2018/03/28/event-28032018",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2018/03/28/event-28032018",
-      "target": "https://ibb.co/b5Wq8H1S"
-    },
-    {
-      "source": "/2018/03/28/event-28032018",
-      "target": "/2018/01/17/event-17012018"
-    },
-    {
-      "source": "/2018/03/28/event-28032018",
-      "target": "/2018/04/29/event-29042018"
-    },
-    {
-      "source": "/2026/07/31/sec-log-115212",
-      "target": "/"
-    },
-    {
-      "source": "/2026/07/31/sec-log-115212",
-      "target": "/2026/07/30/structural-analysis-190351"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",

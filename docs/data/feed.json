@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "sitemap_added",
+      "timestamp": "2026-07-31T12:29:03.545233+00:00",
+      "title": "https://project-skyscraper.com/2018/03/28/event-28032018/",
+      "link": "https://project-skyscraper.com/2018/03/28/event-28032018/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2018/03/28/event-28032018/\n+ https://project-skyscraper.com/2026/07/31/sec-log-115212/\n+ https://project-skyscraper.com/sec-log-115212-full/",
+      "detail": "Added 3 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-07-31T12:26:06.135430+00:00",
       "title": "project-skyscraper.com",
@@ -891,6 +904,19 @@
       "link": "https://project-skyscraper.com/neural-network-status/",
       "endpoint": "/wp-json/wp/v2/pages",
       "diff": "- modified: 2026-05-01T09:18:28\n+ modified: 2026-07-30T19:41:46",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
       "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
       "author": "The Architect",
       "site": "",
@@ -17704,5 +17730,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T12:28:11.078241+00:00"
+  "updated": "2026-07-31T12:29:03.551934+00:00"
 }
