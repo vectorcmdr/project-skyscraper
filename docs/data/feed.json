@@ -963,6 +963,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-30T18:04:21.463068+00:00",
       "title": "",
@@ -3557,6 +3570,19 @@
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "- memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n- memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1457909729: no/value\n+ memory bloc 1455580800: no/value\n- memory bloc 1455580800: no/value\n+ memory bloc 1457909729: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1456698194: One of a listValue: A list becomes complete the moment it proves its own point.\n+ memory bloc 1454371200: One of a listValue: A list becomes complete the moment it proves its own point.\n- memory bloc 1454371200: One of a listValue: A list becomes complete the moment it proves its own point.\n+ memory bloc 1456698194: One of a listValue: A list becomes complete the moment it proves its own point.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1453928970: no/value\n+ memory bloc 1451606400: no/value\n- memory bloc 1451606400: no/value\n+ memory bloc 1453928970: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 321449898: Event Horizon\n+ memory bloc 320936400: Event Horizon\n- memory bloc 320936400: Event Horizon\n+ memory bloc 321449898: Event Horizon\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1022834281: When we were 17\n+ memory bloc 1021200360: When we were 17\n- memory bloc 1021200360: When we were 17\n+ memory bloc 1022834281: When we were 17\n- memory bloc 1456352041: no/value\n+ memory bloc 1454025600: no/value\n- memory bloc 1454025600: no/value\n+ memory bloc 1456352041: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc : no/value\\n\",\n  \"protected\": false\n  },\n... (truncated)",
       "detail": "65 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-25T16:05:20+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/01/09/event-09012016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1454624882: no/value\n+ memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n+ I grew tired of drawing buildings, floorplans and electronic schematics. I began to dream of fantastic lands littered with ancient ruins, trees in all colours of the rainbow, rocks made from crystal clear ice that shimmered in hues of blue and magenta – but in my mind they were reduced to their most basic silhouette – an expression of their truest shapes. Beginning to envision them built from large, expressive facets, I silently planned away. Sketching, carving out time from my work schedule and other projects, and as February drew closer and a week began its progress into another, the tenacity finally met me head on and I sat down with that plan – beginning the hard work of turning it into visual math on my screen – triangle by triangle until a true and broad collection of objects began to form, transporting myself and others to the fan...\n- memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1455580800: no/value\n+ memory bloc 1457909729: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1454371200: One of a listValue: A list becomes complete the moment it proves its own point.\n+ memory bloc 1456698194: One of a listValue: A list becomes complete the moment it proves its own point.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1451606400: no/value\n+ memory bloc 1453928970: no/value\n- memory bloc 1453928970: no/value\n+ memory bloc 1451606400: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 320936400: Event Horizon\n+ memory bloc 321449898: Event Horizon\n- memory bloc 321449898: Event Horizon\n... (truncated)",
+      "detail": "66 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
       "id": null,
@@ -17795,5 +17821,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T14:40:17.292292+00:00"
+  "updated": "2026-07-31T14:45:01.032624+00:00"
 }
