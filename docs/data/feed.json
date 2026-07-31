@@ -885,6 +885,19 @@
       "game_date": ""
     },
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-30T18:41:46+00:00",
+      "title": "Neural network status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-07-30T18:04:21.463068+00:00",
       "title": "",
@@ -3882,6 +3895,19 @@
       "endpoint": "/wp-json/wp/v2/posts",
       "diff": "- memory bloc 1476428913: no/value\n+ memory bloc 1474070400: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1467082783: no/value\n+ memory bloc 1464739200: no/value\n- memory bloc 1464739200: no/value\n+ memory bloc 1467082783: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1460765491: no/value\n+ memory bloc 1458432000: no/value\n- memory bloc 1458432000: no/value\n+ memory bloc 1460765491: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1469073162: no/value\n+ memory bloc 1466726400: no/value\n- memory bloc 1466726400: no/value\n+ memory bloc 1469073162: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1470457774: no/value\n+ memory bloc 1468108800: no/value\n- memory bloc 1468108800: no/value\n+ memory bloc 1470457774: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1456352041: no/value\n+ memory bloc 1454025600: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n... (truncated)",
       "detail": "266 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
+      "timestamp": "2026-07-23T17:25:09+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/06/01/event-01062016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1464739200: no/value\n+ memory bloc 1467082783: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1458432000: no/value\n+ memory bloc 1460765491: no/value\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1452301200: I dreamt of fantastic lands.Value: The real hard work begins.\n+ memory bloc 1454624882: I dreamt of fantastic lands.Value: The real hard work begins.\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- memory bloc 1461110400: Welcome to No Man’s SkyValue: 5 planets\n+ memory bloc 1463448177: Welcome to No Man’s SkyValue: 5 planets\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n- Memory_bloc_restoration: 0/365\n+ Memory_bloc_restoration: 321/365\n  \"rendered\": \"memory bloc : no/value\\n\",\n  \"protected\": false\n  },\n- \"jetpack_featured_media_url\": \"\",\n  \"jetpack_likes_enabled\": true,\n  \"jetpack_sharing_enabled\": true,\n  \"jetpack_shortlink\": \"https://wp.me/phdnFZ-cl\",\n  \"jetpack-related-posts\": [\n  {\n... (truncated)",
+      "detail": "166 item(s) modified in /wp-json/wp/v2/posts",
       "author": "System",
       "site": "",
       "id": null,
@@ -17639,5 +17665,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-07-31T12:03:10.281537+00:00"
+  "updated": "2026-07-31T12:04:53.367052+00:00"
 }
