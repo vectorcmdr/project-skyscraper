@@ -1,11 +1,19 @@
 {
   "pages": [
     {
+      "path": "/window-4049/comment-page-1/",
+      "title": "",
+      "type": "comment",
+      "modified": "2026-08-01T17:32:41.545133+00:00",
+      "date_gmt": "2026-08-01T17:32:04",
+      "author": 0
+    },
+    {
       "path": "/window-1213/comment-page-1/",
       "title": "",
       "type": "comment",
       "modified": "2026-08-01T17:31:46.301061+00:00",
-      "date_gmt": "2026-08-01T17:31:06",
+      "date_gmt": "2026-08-01T17:31:06+00:00",
       "author": 0
     },
     {
@@ -110,14 +118,6 @@
       "type": "comment",
       "modified": "2026-08-01T12:41:04.111534+00:00",
       "date_gmt": "2026-08-01T12:40:15+00:00",
-      "author": 0
-    },
-    {
-      "path": "/window-4049/comment-page-1/",
-      "title": "",
-      "type": "comment",
-      "modified": "2026-08-01T12:40:07.978452+00:00",
-      "date_gmt": "2026-08-01T12:39:35+00:00",
       "author": 0
     },
     {
@@ -812,8 +812,8 @@
       "path": "/neural-network-status/",
       "title": "Neural network status",
       "type": "page",
-      "modified": "2026-07-30T19:41:46+00:00",
-      "date_gmt": "2026-04-28T18:55:24+00:00",
+      "modified": "2026-07-30T19:41:46",
+      "date_gmt": "2026-04-28T18:55:24",
       "author": "The Architect"
     },
     {
@@ -5698,5 +5698,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-01T17:31:46.307374+00:00"
+  "updated": "2026-08-01T17:32:41.550878+00:00"
 }
