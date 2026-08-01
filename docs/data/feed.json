@@ -1,15 +1,54 @@
 {
   "entries": [
     {
-      "type": "api_items_modified",
-      "timestamp": "2026-08-01T22:07:49.800190+00:00",
-      "title": "Neural network status",
-      "link": "https://project-skyscraper.com/neural-network-status/",
-      "endpoint": "/wp-json/wp/v2/pages",
-      "diff": "~ 1 item(s): content changed (modified timestamp unchanged)",
-      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
-      "author": "The Architect",
-      "site": "",
+      "type": "database_entry_changed",
+      "timestamp": "2026-08-01T22:08:14.211575+00:00",
+      "title": "Terminal command removed: Jaina Siderea",
+      "link": "",
+      "endpoint": "",
+      "diff": "Jaina Siderea, right? Nice to meet you! If you look out your window, you will see Amelto-Omit [31F8F03CA975]",
+      "detail": "Terminal command removed: Jaina Siderea on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-08-01T22:08:14.211555+00:00",
+      "title": "Terminal command removed: Kanaju",
+      "link": "",
+      "endpoint": "",
+      "diff": "Kanaju, right? Nice to meet you! If you look out your window, you will see Oisaring [20E1110B34C4]",
+      "detail": "Terminal command removed: Kanaju on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-08-01T22:08:14.211531+00:00",
+      "title": "Terminal command: drstig",
+      "link": "",
+      "endpoint": "",
+      "diff": "drstig, right? Nice to meet you! If you look out your window, you will see Regonit [100CB34AE331]",
+      "detail": "Terminal command added: drstig on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "database_entry_changed",
+      "timestamp": "2026-08-01T22:08:14.211456+00:00",
+      "title": "Terminal command: Worm Lord Darth Smeagol",
+      "link": "",
+      "endpoint": "",
+      "diff": "Worm Lord Darth Smeagol, right? Nice to meet you! If you look out your window, you will see Inache [10ACA60195EA]",
+      "detail": "Terminal command added: Worm Lord Darth Smeagol on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
       "id": null,
       "game_date": ""
     },
@@ -20031,5 +20070,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-01T22:08:03.385109+00:00"
+  "updated": "2026-08-01T22:08:14.219275+00:00"
 }
