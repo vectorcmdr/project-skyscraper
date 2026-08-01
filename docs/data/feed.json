@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-08-01T08:37:12.336675+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/02/28/event-28022016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1458948188: no/value\n+ memory bloc 1456617600: no/value\n- memory bloc 1467169321: no/value\n+ memory bloc 1464825600: no/value\n- memory bloc 1459121265: no/value\n+ memory bloc 1456790400: no/value\n- memory bloc 1466390477: no/value\n+ memory bloc 1464048000: no/value\n- memory bloc 1470457774: no/value\n+ memory bloc 1468108800: no/value\n- memory bloc 1470717389: no/value\n+ memory bloc 1468368000: no/value\n- memory bloc 1471496233: The Vastness of Space.Value: Star Trek Beyond theatrical release.\n+ memory bloc 1469145600: The Vastness of Space.Value: Star Trek Beyond theatrical release.\n- memory bloc 1466996244: no/value\n+ memory bloc 1464652800: no/value\n- memory bloc 1461198182: no/value\n+ memory bloc 1458864000: no/value\n- memory bloc 1471842386: no/value\n+ memory bloc 1469491200: no/value\n- memory bloc 1454448200: Managing hypeValue: Dreamers speculate wildly ahead of simulation initialisation.\n+ memory bloc 1452124800: Managing hypeValue: Dreamers speculate wildly ahead of simulation initialisation.\n- memory bloc 1458169344: no/value\n+ memory bloc 1455840000: no/value\n- memory bloc 1475390454: no/value\n+ memory bloc 1473033600: no/value\n- memory bloc 1469852006: no/value\n+ memory bloc 1467504000: no/value\n- memory bloc 1475996221: no/value\n+ memory bloc 1473638400: no/value\n- memory bloc 1475563530: no/value\n+ memory bloc 1473206400: no/value\n- memory bloc 1471063542: no/value\n+ memory bloc 1468713600: no/value\n- memory bloc 1456871270: no/value\n+ memory bloc 1454544000: no/value\n- memory bloc 1473140460: no/value\n+ memory bloc 1470787200: no/value\n- memory bloc 1462236641: no/value\n+ memory bloc 1459900800: no/value\n- memory bloc 1471928924: no/value\n+ memory bloc 1469577600: no/value\n- memory bloc 1463534715: no/value\n+ memory bloc 1461196800: no/value\n- memory bloc 1470630851: no/value\n+ memory bloc 1468281600: no/value\n- memory bloc 1456784732: no/value\n+ memory bloc 1454457600: no/value\n- memory bloc 1461977027: no/value\n... (truncated)",
+      "detail": "266 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-08-01T08:36:11.662449+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/02/28/event-28022016/",
@@ -18627,5 +18640,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-01T08:36:14.230101+00:00"
+  "updated": "2026-08-01T08:37:15.000305+00:00"
 }
