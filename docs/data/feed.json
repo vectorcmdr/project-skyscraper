@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-08-01T19:33:01.438636+00:00",
+      "title": "1990_dataset",
+      "link": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 641985917: Draw the future\n+ memory bloc 640960380: Draw the future\n- memory bloc -370071949: Global gathering\n+ memory bloc -369480780: Global gathering\n- memory bloc 1022834281: When we were 17\n+ memory bloc 1021200360: When we were 17\n- memory bloc 322057168: Space Invaders\n+ memory bloc 321542700: Space Invaders\n- memory bloc 321449898: Event Horizon\n+ memory bloc 320936400: Event Horizon\n- memory bloc 935828133: Space, 1999Value: Dappled Twilight\n+ memory bloc 934333200: Space, 1999Value: Dappled Twilight",
+      "detail": "6 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-08-01T19:32:01.337676+00:00",
       "title": "1990_dataset",
       "link": "https://project-skyscraper.com/1990/04/24/1990_dataset/",
@@ -19875,5 +19888,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-01T19:32:14.965883+00:00"
+  "updated": "2026-08-01T19:33:02.588955+00:00"
 }
