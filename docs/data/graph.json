@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T12:34:00.476240+00:00",
+  "updated": "2026-08-01T12:35:07.444296+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -296,6 +296,22 @@
       "url": "https://project-skyscraper.com/window-911/comment-page-1/#comment-56",
       "author": "",
       "date": "2026-08-01T12:33:35"
+    },
+    {
+      "id": "/window-829/comment-page-1",
+      "type": "page",
+      "label": "Comment Page 1",
+      "url": "https://project-skyscraper.com/window-829/comment-page-1/#comment-57",
+      "author": "",
+      "date": "2026-08-01T12:33:58"
+    },
+    {
+      "id": "/window-607/comment-page-1",
+      "type": "page",
+      "label": "Comment Page 1",
+      "url": "https://project-skyscraper.com/window-607/comment-page-1/#comment-58",
+      "author": "",
+      "date": "2026-08-01T12:34:25"
     },
     {
       "id": "/request-memory-timestamp-094317/context.image.src",
@@ -20688,6 +20704,10 @@
       "target": "/window-911"
     },
     {
+      "source": "/window-607/comment-page-1",
+      "target": "/window-607"
+    },
+    {
       "source": "/window-439/comment-page-1",
       "target": "/window-439"
     },
@@ -20714,6 +20734,10 @@
     {
       "source": "/window-4013/comment-page-1",
       "target": "/window-4013"
+    },
+    {
+      "source": "/window-829/comment-page-1",
+      "target": "/window-829"
     },
     {
       "source": "/window-19/comment-page-1",
