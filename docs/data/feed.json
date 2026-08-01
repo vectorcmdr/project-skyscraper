@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-08-01T14:46:53.233083+00:00",
+      "title": "",
+      "link": "https://project-skyscraper.com/window-7129/comment-page-1/#comment-110",
+      "endpoint": "/wp-json/wp/v2/comments",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/comments",
+      "author": 0,
+      "site": "",
+      "id": 110,
+      "game_date": "2026-08-01T14:46:19+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-01T14:30:32.781808+00:00",
       "title": "2016_dataset",
@@ -19472,5 +19485,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-01T14:45:58.916126+00:00"
+  "updated": "2026-08-01T14:46:53.239003+00:00"
 }
