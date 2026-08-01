@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "/",
+      "title": "",
+      "type": "page",
+      "modified": "2026-08-01T23:34:12.927098+00:00",
+      "date_gmt": "",
+      "author": 0
+    },
+    {
       "path": "/the-shared-dream/",
       "title": "THE SHARED DREAM",
       "type": "page",
@@ -869,14 +877,6 @@
       "title": "Window 439",
       "type": "page",
       "modified": "2026-08-01T09:47:06Z",
-      "date_gmt": "",
-      "author": 0
-    },
-    {
-      "path": "/",
-      "title": "",
-      "type": "page",
-      "modified": "2026-07-31T12:26:06.136746+00:00",
       "date_gmt": "",
       "author": 0
     },
@@ -5794,5 +5794,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-01T23:32:40.472595+00:00"
+  "updated": "2026-08-01T23:34:12.933211+00:00"
 }
