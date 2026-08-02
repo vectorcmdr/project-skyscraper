@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T23:34:51.279279+00:00",
+  "updated": "2026-08-02T00:28:02.396608+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -722,6 +722,14 @@
       "date": ""
     },
     {
+      "id": "/window-10949",
+      "type": "page",
+      "label": "Window 10949",
+      "url": "https://project-skyscraper.com/window-10949/",
+      "author": "",
+      "date": "2026-08-01T22:15:11Z"
+    },
+    {
       "id": "/window-1213",
       "type": "page",
       "label": "Window 1213",
@@ -744,6 +752,22 @@
       "url": "https://project-skyscraper.com/window-131/",
       "author": "",
       "date": "2026-08-01T11:27:50Z"
+    },
+    {
+      "id": "/window-141319",
+      "type": "page",
+      "label": "Window 141319",
+      "url": "https://project-skyscraper.com/window-141319/",
+      "author": "",
+      "date": "2026-08-01T22:15:16Z"
+    },
+    {
+      "id": "/window-16001",
+      "type": "page",
+      "label": "Window 16001",
+      "url": "https://project-skyscraper.com/window-16001/",
+      "author": "",
+      "date": "2026-08-01T22:15:09Z"
     },
     {
       "id": "/window-19",
@@ -810,6 +834,14 @@
       "date": "2026-08-01T10:21:09Z"
     },
     {
+      "id": "/window-3",
+      "type": "page",
+      "label": "Window 3",
+      "url": "https://project-skyscraper.com/window-3/",
+      "author": "",
+      "date": "2026-08-01T22:15:07Z"
+    },
+    {
       "id": "/window-313",
       "type": "page",
       "label": "Window 313",
@@ -824,6 +856,14 @@
       "url": "https://project-skyscraper.com/window-31397/",
       "author": "",
       "date": "2026-08-01T11:55:00Z"
+    },
+    {
+      "id": "/window-331",
+      "type": "page",
+      "label": "Window 331",
+      "url": "https://project-skyscraper.com/window-331/",
+      "author": "",
+      "date": "2026-08-01T22:15:13Z"
     },
     {
       "id": "/window-3643",
@@ -848,6 +888,22 @@
       "url": "https://project-skyscraper.com/window-4049/",
       "author": "",
       "date": "2026-08-01T10:26:40Z"
+    },
+    {
+      "id": "/window-4099",
+      "type": "page",
+      "label": "Window 4099",
+      "url": "https://project-skyscraper.com/window-4099/",
+      "author": "",
+      "date": "2026-08-01T22:15:15Z"
+    },
+    {
+      "id": "/window-41",
+      "type": "page",
+      "label": "Window 41",
+      "url": "https://project-skyscraper.com/window-41/",
+      "author": "",
+      "date": "2026-08-01T22:15:17Z"
     },
     {
       "id": "/window-419",
@@ -922,6 +978,22 @@
       "date": "2026-08-01T11:55:03Z"
     },
     {
+      "id": "/window-6791",
+      "type": "page",
+      "label": "Window 6791",
+      "url": "https://project-skyscraper.com/window-6791/",
+      "author": "",
+      "date": "2026-08-01T22:15:14Z"
+    },
+    {
+      "id": "/window-6917",
+      "type": "page",
+      "label": "Window 6917",
+      "url": "https://project-skyscraper.com/window-6917/",
+      "author": "",
+      "date": "2026-08-01T22:15:05Z"
+    },
+    {
       "id": "/window-7129",
       "type": "page",
       "label": "Window 7129",
@@ -968,6 +1040,14 @@
       "url": "https://project-skyscraper.com/window-8867/",
       "author": "",
       "date": "2026-08-01T10:26:27Z"
+    },
+    {
+      "id": "/window-89",
+      "type": "page",
+      "label": "Window 89",
+      "url": "https://project-skyscraper.com/window-89/",
+      "author": "",
+      "date": "2026-08-01T22:15:12Z"
     },
     {
       "id": "/window-911",
@@ -8304,6 +8384,46 @@
       "target": "/window-313"
     },
     {
+      "source": "sitemap",
+      "target": "/window-6917"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-3"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-16001"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-10949"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-89"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-331"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-6791"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-4099"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-141319"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-41"
+    },
+    {
       "source": "/",
       "target": "/2026/08/01/event-01082026"
     },
@@ -15464,6 +15584,46 @@
       "target": "/"
     },
     {
+      "source": "/window-6917",
+      "target": "/"
+    },
+    {
+      "source": "/window-3",
+      "target": "/"
+    },
+    {
+      "source": "/window-16001",
+      "target": "/"
+    },
+    {
+      "source": "/window-10949",
+      "target": "/"
+    },
+    {
+      "source": "/window-89",
+      "target": "/"
+    },
+    {
+      "source": "/window-331",
+      "target": "/"
+    },
+    {
+      "source": "/window-6791",
+      "target": "/"
+    },
+    {
+      "source": "/window-4099",
+      "target": "/"
+    },
+    {
+      "source": "/window-141319",
+      "target": "/"
+    },
+    {
+      "source": "/window-41",
+      "target": "/"
+    },
+    {
       "source": "/2026/04/24/navigation",
       "target": "/report-glitching-realities"
     },
@@ -20956,6 +21116,10 @@
       "target": "/window-439"
     },
     {
+      "source": "/window-331/comment-page-1",
+      "target": "/window-331"
+    },
+    {
       "source": "/window-2/comment-page-1",
       "target": "/window-2"
     },
@@ -20998,6 +21162,10 @@
     {
       "source": "/window-1997/comment-page-1",
       "target": "/window-1997"
+    },
+    {
+      "source": "/window-41/comment-page-1",
+      "target": "/window-41"
     },
     {
       "source": "/window-2027/comment-page-1",
