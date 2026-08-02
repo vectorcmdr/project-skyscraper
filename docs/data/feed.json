@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-02T08:20:18.121812+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/05/15/event-15052016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "- memory bloc 1463270400: no/value\n+ memory bloc 1465611633: no/value\n- memory bloc 1782765720: Event duplicationSystem: CoreModule: Memory_reconstruction_engineStatus: AUTONOMOUS_MODE_FAILUREAlert: Critical bug detected during autonomous operation.Details: Memory reconstruction process encountered fatal error while running in full autonomous mode. Integrity checks failed on multiple fragments.Action required: Revert to semi-autonomous mode.Enable systematic data verification on all fragments.Warning: Full autonomous mode is currently unstable. Manual oversight required until root cause is resolved.\n+ memory bloc 1785618145: Event duplicationSystem: CoreModule: Memory_reconstruction_engineStatus: AUTONOMOUS_MODE_FAILUREAlert: Critical bug detected during autonomous operation.Details: Memory reconstruction process encountered fatal error while running in full autonomous mode. Integrity checks failed on multiple fragments.Action required: Revert to semi-autonomous mode.Enable systematic data verification on all fragments.Warning: F...\n- memory bloc 1781191560Status: Past_and_present_mergeTemporal integrity: CompromisedAnalysis: Timeline_overlapSeverity: AnomalyLocation: PARIS\n+ memory bloc 1784041466Status: Past_and_present_mergeTemporal integrity: CompromisedAnalysis: Timeline_overlapSeverity: AnomalyLocation: PARIS\n- memory bloc 1463788800: no/value\n+ memory bloc 1466130862: no/value\n- memory bloc 1774024740: Freedom of freedom of play.Value: Forging ahead with cooperation in mind.\n+ memory bloc 1776863180: Freedom of freedom of play.Value: Forging ahead with cooperation in mind.\n- memory bloc 1457568000: no/value\n+ memory bloc 1459900109: no/value\n- memory bloc 1460592000: no/value\n+ memory bloc 1462928947: no/value\n- memory bloc 1779843600: RGB unite in a spark of lightValue: You are –kzzzt– not alone.\n+ memory bloc 1782691350: RGB unite in a spark of lightValue: You are –kzzzt– not alone.\n- memory bloc 1483056000: no/value\n+ memory bloc 1485428890: no/value\n... (truncated)",
+      "detail": "461 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_cycle",
       "timestamp": "2026-08-02T07:48:29.864070+00:00",
       "title": "Memory bloc wave: 100 posts (shift+revert at 07:48 UTC, 07:49 UTC)",
@@ -19740,5 +19753,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-02T08:19:36.452349+00:00"
+  "updated": "2026-08-02T08:20:21.929282+00:00"
 }
