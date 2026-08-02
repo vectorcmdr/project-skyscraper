@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-08-02T12:57:18.606045+00:00",
+      "title": "",
+      "link": "https://project-skyscraper.com/window-421/comment-page-1/#comment-133",
+      "endpoint": "/wp-json/wp/v2/comments",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/comments",
+      "author": 0,
+      "site": "",
+      "id": 133,
+      "game_date": "2026-08-02T12:56:23+00:00"
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-02T08:20:18.121812+00:00",
       "title": "2016_dataset",
@@ -19753,5 +19766,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-02T12:56:27.218130+00:00"
+  "updated": "2026-08-02T12:57:18.617035+00:00"
 }
