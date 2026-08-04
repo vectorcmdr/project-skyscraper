@@ -982,6 +982,7 @@ function _wsRender() {
       row.appendChild(utc);
       row.appendChild(local);
       pane.appendChild(row);
+      r.el = row;
     });
     panesEl.appendChild(pane);
   });
@@ -993,6 +994,20 @@ function _wsGreyPassed() {
   _wsData.days.forEach(function(day) {
     day.rows.forEach(function(r) {
       r.passed = r.ms < now;
+    });
+  });
+}
+
+function _wsTick() {
+  if (!_wsData) return;
+  var now = Date.now();
+  _wsData.days.forEach(function(day) {
+    day.rows.forEach(function(r) {
+      var passed = r.ms < now;
+      if (passed !== r.passed) {
+        r.passed = passed;
+        if (r.el) r.el.classList.toggle('ws-passed', passed);
+      }
     });
   });
 }
@@ -1048,4 +1063,5 @@ document.addEventListener('DOMContentLoaded', function() {
   _initTsConv();
   initQueryBar();
   _wsLoad();
+  setInterval(_wsTick, 30000);
 });
