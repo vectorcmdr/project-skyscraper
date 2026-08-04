@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/jpeg" href="../favicon.jpg">
 <title>WINDOWS &mdash; project-skyscraper</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -99,6 +100,10 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 .tab-btn{background:transparent;color:#888;border:1px solid #333;border-bottom:none;padding:0.4rem 1.2rem;cursor:pointer;font-family:inherit;font-size:0.75rem;letter-spacing:0.1em;transition:all 0.15s;line-height:1.5;margin:0;text-transform:uppercase}
 .tab-btn.active{color:#d00;border-color:#d00;background:#0a0a0a}
 .tab-btn:hover:not(.active){color:#aaa;border-color:#666}
+.blade-tabs{display:flex;gap:0;justify-content:center;border-bottom:1px solid #222;background:#0d0d0d;margin-bottom:10px}
+.blade-tab{background:transparent;color:#888;border:1px solid #333;border-bottom:none;padding:0.3rem 0.9rem;cursor:pointer;font-family:inherit;font-size:0.7rem;letter-spacing:0.1em;transition:all 0.15s;line-height:1.5;margin:0;text-transform:uppercase}
+.blade-tab.active{color:#d00;border-color:#d00;background:#0a0a0a}
+.blade-tab:hover:not(.active){color:#aaa;border-color:#666}
 #view-3d{position:relative;width:100%;max-width:1300px;height:80vh;min-height:500px;margin:0 auto}
 #view-3d canvas{display:block;width:100%!important;height:100%!important;outline:none}
 #counter-display-3d{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:inherit;font-weight:inherit;color:#fff;pointer-events:none;white-space:nowrap;font-size:2.8rem;text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10}
@@ -167,16 +172,22 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   <div id="countdown-display" style="font-size:1.4rem;color:#fff;letter-spacing:.08em;margin:0;"></div>
 
   <div id="view-2d">
-    <div style="position:relative;display:inline-block;max-width:100%;">
-      <div id="grid-container" style="display:flex;gap:45px;justify-content:center;align-items:flex-start;flex-wrap:nowrap;">
+    <div class="blade-tabs">
+      <button class="blade-tab active" data-blade="all">ALL BLADES</button>
+      <button class="blade-tab" data-blade="1">B1</button>
+      <button class="blade-tab" data-blade="2">B2</button>
+      <button class="blade-tab" data-blade="3">B3</button>
+    </div>
+    <div id="grid-scroll" style="position:relative;display:block;max-width:100%;overflow-x:auto;">
+      <div id="grid-container" style="position:relative;display:flex;gap:45px;align-items:flex-start;flex-wrap:nowrap;width:max-content;margin:0 auto;">
         <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
         <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
         <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
-      </div>
-      <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-                  font-family:inherit;font-weight:inherit;color:#fff;
-                  pointer-events:none;white-space:nowrap;font-size:2.8rem;
-                  text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
+        <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                    font-family:inherit;font-weight:inherit;color:#fff;
+                    pointer-events:none;white-space:nowrap;font-size:2.8rem;
+                    text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
+        </div>
       </div>
     </div>
   </div>
@@ -236,6 +247,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
   let lensRAF = null;
   let primePixels = new Map();    /* globalIndex → lastBlink timestamp for twinkle */
   let twinkleInterval = null;
+  let bladeTab = 'all';
 
   window.__countingState = {
     canvases: canvases,
@@ -439,10 +451,22 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     highlightBoxes = [];
   }
 
+  var gridScrollEl = document.getElementById('grid-scroll');
+
+  function isPixelVisible(rect, x, y, sc) {
+    if (!rect || rect.width === 0 || rect.height === 0) return false;
+    var cx = rect.left + x * STEP + CELL_SIZE / 2;
+    var cy = rect.top + y * STEP + CELL_SIZE / 2;
+    if (sc && (cx < sc.left || cx > sc.right || cy < sc.top || cy > sc.bottom)) return false;
+    if (cx < 0 || cx > window.innerWidth || cy < 0 || cy > window.innerHeight) return false;
+    return true;
+  }
+
   function drawHighlights(indices) {
     if (document.getElementById('view-2d').style.display === 'none') return [];
     if (!indices.length) return [];
     const valid = [];
+    const sc = gridScrollEl ? gridScrollEl.getBoundingClientRect() : null;
     indices.forEach(n => {
       if (n < 1 || n > TOTAL_PIXELS) return;
       const globalIndex = n - 1;
@@ -451,8 +475,10 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       const x = local % COLS;
       const y = Math.floor(local / COLS);
       const canvas = document.getElementById('grid' + (grid + 1));
-      if (!canvas) return;
+      if (!canvas || canvas.style.display === 'none') return;
       const rect = canvas.getBoundingClientRect();
+      valid.push(n);
+      if (!isPixelVisible(rect, x, y, sc)) return;
       const box = document.createElement('div');
       box.style.cssText =
         'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
@@ -475,6 +501,8 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
 
   window.__countingState.clearHighlights = clearHighlights;
   window.__countingState.clearOperatorHighlights = clearOperatorHighlights;
+  window.__countingState.repositionHighlights = repositionHighlights;
+  window.__countingState.updateCanvasRects = updateCanvasRects;
 
   function drawOperatorHighlight(n, name, hex) {
     if (document.getElementById('view-2d').style.display === 'none') return;
@@ -485,8 +513,10 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     const x = local % COLS;
     const y = Math.floor(local / COLS);
     const canvas = document.getElementById('grid' + (grid + 1));
-    if (!canvas) return;
+    if (!canvas || canvas.style.display === 'none') return;
     const rect = canvas.getBoundingClientRect();
+    const sc = gridScrollEl ? gridScrollEl.getBoundingClientRect() : null;
+    if (!isPixelVisible(rect, x, y, sc)) return;
     const box = document.createElement('div');
     box.style.cssText =
       'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
@@ -523,6 +553,7 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
     markHighlightsDirty();
     const primeCount = indices.filter(n => isPrime(n)).length;
     statusEl.textContent = indices.length + ' operators highlighted (' + primeCount + ' prime windows)';
+    fitTopbar();
   }
 
     operatorsData = [
@@ -762,6 +793,53 @@ a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alterna
       operatorsData.forEach(op => drawOperatorHighlight(op.n, op.name, op.c));
     }
   }
+
+  /* ---- inner blade tabs (ALL BLADES / B1 / B2 / B3) ---- */
+  function setBladeTab(tabId) {
+    bladeTab = tabId;
+    var showAll = tabId === 'all';
+    var idx = showAll ? -1 : parseInt(tabId, 10);
+    canvases.forEach(function(c, i) {
+      c.style.display = (showAll || idx === i + 1) ? '' : 'none';
+    });
+    updateCanvasRects();
+    if (showAll) centerGridScroll();
+    repositionHighlights();
+  }
+  document.querySelectorAll('.blade-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setBladeTab(this.dataset.blade);
+      document.querySelectorAll('.blade-tab').forEach(function(b) {
+        b.classList.toggle('active', b === btn);
+      });
+    });
+  });
+
+  /* ---- center the blade set horizontally on load / when showing all ---- */
+  function centerGridScroll() {
+    var w = document.getElementById('grid-scroll');
+    var g = document.getElementById('grid-container');
+    if (w && g) w.scrollLeft = Math.max(0, (g.offsetWidth - w.clientWidth) / 2);
+  }
+  centerGridScroll();
+  window.addEventListener('load', function() {
+    centerGridScroll();
+    repositionHighlights();
+  });
+
+  /* ---- keep highlights glued to the grid when the blade set scrolls ---- */
+  (function() {
+    var w = document.getElementById('grid-scroll');
+    if (!w) return;
+    var raf = null;
+    w.addEventListener('scroll', function() {
+      if (raf) return;
+      raf = requestAnimationFrame(function() {
+        raf = null;
+        repositionHighlights();
+      });
+    });
+  })();
 
   /* ---- buttons ---- */
   document.getElementById('btn-complete').addEventListener('click', () => {
@@ -1066,13 +1144,26 @@ function applyMobileLayout() {
   if (el) el.style.width = mq ? '100%' : '';
   el = document.querySelector('.zoom-hint');
   if (el) el.style.display = mq ? 'none' : '';
-  document.body.style.paddingTop = mq ? '14rem' : '';
-  document.body.style.overflowX = mq ? 'hidden' : '';
-  el = document.getElementById('grid-container');
-  if (el) el.style.flexWrap = mq ? 'wrap' : '';
+  fitTopbar();
+}
+function fitTopbar() {
+  var tb = document.getElementById('control-bar');
+  if (!tb) return;
+  var pad = tb.offsetHeight + 'px';
+  if (document.body.style.paddingTop !== pad) {
+    document.body.style.paddingTop = pad;
+    var cs = window.__countingState;
+    if (cs) {
+      if (cs.repositionHighlights) cs.repositionHighlights();
+      if (cs.updateCanvasRects) cs.updateCanvasRects();
+    }
+  }
 }
 applyMobileLayout();
 window.addEventListener('resize', applyMobileLayout);
+if (window.ResizeObserver && document.getElementById('control-bar')) {
+  new ResizeObserver(fitTopbar).observe(document.getElementById('control-bar'));
+}
 
 document.querySelectorAll('.tab-btn').forEach(function(btn) {
   btn.addEventListener('click', function() {
