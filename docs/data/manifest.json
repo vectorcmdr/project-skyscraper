@@ -1,11 +1,19 @@
 {
   "pages": [
     {
+      "path": "/the-shared-dream/",
+      "title": "THE SHARED DREAM",
+      "type": "page",
+      "modified": "2026-08-05T00:09:37",
+      "date_gmt": "2026-08-01T11:12:00",
+      "author": "System"
+    },
+    {
       "path": "/wp-content/uploads/2026/08/window-337.jpg",
       "title": "window 337",
       "type": "attachment",
       "modified": "2026-08-04T23:08:37.905787+00:00",
-      "date_gmt": "2026-08-04T23:07:37",
+      "date_gmt": "2026-08-04T23:07:37+00:00",
       "author": "The Architect"
     },
     {
@@ -13,7 +21,7 @@
       "title": "window 2239",
       "type": "attachment",
       "modified": "2026-08-04T23:08:37.905787+00:00",
-      "date_gmt": "2026-08-04T23:07:39",
+      "date_gmt": "2026-08-04T23:07:39+00:00",
       "author": "The Architect"
     },
     {
@@ -21,7 +29,7 @@
       "title": "window 159667",
       "type": "attachment",
       "modified": "2026-08-04T23:08:37.905787+00:00",
-      "date_gmt": "2026-08-04T23:07:40",
+      "date_gmt": "2026-08-04T23:07:40+00:00",
       "author": "The Architect"
     },
     {
@@ -29,7 +37,7 @@
       "title": "window 733",
       "type": "attachment",
       "modified": "2026-08-04T23:08:37.905787+00:00",
-      "date_gmt": "2026-08-04T23:07:42",
+      "date_gmt": "2026-08-04T23:07:42+00:00",
       "author": "The Architect"
     },
     {
@@ -79,14 +87,6 @@
       "modified": "2026-08-04T12:40:26.738696+00:00",
       "date_gmt": "2026-08-04T12:39:58+00:00",
       "author": 0
-    },
-    {
-      "path": "/the-shared-dream/",
-      "title": "THE SHARED DREAM",
-      "type": "page",
-      "modified": "2026-08-03T22:48:12+00:00",
-      "date_gmt": "2026-08-01T11:12:00+00:00",
-      "author": "System"
     },
     {
       "path": "/window-251-2/comment-page-1/",
@@ -2604,8 +2604,8 @@
       "path": "/neural-network-status/",
       "title": "Neural network status",
       "type": "page",
-      "modified": "2026-07-30T19:41:46+00:00",
-      "date_gmt": "2026-04-28T18:55:24+00:00",
+      "modified": "2026-07-30T19:41:46",
+      "date_gmt": "2026-04-28T18:55:24",
       "author": "The Architect"
     },
     {
@@ -7490,5 +7490,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-04T23:08:37.914832+00:00"
+  "updated": "2026-08-04T23:10:26.380865+00:00"
 }
