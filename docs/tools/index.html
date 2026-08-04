@@ -64,6 +64,7 @@
       <button class="tool-tab" data-tab="schl_fr_en">SCHL_FR_EN</button>
       <button class="tool-tab" data-tab="fr_en">FR_EN</button>
       <button class="tool-tab" data-tab="ts_conv">TS_CONV</button>
+      <button class="tool-tab" data-tab="window_sync">WINDOW_SYNC</button>
     </div>
 
     <!-- PANE: SCHL_CODE -->
@@ -142,6 +143,14 @@
           <button class="copy-btn" data-target="tsConvDateOutput" title="Copy date">⎘</button>
         </div>
       </div>
+    </div>
+    <!-- PANE: WINDOW_SYNC -->
+    <div class="tool-pane" id="pane-window_sync">
+      <h3>&#9654; WINDOW SYNC</h3>
+      <p>PROJECTED WAVE SHIFTS FROM wave_projection.csv. UTC + LOCAL. GREY = PASSED.</p>
+      <div class="ws-snapshot" id="wsSnapshot">SNAPSHOT: loading...</div>
+      <div class="ws-day-tabs" id="wsDayTabs"></div>
+      <div class="ws-day-panes" id="wsDayPanes"></div>
     </div>
   </div>
 

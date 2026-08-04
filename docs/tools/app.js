@@ -1,11 +1,11 @@
-/* ── CONFIG ────────────────────────────────────────────── */
+/* -- CONFIG -- */
 const ALPHA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const KEY   = 'MINDFAGEBJRLHCVPQSKYUWOXTZ';
 
-/* ── STATE ─────────────────────────────────────────────── */
+/* -- STATE -- */
 let activeTab = 'schl_code';
 
-/* ── CIPHER ────────────────────────────────────────────── */
+/* -- CIPHER -- */
 function substitute(text, fromChars, toChars) {
   return text.split('').map(function(ch) {
     var upper = ch.toUpperCase();
@@ -24,9 +24,9 @@ function schoolCodeEncrypt(text) {
   return substitute(text, KEY, ALPHA);
 }
 
-/* ── TRANSLATION ────────────────────────────────────────── */
+/* -- TRANSLATION -- */
 
-/* ── TOOL: SCHL_CODE ───────────────────────────────────── */
+/* -- TOOL: SCHL_CODE -- */
 function runSchlCode() {
   var input = document.getElementById('schlCodeInput');
   var output = document.getElementById('schlCodeOutput');
@@ -57,7 +57,7 @@ function toggleSchlMode() {
   runSchlCode();
 }
 
-/* ── TOOL: SCHL_FR_EN ──────────────────────────────────── */
+/* -- TOOL: SCHL_FR_EN -- */
 function runSchlFrEn() {
   var input = document.getElementById('schlFrEnInput');
   var decEl = document.getElementById('schlFrEnDecrypted');
@@ -80,7 +80,7 @@ function runSchlFrEn() {
   window.open(gtUrl, '_blank');
 }
 
-/* ── TOOL: FR_EN (reverse) ─────────────────────────────── */
+/* -- TOOL: FR_EN (reverse) -- */
 function runFrEn() {
   var input = document.getElementById('frEnInput');
   var output = document.getElementById('frEnOutput');
@@ -97,7 +97,7 @@ function runFrEn() {
   window.open(gtUrl, '_blank');
 }
 
-/* ── TOOL: TS_CONV (Timestamp Converter) ──────────────── */
+/* -- TOOL: TS_CONV (Timestamp Converter) -- */
 
 function _parseDate(value) {
   if (!value) return null;
@@ -219,13 +219,13 @@ function _initTsConv() {
   runTsConvEpoch();
 }
 
-/* ── CHAR COUNT ────────────────────────────────────────── */
+/* -- CHAR COUNT -- */
 function updateCharCount(id, len) {
   var el = document.getElementById(id);
   if (el) el.textContent = len + ' chars';
 }
 
-/* ── COPY TO CLIPBOARD ────────────────────────────────── */
+/* -- COPY TO CLIPBOARD -- */
 document.addEventListener('click', function(e) {
   var btn = e.target.closest('.copy-btn');
   if (!btn) return;
@@ -266,7 +266,7 @@ document.addEventListener('click', function(e) {
   });
 });
 
-/* ── TABS ──────────────────────────────────────────────── */
+/* -- TABS -- */
 function switchTab(tabId) {
   activeTab = tabId;
 
@@ -278,7 +278,7 @@ function switchTab(tabId) {
   });
 }
 
-/* ── EYE CANVAS (dot-matrix VK scanner) ────────────────── */
+/* -- EYE CANVAS (dot-matrix VK scanner) -- */
 (function initEye() {
   var canvas = document.getElementById('eyeCanvas');
   if (!canvas) return;
@@ -568,7 +568,7 @@ function switchTab(tabId) {
   animate();
 })();
 
-/* ── FINGERPRINT CANVAS (wobbly concentric rings) ──────── */
+/* -- FINGERPRINT CANVAS (wobbly concentric rings) -- */
 (function initFP() {
   var canvas = document.getElementById('fpCanvas');
   if (!canvas) return;
@@ -768,7 +768,7 @@ function switchTab(tabId) {
   animateFP();
 })();
 
-/* ── TRACE (Discourse online status) ───────────────────── */
+/* -- TRACE (Discourse online status) -- */
 var traceTick = null;
 
 function fmtElapsed(seconds) {
@@ -814,7 +814,7 @@ function updateTrace() {
     });
 }
 
-/* ── OPERATOR ──────────────────────────────────────────── */
+/* -- OPERATOR -- */
 function setOperator() {
   var el = document.getElementById('operatorDisplay');
   if (!el) return;
@@ -822,7 +822,7 @@ function setOperator() {
   el.textContent = name ? 'Operator: ' + name : 'Operator: <anon>';
 }
 
-/* ── AUTO-RUN ON TAB ENTER ─────────────────────────────── */
+/* -- AUTO-RUN ON TAB ENTER -- */
 function setupEnterTriggers() {
   document.getElementById('schlCodeInput').addEventListener('input', runSchlCode);
 
@@ -834,7 +834,7 @@ function setupEnterTriggers() {
   if (eei) eei.addEventListener('input', runTsConvEpoch);
 }
 
-/* ── VK-STYLE QUERY BAR ────────────────────────────────── */
+/* -- VK-STYLE QUERY BAR -- */
 var _queries = [];
 var _queryTimer = null;
 var _WORKER_URL = 'https://opscentre.josh-axey-3006.workers.dev';
@@ -902,7 +902,135 @@ function initQueryBar() {
   if (btnEl) btnEl.addEventListener('click', submitQuery);
 }
 
-/* ── INIT ──────────────────────────────────────────────── */
+/* -- TOOL: WINDOW_SYNC (projected wave shifts from CSV) -- */
+
+var _wsData = null;
+var _wsActiveDay = 0;
+
+function _wsPad2(n) {
+  return n < 10 ? '0' + n : '' + n;
+}
+
+function _wsFmtUTC(d) {
+  return d.getUTCFullYear() + '-' + _wsPad2(d.getUTCMonth() + 1) + '-' + _wsPad2(d.getUTCDate())
+    + ' ' + _wsPad2(d.getUTCHours()) + ':' + _wsPad2(d.getUTCMinutes()) + ':' + _wsPad2(d.getUTCSeconds());
+}
+
+function _wsFmtLocal(d) {
+  return d.getFullYear() + '-' + _wsPad2(d.getMonth() + 1) + '-' + _wsPad2(d.getDate())
+    + ' ' + _wsPad2(d.getHours()) + ':' + _wsPad2(d.getMinutes()) + ':' + _wsPad2(d.getSeconds());
+}
+
+function _wsParseUTC(str) {
+  /* str = "YYYY-MM-DD HH:MM:SS" treated as UTC */
+  var m = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})$/.exec(String(str || '').trim());
+  if (!m) return null;
+  return new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6]));
+}
+
+function _wsDayLabel(header, idx) {
+  var m = /starts (\d{4}-\d{2}-\d{2})/.exec(String(header || ''));
+  var date = m ? m[1] : '';
+  return 'DAY ' + (idx + 1) + (date ? ' ' + date : '');
+}
+
+function _wsRender() {
+  var tabsEl = document.getElementById('wsDayTabs');
+  var panesEl = document.getElementById('wsDayPanes');
+  var snapEl = document.getElementById('wsSnapshot');
+  if (!tabsEl || !panesEl || !_wsData) return;
+  if (!_wsData.days.length) {
+    if (snapEl) snapEl.textContent = 'SNAPSHOT: no projection rows found';
+    return;
+  }
+
+  tabsEl.innerHTML = '';
+  panesEl.innerHTML = '';
+
+  _wsData.days.forEach(function(day, di) {
+    var tab = document.createElement('button');
+    tab.className = 'ws-day-tab' + (di === _wsActiveDay ? ' active' : '');
+    tab.textContent = day.label;
+    tab.setAttribute('data-ws-day', String(di));
+    tab.addEventListener('click', function() {
+      _wsActiveDay = di;
+      document.querySelectorAll('.ws-day-tab').forEach(function(t) {
+        t.classList.toggle('active', t.getAttribute('data-ws-day') === String(di));
+      });
+      document.querySelectorAll('.ws-day-pane').forEach(function(p) {
+        p.classList.toggle('active', p.getAttribute('data-ws-day') === String(di));
+      });
+    });
+    tabsEl.appendChild(tab);
+
+    var pane = document.createElement('div');
+    pane.className = 'ws-day-pane' + (di === _wsActiveDay ? ' active' : '');
+    pane.setAttribute('data-ws-day', String(di));
+
+    day.rows.forEach(function(r) {
+      var row = document.createElement('div');
+      row.className = 'ws-time-row' + (r.passed ? ' ws-passed' : '');
+      var dot = document.createElement('span');
+      dot.className = 'ws-time-dot';
+      var utc = document.createElement('span');
+      utc.className = 'ws-utc';
+      utc.textContent = r.utc;
+      var local = document.createElement('span');
+      local.className = 'ws-local';
+      local.textContent = r.local;
+      row.appendChild(dot);
+      row.appendChild(utc);
+      row.appendChild(local);
+      pane.appendChild(row);
+    });
+    panesEl.appendChild(pane);
+  });
+}
+
+function _wsGreyPassed() {
+  if (!_wsData) return;
+  var now = Date.now();
+  _wsData.days.forEach(function(day) {
+    day.rows.forEach(function(r) {
+      r.passed = r.ms < now;
+    });
+  });
+}
+
+function _wsLoad() {
+  fetch('data/wave_projection.csv')
+    .then(function(r) { return r.ok ? r.text() : Promise.reject(r.status); })
+    .then(function(text) {
+      var lines = text.replace(/^\uFEFF/, '').split(/\r?\n/);
+      var header = [];
+      var days = [];
+      for (var i = 0; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        var cells = lines[i].split(';');
+        if (i === 0) {
+          header = cells;
+          continue;
+        }
+        /* columns B, C, D = indices 1, 2, 3 */
+        for (var c = 1; c <= 3; c++) {
+          var d = _wsParseUTC(cells[c]);
+          if (!d) continue;
+          var di = c - 1;
+          if (!days[di]) days[di] = { label: _wsDayLabel(header[c], di), rows: [] };
+          days[di].rows.push({ ms: d.getTime(), utc: _wsFmtUTC(d), local: _wsFmtLocal(d), passed: false });
+        }
+      }
+      _wsData = { days: days };
+      _wsGreyPassed();
+      _wsRender();
+    })
+    .catch(function() {
+      var snapEl = document.getElementById('wsSnapshot');
+      if (snapEl) snapEl.textContent = 'SNAPSHOT: CSV load failed';
+    });
+}
+
+/* -- INIT -- */
 document.addEventListener('DOMContentLoaded', function() {
   setOperator();
   updateTrace();
@@ -919,4 +1047,5 @@ document.addEventListener('DOMContentLoaded', function() {
   runSchlCode();
   _initTsConv();
   initQueryBar();
+  _wsLoad();
 });

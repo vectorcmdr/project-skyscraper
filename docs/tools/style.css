@@ -401,6 +401,86 @@ body {
   min-width: 200px;
 }
 
+/* -- WINDOW SYNC TAB (projected wave shifts from CSV) -- */
+.ws-snapshot {
+  font-size: .6rem;
+  color: #555;
+  letter-spacing: .1em;
+  margin-bottom: .5rem;
+}
+.ws-day-tabs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: .75rem;
+  flex-wrap: wrap;
+}
+.ws-day-tab {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  color: #666;
+  padding: .4rem .9rem;
+  font-family: inherit;
+  font-size: .65rem;
+  letter-spacing: .15em;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.ws-day-tab:hover {
+  color: #aaa;
+  border-color: #333;
+  background: #111;
+}
+.ws-day-tab.active {
+  color: #d00;
+  border-color: #d00;
+  background: #0d0d0d;
+}
+.ws-day-pane {
+  display: none;
+  animation: fadeIn .2s ease;
+}
+.ws-day-pane.active {
+  display: block;
+}
+.ws-time-row {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+  padding: .25rem .25rem;
+  border-bottom: 1px solid #141414;
+  font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+  font-size: .75rem;
+  color: #c0c0c0;
+}
+.ws-time-row.ws-passed {
+  color: #3a3a3a;
+}
+.ws-time-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d00;
+  flex-shrink: 0;
+  align-self: center;
+}
+.ws-time-row.ws-passed .ws-time-dot {
+  background: #333;
+}
+.ws-utc {
+  min-width: 170px;
+  color: #c0c0c0;
+}
+.ws-time-row.ws-passed .ws-utc {
+  color: #3a3a3a;
+}
+.ws-local {
+  color: #888;
+}
+.ws-time-row.ws-passed .ws-local {
+  color: #2c2c2c;
+}
+
 @media (max-width: 700px) {
   .fp-panel {
     width: 44px;
