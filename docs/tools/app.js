@@ -267,6 +267,27 @@ document.addEventListener('click', function(e) {
 });
 
 /* -- TABS -- */
+function knownTabSlugs() {
+  var slugs = [];
+  document.querySelectorAll('.tool-tab').forEach(function(t) {
+    slugs.push(t.dataset.tab);
+  });
+  return slugs;
+}
+
+function tabFromURL(slugs) {
+  var search = (location.search || '').replace(/^\?/, '');
+  if (!search) return null;
+  var parts = search.split('&');
+  for (var i = 0; i < parts.length; i++) {
+    var piece = parts[i];
+    var idx = piece.indexOf('=');
+    var slug = (idx === -1 ? piece : piece.slice(idx + 1)).toLowerCase();
+    if (slug && (!slugs || slugs.indexOf(slug) !== -1)) return slug;
+  }
+  return null;
+}
+
 function switchTab(tabId) {
   activeTab = tabId;
 
@@ -276,6 +297,8 @@ function switchTab(tabId) {
   document.querySelectorAll('.tool-pane').forEach(function(p) {
     p.classList.toggle('active', p.id === 'pane-' + tabId);
   });
+
+  history.replaceState(null, '', '?' + tabId);
 }
 
 /* -- EYE CANVAS (dot-matrix VK scanner) -- */
@@ -1093,6 +1116,13 @@ document.addEventListener('DOMContentLoaded', function() {
   setInterval(updateTrace, 30000);
 
   /* Tab switching */
+  var slugs = knownTabSlugs();
+  var urlTab = tabFromURL(slugs);
+  if (location.search && !urlTab) {
+    history.replaceState(null, '', location.pathname);
+  }
+  switchTab(urlTab || 'schl_code');
+
   document.querySelectorAll('.tool-tab').forEach(function(tab) {
     tab.addEventListener('click', function() {
       switchTab(this.dataset.tab);
