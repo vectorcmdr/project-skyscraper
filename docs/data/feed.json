@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-04T19:21:57.150383+00:00",
+      "title": "THE SHARED DREAM",
+      "link": "https://project-skyscraper.com/the-shared-dream/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ gallery: edited",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "database_entry_changed",
       "timestamp": "2026-08-04T15:56:05.755839+00:00",
       "title": "Terminal command: JurassicGergo",
@@ -21617,5 +21630,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-04T15:56:05.762783+00:00"
+  "updated": "2026-08-04T19:22:12.892591+00:00"
 }
