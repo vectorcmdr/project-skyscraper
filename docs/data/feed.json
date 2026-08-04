@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-04T20:11:34.792308+00:00",
+      "title": "THE SHARED DREAM",
+      "link": "https://project-skyscraper.com/the-shared-dream/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ gallery: edited",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-08-04T19:30:40.989952+00:00",
       "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
@@ -21656,5 +21669,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-04T19:30:40.998014+00:00"
+  "updated": "2026-08-04T20:11:52.310001+00:00"
 }
