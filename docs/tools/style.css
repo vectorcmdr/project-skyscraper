@@ -480,6 +480,17 @@ body {
 .ws-time-row.ws-passed .ws-local {
   color: #2c2c2c;
 }
+.ws-hidden {
+  display: none;
+}
+.ws-sep {
+  font-size: .6rem;
+  letter-spacing: .15em;
+  color: #d00;
+  padding: .35rem .25rem .35rem .25rem;
+  border-bottom: 1px solid #141414;
+  text-transform: uppercase;
+}
 
 @media (max-width: 700px) {
   .fp-panel {

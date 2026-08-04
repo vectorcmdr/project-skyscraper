@@ -934,6 +934,65 @@ function _wsDayLabel(header, idx) {
   return 'DAY ' + (idx + 1) + (date ? ' ' + date : '');
 }
 
+function _wsBuildPane(day, di) {
+  var pane = document.createElement('div');
+  pane.className = 'ws-day-pane' + (di === _wsActiveDay ? ' active' : '');
+  pane.setAttribute('data-ws-day', String(di));
+
+  var sep = document.createElement('div');
+  sep.className = 'ws-sep ws-hidden';
+  pane.appendChild(sep);
+  day.sepEl = sep;
+
+  day.rows.forEach(function(r) {
+    var row = document.createElement('div');
+    row.className = 'ws-time-row' + (r.passed ? ' ws-passed' : '');
+    var dot = document.createElement('span');
+    dot.className = 'ws-time-dot';
+    var utc = document.createElement('span');
+    utc.className = 'ws-utc';
+    utc.textContent = r.utc;
+    var local = document.createElement('span');
+    local.className = 'ws-local';
+    local.textContent = r.local;
+    row.appendChild(dot);
+    row.appendChild(utc);
+    row.appendChild(local);
+    pane.appendChild(row);
+    r.el = row;
+  });
+  return pane;
+}
+
+function _wsReconcileDay(day) {
+  var passed = [];
+  day.rows.forEach(function(r) {
+    if (r.passed) passed.push(r);
+  });
+  passed.sort(function(a, b) { return a.ms - b.ms; });
+
+  var allPassed = passed.length > 0 && passed.length === day.rows.length;
+  var keep = allPassed ? passed : passed.slice(-3);
+
+  day.rows.forEach(function(r) {
+    var visible = !r.passed || keep.indexOf(r) !== -1;
+    if (r.el) r.el.classList.toggle('ws-hidden', !visible);
+  });
+
+  var sepEl = day.sepEl;
+  if (sepEl) {
+    if (allPassed) {
+      sepEl.textContent = '-- COMPLETE (ALL PASSED) --';
+      sepEl.classList.remove('ws-hidden');
+    } else if (passed.length > 0) {
+      sepEl.textContent = '-- PASSED (LAST 3 SHOWN) --';
+      sepEl.classList.remove('ws-hidden');
+    } else {
+      sepEl.classList.add('ws-hidden');
+    }
+  }
+}
+
 function _wsRender() {
   var tabsEl = document.getElementById('wsDayTabs');
   var panesEl = document.getElementById('wsDayPanes');
@@ -963,28 +1022,9 @@ function _wsRender() {
     });
     tabsEl.appendChild(tab);
 
-    var pane = document.createElement('div');
-    pane.className = 'ws-day-pane' + (di === _wsActiveDay ? ' active' : '');
-    pane.setAttribute('data-ws-day', String(di));
-
-    day.rows.forEach(function(r) {
-      var row = document.createElement('div');
-      row.className = 'ws-time-row' + (r.passed ? ' ws-passed' : '');
-      var dot = document.createElement('span');
-      dot.className = 'ws-time-dot';
-      var utc = document.createElement('span');
-      utc.className = 'ws-utc';
-      utc.textContent = r.utc;
-      var local = document.createElement('span');
-      local.className = 'ws-local';
-      local.textContent = r.local;
-      row.appendChild(dot);
-      row.appendChild(utc);
-      row.appendChild(local);
-      pane.appendChild(row);
-      r.el = row;
-    });
+    var pane = _wsBuildPane(day, di);
     panesEl.appendChild(pane);
+    _wsReconcileDay(day);
   });
 }
 
@@ -1009,6 +1049,7 @@ function _wsTick() {
         if (r.el) r.el.classList.toggle('ws-passed', passed);
       }
     });
+    _wsReconcileDay(day);
   });
 }
 
