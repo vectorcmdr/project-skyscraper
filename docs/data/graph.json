@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T21:54:26.523244+00:00",
+  "updated": "2026-08-04T00:30:00.687889+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1450,6 +1450,14 @@
       "date": "2026-08-01T22:15:09Z"
     },
     {
+      "id": "/window-17",
+      "type": "page",
+      "label": "Window 17",
+      "url": "https://project-skyscraper.com/window-17/",
+      "author": "",
+      "date": "2026-08-03T21:46:16Z"
+    },
+    {
       "id": "/window-178093",
       "type": "page",
       "label": "Window 178093",
@@ -1594,6 +1602,14 @@
       "date": "2026-08-01T10:21:09Z"
     },
     {
+      "id": "/window-251-2",
+      "type": "page",
+      "label": "Window 251 2",
+      "url": "https://project-skyscraper.com/window-251-2/",
+      "author": "",
+      "date": "2026-08-03T21:46:18Z"
+    },
+    {
       "id": "/window-2521",
       "type": "page",
       "label": "Window 2521",
@@ -1624,6 +1640,14 @@
       "url": "https://project-skyscraper.com/window-2789/",
       "author": "",
       "date": "2026-08-02T18:29:31Z"
+    },
+    {
+      "id": "/window-29",
+      "type": "page",
+      "label": "Window 29",
+      "url": "https://project-skyscraper.com/window-29/",
+      "author": "",
+      "date": "2026-08-03T21:46:15Z"
     },
     {
       "id": "/window-3",
@@ -10216,6 +10240,18 @@
       "target": "/window-929"
     },
     {
+      "source": "sitemap",
+      "target": "/window-29"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-17"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-251-2"
+    },
+    {
       "source": "/",
       "target": "/2026/08/01/event-01082026"
     },
@@ -17660,6 +17696,18 @@
       "target": "/"
     },
     {
+      "source": "/window-29",
+      "target": "/"
+    },
+    {
+      "source": "/window-17",
+      "target": "/"
+    },
+    {
+      "source": "/window-251-2",
+      "target": "/"
+    },
+    {
       "source": "/2026/04/24/navigation",
       "target": "/report-glitching-realities"
     },
@@ -23656,6 +23704,14 @@
       "target": "/window-7211"
     },
     {
+      "source": "/window-29/comment-page-1",
+      "target": "/window-29"
+    },
+    {
+      "source": "/window-251-2/comment-page-1",
+      "target": "/window-251-2"
+    },
+    {
       "source": "/window-313/comment-page-1",
       "target": "/window-313"
     },
@@ -23718,6 +23774,10 @@
     {
       "source": "/window-178093/comment-page-1",
       "target": "/window-178093"
+    },
+    {
+      "source": "/window-17/comment-page-1",
+      "target": "/window-17"
     },
     {
       "source": "/window-6791/comment-page-1",
