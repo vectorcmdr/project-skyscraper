@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-08-04T12:40:26.738619+00:00",
+      "title": "Selfie Gek",
+      "link": "https://project-skyscraper.com/window-71837/comment-page-1/#comment-252",
+      "endpoint": "/wp-json/wp/v2/comments",
+      "diff": "Hello, GR3G!",
+      "detail": "1 new item(s) in /wp-json/wp/v2/comments",
+      "author": "Selfie Gek",
+      "site": "",
+      "id": 252,
+      "game_date": "2026-08-04T12:39:58+00:00"
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-04T00:28:16.870099+00:00",
       "title": "https://project-skyscraper.com/window-17/",
@@ -21539,5 +21552,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-04T00:28:16.877107+00:00"
+  "updated": "2026-08-04T12:40:26.753537+00:00"
 }
