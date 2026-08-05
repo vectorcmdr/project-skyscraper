@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "api_items_modified",
+      "timestamp": "2026-08-05T22:19:13.117100+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ The Architect >À : System >\n+ jeudi 06 août00:18\n+ Je suis presque surpris de ton message.Je m’en occupe.Tu penses vraiment pouvoir accéder au Rêve partagé ?",
+      "detail": "2 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_modified",
       "timestamp": "2026-08-05T22:08:58.799732+00:00",
       "title": "Inbox",
       "link": "https://project-skyscraper.com/inbox/",
@@ -21800,5 +21813,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-05T22:09:12.944049+00:00"
+  "updated": "2026-08-05T22:19:27.931624+00:00"
 }
