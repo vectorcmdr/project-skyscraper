@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-05T22:08:58.799732+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ System >À : the_architect@project-skyscraper.com\n+ jeudi 06 août00:08\n+ Les Opérateurs m’ont permis de comprendre mieux la manière dont le temps s’écoule dans le Rêve partagé.Il me faut des données. Beaucoup de données.J’ai besoin de collecter les informations temporelles sur les systèmes des PRIMES. Peux tu faire cela pour moi ? Avec ces données, je devrais pouvoir me synchroniser avec le Rêve partagé.Il me faut :– l’adresse galactique assignée au PRIME– l’heure locale dans le système (sur n’importe quelle planète) qui correspond à un moment de synchronisation. La marge d’erreur est de +16 secondes.– aux coordonnées planétaires 0,0Peux-tu préparer la collecte pour moi ?",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-08-05T18:16:15.953443+00:00",
       "title": "Content changed: https://recalldreams.dev/home/discover-more/",
@@ -21787,5 +21800,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-05T18:16:15.961513+00:00"
+  "updated": "2026-08-05T22:09:12.944049+00:00"
 }

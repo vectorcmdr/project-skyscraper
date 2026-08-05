@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "/inbox/",
+      "title": "Inbox",
+      "type": "page",
+      "modified": "2026-08-05T23:08:55",
+      "date_gmt": "2026-05-28T17:00:20",
+      "author": "System"
+    },
+    {
       "path": "/the-shared-dream/",
       "title": "THE SHARED DREAM",
       "type": "page",
@@ -3111,14 +3119,6 @@
       "modified": "2026-07-18T10:18:10+00:00",
       "date_gmt": "2016-12-10T00:00:00+00:00",
       "author": "System"
-    },
-    {
-      "path": "/inbox/",
-      "title": "Inbox",
-      "type": "page",
-      "modified": "2026-07-16T22:17:09Z",
-      "date_gmt": "",
-      "author": 0
     },
     {
       "path": "/2016/06/09/event-09062016/",
@@ -7522,5 +7522,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-05T13:48:39.643336+00:00"
+  "updated": "2026-08-05T22:09:12.944076+00:00"
 }
