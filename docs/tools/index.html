@@ -52,8 +52,14 @@
           <img src="data/wasp.png" alt="wasp" style="width:32px;">
           <span class="query-label">QUERY:</span>
           <span class="query-text" id="queryText">Loading...</span>
-          <input type="text" id="queryInput" class="query-input" placeholder="enter response..." autocomplete="off">
-          <button class="query-btn" id="queryBtn">&#9166;</button>
+          <div class="query-respond">
+            <span class="query-callsign-label">CALLSIGN:</span>
+            <input type="text" id="queryCallsign" class="query-callsign-input" maxlength="48" autocomplete="off" spellcheck="false">
+            <div class="query-respond-row">
+              <input type="text" id="queryInput" class="query-input" placeholder="enter response..." autocomplete="off">
+              <button class="query-btn" id="queryBtn">&#9166;</button>
+            </div>
+          </div>
           <span class="query-result" id="queryResult"></span>
         </div>
       </div>

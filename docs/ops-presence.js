@@ -224,6 +224,15 @@
     pollTimer = setInterval(fetchOperators, POLL_INTERVAL);
   }
 
+  /* Live callsign update (used by /tools query bar).
+     Updates the cached name + the presence button text as the user types. */
+  window.OpsPresenceSetCallsign = function (name) {
+    operatorName = (name || '').trim();
+    if (callsignEl) {
+      callsignEl.textContent = (operatorName || 'anon') + (isOnline ? '' : ' (offline)');
+    }
+  };
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

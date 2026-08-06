@@ -896,7 +896,8 @@ function submitQuery() {
 
   // Capture response to Worker
   var question = textEl ? textEl.textContent : '';
-  var callsign = (localStorage.getItem('operator') || '').trim() || 'anon';
+  var callsignField = document.getElementById('queryCallsign');
+  var callsign = (callsignField ? callsignField.value : '').trim() || 'anon';
   fetch(_WORKER_URL + '/response', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -923,6 +924,19 @@ function initQueryBar() {
   var btnEl = document.getElementById('queryBtn');
   if (inputEl) inputEl.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitQuery(); });
   if (btnEl) btnEl.addEventListener('click', submitQuery);
+
+  var csEl = document.getElementById('queryCallsign');
+  if (csEl) {
+    try { csEl.value = (localStorage.getItem('operator') || '').trim() || 'anon'; } catch (e) {}
+    csEl.addEventListener('input', function() {
+      var v = csEl.value.trim();
+      try { localStorage.setItem('operator', v); } catch (e) {}
+      if (window.OpsPresenceSetCallsign) window.OpsPresenceSetCallsign(v || 'anon');
+    });
+    csEl.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && inputEl) inputEl.focus();
+    });
+  }
 }
 
 /* -- TOOL: WINDOW_SYNC (projected wave shifts from CSV) -- */
