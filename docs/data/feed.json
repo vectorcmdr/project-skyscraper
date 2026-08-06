@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-06T16:06:31.767757+00:00",
+      "title": "Inbox",
+      "link": "https://project-skyscraper.com/inbox/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ Project Skyscraper\n+ System >À : the_architect@project-skyscraper.com\n+ jeudi 06 août18:06\n+ Tu as pu faire le nécessaire ? Les Opérateurs m’envoient des données non formatées, et parfois incomplètes. Précises bien que toute donnée dans une fenêtre de synchronisation est valide.",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-08-06T06:16:53.325574+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -21839,5 +21852,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-06T06:16:53.332044+00:00"
+  "updated": "2026-08-06T16:06:35.615813+00:00"
 }
