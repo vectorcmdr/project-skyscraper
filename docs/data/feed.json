@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-08-06T20:13:26.818734+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "link": "https://recalldreams.dev/home/contact-me/",
+      "endpoint": "",
+      "diff": " <script type=\"module\">\n\n </script>\n\n </body>\n",
+      "detail": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-08-06T20:11:43.525431+00:00",
       "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
       "link": "https://recalldreams.dev/landing-page/terminal/",
@@ -22743,5 +22756,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-06T20:11:43.532417+00:00"
+  "updated": "2026-08-06T20:13:26.826161+00:00"
 }
