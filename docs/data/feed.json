@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-06T06:16:53.325574+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/",
+      "link": "https://recalldreams.dev/wp-json/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-08-06 06:16:16 UTC\n# Lines: 596265 old -> 597212 new\n# Beautified: yes\n\n@@ -3962,6 +3962,34 @@\n               \"required\": true\n\n             }\n\n           }\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/jetpack/v4/reprint/rotate-export-secret\": {\n\n+      \"namespace\": \"jetpack/v4\",\n\n+      \"methods\": [\n\n+        \"POST\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"POST\"\n\n+          ],\n\n+          \"args\": []\n\n+        }\n\n+      ]\n\n+    },\n\n+    \"/jetpack/v4/reprint/enable-export\": {\n\n+      \"namespace\": \"jetpack/v4\",\n\n+      \"methods\": [\n\n+        \"POST\"\n\n+      ],\n\n+      \"endpoints\": [\n\n+        {\n\n+          \"methods\": [\n\n+            \"POST\"\n\n... (44 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-05T22:24:20.140427+00:00",
       "title": "Inbox",
@@ -21826,5 +21839,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-05T22:24:35.302418+00:00"
+  "updated": "2026-08-06T06:16:53.332044+00:00"
 }
