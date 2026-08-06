@@ -1,4 +1,4 @@
-<!-- github pages build bumper: 3 -->
+<!-- github pages build bumper: 4 -->
 
 <h1 align="center">Project Skyscraper Change Monitor & Site Mirror</h1>
 <h3 align="center"><i>
