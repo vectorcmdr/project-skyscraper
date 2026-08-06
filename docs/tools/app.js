@@ -929,6 +929,8 @@ function initQueryBar() {
 
 var _wsData = null;
 var _wsActiveDay = 0;
+var _wsStopped = false;
+var _wsLoadedDate = null;
 
 function _wsPad2(n) {
   return n < 10 ? '0' + n : '' + n;
@@ -951,10 +953,22 @@ function _wsParseUTC(str) {
   return new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6]));
 }
 
-function _wsDayLabel(header, idx) {
+function _wsTodayUTC() {
+  var n = new Date();
+  return n.getUTCFullYear() + '-' + _wsPad2(n.getUTCMonth() + 1) + '-' + _wsPad2(n.getUTCDate());
+}
+
+function _wsFmtShortDate(iso) {
+  var parts = String(iso || '').split('-');
+  if (parts.length !== 3) return iso || '';
+  var MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  var mo = MONTHS[parseInt(parts[1], 10) - 1] || parts[1];
+  return _wsPad2(parseInt(parts[2], 10)) + ' ' + mo + ' ' + parts[0];
+}
+
+function _wsDayLabel(header) {
   var m = /starts (\d{4}-\d{2}-\d{2})/.exec(String(header || ''));
-  var date = m ? m[1] : '';
-  return 'DAY ' + (idx + 1) + (date ? ' ' + date : '');
+  return m ? m[1] : '';
 }
 
 function _wsBuildPane(day, di) {
@@ -1026,29 +1040,51 @@ function _wsRender() {
     return;
   }
 
+  var today = _wsTodayUTC();
+  var active = -1;
+  for (var i = 0; i < _wsData.days.length; i++) {
+    if (_wsData.days[i].iso === today) { active = i; break; }
+  }
+  var stopped = false;
+  if (active === -1) {
+    if (today < _wsData.days[0].iso) {
+      active = 0;
+    } else {
+      active = _wsData.days.length - 1;
+      stopped = true;
+    }
+  }
+  _wsActiveDay = active;
+  _wsStopped = stopped;
+  _wsLoadedDate = today;
+
   tabsEl.innerHTML = '';
   panesEl.innerHTML = '';
 
-  _wsData.days.forEach(function(day, di) {
-    var tab = document.createElement('button');
-    tab.className = 'ws-day-tab' + (di === _wsActiveDay ? ' active' : '');
-    tab.textContent = day.label;
-    tab.setAttribute('data-ws-day', String(di));
-    tab.addEventListener('click', function() {
-      _wsActiveDay = di;
-      document.querySelectorAll('.ws-day-tab').forEach(function(t) {
-        t.classList.toggle('active', t.getAttribute('data-ws-day') === String(di));
-      });
-      document.querySelectorAll('.ws-day-pane').forEach(function(p) {
-        p.classList.toggle('active', p.getAttribute('data-ws-day') === String(di));
-      });
-    });
-    tabsEl.appendChild(tab);
+  var day = _wsData.days[active];
 
-    var pane = _wsBuildPane(day, di);
-    panesEl.appendChild(pane);
-    _wsReconcileDay(day);
-  });
+  var tab = document.createElement('button');
+  tab.className = 'ws-day-tab active' + (stopped ? ' stopped' : '');
+  tab.textContent = day.label;
+  tab.setAttribute('data-ws-day', String(active));
+  tabsEl.appendChild(tab);
+
+  if (stopped) {
+    day.rows.forEach(function(r) { r.passed = true; });
+  }
+
+  var pane = _wsBuildPane(day, active);
+  panesEl.appendChild(pane);
+  _wsReconcileDay(day);
+
+  if (snapEl) {
+    snapEl.classList.toggle('stopped', stopped);
+    if (stopped) {
+      snapEl.textContent = 'CLOCK NO LONGER RUNNING, LAST DATE: ' + day.label;
+    } else {
+      snapEl.textContent = 'SNAPSHOT: ' + day.label + ' (UTC)';
+    }
+  }
 }
 
 function _wsGreyPassed() {
@@ -1074,6 +1110,11 @@ function _wsTick() {
     });
     _wsReconcileDay(day);
   });
+
+  /* UTC-midnight rollover: re-select the column for the new day,
+     and flip to stopped once past the last date. */
+  var today = _wsTodayUTC();
+  if (today !== _wsLoadedDate) _wsRender();
 }
 
 function _wsLoad() {
@@ -1090,12 +1131,15 @@ function _wsLoad() {
           header = cells;
           continue;
         }
-        /* columns B, C, D = indices 1, 2, 3 */
-        for (var c = 1; c <= 3; c++) {
+        /* day columns follow column 0 (or column 1 if observed column kept) */
+        var firstCol = /observed/i.test(header[0]) ? 1 : 0;
+        for (var c = firstCol; c < header.length; c++) {
+          var iso = _wsDayLabel(header[c]);
+          if (!iso) continue;
           var d = _wsParseUTC(cells[c]);
           if (!d) continue;
-          var di = c - 1;
-          if (!days[di]) days[di] = { label: _wsDayLabel(header[c], di), rows: [] };
+          var di = c - firstCol;
+          if (!days[di]) days[di] = { iso: iso, label: _wsFmtShortDate(iso), rows: [] };
           days[di].rows.push({ ms: d.getTime(), utc: _wsFmtUTC(d), local: _wsFmtLocal(d), passed: false });
         }
       }

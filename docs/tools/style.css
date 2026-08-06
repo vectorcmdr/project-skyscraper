@@ -408,6 +408,9 @@ body {
   letter-spacing: .1em;
   margin-bottom: .5rem;
 }
+.ws-snapshot.stopped {
+  color: #888;
+}
 .ws-day-tabs {
   display: flex;
   gap: .5rem;
@@ -434,6 +437,12 @@ body {
   color: #d00;
   border-color: #d00;
   background: #0d0d0d;
+}
+.ws-day-tab.stopped {
+  color: #444;
+  border-color: #2a2a2a;
+  background: #0d0d0d;
+  cursor: default;
 }
 .ws-day-pane {
   display: none;
