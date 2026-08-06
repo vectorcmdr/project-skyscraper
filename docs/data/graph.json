@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T01:16:03.904218+00:00",
+  "updated": "2026-08-06T16:20:14.652773+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1002,10 +1002,26 @@
       "date": ""
     },
     {
+      "id": "/temporal-alignment-survey/context.image.src",
+      "type": "page",
+      "label": "Context.Image.Src",
+      "url": "https://project-skyscraper.com/temporal-alignment-survey/context.image.src",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "/request-memory-timestamp-094317/context.submission.url",
       "type": "page",
       "label": "Context.Submission.Url",
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/temporal-alignment-survey/context.submission.url",
+      "type": "page",
+      "label": "Context.Submission.Url",
+      "url": "https://project-skyscraper.com/temporal-alignment-survey/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -1304,6 +1320,14 @@
       "url": "https://project-skyscraper.com/author/system26da6be6a6/",
       "author": "",
       "date": ""
+    },
+    {
+      "id": "/temporal-alignment-survey",
+      "type": "page",
+      "label": "Temporal Alignment Survey",
+      "url": "https://project-skyscraper.com/temporal-alignment-survey/",
+      "author": "The Architect",
+      "date": "2026-08-06T16:19:02"
     },
     {
       "id": "/the-shared-dream",
@@ -17889,7 +17913,23 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/temporal-alignment-survey"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/temporal-alignment-survey/context.submission.url"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/temporal-alignment-survey/context.image.src"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -18542,6 +18582,10 @@
     {
       "source": "/the-shared-dream",
       "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/author/theskyscraperarchitect"
     },
     {
       "source": "/1970/01/01/origin",
