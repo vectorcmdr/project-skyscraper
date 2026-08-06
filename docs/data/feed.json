@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-06T20:11:43.525431+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": " <script type=\"module\">\n\n </script>\n\n </body>\n",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-06T20:09:10.077796+00:00",
       "title": "neural-network-status",
@@ -22730,5 +22743,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-06T20:09:10.085494+00:00"
+  "updated": "2026-08-06T20:11:43.532417+00:00"
 }
