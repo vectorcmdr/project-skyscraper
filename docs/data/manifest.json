@@ -1,6 +1,22 @@
 {
   "pages": [
     {
+      "path": "/counting/",
+      "title": "Counting",
+      "type": "page",
+      "modified": "2026-08-06T20:04:01.501061+00:00",
+      "date_gmt": "",
+      "author": "System"
+    },
+    {
+      "path": "/neural-network-status/",
+      "title": "Neural network status",
+      "type": "page",
+      "modified": "2026-08-06T20:04:01.499841+00:00",
+      "date_gmt": "2026-04-28T18:55:24+00:00",
+      "author": "The Architect"
+    },
+    {
       "path": "/2026/08/06/event-06082026/",
       "title": "2026_dataset",
       "type": "post",
@@ -15,14 +31,6 @@
       "modified": "2026-08-06T17:14:16+00:00",
       "date_gmt": "2026-05-28T17:00:20+00:00",
       "author": "System"
-    },
-    {
-      "path": "/neural-network-status/",
-      "title": "Neural network status",
-      "type": "page",
-      "modified": "2026-08-06T16:42:21.143019+00:00",
-      "date_gmt": "2026-04-28T18:55:24+00:00",
-      "author": "The Architect"
     },
     {
       "path": "/the-shared-dream/",
@@ -3527,14 +3535,6 @@
       "modified": "2026-07-05T17:04:04+00:00",
       "date_gmt": "2026-07-05T15:16:00+00:00",
       "author": "System"
-    },
-    {
-      "path": "/counting/",
-      "title": "Counting",
-      "type": "page",
-      "modified": "2026-07-05T16:04:23Z",
-      "date_gmt": "",
-      "author": 0
     },
     {
       "path": "/2026/07/04/fundamental-reality-of-matter-and-time/",
@@ -7530,5 +7530,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-06T18:04:03.757199+00:00"
+  "updated": "2026-08-06T20:04:01.507486+00:00"
 }
