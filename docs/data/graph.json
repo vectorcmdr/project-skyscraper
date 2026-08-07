@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T22:33:14.501486+00:00",
+  "updated": "2026-08-07T00:35:01.846943+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1538,6 +1538,14 @@
       "date": "2026-08-01T11:27:50Z"
     },
     {
+      "id": "/window-137",
+      "type": "page",
+      "label": "Window 137",
+      "url": "https://project-skyscraper.com/window-137/",
+      "author": "",
+      "date": "2026-08-06T21:59:49Z"
+    },
+    {
       "id": "/window-141319",
       "type": "page",
       "label": "Window 141319",
@@ -1842,6 +1850,14 @@
       "date": "2026-08-02T18:29:25Z"
     },
     {
+      "id": "/window-37861",
+      "type": "page",
+      "label": "Window 37861",
+      "url": "https://project-skyscraper.com/window-37861/",
+      "author": "",
+      "date": "2026-08-06T21:59:47Z"
+    },
+    {
       "id": "/window-3823",
       "type": "page",
       "label": "Window 3823",
@@ -1962,6 +1978,14 @@
       "date": "2026-08-01T10:26:29Z"
     },
     {
+      "id": "/window-5483",
+      "type": "page",
+      "label": "Window 5483",
+      "url": "https://project-skyscraper.com/window-5483/",
+      "author": "",
+      "date": "2026-08-06T22:00:25Z"
+    },
+    {
       "id": "/window-5527",
       "type": "page",
       "label": "Window 5527",
@@ -2024,6 +2048,14 @@
       "url": "https://project-skyscraper.com/window-6389/",
       "author": "",
       "date": "2026-08-02T16:27:16Z"
+    },
+    {
+      "id": "/window-6421",
+      "type": "page",
+      "label": "Window 6421",
+      "url": "https://project-skyscraper.com/window-6421/",
+      "author": "",
+      "date": "2026-08-06T22:00:28Z"
     },
     {
       "id": "/window-659",
@@ -2192,6 +2224,14 @@
       "url": "https://project-skyscraper.com/window-9001/",
       "author": "",
       "date": "2026-08-03T09:04:15Z"
+    },
+    {
+      "id": "/window-9091",
+      "type": "page",
+      "label": "Window 9091",
+      "url": "https://project-skyscraper.com/window-9091/",
+      "author": "",
+      "date": "2026-08-06T22:00:26Z"
     },
     {
       "id": "/window-911",
@@ -9969,6 +10009,14 @@
     },
     {
       "source": "sitemap",
+      "target": "/temporal-alignment-survey"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/06/event-06082026"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -10482,6 +10530,26 @@
     {
       "source": "sitemap",
       "target": "/window-733"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-37861"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-137"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-5483"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-9091"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-6421"
     },
     {
       "source": "/",
@@ -17440,6 +17508,34 @@
       "target": "/2026/07/31/sec-log-115212"
     },
     {
+      "source": "/temporal-alignment-survey",
+      "target": "/temporal-alignment-survey/context.submission.url"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/temporal-alignment-survey/context.image.src"
+    },
+    {
+      "source": "/temporal-alignment-survey",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/06/event-06082026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/06/event-06082026",
+      "target": "https://iili.io/CrnCv7R.png"
+    },
+    {
+      "source": "/2026/08/06/event-06082026",
+      "target": "/tag/selfowned"
+    },
+    {
+      "source": "/2026/08/06/event-06082026",
+      "target": "/2026/08/01/event-01082026"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -17956,6 +18052,26 @@
       "target": "/"
     },
     {
+      "source": "/window-37861",
+      "target": "/"
+    },
+    {
+      "source": "/window-137",
+      "target": "/"
+    },
+    {
+      "source": "/window-5483",
+      "target": "/"
+    },
+    {
+      "source": "/window-9091",
+      "target": "/"
+    },
+    {
+      "source": "/window-6421",
+      "target": "/"
+    },
+    {
       "source": "/2026/04/24/navigation",
       "target": "/report-glitching-realities"
     },
@@ -18046,34 +18162,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/temporal-alignment-survey",
-      "target": "/temporal-alignment-survey/context.submission.url"
-    },
-    {
-      "source": "/temporal-alignment-survey",
-      "target": "/temporal-alignment-survey/context.image.src"
-    },
-    {
-      "source": "/temporal-alignment-survey",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/06/event-06082026",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/06/event-06082026",
-      "target": "https://iili.io/CrnCv7R.png"
-    },
-    {
-      "source": "/2026/08/06/event-06082026",
-      "target": "/tag/selfowned"
-    },
-    {
-      "source": "/2026/08/06/event-06082026",
-      "target": "/2026/08/01/event-01082026"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -23740,6 +23828,10 @@
       "target": "/window-178093"
     },
     {
+      "source": "/window-137/comment-page-1",
+      "target": "/window-137"
+    },
+    {
       "source": "/window-18181/comment-page-1",
       "target": "/window-18181"
     },
@@ -23972,6 +24064,10 @@
       "target": "/window-251-2"
     },
     {
+      "source": "/window-6421/comment-page-1",
+      "target": "/window-6421"
+    },
+    {
       "source": "/window-2239/comment-page-1",
       "target": "/window-2239"
     },
@@ -24016,12 +24112,20 @@
       "target": "/screenshot"
     },
     {
+      "source": "/window-37861/comment-page-1",
+      "target": "/window-37861"
+    },
+    {
       "source": "/window-683/comment-page-1",
       "target": "/window-683"
     },
     {
       "source": "/window-7691/comment-page-1",
       "target": "/window-7691"
+    },
+    {
+      "source": "/window-9091/comment-page-1",
+      "target": "/window-9091"
     },
     {
       "source": "/window-5303/comment-page-1",
@@ -24126,6 +24230,10 @@
     {
       "source": "/window-607/comment-page-1",
       "target": "/window-607"
+    },
+    {
+      "source": "/window-5483/comment-page-1",
+      "target": "/window-5483"
     },
     {
       "source": "/window-2017/comment-page-1",
