@@ -924,19 +924,6 @@
       "game_date": ""
     },
     {
-      "type": "external_content_changed",
-      "timestamp": "2026-06-17T15:16:11.735493+00:00",
-      "title": "Content changed: https://recalldreams.dev/wp-json/",
-      "link": "https://recalldreams.dev/wp-json/",
-      "endpoint": "",
-      "diff": "# Diff: https://recalldreams.dev/wp-json/\n# File: api/wp-json/.json\n# Timestamp: 2026-06-17 15:13:40 UTC\n# Lines: 546606 old -> 546601 new\n# Beautified: yes\n\n@@ -1,6 +1,6 @@\n {\n\n   \"name\": \"RecallDreams\",\n\n-  \"description\": \"What makes a memory worth keeping ?\",\n\n+  \"description\": \"41 years old solo dev. French.\",\n\n   \"url\": \"https://recalldreams.dev\",\n\n   \"home\": \"https://recalldreams.dev\",\n\n   \"gmt_offset\": 1,\n",
-      "detail": "Content changed: https://recalldreams.dev/wp-json/",
-      "author": 0,
-      "site": "recalldreams",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "external_robots_txt_changed",
       "timestamp": "2026-06-17T14:50:02.193331+00:00",
       "title": "robots.txt captured for recalldreams.dev",
@@ -1565,5 +1552,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-08-06T17:19:21.758891+00:00"
+  "updated": "2026-08-07T07:47:53.914066+00:00"
 }
