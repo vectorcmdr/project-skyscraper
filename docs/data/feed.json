@@ -1,6 +1,110 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.120426+00:00",
+      "title": "b1c9e4f072a5",
+      "link": "https://project-skyscraper.com/b1c9e4f072a5/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/b1c9e4f072a5/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.118055+00:00",
+      "title": "12dd862fd254",
+      "link": "https://project-skyscraper.com/12dd862fd254/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/12dd862fd254/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.115647+00:00",
+      "title": "53a05806675f",
+      "link": "https://project-skyscraper.com/53a05806675f/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/53a05806675f/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.113245+00:00",
+      "title": "8740677a9483",
+      "link": "https://project-skyscraper.com/8740677a9483/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/8740677a9483/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.110889+00:00",
+      "title": "only-dust-remain",
+      "link": "https://project-skyscraper.com/only-dust-remain/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/only-dust-remain/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.108324+00:00",
+      "title": "tr4ce",
+      "link": "https://project-skyscraper.com/tr4ce/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/tr4ce/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.105903+00:00",
+      "title": "logo",
+      "link": "https://project-skyscraper.com/logo/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/logo/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-07T12:40:10.103047+00:00",
+      "title": "project-skyscraper",
+      "link": "https://project-skyscraper.com/project-skyscraper/",
+      "endpoint": "",
+      "diff": "- function i(e) {\n- try {\n- var t = {\n- supportTests: e,\n- timestamp: (new Date).valueOf()\n- } catch (e) {}\n- }\n- function c(e, t, n) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n- }\n- function p(e, t) {\n- e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n- var n = e.getImageData(16, 16, 1, 1);\n- for (let e = 0; e < n.data.length; e++)\n- if (0 !== n.data[e]) return !1;\n- return !0\n- }\n- function u(e, t, n, a) {\n- switch (t) {\n- case \"flag\":\n- return n(e, \"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f\", \"\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f\") ? !1 : !n(e, \"\\ud83c\\udde8\\ud83c\\uddf6\", \"\\ud83c\\udde8\\u200b\\ud83c\\uddf6\") && !n(e, \"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f\", \"\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f\");\n- case \"emoji\":",
+      "detail": "Content changed: https://project-skyscraper.com/project-skyscraper/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-07T12:35:56.772624+00:00",
       "title": "https://project-skyscraper.com/2026/08/07/structural-analysis-101600/",
@@ -22384,5 +22488,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-07T12:35:56.781330+00:00"
+  "updated": "2026-08-07T12:40:10.131043+00:00"
 }
