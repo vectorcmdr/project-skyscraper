@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T09:17:29.393113+00:00",
+  "updated": "2026-08-07T12:36:20.783947+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -10033,6 +10033,14 @@
     },
     {
       "source": "sitemap",
+      "target": "/2026/08/07/structural-analysis-101600"
+    },
+    {
+      "source": "sitemap",
+      "target": "/temporal-alignment-results-in-progress"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -17552,6 +17560,18 @@
       "target": "/2026/08/01/event-01082026"
     },
     {
+      "source": "/2026/08/07/structural-analysis-101600",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/07/structural-analysis-101600",
+      "target": "/2026/08/06/event-06082026"
+    },
+    {
+      "source": "/temporal-alignment-results-in-progress",
+      "target": "/"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -18182,18 +18202,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/temporal-alignment-results-in-progress",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/07/structural-analysis-101600",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/07/structural-analysis-101600",
-      "target": "/2026/08/06/event-06082026"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
