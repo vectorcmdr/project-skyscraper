@@ -1,6 +1,123 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377270+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/",
+      "link": "https://recalldreams.dev/home/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/\n# File: html/home/index.html\n# Timestamp: 2026-08-07 01:09:19 UTC\n# Lines: 136267 old -> 136354 new\n# Beautified: yes\n\n@@ -777,9 +777,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -787,7 +790,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -795,8 +798,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377251+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "link": "https://recalldreams.dev/home/contact-me/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/contact-me/\n# File: html/home/contact-me/index.html\n# Timestamp: 2026-08-07 01:09:18 UTC\n# Lines: 128238 old -> 128400 new\n# Beautified: yes\n\n@@ -473,9 +473,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -483,7 +486,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -491,8 +494,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/contact-me/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377232+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "link": "https://recalldreams.dev/home/discover-more/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/discover-more/\n# File: html/home/discover-more/index.html\n# Timestamp: 2026-08-07 01:09:17 UTC\n# Lines: 117187 old -> 117274 new\n# Beautified: yes\n\n@@ -551,9 +551,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -561,7 +564,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -569,8 +572,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377211+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "link": "https://recalldreams.dev/home/buy-me-a-tea/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/buy-me-a-tea/\n# File: html/home/buy-me-a-tea/index.html\n# Timestamp: 2026-08-07 01:09:16 UTC\n# Lines: 131307 old -> 131315 new\n# Beautified: yes\n\n@@ -506,9 +506,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -516,7 +519,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -524,8 +527,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/buy-me-a-tea/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377191+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/schrodingers-instagram/\n# File: html/home/schrodingers-instagram/index.html\n# Timestamp: 2026-08-07 01:09:15 UTC\n# Lines: 123114 old -> 123124 new\n# Beautified: yes\n\n@@ -571,9 +571,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -581,7 +584,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -589,8 +592,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377171+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "link": "https://recalldreams.dev/home/newsletter/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/home/newsletter/\n# File: html/home/newsletter/index.html\n# Timestamp: 2026-08-07 01:09:14 UTC\n# Lines: 128316 old -> 128403 new\n# Beautified: yes\n\n@@ -477,9 +477,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -487,7 +490,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -495,8 +498,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/home/newsletter/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377148+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/landing-page/terminal/\n# File: html/landing-page/terminal/index.html\n# Timestamp: 2026-08-07 01:09:13 UTC\n# Lines: 74715 old -> 74802 new\n# Beautified: yes\n\n@@ -165,9 +165,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -175,7 +178,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -183,8 +186,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (90 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377124+00:00",
+      "title": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "link": "https://recalldreams.dev/do-you-know-me-well/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/do-you-know-me-well/\n# File: html/do-you-know-me-well/index.html\n# Timestamp: 2026-08-07 01:09:12 UTC\n# Lines: 119063 old -> 119227 new\n# Beautified: yes\n\n@@ -489,9 +489,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -499,7 +502,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -507,8 +510,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (88 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/do-you-know-me-well/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-07T01:09:37.377039+00:00",
+      "title": "Content changed: https://recalldreams.dev/",
+      "link": "https://recalldreams.dev/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/\n# File: html/index.html\n# Timestamp: 2026-08-07 01:09:11 UTC\n# Lines: 62941 old -> 63104 new\n# Beautified: yes\n\n@@ -171,9 +171,12 @@\n <script data-wp-strategy=\"defer\" defer fetchpriority=\"low\" id=\"jetpack-stats-js\" src=\"https://stats.wp.com/e-000000.js\"></script>\n\n \n\n-    o = (window._wpemojiSettings = a, \"wpEmojiSettingsSupports\"),\n\n-    s = [\"flag\", \"emoji\"];\n\n+    t = document.querySelector(e);\n\n+if (!(t instanceof HTMLScriptElement)) throw new Error(\"Element missing: \" + e);\n\n+const r = JSON.parse(t.text),\n\n+    s = (window._wpemojiSettings = r, \"wpEmojiSettingsSupports\"),\n\n+    o = [\"flag\", \"emoji\"];\n\n \n\n function i(e) {\n\n     try {\n\n@@ -181,7 +184,7 @@\n             supportTests: e,\n\n             timestamp: (new Date).valueOf()\n\n-        sessionStorage.setItem(o, JSON.stringify(t))\n\n+        sessionStorage.setItem(s, JSON.stringify(t))\n\n     } catch (e) {}\n\n }\n\n \n\n@@ -189,8 +192,8 @@\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);\n\n     t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n     e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0);\n\n-    const a = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n-    return t.every((e, t) => e === a[t])\n\n+    const r = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data);\n\n+    return t.every((e, t) => e === r[t])\n\n }\n\n... (90 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-07T00:34:55.539763+00:00",
       "title": "https://project-skyscraper.com/2026/08/06/event-06082026/",
@@ -23303,5 +23420,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-07T00:34:55.551466+00:00"
+  "updated": "2026-08-07T01:09:37.386089+00:00"
 }
