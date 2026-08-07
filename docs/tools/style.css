@@ -442,6 +442,30 @@ body {
 .ws-snapshot.stopped {
   color: #888;
 }
+.ws-clocks {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  color: #555;
+  padding: .4rem .25rem;
+  border-bottom: 1px solid #141414;
+  margin-bottom: .75rem;
+}
+.ws-clock {
+  font-weight: bold;
+}
+#wsClockUTC {
+  color: #c0c0c0;
+}
+#wsClockLocal {
+  color: #888;
+}
+#wsClockGame {
+  color: #0b6;
+}
 .ws-day-tabs {
   display: flex;
   gap: .5rem;
@@ -519,6 +543,13 @@ body {
 }
 .ws-time-row.ws-passed .ws-local {
   color: #2c2c2c;
+}
+.ws-game {
+  min-width: 90px;
+  color: #0b6;
+}
+.ws-time-row.ws-passed .ws-game {
+  color: #183;
 }
 .ws-hidden {
   display: none;

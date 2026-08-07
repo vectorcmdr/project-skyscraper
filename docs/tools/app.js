@@ -960,6 +960,16 @@ function _wsFmtLocal(d) {
     + ' ' + _wsPad2(d.getHours()) + ':' + _wsPad2(d.getMinutes()) + ':' + _wsPad2(d.getSeconds());
 }
 
+function _wsFmtTimeOnly(d) {
+  return _wsPad2(d.getUTCHours()) + ':' + _wsPad2(d.getUTCMinutes()) + ':' + _wsPad2(d.getUTCSeconds());
+}
+
+function _wsGameTime() {
+  var s = Math.floor(Date.now() / 1000);
+  var gt = (s * 48 + 64800) % 86400;
+  return _wsPad2(Math.floor(gt / 3600)) + ':' + _wsPad2(Math.floor((gt % 3600) / 60)) + ':' + _wsPad2(Math.floor(gt % 60));
+}
+
 function _wsParseUTC(str) {
   /* str = "YYYY-MM-DD HH:MM:SS" treated as UTC */
   var m = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})$/.exec(String(str || '').trim());
@@ -1006,9 +1016,13 @@ function _wsBuildPane(day, di) {
     var local = document.createElement('span');
     local.className = 'ws-local';
     local.textContent = r.local;
+    var game = document.createElement('span');
+    game.className = 'ws-game';
+    game.textContent = r.game || '';
     row.appendChild(dot);
     row.appendChild(utc);
     row.appendChild(local);
+    row.appendChild(game);
     pane.appendChild(row);
     r.el = row;
   });
@@ -1131,6 +1145,16 @@ function _wsTick() {
   if (today !== _wsLoadedDate) _wsRender();
 }
 
+function _wsClockTick() {
+  var now = new Date();
+  var u = document.getElementById('wsClockUTC');
+  var l = document.getElementById('wsClockLocal');
+  var g = document.getElementById('wsClockGame');
+  if (u) u.textContent = _wsFmtTimeOnly(now);
+  if (l) l.textContent = _wsPad2(now.getHours()) + ':' + _wsPad2(now.getMinutes()) + ':' + _wsPad2(now.getSeconds());
+  if (g) g.textContent = _wsGameTime();
+}
+
 function _wsLoad() {
   fetch('data/wave_projection.csv')
     .then(function(r) { return r.ok ? r.text() : Promise.reject(r.status); })
@@ -1154,7 +1178,12 @@ function _wsLoad() {
           if (!d) continue;
           var di = c - firstCol;
           if (!days[di]) days[di] = { iso: iso, label: _wsFmtShortDate(iso), rows: [] };
-          days[di].rows.push({ ms: d.getTime(), utc: _wsFmtUTC(d), local: _wsFmtLocal(d), passed: false });
+          var game = '';
+          if (/GAME/i.test(header[c + 1] || '')) {
+            var g = _wsParseUTC(cells[c + 1]);
+            if (g) game = _wsFmtTimeOnly(g);
+          }
+          days[di].rows.push({ ms: d.getTime(), utc: _wsFmtUTC(d), local: _wsFmtLocal(d), game: game, passed: false });
         }
       }
       _wsData = { days: days };
@@ -1193,4 +1222,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initQueryBar();
   _wsLoad();
   setInterval(_wsTick, 30000);
+  _wsClockTick();
+  setInterval(_wsClockTick, 1000);
 });

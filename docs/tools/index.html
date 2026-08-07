@@ -153,7 +153,12 @@
     <!-- PANE: WINDOW_SYNC -->
     <div class="tool-pane" id="pane-window_sync">
       <h3>&#9654; WINDOW SYNC</h3>
-      <p>PROJECTED WAVE SHIFTS FROM wave_projection.csv. UTC + LOCAL. GREY = PASSED.</p>
+      <p>PROJECTED WAVE SHIFTS FROM wave_projection.csv. UTC + LOCAL + GAME. GREY = PASSED.</p>
+      <div class="ws-clocks">
+        <span class="ws-clock" id="wsClockUTC">--:--:--</span> UTC
+        <span class="ws-clock" id="wsClockLocal">--:--:--</span> LOCAL
+        <span class="ws-clock" id="wsClockGame">--:--:--</span> GAME
+      </div>
       <div class="ws-snapshot" id="wsSnapshot">SNAPSHOT: loading...</div>
       <div class="ws-day-tabs" id="wsDayTabs"></div>
       <div class="ws-day-panes" id="wsDayPanes"></div>
