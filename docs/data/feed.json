@@ -2,6 +2,20 @@
   "entries": [
     {
       "type": "api_items_added",
+      "timestamp": "2026-08-08T22:10:45+00:00",
+      "title": "sync_08-32",
+      "link": "https://project-skyscraper.com/wp-content/uploads/2026/08/sync_08-32.png",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/media",
+      "author": "The Architect",
+      "site": "",
+      "id": 7258,
+      "game_date": "2026-08-08T22:10:45+00:00",
+      "image": "https://project-skyscraper.com/wp-content/uploads/2026/08/sync_08-32.png"
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-08-08T21:50:08+00:00",
       "title": "sync_05-04",
       "link": "https://project-skyscraper.com/wp-content/uploads/2026/08/sync_05-04.png",
@@ -22335,5 +22349,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-08T21:51:13.439435+00:00"
+  "updated": "2026-08-08T22:11:06.434605+00:00"
 }
