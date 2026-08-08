@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-08T16:05:42.111100+00:00",
+      "title": "freeimage.host image count: 22 → 23",
+      "link": "https://freeimage.host/skyscraper_prj",
+      "endpoint": "",
+      "diff": "- count: 22\n+ count: 23",
+      "detail": "freeimage.host image count: 22 → 23",
+      "author": 0,
+      "site": "freeimage",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-08T15:43:25.216033+00:00",
       "title": "neural-network-status",
@@ -22280,5 +22293,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-08T15:43:25.225517+00:00"
+  "updated": "2026-08-08T16:05:42.119241+00:00"
 }
