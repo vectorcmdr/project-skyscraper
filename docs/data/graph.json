@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T11:16:48.936250+00:00",
+  "updated": "2026-08-09T11:18:46.601907+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6496,6 +6496,14 @@
       "url": "https://project-skyscraper.com/wp-content/uploads/2026/05/Wallace-Stevens.jpg",
       "author": "The Architect",
       "date": "2026-05-17T09:48:44"
+    },
+    {
+      "id": "/wp-content/uploads/2026/08/Weak-memories-never-last.png",
+      "type": "media",
+      "label": "Weak memories never last",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/08/Weak-memories-never-last.png",
+      "author": "The Architect",
+      "date": "2026-08-09T11:12:14"
     },
     {
       "id": "/wp-content/uploads/2026/05/When_we_were_17.png",
@@ -18509,6 +18517,10 @@
     },
     {
       "source": "/2026/04/24/navigation",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/04/24/navigation",
       "target": "/about"
     },
     {
@@ -19241,6 +19253,10 @@
     },
     {
       "source": "/wp-content/uploads/2026/08/sync_20-16.png",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/08/Weak-memories-never-last.png",
       "target": "/author/theskyscraperarchitect"
     },
     {
