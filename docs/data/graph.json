@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T11:18:46.601907+00:00",
+  "updated": "2026-08-09T12:28:42.719348+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -10257,6 +10257,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "sitemap",
       "target": "/temporal-alignment-survey"
     },
     {
@@ -10278,6 +10282,10 @@
     {
       "source": "sitemap",
       "target": "/2026/08/08/structural-analysis-153421"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/09/event-09082026"
     },
     {
       "source": "sitemap",
@@ -17816,6 +17824,14 @@
       "target": "/2026/08/06/event-06082026"
     },
     {
+      "source": "/a-message-to-the-community",
+      "target": "/wp-content/uploads/2026/08/Weak-memories-never-last.png"
+    },
+    {
+      "source": "/a-message-to-the-community",
+      "target": "/"
+    },
+    {
       "source": "/temporal-alignment-survey",
       "target": "/temporal-alignment-survey/context.submission.url"
     },
@@ -17934,6 +17950,22 @@
     {
       "source": "/2026/08/08/structural-analysis-153421",
       "target": "/2026/08/09/event-09082026"
+    },
+    {
+      "source": "/2026/08/09/event-09082026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/09/event-09082026",
+      "target": "https://www.twitch.tv/nomanswalk"
+    },
+    {
+      "source": "/2026/08/09/event-09082026",
+      "target": "/tag/selfowned"
+    },
+    {
+      "source": "/2026/08/09/event-09082026",
+      "target": "/2026/08/08/structural-analysis-153421"
     },
     {
       "source": "/project-skyscraper",
@@ -18614,22 +18646,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/08/09/event-09082026",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/09/event-09082026",
-      "target": "https://www.twitch.tv/nomanswalk"
-    },
-    {
-      "source": "/2026/08/09/event-09082026",
-      "target": "/tag/selfowned"
-    },
-    {
-      "source": "/2026/08/09/event-09082026",
-      "target": "/2026/08/08/structural-analysis-153421"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
