@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-08-09T01:08:59.728272+00:00",
+      "title": "#7275 (posts)",
+      "link": "https:///",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #7275 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 7275,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-09T00:50:23.893514+00:00",
       "title": "neural-network-status",
@@ -22457,5 +22470,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-09T00:50:23.902178+00:00"
+  "updated": "2026-08-09T01:08:59.737765+00:00"
 }
