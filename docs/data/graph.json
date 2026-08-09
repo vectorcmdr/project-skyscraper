@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T23:29:37.000564+00:00",
+  "updated": "2026-08-09T00:28:39.959038+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1384,6 +1384,86 @@
       "url": "https://project-skyscraper.com/structural-analysis-161527-full/",
       "author": "System",
       "date": "2026-06-21T15:15:00"
+    },
+    {
+      "id": "/sync_01-36",
+      "type": "page",
+      "label": "Sync_01 36",
+      "url": "https://project-skyscraper.com/sync_01-36/",
+      "author": "",
+      "date": "2026-08-08T18:28:16Z"
+    },
+    {
+      "id": "/sync_03-12",
+      "type": "page",
+      "label": "Sync_03 12",
+      "url": "https://project-skyscraper.com/sync_03-12/",
+      "author": "",
+      "date": "2026-08-08T18:50:56Z"
+    },
+    {
+      "id": "/sync_05-04",
+      "type": "page",
+      "label": "Sync_05 04",
+      "url": "https://project-skyscraper.com/sync_05-04/",
+      "author": "",
+      "date": "2026-08-08T21:50:08Z"
+    },
+    {
+      "id": "/sync_05-52",
+      "type": "page",
+      "label": "Sync_05 52",
+      "url": "https://project-skyscraper.com/sync_05-52/",
+      "author": "",
+      "date": "2026-08-08T18:28:18Z"
+    },
+    {
+      "id": "/sync_08-32",
+      "type": "page",
+      "label": "Sync_08 32",
+      "url": "https://project-skyscraper.com/sync_08-32/",
+      "author": "",
+      "date": "2026-08-08T22:10:45Z"
+    },
+    {
+      "id": "/sync_10-40",
+      "type": "page",
+      "label": "Sync_10 40",
+      "url": "https://project-skyscraper.com/sync_10-40/",
+      "author": "",
+      "date": "2026-08-08T22:41:30Z"
+    },
+    {
+      "id": "/sync_13-36",
+      "type": "page",
+      "label": "Sync_13 36",
+      "url": "https://project-skyscraper.com/sync_13-36/",
+      "author": "",
+      "date": "2026-08-08T22:19:24Z"
+    },
+    {
+      "id": "/sync_16-00",
+      "type": "page",
+      "label": "Sync_16 00",
+      "url": "https://project-skyscraper.com/sync_16-00/",
+      "author": "",
+      "date": "2026-08-08T22:51:10Z"
+    },
+    {
+      "id": "/sync_16-16",
+      "type": "page",
+      "label": "Sync_16 16",
+      "url": "https://project-skyscraper.com/sync_16-16/",
+      "author": "",
+      "date": "2026-08-08T23:28:22Z"
+    },
+    {
+      "id": "/sync_20-16",
+      "type": "page",
+      "label": "Sync_20 16",
+      "url": "https://project-skyscraper.com/sync_20-16/",
+      "author": "",
+      "date": "2026-08-08T23:28:58Z"
     },
     {
       "id": "/author/system26da6be6a6",
@@ -10161,6 +10241,14 @@
     },
     {
       "source": "sitemap",
+      "target": "/temporal-alignment-results"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/08/structural-analysis-153421"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -10694,6 +10782,46 @@
     {
       "source": "sitemap",
       "target": "/window-6421"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_01-36"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_05-52"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_03-12"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_05-04"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_08-32"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_13-36"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_10-40"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_16-00"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_16-16"
+    },
+    {
+      "source": "sitemap",
+      "target": "/sync_20-16"
     },
     {
       "source": "/",
@@ -17712,6 +17840,62 @@
       "target": "/"
     },
     {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_01-36.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_03-12.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/2026/06/29/event-29062026"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_05-04.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_05-52.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_08-32.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_10-40.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_13-36.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_16-00.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_16-16.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/wp-content/uploads/2026/08/sync_20-16.png"
+    },
+    {
+      "source": "/temporal-alignment-results",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/08/structural-analysis-153421",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/08/structural-analysis-153421",
+      "target": "/2026/08/07/structural-analysis-101600"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -18248,6 +18432,46 @@
       "target": "/"
     },
     {
+      "source": "/sync_01-36",
+      "target": "/"
+    },
+    {
+      "source": "/sync_05-52",
+      "target": "/"
+    },
+    {
+      "source": "/sync_03-12",
+      "target": "/"
+    },
+    {
+      "source": "/sync_05-04",
+      "target": "/"
+    },
+    {
+      "source": "/sync_08-32",
+      "target": "/"
+    },
+    {
+      "source": "/sync_13-36",
+      "target": "/"
+    },
+    {
+      "source": "/sync_10-40",
+      "target": "/"
+    },
+    {
+      "source": "/sync_16-00",
+      "target": "/"
+    },
+    {
+      "source": "/sync_16-16",
+      "target": "/"
+    },
+    {
+      "source": "/sync_20-16",
+      "target": "/"
+    },
+    {
       "source": "/2026/04/24/navigation",
       "target": "/report-glitching-realities"
     },
@@ -18346,18 +18570,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/temporal-alignment-results",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/08/structural-analysis-153421",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/08/structural-analysis-153421",
-      "target": "/2026/08/07/structural-analysis-101600"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
