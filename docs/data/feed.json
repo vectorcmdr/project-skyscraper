@@ -1,6 +1,45 @@
 {
   "entries": [
     {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-08-10T12:59:10.919062+00:00",
+      "title": "YouTube public video count: 107 -> 108",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- public: 107\n+ public: 108",
+      "detail": "YouTube public video count: 107 -> 108",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_video_hidden",
+      "timestamp": "2026-08-10T12:59:10.919041+00:00",
+      "title": "Hidden upload: No Man's Sky 10th Anniversary Trailer",
+      "link": "https://www.youtube.com/watch?v=c-KoLySxccY",
+      "endpoint": "",
+      "diff": "+ hidden upload: No Man's Sky 10th Anniversary Trailer",
+      "detail": "Hidden upload detected: No Man's Sky 10th Anniversary Trailer",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-08-10T12:59:10.918990+00:00",
+      "title": "YouTube upload total: 108 -> 109",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 108\n+ total: 109",
+      "detail": "YouTube upload total: 108 -> 109",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-09T12:28:35.283696+00:00",
       "title": "https://project-skyscraper.com/2026/08/09/event-09082026/",
@@ -22590,5 +22629,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-09T12:28:35.291492+00:00"
+  "updated": "2026-08-10T12:59:10.926785+00:00"
 }
