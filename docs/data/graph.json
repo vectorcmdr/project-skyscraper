@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T17:57:55.116379+00:00",
+  "updated": "2026-08-11T18:02:52.062571+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -8352,6 +8352,14 @@
       "url": "https://www.youtube.com/watch?v=jbjGjyvBokw",
       "author": "",
       "date": ""
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=c-KoLySxccY",
+      "type": "external",
+      "label": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=c-KoLySxccY",
+      "author": "",
+      "date": ""
     }
   ],
   "links": [
@@ -10350,6 +10358,22 @@
     {
       "source": "sitemap",
       "target": "/2026/08/09/event-09082026"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/09/event-09082026-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/09/event-09082026-2"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/10/event-10082026-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/10/event-10082026-2"
     },
     {
       "source": "sitemap",
@@ -18032,6 +18056,70 @@
       "target": "/2026/08/08/structural-analysis-153421"
     },
     {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "https://www.instagram.com/p/Db16y9bgDPl/?igsh=YXRuaXMyYm5hMmJu"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/2026/08/09/event-09082026"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/2026/08/09/event-09082026-2"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/wp-content/uploads/2026/08/The-dance.jpg"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "https://www.youtube.com/watch?v=jbjGjyvBokw"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/2026/08/09/event-09082026-1"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/2026/08/10/event-10082026-1"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "https://www.youtube.com/watch?v=c-KoLySxccY"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/2026/08/09/event-09082026-2"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/2026/08/10/event-10082026-2"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "https://x.com/NoMansSky/status/2086832185017774510"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/2026/08/10/event-10082026-1"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -18710,46 +18798,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-1",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-1",
-      "target": "https://www.instagram.com/p/Db16y9bgDPl/?igsh=YXRuaXMyYm5hMmJu"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-1",
-      "target": "/2026/08/09/event-09082026"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2",
-      "target": "/wp-content/uploads/2026/08/The-dance.jpg"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2",
-      "target": "https://www.youtube.com/watch?v=jbjGjyvBokw"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2",
-      "target": "/2026/08/09/event-09082026-1"
-    },
-    {
-      "source": "/2026/08/10/event-10082026-2",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/10/event-10082026-2",
-      "target": "https://x.com/NoMansSky/status/2086832185017774510"
-    },
-    {
-      "source": "/2026/08/10/event-10082026-2",
-      "target": "/2026/08/10/event-10082026-1"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
