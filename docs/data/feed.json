@@ -1,6 +1,59 @@
 {
   "entries": [
     {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-08-11T13:27:02.375488+00:00",
+      "title": "Memory bloc restoration: 321/365 [44 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 44 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 44,
+      "last_timestamp": "2026-08-11T13:27:02.375488+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-11T13:27:02.375121+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7329,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-11T13:26:24+00:00",
+      "title": "2026_dataset",
+      "link": "https://project-skyscraper.com/2026/08/09/event-09082026-2/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7329,
+      "game_date": "2026-08-09T18:00:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-11T13:26:04+00:00",
+      "title": "The dance",
+      "link": "https://project-skyscraper.com/wp-content/uploads/2026/08/The-dance.jpg",
+      "endpoint": "/wp-json/wp/v2/media",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/media",
+      "author": "The Architect",
+      "site": "",
+      "id": 7331,
+      "game_date": "2026-08-11T13:26:04+00:00",
+      "image": "https://project-skyscraper.com/wp-content/uploads/2026/08/The-dance.jpg"
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-11T13:17:17.083528+00:00",
       "title": "neural-network-status",
@@ -12,19 +65,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-08-11T13:02:02.341632+00:00",
-      "title": "Memory bloc restoration: 321/365 [43 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 43 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "321/365",
-      "page_count": 43,
-      "last_timestamp": "2026-08-11T13:02:02.341632+00:00"
     },
     {
       "type": "api_items_added",
@@ -22708,5 +22748,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-11T13:17:17.094347+00:00"
+  "updated": "2026-08-11T13:27:02.385785+00:00"
 }
