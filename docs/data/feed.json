@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-11T13:17:17.083528+00:00",
+      "title": "neural-network-status",
+      "link": "https://project-skyscraper.com/neural-network-status/",
+      "endpoint": "",
+      "diff": "  0 Live Connections\n- DESYNCHRONISATION\n+ &#8230;\n  const canvas = document.getElementById('meshCanvas');\n  this.x = 0;\n  this.y = 0;\n  this.z = 0;\n- this.glow = 0; // 0 = éteint, 1 = allumé\n+ this.glow = 0; //\n  }\n  update(time) {\n  // Rotation\n  this.screenX = width / 2 + this.x * scale;\n  this.screenY = height / 2 + this.y * scale;\n  this.depthScale = scale;\n- // Glow : seul le point actif est allumé\n+ // Glow\n  const target = (this.index === activeIndex) ? 1 : 0;\n  this.glow += (target - this.glow) * 0.16;\n  }\n  ctx.fillStyle = '#ff2d2d';\n  // === GLOW ===",
+      "detail": "Content changed: https://project-skyscraper.com/neural-network-status/",
+      "author": "The Architect",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "memory_bloc_restoration",
       "timestamp": "2026-08-11T13:02:02.341632+00:00",
       "title": "Memory bloc restoration: 321/365 [43 Pages]",
@@ -22695,5 +22708,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-11T13:02:02.352262+00:00"
+  "updated": "2026-08-11T13:17:17.094347+00:00"
 }
