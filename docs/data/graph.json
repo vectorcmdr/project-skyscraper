@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T10:25:11.737348+00:00",
+  "updated": "2026-08-12T12:29:08.266767+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1210,6 +1210,14 @@
       "date": "2026-08-04T23:07:54Z"
     },
     {
+      "id": "/no-mans-sky_20260803221245",
+      "type": "page",
+      "label": "No Mans Sky_20260803221245",
+      "url": "https://project-skyscraper.com/no-mans-sky_20260803221245/",
+      "author": "",
+      "date": "2026-08-12T07:52:18Z"
+    },
+    {
       "id": "/category/non-classe",
       "type": "page",
       "label": "Non Classe",
@@ -1530,6 +1538,14 @@
       "date": ""
     },
     {
+      "id": "/window-10007",
+      "type": "page",
+      "label": "Window 10007",
+      "url": "https://project-skyscraper.com/window-10007/",
+      "author": "",
+      "date": "2026-08-12T07:52:07Z"
+    },
+    {
       "id": "/window-10009",
       "type": "page",
       "label": "Window 10009",
@@ -1538,12 +1554,28 @@
       "date": "2026-08-02T18:29:26Z"
     },
     {
+      "id": "/window-109",
+      "type": "page",
+      "label": "Window 109",
+      "url": "https://project-skyscraper.com/window-109/",
+      "author": "",
+      "date": "2026-08-12T07:51:56Z"
+    },
+    {
       "id": "/window-10949",
       "type": "page",
       "label": "Window 10949",
       "url": "https://project-skyscraper.com/window-10949/",
       "author": "",
       "date": "2026-08-01T22:15:11Z"
+    },
+    {
+      "id": "/window-10987",
+      "type": "page",
+      "label": "Window 10987",
+      "url": "https://project-skyscraper.com/window-10987/",
+      "author": "",
+      "date": "2026-08-12T09:13:43Z"
     },
     {
       "id": "/window-11",
@@ -1658,6 +1690,14 @@
       "date": "2026-08-01T22:15:09Z"
     },
     {
+      "id": "/window-1619",
+      "type": "page",
+      "label": "Window 1619",
+      "url": "https://project-skyscraper.com/window-1619/",
+      "author": "",
+      "date": "2026-08-12T07:52:01Z"
+    },
+    {
       "id": "/window-17",
       "type": "page",
       "label": "Window 17",
@@ -1688,6 +1728,14 @@
       "url": "https://project-skyscraper.com/window-1831/",
       "author": "",
       "date": "2026-08-02T16:00:34Z"
+    },
+    {
+      "id": "/window-184463",
+      "type": "page",
+      "label": "Window 184463",
+      "url": "https://project-skyscraper.com/window-184463/",
+      "author": "",
+      "date": "2026-08-12T07:52:05Z"
     },
     {
       "id": "/window-19",
@@ -1744,6 +1792,14 @@
       "url": "https://project-skyscraper.com/window-1997/",
       "author": "",
       "date": "2026-08-01T11:22:24Z"
+    },
+    {
+      "id": "/window-1999",
+      "type": "page",
+      "label": "Window 1999",
+      "url": "https://project-skyscraper.com/window-1999/",
+      "author": "",
+      "date": "2026-08-12T09:13:42Z"
     },
     {
       "id": "/window-2",
@@ -2288,6 +2344,14 @@
       "url": "https://project-skyscraper.com/window-83/",
       "author": "",
       "date": "2026-08-01T10:21:06Z"
+    },
+    {
+      "id": "/window-8387",
+      "type": "page",
+      "label": "Window 8387",
+      "url": "https://project-skyscraper.com/window-8387/",
+      "author": "",
+      "date": "2026-08-12T07:52:00Z"
     },
     {
       "id": "/window-8867",
@@ -10449,6 +10513,14 @@
     },
     {
       "source": "sitemap",
+      "target": "/2026/08/11/event-11082026-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/11/event-11082026-2"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -11022,6 +11094,38 @@
     {
       "source": "sitemap",
       "target": "/sync_20-16"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-109"
+    },
+    {
+      "source": "sitemap",
+      "target": "/no-mans-sky_20260803221245"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-8387"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-1619"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-184463"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-10007"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-1999"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-10987"
     },
     {
       "source": "/",
@@ -18184,6 +18288,30 @@
       "target": "/2026/08/10/event-10082026-1"
     },
     {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "https://forums.atlas-65.com/t/downtime-preparations-on-nomanswalk-twitch/10217"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/2026/08/10/event-10082026-2"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-2",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-2",
+      "target": "/tag/selfowned"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-2",
+      "target": "/2026/08/11/event-11082026-1"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -18760,6 +18888,38 @@
       "target": "/"
     },
     {
+      "source": "/window-109",
+      "target": "/"
+    },
+    {
+      "source": "/no-mans-sky_20260803221245",
+      "target": "/"
+    },
+    {
+      "source": "/window-8387",
+      "target": "/"
+    },
+    {
+      "source": "/window-1619",
+      "target": "/"
+    },
+    {
+      "source": "/window-184463",
+      "target": "/"
+    },
+    {
+      "source": "/window-10007",
+      "target": "/"
+    },
+    {
+      "source": "/window-1999",
+      "target": "/"
+    },
+    {
+      "source": "/window-10987",
+      "target": "/"
+    },
+    {
       "source": "/2026/04/24/navigation",
       "target": "/report-glitching-realities"
     },
@@ -18862,30 +19022,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-1",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-1",
-      "target": "https://forums.atlas-65.com/t/downtime-preparations-on-nomanswalk-twitch/10217"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-1",
-      "target": "/2026/08/10/event-10082026-2"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-2",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-2",
-      "target": "/tag/selfowned"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-2",
-      "target": "/2026/08/11/event-11082026-1"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
