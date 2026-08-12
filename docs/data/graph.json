@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T08:10:54.468633+00:00",
+  "updated": "2026-08-12T09:14:53.213868+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -6570,6 +6570,14 @@
       "date": "2026-08-01T22:15:11"
     },
     {
+      "id": "/wp-content/uploads/2026/08/window-10987.jpg",
+      "type": "media",
+      "label": "window 10987",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/08/window-10987.jpg",
+      "author": "The Architect",
+      "date": "2026-08-12T09:13:43"
+    },
+    {
       "id": "/wp-content/uploads/2026/08/window-11.jpeg",
       "type": "media",
       "label": "window 11",
@@ -6792,6 +6800,14 @@
       "url": "https://project-skyscraper.com/wp-content/uploads/2026/08/window-1997.jpg",
       "author": "The Architect",
       "date": "2026-08-01T11:22:24"
+    },
+    {
+      "id": "/wp-content/uploads/2026/08/window-1999.png",
+      "type": "media",
+      "label": "window 1999",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/08/window-1999.png",
+      "author": "The Architect",
+      "date": "2026-08-12T09:13:42"
     },
     {
       "id": "/wp-content/uploads/2026/08/window-2.jpg",
@@ -19477,6 +19493,14 @@
     },
     {
       "source": "/wp-content/uploads/2026/08/window-10007.jpg",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/08/window-1999.png",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
+      "source": "/wp-content/uploads/2026/08/window-10987.jpg",
       "target": "/author/theskyscraperarchitect"
     },
     {
