@@ -1,11 +1,19 @@
 {
   "pages": [
     {
+      "path": "/the-shared-dream/",
+      "title": "THE SHARED DREAM",
+      "type": "page",
+      "modified": "2026-08-12T10:15:08",
+      "date_gmt": "2026-08-01T11:12:00",
+      "author": "System"
+    },
+    {
       "path": "/wp-content/uploads/2026/08/window-1999.png",
       "title": "window 1999",
       "type": "attachment",
       "modified": "2026-08-12T09:14:49.610926+00:00",
-      "date_gmt": "2026-08-12T09:13:42",
+      "date_gmt": "2026-08-12T09:13:42+00:00",
       "author": "The Architect"
     },
     {
@@ -13,16 +21,8 @@
       "title": "window 10987",
       "type": "attachment",
       "modified": "2026-08-12T09:14:49.610926+00:00",
-      "date_gmt": "2026-08-12T09:13:43",
+      "date_gmt": "2026-08-12T09:13:43+00:00",
       "author": "The Architect"
-    },
-    {
-      "path": "/the-shared-dream/",
-      "title": "THE SHARED DREAM",
-      "type": "page",
-      "modified": "2026-08-12T08:54:53+00:00",
-      "date_gmt": "2026-08-01T11:12:00+00:00",
-      "author": "System"
     },
     {
       "path": "/window-419/comment-page-1/",
@@ -374,14 +374,6 @@
       "type": "attachment",
       "modified": "2026-08-12T07:52:59.739558+00:00",
       "date_gmt": "2026-08-12T07:52:07+00:00",
-      "author": "The Architect"
-    },
-    {
-      "path": "/neural-network-status/",
-      "title": "Neural network status",
-      "type": "page",
-      "modified": "2026-08-11T16:37:20.568831+00:00",
-      "date_gmt": "2026-04-28T18:55:24+00:00",
       "author": "The Architect"
     },
     {
@@ -3287,6 +3279,14 @@
       "modified": "2026-07-31T10:22:19+00:00",
       "date_gmt": "2018-03-28T00:00:00+00:00",
       "author": "System"
+    },
+    {
+      "path": "/neural-network-status/",
+      "title": "Neural network status",
+      "type": "page",
+      "modified": "2026-07-30T19:41:46",
+      "date_gmt": "2026-04-28T18:55:24",
+      "author": "The Architect"
     },
     {
       "path": "/2026/07/30/structural-analysis-190351/",
@@ -8018,5 +8018,5 @@
       "author": 0
     }
   ],
-  "updated": "2026-08-12T09:14:49.620271+00:00"
+  "updated": "2026-08-12T09:19:54.342640+00:00"
 }
