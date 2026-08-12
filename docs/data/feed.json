@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-12T07:55:27.437114+00:00",
+      "title": "THE SHARED DREAM",
+      "link": "https://project-skyscraper.com/the-shared-dream/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "+ gallery: 4 image(s) added",
+      "detail": "1 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_added",
       "timestamp": "2026-08-12T07:52:18+00:00",
       "title": "window 109",
@@ -22866,5 +22879,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-12T07:52:59.748417+00:00"
+  "updated": "2026-08-12T07:55:39.333582+00:00"
 }
