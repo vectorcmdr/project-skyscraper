@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-08-12T09:46:13.431794+00:00",
+      "title": "#7359 (posts)",
+      "link": "https:///",
+      "endpoint": "posts",
+      "diff": "HTTP 401",
+      "detail": "Unpublished posts #7359 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 7359,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-12T09:19:38.503710+00:00",
       "title": "THE SHARED DREAM",
@@ -22958,5 +22971,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-12T09:19:54.342617+00:00"
+  "updated": "2026-08-12T09:46:13.440805+00:00"
 }
