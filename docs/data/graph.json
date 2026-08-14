@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T09:21:20.047962+00:00",
+  "updated": "2026-08-14T12:28:45.037128+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1168,6 +1168,14 @@
       "url": "https://project-skyscraper.com/logo/",
       "author": "",
       "date": "2026-04-25T08:53:10Z"
+    },
+    {
+      "id": "/2026/04/24/navigation-2",
+      "type": "page",
+      "label": "Navigation",
+      "url": "https://project-skyscraper.com/2026/04/24/navigation-2/",
+      "author": "",
+      "date": "2026-04-24T08:36:55"
     },
     {
       "id": "/2026/04/24/navigation",
@@ -10653,6 +10661,18 @@
     },
     {
       "source": "sitemap",
+      "target": "/2012/12/21/event-21122012-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/12/event-12082026-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2025/09/29/event-29092025-1"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -17953,11 +17973,11 @@
     },
     {
       "source": "/2012/07/25/event-25072012",
-      "target": "/2005/04/13/quote"
+      "target": "/2010/04/25/2010_dataset"
     },
     {
       "source": "/2012/07/25/event-25072012",
-      "target": "/2013/12/07/event-07122013"
+      "target": "/2012/12/21/event-21122012-1"
     },
     {
       "source": "/2024/12/22/event-22122024",
@@ -18049,7 +18069,7 @@
     },
     {
       "source": "/2013/12/07/event-07122013",
-      "target": "/2012/07/25/event-25072012"
+      "target": "/2012/12/21/event-21122012-1"
     },
     {
       "source": "/2013/12/07/event-07122013",
@@ -18464,6 +18484,10 @@
       "target": "/2026/08/11/event-11082026-1"
     },
     {
+      "source": "/2026/08/11/event-11082026-2",
+      "target": "/2026/08/12/event-12082026-1"
+    },
+    {
       "source": "/2026/08/13/event-13082026-1",
       "target": "/"
     },
@@ -18473,7 +18497,7 @@
     },
     {
       "source": "/2026/08/13/event-13082026-1",
-      "target": "/2026/08/11/event-11082026-2"
+      "target": "/2026/08/12/event-12082026-1"
     },
     {
       "source": "/2010/04/25/2010_dataset",
@@ -18506,6 +18530,54 @@
     {
       "source": "/2026/08/09/event-09082026-2-2",
       "target": "/2026/08/10/event-10082026-1"
+    },
+    {
+      "source": "/2012/12/21/event-21122012-1",
+      "target": "/"
+    },
+    {
+      "source": "/2012/12/21/event-21122012-1",
+      "target": "https://gameinformer.com/b/features/archive/2014/12/19/the-secret-story-behind-no-man-s-sky.aspx"
+    },
+    {
+      "source": "/2012/12/21/event-21122012-1",
+      "target": "/2012/07/25/event-25072012"
+    },
+    {
+      "source": "/2012/12/21/event-21122012-1",
+      "target": "/2013/12/07/event-07122013"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "https://www.bbc.co.uk/news/live/c4gwd5rwvx5t"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/2026/08/11/event-11082026-2"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/2026/08/13/event-13082026-1"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "https://nmsgalactichub.miraheze.org/wiki/Howdenni_Musa"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/2025/08/27/event-27082025"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/2025/11/12/event-12112025"
     },
     {
       "source": "/project-skyscraper",
@@ -19116,8 +19188,36 @@
       "target": "/"
     },
     {
-      "source": "/2026/04/24/navigation",
+      "source": "/2026/04/24/navigation-2",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
       "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/about"
     },
     {
       "source": "/2026/04/24/navigation",
@@ -19125,15 +19225,11 @@
     },
     {
       "source": "/2026/04/24/navigation",
-      "target": "/about"
+      "target": "/request-memory-timestamp-094317"
     },
     {
       "source": "/2026/04/24/navigation",
-      "target": "/calculator"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/counting"
+      "target": "/report-glitching-realities"
     },
     {
       "source": "/2026/04/24/navigation",
@@ -19141,7 +19237,11 @@
     },
     {
       "source": "/2026/04/24/navigation",
-      "target": "/inbox"
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/calculator"
     },
     {
       "source": "/2026/04/24/navigation",
@@ -19149,123 +19249,7 @@
     },
     {
       "source": "/2026/04/24/navigation",
-      "target": "/recon-protocol"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-bru-ent-reunion-peak"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-lon-reality-glitch"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-ott-time-disruption"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-par-temporal-merge"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094316-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-115212-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-094127-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-211927-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-101616-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sec-log-080413-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/sleep-mode"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/structural-analysis-161527-full"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/temporal-alignment-results"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/temporal-alignment-results-in-progress"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/temporal-alignment-survey"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2012/12/21/event-21122012-1",
-      "target": "/"
-    },
-    {
-      "source": "/2012/12/21/event-21122012-1",
-      "target": "https://gameinformer.com/b/features/archive/2014/12/19/the-secret-story-behind-no-man-s-sky.aspx"
-    },
-    {
-      "source": "/2012/12/21/event-21122012-1",
-      "target": "/2012/07/25/event-25072012"
-    },
-    {
-      "source": "/2012/12/21/event-21122012-1",
-      "target": "/2013/12/07/event-07122013"
-    },
-    {
-      "source": "/2026/08/12/event-12082026-1",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/12/event-12082026-1",
-      "target": "https://www.bbc.co.uk/news/live/c4gwd5rwvx5t"
-    },
-    {
-      "source": "/2026/08/12/event-12082026-1",
-      "target": "/2026/08/11/event-11082026-2"
-    },
-    {
-      "source": "/2026/08/12/event-12082026-1",
-      "target": "/2026/08/13/event-13082026-1"
-    },
-    {
-      "source": "/2025/09/29/event-29092025-1",
-      "target": "/"
-    },
-    {
-      "source": "/2025/09/29/event-29092025-1",
-      "target": "https://nmsgalactichub.miraheze.org/wiki/Howdenni_Musa"
-    },
-    {
-      "source": "/2025/09/29/event-29092025-1",
-      "target": "/2025/08/27/event-27082025"
-    },
-    {
-      "source": "/2025/09/29/event-29092025-1",
-      "target": "/2025/11/12/event-12112025"
+      "target": "/about"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
