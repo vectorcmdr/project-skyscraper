@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T18:28:34.442511+00:00",
+  "updated": "2026-08-14T00:28:43.356710+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -10593,6 +10593,18 @@
     },
     {
       "source": "sitemap",
+      "target": "/2026/08/13/event-13082026-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2010/04/25/2010_dataset"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/09/event-09082026-2-2"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -18404,6 +18416,50 @@
       "target": "/2026/08/11/event-11082026-1"
     },
     {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/402?u=mountherainbow"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/2026/08/11/event-11082026-2"
+    },
+    {
+      "source": "/2010/04/25/2010_dataset",
+      "target": "/"
+    },
+    {
+      "source": "/2010/04/25/2010_dataset",
+      "target": "https://www.youtube.com/watch?v=I-1S8PjY8wE"
+    },
+    {
+      "source": "/2010/04/25/2010_dataset",
+      "target": "/2005/04/13/quote"
+    },
+    {
+      "source": "/2010/04/25/2010_dataset",
+      "target": "/2012/07/25/event-25072012"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "https://bsky.app/profile/devilinpixy.bsky.social/post/3msnkjsuxns22"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/2026/08/09/event-09082026-2"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/2026/08/10/event-10082026-1"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -19114,50 +19170,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/08/13/event-13082026-1",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/13/event-13082026-1",
-      "target": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/402?u=mountherainbow"
-    },
-    {
-      "source": "/2026/08/13/event-13082026-1",
-      "target": "/2026/08/11/event-11082026-2"
-    },
-    {
-      "source": "/2010/04/25/2010_dataset",
-      "target": "/"
-    },
-    {
-      "source": "/2010/04/25/2010_dataset",
-      "target": "https://www.youtube.com/watch?v=I-1S8PjY8wE"
-    },
-    {
-      "source": "/2010/04/25/2010_dataset",
-      "target": "/2005/04/13/quote"
-    },
-    {
-      "source": "/2010/04/25/2010_dataset",
-      "target": "/2012/07/25/event-25072012"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2-2",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2-2",
-      "target": "https://bsky.app/profile/devilinpixy.bsky.social/post/3msnkjsuxns22"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2-2",
-      "target": "/2026/08/09/event-09082026-2"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2-2",
-      "target": "/2026/08/10/event-10082026-1"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
