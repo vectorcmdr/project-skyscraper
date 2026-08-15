@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-15T23:22:12.141991+00:00",
+      "title": "event-13092016",
+      "link": "https://project-skyscraper.com/2016/09/13/event-13092016/",
+      "endpoint": "",
+      "diff": "  .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n  align-items: baseline;\n  flex-wrap: wrap;\n  {font-size: var(--wp--preset--font-size--small);line-height: 1.4;text-transform: uppercase;}\n  )){text-decoration: none;}\n  ):hover){text-decoration: underline;}\n+ {border-color: var(--wp--preset--color--primary);border-width: 0 0 0 1px;border-style: solid;font-style: normal;padding-left: var(--wp--preset--spacing--50);}\n+ {font-size: var(--wp--preset--font-size--small);font-style: normal;text-transform: uppercase;}",
+      "detail": "Content changed: https://project-skyscraper.com/2016/09/13/event-13092016/",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-15T17:03:42.130513+00:00",
       "title": "FLOW",
@@ -23387,5 +23400,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-15T17:03:53.636363+00:00"
+  "updated": "2026-08-15T23:22:12.150941+00:00"
 }
