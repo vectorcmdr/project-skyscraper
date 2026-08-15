@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T12:28:45.037128+00:00",
+  "updated": "2026-08-15T16:32:23.310914+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -5618,6 +5618,14 @@
       "date": "2026-08-12T18:15:00"
     },
     {
+      "id": "/2026/06/06/event-060622026-1",
+      "type": "post",
+      "label": "2026_dataset",
+      "url": "https://project-skyscraper.com/2026/06/06/event-060622026-1/",
+      "author": "System",
+      "date": "2026-06-06T20:35:00"
+    },
+    {
       "id": "/2026/07/11/2026_dataset_11072026",
       "type": "post",
       "label": "2026_dataset_11072026",
@@ -7750,6 +7758,14 @@
       "type": "external",
       "label": "bsky.app",
       "url": "https://bsky.app/profile/devilinpixy.bsky.social/post/3msnkjsuxns22",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://bsky.app/profile/troubletheweird.bsky.social/post/3mnniv4mdck2d",
+      "type": "external",
+      "label": "bsky.app",
+      "url": "https://bsky.app/profile/troubletheweird.bsky.social/post/3mnniv4mdck2d",
       "author": "",
       "date": ""
     },
@@ -17493,7 +17509,7 @@
     },
     {
       "source": "/2025/11/12/event-12112025",
-      "target": "/2025/08/27/event-27082025"
+      "target": "/2025/09/29/event-29092025-1"
     },
     {
       "source": "/2025/11/12/event-12112025",
@@ -17741,7 +17757,7 @@
     },
     {
       "source": "/2025/08/27/event-27082025",
-      "target": "/2025/11/12/event-12112025"
+      "target": "/2025/09/29/event-29092025-1"
     },
     {
       "source": "/2014/02/17/event-17022014",
@@ -18421,7 +18437,7 @@
     },
     {
       "source": "/2026/08/09/event-09082026-2",
-      "target": "/2026/08/10/event-10082026-1"
+      "target": "/2026/08/09/event-09082026-2-2"
     },
     {
       "source": "/2026/08/10/event-10082026-1",
@@ -18433,7 +18449,7 @@
     },
     {
       "source": "/2026/08/10/event-10082026-1",
-      "target": "/2026/08/09/event-09082026-2"
+      "target": "/2026/08/09/event-09082026-2-2"
     },
     {
       "source": "/2026/08/10/event-10082026-1",
@@ -19250,6 +19266,22 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/about"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "https://bsky.app/profile/troubletheweird.bsky.social/post/3mnniv4mdck2d"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/2026/06/06/sec-log-110328"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/2026/06/06/structural-analysis-214218"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -23889,6 +23921,14 @@
     },
     {
       "source": "/2025/09/29/event-29092025-1",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
       "target": "/category/non-classe"
     },
     {
