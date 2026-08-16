@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-08-16T15:51:31.091296+00:00",
+      "title": "#7454 (pages)",
+      "link": "https:///",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #7454 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 7454,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-16T12:28:40.691445+00:00",
       "title": "https://project-skyscraper.com/2026/08/01/event-01082026-2/",
@@ -23601,5 +23614,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-16T12:28:40.721065+00:00"
+  "updated": "2026-08-16T15:51:31.099813+00:00"
 }
