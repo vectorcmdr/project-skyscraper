@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "sitemap_removed",
+      "timestamp": "2026-08-16T00:28:16.468367+00:00",
+      "title": "https://project-skyscraper.com/2016/09/13/event-13092016/",
+      "link": "https://project-skyscraper.com/2016/09/13/event-13092016/",
+      "endpoint": "",
+      "diff": "- https://project-skyscraper.com/2016/09/13/event-13092016/\n- https://project-skyscraper.com/2016/09/23/event-23092016/",
+      "detail": "Removed 2 URL(s) from sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "sitemap_added",
+      "timestamp": "2026-08-16T00:28:16.468291+00:00",
+      "title": "https://project-skyscraper.com/2016/09/13/event-13092016-1/",
+      "link": "https://project-skyscraper.com/2016/09/13/event-13092016-1/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2016/09/13/event-13092016-1/\n+ https://project-skyscraper.com/2016/09/23/event-23092016-1/\n+ https://project-skyscraper.com/2025/12/08/event-08122025-1/\n+ https://project-skyscraper.com/2026/06/06/event-060622026-1/",
+      "detail": "Added 4 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-15T23:22:12.141991+00:00",
       "title": "event-13092016",
@@ -23400,5 +23426,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-15T23:22:12.150941+00:00"
+  "updated": "2026-08-16T00:28:16.475757+00:00"
 }
