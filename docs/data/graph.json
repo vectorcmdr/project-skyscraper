@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T16:43:17.208121+00:00",
+  "updated": "2026-08-18T00:36:37.051382+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -2344,6 +2344,14 @@
       "url": "https://project-skyscraper.com/window-733/",
       "author": "",
       "date": "2026-08-04T23:07:42Z"
+    },
+    {
+      "id": "/window-7649",
+      "type": "page",
+      "label": "Window 7649",
+      "url": "https://project-skyscraper.com/window-7649/",
+      "author": "",
+      "date": "2026-08-17T16:34:49Z"
     },
     {
       "id": "/window-7691",
@@ -10757,6 +10765,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/2017/08/16/event-16082017-1"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -11362,6 +11374,10 @@
     {
       "source": "sitemap",
       "target": "/window-10987"
+    },
+    {
+      "source": "sitemap",
+      "target": "/window-7649"
     },
     {
       "source": "/",
@@ -18712,6 +18728,22 @@
       "target": "/2026/08/06/event-06082026"
     },
     {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "https://nomanssky.fandom.com/wiki/Multiplayer#Joint_Exploration_(Atlas_Rises)"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/2017/08/11/event-11082017"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/2017/12/01/event-01122017"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -19320,84 +19352,72 @@
       "target": "/"
     },
     {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/a-message-to-the-community"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/report-glitching-realities"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/flow"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/calculator"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2026/04/24/navigation-2",
-      "target": "/about"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/a-message-to-the-community"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/report-glitching-realities"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/flow"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/the-shared-dream"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/calculator"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/2026/04/24/navigation",
-      "target": "/about"
-    },
-    {
-      "source": "/2017/08/16/event-16082017-1",
+      "source": "/window-7649",
       "target": "/"
     },
     {
-      "source": "/2017/08/16/event-16082017-1",
-      "target": "https://nomanssky.fandom.com/wiki/Multiplayer#Joint_Exploration_(Atlas_Rises)"
+      "source": "/2026/04/24/navigation-2",
+      "target": "/a-message-to-the-community"
     },
     {
-      "source": "/2017/08/16/event-16082017-1",
-      "target": "/2017/08/11/event-11082017"
+      "source": "/2026/04/24/navigation-2",
+      "target": "/request-memory-timestamp-094317"
     },
     {
-      "source": "/2017/08/16/event-16082017-1",
-      "target": "/2017/12/01/event-01122017"
+      "source": "/2026/04/24/navigation-2",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation-2",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/04/24/navigation",
+      "target": "/about"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
