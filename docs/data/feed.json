@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-19T11:41:31.462458+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/10/30/2016_dataset-in-memoriam/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "+ In Memoriam",
+      "detail": "6 item(s) modified in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-18T18:43:54.631873+00:00",
       "title": "neural-network-status",
@@ -23706,5 +23719,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-18T18:43:54.640906+00:00"
+  "updated": "2026-08-19T11:41:33.065667+00:00"
 }
