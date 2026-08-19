@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-19T22:29:12.837696+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": " <link rel='stylesheet' id='all-css-HASH' href='https://recalldreams.dev/wp-content/plugins/jetpack/modules/related-posts/related-posts.css' type='text/css' media='all' />\n\n .custom-indent p{text-indent:4rem;}\n\n+{background-color: var(--wp--preset--color--secondary);border-top-color: var(--wp--preset--color--secondary);border-top-width: 2px;border-top-style: solid;border-right-color: var(--wp--preset--color--secondary);border-right-width: 2px;border-right-style: solid;border-bottom-color: var(--wp--preset--color--secondary);border-bottom-width: 2px;border-bottom-style: solid;border-left-color: var(--wp--preset--color--secondary);border-left-width: 2px;border-left-style: solid;color: var(--wp--preset--color--base);font-family: var(--wp--preset--font-family--hezaedrus);font-size: var(--wp--preset--font-size--x-small);font-style: normal;font-weight: 400;letter-spacing: 0.05rem;padding-top: var(--wp--preset--spacing--40);padding-right: var(--wp--preset--spacing--30);padding-bottom: var(--wp--preset--spacing--40);padding-left: var(--wp--preset--spacing--30);text-transform: uppercase;}\n\n+)){color: var(--wp--preset--color--base);}\n\n {color: var(--wp--preset--color--secondary);}\n\n )){color: var(--wp--preset--color--secondary);}\n\n {font-size: var(--wp--preset--font-size--medium);} > :first-child{margin-block-start: 0;} > :last-child{margin-block-end: 0;} > *{margin-block-start: var(--wp--preset--spacing--60);margin-block-end: 0;} > :first-child{margin-block-start: 0;} > :last-child{margin-block-end: 0;} > *{margin-block-start: var(--wp--preset--spacing--60);margin-block-end: 0;}{gap: var(--wp--preset--spacing--60);}{gap: var(--wp--preset--spacing--60);}\n\n <div style=\"height:100px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n <p>This content is password-protected. To view it, please enter the password below.</p>\n\n-<p><label for=\"pwbox-111\">Password: <input name=\"post_password\" id=\"pwbox-111\" type=\"password\" spellcheck=\"false\" required size=\"20\" /></label> <input typ...",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "unpublished_detected",
       "timestamp": "2026-08-19T20:34:49.365905+00:00",
       "title": "#7618 (pages)",
@@ -23849,5 +23862,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-19T20:34:49.373334+00:00"
+  "updated": "2026-08-19T22:29:12.845207+00:00"
 }
