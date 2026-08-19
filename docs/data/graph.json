@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T17:04:24.563506+00:00",
+  "updated": "2026-08-19T22:35:48.528228+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1098,26 +1098,10 @@
       "date": ""
     },
     {
-      "id": "/temporal-alignment-survey/context.image.src",
-      "type": "page",
-      "label": "Context.Image.Src",
-      "url": "https://project-skyscraper.com/temporal-alignment-survey/context.image.src",
-      "author": "",
-      "date": ""
-    },
-    {
       "id": "/request-memory-timestamp-094317/context.submission.url",
       "type": "page",
       "label": "Context.Submission.Url",
       "url": "https://project-skyscraper.com/request-memory-timestamp-094317/context.submission.url",
-      "author": "",
-      "date": ""
-    },
-    {
-      "id": "/temporal-alignment-survey/context.submission.url",
-      "type": "page",
-      "label": "Context.Submission.Url",
-      "url": "https://project-skyscraper.com/temporal-alignment-survey/context.submission.url",
       "author": "",
       "date": ""
     },
@@ -18053,7 +18037,7 @@
     },
     {
       "source": "/2020/04/24/event-24042020",
-      "target": "/2021/02/25/event-25022021"
+      "target": "/2020/08/08/event-08082020-1"
     },
     {
       "source": "/2026/07/09/event-09072026",
@@ -18409,6 +18393,14 @@
     },
     {
       "source": "/the-shared-dream",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/the-shared-dream",
+      "target": "/calculator"
+    },
+    {
+      "source": "/the-shared-dream",
       "target": "/"
     },
     {
@@ -18434,14 +18426,6 @@
     {
       "source": "/a-message-to-the-community",
       "target": "/"
-    },
-    {
-      "source": "/temporal-alignment-survey",
-      "target": "/temporal-alignment-survey/context.submission.url"
-    },
-    {
-      "source": "/temporal-alignment-survey",
-      "target": "/temporal-alignment-survey/context.image.src"
     },
     {
       "source": "/temporal-alignment-survey",
@@ -18686,6 +18670,10 @@
     {
       "source": "/2026/08/13/event-13082026-1",
       "target": "/2026/08/12/event-12082026-1"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/2026/08/19/event-19082026-1"
     },
     {
       "source": "/2010/04/25/2010_dataset",
