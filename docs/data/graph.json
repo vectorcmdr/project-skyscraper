@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T14:32:59.494717+00:00",
+  "updated": "2026-08-19T14:35:40.301291+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1398,6 +1398,14 @@
       "type": "page",
       "label": "Selfowned",
       "url": "https://project-skyscraper.com/tag/selfowned/",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "/tag/shared-memory",
+      "type": "page",
+      "label": "Shared Memory",
+      "url": "https://project-skyscraper.com/tag/shared-memory/",
       "author": "",
       "date": ""
     },
@@ -5322,6 +5330,14 @@
       "date": "2020-04-24T00:00:00"
     },
     {
+      "id": "/2020/08/08/event-08082020-1",
+      "type": "post",
+      "label": "2020_dataset",
+      "url": "https://project-skyscraper.com/2020/08/08/event-08082020-1/",
+      "author": "System",
+      "date": "2020-08-08T17:38:00"
+    },
+    {
       "id": "/2020/04/07/event-07042020",
       "type": "post",
       "label": "2020_dataset_07042020",
@@ -8518,6 +8534,14 @@
       "type": "external",
       "label": "x.com",
       "url": "https://x.com/NoMansSky/status/2086832185017774510",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://x.com/Dooooooobs/status/1291957025983922176/photo/4",
+      "type": "external",
+      "label": "x.com",
+      "url": "https://x.com/Dooooooobs/status/1291957025983922176/photo/4",
       "author": "",
       "date": ""
     },
@@ -19420,6 +19444,26 @@
       "target": "/about"
     },
     {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "https://x.com/Dooooooobs/status/1291957025983922176/photo/4"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/2020/04/24/event-24042020"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -24093,6 +24137,14 @@
     },
     {
       "source": "/2017/08/16/event-16082017-1",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
       "target": "/category/non-classe"
     },
     {
