@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "/calculator/",
+      "title": "Calculator",
+      "type": "page",
+      "modified": "2026-08-19T14:23:45",
+      "date_gmt": "2026-07-03T09:16:00",
+      "author": "System"
+    },
+    {
       "path": "/neural-network-status/",
       "title": "Neural network status",
       "type": "page",
@@ -4321,14 +4329,6 @@
       "author": "System"
     },
     {
-      "path": "/calculator/",
-      "title": "Calculator",
-      "type": "page",
-      "modified": "2026-07-03T09:15:45Z",
-      "date_gmt": "",
-      "author": 0
-    },
-    {
       "path": "/2024/10/12/event-12102024/",
       "title": "2024_dataset",
       "type": "post",
@@ -8234,5 +8234,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-08-19T11:41:44.041542+00:00"
+  "updated": "2026-08-19T13:24:25.446476+00:00"
 }
