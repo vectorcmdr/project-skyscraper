@@ -1,11 +1,19 @@
 {
   "pages": [
     {
+      "path": "/the-shared-dream/",
+      "title": "THE SHARED DREAM",
+      "type": "page",
+      "modified": "2026-08-19T14:26:19",
+      "date_gmt": "2026-08-01T11:12:00",
+      "author": "System"
+    },
+    {
       "path": "/calculator/",
       "title": "Calculator",
       "type": "page",
-      "modified": "2026-08-19T14:23:45",
-      "date_gmt": "2026-07-03T09:16:00",
+      "modified": "2026-08-19T14:23:45+00:00",
+      "date_gmt": "2026-07-03T09:16:00+00:00",
       "author": "System"
     },
     {
@@ -15,14 +23,6 @@
       "modified": "2026-08-18T18:43:54.632671+00:00",
       "date_gmt": "2026-04-28T18:55:24+00:00",
       "author": "The Architect"
-    },
-    {
-      "path": "/the-shared-dream/",
-      "title": "THE SHARED DREAM",
-      "type": "page",
-      "modified": "2026-08-17T17:36:13+00:00",
-      "date_gmt": "2026-08-01T11:12:00+00:00",
-      "author": "System"
     },
     {
       "path": "/2017/08/16/event-16082017-1/",
@@ -8234,5 +8234,5 @@
       "author": ""
     }
   ],
-  "updated": "2026-08-19T13:24:25.446476+00:00"
+  "updated": "2026-08-19T13:27:19.959732+00:00"
 }
