@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "page_content_changed",
+      "timestamp": "2026-08-19T17:04:17.909878+00:00",
+      "title": "report-glitching-realities",
+      "link": "https://project-skyscraper.com/report-glitching-realities/",
+      "endpoint": "",
+      "diff": "+ .is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}{padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*=\"writing-mode:vertical-lr\"],p.has-text-align-right[style*=\"writing-mode:vertical-rl\"]{rotate:180deg}\n... (truncated)",
+      "detail": "Content changed: https://project-skyscraper.com/report-glitching-realities/",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-19T16:46:22.686696+00:00",
       "title": "16 HALLUCINATIONS",
@@ -23823,5 +23836,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-19T16:46:25.063102+00:00"
+  "updated": "2026-08-19T17:04:17.924873+00:00"
 }
