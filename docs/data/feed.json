@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "unpublished_detected",
+      "timestamp": "2026-08-19T20:34:49.365905+00:00",
+      "title": "#7618 (pages)",
+      "link": "https:///",
+      "endpoint": "pages",
+      "diff": "HTTP 401",
+      "detail": "Unpublished pages #7618 (HTTP 401)",
+      "author": 0,
+      "site": "",
+      "id": 7618,
+      "game_date": ""
+    },
+    {
       "type": "page_content_changed",
       "timestamp": "2026-08-19T17:04:17.909878+00:00",
       "title": "report-glitching-realities",
@@ -23836,5 +23849,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-19T17:04:17.924873+00:00"
+  "updated": "2026-08-19T20:34:49.373334+00:00"
 }
