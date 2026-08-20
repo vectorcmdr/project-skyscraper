@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T00:05:20.148782+00:00",
+  "updated": "2026-08-20T00:29:40.707998+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -10793,6 +10793,14 @@
     },
     {
       "source": "sitemap",
+      "target": "/2020/08/08/event-08082020-1"
+    },
+    {
+      "source": "sitemap",
+      "target": "/2026/08/19/event-19082026-1"
+    },
+    {
+      "source": "sitemap",
       "target": "/project-skyscraper"
     },
     {
@@ -18836,6 +18844,42 @@
       "target": "/2017/12/01/event-01122017"
     },
     {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "https://x.com/Dooooooobs/status/1291957025983922176/photo/4"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/2020/04/24/event-24042020"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/2021/02/25/event-25022021"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "https://forums.atlas-65.com/t/screenshots/8818/202?u=sheralmyst"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/2026/08/13/event-13082026-1"
+    },
+    {
       "source": "/project-skyscraper",
       "target": "/"
     },
@@ -19510,42 +19554,6 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/about"
-    },
-    {
-      "source": "/2020/08/08/event-08082020-1",
-      "target": "/"
-    },
-    {
-      "source": "/2020/08/08/event-08082020-1",
-      "target": "https://x.com/Dooooooobs/status/1291957025983922176/photo/4"
-    },
-    {
-      "source": "/2020/08/08/event-08082020-1",
-      "target": "/tag/shared-memory"
-    },
-    {
-      "source": "/2020/08/08/event-08082020-1",
-      "target": "/2020/04/24/event-24042020"
-    },
-    {
-      "source": "/2020/08/08/event-08082020-1",
-      "target": "/2021/02/25/event-25022021"
-    },
-    {
-      "source": "/2026/08/19/event-19082026-1",
-      "target": "/"
-    },
-    {
-      "source": "/2026/08/19/event-19082026-1",
-      "target": "https://forums.atlas-65.com/t/screenshots/8818/202?u=sheralmyst"
-    },
-    {
-      "source": "/2026/08/19/event-19082026-1",
-      "target": "/tag/shared-memory"
-    },
-    {
-      "source": "/2026/08/19/event-19082026-1",
-      "target": "/2026/08/13/event-13082026-1"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
