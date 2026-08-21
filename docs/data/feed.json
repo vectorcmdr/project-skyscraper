@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_modified",
+      "timestamp": "2026-08-21T08:54:58.604033+00:00",
+      "title": "FLOW",
+      "link": "https://project-skyscraper.com/flow/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "- // Drifting fragments - weak memories that struggle to survive\n- class Particle {\n- constructor(depth) { this.depth = depth; this.reset(); }\n- reset() {\n- this.x = w + 30 + Math.random() * 120;\n- this.y = h * 0.36 + Math.random() * h * 0.32;\n- this.vx = -2.6 - Math.random() * 2.8 * (1 - this.depth * 0.6);\n- this.size = (1.6 + Math.random() * 2.4) * (1 - this.depth * 0.65);\n- this.opacity = (0.75 + Math.random() * 0.25) * (1 - this.depth * 0.7);\n- this.date = Math.random() 0) {\n+ let validDates = []; // dates of \"shared_memory\" posts\n+ // ========== LOADING EXISTING DATES ==========\n+ async function loadExistingDates() {\n+ validDates = [];\n+ let page = 1;\n+ let hasMore = true;\n+ let tagId = null;\n+ // 1. Get the ID of the shared_memory / shared-memory tag\n+ try {\n+ const tagRes = await fetch('/wp-json/wp/v2/tags?slug=shared_memory,shared-memory&_fields=id');\n+ const tags = await tagRes.json();\n+ if (tags.length > 0) {\n+ tagId = tags[0].id;\n+ }\n+ } catch (e) {\n+ console.warn('...",
+      "detail": "2 item(s) modified in /wp-json/wp/v2/pages",
+      "author": "System",
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-20T00:29:36.725292+00:00",
       "title": "https://project-skyscraper.com/2020/08/08/event-08082020-1/",
@@ -23862,5 +23875,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-21T04:39:11.712618+00:00"
+  "updated": "2026-08-21T08:55:10.262505+00:00"
 }
