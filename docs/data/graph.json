@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T08:56:53.819123+00:00",
+  "updated": "2026-08-21T09:37:55.537376+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -1146,10 +1146,10 @@
       "date": ""
     },
     {
-      "id": "/explore-the-memories",
+      "id": "/",
       "type": "page",
       "label": "Explore the MEMORIES",
-      "url": "https://project-skyscraper.com/explore-the-memories/",
+      "url": "https://project-skyscraper.com/",
       "author": "The Architect",
       "date": "2026-08-21T08:55:48"
     },
@@ -1160,14 +1160,6 @@
       "url": "https://project-skyscraper.com/flow/",
       "author": "System",
       "date": "2026-06-27T15:16:00"
-    },
-    {
-      "id": "/",
-      "type": "page",
-      "label": "Home",
-      "url": "https://project-skyscraper.com/",
-      "author": "",
-      "date": ""
     },
     {
       "id": "/inbox",
@@ -6624,6 +6616,14 @@
       "url": "https://project-skyscraper.com/wp-content/uploads/2026/06/Insert_Coin.jpg",
       "author": "The Architect",
       "date": "2026-06-07T16:26:29"
+    },
+    {
+      "id": "/wp-content/uploads/2026/07/MAINFAM_FINAL.png",
+      "type": "media",
+      "label": "MAINFAM_FINAL",
+      "url": "https://project-skyscraper.com/wp-content/uploads/2026/07/MAINFAM_FINAL.png",
+      "author": "The Architect",
+      "date": "2026-08-21T09:37:04"
     },
     {
       "id": "/wp-content/uploads/2026/06/Only-dust-Remain.jpg",
@@ -19588,74 +19588,6 @@
       "target": "/about"
     },
     {
-      "source": "/explore-the-memories",
-      "target": "/"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/flow"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/the-shared-dream"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/calculator"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/request-memory-timestamp-094317"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/report-glitching-realities"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/neural-network-status"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/a-message-to-the-community"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/about"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/08/19/event-19082026-1"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/08/11/event-11082026-2"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/08/09/event-09082026"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/08/06/event-06082026"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/08/01/event-01082026"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2026/06/29/event-29062026"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2023/08/24/2023_dataset_24082023"
-    },
-    {
-      "source": "/explore-the-memories",
-      "target": "/2020/08/08/event-08082020-1"
-    },
-    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -20324,6 +20256,10 @@
       "target": "/author/theskyscraperarchitect"
     },
     {
+      "source": "/wp-content/uploads/2026/07/MAINFAM_FINAL.png",
+      "target": "/author/theskyscraperarchitect"
+    },
+    {
       "source": "/about",
       "target": "/author/system26da6be6a6"
     },
@@ -20428,7 +20364,7 @@
       "target": "/author/system26da6be6a6"
     },
     {
-      "source": "/explore-the-memories",
+      "source": "/",
       "target": "/author/theskyscraperarchitect"
     },
     {
@@ -23744,6 +23680,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/06/29/structural-analysis-204201",
       "target": "/author/theskyscraperarchitect"
     },
@@ -23782,6 +23722,10 @@
     {
       "source": "/2017/12/01/event-01122017",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/11/12/event-12112025",
@@ -23928,6 +23872,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/07/23/sec-log-184900",
       "target": "/author/system26da6be6a6"
     },
@@ -23968,6 +23916,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2019/08/24/event-24082019",
       "target": "/author/system26da6be6a6"
     },
@@ -23982,6 +23934,10 @@
     {
       "source": "/2020/04/24/event-24042020",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/07/09/event-09072026",
@@ -24006,6 +23962,10 @@
     {
       "source": "/2017/03/03/event-03032017",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2017/03/03/event-03032017",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2014/06/10/event-10062014",
@@ -24208,12 +24168,20 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/08/09/event-09082026-2",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2026/08/09/event-09082026-2",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/10/event-10082026-1",
@@ -24224,6 +24192,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/08/10/event-10082026-2",
       "target": "/author/system26da6be6a6"
     },
@@ -24232,12 +24204,20 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/08/11/event-11082026-1",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2026/08/11/event-11082026-1",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/11/event-11082026-2",
@@ -24256,6 +24236,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2010/04/25/2010_dataset",
       "target": "/author/system26da6be6a6"
     },
@@ -24272,6 +24256,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2012/12/21/event-21122012-1",
       "target": "/author/system26da6be6a6"
     },
@@ -24286,6 +24274,10 @@
     {
       "source": "/2026/08/12/event-12082026-1",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/09/29/event-29092025-1",
@@ -24328,12 +24320,20 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2017/08/16/event-16082017-1",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2017/08/16/event-16082017-1",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2020/08/08/event-08082020-1",
