@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "sitemap_removed",
+      "timestamp": "2026-08-22T12:35:52.942620+00:00",
+      "title": "https://project-skyscraper.com/2016/08/11/event-11082016/",
+      "link": "https://project-skyscraper.com/2016/08/11/event-11082016/",
+      "endpoint": "",
+      "diff": "- https://project-skyscraper.com/2016/08/11/event-11082016/",
+      "detail": "Removed 1 URL(s) from sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "sitemap_added",
+      "timestamp": "2026-08-22T12:35:52.942543+00:00",
+      "title": "https://project-skyscraper.com/2014/10/08/event-08102014-1/",
+      "link": "https://project-skyscraper.com/2014/10/08/event-08102014-1/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2014/10/08/event-08102014-1/\n+ https://project-skyscraper.com/2016/08/11/event-11082016-1/\n+ https://project-skyscraper.com/2023/08/03/event-03082023-1/",
+      "detail": "Added 3 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-08-22T09:04:17.641009+00:00",
       "title": "16 HALLUCINATIONS",
@@ -24006,5 +24032,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-22T09:04:28.079628+00:00"
+  "updated": "2026-08-22T12:35:52.950922+00:00"
 }
