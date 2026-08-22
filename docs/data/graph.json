@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T09:37:55.537376+00:00",
+  "updated": "2026-08-22T08:06:55.308485+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -5410,6 +5410,14 @@
       "date": "2023-02-01T02:00:00"
     },
     {
+      "id": "/2023/08/03/event-03082023-1",
+      "type": "post",
+      "label": "2023_dataset",
+      "url": "https://project-skyscraper.com/2023/08/03/event-03082023-1/",
+      "author": "System",
+      "date": "2023-08-03T16:16:00"
+    },
+    {
       "id": "/2023/08/23/event-23082023",
       "type": "post",
       "label": "2023_dataset_23082023",
@@ -8026,6 +8034,14 @@
       "date": ""
     },
     {
+      "id": "https://github.com/monkeyman192/NMS.py/tree/master/nmspy",
+      "type": "external",
+      "label": "github.com",
+      "url": "https://github.com/monkeyman192/NMS.py/tree/master/nmspy",
+      "author": "",
+      "date": ""
+    },
+    {
       "id": "https://gokulbalex.medium.com/defining-human-spirit-in-the-age-of-digital-consciousness-71a11940d058",
       "type": "external",
       "label": "gokulbalex.medium.com",
@@ -8755,10 +8771,6 @@
     }
   ],
   "links": [
-    {
-      "source": "sitemap",
-      "target": "/"
-    },
     {
       "source": "sitemap",
       "target": "/about"
@@ -10813,6 +10825,10 @@
     },
     {
       "source": "sitemap",
+      "target": "/"
+    },
+    {
+      "source": "sitemap",
       "target": "/2017/08/16/event-16082017-1"
     },
     {
@@ -11434,406 +11450,6 @@
     {
       "source": "sitemap",
       "target": "/window-7649"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/19/event-19082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/13/event-13082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/12/event-12082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/11/event-11082026-2"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/11/event-11082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/10/event-10082026-2"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/10/event-10082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/09/event-09082026-2-2"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/09/event-09082026-2"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/09/event-09082026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/09/event-09082026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/08/structural-analysis-153421"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/07/structural-analysis-101600"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/06/event-06082026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/01/event-01082026-2"
-    },
-    {
-      "source": "/",
-      "target": "/2026/08/01/event-01082026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/31/sec-log-115212"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/30/structural-analysis-190351"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/26/structural-analysis-183712"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/26/structural-analysis-174916"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/23/sec-log-184900"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/23/structural-analysis-163600"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/18/sec-log-234408"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/18/event-18072026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/16/structural-analysis-150302"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/16/2026_dataset_16072026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/11/2026_dataset_11072026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/10/diagnostic-094912"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/09/event-09072026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/08/sec-log-101616"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/05/routine-initialisation"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/04/fundamental-reality-of-matter-and-time"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/04/diagnostic-183421"
-    },
-    {
-      "source": "/",
-      "target": "/2026/07/03/internal_opid"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/30/sec-log-231500"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/30/sec-log-190254"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/30/sec-log-160922"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/29/diagnostic-222222"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/29/diagnostic-211612"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/29/structural-analysis-204201"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/29/event-29062026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/27/diagnostic-155811"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/27/temporal-analysis-152610"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/27/diagnostic-131421"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/21/sec-log-193922"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/21/structural-analysis-161527"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/19/sec-log-094212"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/19/sec-log-091216"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/18/sec-log-152931"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/17/sec-log-170509"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/16/diagnostic-161411"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/16/structural-analysis-155807"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/15/event-15062026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/14/diagnostic-130321"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/14/sec-log-014527"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/13/six-seasons"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/11/diagnostic-192512"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/11/structural-analysis-152612"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/09/diagnostic-180000"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/09/structural-analysis-133722"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/06/structural-analysis-214218"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/06/event-060622026-1"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/06/sec-log-110328"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/02/sec-log-194022"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/01/structural-analysis-204649"
-    },
-    {
-      "source": "/",
-      "target": "/2026/06/01/diagnostic-op-morse"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/31/sec-log-193727"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/30/sec-log-memory-sector-access"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/29/sec-log-114327"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-reboot"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-access-granted"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/sec-log-185027"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/27/2026_dataset_27052026"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/25/sec-log-113610"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/23/sec-log-003237"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/21/sec-log-170516"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/20/sec-log-132904"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/18/sec-log-211927"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/18/sec-log-022531"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/15/sec-log-152158"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/14/sec-log-172832"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/13/sec-log-041825"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/12/sec-log-120000"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/10/security-log-171453"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/10/sec-log-171452"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/08/sec-log-061119"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/05/sec-log-190746"
-    },
-    {
-      "source": "/",
-      "target": "/2026/05/03/sec-log-080413"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/30/sleep-mode-46142"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/28/sleep-mode-46140"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/25/sleep-mode-46137"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/23/sleep-mode-46135"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/21/sleep-mode-46133"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/18/sleep-mode-46130"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/16/sleep-mode-46128"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/13/sleep-mode-46125"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/11/sleep-mode-46123"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/08/sleep-mode-46120"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/06/sleep-mode-46118"
-    },
-    {
-      "source": "/",
-      "target": "/2026/04/03/sleep-mode-46115"
     },
     {
       "source": "/about",
@@ -17093,7 +16709,43 @@
     },
     {
       "source": "/2023/12/12/event-12122023",
+      "target": "/flow"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/about"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
       "target": "/wp-content/uploads/2026/06/Cold-flame.jpg"
+    },
+    {
+      "source": "/2023/12/12/event-12122023",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2023/12/12/event-12122023",
@@ -17605,7 +17257,43 @@
     },
     {
       "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/flow"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/about"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
       "target": "https://galacticatlas.nomanssky.com/poi/region-318602CA759B"
+    },
+    {
+      "source": "/2017/04/25/2017_dataset_25042017",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2017/04/25/2017_dataset_25042017",
@@ -17677,7 +17365,43 @@
     },
     {
       "source": "/2017/12/01/event-01122017",
+      "target": "/flow"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/about"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
       "target": "https://becs-table.com.au/prawn-curry/"
+    },
+    {
+      "source": "/2017/12/01/event-01122017",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2017/12/01/event-01122017",
@@ -17921,7 +17645,43 @@
     },
     {
       "source": "/2024/04/02/event-02042024",
+      "target": "/flow"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/about"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
       "target": "https://x.com/NoMansSky/status/1775157201952276836"
+    },
+    {
+      "source": "/2024/04/02/event-02042024",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2024/04/02/event-02042024",
@@ -17937,7 +17697,43 @@
     },
     {
       "source": "/2025/08/27/event-27082025",
+      "target": "/flow"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/about"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
       "target": "https://www.nomanssky.com/voyagers-update/"
+    },
+    {
+      "source": "/2025/08/27/event-27082025",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/08/27/event-27082025",
@@ -17953,7 +17749,43 @@
     },
     {
       "source": "/2014/02/17/event-17022014",
+      "target": "/flow"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/about"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
       "target": "https://calgaryvisioncentre.com/news/2017/6/23/tdgft1bsbdlm8496ov7tn73kr0ci1q"
+    },
+    {
+      "source": "/2014/02/17/event-17022014",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2014/02/17/event-17022014",
@@ -17982,6 +17814,42 @@
     {
       "source": "/2024/04/29/event-29042024",
       "target": "/"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/flow"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/about"
+    },
+    {
+      "source": "/2024/04/29/event-29042024",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2024/04/29/event-29042024",
@@ -18029,7 +17897,43 @@
     },
     {
       "source": "/2017/08/11/event-11082017",
+      "target": "/flow"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/about"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
       "target": "https://youtu.be/5328iuzHw-w"
+    },
+    {
+      "source": "/2017/08/11/event-11082017",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2017/08/11/event-11082017",
@@ -18061,7 +17965,43 @@
     },
     {
       "source": "/2020/04/24/event-24042020",
+      "target": "/flow"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/about"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
       "target": "https://www.youtube.com/live/EUqskuZEylM"
+    },
+    {
+      "source": "/2020/04/24/event-24042020",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2020/04/24/event-24042020",
@@ -18605,7 +18545,43 @@
     },
     {
       "source": "/2026/08/09/event-09082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
       "target": "https://www.instagram.com/p/Db16y9bgDPl/?igsh=YXRuaXMyYm5hMmJu"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/09/event-09082026-1",
@@ -18621,11 +18597,47 @@
     },
     {
       "source": "/2026/08/09/event-09082026-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
       "target": "/wp-content/uploads/2026/08/The-dance.jpg"
     },
     {
       "source": "/2026/08/09/event-09082026-2",
       "target": "https://www.youtube.com/watch?v=jbjGjyvBokw"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/09/event-09082026-2",
@@ -18641,7 +18653,43 @@
     },
     {
       "source": "/2026/08/10/event-10082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
       "target": "https://www.youtube.com/watch?v=c-KoLySxccY"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/10/event-10082026-1",
@@ -18657,7 +18705,43 @@
     },
     {
       "source": "/2026/08/10/event-10082026-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
       "target": "https://x.com/NoMansSky/status/2086832185017774510"
+    },
+    {
+      "source": "/2026/08/10/event-10082026-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/10/event-10082026-2",
@@ -18673,7 +18757,43 @@
     },
     {
       "source": "/2026/08/11/event-11082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
       "target": "https://forums.atlas-65.com/t/downtime-preparations-on-nomanswalk-twitch/10217"
+    },
+    {
+      "source": "/2026/08/11/event-11082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/11/event-11082026-1",
@@ -18705,7 +18825,43 @@
     },
     {
       "source": "/2026/08/13/event-13082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
       "target": "https://forums.atlas-65.com/t/mainfam-system-operator-space/10000/402?u=mountherainbow"
+    },
+    {
+      "source": "/2026/08/13/event-13082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/13/event-13082026-1",
@@ -18737,7 +18893,43 @@
     },
     {
       "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
       "target": "https://bsky.app/profile/devilinpixy.bsky.social/post/3msnkjsuxns22"
+    },
+    {
+      "source": "/2026/08/09/event-09082026-2-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/09/event-09082026-2-2",
@@ -18769,7 +18961,43 @@
     },
     {
       "source": "/2026/08/12/event-12082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
       "target": "https://www.bbc.co.uk/news/live/c4gwd5rwvx5t"
+    },
+    {
+      "source": "/2026/08/12/event-12082026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/12/event-12082026-1",
@@ -18785,7 +19013,43 @@
     },
     {
       "source": "/2025/09/29/event-29092025-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
       "target": "https://nmsgalactichub.miraheze.org/wiki/Howdenni_Musa"
+    },
+    {
+      "source": "/2025/09/29/event-29092025-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/09/29/event-29092025-1",
@@ -18801,7 +19065,43 @@
     },
     {
       "source": "/2026/06/06/event-060622026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
       "target": "https://bsky.app/profile/troubletheweird.bsky.social/post/3mnniv4mdck2d"
+    },
+    {
+      "source": "/2026/06/06/event-060622026-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/06/06/event-060622026-1",
@@ -18833,7 +19133,43 @@
     },
     {
       "source": "/2025/12/08/event-08122025-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
       "target": "https://nomanssky.fandom.com/wiki/Archive:Civilized_Space_Requests_-_2025#COMPLETE_-_Nexus_Status_Request__Royal_Space_Society"
+    },
+    {
+      "source": "/2025/12/08/event-08122025-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/12/08/event-08122025-1",
@@ -18849,7 +19185,43 @@
     },
     {
       "source": "/2026/08/01/event-01082026-2",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
       "target": "/wp-content/uploads/2026/08/window-521.png"
+    },
+    {
+      "source": "/2026/08/01/event-01082026-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/01/event-01082026-2",
@@ -18860,12 +19232,228 @@
       "target": "/2026/08/06/event-06082026"
     },
     {
+      "source": "/",
+      "target": "/flow"
+    },
+    {
+      "source": "/",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/",
+      "target": "/calculator"
+    },
+    {
+      "source": "/",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/",
+      "target": "/about"
+    },
+    {
+      "source": "/",
+      "target": "/2023/12/12/event-12122023"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/19/event-19082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/13/event-13082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/12/event-12082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/11/event-11082026-2"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/11/event-11082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/10/event-10082026-2"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/10/event-10082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/09/event-09082026-2-2"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/09/event-09082026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/09/event-09082026-2"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/09/event-09082026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/06/event-06082026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/01/event-01082026-2"
+    },
+    {
+      "source": "/",
+      "target": "/2026/08/01/event-01082026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/07/09/event-09072026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/06/29/event-29062026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/06/15/event-15062026"
+    },
+    {
+      "source": "/",
+      "target": "/2026/06/06/event-060622026-1"
+    },
+    {
+      "source": "/",
+      "target": "/2026/03/20/event-20032026"
+    },
+    {
+      "source": "/",
+      "target": "/2025/12/08/event-08122025-1"
+    },
+    {
+      "source": "/",
+      "target": "/2025/09/29/event-29092025-1"
+    },
+    {
+      "source": "/",
+      "target": "/2025/08/27/event-27082025"
+    },
+    {
+      "source": "/",
+      "target": "/2025/07/20/event-20072025"
+    },
+    {
+      "source": "/",
+      "target": "/2024/04/29/event-29042024-2"
+    },
+    {
+      "source": "/",
+      "target": "/2024/04/29/event-29042024"
+    },
+    {
+      "source": "/",
+      "target": "/2024/04/02/event-02042024"
+    },
+    {
+      "source": "/",
+      "target": "/2024/02/15/event-15022024"
+    },
+    {
+      "source": "/",
+      "target": "/2023/08/24/2023_dataset_24082023"
+    },
+    {
+      "source": "/",
+      "target": "/2020/08/08/event-08082020-1"
+    },
+    {
+      "source": "/",
+      "target": "/2020/04/24/event-24042020"
+    },
+    {
+      "source": "/",
+      "target": "/2017/12/01/event-01122017"
+    },
+    {
+      "source": "/",
+      "target": "/2017/08/16/event-16082017-1"
+    },
+    {
+      "source": "/",
+      "target": "/2017/08/11/event-11082017"
+    },
+    {
+      "source": "/",
+      "target": "/2017/04/25/2017_dataset_25042017"
+    },
+    {
+      "source": "/",
+      "target": "/2017/03/03/event-03032017"
+    },
+    {
+      "source": "/",
+      "target": "/2014/02/17/event-17022014"
+    },
+    {
       "source": "/2017/08/16/event-16082017-1",
       "target": "/"
     },
     {
       "source": "/2017/08/16/event-16082017-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/about"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
       "target": "https://nomanssky.fandom.com/wiki/Multiplayer#Joint_Exploration_(Atlas_Rises)"
+    },
+    {
+      "source": "/2017/08/16/event-16082017-1",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2017/08/16/event-16082017-1",
@@ -18878,6 +19466,38 @@
     {
       "source": "/2020/08/08/event-08082020-1",
       "target": "/"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2020/08/08/event-08082020-1",
+      "target": "/about"
     },
     {
       "source": "/2020/08/08/event-08082020-1",
@@ -18898,6 +19518,38 @@
     {
       "source": "/2026/08/19/event-19082026-1",
       "target": "/"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/08/19/event-19082026-1",
+      "target": "/about"
     },
     {
       "source": "/2026/08/19/event-19082026-1",
@@ -19586,6 +20238,26 @@
     {
       "source": "/2026/04/24/navigation",
       "target": "/about"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "/"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "https://github.com/monkeyman192/NMS.py/tree/master/nmspy"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "/2023/02/01/event-01022023"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "/2023/08/23/event-23082023"
     },
     {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
@@ -23680,10 +24352,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2017/04/25/2017_dataset_25042017",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2026/06/29/structural-analysis-204201",
       "target": "/author/theskyscraperarchitect"
     },
@@ -23722,10 +24390,6 @@
     {
       "source": "/2017/12/01/event-01122017",
       "target": "/category/non-classe"
-    },
-    {
-      "source": "/2017/12/01/event-01122017",
-      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/11/12/event-12112025",
@@ -23872,10 +24536,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2014/02/17/event-17022014",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2026/07/23/sec-log-184900",
       "target": "/author/system26da6be6a6"
     },
@@ -23916,10 +24576,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2017/08/11/event-11082017",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2019/08/24/event-24082019",
       "target": "/author/system26da6be6a6"
     },
@@ -23936,24 +24592,28 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2020/04/24/event-24042020",
+      "source": "/2026/07/09/event-09072026",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/07/09/event-09072026",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/07/09/event-09072026",
       "target": "/tag/shared-memory"
     },
     {
-      "source": "/2026/07/09/event-09072026",
-      "target": "/author/system26da6be6a6"
-    },
-    {
-      "source": "/2026/07/09/event-09072026",
-      "target": "/category/non-classe"
-    },
-    {
       "source": "/2024/02/15/event-15022024",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2024/02/15/event-15022024",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2024/02/15/event-15022024",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2017/03/03/event-03032017",
@@ -24016,6 +24676,10 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2025/07/20/event-20072025",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2022/05/05/event-05052022",
       "target": "/author/system26da6be6a6"
     },
@@ -24032,12 +24696,20 @@
       "target": "/category/non-classe"
     },
     {
+      "source": "/2026/03/20/event-20032026",
+      "target": "/tag/shared-memory"
+    },
+    {
       "source": "/2026/06/15/event-15062026",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2026/06/15/event-15062026",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/06/15/event-15062026",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2013/12/07/event-07122013",
@@ -24094,6 +24766,10 @@
     {
       "source": "/2024/04/29/event-29042024-2",
       "target": "/category/non-classe"
+    },
+    {
+      "source": "/2024/04/29/event-29042024-2",
+      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/07/30/structural-analysis-190351",
@@ -24168,20 +24844,12 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/09/event-09082026-1",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2026/08/09/event-09082026-2",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2026/08/09/event-09082026-2",
       "target": "/category/non-classe"
-    },
-    {
-      "source": "/2026/08/09/event-09082026-2",
-      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/10/event-10082026-1",
@@ -24192,10 +24860,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/10/event-10082026-1",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2026/08/10/event-10082026-2",
       "target": "/author/system26da6be6a6"
     },
@@ -24204,20 +24868,12 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/10/event-10082026-2",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2026/08/11/event-11082026-1",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2026/08/11/event-11082026-1",
       "target": "/category/non-classe"
-    },
-    {
-      "source": "/2026/08/11/event-11082026-1",
-      "target": "/tag/shared-memory"
     },
     {
       "source": "/2026/08/11/event-11082026-2",
@@ -24236,10 +24892,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/13/event-13082026-1",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2010/04/25/2010_dataset",
       "target": "/author/system26da6be6a6"
     },
@@ -24256,10 +24908,6 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/09/event-09082026-2-2",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2012/12/21/event-21122012-1",
       "target": "/author/system26da6be6a6"
     },
@@ -24274,10 +24922,6 @@
     {
       "source": "/2026/08/12/event-12082026-1",
       "target": "/category/non-classe"
-    },
-    {
-      "source": "/2026/08/12/event-12082026-1",
-      "target": "/tag/shared-memory"
     },
     {
       "source": "/2025/09/29/event-29092025-1",
@@ -24320,20 +24964,12 @@
       "target": "/category/non-classe"
     },
     {
-      "source": "/2026/08/01/event-01082026-2",
-      "target": "/tag/shared-memory"
-    },
-    {
       "source": "/2017/08/16/event-16082017-1",
       "target": "/author/system26da6be6a6"
     },
     {
       "source": "/2017/08/16/event-16082017-1",
       "target": "/category/non-classe"
-    },
-    {
-      "source": "/2017/08/16/event-16082017-1",
-      "target": "/tag/shared-memory"
     },
     {
       "source": "/2020/08/08/event-08082020-1",
@@ -24349,6 +24985,14 @@
     },
     {
       "source": "/2026/08/19/event-19082026-1",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2023/08/03/event-03082023-1",
       "target": "/category/non-classe"
     },
     {
