@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-08-24T18:51:41.947460+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/landing-page/terminal/\n# File: html/landing-page/terminal/index.html\n# Timestamp: 2026-08-24 18:51:18 UTC\n# Lines: 1168 old -> 78821 new\n# Beautified: yes\n\n@@ -1,57 +1,143 @@\n <!DOCTYPE html>\n\n-<html lang=\"en\">\n\n-\t<head>\n\n-\t\t<meta charset=\"utf-8\">\n\n-\t\t<title>429 Too Many Requests</title>\n\n-\t\t<meta name=\"description\" content=\"\">\n\n-\t\t<meta name=\"author\" content=\"\">\n\n-\t\tbody {\n\n-\t\t\tbackground-color: #f8f8f8;\n\n-\t\t\tfont-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n\n-\t\t\tpadding-top: 20px;\n\n-\t\t}\n\n-\t\tdiv {\n\n-\t\t}\n\n-\t\t.container {\n\n-\t\t\tpadding-top: 50px;\n\n-\t\t\tmargin-left: auto;\n\n-\t\t\tmargin-right: auto;\n\n-\t\t}\n\n-\t\t.error-msg, .support-msg {\n\n-\t\t}\n\n-\t\t.error-msg {\n\n-\t\t\tmargin-bottom: 40px;\n\n-\t\t}\n\n-\t\t.error-msg h1 {\n\n-\t\t\tfont-size: 52px;\n\n-\t\t}\n\n-\t\t.error-msg p {\n\n-\t\t\tfont-size: 20px;\n\n... (169 more lines)",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_removed",
       "timestamp": "2026-08-22T12:35:52.942620+00:00",
       "title": "https://project-skyscraper.com/2016/08/11/event-11082016/",
@@ -24032,5 +24045,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-22T12:35:52.950922+00:00"
+  "updated": "2026-08-24T18:51:41.954213+00:00"
 }
