@@ -2,6 +2,175 @@
   "entries": [
     {
       "type": "sitemap_added",
+      "timestamp": "2026-08-31T00:31:37.047341+00:00",
+      "title": "https://project-skyscraper.com/2021/03/27/event-27032021-1/",
+      "link": "https://project-skyscraper.com/2021/03/27/event-27032021-1/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2021/03/27/event-27032021-1/\n+ https://project-skyscraper.com/2024/07/17/event-17072024-1/",
+      "detail": "Added 2 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-30T18:30:12.246964+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7700,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-30T18:28:41+00:00",
+      "title": "2021_dataset",
+      "link": "https://project-skyscraper.com/2021/03/27/event-27032021-1/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7700,
+      "game_date": "2021-03-27T23:30:00+00:00"
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-30T18:21:35.442004+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7697,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-30T18:20:45+00:00",
+      "title": "2024_dataset",
+      "link": "https://project-skyscraper.com/2024/07/17/event-17072024-1/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7697,
+      "game_date": "2024-07-17T10:31:00+00:00"
+    },
+    {
+      "type": "memory_bloc_restoration",
+      "timestamp": "2026-08-30T09:32:17.932280+00:00",
+      "title": "Memory bloc restoration: 321/365 [64 Pages]",
+      "link": "https://project-skyscraper.com/",
+      "diff": "329/365 → 321/365",
+      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 64 pages",
+      "author": "System",
+      "site": "",
+      "restoration_value": "321/365",
+      "page_count": 64,
+      "last_timestamp": "2026-08-30T09:32:17.932280+00:00"
+    },
+    {
+      "type": "api_items_removed",
+      "timestamp": "2026-08-30T09:29:33.754364+00:00",
+      "title": "https://project-skyscraper.com/2016/03/19/event-19032016/",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 item(s) removed from /wp-json/wp/v2/posts",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "sitemap_added",
+      "timestamp": "2026-08-30T00:31:29.495621+00:00",
+      "title": "https://project-skyscraper.com/2026/06/06/event-06062026-1/",
+      "link": "https://project-skyscraper.com/2026/06/06/event-06062026-1/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2026/06/06/event-06062026-1/",
+      "detail": "Added 1 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-29T22:20:43.742774+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7694,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-29T22:19:41+00:00",
+      "title": "2026_dataset",
+      "link": "https://project-skyscraper.com/2026/06/06/event-06062026-1/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7694,
+      "game_date": "2026-06-06T10:56:00+00:00"
+    },
+    {
+      "type": "sitemap_added",
+      "timestamp": "2026-08-28T00:32:58.016262+00:00",
+      "title": "https://project-skyscraper.com/2025/10/03/event-03102025-1/",
+      "link": "https://project-skyscraper.com/2025/10/03/event-03102025-1/",
+      "endpoint": "",
+      "diff": "+ https://project-skyscraper.com/2025/10/03/event-03102025-1/",
+      "detail": "Added 1 URL(s) to sitemap",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-27T14:18:50.129961+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7690,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-08-27T14:18:03+00:00",
+      "title": "2025_dataset",
+      "link": "https://project-skyscraper.com/2025/10/03/event-03102025-1/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7690,
+      "game_date": "2025-10-03T22:26:00+00:00"
+    },
+    {
+      "type": "sitemap_added",
       "timestamp": "2026-08-25T16:57:54.144921+00:00",
       "title": "https://project-skyscraper.com/2026/08/09/event-09082026-4/",
       "link": "https://project-skyscraper.com/2026/08/09/event-09082026-4/",
@@ -116,19 +285,6 @@
       "site": "",
       "id": null,
       "game_date": ""
-    },
-    {
-      "type": "memory_bloc_restoration",
-      "timestamp": "2026-08-22T08:06:24.735188+00:00",
-      "title": "Memory bloc restoration: 321/365 [62 Pages]",
-      "link": "https://project-skyscraper.com/",
-      "diff": "329/365 → 321/365",
-      "detail": "Memory bloc restoration changed from 0/365 to 321/365 across 62 pages",
-      "author": "System",
-      "site": "",
-      "restoration_value": "321/365",
-      "page_count": 62,
-      "last_timestamp": "2026-08-22T08:06:24.735188+00:00"
     },
     {
       "type": "api_items_added",
@@ -22553,6 +22709,19 @@
     },
     {
       "type": "api_items_added",
+      "timestamp": "2026-06-09T17:12:39+00:00",
+      "title": "2016_dataset",
+      "link": "https://project-skyscraper.com/2016/03/19/event-19032016/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 492,
+      "game_date": "2016-03-19T00:00:00+00:00"
+    },
+    {
+      "type": "api_items_added",
       "timestamp": "2026-06-09T17:12:27+00:00",
       "title": "2016_dataset",
       "link": "https://project-skyscraper.com/2016/03/25/event-25032016/",
@@ -23967,5 +24136,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-08-25T16:57:54.152537+00:00"
+  "updated": "2026-09-02T04:19:54.159946+00:00"
 }
