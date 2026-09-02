@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "api_items_removed",
+      "timestamp": "2026-09-02T05:59:06.607222+00:00",
+      "title": ", , ",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "3 item(s) removed from /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-08-31T00:31:37.047341+00:00",
       "title": "https://project-skyscraper.com/2021/03/27/event-27032021-1/",
@@ -24136,5 +24149,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-02T04:19:54.159946+00:00"
+  "updated": "2026-09-02T05:59:06.616476+00:00"
 }
