@@ -1,19 +1,6 @@
 {
   "entries": [
     {
-      "type": "api_items_removed",
-      "timestamp": "2026-09-04T01:16:53.341795+00:00",
-      "title": "https://project-skyscraper.com/2026/04/08/sleep-mode-46120/, https://project-skyscraper.com/2025/10/04/event-04102025/, https://project-skyscraper.com/2024/08/07/event-07082024/",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/posts",
-      "diff": "",
-      "detail": "3 item(s) removed from /wp-json/wp/v2/posts",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
-    },
-    {
       "type": "sitemap_added",
       "timestamp": "2026-09-02T12:30:04.006702+00:00",
       "title": "https://project-skyscraper.com/2024/08/07/event-07082024/",
@@ -116,32 +103,6 @@
       "site": "",
       "id": 7707,
       "game_date": "2025-10-04T17:07:00+00:00"
-    },
-    {
-      "type": "api_items_added",
-      "timestamp": "2026-09-02T06:02:08.352552+00:00",
-      "title": "",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "3 new item(s) in /wp-json/wp/v2/search",
-      "author": 0,
-      "site": "",
-      "id": 881,
-      "game_date": ""
-    },
-    {
-      "type": "api_items_removed",
-      "timestamp": "2026-09-02T05:59:06.607222+00:00",
-      "title": ", , ",
-      "link": "",
-      "endpoint": "/wp-json/wp/v2/search",
-      "diff": "",
-      "detail": "3 item(s) removed from /wp-json/wp/v2/search",
-      "author": 0,
-      "site": "",
-      "id": null,
-      "game_date": ""
     },
     {
       "type": "sitemap_added",
@@ -24279,5 +24240,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-04T01:18:01.145018+00:00"
+  "updated": "2026-09-04T05:50:32.300966+00:00"
 }
