@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T15:49:41.028065+00:00",
+      "title": "YouTube count mismatch: 112 total, 111 public, 1 hidden",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "= total: 112\n= public: 111\n= hidden: 1",
+      "detail": "YouTube count mismatch: 112 total, 111 public, 1 hidden",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T15:49:41.027997+00:00",
+      "title": "YouTube public video count: 109 -> 111",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- public: 109\n+ public: 111",
+      "detail": "YouTube public video count: 109 -> 111",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_youtube_video_public",
       "timestamp": "2026-09-09T15:14:01.673785+00:00",
       "title": "New public upload: Stage Fright 1st Gameplay Trailer",
@@ -24373,5 +24399,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-09T15:14:01.681246+00:00"
+  "updated": "2026-09-09T15:49:41.035093+00:00"
 }
