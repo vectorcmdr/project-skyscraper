@@ -1,6 +1,71 @@
 {
   "entries": [
     {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T12:58:46.190203+00:00",
+      "title": "YouTube count mismatch: 111 total, 109 public, 2 hidden",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "= total: 111\n= public: 109\n= hidden: 2",
+      "detail": "YouTube count mismatch: 111 total, 109 public, 2 hidden",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T12:58:46.190180+00:00",
+      "title": "YouTube public video count: 108 -> 109",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- public: 108\n+ public: 109",
+      "detail": "YouTube public video count: 108 -> 109",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_video_hidden",
+      "timestamp": "2026-09-09T12:58:46.190153+00:00",
+      "title": "Hidden upload: No Man's Sky COSMOS Update Trailer",
+      "link": "https://www.youtube.com/watch?v=inZfjVQxC3o",
+      "endpoint": "",
+      "diff": "+ hidden upload: No Man's Sky COSMOS Update Trailer",
+      "detail": "Hidden upload detected: No Man's Sky COSMOS Update Trailer",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_video_hidden",
+      "timestamp": "2026-09-09T12:58:46.190115+00:00",
+      "title": "Hidden upload: No Man's Sky COSMOS Deep Dive",
+      "link": "https://www.youtube.com/watch?v=XQN91nm5D2A",
+      "endpoint": "",
+      "diff": "+ hidden upload: No Man's Sky COSMOS Deep Dive",
+      "detail": "Hidden upload detected: No Man's Sky COSMOS Deep Dive",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T12:58:46.189962+00:00",
+      "title": "YouTube upload total: 109 -> 111",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 109\n+ total: 111",
+      "detail": "YouTube upload total: 109 -> 111",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_content_changed",
       "timestamp": "2026-09-03T12:13:08.939460+00:00",
       "title": "Content changed: https://recalldreams.dev/wp-json/",
@@ -1670,5 +1735,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-09-03T12:13:08.940065+00:00"
+  "updated": "2026-09-09T12:58:46.190306+00:00"
 }
