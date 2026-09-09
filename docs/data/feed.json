@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_youtube_video_hidden",
+      "timestamp": "2026-09-09T14:58:15.142213+00:00",
+      "title": "Hidden upload: Stage Fright 1st Gameplay Trailer",
+      "link": "https://www.youtube.com/watch?v=rbKEp6iKYmE",
+      "endpoint": "",
+      "diff": "+ hidden upload: Stage Fright 1st Gameplay Trailer",
+      "detail": "Hidden upload detected: Stage Fright 1st Gameplay Trailer",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T14:58:15.142151+00:00",
+      "title": "YouTube upload total: 111 -> 112",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 111\n+ total: 112",
+      "detail": "YouTube upload total: 111 -> 112",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_youtube_video_public",
       "timestamp": "2026-09-09T13:05:14.518115+00:00",
       "title": "New public upload: No Man's Sky COSMOS Update Trailer",
@@ -24333,5 +24359,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-09T13:27:02.418963+00:00"
+  "updated": "2026-09-09T14:58:15.149040+00:00"
 }

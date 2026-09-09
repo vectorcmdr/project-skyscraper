@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "external_youtube_video_hidden",
+      "timestamp": "2026-09-09T14:58:15.245847+00:00",
+      "title": "Hidden upload: Stage Fright 1st Gameplay Trailer",
+      "link": "https://www.youtube.com/watch?v=rbKEp6iKYmE",
+      "endpoint": "",
+      "diff": "+ hidden upload: Stage Fright 1st Gameplay Trailer",
+      "detail": "Hidden upload detected: Stage Fright 1st Gameplay Trailer",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-09-09T14:58:15.245713+00:00",
+      "title": "YouTube upload total: 111 -> 112",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 111\n+ total: 112",
+      "detail": "YouTube upload total: 111 -> 112",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "external_youtube_video_public",
       "timestamp": "2026-09-09T13:09:21.508055+00:00",
       "title": "New public upload: No Man's Sky Cross-Save Trailer",
@@ -1791,5 +1817,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-09-09T13:09:21.508149+00:00"
+  "updated": "2026-09-09T14:58:15.246005+00:00"
 }
