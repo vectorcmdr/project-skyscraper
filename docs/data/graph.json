@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T08:24:26.612323+00:00",
+  "updated": "2026-09-16T08:30:33.746907+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -5786,6 +5786,14 @@
       "date": "2026-03-28T18:17:00"
     },
     {
+      "id": "/2026/09/10/event-10092026",
+      "type": "post",
+      "label": "2026_dataset",
+      "url": "https://project-skyscraper.com/2026/09/10/event-10092026/",
+      "author": "System",
+      "date": "2026-09-10T22:05:00"
+    },
+    {
       "id": "/2026/07/11/2026_dataset_11072026",
       "type": "post",
       "label": "2026_dataset_11072026",
@@ -8110,6 +8118,14 @@
       "type": "external",
       "label": "forums.atlas-65.com",
       "url": "https://forums.atlas-65.com/t/downtime-preparations-on-nomanswalk-twitch/10217?u=rusty",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://forums.atlas-65.com/t/nms-alliances/10303/63?u=sheralmyst",
+      "type": "external",
+      "label": "forums.atlas-65.com",
+      "url": "https://forums.atlas-65.com/t/nms-alliances/10303/63?u=sheralmyst",
       "author": "",
       "date": ""
     },
@@ -23596,6 +23612,54 @@
       "target": "/2026/03/29/sleep-mode-46110"
     },
     {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "https://forums.atlas-65.com/t/nms-alliances/10303/63?u=sheralmyst"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/2026/09/03/event-03092026"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -28389,6 +28453,14 @@
     },
     {
       "source": "/2026/03/28/event-28032026",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/09/10/event-10092026",
       "target": "/category/non-classe"
     },
     {
