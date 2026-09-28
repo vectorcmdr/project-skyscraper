@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-09-28T20:20:54.593272+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "--- \n+++ \n@@ -10,20 +10,26 @@\n </div>\n <div>\n-<form>\n-<input/>\n-</p>\n-<p>\n-This content is password-protected. To view it, please enter the password below.\n-</p>\n-<p>\n-<label>\n-Password:\n-<input/>\n-</label>\n+<div>\n+<div>\n+<div>\n <span>\n-<input value=Enter/>\n+Tower\n </span>\n-</p>\n-</form>\n+<span>\n+connected\n+</span>\n+</div>\n+<div>\n+</div>\n+<div>\n+<span>\n+>\n+</span>\n+<input placeholder=waiting for command...>\n+</div>\n+</div>\n+<canvas>\n+</canvas>\n+</div>\n </div>\n </div>",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-09-26T00:29:59.151343+00:00",
       "title": "https://project-skyscraper.com/2026/09/25/event-25092026/",
@@ -24568,5 +24581,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-26T00:29:59.159593+00:00"
+  "updated": "2026-09-28T20:20:54.601648+00:00"
 }
