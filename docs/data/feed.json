@@ -2,6 +2,32 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-09-28T21:20:44.130096+00:00",
+      "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "link": "https://recalldreams.dev/landing-page/terminal/",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/landing-page/terminal/\n# File: html/landing-page/terminal/index.html\n# Timestamp: 2026-09-28 21:20:21 UTC\n# Lines: 78729 old -> 80880 new\n# Beautified: yes\n\n--- \n+++ \n@@ -10,20 +10,26 @@\n </div>\n <div>\n-<form>\n-<input/>\n-</p>\n-<p>\n-This content is password-protected. To view it, please enter the password below.\n-</p>\n-<p>\n-<label>\n-Password:\n-<input/>\n-</label>\n+<div>\n+<div>\n+<div>\n <span>\n-<input value=Enter/>\n+Tower\n </span>\n-</p>\n-</form>\n+<span>\n+connected\n+</span>\n+</div>\n+<div>\n+</div>\n+<div>\n+<span>\n+>\n+</span>\n+<input placeholder=waiting for command...>\n+</div>\n+</div>\n+<canvas>\n+</canvas>\n+</div>\n </div>\n </div>",
+      "detail": "Content changed: https://recalldreams.dev/landing-page/terminal/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
+      "timestamp": "2026-09-28T21:20:44.130021+00:00",
+      "title": "Content changed: https://recalldreams.dev/wp-json/wp/v2/pages?per_page=100",
+      "link": "https://recalldreams.dev/wp-json/wp/v2/pages?per_page=100",
+      "endpoint": "",
+      "diff": "# Diff: https://recalldreams.dev/wp-json/wp/v2/pages?per_page=100\n# File: api/wp-json/wp/v2/pages_per_page_100/.json\n# Timestamp: 2026-09-28 21:20:12 UTC\n# Lines: 86560 old -> 98177 new\n# Beautified: yes\n\n@@ -23,12 +23,12 @@\n       \"rendered\": \"EotT Demo\"\n\n     },\n\n     \"content\": {\n\n-      \"rendered\": \"\",\n\n-      \"protected\": true\n\n+      \"protected\": false\n\n     },\n\n     \"excerpt\": {\n\n-      \"rendered\": \"\",\n\n-      \"protected\": true\n\n+      \"rendered\": \"<p>Tower connected &gt;</p>\\n\",\n\n+      \"protected\": false\n\n     },\n\n     \"jetpack_likes_enabled\": true,\n\n     \"jetpack_sharing_enabled\": true,\n",
+      "detail": "Content changed: https://recalldreams.dev/wp-json/wp/v2/pages?per_page=100",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-09-28T20:20:54.593272+00:00",
       "title": "Content changed: https://recalldreams.dev/landing-page/terminal/",
       "link": "https://recalldreams.dev/landing-page/terminal/",
@@ -24581,5 +24607,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-28T20:20:54.601648+00:00"
+  "updated": "2026-09-28T21:20:44.138384+00:00"
 }
