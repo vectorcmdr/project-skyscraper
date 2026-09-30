@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-09-30T18:52:50.318639+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "link": "https://recalldreams.dev/home/schrodingers-instagram/",
+      "endpoint": "",
+      "diff": "--- \n+++ \n@@ -231,4 +231,5 @@\n </div>\n <meta>\n+<link href=https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/swiper.js/>\n <div>\n <div>",
+      "detail": "Content changed: https://recalldreams.dev/home/schrodingers-instagram/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-09-30T18:20:39.851561+00:00",
       "title": "Modified pages: Discover more on recalldreams.dev",
       "link": "https://recalldreams.dev/home/discover-more/",
@@ -24672,5 +24685,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-30T18:20:39.858669+00:00"
+  "updated": "2026-09-30T18:52:50.325919+00:00"
 }
