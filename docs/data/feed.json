@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "type": "external_content_changed",
+      "timestamp": "2026-09-30T17:41:21.868029+00:00",
+      "title": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "link": "https://recalldreams.dev/home/discover-more/",
+      "endpoint": "",
+      "diff": "--- \n+++ \n@@ -196,4 +196,5 @@\n </div>\n <meta>\n+<link href=https://recalldreams.dev/wp-content/plugins/jetpack/_inc/blocks/swiper.js/>\n <div>\n <div>",
+      "detail": "Content changed: https://recalldreams.dev/home/discover-more/",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
       "type": "api_items_modified",
       "timestamp": "2026-09-30T16:46:21.281027+00:00",
       "title": "2017_dataset",
@@ -24646,5 +24659,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-30T16:46:23.164142+00:00"
+  "updated": "2026-09-30T17:41:21.875117+00:00"
 }
