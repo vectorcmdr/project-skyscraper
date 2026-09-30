@@ -2,6 +2,19 @@
   "entries": [
     {
       "type": "external_content_changed",
+      "timestamp": "2026-09-30T18:20:39.851561+00:00",
+      "title": "Modified pages: Discover more on recalldreams.dev",
+      "link": "https://recalldreams.dev/home/discover-more/",
+      "endpoint": "/wp-json/wp/v2/pages",
+      "diff": "~ #103: Discover more",
+      "detail": "Modified pages: Discover more on recalldreams.dev",
+      "author": 0,
+      "site": "recalldreams",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_content_changed",
       "timestamp": "2026-09-30T17:41:21.868029+00:00",
       "title": "Content changed: https://recalldreams.dev/home/discover-more/",
       "link": "https://recalldreams.dev/home/discover-more/",
@@ -24659,5 +24672,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-09-30T17:41:21.875117+00:00"
+  "updated": "2026-09-30T18:20:39.858669+00:00"
 }
