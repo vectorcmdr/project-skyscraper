@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T07:40:43.317633+00:00",
+  "updated": "2026-10-02T09:24:38.444814+00:00",
   "nodes": [
     {
       "id": "sitemap",
@@ -5818,6 +5818,14 @@
       "date": "2026-09-25T22:18:00"
     },
     {
+      "id": "/2026/09/30/event-30092026",
+      "type": "post",
+      "label": "2026_dataset",
+      "url": "https://project-skyscraper.com/2026/09/30/event-30092026/",
+      "author": "System",
+      "date": "2026-09-30T02:00:00"
+    },
+    {
       "id": "/2026/07/11/2026_dataset_11072026",
       "type": "post",
       "label": "2026_dataset_11072026",
@@ -8422,6 +8430,14 @@
       "type": "external",
       "label": "nmsgalactichub.miraheze.org",
       "url": "https://nmsgalactichub.miraheze.org/wiki/Howdenni_Musa",
+      "author": "",
+      "date": ""
+    },
+    {
+      "id": "https://nmsgalactichub.miraheze.org/wiki/HUB1-412_Uldosu-Nueve",
+      "type": "external",
+      "label": "nmsgalactichub.miraheze.org",
+      "url": "https://nmsgalactichub.miraheze.org/wiki/HUB1-412_Uldosu-Nueve",
       "author": "",
       "date": ""
     },
@@ -23884,6 +23900,54 @@
       "target": "/2026/09/25/event-25092026"
     },
     {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/flow"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/the-shared-dream"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/calculator"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/request-memory-timestamp-094317"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/report-glitching-realities"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/neural-network-status"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/a-message-to-the-community"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/about"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "https://nmsgalactichub.miraheze.org/wiki/HUB1-412_Uldosu-Nueve"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/tag/shared-memory"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/2026/09/25/event-25092026-2"
+    },
+    {
       "source": "/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg",
       "target": "/author/theskyscraperarchitect"
     },
@@ -28709,6 +28773,14 @@
     },
     {
       "source": "/2026/09/25/event-25092026-2",
+      "target": "/category/non-classe"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
+      "target": "/author/system26da6be6a6"
+    },
+    {
+      "source": "/2026/09/30/event-30092026",
       "target": "/category/non-classe"
     },
     {
