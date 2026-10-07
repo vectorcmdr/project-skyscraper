@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS OPS CENTRE | TOOLS</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="../status/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../ops-presence.js"></script>
+</head>
+<body class="tools-body">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/TOOLS
+      </a>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;">
+        <span class="trace-status" id="traceStatus"></span>
+        <span class="trace-status" id="twitchStatus"></span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-right-top">
+        <span class="operator-label" id="operatorDisplay"></span>
+      </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tools-main">
+    <div class="tools-header">
+      <div class="fp-panel">
+        <div class="fp-panel-inner">
+          <canvas id="fpCanvas"></canvas>
+        </div>
+      </div>
+      <div class="eye-panel">
+        <div class="eye-panel-inner">
+          <canvas id="eyeCanvas"></canvas>
+        </div>
+      </div>
+      <div class="tools-title-area">
+        <h1 class="tools-title">&#9654; OPERATOR TOOLKIT</h1>
+        <p class="tools-subtitle">SCHOOL_CODE &middot; TRANSLATION &middot; TS</p>
+        <div class="query-bar" id="queryBar">
+          <img src="data/wasp.png" alt="wasp" style="width:32px;">
+          <span class="query-label">QUERY:</span>
+          <span class="query-text" id="queryText">Loading...</span>
+          <div class="query-respond">
+            <span class="query-callsign-label">CALLSIGN:</span>
+            <input type="text" id="queryCallsign" class="query-callsign-input" maxlength="48" autocomplete="off" spellcheck="false">
+            <div class="query-respond-row">
+              <input type="text" id="queryInput" class="query-input" placeholder="enter response..." autocomplete="off">
+              <button class="query-btn" id="queryBtn">&#9166;</button>
+            </div>
+          </div>
+          <span class="query-result" id="queryResult"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-tabs">
+      <button class="tool-tab active" data-tab="schl_code">SCHL_CODE</button>
+      <button class="tool-tab" data-tab="schl_fr_en">SCHL_FR_EN</button>
+      <button class="tool-tab" data-tab="fr_en">FR_EN</button>
+      <button class="tool-tab" data-tab="ts_conv">TS_CONV</button>
+      <button class="tool-tab" data-tab="window_sync">WINDOW_SYNC</button>
+    </div>
+
+    <!-- PANE: SCHL_CODE -->
+    <div class="tool-pane active" id="pane-schl_code">
+      <h3>&#9654; SCHOOL CODE</h3>
+      <p>Apply the PROJECT SKYSCRAPER substitution cipher. Decrypts ciphertext to plaintext or encrypts plaintext to ciphertext using the KEY mapping: ABCDEFGHIJKLMNOPQRSTUVWXYZ &harr; MINDFAGEBJRLHCVPQSKYUWOXTZ</p>
+      <div class="tool-input-group">
+        <textarea id="schlCodeInput" class="tool-input tool-textarea" placeholder="enter ciphertext or plaintext..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-swap-btn" id="schlCodeMode" onclick="toggleSchlMode()">MODE: DECRYPT</button>
+      </div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlCodeOutput">(no input)</div>
+        <button class="copy-btn" data-target="schlCodeOutput" title="Copy to clipboard">⎘</button>
+      </div>
+      <div class="tool-char-count" id="schlCodeCount">0 chars</div>
+    </div>
+
+    <!-- PANE: SCHL_FR_EN -->
+    <div class="tool-pane" id="pane-schl_fr_en">
+      <h3>&#9654; SCHOOL CODE + FR&rarr;EN</h3>
+      <p>Decrypt the ciphertext with the SCHOOL CODE, then open the French result in Google Translate (fr&rarr;en) in a new tab.</p>
+      <div class="tool-input-group">
+        <textarea id="schlFrEnInput" class="tool-input tool-textarea" placeholder="enter encrypted french text..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-btn" onclick="runSchlFrEn()">DECIPHER + TRANSLATE</button>
+      </div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlFrEnDecrypted">(awaiting cipher output)</div>
+        <button class="copy-btn" data-target="schlFrEnDecrypted" title="Copy decrypted text">⎘</button>
+      </div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="schlFrEnTranslated">(awaiting translation)</div>
+      </div>
+      <div class="tool-char-count" id="schlFrEnCount">0 chars</div>
+      <p class="gt-note">The decrypted French text will open in Google Translate in a new tab. No data is sent to our server.</p>
+    </div>
+
+    <!-- PANE: FR_EN -->
+    <div class="tool-pane" id="pane-fr_en">
+      <h3>&#9654; FRENCH &rarr; ENGLISH</h3>
+      <p>Paste French text and open it in Google Translate in a new tab.</p>
+      <div class="tool-input-group">
+        <textarea id="frEnInput" class="tool-input tool-textarea" placeholder="enter french text..." spellcheck="false" autocomplete="off"></textarea>
+        <button class="tool-btn" onclick="runFrEn()">TRANSLATE</button>
+      </div>
+      <div class="tool-output-wrap">
+        <div class="tool-output" id="frEnOutput">(no input)</div>
+      </div>
+      <div class="tool-char-count" id="frEnCount">0 chars</div>
+      <p class="gt-note">The text will open in Google Translate in a new tab. No data is sent to our server.</p>
+    </div>
+    <!-- PANE: TS_CONV -->
+    <div class="tool-pane" id="pane-ts_conv">
+      <h3>&#9654; TIMESTAMP CONVERTER</h3>
+
+      <div class="tsconv-section">
+        <h4>DATE &rarr; EPOCH</h4>
+        <div class="tsconv-input-row">
+          <input type="date" id="tsConvDateInput" class="tool-input tsconv-date-picker">
+          <input type="text" id="tsConvTimeInput" class="tool-input tsconv-time-input" placeholder="HH:MM:SS" spellcheck="false" autocomplete="off">
+          <button class="tool-swap-btn" id="tsConvDateMode" onclick="toggleTsConvDateMode()">UTC</button>
+        </div>
+        <div class="tool-output-wrap">
+          <div class="tool-output" id="tsConvEpochOutput">(enter a date)</div>
+          <button class="copy-btn" data-target="tsConvEpochOutput" title="Copy epoch">⎘</button>
+        </div>
+      </div>
+
+      <div class="tsconv-section">
+        <h4>EPOCH &rarr; DATE</h4>
+        <div class="tsconv-input-row">
+          <input type="text" id="tsConvEpochInput" class="tool-input tsconv-epoch-input" placeholder="epoch timestamp (seconds)" spellcheck="false" autocomplete="off">
+          <button class="tool-swap-btn" id="tsConvEpochMode" onclick="toggleTsConvEpochMode()">UTC</button>
+        </div>
+        <div class="tool-output-wrap">
+          <div class="tool-output" id="tsConvDateOutput">(enter an epoch)</div>
+          <button class="copy-btn" data-target="tsConvDateOutput" title="Copy date">⎘</button>
+        </div>
+      </div>
+    </div>
+    <!-- PANE: WINDOW_SYNC -->
+    <div class="tool-pane" id="pane-window_sync">
+      <h3>&#9654; WINDOW SYNC</h3>
+      <p>PROJECTED WINDOW SYNC TIMES FROM wave_projection.csv. UTC + LOCAL + GAME. GREY = PASSED.</p>
+      <p>SYNC TIMES:</p>
+      <p>WHITE = UPCOMING UTC, GREY = UPCOMING LOCAL, GREEN = UPCOMING GAME TIME</p>
+      <p>DARK GREY = TIME HAS PASSED - WINDOW MISSED</p>
+      <div class="ws-clocks">
+        <span class="ws-clock" id="wsClockUTC">--:--:--</span> UTC
+        <span class="ws-clock" id="wsClockLocal">--:--:--</span> LOCAL
+        <span class="ws-clock" id="wsClockGame">--:--:--</span> GAME
+      </div>
+      <div class="ws-snapshot" id="wsSnapshot">SNAPSHOT: loading...</div>
+      <div class="ws-day-tabs" id="wsDayTabs"></div>
+      <div class="ws-day-panes" id="wsDayPanes"></div>
+    </div>
+  </div>
+
+  <script defer src="app.js"></script>
+</body>
+</html>

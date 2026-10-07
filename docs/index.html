@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPS CENTRE | PROJECT SKYSCRAPER</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+  <link rel="stylesheet" href="status/style.css">
+  <script src="./ops-presence.js"></script>
+  <style>
+    .neural-bg {
+      position: fixed; top: 12px; left: 12px; width: 110px; height: 110px;
+      z-index: 0; pointer-events: none;
+    }
+    .neural-bg canvas { width: 100%; height: 100%; opacity: .75; }
+    .neural-count {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      color: #fff; font-family: 'Courier New', monospace; font-weight: bold;
+      font-size: 22px; text-shadow: 0 0 8px rgba(0,0,0,.8); z-index: 1;
+      pointer-events: none; user-select: none;
+    }
+    @media (max-width: 600px) {
+      .neural-bg { width: 80px; height: 80px; top: 8px; left: 8px; }
+      .neural-count { font-size: 16px; }
+    }
+    .landing-centre {
+      transform: translateY(calc(-25% + 48px));
+    }
+  </style>
+</head>
+<body class="landing">
+  <div class="neural-bg"><canvas id="miniMesh"></canvas><span id="liveCount" class="neural-count"></span></div>
+  <main class="landing-centre">
+    <img src="favicon.jpg" alt="PS" class="landing-avatar">
+    <h1>OPS CENTRE</h1>
+    <p class="tagline">PROJECT SKYSCRAPER SITE MONITORING & TOOLS</p>
+    <div class="terminal-prompt">
+      <svg class="brain-icon" viewBox="0 0 72 72" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" fill="none">
+          <line x1="16" x2="25.875" y1="35" y2="35"/>
+          <path d="M25.875,35c3.4167,0,4.75-2.9167,4.75-6.1667"/>
+          <line x1="16" x2="19.75" y1="45.5" y2="45.5"/>
+          <line x1="35.2997" x2="35.2997" y1="45.5" y2="39.4375"/>
+          <path d="M35.2997,39.4375c0-2.2455,1.2003-5.25,5.0756-5.25"/>
+          <line x1="58.4583" x2="49.875" y1="34.5417" y2="34.5417"/>
+          <path d="M40.375,45.5c0,0,0.1642,10.5-7.9583,10.5H16c-7.2083,0-7.6667-10.5,0-10.5C8.7917,45.5,8.3333,35,16,35 c-8.1667-7.25,1.875-13.5625,6.5-8.6875c-4.799-6.625,5.375-10.3125,8.875-5C30.9627,16,36.2222,15.0417,41.1003,19.024 l-0.4336,0.351c2.375-2.375,10.1776-1.0833,10.1776,5.3141l-2.2192,1.6234c6.8646-6.8646,14.2083,4.1875,8.5,8.2292h1.3333 c4.75,0,5.2917,10.9583-1.3333,10.9583H29.2917"/>
+          <path d="M40.6667,19.375c-2.4167,2.4167-0.2822,3.1782-4.2707,7.1667"/>
+        </g>
+      </svg>
+      <span class="prompt-sym">&#9654;</span>
+      <span class="prompt-flavour">Awaiting External Operator ghost-line...</span>
+      <span class="prompt-sep">|</span>
+      <span class="prompt-input-wrap">
+        <input type="text" id="opInput" class="prompt-input" placeholder="callsign" maxlength="48" autocomplete="off" spellcheck="false">
+        <span class="cursor">&#9612;</span>
+      </span>
+    </div>
+    <nav class="landing-nav">
+      <a href="status/" class="btn">EXEC: OPS_CENTRE</a>
+      <a href="neural-net/" class="btn">VIEW: NEURAL_NET</a>
+      <a href="tools/" class="btn">OPS: TOOLS</a>
+      <a href="https://forums.atlas-65.com/t/project-skyscraper-frequently-asked-questions/9393/4" target="_blank" class="btn">OPS: GET_WINDOW</a>
+      <a href="windows/" class="btn">OPS: WINDOW_SIM</a>
+      <a href="https://forums.atlas-65.com/t/ps-operator-id-files-3d-print-cut-pattern-fanart/9902/" target="_blank" class="btn4">OPS: GET_ID</a>
+      <!--<a href="https://wakingtitan-engram.vectorcmdr.xyz/" target="_blank" class="btn3">DB: WAKINGTITAN</a>-->
+    </nav>
+    <footer class="landing-footer">
+      <span class="blink">&#9612; LIVE  &#9612;</span>
+      <br/>
+      <br/>
+      <!--<span class="blink">&#9612; STATUS: ASSESSING TOWER | REBUILDING DB:WAKINGTITAN... &#9612;</span>-->
+      <img src="data/wasp.png" alt="wasp" style="width:64px;">
+    </footer>
+  </main>
+  <img src="img/data.gif" alt="" class="data-gif" loading="lazy">
+  <script>
+    const inp = document.getElementById('opInput');
+    const saved = localStorage.getItem('operator');
+    if (saved) inp.value = saved;
+    inp.addEventListener('input', () => {
+      localStorage.setItem('operator', inp.value.trim());
+    });
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { location.href = 'status/'; }
+    });
+    inp.focus();
+  </script>
+  <script>
+    (function () {
+      var canvas = document.getElementById('miniMesh');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d', { alpha: true });
+      var particles = [];
+      var mouse = { x: -9999, y: -9999, active: false };
+      var REF_DIAMETER = 320;
+      var SCALE = 0.3;
+      var PADDING = 0.72;
+      var countEl = document.getElementById('liveCount');
+      var COUNT = 54;
+
+      function init() {
+        var w = canvas.offsetWidth, h = canvas.offsetHeight;
+        var dpr = window.devicePixelRatio || 1;
+        canvas.width = w * dpr; canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        SCALE = (Math.min(w, h) * PADDING) / REF_DIAMETER;
+        var cx = w / 2, cy = h / 2;
+        var hexR = 140 * SCALE;
+        var off = Math.PI / 6;
+
+        for (var i = 0; i < COUNT; i++) {
+          var s = Math.floor(i / (COUNT / 6));
+          var t = ((i % (COUNT / 6)) / (COUNT / 6));
+          var a1 = off + s * (Math.PI / 3);
+          var a2 = off + (s + 1) * (Math.PI / 3);
+          var bx = cx + (Math.cos(a1) + (Math.cos(a2) - Math.cos(a1)) * t) * hexR;
+          var by = cy + (Math.sin(a1) + (Math.sin(a2) - Math.sin(a1)) * t) * hexR;
+
+          particles.push({
+            bx: bx, by: by,
+            x: bx, y: by,
+            size: (1.8 + Math.random() * 1.4) * SCALE,
+            angle: Math.random() * Math.PI * 2,
+            orbitSpeed: 0.25 + Math.random() * 0.25,
+            vibeSpeed: 1.1 + Math.random() * 0.9
+          });
+        }
+        animate();
+      }
+
+      function animate() {
+        var w = canvas.offsetWidth, h = canvas.offsetHeight;
+        ctx.clearRect(0, 0, w, h);
+        ctx.shadowColor = '#ff2d2d';
+
+        var connDist = 170 * SCALE;
+        var mouseR = 140 * SCALE;
+
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.angle += p.orbitSpeed;
+          var tx = p.bx + Math.cos(p.angle) * (8 * SCALE);
+          var ty = p.by + Math.sin(p.angle) * (4 * SCALE);
+
+          if (mouse.active) {
+            var dx = mouse.x - p.x, dy = mouse.y - p.y;
+            var dist = Math.hypot(dx, dy);
+            if (dist < mouseR) {
+              var force = (1 - dist / mouseR) * 0.5;
+              tx -= dx * force;
+              ty -= dy * force;
+            }
+          }
+
+          p.x += (tx - p.x) * 0.1;
+          p.y += (ty - p.y) * 0.1;
+        }
+
+        ctx.lineWidth = 0.6 * SCALE;
+        for (var i = 0; i < particles.length; i++) {
+          for (var j = i + 1; j < particles.length; j++) {
+            var d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
+            if (d < connDist) {
+              ctx.strokeStyle = 'rgba(255,45,45,' + Math.max(0, 1 - d / connDist).toFixed(3) + ')';
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        for (var k = 0; k < particles.length; k++) {
+          var p = particles[k];
+          var dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+          var intensity = Math.max(0, 1 - dist / (Math.min(w, h) * 0.45));
+          ctx.shadowBlur = intensity > 0.3 ? 20 * SCALE : 8 * SCALE;
+          ctx.fillStyle = '#ff2d2d';
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size + intensity * 2.5 * SCALE, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.shadowBlur = 0;
+        requestAnimationFrame(animate);
+      }
+
+      function updateMouse(e) {
+        var r = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left;
+        mouse.y = e.clientY - r.top;
+        mouse.active = true;
+      }
+
+      document.addEventListener('mousemove', updateMouse);
+      document.addEventListener('mouseleave', function () { mouse.active = false; });
+      document.addEventListener('touchmove', function (e) {
+        var t = e.touches[0];
+        if (t) updateMouse(t);
+      });
+      document.addEventListener('touchend', function () { mouse.active = false; });
+
+      fetch('https://project-skyscraper.com/neural-network-status/')
+        .then(function (r) { return r.text(); })
+        .then(function (t) {
+          var m = /<strong>(\d+)<\/strong>\s*Live\s+Connections/.exec(t) || /(\d+)\s+Live\s+Connections/.exec(t);
+          if (m) { countEl.textContent = m[1]; }
+        })
+        .catch(function () {
+          fetch('data/connections.json')
+            .then(function (r) { return r.json(); })
+            .then(function (d) { if (d && d.count !== undefined) { countEl.textContent = d.count; } })
+            .catch(function () {});
+        });
+      init();
+    })();
+  </script>
+</body>
+</html>

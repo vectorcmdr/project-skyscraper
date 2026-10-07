@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS OPS CENTRE | STATUS FEED</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="../ops-presence.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/OPS
+      </a>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;">
+        <span class="trace-status" id="traceStatus"></span>
+        <span class="trace-status" id="twitchStatus"></span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-right-top">
+        <span class="operator-label" id="operatorDisplay"></span>
+        <button class="sound-toggle" id="soundToggle" title="Toggle notification sounds">&#128263;</button>
+      </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="https://monitor-project-skyscraper.pages.dev/" target="_blank" rel="noopener">MONITOR_PS</a>
+        <a class="proxy-tag" href="https://forums.atlas-65.com/t/skyscraper-directory-organization-thread/" target="_blank" rel="noopener">ETARC/ACSD</a>
+        <a class="proxy-tag" href="https://docs.google.com/spreadsheets/d/1mUOrEQqj5SqazYnwB9yjaRHICkJJVo0lJHHPSd9DbV4/" target="_blank" rel="noopener">YBM_CADENCE</a>
+        <a class="proxy-tag" href="https://docs.google.com/spreadsheets/d/1_n8Z5AItsWIOVBg1-CNEBqB_xvIdsFoYlpj1NAW-myA/" target="_blank" rel="noopener">TBB_MEMLOG</a>
+        <a class="proxy-tag" href="../windows/" target="_blank" rel="noopener">WINDOW SIM</a>
+        <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        
+      </div>
+      <div class="safety-feed">
+        <div class="safety-feed-bar" onclick="this.parentNode.classList.toggle('open')">
+          <span class="safety-feed-arrow">&#9654;</span>
+          vector_cmdr safety feed
+          <span class="safety-feed-dot">&#9679;</span>
+        </div>
+        <div class="safety-feed-content">
+          <!--<img id="safetyGif" src="../data/vector_is_real.gif" alt="vector_cmdr safety feed">-->
+          <img id="safetyGif" src="../data/vector_baguette.gif" alt="vector_cmdr safety feed">
+        </div>
+        <script>
+          (function() {
+            var gifs = [
+              '../data/vector_is_real.gif',
+              '../data/vector_draw.gif',
+              '../data/vector_make.gif',
+              '../data/vector_disappear.gif',
+              '../data/vector_rip.gif',
+              '../data/vector_croissant.gif',
+              '../data/vector_twirl.gif',
+              '../data/vector_munch.gif',
+              '../data/vector_baguette.gif',
+              '../data/vector_frazzle.gif',
+              '../data/vector_nip.gif'
+            ];
+            var img = document.getElementById('safetyGif');
+            if (!img) return;
+            // Preload all GIFs
+            for (var i = 0; i < gifs.length; i++) {
+              var pre = new Image();
+              pre.src = gifs[i];
+            }
+            var current = Math.floor(Math.random() * gifs.length);
+            img.src = gifs[current];
+            setInterval(function() {
+              var next;
+              do {
+                next = Math.floor(Math.random() * gifs.length);
+              } while (next === current && gifs.length > 1);
+              current = next;
+              img.src = gifs[current];
+            }, 12000);
+          })();
+        </script>
+      </div>
+    </div>
+  </header>
+
+  <div class="sync-line" id="lastSync">LAST_SYNC: ---</div>
+
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active" data-tab="feed">Change Log</button>
+      <button class="tab" data-tab="manifest">Known Pages</button>
+      <button class="tab" data-tab="external">Externals</button>
+    </div>
+
+    <!-- LEFT: Changes feed -->
+    <section class="feed active" id="feed">
+      <h2>&#9654; CHANGE LOG</h2>
+      <div class="feed-controls">
+        <span class="sort-label">SORT:</span>
+        <button class="sort-btn active" data-sort="real" data-tab="feed">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="feed">GAME TIME</button>
+      </div>
+      <div id="feedEntries"></div>
+    </section>
+
+    <!-- RIGHT: Manifest (all known pages/posts) -->
+    <section class="manifest" id="manifest">
+      <h2>&#9654; KNOWN PAGES</h2>
+      <div class="manifest-controls">
+        <input type="text" id="manifestSearch" placeholder="search title or url…" class="search-input">
+        <select id="manifestFilter" class="search-input">
+          <option value="all">all types</option>
+          <option value="page">pages</option>
+          <option value="post">posts</option>
+          <option value="attachment">media</option>
+        </select>
+      </div>
+      <div class="feed-controls">
+        <span class="sort-label">SORT:</span>
+        <button class="sort-btn active" data-sort="real" data-tab="manifest">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="manifest">GAME TIME</button>
+      </div>
+      <div id="manifestEntries"></div>
+    </section>
+
+    <!-- EXTERNAL FACTORS -->
+    <section class="external" id="external">
+      <h2>&#9654; EXTERNAL FACTORS</h2>
+      <div class="manifest-controls">
+        <input type="text" id="externalSearch" placeholder="search site or type…" class="search-input">
+        <select id="externalFilter" class="search-input">
+          <option value="all">all types</option>
+          <option value="dns">DNS</option>
+          <option value="robots">robots.txt</option>
+          <option value="content">content</option>
+          <option value="wakingtitan">wakingtitan</option>
+          <option value="tower">tower</option>
+        </select>
+      </div>
+      <div class="feed-controls">
+        <span class="sort-label">SORT:</span>
+        <button class="sort-btn active" data-sort="real" data-tab="external">REAL TIME</button>
+        <button class="sort-btn" data-sort="game" data-tab="external">GAME TIME</button>
+      </div>
+      <div id="externalEntries"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

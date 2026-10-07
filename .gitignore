@@ -1,0 +1,64 @@
+# Secrets -- each user provides their own
+config.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Windows junk
+Thumbs.db
+
+# Daemon auto-generated state and logs. The state JSONs and the collection
+# snapshot rotation are committed when running on GitHub Actions (the
+# runner is ephemeral); the rest stays local.
+state/*
+!state/monitor_state.json
+!state/last_stable_snapshot.json
+!state/wave_stats.json
+monitor_reports/*
+!monitor_reports/collections/
+
+# Local mirror archives and generated reports (untracked; the page bodies
+# in html/ and external/ ARE tracked as diff baselines, plus the 4 api
+# collection files below api/wp-json/wp/v2/).
+media/
+diffs/
+assets/
+endpoints/
+third_party/
+external_refs/
+extras/
+discovery/
+api/
+**/*.headers.json
+MIRROR_MANIFEST.md
+POST_ID_SERIES.md
+UNPUBLISHED_IDS.md
+
+# Local mirror/ops kit (kept on disk, not tracked; the hosted runner does
+# not use these -- it only runs monitor_site.py + the monitor package).
+mirror_recalldreams.py
+serve_mirror.py
+serve_site.ps1
+start_monitor.ps1
+update_mirror.py
+update_mirror.ps1
+tower_serve.ps1
+monitor/fetcher.py
+
+# Session notes (ARG narrative context, excluded from mirror)
+.notes.md
+
+# External site mirrors (recalldreams.dev, etc.)
+mirrors/
+
+# NMSCord teams historical archive
+MIRRORED_TOWER/
+
+
+# HALSYS16
+docs/hallucination-systems/
+
+# WIP pages (untracked for now; re-add when finished)
+/docs/dossier/
+/docs/mem-emu/

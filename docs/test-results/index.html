@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS OPS CENTRE | TEST RESULTS</title>
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+  <link rel="stylesheet" href="../status/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../ops-presence.js"></script>
+</head>
+<body class="results-body">
+  <header class="topbar">
+    <div class="topbar-left">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/LOGS
+      </a>
+      <span class="trace-status" id="traceStatus"></span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-right-top">
+        <span class="operator-label" id="operatorDisplay"></span>
+      </div>
+      <div class="proxy-network">
+        <span class="proxy-label">PROXY NETWORK:</span>
+        <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+        <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+        <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL_NET</a>
+        <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tr-content">
+    <div class="tr-header">VOIGHT-KAMPFF RESPONSES</div>
+
+    <div class="tr-controls">
+      <input type="text" class="search-input" id="searchInput" placeholder="filter by callsign, question, or answer..." autocomplete="off">
+      <select class="search-input" id="sortSelect">
+        <option value="timestamp">Sort: newest</option>
+        <option value="timestamp_asc">Sort: oldest</option>
+        <option value="callsign">Sort: callsign</option>
+      </select>
+      <span class="tr-count" id="resultsCount"></span>
+      <button class="tr-btn" id="exportBtn">export md</button>
+    </div>
+
+    <div id="resultsContainer">
+      <div class="tr-loading">LOADING...</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/jpeg" href="../favicon.jpg">
+<title>WINDOWS &mdash; project-skyscraper</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#111;
+  color:#f9f9f9;
+  font-family:"IBM Plex Mono", "Courier New", monospace;
+  font-size:clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.298), 1.0625rem);
+  line-height:1.6;
+  padding-top:8rem;
+}
+h2{font-size:clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.313), 2rem);line-height:1;text-transform:uppercase;font-weight:400}
+a{color:#f9f9f9}
+</style>
+<style>
+/* === M3MORY === */
+.glitch-hover img{transition:filter .3s ease;filter:brightness(1.05) contrast(1.05)}
+.glitch-hover:hover img{animation:cyber-glitch .15s infinite alternate-reverse;filter:brightness(1.22) contrast(1.22) saturate(1.35)}
+/* DR1FT1NG */
+@keyframes cyber-glitch{
+   0%{filter:brightness(1.22) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+   30%{filter:brightness(1.18) contrast(1.25) saturate(1.4) drop-shadow(-3px 0 #00ffff) drop-shadow(3px 0 #ff00ff)}
+   60%{filter:brightness(1.25) contrast(1.2) saturate(1.3) drop-shadow(2px 0 #00ff9f) drop-shadow(-2px 0 #ff0088)}
+   100%{filter:brightness(1.2) contrast(1.22) saturate(1.35) drop-shadow(-2px 0 #00ffff) drop-shadow(2px 0 #ff00ff)}
+}
+a.glitch-link{color:#f9f9f9;text-decoration:none;position:relative;display:inline-block}
+a.glitch-link:hover{color:#eee;animation:cyber-glitch-link .35s infinite alternate-reverse}
+@keyframes cyber-glitch-link{
+   0%{filter:brightness(1.25) contrast(1.3) saturate(1.4) drop-shadow(-2px 0 #f9f9f9) drop-shadow(2px 0 #00ffff)}
+   30%{filter:brightness(1.2) contrast(1.35) saturate(1.45) drop-shadow(-3px 0 #f9f9f9) drop-shadow(3px 0 #00ffff)}
+   60%{filter:brightness(1.3) contrast(1.25) saturate(1.35) drop-shadow(2px 0 #ff0088) drop-shadow(-2px 0 #00ff9f)}
+   100%{filter:brightness(1.22) contrast(1.28) saturate(1.4) drop-shadow(-2px 0 #f9f9f9) drop-shadow(2px 0 #00ffff)}
+}
+</style>
+<style>
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:9999;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.35rem;
+  padding:.6rem 1.5rem;
+  border-bottom:1px solid #222;
+  background:#0d0d0d;
+  font-family:"IBM Plex Mono","Courier New",monospace;
+}
+.topbar-left{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.topbar-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.topbar-brand{
+  display:flex;align-items:center;gap:.6rem;
+  color:#eee;text-decoration:none;font-weight:bold;letter-spacing:.15em;
+  font-size:.85rem;
+}
+.topbar-avatar{
+  width:28px;height:28px;border-radius:50%;border:1px solid #d00;object-fit:cover;
+}
+.zoom-hint{font-size:.65rem;color:#eee;letter-spacing:.08em;white-space:nowrap}
+.topbar button{
+  background:transparent;color:#d00;border:1px solid #d00;
+  padding:.2rem .6rem;cursor:pointer;font-family:inherit;font-size:.7rem;
+  letter-spacing:.1em;transition:all .15s;line-height:1.5;
+}
+.topbar button:hover{background:#d00;color:#0a0a0a}
+.topbar button.sec{
+  color:#888;border-color:#333;
+}
+.topbar button.sec:hover{background:#333;color:#aaa;border-color:#666}
+.topbar .sep{color:#333;margin:0 4px;user-select:none}
+.topbar input{
+  background:#0d0d0d;color:#eee;border:1px solid #333;
+  padding:.15rem .4rem;font-family:inherit;font-size:.7rem;width:140px;
+}
+.topbar .pl{font-size:.7rem;color:#888;display:flex;align-items:center;gap:4px}
+.topbar .sw{width:100%;margin-top:1px}
+.topbar .st{color:#555;font-size:.6rem}
+.topbar-right{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem}
+.topbar-right-top{display:flex;align-items:center;gap:.6rem}
+.trace-status{font-size:.7rem;letter-spacing:.1em;white-space:nowrap;display:inline-flex;align-items:center;gap:.35rem}
+.trace-dot{display:inline-block;width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.trace-dot--active{background:#0a8;box-shadow:0 0 6px #0a8;animation:trace-pulse 1.5s ease-in-out infinite}
+@keyframes trace-pulse{0%,100%{opacity:1;box-shadow:0 0 6px #0a8}50%{opacity:.4;box-shadow:0 0 2px #0a8}}
+@keyframes trace-pulse-red{0%,100%{opacity:1;box-shadow:0 0 6px #d00}50%{opacity:.4;box-shadow:0 0 2px #d00}}
+.trace-dot--lost{background:#d00;box-shadow:0 0 6px #d00;animation:trace-pulse-red 1.5s ease-in-out infinite}
+.trace-label{color:#888}
+.trace-time{color:#666;font-variant-numeric:tabular-nums}
+.operator-label{font-size:.7rem;color:#666;letter-spacing:.05em}
+.proxy-network{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+.proxy-label{font-size:.6rem;color:#555;letter-spacing:.1em;white-space:nowrap}
+.proxy-tag{display:inline-block;padding:.1rem .35rem;text-decoration:none;border:1px solid #333;font-size:.6rem;color:#888;letter-spacing:.08em;transition:all .15s;line-height:1.4}
+.proxy-tag:hover{border-color:#666;color:#aaa;background:#151515}
+#zoom-lens{position:fixed;display:none;z-index:10000;border:2px solid #00ffcc;background:#0a0a0a;box-shadow:0 0 25px rgba(0,255,204,0.5);pointer-events:none}
+#zoom-lens canvas{display:block}
+</style>
+<style>
+.tab-bar{display:flex;gap:0;border-bottom:1px solid #222;background:#0d0d0d;justify-content:center}
+.tab-btn{background:transparent;color:#888;border:1px solid #333;border-bottom:none;padding:0.4rem 1.2rem;cursor:pointer;font-family:inherit;font-size:0.75rem;letter-spacing:0.1em;transition:all 0.15s;line-height:1.5;margin:0;text-transform:uppercase}
+.tab-btn.active{color:#d00;border-color:#d00;background:#0a0a0a}
+.tab-btn:hover:not(.active){color:#aaa;border-color:#666}
+.blade-tabs{display:flex;gap:0;justify-content:center;border-bottom:1px solid #222;background:#0d0d0d;margin-bottom:10px}
+.blade-tab{background:transparent;color:#888;border:1px solid #333;border-bottom:none;padding:0.3rem 0.9rem;cursor:pointer;font-family:inherit;font-size:0.7rem;letter-spacing:0.1em;transition:all 0.15s;line-height:1.5;margin:0;text-transform:uppercase}
+.blade-tab.active{color:#d00;border-color:#d00;background:#0a0a0a}
+.blade-tab:hover:not(.active){color:#aaa;border-color:#666}
+#view-3d{position:relative;width:100%;max-width:1300px;height:80vh;min-height:500px;margin:0 auto}
+#view-3d canvas{display:block;width:100%!important;height:100%!important;outline:none}
+#counter-display-3d{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:inherit;font-weight:inherit;color:#fff;pointer-events:none;white-space:nowrap;font-size:2.8rem;text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F63fjptAgt5VM-kVkqdyU8n5i0g1l9kn-s.woff2') format('woff2')}
+@font-face{font-family:"IBM Plex Mono";font-style:italic;font-weight:400;font-display:fallback;src:url('https://fonts.wp.com/s/ibmplexmono/v19/-F6pfjptAgt5VM-kVkqdyU8n1ioq131hj-sNFQ.woff2') format('woff2')}
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="topbar" id="control-bar">
+  <div class="topbar-left">
+    <div style="display:flex;align-items:flex-start;gap:.6rem;flex-wrap:wrap;">
+      <a href="../" class="topbar-brand">
+        <img src="../favicon.jpg" alt="" class="topbar-avatar"> PS/WINDOWS
+      </a>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;">
+        <span class="trace-status" id="traceStatus"></span>
+        <span class="trace-status" id="twitchStatus"></span>
+      </div>
+    </div>
+    <div class="topbar-row">
+      <button id="btn-complete">SHOW COMPLETE</button>
+      <button id="btn-reset" class="sec">RESET</button>
+      <span class="sep">|</span>
+      <label class="pl">
+        Window Prime(s):
+        <input type="text" id="prime-input" placeholder="e.g. 7, 13, 42" />
+      </label>
+      <button id="btn-highlight">HIGHLIGHT</button>
+      <button id="btn-list" class="sec">SHOW ALL KNOWN</button>
+      <button id="btn-clear" class="sec">CLEAR</button>
+    </div>
+    <div class="topbar-row"><span class="zoom-hint">Shift to toggle zoom lens</span></div>
+  </div>
+  <div class="topbar-right">
+    
+    <div class="proxy-network">
+      <span class="proxy-label">PROXY NETWORK:</span>
+      <a class="proxy-tag" href="../status/" target="_blank" rel="noopener">OPS CENTRE</a>
+      <a class="proxy-tag" href="../neural-net/" target="_blank" rel="noopener">NEURAL NET</a>
+      <a class="proxy-tag" href="../tools/" target="_blank" rel="noopener">TOOLS</a>
+      <a class="proxy-tag" href="../" target="_blank" rel="noopener">MAIN</a>
+    </div>
+  </div>
+  <div class="sw"><div class="st" id="status-line"></div></div>
+</div>
+
+
+<div class="tab-bar">
+  <button class="tab-btn active" data-tab="2d">2D VIEW</button>
+  <button class="tab-btn" data-tab="3d">3D TOWER</button>
+</div>
+
+<div style="text-align:center;padding:30px 20px 40px;margin:0 auto;position:relative;">
+  <h2 style="margin-bottom:4px;"><a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" class="glitch-link">COUNTING</a></h2>
+  <div style="font-size:0.7rem;color:#666;letter-spacing:.15em;margin-bottom:2px;">OPERATOR WINDOW SIMULATION TOOL</div>
+
+  <div id="countdown-display" style="font-size:1.4rem;color:#fff;letter-spacing:.08em;margin:0;"></div>
+
+  <div id="view-2d">
+    <div class="blade-tabs">
+      <button class="blade-tab active" data-blade="all">ALL BLADES</button>
+      <button class="blade-tab" data-blade="1">B1</button>
+      <button class="blade-tab" data-blade="2">B2</button>
+      <button class="blade-tab" data-blade="3">B3</button>
+    </div>
+    <div id="grid-scroll" style="position:relative;display:block;max-width:100%;overflow-x:auto;">
+      <div id="grid-container" style="position:relative;display:flex;gap:45px;align-items:flex-start;flex-wrap:nowrap;width:max-content;margin:0 auto;">
+        <canvas id="grid1" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+        <canvas id="grid2" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+        <canvas id="grid3" width="394" height="1623" style="image-rendering:pixelated;background:#0a0a0a;flex-shrink:0;"></canvas>
+        <div id="counter-display" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                    font-family:inherit;font-weight:inherit;color:#fff;
+                    pointer-events:none;white-space:nowrap;font-size:2.8rem;
+                    text-shadow:0 0 25px #00ffcc,0 0 50px #00ffcc;z-index:10;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="view-3d" style="display:none;">
+    <div id="counter-display-3d"></div>
+  </div>
+</div>
+
+<div id="zoom-lens"><canvas id="zoom-canvas"></canvas></div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---- constants ---- */
+  const COLS = 131;
+  const ROWS = 541;
+  const CELL_SIZE = 2;
+  const GAP = 1;
+  const STEP = CELL_SIZE + GAP;
+  const PIXELS_PER_GRID = COLS * ROWS;
+  const TOTAL_PIXELS = PIXELS_PER_GRID * 3;
+
+  const publicationDate = '2026-07-05T16:16:16Z';
+  const pixelColor = 'rgba(4,135,157,1)';
+  const playerColor = '#ffffff';
+  const completionTime = new Date(publicationDate).getTime() + TOTAL_PIXELS * 1000;
+
+  /* ---- DOM refs ---- */
+  const canvases = [
+    document.getElementById('grid1'),
+    document.getElementById('grid2'),
+    document.getElementById('grid3')
+  ];
+  const contexts = canvases.map(c => c.getContext('2d', { alpha: true }));
+  const counterEl = document.getElementById('counter-display');
+  const counter3dEl = document.getElementById('counter-display-3d');
+  function setCounterText(t) {
+    counterEl.textContent = t;
+    if (counter3dEl) counter3dEl.textContent = t;
+  }
+  const statusEl = document.getElementById('status-line');
+  const inputEl = document.getElementById('prime-input');
+
+  /* ---- state ---- */
+  let litPixels = new Set();
+  let highlightBoxes = [];
+  let persistInterval = null;
+  let liveInterval = null;
+  let showingComplete = false;
+  let lastHighlighted = [];
+  let operatorBoxes = [];
+  let operatorsData = null;
+  let opLookup = {};
+  let canvasRects = [null, null, null];
+  let lensRAF = null;
+  let primePixels = new Map();    /* globalIndex → lastBlink timestamp for twinkle */
+  let twinkleInterval = null;
+  let bladeTab = 'all';
+
+  window.__countingState = {
+    canvases: canvases,
+    contexts: contexts,
+    COLS: COLS,
+    ROWS: ROWS,
+    STEP: STEP,
+    CELL_SIZE: CELL_SIZE,
+    GAP: GAP,
+    PIXELS_PER_GRID: PIXELS_PER_GRID,
+    TOTAL_PIXELS: TOTAL_PIXELS,
+    isPrime: isPrime,
+    playerColorFor: playerColorFor,
+    opLookup: opLookup,
+    pixelColor: pixelColor,
+    dirty: false,
+    highlightIndices: [],
+    highlightsDirty: false,
+    clearHighlights: null,
+    clearOperatorHighlights: null,
+  };
+  function markDirty() { window.__countingState.dirty = true; }
+  function markHighlightsDirty() { window.__countingState.highlightsDirty = true; }
+
+  /* ---- helpers ---- */
+  function isPrime(n) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    if (n % 2 === 0 || n % 3 === 0) return false;
+    for (let i = 5; i * i <= n; i += 6) {
+      if (n % i === 0 || n % (i + 2) === 0) return false;
+    }
+    return true;
+  }
+
+  function parseInput() {
+    return inputEl.value.split(/[,\s\n]+/)
+      .map(s => parseInt(s.trim()))
+      .filter(n => !isNaN(n) && n > 0 && n <= TOTAL_PIXELS);
+  }
+
+  function playerColorFor(idx) {
+    var info = opLookup[idx];
+    return (info && info.color !== '') ? '#' + info.color : playerColor;
+  }
+
+  /* ---- grid drawing ---- */
+  function addRandomPixel() {
+    if (litPixels.size >= TOTAL_PIXELS) return;
+    let globalIndex;
+    do {
+      globalIndex = Math.floor(Math.random() * TOTAL_PIXELS);
+    } while (litPixels.has(globalIndex));
+    litPixels.add(globalIndex);
+
+    const gridIndex = Math.floor(globalIndex / PIXELS_PER_GRID);
+    const local = globalIndex % PIXELS_PER_GRID;
+    const x = local % COLS;
+    const y = Math.floor(local / COLS);
+    const ctx = contexts[gridIndex];
+    const isPlayerWindow = isPrime(globalIndex + 1);
+    ctx.fillStyle = isPlayerWindow ? playerColorFor(globalIndex) : pixelColor;
+    ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+    if (isPlayerWindow) primePixels.set(globalIndex, Date.now());
+  }
+
+  /* ---- prime pixel twinkle ---- */
+  function runTwinkle() {
+    var now = Date.now();
+    var halfCycle = (now % 300 < 150);
+    primePixels.forEach(function(ts, globalIndex) {
+      if (Math.random() < 0.3) {
+        var gridIndex = Math.floor(globalIndex / PIXELS_PER_GRID);
+        var local = globalIndex % PIXELS_PER_GRID;
+        var x = local % COLS;
+        var y = Math.floor(local / COLS);
+        var ctx = contexts[gridIndex];
+        if (ctx) {
+          ctx.fillStyle = halfCycle ? playerColorFor(globalIndex) : '#bbbbbb';
+          ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+        }
+      }
+    });
+    markDirty();
+  }
+
+  function initGrids() {
+    const now = Date.now();
+    const startTime = new Date(publicationDate).getTime();
+    let elapsed = Math.floor((now - startTime) / 1000);
+    if (elapsed < 0) elapsed = 0;
+    const toLight = Math.min(elapsed, TOTAL_PIXELS);
+    for (let i = 0; i < toLight; i++) {
+      addRandomPixel();
+    }
+  }
+
+  function updateCounter() {
+    const startTime = new Date(publicationDate).getTime();
+    const now = Date.now();
+    let elapsed = Math.floor((now - startTime) / 1000);
+    if (elapsed < 0) elapsed = 0;
+    const capped = Math.min(elapsed, TOTAL_PIXELS);
+    setCounterText(String(capped).padStart(8, '0'));
+    while (litPixels.size < capped) {
+      addRandomPixel();
+    }
+    markDirty();
+    updateCountdown();
+  }
+
+  function updateCountdown() {
+    var remaining = Math.max(0, completionTime - Date.now());
+    var el = document.getElementById('countdown-display');
+    if (!el) return;
+    if (remaining <= 0) {
+      el.textContent = '— COMPLETE —';
+      return;
+    }
+    var days = Math.floor(remaining / 86400000);
+    var hours = Math.floor((remaining % 86400000) / 3600000);
+    var mins = Math.floor((remaining % 3600000) / 60000);
+    var secs = Math.floor((remaining % 60000) / 1000);
+    var parts = [];
+    if (days > 0) parts.push(days + 'd');
+    parts.push(hours + 'h');
+    parts.push(mins + 'm');
+    parts.push(secs + 's');
+    el.textContent = parts.join(' ') + ' remaining';
+  }
+
+  function startLive() {
+    if (liveInterval) clearInterval(liveInterval);
+    if (twinkleInterval) clearInterval(twinkleInterval);
+    contexts.forEach(ctx => {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    });
+    litPixels = new Set();
+    primePixels = new Map();
+    initGrids();
+    updateCounter();
+    liveInterval = setInterval(updateCounter, 1000);
+    twinkleInterval = setInterval(runTwinkle, 180);
+  }
+
+  /* ---- complete mode ---- */
+  function drawCompleteGrid(ctx, gridIndex) {
+    const offset = gridIndex * PIXELS_PER_GRID;
+    for (let y = 0; y < ROWS; y++) {
+      for (let x = 0; x < COLS; x++) {
+        const idx = offset + y * COLS + x;
+        const prime = isPrime(idx + 1);
+        const color = prime ? playerColorFor(idx) : pixelColor;
+        ctx.fillStyle = color;
+        ctx.fillRect(x * STEP, y * STEP, CELL_SIZE, CELL_SIZE);
+        if (prime) primePixels.set(idx, Date.now());
+      }
+    }
+  }
+
+  function renderComplete(playerPrimes) {
+    if (twinkleInterval) clearInterval(twinkleInterval);
+    contexts.forEach((ctx, i) => {
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      drawCompleteGrid(ctx, i);
+    });
+    setCounterText('COMPLETE');
+    markDirty();
+    clearHighlights();
+    const valid = drawHighlights(playerPrimes);
+    const primeCount = valid.filter(n => isPrime(n)).length;
+    statusEl.textContent = valid.length
+      ? `Showing complete state — ${valid.length} highlighted (${primeCount} prime, ${valid.length - primeCount} composite)`
+      : 'Showing complete state. Enter prime(s) and click HIGHLIGHT.';
+    twinkleInterval = setInterval(runTwinkle, 180);
+  }
+
+  function showComplete(playerPrimes) {
+    if (liveInterval) { clearInterval(liveInterval); liveInterval = null; }
+    if (persistInterval) clearInterval(persistInterval);
+    renderComplete(playerPrimes);
+    showingComplete = true;
+  }
+
+  function resetToLive() {
+    if (persistInterval) { clearInterval(persistInterval); persistInterval = null; }
+    if (liveInterval) { clearInterval(liveInterval); liveInterval = null; }
+    clearHighlights();
+    clearOperatorHighlights();
+    lastHighlighted = [];
+    showingComplete = false;
+    statusEl.textContent = '';
+    startLive();
+  }
+
+  /* ---- highlights ---- */
+  function clearHighlights() {
+    highlightBoxes.forEach(el => el.remove());
+    highlightBoxes = [];
+  }
+
+  var gridScrollEl = document.getElementById('grid-scroll');
+
+  function isPixelVisible(rect, x, y, sc) {
+    if (!rect || rect.width === 0 || rect.height === 0) return false;
+    var cx = rect.left + x * STEP + CELL_SIZE / 2;
+    var cy = rect.top + y * STEP + CELL_SIZE / 2;
+    if (sc && (cx < sc.left || cx > sc.right || cy < sc.top || cy > sc.bottom)) return false;
+    if (cx < 0 || cx > window.innerWidth || cy < 0 || cy > window.innerHeight) return false;
+    return true;
+  }
+
+  function drawHighlights(indices) {
+    if (document.getElementById('view-2d').style.display === 'none') return [];
+    if (!indices.length) return [];
+    const valid = [];
+    const sc = gridScrollEl ? gridScrollEl.getBoundingClientRect() : null;
+    indices.forEach(n => {
+      if (n < 1 || n > TOTAL_PIXELS) return;
+      const globalIndex = n - 1;
+      const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
+      const local = globalIndex % PIXELS_PER_GRID;
+      const x = local % COLS;
+      const y = Math.floor(local / COLS);
+      const canvas = document.getElementById('grid' + (grid + 1));
+      if (!canvas || canvas.style.display === 'none') return;
+      const rect = canvas.getBoundingClientRect();
+      valid.push(n);
+      if (!isPixelVisible(rect, x, y, sc)) return;
+      const box = document.createElement('div');
+      box.style.cssText =
+        'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
+        'top:' + (rect.top + y * STEP - 3) + 'px;' +
+        'width:' + (CELL_SIZE + 6) + 'px;height:' + (CELL_SIZE + 6) + 'px;' +
+        'border:2px solid red;pointer-events:none;z-index:1000;' +
+        'box-shadow:0 0 8px rgba(255,0,0,0.8);';
+      document.body.appendChild(box);
+      highlightBoxes.push(box);
+      valid.push(n);
+    });
+    return valid;
+  }
+
+  /* ---- operator highlights (SHOW LIST) ---- */
+  function clearOperatorHighlights() {
+    operatorBoxes.forEach(el => el.remove());
+    operatorBoxes = [];
+  }
+
+  window.__countingState.clearHighlights = clearHighlights;
+  window.__countingState.clearOperatorHighlights = clearOperatorHighlights;
+  window.__countingState.repositionHighlights = repositionHighlights;
+  window.__countingState.updateCanvasRects = updateCanvasRects;
+
+  function drawOperatorHighlight(n, name, hex) {
+    if (document.getElementById('view-2d').style.display === 'none') return;
+    const useColor = (hex && hex !== '') ? '#' + hex : '#00ffcc';
+    const globalIndex = n - 1;
+    const grid = Math.floor(globalIndex / PIXELS_PER_GRID);
+    const local = globalIndex % PIXELS_PER_GRID;
+    const x = local % COLS;
+    const y = Math.floor(local / COLS);
+    const canvas = document.getElementById('grid' + (grid + 1));
+    if (!canvas || canvas.style.display === 'none') return;
+    const rect = canvas.getBoundingClientRect();
+    const sc = gridScrollEl ? gridScrollEl.getBoundingClientRect() : null;
+    if (!isPixelVisible(rect, x, y, sc)) return;
+    const box = document.createElement('div');
+    box.style.cssText =
+      'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
+      'top:' + (rect.top + y * STEP - 3) + 'px;' +
+      'width:' + (CELL_SIZE + 6) + 'px;height:' + (CELL_SIZE + 6) + 'px;' +
+      'border:2px solid ' + useColor + ';pointer-events:auto;z-index:1001;cursor:crosshair;' +
+      'box-shadow:0 0 10px ' + useColor + ';';
+    const label = document.createElement('div');
+    label.textContent = name;
+    label.style.cssText =
+      'position:fixed;left:' + (rect.left + x * STEP - 3) + 'px;' +
+      'top:' + (rect.top + y * STEP - 18) + 'px;' +
+      'background:rgba(0,0,0,0.85);color:' + useColor + ';border:1px solid ' + useColor + ';' +
+      'padding:1px 6px;font-family:inherit;font-size:0.65rem;white-space:nowrap;' +
+      'pointer-events:none;z-index:1002;display:none;';
+    box.addEventListener('mouseenter', function() { if (lens && lens.style.display === 'none') label.style.display = 'block'; });
+    box.addEventListener('mouseleave', function() { label.style.display = 'none'; });
+    document.body.appendChild(box);
+    document.body.appendChild(label);
+    operatorBoxes.push(box);
+    operatorBoxes.push(label);
+  }
+
+  function showList() {
+    if (!operatorsData) return;
+    showComplete([]);
+    clearOperatorHighlights();
+    const indices = [];
+    operatorsData.forEach(op => {
+      drawOperatorHighlight(op.n, op.name, op.c);
+      indices.push(op.n);
+    });
+    window.__countingState.highlightIndices = indices;
+    markHighlightsDirty();
+    const primeCount = indices.filter(n => isPrime(n)).length;
+    statusEl.textContent = indices.length + ' operators highlighted (' + primeCount + ' prime windows)';
+    fitTopbar();
+  }
+
+    operatorsData = [
+    {n:     2, name:"La Checktitude",           c:"0cc0df"},
+    {n:     3, name:"Devilin Pixy",             c:"6400C8"},
+    {n:     5, name:"Spyderweb333",             c:""},
+    {n:     7, name:"Aurix_Darastrix",          c:""},
+    {n:    11, name:"Morse",                    c:"c9e60e"},
+    {n:    13, name:"Mafi",                     c:""},
+    {n:    17, name:"YBM",                      c:"00ff77"},
+    {n:    19, name:"SingularGleam",            c:""},
+    {n:    23, name:"The_Poet",                 c:"2323ff"},
+    {n:    29, name:"MrJordanMurphy",           c:""},
+    {n:    31, name:"Turbulentflow",            c:"456838"},
+    {n:    37, name:"NeoterraCollective",       c:""},
+    {n:    41, name:"kerdorin",                 c:"77353d"},
+    {n:    53, name:"ThatBomberBoi",            c:"874067"},
+    {n:    59, name:"MarteFardreamer",          c:""},
+    {n:    61, name:"Legin1216",                c:"61ff12"},
+    {n:    67, name:"Surpz",                    c:""},
+    {n:    71, name:"Jokarson",                 c:"a200ff"},
+    {n:    73, name:"Spock",                    c:"627ecc"},
+    {n:    83, name:"Rusty",                    c:"B7410E"},
+    {n:    89, name:"Ozoto",                    c:""},
+    {n:    97, name:"Yuri",                     c:""},
+    {n:   101, name:"Gumsk",                    c:""},
+    {n:   109, name:"Skilnin",                  c:"004225"},
+    {n:   127, name:"BenR",                     c:""},
+    {n:   131, name:"Foot",                     c:""},
+    {n:   137, name:"Alterworld",               c:""},
+    {n:   199, name:"JustiFox",                 c:""},
+    {n:   211, name:"Stu",                      c:"FF8200"},
+    {n:   251, name:"astrosurf66",              c:"21fc0d"},
+    {n:   257, name:"ekpyroto",                 c:"156734"},
+    {n:   313, name:"William",                  c:"ffd700"},
+    {n:   317, name:"CrossID",                  c:""},
+    {n:   331, name:"Dizzy",                    c:"F878F8"},
+    {n:   337, name:"JubiTheVille",             c:"AA1616"},
+    {n:   373, name:"OrY",                      c:""},
+    {n:   419, name:"G'fudi",                   c:"9718BA"},
+    {n:   421, name:"BadPunZ",                  c:""},
+    {n:   439, name:"Selfie Gek",               c:""},
+    {n:   443, name:"dragonboyv",               c:""},
+    {n:   457, name:"Astaroth88",               c:""},
+    {n:   491, name:"SCHOLAE",                  c:"70CCC3"},
+    {n:   521, name:"Beans",                    c:"203d06"},
+    {n:   541, name:"stubbornducky",            c:""},
+    {n:   557, name:"JustJoey",                 c:""},
+    {n:   569, name:"vector_cmdr",              c:"fc3d21"},
+    {n:   607, name:"fort_wort_wort",           c:""},
+    {n:   659, name:"8ubblez",                  c:""},
+    {n:   683, name:"melanon68",                c:"683683"},
+    {n:   701, name:"Roger Rabbithole",         c:"e0ffed"},
+    {n:   733, name:"Zachary",                  c:""},
+    {n:   751, name:"Mad-Hatter",               c:"556b2f"},
+    {n:   773, name:"RetroTerrestrial",         c:""},
+    {n:   787, name:"Kanaju",                   c:""},
+    {n:   829, name:"Maniro",                   c:""},
+    {n:   911, name:"Vau1t",                    c:""},
+    {n:   929, name:"Calix",                    c:""},
+    {n:   947, name:"Oskar1up",                 c:""},
+    {n:   971, name:"m0lz",                     c:"40E0D0"},
+    {n:  1123, name:"Harpo",                    c:"FF00FF"},
+    {n:  1213, name:"Rinha",                    c:"F5C626"},
+    {n:  1223, name:"Vosinigr",                 c:""},
+    {n:  1237, name:"Jaina_Siderea",            c:"FA05EA"},
+    {n:  1619, name:"Falkon",                   c:""},
+    {n:  1783, name:"Sleepycadet",              c:""},
+    {n:  1831, name:"jonbot5k",                 c:""},
+    {n:  1901, name:"Blindvador",               c:""},
+    {n:  1913, name:"sheralmyst",               c:"f072a5"},
+    {n:  1931, name:"Ekimo1920",                c:""},
+    {n:  1987, name:"Lachlaan",                 c:""},
+    {n:  1993, name:"johhnycloud",              c:"ffcccc"},
+    {n:  1997, name:"Cattivision",              c:"D03B24"},
+    {n:  1999, name:"Muhaddil",                 c:""},
+    {n:  2011, name:"Batzy",                    c:""},
+    {n:  2017, name:"Frazzlesprite",            c:"ba1ca8"},
+    {n:  2027, name:"citizenScientist",         c:"6a6eff"},
+    {n:  2039, name:"Kadaveda",                 c:"331832"},
+    {n:  2053, name:"Andrew",                   c:""},
+    {n:  2239, name:"Item-Stealer",             c:"f33333"},
+    {n:  2251, name:"Hawk-Night",               c:""},
+    {n:  2287, name:"The Lone Traveler",        c:""},
+    {n:  2311, name:"Fwapp",                    c:""},
+    {n:  2521, name:"Lisko",                    c:"ff4f00"},
+    {n:  2609, name:"gali",                     c:""},
+    {n:  2789, name:"Tom Acreon",               c:""},
+    {n:  2861, name:"MacForADay",               c:""},
+    {n:  2999, name:"AztecaMx",                 c:""},
+    {n:  3643, name:"CyberNinjaX",              c:""},
+    {n:  4013, name:"toddumptious",             c:"8a6892"},
+    {n:  4019, name:"ninjafireball09",          c:"0562F7"},
+    {n:  4049, name:"Lindwur",                  c:"9e60eb"},
+    {n:  4099, name:"CartoonHead",              c:""},
+    {n:  4219, name:"GoodGuysFree",             c:""},
+    {n:  4567, name:"Moonflower",               c:""},
+    {n:  6101, name:"Ashker",                   c:""},
+    {n:  6679, name:"Dregdane",                 c:""},
+    {n:  6791, name:"Javtron91",                c:"69c9fb"},
+    {n:  6917, name:"AlexWinter",               c:""},
+    {n:  7691, name:"had",                      c:""},
+    {n:  7727, name:"Michael",                  c:""},
+    {n:  8867, name:"thewingcmdr",              c:""},
+    {n:  9001, name:"woob",                     c:""},
+    {n:  9829, name:"Travarz",                  c:""},
+    {n:  9973, name:"Geodatan",                 c:""},
+    {n: 10007, name:"Ripthedead",               c:""},
+    {n: 10009, name:"Gary",                     c:""},
+    {n: 10133, name:"7101334",                  c:""},
+    {n: 10949, name:"MamieLinba",               c:"40E0D0"},
+    {n: 11113, name:"SkullyTheSkully",          c:"FF5500"},
+    {n: 11311, name:"pr1sm",                    c:""},
+    {n: 11717, name:"M1Silencer",               c:""},
+    {n: 11743, name:"Polyphemus",               c:""},
+    {n: 12421, name:"AdaRynin",                 c:""},
+    {n: 16001, name:"Solanum",                  c:""},
+    {n: 16253, name:"SisyphusMex",              c:""},
+    {n: 18181, name:"Bubba",                    c:""},
+    {n: 19991, name:"lamb",                     c:"3fc095"},
+    {n: 24179, name:"EliasNievaP the walker",   c:""},
+    {n: 27059, name:"Dreamfly",                 c:""},
+    {n: 31397, name:"Bernice42",                c:"1e7aae"},
+    {n: 37861, name:"taurtura",                 c:"D2A1FC"},
+    {n: 70583, name:"lofblad",                  c:""},
+    {n: 72269, name:"LightningRadiant",         c:""},
+    {n: 71837, name:"GR3G",                     c:"b9090f"},
+    {n: 75011, name:"MoonWatcher75",            c:""},
+    {n: 77713, name:"CJR",                      c:"00ffff"},
+    {n: 94603, name:"Microsan",                 c:""},
+    {n:110629, name:"Lauris",                   c:""},
+    {n:123457, name:"Sergio",                   c:""},
+    {n:141319, name:"Klarac",                   c:""},
+    {n:159667, name:"La Voragine",              c:""},
+    {n:161999, name:"Denebola",                 c:""},
+    {n:178093, name:"MountTheRainbow",          c:"87CEEB"},
+    {n:184463, name:"Dwenius",                  c:""},
+    {n:212593, name:"faundovefelix",            c:""},
+    {n:  5623, name:"Pchulo-19",                c:""},
+    {n:  5527, name:"John D.",                  c:""},
+    // ROOT_PRIMES ABOVE - PRIMES BELOW
+    {n:  8039, name:"LunCorsair",               c:""},
+    {n:  3467, name:"Neil",                     c:""},
+    {n:  3347, name:"Max J.",                   c:""},
+    {n:  7333, name:"Mike C.",                  c:""},
+    {n:  9551, name:"Kevin P.",                 c:""},
+    {n:  6607, name:"Scott H.",                 c:""},
+    {n:  3163, name:"Chrashy",                  c:""},
+    {n:  5669, name:"BugabooCreek",             c:""},
+    {n:  9697, name:"Harris B.",                c:""},
+    {n:  6389, name:"Seamonkey",                c:""},
+    {n:  5987, name:"Rogério",                  c:""},
+    {n:  8663, name:"Fernando",                 c:""},
+    {n:  8191, name:"Odessa",                   c:""},
+    {n:  8387, name:"Joseph R.",                c:""},
+    {n:  5333, name:"Reylien2000",              c:""},
+    {n:  3847, name:"Tacoturkey191",            c:""},
+    {n:  7307, name:"Subtonal",                 c:""},
+    {n:  5303, name:"ThoughtCrime1984",         c:""},
+    {n:  9283, name:"Rinordine",                c:""},
+    {n:  8231, name:"Karl H.",                  c:""},
+    {n:  7723, name:"Noxxrogg",                 c:""},
+    {n:  3823, name:"JOAT-sec-PC",              c:""},
+    {n:  5119, name:"Randall",                  c:""},
+    {n:  5651, name:"tauspin",                  c:""},
+    {n:  5839, name:"Chris",                    c:""},
+    {n:  5857, name:"myrolaw",                  c:""},
+    {n:  6271, name:"Wing",                     c:""},
+    {n:  6899, name:"Mossy_Vane",               c:""},
+    {n:  7129, name:"RedHotTrouble",            c:""},
+    {n:  7577, name:"Gar",                      c:""},
+    {n:  7649, name:"Octopus96",                c:""},
+    {n:  8009, name:"Skittle1323",              c:""},
+    {n:  8527, name:"Chompy",                   c:""},
+    {n:  8629, name:"ughmegha",                 c:""},
+    {n:  9091, name:"ProfessorSaul",            c:""},
+    {n:  9137, name:"Soups",                    c:""},
+    {n:  9337, name:"Joe",                      c:""},
+    {n:  3371, name:"drstig",                   c:""},
+    {n:  3583, name:"EKHLOISS",                 c:""},
+    {n:  8647, name:"Worm Lord Darth Smeagol",  c:""},
+    {n:  3659, name:"APrimevalWorld",           c:""},
+    {n:  3989, name:"Beiolos",                  c:""},
+    {n:  6073, name:"Raift",                    c:""},
+    {n:  6421, name:"QwikSliver",               c:""},
+    {n:  7211, name:"ReikiMom",                 c:""},
+    {n:  7309, name:"RelentlessGmngTV",         c:""},
+    {n:  8681, name:"Vreemo75",                 c:""},
+    {n:  9539, name:"Tyraelaus",                c:""},
+    {n:  9539, name:"Hermes1er",                c:""},
+    {n:  9539, name:"Zalajuk",                  c:""},
+    {n:  9539, name:"ScrapperBee",              c:""},
+    {n:  9539, name:"Strixx",                   c:""},
+    {n:  9539, name:"Caravan",                  c:""},
+    {n:  9539, name:"Eva",                      c:""},
+    {n:  9539, name:"elegra1965",               c:""},
+    {n:  9539, name:"Porwiggle",                c:""},
+    {n:  9539, name:"Rusty Pete",               c:""},
+    {n:  9539, name:"onicoe",                   c:""},
+  ];
+  for (var oi = 0; oi < operatorsData.length; oi++) {
+    var op = operatorsData[oi];
+    opLookup[op.n - 1] = {name: op.name, color: op.c};
+  }
+
+  function doHighlight() {
+    const nums = parseInput();
+    if (!nums.length) {
+      statusEl.textContent = 'No valid numbers entered.';
+      return;
+    }
+    lastHighlighted = nums;
+    window.__countingState.highlightIndices = nums.slice();
+    markHighlightsDirty();
+    if (!showingComplete) {
+      clearHighlights();
+      const valid = drawHighlights(nums);
+      const primeCount = valid.filter(n => isPrime(n)).length;
+      statusEl.textContent =
+        valid.length + ' highlighted (' + primeCount + ' prime, ' +
+        (valid.length - primeCount) + ' composite)';
+    } else {
+      clearHighlights();
+      const valid = drawHighlights(nums);
+      const primeCount = valid.filter(n => isPrime(n)).length;
+      statusEl.textContent = valid.length
+        ? `Showing complete state — ${valid.length} highlighted (${primeCount} prime, ${valid.length - primeCount} composite)`
+        : 'Showing complete state. Enter prime(s) and click HIGHLIGHT.';
+    }
+  }
+
+  /* ---- reposition highlights on scroll/resize ---- */
+  function repositionHighlights() {
+    if (highlightBoxes.length) {
+      const nums = lastHighlighted;
+      if (nums.length) {
+        const boxes = highlightBoxes;
+        highlightBoxes = [];
+        boxes.forEach(el => el.remove());
+        drawHighlights(nums);
+      }
+    }
+    if (operatorBoxes.length && operatorsData) {
+      const boxes = operatorBoxes;
+      operatorBoxes = [];
+      boxes.forEach(el => el.remove());
+      operatorsData.forEach(op => drawOperatorHighlight(op.n, op.name, op.c));
+    }
+  }
+
+  /* ---- inner blade tabs (ALL BLADES / B1 / B2 / B3) ---- */
+  function setBladeTab(tabId) {
+    bladeTab = tabId;
+    var showAll = tabId === 'all';
+    var idx = showAll ? -1 : parseInt(tabId, 10);
+    canvases.forEach(function(c, i) {
+      c.style.display = (showAll || idx === i + 1) ? '' : 'none';
+    });
+    updateCanvasRects();
+    if (showAll) centerGridScroll();
+    repositionHighlights();
+  }
+  document.querySelectorAll('.blade-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setBladeTab(this.dataset.blade);
+      document.querySelectorAll('.blade-tab').forEach(function(b) {
+        b.classList.toggle('active', b === btn);
+      });
+    });
+  });
+
+  /* ---- center the blade set horizontally on load / when showing all ---- */
+  function centerGridScroll() {
+    var w = document.getElementById('grid-scroll');
+    var g = document.getElementById('grid-container');
+    if (w && g) w.scrollLeft = Math.max(0, (g.offsetWidth - w.clientWidth) / 2);
+  }
+  centerGridScroll();
+  window.addEventListener('load', function() {
+    centerGridScroll();
+    repositionHighlights();
+  });
+
+  /* ---- keep highlights glued to the grid when the blade set scrolls ---- */
+  (function() {
+    var w = document.getElementById('grid-scroll');
+    if (!w) return;
+    var raf = null;
+    w.addEventListener('scroll', function() {
+      if (raf) return;
+      raf = requestAnimationFrame(function() {
+        raf = null;
+        repositionHighlights();
+      });
+    });
+  })();
+
+  /* ---- buttons ---- */
+  document.getElementById('btn-complete').addEventListener('click', () => {
+    showComplete(parseInput());
+  });
+
+  document.getElementById('btn-reset').addEventListener('click', resetToLive);
+
+  document.getElementById('btn-highlight').addEventListener('click', doHighlight);
+
+  document.getElementById('btn-list').addEventListener('click', showList);
+
+  document.getElementById('btn-clear').addEventListener('click', () => {
+    clearHighlights();
+    clearOperatorHighlights();
+    lastHighlighted = [];
+    window.__countingState.highlightIndices = [];
+    markHighlightsDirty();
+    statusEl.textContent = '';
+  });
+
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') doHighlight();
+  });
+
+  /* ---- shift+hover zoom lens ---- */
+  const ZOOM_RADIUS = 7;
+  const ZOOM_CELL = 16;
+  const LENS_CELLS = ZOOM_RADIUS * 2 + 1;
+  const LENS_SIZE = LENS_CELLS * ZOOM_CELL;
+
+  const lens = document.getElementById('zoom-lens');
+  const lc = document.getElementById('zoom-canvas');
+  lc.width = LENS_SIZE;
+  lc.height = LENS_SIZE;
+  const lctx = lc.getContext('2d');
+
+  let shiftHeld = false;
+
+  function updateCanvasRects() {
+    for (var ri = 0; ri < canvases.length; ri++) {
+      canvasRects[ri] = canvases[ri].getBoundingClientRect();
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Shift') {
+      shiftHeld = !shiftHeld;
+      updateCanvasRects();
+      if (!shiftHeld) lens.style.display = 'none';
+    }
+  });
+  window.addEventListener('blur', function() {
+    shiftHeld = false;
+    lens.style.display = 'none';
+  });
+
+  function hideLens() {
+    lens.style.display = 'none';
+  }
+
+  function updateLens(mx, my) {
+    var targetGrid = -1, relX = 0, relY = 0;
+    for (var i = 0; i < canvases.length; i++) {
+      var r = canvasRects[i];
+      if (r && mx >= r.left && mx <= r.right && my >= r.top && my <= r.bottom) {
+        targetGrid = i; relX = mx - r.left; relY = my - r.top; break;
+      }
+    }
+    if (targetGrid < 0) { lens.style.display = 'none'; return; }
+
+    var cellX = Math.floor(relX / STEP);
+    var cellY = Math.floor(relY / STEP);
+    if (cellX < 0 || cellX >= COLS || cellY < 0 || cellY >= ROWS) { lens.style.display = 'none'; return; }
+
+    var leftCount = Math.min(cellX, ZOOM_RADIUS);
+    var topCount = Math.min(cellY, ZOOM_RADIUS);
+    var rightCount = Math.min(COLS - 1 - cellX, ZOOM_RADIUS);
+    var bottomCount = Math.min(ROWS - 1 - cellY, ZOOM_RADIUS);
+    var cellLx = ZOOM_RADIUS;  // cursor always at center of lens
+    var cellLy = ZOOM_RADIUS;
+
+    lctx.fillStyle = '#0a0a0a';
+    lctx.fillRect(0, 0, LENS_SIZE, LENS_SIZE);
+
+    for (var ly = cellLy - topCount; ly <= cellLy + bottomCount; ly++) {
+      for (var lx = cellLx - leftCount; lx <= cellLx + rightCount; lx++) {
+        var gx = cellX + (lx - cellLx);
+        var gy = cellY + (ly - cellLy);
+        var globalIdx = targetGrid * PIXELS_PER_GRID + gy * COLS + gx;
+        var color;
+        if (showingComplete || litPixels.has(globalIdx)) {
+          color = isPrime(globalIdx + 1) ? '#ffffff' : 'rgba(4,135,157,1)';
+        } else {
+          color = '#0a0a0a';
+        }
+        var dx = lx * ZOOM_CELL;
+        var dy = ly * ZOOM_CELL;
+        lctx.fillStyle = color;
+        lctx.fillRect(dx, dy, ZOOM_CELL, ZOOM_CELL);
+
+        var opInfo = opLookup[globalIdx];
+        if (opInfo) {
+          lctx.fillStyle = 'rgba(0,0,0,0.7)';
+          lctx.fillRect(dx, dy, ZOOM_CELL, 12);
+          lctx.fillStyle = '#ffffff';
+          lctx.font = '9px "IBM Plex Mono", monospace';
+          lctx.fillText(opInfo.name, dx + 2, dy + 11);
+        }
+      }
+    }
+
+    var hoverIdx = targetGrid * PIXELS_PER_GRID + cellY * COLS + cellX;
+    var hoverOp = opLookup[hoverIdx];
+    var hoverColor = (hoverOp && hoverOp.color !== '') ? '#' + hoverOp.color : '#ff3333';
+
+    var cdx = cellLx * ZOOM_CELL;
+    var cdy = cellLy * ZOOM_CELL;
+    lctx.fillStyle = hoverColor;
+    lctx.fillRect(cdx, cdy, ZOOM_CELL, 1);
+    lctx.fillRect(cdx, cdy + ZOOM_CELL - 1, ZOOM_CELL, 1);
+    lctx.fillRect(cdx, cdy, 1, ZOOM_CELL);
+    lctx.fillRect(cdx + ZOOM_CELL - 1, cdy, 1, ZOOM_CELL);
+
+    var lensX = mx + 18;
+    var lensY = my - LENS_SIZE / 2;
+    if (lensX + LENS_SIZE > window.innerWidth - 10) lensX = mx - LENS_SIZE - 18;
+    if (lensY < 5) lensY = 5;
+    if (lensY + LENS_SIZE > window.innerHeight - 5) lensY = window.innerHeight - LENS_SIZE - 5;
+
+    lens.style.left = lensX + 'px';
+    lens.style.top = lensY + 'px';
+    lens.style.display = 'block';
+
+    var popupGlobalIdx = targetGrid * PIXELS_PER_GRID + cellY * COLS + cellX;
+    var popupInfo = opLookup[popupGlobalIdx];
+    if (popupInfo) {
+      var popColor = (popupInfo.color !== '') ? '#' + popupInfo.color : '#00ffcc';
+      lensPopup.textContent = popupInfo.name;
+      lensPopup.style.color = popColor;
+      lensPopup.style.borderColor = popColor;
+      lensPopup.style.left = (mx + 12) + 'px';
+      lensPopup.style.top = (my - 28) + 'px';
+      lensPopup.style.display = 'block';
+    } else {
+      lensPopup.style.display = 'none';
+    }
+  }
+
+  /* ---- operator popup for zoom lens ---- */
+  var lensPopup = document.createElement('div');
+  lensPopup.style.cssText =
+    'position:fixed;display:none;z-index:10001;pointer-events:none;' +
+    'background:rgba(0,0,0,0.9);color:#00ffcc;border:1px solid #00ffcc;' +
+    'padding:2px 8px;font-family:inherit;font-size:0.7rem;white-space:nowrap;';
+  document.body.appendChild(lensPopup);
+
+  var lastLensTime = 0;
+  document.addEventListener('mousemove', function(e) {
+    if (!shiftHeld) {
+      if (lens.style.display !== 'none') lens.style.display = 'none';
+      lensPopup.style.display = 'none';
+      return;
+    }
+    var now = Date.now();
+    if (now - lastLensTime < 40) return;
+    lastLensTime = now;
+    updateCanvasRects();
+    updateLens(e.clientX, e.clientY);
+  });
+
+  /* ---- startup ---- */
+  contexts.forEach(ctx => {
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  });
+  startLive();
+
+  /* ---- reposition highlights on viewport changes ---- */
+  window.addEventListener('scroll', repositionHighlights);
+  window.addEventListener('resize', repositionHighlights);
+
+  var lastTraceState = null;
+  var traceTick = null;
+  function fmtElapsed(s) {
+    var d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = Math.floor(s % 60);
+    if (d > 0) return d + 'd ' + h + 'h ' + m + 'm';
+    if (h > 0) return h + 'h ' + m + 'm';
+    if (m > 0) return m + 'm ' + sec + 's';
+    return sec + 's';
+  }
+  function renderTrace(data) {
+    var el = document.getElementById('traceStatus');
+    if (!el) return;
+    if (data.state === 'ACTIVE') {
+      el.innerHTML = '<span class="trace-dot trace-dot--active"></span><span class="trace-label">TRACE: ACTIVE</span>';
+    } else if (data.state === 'LOST' && data.lastSeenAt) {
+      var then = new Date(data.lastSeenAt);
+      var elapsed = (Date.now() - then.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TRACE: LOST</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+  function updateTrace() {
+    fetch('../status/trace.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      renderTrace(data);
+      if (lastTraceState !== null && data.state !== lastTraceState) {
+        var audio = new Audio();
+        audio.src = data.state === 'ACTIVE' ? '../data/alien_mt_notif.mp3' : '../data/alien_mt_power.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
+      lastTraceState = data.state;
+      if (data.state === 'LOST') {
+        if (traceTick) clearInterval(traceTick);
+        traceTick = setInterval(function() { renderTrace(data); }, 1000);
+      } else {
+        if (traceTick) { clearInterval(traceTick); traceTick = null; }
+      }
+    }).catch(function() {
+      var el = document.getElementById('traceStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  updateTrace();
+  setInterval(updateTrace, 30000);
+
+  var twitchTick = null;
+  var lastTwitchState = null;
+
+  function renderTwitch(data) {
+    var el = document.getElementById('twitchStatus');
+    if (!el) return;
+    if (data.state === 'LIVE') {
+      el.innerHTML = '<span class="trace-dot" style="background:#9146ff;box-shadow:0 0 6px #9146ff;animation:trace-pulse 1.5s ease-in-out infinite"></span><span class="trace-label" style="color:#9146ff">TTV: LIVE</span>';
+    } else if (data.state === 'OFFLINE') {
+      var since = new Date(data.updatedAt);
+      var elapsed = (Date.now() - since.getTime()) / 1000;
+      el.innerHTML = '<span class="trace-dot trace-dot--lost"></span><span class="trace-label">TTV: OFFLINE</span> <span class="trace-time">-' + fmtElapsed(elapsed) + '</span>';
+    } else {
+      el.innerHTML = '';
+    }
+  }
+  function scheduleTwitchTick(data) {
+    if (twitchTick) { clearInterval(twitchTick); twitchTick = null; }
+    if (data.state === 'OFFLINE') {
+      twitchTick = setInterval(function() { renderTwitch(data); }, 1000);
+    }
+  }
+  function updateTwitch() {
+    fetch('../status/twitch.json').then(function(r) {
+      if (!r.ok) throw new Error();
+      return r.json();
+    }).then(function(data) {
+      if (lastTwitchState !== null && data.state !== lastTwitchState) {
+        var audio = new Audio();
+        audio.src = data.state === 'LIVE' ? '../data/alien_menu_notif.mp3' : '../data/alien_menu_save.mp3';
+        audio.volume = 0.3;
+        audio.play().catch(function(){});
+      }
+      renderTwitch(data);
+      lastTwitchState = data.state;
+      scheduleTwitchTick(data);
+    }).catch(function() {
+      var el = document.getElementById('twitchStatus');
+      if (el) el.innerHTML = '';
+    });
+  }
+  updateTwitch();
+  setInterval(updateTwitch, 60000);
+})();
+</script>
+
+
+<div style="text-align:center;padding:20px 20px 0;color:#f9f9f9;font-size:0.9rem;font-family:'IBM Plex Mono','Courier New',monospace;">
+  Project Skyscraper COUNTING window finder by <a href="https://github.com/vectorcmdr" target="_blank" rel="noopener" style="color:#d00;text-decoration:none;">vector_cmdr</a>
+</div>
+<div style="text-align:center;padding:4px 20px 20px;color:#f9f9f9;font-size:0.825rem;font-family:'IBM Plex Mono','Courier New',monospace;">
+  Base content used from <a href="https://project-skyscraper.com/counting/" target="_blank" rel="noopener" style="color:#d00;text-decoration:none;">/counting/</a>
+</div>
+
+<script>
+function applyMobileLayout() {
+  var mq = window.innerWidth <= 900;
+  var el;
+  el = document.querySelector('.topbar-left');
+  if (el) {
+    el.style.minWidth = mq ? '0' : '';
+    el.style.width = mq ? '100%' : '';
+    el.style.alignItems = mq ? 'stretch' : '';
+  }
+  el = document.querySelector('.topbar-right');
+  if (el) {
+    el.style.minWidth = mq ? '0' : '';
+    el.style.width = mq ? '100%' : '';
+  }
+  el = document.querySelector('.proxy-network');
+  if (el) el.style.width = mq ? '100%' : '';
+  el = document.querySelector('.zoom-hint');
+  if (el) el.style.display = mq ? 'none' : '';
+  fitTopbar();
+}
+function fitTopbar() {
+  var tb = document.getElementById('control-bar');
+  if (!tb) return;
+  var pad = tb.offsetHeight + 'px';
+  if (document.body.style.paddingTop !== pad) {
+    document.body.style.paddingTop = pad;
+    var cs = window.__countingState;
+    if (cs) {
+      if (cs.repositionHighlights) cs.repositionHighlights();
+      if (cs.updateCanvasRects) cs.updateCanvasRects();
+    }
+  }
+}
+applyMobileLayout();
+window.addEventListener('resize', applyMobileLayout);
+if (window.ResizeObserver && document.getElementById('control-bar')) {
+  new ResizeObserver(fitTopbar).observe(document.getElementById('control-bar'));
+}
+
+document.querySelectorAll('.tab-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var tab = this.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('view-2d').style.display = tab === '2d' ? '' : 'none';
+    var v3d = document.getElementById('view-3d');
+    v3d.style.display = tab === '3d' ? '' : 'none';
+    var cs = window.__countingState;
+    if (cs) {
+      if (cs.clearHighlights) cs.clearHighlights();
+      if (cs.clearOperatorHighlights) cs.clearOperatorHighlights();
+      cs.highlightIndices = [];
+      cs.highlightsDirty = true;
+    }
+    if (tab === '2d') applyMobileLayout();
+    if (tab === '3d' && window.__initTower3D) window.__initTower3D();
+  });
+});
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+let initialized = false;
+let renderer, scene, camera, controls;
+let meshes = [];
+let offscreenCtxs = [];
+let offscreenTextures = [];
+let tooltip = null;
+let animFrameId = null;
+var contentW, contentH, pixelW, pixelH;
+
+function getGlobalIndex(gridIndex, uv, S) {
+  var col = Math.floor(uv.x * S.COLS);
+  var row = Math.floor((1 - uv.y) * S.ROWS);
+  if (col < 0 || col >= S.COLS || row < 0 || row >= S.ROWS) return -1;
+  return gridIndex * S.PIXELS_PER_GRID + row * S.COLS + col;
+}
+
+function copyCanvases(S) {
+  for (var i = 0; i < 3; i++) {
+    var src = S.canvases[i];
+    offscreenCtxs[i].drawImage(src, 0, 0, contentW, contentH, 0, 0, contentW, contentH);
+  }
+}
+
+function updateHighlights(S) {
+  for (var i = 0; i < meshes.length; i++) {
+    var m = meshes[i];
+    for (var j = m.children.length - 1; j >= 0; j--) {
+      if (m.children[j].userData.isHighlight) m.remove(m.children[j]);
+    }
+  }
+  var indices = S.highlightIndices;
+  if (!indices || !indices.length) return;
+  var glowW = pixelW * 1.5;
+  var glowH = pixelH * 1.5;
+  var glowGeo = new THREE.PlaneGeometry(glowW, glowH);
+  for (var k = 0; k < indices.length; k++) {
+    var n = indices[k];
+    var globalIdx = n - 1;
+    var gi = Math.floor(globalIdx / S.PIXELS_PER_GRID);
+    var local = globalIdx % S.PIXELS_PER_GRID;
+    var col = local % S.COLS;
+    var row = Math.floor(local / S.COLS);
+    var mesh = meshes[gi];
+    if (!mesh) continue;
+    var lx = col * pixelW + pixelW / 2 - contentW / 2;
+    var ly = -(row * pixelH + pixelH / 2) + contentH / 2;
+    var opInfo = S.opLookup[globalIdx];
+    var color;
+    if (opInfo && opInfo.color && opInfo.color !== '') {
+      color = parseInt('0x' + opInfo.color, 16);
+    } else if (opInfo) {
+      color = 0x00ffcc;
+    } else {
+      color = 0xff0000;
+    }
+    var mat = new THREE.MeshBasicMaterial({
+      color: color, transparent: true, opacity: 0.35,
+      side: THREE.DoubleSide, depthWrite: false,
+    });
+    var glow = new THREE.Mesh(glowGeo, mat);
+    glow.position.set(lx, ly, 0.005);
+    glow.userData.isHighlight = true;
+    mesh.add(glow);
+  }
+}
+
+function initScene() {
+  if (initialized) { onResize(); return; }
+  initialized = true;
+
+  var container = document.getElementById('view-3d');
+  if (!container) return;
+  var S = window.__countingState;
+  if (!S) return;
+
+  var cw = container.clientWidth || 1200;
+  var ch = container.clientHeight || 600;
+
+  contentW = S.COLS * S.CELL_SIZE + (S.COLS - 1) * S.GAP;
+  contentH = S.ROWS * S.CELL_SIZE + (S.ROWS - 1) * S.GAP;
+  pixelW = contentW / S.COLS;
+  pixelH = contentH / S.ROWS;
+
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(50, cw / ch, 1, 10000);
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setClearColor(0x0a0a0a);
+  renderer.setSize(cw, ch);
+  container.appendChild(renderer.domElement);
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 0);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.minDistance = 200;
+  controls.maxDistance = 8000;
+  controls.update();
+
+  offscreenCtxs = [];
+  offscreenTextures = [];
+  for (var i = 0; i < 3; i++) {
+    var oc = document.createElement('canvas');
+    oc.width = contentW;
+    oc.height = contentH;
+    offscreenCtxs.push(oc.getContext('2d'));
+    var tex = new THREE.CanvasTexture(oc);
+    tex.minFilter = THREE.NearestFilter;
+    tex.magFilter = THREE.NearestFilter;
+    offscreenTextures.push(tex);
+  }
+
+  var R = contentW * Math.sqrt(3) / 6;
+  var geo = new THREE.PlaneGeometry(contentW, contentH);
+  var edgeGeo = new THREE.EdgesGeometry(geo);
+
+  for (var i = 0; i < 3; i++) {
+    var theta = i * Math.PI * 2 / 3;
+    var mat = new THREE.MeshBasicMaterial({
+      map: offscreenTextures[i], side: THREE.DoubleSide,
+    });
+    var mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(R * Math.sin(theta), 0, R * Math.cos(theta));
+    mesh.rotation.y = theta;
+    mesh.userData.gridIndex = i;
+    scene.add(mesh);
+    meshes.push(mesh);
+
+    var edgeMat = new THREE.LineBasicMaterial({
+      color: 0x333333, transparent: true, opacity: 0.35,
+    });
+    var edgeLine = new THREE.LineSegments(edgeGeo, edgeMat);
+    edgeLine.position.copy(mesh.position);
+    edgeLine.rotation.copy(mesh.rotation);
+    scene.add(edgeLine);
+  }
+
+  // Top and bottom triangles
+  var triMat = new THREE.MeshBasicMaterial({
+    color: 0x222222, side: THREE.DoubleSide,
+  });
+  var halfW = contentW / 2;
+  var triPos = new Float32Array([
+    -halfW, 0, R,
+    0, 0, -2*R,
+    halfW, 0, R,
+  ]);
+  var triGeo = new THREE.BufferGeometry();
+  triGeo.setAttribute('position', new THREE.BufferAttribute(triPos, 3));
+  triGeo.setIndex([0, 1, 2]);
+  triGeo.computeVertexNormals();
+  var topTri = new THREE.Mesh(triGeo, triMat);
+  topTri.position.y = contentH / 2;
+  scene.add(topTri);
+  var bottomTri = new THREE.Mesh(triGeo.clone(), triMat);
+  bottomTri.position.y = -contentH / 2;
+  scene.add(bottomTri);
+
+  // Easter egg: the one inside
+  var egCanvas = document.createElement('canvas');
+  egCanvas.width = 128;
+  egCanvas.height = 128;
+  var egCtx = egCanvas.getContext('2d');
+  egCtx.fillStyle = '#ff0000';
+  egCtx.font = 'bold 96px Arial';
+  egCtx.textAlign = 'center';
+  egCtx.textBaseline = 'middle';
+  egCtx.fillText('1', 64, 64);
+  var egTex = new THREE.CanvasTexture(egCanvas);
+  var egMat = new THREE.MeshBasicMaterial({ map: egTex, transparent: true, side: THREE.DoubleSide, depthWrite: false });
+  var egGeo = new THREE.PlaneGeometry(40, 40);
+  var egMesh = new THREE.Mesh(egGeo, egMat);
+  egMesh.position.set(0, 0, 0);
+  scene.add(egMesh);
+
+  var halfH = contentH / 2;
+  var fovRad = THREE.MathUtils.degToRad(50);
+  var d = (halfH / Math.tan(fovRad / 2)) * 1.4;
+  camera.position.set(d * 0.5, d * 0.35, d * 0.7);
+  controls.update();
+
+  tooltip = document.createElement('div');
+  tooltip.id = 'tower-tooltip';
+  tooltip.style.cssText =
+    'position:fixed;display:none;z-index:10001;pointer-events:none;' +
+    'background:rgba(0,0,0,0.9);color:#00ffcc;border:1px solid #00ffcc;' +
+    'padding:2px 8px;font-family:"IBM Plex Mono","Courier New",monospace;' +
+    'font-size:0.7rem;white-space:nowrap;';
+  document.body.appendChild(tooltip);
+
+  var raycaster = new THREE.Raycaster();
+  var pointer = new THREE.Vector2();
+
+  renderer.domElement.addEventListener('pointermove', function(event) {
+    var rect = renderer.domElement.getBoundingClientRect();
+    pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(pointer, camera);
+    var intersects = raycaster.intersectObjects(meshes, false);
+    if (intersects.length > 0) {
+      var hit = intersects[0];
+      if (hit.object.userData.gridIndex === undefined) { tooltip.style.display = 'none'; return; }
+      var gIdx = getGlobalIndex(hit.object.userData.gridIndex, hit.uv, S);
+      if (gIdx >= 0) {
+        var opInfo = S.opLookup[gIdx];
+        if (opInfo) {
+          var col = (opInfo.color && opInfo.color !== '') ? '#' + opInfo.color : '#00ffcc';
+          tooltip.textContent = opInfo.name;
+          tooltip.style.color = col;
+          tooltip.style.borderColor = col;
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 30) + 'px';
+          tooltip.style.display = 'block';
+          renderer.domElement.style.cursor = 'pointer';
+          return;
+        }
+      }
+    }
+    tooltip.style.display = 'none';
+    renderer.domElement.style.cursor = 'default';
+  });
+
+  renderer.domElement.addEventListener('pointerleave', function() {
+    tooltip.style.display = 'none';
+  });
+
+  /* mobile tap: show tooltip with 3s auto-dismiss */
+  var tooltipTimer = null;
+  renderer.domElement.addEventListener('click', function(event) {
+    if (tooltipTimer) clearTimeout(tooltipTimer);
+    var rect = renderer.domElement.getBoundingClientRect();
+    pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(pointer, camera);
+    var intersects = raycaster.intersectObjects(meshes, false);
+    if (intersects.length > 0) {
+      var hit = intersects[0];
+      if (hit.object.userData.gridIndex === undefined) return;
+      var gIdx = getGlobalIndex(hit.object.userData.gridIndex, hit.uv, S);
+      if (gIdx >= 0) {
+        var opInfo = S.opLookup[gIdx];
+        if (opInfo) {
+          var col = (opInfo.color && opInfo.color !== '') ? '#' + opInfo.color : '#00ffcc';
+          tooltip.textContent = opInfo.name;
+          tooltip.style.color = col;
+          tooltip.style.borderColor = col;
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 30) + 'px';
+          tooltip.style.display = 'block';
+          tooltipTimer = setTimeout(function() { tooltip.style.display = 'none'; }, 3000);
+          return;
+        }
+      }
+    }
+    tooltip.style.display = 'none';
+  });
+
+  S.dirty = true;
+  S.highlightsDirty = true;
+
+  function animate() {
+    animFrameId = requestAnimationFrame(animate);
+    if (S.dirty) {
+      copyCanvases(S);
+      offscreenTextures.forEach(function(t) { t.needsUpdate = true; });
+      S.dirty = false;
+    }
+    if (S.highlightsDirty) {
+      updateHighlights(S);
+      S.highlightsDirty = false;
+    }
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+}
+
+function onResize() {
+  if (!camera || !renderer) return;
+  var container = document.getElementById('view-3d');
+  if (!container) return;
+  var cw = container.clientWidth;
+  var ch = container.clientHeight;
+  if (cw === 0 || ch === 0) return;
+  camera.aspect = cw / ch;
+  camera.updateProjectionMatrix();
+  renderer.setSize(cw, ch);
+}
+
+window.addEventListener('resize', onResize);
+window.__initTower3D = initScene;
+</script>
+</body>
+</html>

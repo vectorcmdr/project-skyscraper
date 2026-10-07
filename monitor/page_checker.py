@@ -1,0 +1,231 @@
+"""Page content checking -- hash comparison with noise-aware diffs."""
+
+import re
+from datetime import datetime, timezone
+from urllib.parse import urlparse
+
+from monitor.config import BASE_URL, DATA_DIR, PASSWORD_PROTECTED_PAGES, STALE_BYPASS_URLS
+from monitor.http_client import fetch
+from monitor.logger import log
+from monitor.noise_filter import is_noise_only_page_change
+from monitor.diff_engine import compute_diff
+from monitor.url_mapper import url_to_path
+from monitor.api_collections import find_author_for_url, find_modified_gmt_for_url
+from monitor.discovery import get_postpass_cookie
+
+_NEURAL_URL = f"{BASE_URL}/neural-network-status/"
+
+
+def check_page_content(url: str, state: dict) -> list:
+    changes = []
+    page_state = state.setdefault("pages", {}).setdefault(url, {})
+
+    etag = page_state.get("etag")
+    last_modified = page_state.get("last_modified")
+
+    headers_extra = None
+    if url in PASSWORD_PROTECTED_PAGES:
+        cookie = get_postpass_cookie(PASSWORD_PROTECTED_PAGES[url], url)
+        if cookie:
+            headers_extra = {"Cookie": cookie}
+        else:
+            log(f"Page {url}: could not get postpass cookie, will skip password check", "WARN")
+
+    # Template-based pages (STALE_BYPASS_URLS) have static post_modified_gmt
+    # but dynamic output. Conditional GET returns stale Batcache content
+    # and the origin never signals a change. Always bust cache.
+    is_stale_bypass = urlparse(url).path in STALE_BYPASS_URLS
+
+    if is_stale_bypass:
+        result = fetch(url, etag=None, last_modified=None,
+                       headers_extra=headers_extra, bust_cache=True)
+    else:
+        result = fetch(url, etag=etag, last_modified=last_modified,
+                       headers_extra=headers_extra)
+
+    if result.not_modified:
+        if etag is not None:
+            page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+            return changes
+        # No ETag -- Last-Modified may be stale. Re-fetch unconditionally.
+        result = fetch(url, etag=None, last_modified=None,
+                       headers_extra=headers_extra, bust_cache=True)
+        if result.not_modified or result.failed:
+            page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+            return changes
+
+    if result.failed:
+        log(f"Page {url}: fetch failed ({result.status})", "WARN")
+        return changes
+
+    # Detect fetcher-overwritten content via .old file
+    old_path = url_to_path(url, subdir="html")
+    old_path_old = old_path.parent / (old_path.name + '.old')
+    if old_path_old.is_file():
+        try:
+            old_bytes = old_path_old.read_bytes()
+            new_bytes = result.content
+            if old_bytes != new_bytes:
+                diff_text = compute_diff(old_bytes, new_bytes, url, str(old_path))
+                if diff_text:
+                    mod_gmt = find_modified_gmt_for_url(state, url)
+                    stale = False
+                    # Same template-based page bypass as the hash-change path below
+                    if is_stale_bypass:
+                        stale = False
+                    elif mod_gmt:
+                        try:
+                            mod_dt = datetime.fromisoformat(mod_gmt)
+                            if mod_dt.tzinfo is None:
+                                mod_dt = mod_dt.replace(tzinfo=timezone.utc)
+                            age = datetime.now(timezone.utc) - mod_dt
+                            if age.total_seconds() > 3600:
+                                stale = True
+                        except Exception:
+                            pass
+                    if not stale:
+                        change_obj = {
+                            "type": "page_content_changed",
+                            "url": url,
+                            "detail": f"Content changed: {url}",
+                            "diffs": [{"url": url, "diff": diff_text}],
+                        }
+                        if mod_gmt:
+                            change_obj["ts"] = mod_gmt
+                        author = find_author_for_url(state, url)
+                        if author:
+                            change_obj["author"] = author
+                        changes.append(change_obj)
+                        log(f"Page content CHANGED (recovered from .old): {url}", "DEEP")
+        except Exception:
+            pass
+        try:
+            old_path_old.unlink()
+        except Exception:
+            pass
+
+    if url == _NEURAL_URL:
+        _extract_connection_count(result.text)
+
+    new_hash = result.hash
+    old_hash = page_state.get("hash")
+
+    if old_hash is not None and old_hash != new_hash:
+        old_path = url_to_path(url, subdir="html")
+        noise_only = False
+        was_password_form = False
+        if old_path.is_file():
+            old_text = old_path.read_text(encoding="utf-8", errors="replace")
+            new_text = result.content.decode("utf-8", errors="replace")
+            noise_only = is_noise_only_page_change(old_text, new_text)
+            was_password_form = 'post-password-required' in old_text and 'post-password-required' not in new_text
+
+        if noise_only:
+            log(f"Page {url}: hash changed but only noise (suppressed)", "DEEP")
+        else:
+            diff_text = None
+            if old_path.is_file():
+                old_bytes = old_path.read_bytes()
+                if old_bytes != result.content:
+                    diff_text = compute_diff(old_bytes, result.content, url, str(old_path))
+
+            if not diff_text:
+                log(f"Page {url}: hash changed but beautified diff is noise-only (suppressed)", "DEEP")
+            else:
+                mod_gmt = find_modified_gmt_for_url(state, url)
+                stale = False
+                if is_stale_bypass:
+                    stale = False
+                elif mod_gmt:
+                    try:
+                        mod_dt = datetime.fromisoformat(mod_gmt)
+                        if mod_dt.tzinfo is None:
+                            mod_dt = mod_dt.replace(tzinfo=timezone.utc)
+                        age = datetime.now(timezone.utc) - mod_dt
+                        if age.total_seconds() > 3600:
+                            stale = True
+                            log(f"Page {url}: content change from {age.total_seconds()/3600:.1f}h ago (stale catch-up, suppressed)", "DEEP")
+                    except Exception:
+                        pass
+
+                if was_password_form:
+                    log(f"Page {url}: password-protected content recovered (was showing password form)", "DEEP")
+                    change_obj = {
+                        "type": "page_content_changed",
+                        "url": url,
+                        "old_hash": old_hash,
+                        "new_hash": new_hash,
+                        "detail": f"Password-protected content recovered: {url}",
+                        "_password_recovered": True,
+                    }
+                    if mod_gmt:
+                        change_obj["ts"] = mod_gmt
+                    author = find_author_for_url(state, url)
+                    if author:
+                        change_obj["author"] = author
+                    changes.append(change_obj)
+                elif not stale:
+                    change_obj = {
+                        "type": "page_content_changed",
+                        "url": url,
+                        "old_hash": old_hash,
+                        "new_hash": new_hash,
+                        "detail": f"Content changed: {url}",
+                        "diffs": [{"url": url, "diff": diff_text}],
+                    }
+                    if mod_gmt:
+                        change_obj["ts"] = mod_gmt
+                    author = find_author_for_url(state, url)
+                    if author:
+                        change_obj["author"] = author
+                    changes.append(change_obj)
+                    log(f"Page content CHANGED: {url}", "DEEP")
+        _save_mirror_copy(url, result)
+    elif old_hash is None:
+        log(f"Page content first tracked: {url}", "DEEP")
+        _save_mirror_copy(url, result)
+
+    page_state["etag"] = result.etag
+    page_state["last_modified"] = result.last_modified
+    page_state["hash"] = new_hash
+    page_state["last_checked"] = datetime.now(timezone.utc).isoformat()
+
+    return changes
+
+
+def _save_mirror_copy(url: str, result):
+    path = url_to_path(url, subdir="html")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if result.content:
+        path.write_bytes(result.content)
+
+
+def _extract_connection_count(html: str):
+    m = re.search(r'<strong>(\d+)</strong>\s*(?:Live Connection|Dreamers?\s+online)', html)
+    if m:
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        import json
+        (DATA_DIR / "connections.json").write_text(
+            json.dumps({"count": int(m.group(1))}), encoding="utf-8"
+        )
+
+
+def get_page_check_batch(state: dict, chunk_size: int = 15) -> list:
+    sitemap_urls = list(state.get("sitemap", {}).get("urls", {}).keys())
+    if not sitemap_urls:
+        return []
+    offset = state.setdefault("sitemap", {}).setdefault("_page_check_offset", 0)
+    batch = sitemap_urls[offset:offset + chunk_size]
+    if len(batch) < chunk_size and len(sitemap_urls) > chunk_size:
+        batch.extend(sitemap_urls[:chunk_size - len(batch)])
+    state["sitemap"]["_page_check_offset"] = (offset + chunk_size) % len(sitemap_urls)
+
+    # Always include template-based pages (stale bypass list) in every batch
+    for path in STALE_BYPASS_URLS:
+        full_url = f"{BASE_URL}{path}"
+        if full_url in sitemap_urls and full_url not in batch:
+            batch.insert(0, full_url)
+            if len(batch) > chunk_size + len(STALE_BYPASS_URLS):
+                batch.pop()
+
+    return batch

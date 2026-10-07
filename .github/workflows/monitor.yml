@@ -1,0 +1,47 @@
+name: monitor
+
+# Runs the site monitor on GitHub-hosted runners and commits the resulting
+# site data + state back to the repository. GitHub Pages then rebuilds the
+# dashboard from docs/ exactly as it does for local daemon pushes.
+#
+# Trigger rules:
+#   - schedule only (plus manual dispatch). Never on push: the bot's own
+#     commits would otherwise retrigger the workflow in a loop.
+#   - concurrency cancel-in-progress replaces the local PID lock; a run
+#     that is still going when the next cron fires is cancelled and the
+#     next one starts cleanly from the committed state.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --quiet jsbeautifier
+
+      - name: Run monitor cycle
+        env:
+          PS_HOSTED: "1"
+          PS_DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          PS_DISCORD_PING_ID: ${{ secrets.DISCORD_PING_ID }}
+        run: python monitor_site.py --check

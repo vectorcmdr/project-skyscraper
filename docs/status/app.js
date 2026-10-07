@@ -1,0 +1,445 @@
+/* ── CONFIG ────────────────────────────────────────────── */
+const DATA_ROOT = '../data'; /* relative to docs/status/ */
+const SITE_LIVE  = 'https://project-skyscraper.com';
+
+/* ── STATE ─────────────────────────────────────────────── */
+let feed     = [];    /* changes feed, newest-first */
+let manifest = [];    /* all known pages/posts */
+let external = [];    /* external factors feed */
+let avatarUrl = '../favicon.jpg';
+
+/* ── HELPERS ───────────────────────────────────────────── */
+function setOperator() {
+  const el = document.getElementById('operatorDisplay');
+  if (!el) return;
+  const name = localStorage.getItem('operator') || '';
+  el.textContent = name ? `Operator: ${name}` : 'Operator: <anon>';
+}
+function fmtBoth(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  const opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  const utc   = d.toLocaleString('en-GB', { ...opts, timeZone: 'UTC' });
+  const local = d.toLocaleString('en-GB', opts);
+  return `<span class="ts-stack"><span class="ts-utc">${utc} UTC</span><span class="ts-local">${local} local</span></span>`;
+}
+
+function esc(s) {
+  const e = document.createElement('div');
+  e.textContent = s;
+  return e.innerHTML;
+}
+
+function fmtGameTime(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  const opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  const utc   = d.toLocaleString('en-GB', { ...opts, timeZone: 'UTC' });
+  const local = d.toLocaleString('en-GB', opts);
+  return `<span class="gt-stack"><span class="gt-label">GAME TIME:</span><span class="gt-utc">${utc} UTC</span><span class="gt-local">${local} local</span></span>`;
+}
+
+function renderDiff(raw) {
+  if (!raw) return '';
+  return raw.split('\n').map(line => {
+    if (!line) return '';
+    if (line.startsWith('+ ')) return `<span class="diff-add">${esc(line)}</span>`;
+    if (line.startsWith('- ')) return `<span class="diff-rem">${esc(line)}</span>`;
+    if (line.startsWith('@@')) return `<span class="diff-hunk">${esc(line)}</span>`;
+    if (line.startsWith('...')) return `<span class="diff-more">${esc(line)}</span>`;
+    return `<span class="diff-ctx">${esc(line)}</span>`;
+  }).join('\n');
+}
+
+/* ── SOUND SYSTEM ──────────────────────────────────────────── */
+const SOUND_PATHS = {
+  traceActive: '../data/alien_mt_notif.mp3',
+  traceLost: '../data/alien_mt_power.mp3',
+  newEntry: '../data/alien_save_notif.mp3',
+};
+
+let audioCache = {};
+
+function isSoundEnabled() {
+  return localStorage.getItem('soundEnabled') === 'true';
+}
+
+function updateSoundBtn() {
+  const btn = document.getElementById('soundToggle');
+  if (!btn) return;
+  btn.textContent = isSoundEnabled() ? '\u{1F50A}' : '\u{1F507}';
+  btn.classList.toggle('sound-on', isSoundEnabled());
+}
+
+function toggleSound() {
+  const nowEnabled = !isSoundEnabled();
+  localStorage.setItem('soundEnabled', nowEnabled ? 'true' : 'false');
+  updateSoundBtn();
+  if (nowEnabled) {
+    const u = new Audio();
+    u.play().catch(function(){});
+  }
+}
+
+function playSound(name) {
+  if (!isSoundEnabled()) return;
+  if (!audioCache[name]) {
+    const p = SOUND_PATHS[name];
+    if (!p) return;
+    audioCache[name] = new Audio(p);
+    audioCache[name].volume = 0.5;
+  }
+  const a = audioCache[name];
+  a.currentTime = 0;
+  a.play().catch(function() {});
+}
+
+/* ── SYNTHETIC TEST TRIGGERS (URL params, safe to remove) ── */
+(function() {
+  var p = new URLSearchParams(window.location.search);
+  var test = p.get('test_sound');
+  if (test) {
+    setTimeout(function() {
+      if (!isSoundEnabled()) toggleSound();
+      if (test === 'changelog' || test === 'manifest' || test === 'external') {
+        playSound('newEntry');
+      } else if (test === 'trace_active') {
+        playSound('traceActive');
+      } else if (test === 'trace_lost') {
+        playSound('traceLost');
+      } else if (test === 'poll') {
+        lastKnown.feed = 1;
+        lastKnown.manifest = 0;
+        lastKnown.external = 1;
+        checkNewData();
+      }
+    }, 500);
+  }
+})();
+
+/* ── RENDER FEED ───────────────────────────────────────── */
+function renderFeed(entries) {
+  const container = document.getElementById('feedEntries');
+  if (!entries.length) {
+    container.innerHTML = '<div class="empty-msg">no changes recorded yet</div>';
+    return;
+  }
+  container.innerHTML = entries.map(e => {
+    const icon = e.type === 'added' || e.type.endsWith('_added') ? '+' : e.type === 'removed' || e.type.endsWith('_removed') ? '−' : '~';
+    const tagCls = `tag tag-${e.type}`;
+    return `
+      <div class="card">
+        <img src="${esc(avatarUrl)}" alt="" class="card-avatar" loading="lazy">
+        <div class="card-body">
+          ${e.link
+            ? `<a href="${esc(e.link)}" target="_blank" rel="noopener" class="card-title">${esc(e.title || e.detail || 'untitled')}</a>`
+            : `<span class="card-title card-title--no-link">${esc(e.title || e.detail || 'untitled')}</span>`}
+          <div class="card-meta">
+            <span class="${tagCls}">${icon} ${e.type}</span>
+            ${fmtBoth(e.timestamp)}
+            ${e.game_date ? fmtGameTime(e.game_date) : ''}
+            ${e.endpoint ? `<span>${esc(e.endpoint.split('/').pop())}</span>` : ''}
+            ${e.author ? `<span>by ${esc(e.author)}</span>` : ''}
+            ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
+          </div>
+          ${e.diff ? `<div class="card-diff hidden" id="diff-${e._idx}"><pre class="diff-block">${renderDiff(e.diff)}</pre></div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  /* Diff toggle */
+  container.querySelectorAll('.diff-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.dataset.idx;
+      var diffEl = document.getElementById('diff-' + id);
+      if (diffEl) {
+        diffEl.classList.toggle('hidden');
+        btn.innerHTML = diffEl.classList.contains('hidden') ? '\u25B4 diff' : '\u25BE diff';
+      }
+    });
+  });
+}
+
+/* ── RENDER MANIFEST ───────────────────────────────────── */
+function renderManifest(entries) {
+  const el = document.getElementById('manifestEntries');
+  if (!entries.length) {
+    el.innerHTML = '<div class="empty-msg">no pages tracked yet</div>';
+    return;
+  }
+  el.innerHTML = entries.map(m => {
+    const tagCls = `tag tag-${m.type}`;
+    return `
+      <div class="card manifest-item">
+        <img src="${esc(avatarUrl)}" alt="" class="card-avatar" loading="lazy">
+        <div class="card-body">
+          <a href="${SITE_LIVE}${esc(m.path)}" target="_blank" rel="noopener" class="card-title">${esc(m.title || m.path)}</a>
+          <div class="card-meta">
+            <span class="${tagCls}">${esc(m.type)}</span>
+            <span class="card-meta-label">modified</span>${fmtBoth(m.modified)}
+            <span class="card-meta-label">created</span>${fmtBoth(m.date_gmt)}
+            <span>${esc(m.path)}</span>
+            ${m.author ? `<span>by ${esc(m.author)}</span>` : ''}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ── FILTER MANIFEST ───────────────────────────────────── */
+function filterManifest() {
+  const q   = document.getElementById('manifestSearch').value.toLowerCase();
+  const typ = document.getElementById('manifestFilter').value;
+  let filtered = manifest;
+  if (typ !== 'all') filtered = filtered.filter(m => m.type === typ);
+  if (q) filtered = filtered.filter(m =>
+    (m.title && m.title.toLowerCase().includes(q)) ||
+    (m.path && m.path.toLowerCase().includes(q)) ||
+    (m.author && m.author.toLowerCase().includes(q))
+  );
+  const mode = getSortPref('manifest');
+  if (mode === 'real') {
+    filtered.sort((a, b) => new Date(b.modified) - new Date(a.modified));
+  } else {
+    filtered.sort((a, b) => {
+      const da = a.date_gmt ? new Date(a.date_gmt) : new Date(a.modified);
+      const db = b.date_gmt ? new Date(b.date_gmt) : new Date(b.modified);
+      return db - da;
+    });
+  }
+  renderManifest(filtered);
+}
+
+/* ── RENDER EXTERNAL ───────────────────────────────────── */
+function renderExternal(entries) {
+  const container = document.getElementById('externalEntries');
+  if (!entries.length) {
+    container.innerHTML = '<div class="empty-msg">no external events recorded yet</div>';
+    return;
+  }
+  container.innerHTML = entries.map(e => {
+    const tagCls = `tag tag-${e.type}`;
+    return `
+      <div class="card">
+        <img src="${esc(avatarUrl)}" alt="" class="card-avatar" loading="lazy">
+        <div class="card-body">
+          ${e.link
+            ? `<a href="${esc(e.link)}" target="_blank" rel="noopener" class="card-title">${esc(e.title || e.detail || 'untitled')}</a>`
+            : `<span class="card-title card-title--no-link">${esc(e.title || e.detail || 'untitled')}</span>`}
+          <div class="card-meta">
+            <span class="${tagCls}">${e.type.replace('external_', 'ext:')}</span>
+            ${e.site ? `<span class="tag tag-site">${esc(e.site)}</span>` : ''}
+            ${fmtBoth(e.timestamp)}
+            ${e.detail ? `<span>${esc(e.detail.substring(0, 120))}</span>` : ''}
+            ${e.diff ? `<span class="diff-toggle" data-idx="${e._idx}">&#9654; diff</span>` : ''}
+          </div>
+          ${e.diff ? `<div class="card-diff hidden" id="diff-ext-${e._idx}"><pre class="diff-block">${renderDiff(e.diff)}</pre></div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  container.querySelectorAll('.diff-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.dataset.idx;
+      var diffEl = document.getElementById('diff-ext-' + id);
+      if (diffEl) {
+        diffEl.classList.toggle('hidden');
+        btn.innerHTML = diffEl.classList.contains('hidden') ? '\u25B4 diff' : '\u25BE diff';
+      }
+    });
+  });
+}
+
+/* ── FILTER EXTERNAL ───────────────────────────────────── */
+function filterExternal() {
+  const q   = document.getElementById('externalSearch').value.toLowerCase();
+  const typ = document.getElementById('externalFilter').value;
+  let filtered = external;
+  if (typ !== 'all') {
+    if (typ === 'wakingtitan' || typ === 'tower') {
+      filtered = filtered.filter(e => e.site === typ);
+    } else {
+      filtered = filtered.filter(e => e.type.includes(typ));
+    }
+  }
+  if (q) filtered = filtered.filter(e =>
+    (e.title && e.title.toLowerCase().includes(q)) ||
+    (e.detail && e.detail.toLowerCase().includes(q)) ||
+    (e.type && e.type.toLowerCase().includes(q)) ||
+    (e.site && e.site.toLowerCase().includes(q))
+  );
+  filtered.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  renderExternal(filtered);
+}
+
+/* ── LOAD DATA ─────────────────────────────────────────── */
+function getSortPref(tab) {
+  return localStorage.getItem('feedSort_' + tab) || 'real';
+}
+
+function sortAndRender(tab) {
+  const mode = getSortPref(tab);
+  if (tab === 'feed') {
+    const sorted = [...feed];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    } else {
+      sorted.sort((a, b) => {
+        const da = a.game_date ? new Date(a.game_date) : new Date(a.timestamp);
+        const db = b.game_date ? new Date(b.game_date) : new Date(b.timestamp);
+        return db - da;
+      });
+    }
+    renderFeed(sorted);
+  } else if (tab === 'manifest') {
+    const sorted = [...manifest];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.modified) - new Date(a.modified));
+    } else {
+      sorted.sort((a, b) => {
+        const da = a.date_gmt ? new Date(a.date_gmt) : new Date(a.modified);
+        const db = b.date_gmt ? new Date(b.date_gmt) : new Date(b.modified);
+        return db - da;
+      });
+    }
+    renderManifest(sorted);
+  } else if (tab === 'external') {
+    const sorted = [...external];
+    if (mode === 'real') {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    } else {
+      sorted.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    }
+    renderExternal(sorted);
+  }
+}
+
+async function load() {
+  try {
+    const [feedResp, manifestResp, externalResp] = await Promise.all([
+      fetch(`${DATA_ROOT}/feed.json`),
+      fetch(`${DATA_ROOT}/manifest.json`),
+      fetch(`${DATA_ROOT}/external.json`),
+    ]);
+    if (feedResp.ok) {
+      const raw = await feedResp.json();
+      feed = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
+      sortAndRender('feed');
+    }
+    if (manifestResp.ok) {
+      manifest = (await manifestResp.json()).pages || [];
+      filterManifest();
+    }
+    if (externalResp.ok) {
+      const raw = await externalResp.json();
+      external = (raw.entries || []).map((e, i) => ({ ...e, _idx: i }));
+      filterExternal();
+    }
+    if (feedResp.ok || manifestResp.ok || externalResp.ok) {
+    }
+  } catch (err) {
+    console.error('Failed to load data:', err);
+  }
+}
+
+/* ── EVENTS ────────────────────────────────────────────── */
+document.getElementById('manifestSearch').addEventListener('input', filterManifest);
+document.getElementById('manifestFilter').addEventListener('change', filterManifest);
+document.getElementById('externalSearch').addEventListener('input', filterExternal);
+document.getElementById('externalFilter').addEventListener('change', filterExternal);
+
+/* Tab switching */
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#feed, #manifest, #external').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(btn.dataset.tab);
+    if (target) target.classList.add('active');
+  });
+});
+
+/* Sort toggle */
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const mode = btn.dataset.sort;
+    const tab = btn.dataset.tab;
+    localStorage.setItem('feedSort_' + tab, mode);
+    document.querySelectorAll(`.sort-btn[data-tab="${tab}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (tab === 'feed') sortAndRender('feed');
+    else if (tab === 'manifest') filterManifest();
+    else if (tab === 'external') filterExternal();
+  });
+});
+
+document.querySelectorAll('.sort-btn').forEach(b => {
+  const tab = b.dataset.tab;
+  const pref = localStorage.getItem('feedSort_' + tab) || 'real';
+  b.classList.toggle('active', b.dataset.sort === pref);
+});
+
+load();
+setOperator();
+
+/* ── SOUND TOGGLE ─────────────────────────────────────────── */
+document.getElementById('soundToggle').addEventListener('click', toggleSound);
+updateSoundBtn();
+
+/* ── NEW ENTRY DETECTION ───────────────────────────────────── */
+let lastKnown = { feed: null, manifest: 0, external: null };
+
+function checkNewData() {
+  if (!isSoundEnabled()) return;
+  Promise.all([
+    fetch(`${DATA_ROOT}/feed.json`).then(r => r.ok ? r.json() : null),
+    fetch(`${DATA_ROOT}/manifest.json`).then(r => r.ok ? r.json() : null),
+    fetch(`${DATA_ROOT}/external.json`).then(r => r.ok ? r.json() : null),
+  ]).then(function(results) {
+    const [feedData, manifestData, extData] = results;
+    if (feedData && feedData.entries && feedData.entries.length) {
+      const ts = new Date(feedData.entries[0].timestamp).getTime();
+      if (lastKnown.feed !== null && ts > lastKnown.feed) {
+        playSound('newEntry');
+        feed = (feedData.entries || []).map(function(e, i) { return Object.assign({}, e, { _idx: i }); });
+        sortAndRender('feed');
+      }
+      lastKnown.feed = ts;
+    }
+    if (manifestData && manifestData.pages) {
+      const c = manifestData.pages.length;
+      if (lastKnown.manifest > 0 && c > lastKnown.manifest) {
+        playSound('newEntry');
+        manifest = manifestData.pages || [];
+        filterManifest();
+      }
+      lastKnown.manifest = c;
+    }
+    if (extData && extData.entries && extData.entries.length) {
+      const ts = new Date(extData.entries[0].timestamp).getTime();
+      if (lastKnown.external !== null && ts > lastKnown.external) {
+        playSound('newEntry');
+        external = (extData.entries || []).map(function(e, i) { return Object.assign({}, e, { _idx: i }); });
+        filterExternal();
+      }
+      lastKnown.external = ts;
+    }
+  }).catch(function() {});
+}
+
+setInterval(checkNewData, 5000);
+
+/* ── LAST SYNC ──────────────────────────────────────────── */
+function updateSync() {
+  fetch(`${DATA_ROOT}/sync.json`)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      const d = new Date(data.timestamp);
+      const opts = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const utc = d.toLocaleString('en-GB', { ...opts, timeZone: 'UTC' });
+      const local = d.toLocaleString('en-GB', opts);
+      document.getElementById('lastSync').textContent = `LAST_SYNC: ${utc} UTC [${local}]`;
+    })
+    .catch(() => {});
+}
+updateSync();
