@@ -172,7 +172,6 @@ EXTERNAL_SITES = {
 }
 
 EXTERNAL_CHECK_INTERVAL = 7200  # every 2 hours
-EXTERNAL_LONG_POLL_INTERVAL = 43200  # DNS deep check every 12h
 RECALLDREAMS_MIRROR_INTERVAL = 21600  # full mirror every 6h
 EXTERNAL_WP_PAGES_INTERVAL = 600  # external WP page HTML checks every 10 min
 EXTERNAL_NOTIFY_DEDUP_WINDOW = 86400  # 24h: suppress repeat external content-change notifications for an already-notified content signature

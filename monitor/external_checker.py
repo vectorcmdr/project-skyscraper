@@ -124,33 +124,99 @@ def check_freeimage(state: dict) -> list:
     return changes
 
 
+# DNS answers for CDN/anycast hosts rotate between legitimate value sets
+# (for example Cloudflare edge IPs). Keep a pool of known-good values and
+# require two consecutive strikes for additions and removals, so rotation
+# never fires notifications while real DNS moves still surface.
+_DNS_TWO_STRIKE = 2
+
+
+def _dns_change(hostname: str, site_label: str, rtype: str, diff_lines: list, caption: str) -> dict:
+    return {
+        "type": "external_dns_changed",
+        "site": hostname,
+        "site_label": site_label,
+        "hostname": hostname,
+        "record_type": rtype,
+        "diff": "\n".join(diff_lines),
+        "detail": f"DNS {rtype} {caption} for {hostname}",
+    }
+
+
 def _check_site_dns(hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
     dns_state = site_state.setdefault("dns", {})
     records = _resolve_dns(hostname)
 
+    pending_add = dns_state.setdefault("_pending_add", {})
+    pending_remove = dns_state.setdefault("_pending_remove", {})
+
     for rtype in ("A", "AAAA", "TXT", "CNAME", "MX", "NS"):
-        old = dns_state.get(rtype, [])
-        new = records.get(rtype, [])
-        if old != new:
-            dns_state[rtype] = new
-            diff_lines = []
-            old_set, new_set = set(old), set(new)
-            for v in sorted(old_set - new_set):
-                diff_lines.append(f"- {rtype} {v}")
-            for v in sorted(new_set - old_set):
-                diff_lines.append(f"+ {rtype} {v}")
-            caption = "captured" if not old else "changed"
-            changes.append({
-                "type": "external_dns_changed",
-                "site": hostname,
-                "site_label": site_label,
-                "hostname": hostname,
-                "record_type": rtype,
-                "diff": "\n".join(diff_lines),
-                "detail": f"DNS {rtype} {caption} for {hostname}",
-            })
-            log(f"  DNS {rtype} {caption} for {hostname}: {' '.join(diff_lines)}", "CHECK")
+        new = records.get(rtype)
+        if new is None:
+            # Resolve failed for this type; leave pool and counters untouched.
+            continue
+
+        pool = dns_state.get(rtype, [])
+        pool_set = set(pool)
+        new_set = set(new)
+
+        if not pool_set:
+            # First successful capture for this record type.
+            pending_add.pop(rtype, None)
+            pending_remove.pop(rtype, None)
+            if new_set:
+                dns_state[rtype] = sorted(new_set)
+                diff_lines = [f"+ {rtype} {v}" for v in sorted(new_set)]
+                changes.append(_dns_change(hostname, site_label, rtype, diff_lines, "captured"))
+                log(f"  DNS {rtype} captured for {hostname}: {' '.join(diff_lines)}", "CHECK")
+            continue
+
+        # Values never seen before: confirm only after consecutive sightings.
+        adds = pending_add.setdefault(rtype, {})
+        for v in list(adds):
+            if v not in new_set:
+                del adds[v]
+        confirmed_add = []
+        for v in sorted(new_set - pool_set):
+            adds[v] = adds.get(v, 0) + 1
+            if adds[v] >= _DNS_TWO_STRIKE:
+                confirmed_add.append(v)
+                del adds[v]
+
+        # Known values that are absent: confirm only after consecutive misses.
+        rems = pending_remove.setdefault(rtype, {})
+        for v in list(rems):
+            if v in new_set:
+                del rems[v]
+        confirmed_remove = []
+        for v in sorted(pool_set - new_set):
+            rems[v] = rems.get(v, 0) + 1
+            if rems[v] >= _DNS_TWO_STRIKE:
+                confirmed_remove.append(v)
+                del rems[v]
+
+        if not confirmed_add and not confirmed_remove:
+            continue
+
+        pool_set |= set(confirmed_add)
+        pool_set -= set(confirmed_remove)
+        dns_state[rtype] = sorted(pool_set)
+        diff_lines = [f"- {rtype} {v}" for v in confirmed_remove]
+        diff_lines.extend(f"+ {rtype} {v}" for v in confirmed_add)
+        changes.append(_dns_change(hostname, site_label, rtype, diff_lines, "changed"))
+        log(f"  DNS {rtype} changed for {hostname}: {' '.join(diff_lines)}", "CHECK")
+
+    pending_add = {k: v for k, v in pending_add.items() if v}
+    pending_remove = {k: v for k, v in pending_remove.items() if v}
+    if pending_add:
+        dns_state["_pending_add"] = pending_add
+    else:
+        dns_state.pop("_pending_add", None)
+    if pending_remove:
+        dns_state["_pending_remove"] = pending_remove
+    else:
+        dns_state.pop("_pending_remove", None)
 
     return changes
 
@@ -179,7 +245,7 @@ def _resolve_dns(hostname: str) -> dict:
             results[rtype] = sorted(values)
         except Exception as e:
             log(f"  DNS resolve {hostname} {rtype}: {e}", "DEEP")
-            results[rtype] = []
+            results[rtype] = None
         time.sleep(0.1)
     return results
 
