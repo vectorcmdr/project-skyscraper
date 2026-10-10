@@ -12,7 +12,7 @@ import urllib.parse
 # Bump this whenever _PAGE_NOISE_PATTERNS / _DIFF_NOISE_LINE_PATTERNS change
 # in a way that invalidates previously-stored content hashes. The daemon then
 # performs one quiet re-baseline cycle instead of emitting spurious diffs.
-PATTERN_VERSION = 15  # v15: strip wp-fonts-local @font-face block (render-variant font CSS churn)
+PATTERN_VERSION = 16  # v16: strip WP.com/Jetpack platform wave (dns-prefetch hints, combined CSS bundle, jetpack-comments noscript)
 
 _PAGE_NOISE_PATTERNS = [
     (re.compile(r'<!--[^>]*?(?:generated|batcached|expires).*?-->', re.DOTALL), ''),
@@ -136,6 +136,16 @@ _PAGE_NOISE_PATTERNS = [
     # Jetpack block asset preloads (swiper.js etc.) injected into rendered
     # pages by plugin updates -- infrastructure, never content.
     (re.compile(r'<link\b[^>]*href=["\']?[^"\'>]*/jetpack/_inc/blocks/[^"\'>]*["\']?[^>]*/?>', re.IGNORECASE), ''),
+    # WordPress.com/Jetpack platform template wave (2026-10): the platform
+    # dropped two dns-prefetch hints, merged the perenne theme CSS into a
+    # combined /_static/?? bundle together with the jetpack-comments CSS,
+    # and injected a noscript lazy-comments style. All four are platform
+    # infrastructure, never authored content -- normalize them away so a
+    # WP.com release does not flag every comment-enabled page.
+    (re.compile(r"<link\b[^>]*rel=['\"]dns-prefetch['\"][^>]*>\s*", re.IGNORECASE), ''),
+    (re.compile(r"<noscript>\s*<style>\s*\.jetpack-comments\s*\{\s*visibility\s*:\s*visible\s*!important\s*\}\s*</style>\s*</noscript>\s*", re.IGNORECASE), ''),
+    (re.compile(r"(<link\b[^>]*\bhref=['\"])(?:https?://project-skyscraper\.com)?/_static/\?\?[^'\"]*(['\"])", re.IGNORECASE), r"\1_static/??-CACHEKEY\2"),
+    (re.compile(r"(<link\b[^>]*\bhref=['\"])(?:https?://project-skyscraper\.com)?/wp-content/themes/perenne/style\.css[^'\"]*(['\"])", re.IGNORECASE), r"\1_static/??-CACHEKEY\2"),
 ]
 
 _DIFF_NOISE_LINE_PATTERNS = [
