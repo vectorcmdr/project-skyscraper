@@ -28109,7 +28109,7 @@
     "/wp-json/wp/v2/widgets": {}
   },
   "external": {
-    "_wp_pages_last_check": "2026-10-11T22:34:54.736466+00:00",
+    "_wp_pages_last_check": "2026-10-11T22:48:19.688122+00:00",
     "freeimage.host": {
       "dns": {
         "A": [
@@ -28147,10 +28147,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-10-11T22:34:55.478198+00:00",
+        "last_checked": "2026-10-11T22:48:20.561655+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-10-11T22:34:55.478214+00:00",
+      "last_checked": "2026-10-11T22:48:20.561673+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33083,7 +33083,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-10-11T22:34:55.315872+00:00"
+          "last_checked": "2026-10-11T22:48:20.235118+00:00"
         },
         "/wp-json/wp/v2/media": {
           "etag": null,
@@ -33777,14 +33777,14 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-10-11T22:35:23.837297+00:00",
+      "last_checked": "2026-10-11T22:48:32.663720+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
         "2f2012534c8a20744706b2ae0a511759b6c393e0f88b03363dcbe0a066d9977e": "2026-09-30T17:41:18.557971+00:00"
       },
       "pages": {
-        "_rr_offset": 7,
+        "_rr_offset": 3,
         "https://recalldreams.dev/": {
           "_content_hash": "6f8d4dd2559eaf1ec2712f15b680204f420567ddb92b5fef3ce895d54db7bdca",
           "_notified_at": "2026-08-19T22:31:40.510069+00:00",
@@ -33859,9 +33859,9 @@
           ],
           "_stripped_hash": "04a92c637d314fa08b5aafaee7db1e69713c3cc19314b146fa469d6c0e242cd4",
           "etag": null,
-          "hash": "9af60fc25f782037d2c23c492d216540",
-          "last_checked": "2026-10-11T22:20:07.078656+00:00",
-          "last_modified": "Sun, 11 Oct 2026 19:45:34 GMT"
+          "hash": "631c454fa7405b20f37c433c0c866148",
+          "last_checked": "2026-10-11T22:48:19.688095+00:00",
+          "last_modified": null
         },
         "https://recalldreams.dev/home/": {
           "_content_hash": "c6f6482bcdf4ecbf557d272f695a6fc9d3c883f7ab46f125bd7e2593c61cf142",
@@ -34167,13 +34167,13 @@
           "_stripped_hash": "5c89772a8013f04fa99449a68569e427b4df69c5b808b561da788a15334d1501",
           "etag": null,
           "hash": "97363149806cb8eebf3c4b44d3e84723",
-          "last_checked": "2026-10-11T22:20:07.008304+00:00",
+          "last_checked": "2026-10-11T22:48:19.468864+00:00",
           "last_modified": null
         }
       },
       "probe": {
-        "last_probed": "2026-10-11T22:35:23.837073+00:00",
-        "position": 523,
+        "last_probed": "2026-10-11T22:48:32.663485+00:00",
+        "position": 553,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34565,7 +34565,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-10-11T22:35:18.541905+00:00",
+      "last_checked": "2026-10-11T22:48:27.867191+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38049,7 +38049,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "fe62a844b7016e708a42004a13ae60ba",
-      "last_checked": "2026-10-11T22:35:13.016966+00:00",
+      "last_checked": "2026-10-11T22:48:19.389055+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38078,8 +38078,8 @@
     },
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
-      "hash": "0531bb609b4c1695a9b9e2fcd1cc3b42",
-      "last_checked": "2026-10-11T22:35:12.904794+00:00",
+      "hash": "20871559fcab0c2063266a8210f1d70e",
+      "last_checked": "2026-10-11T22:48:18.923295+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -39014,8 +39014,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-10-11T22:35:17.297122+00:00",
-    "position": 8016,
+    "last_probed": "2026-10-11T22:48:27.078147+00:00",
+    "position": 8046,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39065,11 +39065,11 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 430,
+    "_page_check_offset": 445,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-10-11T22:34:53.001874+00:00",
+    "last_checked": "2026-10-11T22:48:18.222085+00:00",
     "last_modified": null,
     "urls": {
       "https://project-skyscraper.com/": {
@@ -41827,12 +41827,12 @@
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
     "_youtube_counts_last": 1791758095.7552671,
-    "_youtube_playlist_last": 1791758095.5637238,
-    "_youtube_rss_last": 1791758095.483041,
+    "_youtube_playlist_last": 1791758900.911762,
+    "_youtube_rss_last": 1791758900.5654953,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-10-11T22:34:52.515798+00:00",
+    "last_run": "2026-10-11T22:48:17.914635+00:00",
     "total_changes_detected": 80371,
-    "total_checks": 469433
+    "total_checks": 469434
   },
   "version": 3,
   "youtube": {
@@ -41842,14 +41842,14 @@
         "last_updated": "2026-10-11T22:34:56.015588+00:00",
         "public_count": 111
       },
-      "last_checked": "2026-10-11T22:34:56.015604+00:00",
+      "last_checked": "2026-10-11T22:48:21.057418+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-10-11T22:34:55.755250+00:00",
+        "last_updated": "2026-10-11T22:48:21.057397+00:00",
         "total_count": 112
       },
       "rss": {
-        "last_updated": "2026-10-11T22:34:55.563713+00:00",
+        "last_updated": "2026-10-11T22:48:20.911749+00:00",
         "left_public": {
           "75bfyy-XkQg": {
             "left_at": "2026-09-09T15:14:00.684583+00:00",
