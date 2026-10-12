@@ -1,6 +1,46 @@
 {
   "entries": [
     {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-10-12T14:28:07.483571+00:00",
+      "title": "YouTube public video count: 111 -> 112",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- public: 111\n+ public: 112",
+      "detail": "YouTube public video count: 111 -> 112",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_count_changed",
+      "timestamp": "2026-10-12T14:28:07.483562+00:00",
+      "title": "YouTube upload total: 112 -> 113",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 112\n+ total: 113",
+      "detail": "YouTube upload total: 112 -> 113",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_video_public",
+      "timestamp": "2026-10-12T14:28:07.483527+00:00",
+      "title": "New public upload: No Man's Sky iOS Deep Dive",
+      "link": "https://www.youtube.com/watch?v=4IZ-uYvtH58",
+      "endpoint": "",
+      "diff": "+ No Man's Sky iOS Deep Dive (published 2026-10-12)",
+      "detail": "New public upload: No Man's Sky iOS Deep Dive",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": "",
+      "image": "https://i1.ytimg.com/vi/4IZ-uYvtH58/hqdefault.jpg"
+    },
+    {
       "type": "sitemap_added",
       "timestamp": "2026-10-02T12:27:37.021725+00:00",
       "title": "https://project-skyscraper.com/2026/09/25/event-25092026-2/",
@@ -24854,5 +24894,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-10-06T04:23:03.975269+00:00"
+  "updated": "2026-10-12T14:28:07.486569+00:00"
 }
