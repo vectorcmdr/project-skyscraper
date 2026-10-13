@@ -71,11 +71,19 @@ def check_external_sites(state: dict) -> list:
         if hostname == "freeimage.host":
             continue  # checked on the fast tier via check_freeimage()
 
-        try:
-            c = _check_site_dns(hostname, site_state, site_label)
-            changes.extend(c)
-        except Exception as e:
-            log(f"  External DNS check failed for {hostname}: {e}", "ERROR")
+        # TEMP (2026-10): wakingtitan.com DNS checks paused -- Cloudflare
+        # anycast rotation kept defeating the pool/two-strike noise logic
+        # and fired false "DNS changed" alerts. Content, robots.txt and
+        # sitemap checks remain active. Re-enable by removing the
+        # "dns_enabled": False flag in EXTERNAL_SITES (config.py).
+        if not info.get("dns_enabled", True):
+            log(f"  External DNS checks paused for {hostname}", "CHECK")
+        else:
+            try:
+                c = _check_site_dns(hostname, site_state, site_label)
+                changes.extend(c)
+            except Exception as e:
+                log(f"  External DNS check failed for {hostname}: {e}", "ERROR")
 
         try:
             c = _check_site_robots_txt(info["url"], hostname, site_state, site_label)

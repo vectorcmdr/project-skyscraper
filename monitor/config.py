@@ -158,6 +158,10 @@ EXTERNAL_SITES = {
         "url": "https://wakingtitan.com",
         "type": "generic",
         "label": "WAKING TITAN",
+        # TEMP: DNS checks paused -- Cloudflare anycast rotation produced
+        # recurring false "DNS changed" alerts (2026-10). Remove this line
+        # to re-enable; see monitor/external_checker.py.
+        "dns_enabled": False,
     },
     "recalldreams.dev": {
         "url": "https://recalldreams.dev",
