@@ -70,6 +70,13 @@ POLL_INTERVALS = {
 
 SITEMAP_URL = f"{BASE_URL}/sitemap.xml"
 
+# TEMP: sitemap add/remove notifications paused -- edge-cache variant
+# bounce around publishes produced +1/-1/+1 notification bursts (2026-10).
+# The sitemap is still fetched/stored (page-check rotation, manifest and
+# graph depend on it); only the change notifications are suppressed.
+# Set True to re-enable.
+SITEMAP_NOTIFY_ENABLED = False
+
 COLLECTION_ENDPOINTS = [
     "/wp-json/wp/v2/posts",
     "/wp-json/wp/v2/pages",

@@ -2,7 +2,7 @@
 
 from datetime import datetime, timezone
 
-from monitor.config import SITEMAP_URL
+from monitor.config import SITEMAP_URL, SITEMAP_NOTIFY_ENABLED
 from monitor.http_client import fetch
 from monitor.logger import log
 
@@ -68,12 +68,13 @@ def check_sitemap(state: dict) -> list:
         pending = sm.get("_pending_removed")
         if pending == sorted(removed):
             log(f"Sitemap: mass removal confirmed ({len(removed)} URL(s))", "WARN")
-            changes.append({
-                "type": "sitemap_removed",
-                "count": len(removed),
-                "urls": sorted(removed)[:50],
-                "detail": f"Removed {len(removed)} URL(s) from sitemap",
-            })
+            if SITEMAP_NOTIFY_ENABLED:
+                changes.append({
+                    "type": "sitemap_removed",
+                    "count": len(removed),
+                    "urls": sorted(removed)[:50],
+                    "detail": f"Removed {len(removed)} URL(s) from sitemap",
+                })
             sm["etag"] = result.etag
             sm["last_modified"] = result.last_modified
             sm["last_checked"] = datetime.now(timezone.utc).isoformat()
@@ -87,25 +88,28 @@ def check_sitemap(state: dict) -> list:
 
     sm["_pending_removed"] = None
 
-    if added:
-        changes.append({
-            "type": "sitemap_added",
-            "count": len(added),
-            "urls": sorted(added)[:50],
-            "detail": f"Added {len(added)} URL(s) to sitemap",
-        })
-    if removed:
-        changes.append({
-            "type": "sitemap_removed",
-            "count": len(removed),
-            "urls": sorted(removed)[:50],
-            "detail": f"Removed {len(removed)} URL(s) from sitemap",
-        })
+    if SITEMAP_NOTIFY_ENABLED:
+        if added:
+            changes.append({
+                "type": "sitemap_added",
+                "count": len(added),
+                "urls": sorted(added)[:50],
+                "detail": f"Added {len(added)} URL(s) to sitemap",
+            })
+        if removed:
+            changes.append({
+                "type": "sitemap_removed",
+                "count": len(removed),
+                "urls": sorted(removed)[:50],
+                "detail": f"Removed {len(removed)} URL(s) from sitemap",
+            })
 
     if not added and not removed:
         log("Sitemap: content refreshed but no URL changes", "FAST")
-    else:
+    elif SITEMAP_NOTIFY_ENABLED:
         log(f"Sitemap: +{len(added)} -{len(removed)}", "FAST")
+    else:
+        log(f"Sitemap: +{len(added)} -{len(removed)} (notifications paused; baseline updated)", "FAST")
 
     sm["etag"] = result.etag
     sm["last_modified"] = result.last_modified
