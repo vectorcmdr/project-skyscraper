@@ -1,6 +1,32 @@
 {
   "entries": [
     {
+      "type": "api_items_added",
+      "timestamp": "2026-10-14T08:30:44.664131+00:00",
+      "title": "",
+      "link": "",
+      "endpoint": "/wp-json/wp/v2/search",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/search",
+      "author": 0,
+      "site": "",
+      "id": 7789,
+      "game_date": ""
+    },
+    {
+      "type": "api_items_added",
+      "timestamp": "2026-10-14T08:10:23+00:00",
+      "title": "2026_dataset",
+      "link": "https://project-skyscraper.com/2026/10/05/event-05102026/",
+      "endpoint": "/wp-json/wp/v2/posts",
+      "diff": "",
+      "detail": "1 new item(s) in /wp-json/wp/v2/posts",
+      "author": "System",
+      "site": "",
+      "id": 7789,
+      "game_date": "2026-10-05T14:00:00+00:00"
+    },
+    {
       "type": "external_youtube_count_changed",
       "timestamp": "2026-10-12T14:28:07.483571+00:00",
       "title": "YouTube public video count: 111 -> 112",
@@ -24894,5 +24920,5 @@
       "game_date": ""
     }
   ],
-  "updated": "2026-10-12T14:28:07.486569+00:00"
+  "updated": "2026-10-14T08:30:44.667867+00:00"
 }
