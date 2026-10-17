@@ -29,7 +29,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-10-17T05:32:13.751830+00:00",
+      "last_checked": "2026-10-17T05:45:42.816799+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -4559,7 +4559,7 @@
           "type": "comment"
         }
       ],
-      "last_checked": "2026-10-17T05:18:07.667945+00:00",
+      "last_checked": "2026-10-17T05:45:44.929889+00:00",
       "last_modified": null,
       "total_pages": 3
     },
@@ -7642,7 +7642,7 @@
           "type": "attachment"
         }
       ],
-      "last_checked": "2026-10-17T05:18:09.936213+00:00",
+      "last_checked": "2026-10-17T05:45:47.312174+00:00",
       "last_modified": null,
       "total_pages": 2
     },
@@ -7696,7 +7696,7 @@
           "type": "wp_navigation"
         }
       ],
-      "last_checked": "2026-10-17T05:18:06.511681+00:00",
+      "last_checked": "2026-10-17T05:45:43.806393+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -7715,7 +7715,7 @@
       ],
       "_pending_removed": [],
       "etag": null,
-      "hash": "062fee0f22966a40295d57bc585ba2e8",
+      "hash": "96580cd103034154755fcb10f19ce21b",
       "items": [
         {
           "author": 279180096,
@@ -8186,7 +8186,7 @@
         {
           "author": 279180095,
           "categories": [],
-          "content_hash": "fd97e25e98e28df7bea1253a075c15fd",
+          "content_hash": "6d50983cded76cc7f92103ef90f67e8d",
           "date_gmt": "2026-08-21T08:55:48",
           "id": 7454,
           "link": "https://project-skyscraper.com/",
@@ -8202,7 +8202,7 @@
           "type": "page"
         }
       ],
-      "last_checked": "2026-10-17T05:18:08.848577+00:00",
+      "last_checked": "2026-10-17T05:45:46.630678+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -18763,7 +18763,7 @@
           "type": "post"
         }
       ],
-      "last_checked": "2026-10-17T05:18:18.309138+00:00",
+      "last_checked": "2026-10-17T05:45:58.002796+00:00",
       "last_modified": null,
       "total_pages": 6
     },
@@ -27927,7 +27927,7 @@
           "type": "post"
         }
       ],
-      "last_checked": "2026-10-17T05:18:13.173399+00:00",
+      "last_checked": "2026-10-17T05:45:50.108589+00:00",
       "last_modified": null,
       "total_pages": 6
     },
@@ -28089,7 +28089,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-10-17T05:32:13.721601+00:00",
+      "last_checked": "2026-10-17T05:45:42.749428+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -28141,14 +28141,14 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-10-17T05:32:13.838073+00:00",
+      "last_checked": "2026-10-17T05:45:42.775987+00:00",
       "last_modified": null,
       "total_pages": 1
     },
     "/wp-json/wp/v2/widgets": {}
   },
   "external": {
-    "_wp_pages_last_check": "2026-10-17T05:32:10.823589+00:00",
+    "_wp_pages_last_check": "2026-10-17T05:45:40.392373+00:00",
     "freeimage.host": {
       "dns": {
         "A": [
@@ -28186,10 +28186,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-10-17T05:32:11.813769+00:00",
+        "last_checked": "2026-10-17T05:45:41.313526+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-10-17T05:32:11.813787+00:00",
+      "last_checked": "2026-10-17T05:45:41.313544+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33122,7 +33122,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-10-17T05:32:11.478934+00:00"
+          "last_checked": "2026-10-17T05:45:41.052828+00:00"
         },
         "/wp-json/wp/v2/media": {
           "etag": null,
@@ -33816,14 +33816,14 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-10-17T05:32:26.556187+00:00",
+      "last_checked": "2026-10-17T05:46:08.682019+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
         "2f2012534c8a20744706b2ae0a511759b6c393e0f88b03363dcbe0a066d9977e": "2026-09-30T17:41:18.557971+00:00"
       },
       "pages": {
-        "_rr_offset": 5,
+        "_rr_offset": 1,
         "https://recalldreams.dev/": {
           "_content_hash": "6f8d4dd2559eaf1ec2712f15b680204f420567ddb92b5fef3ce895d54db7bdca",
           "_notified_at": "2026-08-19T22:31:40.510069+00:00",
@@ -33857,9 +33857,9 @@
           ],
           "_stripped_hash": "64d5e69f415b8e3b422020ca0799a9dbabb22c8a0c73f1e95c38bc4a27d65b00",
           "etag": null,
-          "hash": "ba0a890d7a60f7ed35207424d83fa3c6",
-          "last_checked": "2026-10-17T05:18:02.836465+00:00",
-          "last_modified": "Fri, 16 Oct 2026 21:41:09 GMT"
+          "hash": "8c2edf87f3ccc3fc4a537e8921f48357",
+          "last_checked": "2026-10-17T05:45:40.156628+00:00",
+          "last_modified": "Sat, 17 Oct 2026 04:34:28 GMT"
         },
         "https://recalldreams.dev/do-you-know-me-well/": {
           "_content_hash": "cdc8d2a46f80623d840c725b7468bfc6ce4f2bc11e63ca1a9a7007cf8a6e92bf",
@@ -33898,9 +33898,9 @@
           ],
           "_stripped_hash": "04a92c637d314fa08b5aafaee7db1e69713c3cc19314b146fa469d6c0e242cd4",
           "etag": null,
-          "hash": "03e5b8a541d5b7fa92ba96e242bcd9c1",
-          "last_checked": "2026-10-17T05:18:03.002582+00:00",
-          "last_modified": "Sat, 17 Oct 2026 04:47:45 GMT"
+          "hash": "b8081938a73f8388f014dc1cc71145bc",
+          "last_checked": "2026-10-17T05:45:40.392358+00:00",
+          "last_modified": "Fri, 16 Oct 2026 22:41:36 GMT"
         },
         "https://recalldreams.dev/home/": {
           "_content_hash": "c6f6482bcdf4ecbf557d272f695a6fc9d3c883f7ab46f125bd7e2593c61cf142",
@@ -34075,8 +34075,8 @@
           ],
           "_stripped_hash": "a2d62875fb3fbbd28e64b17fe0a3399a02575928c58b6c327514b5f0f9c0a239",
           "etag": null,
-          "hash": "f593243f2ea441758ca5af3e34f2a493",
-          "last_checked": "2026-10-17T05:18:02.698676+00:00",
+          "hash": "c26e9d6dd8975c1e862f2ea4ded8534e",
+          "last_checked": "2026-10-17T05:45:40.066243+00:00",
           "last_modified": null
         },
         "https://recalldreams.dev/home/newsletter/": {
@@ -34205,14 +34205,14 @@
           ],
           "_stripped_hash": "5c89772a8013f04fa99449a68569e427b4df69c5b808b561da788a15334d1501",
           "etag": null,
-          "hash": "25989e391a2d3fe9d240c715c2e6485d",
-          "last_checked": "2026-10-17T05:18:02.874861+00:00",
+          "hash": "0c6fad366b1314781a7503f701478496",
+          "last_checked": "2026-10-17T05:45:40.261128+00:00",
           "last_modified": null
         }
       },
       "probe": {
-        "last_probed": "2026-10-17T05:32:26.555961+00:00",
-        "position": 523,
+        "last_probed": "2026-10-17T05:46:08.681744+00:00",
+        "position": 553,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34602,7 +34602,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-10-17T05:32:21.834803+00:00",
+      "last_checked": "2026-10-17T05:46:03.632412+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38092,7 +38092,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "8d86f0f3306c852c91a94ef9b9311ae5",
-      "last_checked": "2026-10-17T05:32:10.295933+00:00",
+      "last_checked": "2026-10-17T05:45:58.571155+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38122,7 +38122,7 @@
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
       "hash": "49b6c901589d5a896650292bc09adbba",
-      "last_checked": "2026-10-17T05:32:09.653035+00:00",
+      "last_checked": "2026-10-17T05:45:58.557802+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -38145,8 +38145,8 @@
     },
     "https://project-skyscraper.com/no-mans-sky_20260802153509/": {
       "etag": null,
-      "hash": "451226c75d186c7707fe826c0f95b870",
-      "last_checked": "2026-10-16T16:48:59.971462+00:00",
+      "hash": "3adbade2fb19881498b43810616993be",
+      "last_checked": "2026-10-17T05:45:58.813888+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260802220505/": {
@@ -38409,14 +38409,14 @@
     },
     "https://project-skyscraper.com/window-1123/": {
       "etag": null,
-      "hash": "5e42d6e33b3af0f680ea1b03f88c5945",
-      "last_checked": "2026-10-16T16:48:59.826550+00:00",
+      "hash": "1554ae5623ea7e772a552776de96e4e5",
+      "last_checked": "2026-10-17T05:45:58.465671+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-11717/": {
       "etag": null,
-      "hash": "de547927a1053fa02176bc8a93d7c8d9",
-      "last_checked": "2026-10-16T16:58:08.243573+00:00",
+      "hash": "bdc000512d98bf03fe8b2185d32faeaf",
+      "last_checked": "2026-10-17T05:45:58.930305+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-1213/": {
@@ -38541,8 +38541,8 @@
     },
     "https://project-skyscraper.com/window-199/": {
       "etag": null,
-      "hash": "d3961a1d7a800ad54a6aa43d52df3746",
-      "last_checked": "2026-10-16T16:48:59.993706+00:00",
+      "hash": "dd678b5ae706a8608e0552c0eb604dee",
+      "last_checked": "2026-10-17T05:45:58.814163+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-1993/": {
@@ -38571,8 +38571,8 @@
     },
     "https://project-skyscraper.com/window-2011/": {
       "etag": null,
-      "hash": "f60a645523b5fd1657160d90d79351a2",
-      "last_checked": "2026-10-16T16:48:59.826211+00:00",
+      "hash": "d4ce93629c7bc028bfeb13e9c7926748",
+      "last_checked": "2026-10-17T05:45:58.557342+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-2017/": {
@@ -38601,8 +38601,8 @@
     },
     "https://project-skyscraper.com/window-23/": {
       "etag": null,
-      "hash": "f81d585370fe919b2f8fce8b50f9b3cf",
-      "last_checked": "2026-10-16T16:48:59.656197+00:00",
+      "hash": "bc6e3ff51a5ff2d5f5600adba7cfa014",
+      "last_checked": "2026-10-17T05:45:58.184202+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-2311/": {
@@ -38637,15 +38637,15 @@
     },
     "https://project-skyscraper.com/window-2609/": {
       "etag": null,
-      "hash": "6b2aa7982beeb0c7b8adefc62a459b05",
-      "last_checked": "2026-10-16T16:48:59.598233+00:00",
-      "last_modified": "Sun, 11 Oct 2026 13:56:40 GMT"
+      "hash": "5373dfbecee6a21201c87516e74615b2",
+      "last_checked": "2026-10-17T05:45:58.095755+00:00",
+      "last_modified": null
     },
     "https://project-skyscraper.com/window-2789/": {
       "etag": null,
-      "hash": "b9e2703d2bce11647d1f6a0d6f9e1b44",
-      "last_checked": "2026-10-16T16:48:59.782322+00:00",
-      "last_modified": "Sun, 11 Oct 2026 13:56:40 GMT"
+      "hash": "e54aa498c9f3d7aadda4fba1a3a5e780",
+      "last_checked": "2026-10-17T05:45:58.378682+00:00",
+      "last_modified": null
     },
     "https://project-skyscraper.com/window-29/": {
       "etag": null,
@@ -38685,8 +38685,8 @@
     },
     "https://project-skyscraper.com/window-3347/": {
       "etag": null,
-      "hash": "a0ddf1ff243bad538da7f245b63c4382",
-      "last_checked": "2026-10-16T16:48:59.913991+00:00",
+      "hash": "7b6d418a49ba2d2e327ce5d6f3afd6c7",
+      "last_checked": "2026-10-17T05:45:58.666920+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-3643/": {
@@ -38811,8 +38811,8 @@
     },
     "https://project-skyscraper.com/window-5527/": {
       "etag": null,
-      "hash": "8b501342841a8b47a2ef3248c7b4f026",
-      "last_checked": "2026-10-16T16:48:59.863581+00:00",
+      "hash": "38bb54cbbd5457572b48a018f985b6bd",
+      "last_checked": "2026-10-17T05:45:58.689153+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-569/": {
@@ -38829,8 +38829,8 @@
     },
     "https://project-skyscraper.com/window-5987/": {
       "etag": null,
-      "hash": "df5b6c497b2bca303b49dd7c79388200",
-      "last_checked": "2026-10-16T16:48:59.947915+00:00",
+      "hash": "c3638f7885aa4bdd237fb776e6e106c5",
+      "last_checked": "2026-10-17T05:45:58.787651+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-607/": {
@@ -38841,8 +38841,8 @@
     },
     "https://project-skyscraper.com/window-6073/": {
       "etag": null,
-      "hash": "8f1555d01865d06c6f6cde394864949d",
-      "last_checked": "2026-10-16T16:48:59.891708+00:00",
+      "hash": "eb7e0ff6e2c23dfd2fe187686bab962d",
+      "last_checked": "2026-10-17T05:45:58.689420+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-6101/": {
@@ -38907,8 +38907,8 @@
     },
     "https://project-skyscraper.com/window-71/": {
       "etag": null,
-      "hash": "ff4b6bf6d6fd610a7a17c20caecdcdde",
-      "last_checked": "2026-10-16T16:48:59.714623+00:00",
+      "hash": "dc05b3983f918f6d6772fdee2cd3ac1f",
+      "last_checked": "2026-10-17T05:45:58.272656+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-7129/": {
@@ -38997,8 +38997,8 @@
     },
     "https://project-skyscraper.com/window-9001/": {
       "etag": null,
-      "hash": "4fc751b45c741644fdfb10e18512890c",
-      "last_checked": "2026-10-16T16:49:00.036511+00:00",
+      "hash": "ef77f23f89063f1f01faa7925f9c2890",
+      "last_checked": "2026-10-17T05:45:58.962975+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-9091/": {
@@ -39045,8 +39045,8 @@
     },
     "https://project-skyscraper.com/window-9551/": {
       "etag": null,
-      "hash": "7faefafe54101f6a5801c1e1402dc6bf",
-      "last_checked": "2026-10-16T16:58:08.218889+00:00",
+      "hash": "66c83e985d1db948c4a2ba8d53b8e5f8",
+      "last_checked": "2026-10-17T05:45:58.962512+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/window-971/": {
@@ -39057,8 +39057,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-10-17T05:32:21.834321+00:00",
-    "position": 8000,
+    "last_probed": "2026-10-17T05:46:03.631730+00:00",
+    "position": 8030,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39108,11 +39108,11 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 630,
+    "_page_check_offset": 645,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-10-17T05:32:09.182470+00:00",
+    "last_checked": "2026-10-17T05:45:38.922492+00:00",
     "last_modified": null,
     "urls": {
       "https://project-skyscraper.com/": {
@@ -41874,12 +41874,12 @@
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
     "_youtube_counts_last": 1792215132.2520916,
-    "_youtube_playlist_last": 1792215132.098615,
-    "_youtube_rss_last": 1792215131.8191102,
+    "_youtube_playlist_last": 1792215941.6699579,
+    "_youtube_rss_last": 1792215941.3181653,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-10-17T05:32:08.905547+00:00",
-    "total_changes_detected": 80700,
-    "total_checks": 469813
+    "last_run": "2026-10-17T05:45:38.564321+00:00",
+    "total_changes_detected": 80701,
+    "total_checks": 469814
   },
   "version": 3,
   "youtube": {
@@ -41889,10 +41889,10 @@
         "last_updated": "2026-10-17T05:32:12.489392+00:00",
         "public_count": 112
       },
-      "last_checked": "2026-10-17T05:32:12.489414+00:00",
+      "last_checked": "2026-10-17T05:45:41.780237+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-10-17T05:32:12.252070+00:00",
+        "last_updated": "2026-10-17T05:45:41.780217+00:00",
         "total_count": 113
       },
       "rss": {
