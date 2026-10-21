@@ -454,11 +454,14 @@ def _diff_text(old_text: str, new_text: str) -> str:
 def _check_wp_site(site_url: str, hostname: str, site_state: dict, site_label: str = "") -> list:
     changes = []
 
+    # database_entry is owned by the fast-tier checker
+    # (check_external_db_entries). Do not check it here too: a second fetch of
+    # the same collection in the same cycle can see a different cache
+    # generation and emit remove+add pairs for unchanged entries.
     wp_endpoints = [
         f"/wp-json/wp/v2/posts",
         f"/wp-json/wp/v2/pages",
         f"/wp-json/wp/v2/media",
-        f"/wp-json/wp/v2/database_entry",
     ]
 
     for endpoint in wp_endpoints:
@@ -562,8 +565,19 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
                 _mark_sig_notified(site_state, item.get("content_hash", ""))
 
     removed_ids = known_ids - new_ids
-    if removed_ids:
-        for iid in sorted(removed_ids):
+
+    # --- Removal confirmation (two-strike) ---
+    # WP.com can omit items from a collection for a single cycle even when a
+    # snapshot passes the consistency check (index/cache rebuilds). A removal
+    # is only reported when the same ids are missing on TWO CONSECUTIVE
+    # checks. Pending items stay in the known list, so their return produces
+    # no add/remove notification pair.
+    pending_removed = set(api_state.get("_pending_removed", []) or [])
+    confirmed_removed = removed_ids & pending_removed
+    kept_ids = removed_ids - confirmed_removed
+
+    if confirmed_removed:
+        for iid in sorted(confirmed_removed):
             known_item = known_items[iid]
             if is_db_entry:
                 changes.append({
@@ -588,6 +602,14 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
                     "diff": f"- #{known_item.get('id','?')}: {known_item.get('title','')[:80]}",
                     "items": [known_item],
                 })
+
+    if kept_ids:
+        api_state["_pending_removed"] = sorted(kept_ids, key=int)
+        log(f"  {endpoint} on {hostname}: {len(kept_ids)} removal candidate(s) pending confirmation", "CHECK")
+    else:
+        if pending_removed and not confirmed_removed:
+            log(f"  {endpoint} on {hostname}: transient absence resolved (no notification)", "CHECK")
+        api_state["_pending_removed"] = []
 
     changed_items = []
     for iid in new_ids & known_ids:
@@ -631,7 +653,11 @@ def _check_wp_collection(api_url: str, endpoint: str, hostname: str,
 
     api_state["etag"] = new_etag
     api_state["hash"] = new_hash
-    api_state["items"] = [new_items_map[iid] for iid in sorted(new_items_map, key=int)]
+    merged_items = [new_items_map[iid] for iid in sorted(new_items_map, key=int)]
+    merged_items += [known_items[iid] for iid in sorted(kept_ids, key=int)
+                     if iid in known_items]
+    merged_items.sort(key=lambda it: int(it["id"]))
+    api_state["items"] = merged_items
     api_state["last_checked"] = datetime.now(timezone.utc).isoformat()
 
     return changes

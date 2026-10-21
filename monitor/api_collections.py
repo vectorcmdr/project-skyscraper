@@ -210,33 +210,64 @@ def check_api_collection(endpoint: str, state: dict) -> list:
     return changes
 
 
-def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
+def _note_total(totals: set, headers: dict):
+    """Record the X-WP-Total reported by one page response."""
+    value = headers.get("X-WP-Total")
+    if value is None:
+        return
+    try:
+        totals.add(int(value))
+    except (TypeError, ValueError):
+        pass
+
+
+def _snapshot_consistent(items: list, totals: set) -> tuple:
+    """Return (ok, reason) for a fetched collection snapshot.
+
+    A coherent WP collection has one id per item, no duplicates (page
+    overlap), and an item count matching the X-WP-Total every page reports.
+    """
+    ids = [str(it.get("id")) for it in items
+           if isinstance(it, dict) and it.get("id") is not None]
+    if len(ids) != len(items):
+        return False, f"{len(items) - len(ids)} item(s) without id"
+    if len(set(ids)) != len(ids):
+        return False, f"{len(ids) - len(set(ids))} duplicate id(s)"
+    if len(totals) > 1:
+        return False, "page totals disagree (" + ", ".join(str(t) for t in sorted(totals)) + ")"
+    if totals:
+        total = next(iter(totals))
+        if len(items) != total:
+            return False, f"{len(items)} item(s) fetched vs X-WP-Total {total}"
+    return True, ""
+
+
+def _fetch_pages_once(base_url: str, per_page: int):
+    """Fetch every page of a collection once. Returns a tuple or None on failure."""
     all_items = []
-    page = 1
-    total_pages = 1
-    final_etag = None
-    final_last_modified = None
     all_raw = b""
+    totals = set()
 
     url = f"{base_url}?per_page={per_page}"
-    result = fetch(url)
+    result = fetch(url, bust_cache=True)
     if result.failed:
-        return [], "", 0, None, None
+        return None
     if result.content:
         all_raw = result.content
 
-    final_etag = result.etag
-    final_last_modified = result.last_modified
+    etag = result.etag
+    last_modified = result.last_modified
 
     try:
         items = json.loads(result.text)
     except json.JSONDecodeError:
-        return [], "", 0, None, None
+        return None
 
     if not isinstance(items, list):
-        return [], "", 0, None, None
+        return None
 
     all_items.extend(items)
+    _note_total(totals, result.headers)
 
     try:
         total_pages = int(result.headers.get("X-WP-TotalPages", 1))
@@ -246,33 +277,57 @@ def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
     for page in range(2, total_pages + 1):
         page_url = f"{base_url}?per_page={per_page}&page={page}"
         jitter(0.15, 0.1)
-        pr = fetch(page_url, timeout=30)
-        if pr.ok and pr.content:
-            all_raw += pr.content
-            try:
-                page_items = json.loads(pr.text)
-                if isinstance(page_items, list):
-                    all_items.extend(page_items)
-            except json.JSONDecodeError:
-                pass
-        else:
+        pr = fetch(page_url, timeout=30, bust_cache=True)
+        if not (pr.ok and pr.content):
             log(f"API page {page}/{total_pages} fetch failed ({pr.status}), retrying...", "WARN")
             jitter(1.0, 0.5)
-            pr = fetch(page_url, timeout=30)
-            if pr.ok and pr.content:
-                all_raw += pr.content
-                try:
-                    page_items = json.loads(pr.text)
-                    if isinstance(page_items, list):
-                        all_items.extend(page_items)
-                except json.JSONDecodeError:
-                    pass
-            else:
+            pr = fetch(page_url, timeout=30, bust_cache=True)
+            if not (pr.ok and pr.content):
                 log(f"API page {page}/{total_pages} fetch failed again ({pr.status}), returning empty to avoid false changes", "WARN")
-                return [], "", 0, None, None
+                return None
+        all_raw += pr.content
+        _note_total(totals, pr.headers)
+        try:
+            page_items = json.loads(pr.text)
+            if isinstance(page_items, list):
+                all_items.extend(page_items)
+        except json.JSONDecodeError:
+            pass
+
+    return all_items, total_pages, totals, etag, last_modified, all_raw
+
+
+def _fetch_all_pages(base_url: str, per_page: int = 100) -> tuple:
+    """Fetch a complete collection and reject torn (mixed-generation) snapshots.
+
+    WordPress.com's edge caches each page URL independently, so a single fetch
+    can mix pages from different cache generations. Offset pagination then
+    shifts between pages and whole runs of items fall through the gap, which
+    looks like removals (and additions on the following cycle). Pages are
+    requested with a cache-buster; a snapshot is accepted only when every page
+    reports the same X-WP-Total and the fetched item count matches it. On a
+    mismatch the whole collection is retried once; if it is still incoherent
+    the fetch returns empty so callers keep their baseline instead of diffing
+    a torn snapshot.
+    """
+    attempt = _fetch_pages_once(base_url, per_page)
+    if attempt is None:
+        return [], "", 0, None, None
+    items, total_pages, totals, etag, last_modified, all_raw = attempt
+    ok, reason = _snapshot_consistent(items, totals)
+    if not ok:
+        log(f"API collection {base_url}: torn snapshot ({reason}) -- retrying", "WARN")
+        attempt = _fetch_pages_once(base_url, per_page)
+        if attempt is None:
+            return [], "", 0, None, None
+        items, total_pages, totals, etag, last_modified, all_raw = attempt
+        ok, reason = _snapshot_consistent(items, totals)
+        if not ok:
+            log(f"API collection {base_url}: torn snapshot persists ({reason}) -- skipping, baseline preserved", "WARN")
+            return [], "", 0, None, None
 
     combined_hash = hashlib.md5(all_raw).hexdigest()
-    return all_items, combined_hash, total_pages, final_etag, final_last_modified
+    return items, combined_hash, total_pages, etag, last_modified
 
 
 def _item_summary(item: dict, endpoint: str = "") -> dict:
