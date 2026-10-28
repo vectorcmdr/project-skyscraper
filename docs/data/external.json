@@ -2,6 +2,33 @@
   "entries": [
     {
       "type": "external_youtube_count_changed",
+      "timestamp": "2026-10-28T14:16:55.433823+00:00",
+      "title": "YouTube upload total: 113 -> 114",
+      "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
+      "endpoint": "",
+      "diff": "- total: 113\n+ total: 114",
+      "detail": "YouTube upload total: 113 -> 114",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": ""
+    },
+    {
+      "type": "external_youtube_video_public",
+      "timestamp": "2026-10-28T14:16:55.433796+00:00",
+      "title": "New public upload: No Man's Sky Forsaken Trailer",
+      "link": "https://www.youtube.com/watch?v=Kv2FxK2msCc",
+      "endpoint": "",
+      "diff": "+ No Man's Sky Forsaken Trailer (published 2026-10-28)",
+      "detail": "New public upload: No Man's Sky Forsaken Trailer",
+      "author": 0,
+      "site": "HELLO GAMES YT",
+      "id": null,
+      "game_date": "",
+      "image": "https://i4.ytimg.com/vi/Kv2FxK2msCc/hqdefault.jpg"
+    },
+    {
+      "type": "external_youtube_count_changed",
       "timestamp": "2026-10-12T14:28:07.511171+00:00",
       "title": "YouTube public video count: 111 -> 112",
       "link": "https://www.youtube.com/channel/UCGKx5XhGuf09VERiw_QIemA",
@@ -1897,5 +1924,5 @@
       "site": "tower"
     }
   ],
-  "updated": "2026-10-12T14:28:07.511189+00:00"
+  "updated": "2026-10-28T14:16:55.433852+00:00"
 }
