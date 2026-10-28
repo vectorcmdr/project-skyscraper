@@ -28225,10 +28225,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-10-28T16:49:57.437883+00:00",
+        "last_checked": "2026-10-28T16:59:03.366435+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-10-28T16:49:57.437901+00:00",
+      "last_checked": "2026-10-28T16:59:03.366456+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33371,7 +33371,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-10-28T16:49:57.132240+00:00"
+          "last_checked": "2026-10-28T16:59:03.202603+00:00"
         },
         "/wp-json/wp/v2/media": {
           "_pending_removed": [],
@@ -34067,7 +34067,7 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-10-28T16:50:26.936689+00:00",
+      "last_checked": "2026-10-28T16:59:14.611820+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
@@ -34462,8 +34462,8 @@
         }
       },
       "probe": {
-        "last_probed": "2026-10-28T16:50:26.936448+00:00",
-        "position": 763,
+        "last_probed": "2026-10-28T16:59:14.611552+00:00",
+        "position": 793,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34853,7 +34853,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-10-28T16:50:21.939583+00:00",
+      "last_checked": "2026-10-28T16:59:09.603327+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38349,7 +38349,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "75ae9c9a7285abe8775ebf8dfa071e07",
-      "last_checked": "2026-10-28T16:50:16.048862+00:00",
+      "last_checked": "2026-10-28T16:58:59.056025+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38379,7 +38379,7 @@
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
       "hash": "87953084cddb9e1f2ad750bf44e4ab1d",
-      "last_checked": "2026-10-28T16:50:15.495240+00:00",
+      "last_checked": "2026-10-28T16:58:58.455150+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -39314,8 +39314,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-10-28T16:50:21.938914+00:00",
-    "position": 7921,
+    "last_probed": "2026-10-28T16:59:09.602909+00:00",
+    "position": 7951,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39365,12 +39365,12 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 250,
+    "_page_check_offset": 265,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-10-28T16:49:50.339140+00:00",
-    "last_modified": null,
+    "last_checked": "2026-10-28T16:58:58.052614+00:00",
+    "last_modified": "Wed, 28 Oct 2026 16:30:09 GMT",
     "urls": {
       "https://project-skyscraper.com/": {
         "lastmod": "2026-08-21T08:55:49Z",
@@ -42135,12 +42135,12 @@
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
     "_youtube_counts_last": 1793205015.6826499,
-    "_youtube_playlist_last": 1793206197.4934294,
-    "_youtube_rss_last": 1793206197.442734,
+    "_youtube_playlist_last": 1793206743.6304047,
+    "_youtube_rss_last": 1793206743.369973,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-10-28T16:49:50.108975+00:00",
+    "last_run": "2026-10-28T16:58:57.761977+00:00",
     "total_changes_detected": 81647,
-    "total_checks": 470751
+    "total_checks": 470752
   },
   "version": 3,
   "youtube": {
@@ -42150,14 +42150,14 @@
         "last_updated": "2026-10-28T16:30:15.882062+00:00",
         "public_count": 113
       },
-      "last_checked": "2026-10-28T16:49:57.641088+00:00",
+      "last_checked": "2026-10-28T16:59:03.832951+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-10-28T16:49:57.641066+00:00",
+        "last_updated": "2026-10-28T16:59:03.832926+00:00",
         "total_count": 114
       },
       "rss": {
-        "last_updated": "2026-10-28T16:49:57.493416+00:00",
+        "last_updated": "2026-10-28T16:59:03.630392+00:00",
         "left_public": {
           "2lG2DTjP-_M": {
             "left_at": "2026-10-12T14:26:13.620511+00:00",
