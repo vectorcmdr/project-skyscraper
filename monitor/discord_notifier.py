@@ -517,6 +517,13 @@ def _get_diff_preview(change: dict, item: dict = None) -> str:
                 line = line.rstrip("\r")
                 if not line or line[0] == "@":
                     continue
+                # Unified-diff context lines (space prefix) are unchanged
+                # neighbours of a hunk, never the edit itself. Including them
+                # made the CSS declarations around a stripped noise block look
+                # like the change (e.g. "align-items: baseline;") and let
+                # noise-only changes past the empty-preview guard.
+                if line[0] not in ("-", "+"):
+                    continue
                 if is_noise_diff_line(line):
                     continue
                 # Skip CSS noise in API diffs -- lines matching CSS rule patterns
