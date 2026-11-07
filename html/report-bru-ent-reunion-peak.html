@@ -36,10 +36,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .wp-block-spacer{clear:both}
 /*# sourceURL=https://project-skyscraper.com/wp-content/plugins/gutenberg/build/styles/block-library/spacer/style.min.css */
 </style>
-<style id="wp-block-button-inline-css">
-.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;overflow-wrap:anywhere;text-align:center;word-break:normal}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1% - var(--wp--style--block-gap, .5em)*(1 - var(--wp--block-button--width)/100))}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button[class*=wp-block-button__width]{width:calc(var(--wp--block-button--width)*1%)}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:transparent;background-image:none}
-/*# sourceURL=https://project-skyscraper.com/wp-content/plugins/gutenberg/build/styles/block-library/button/style.min.css */
-</style>
 <style id="wp-block-post-content-inline-css">
 .wp-block-post-content{display:flow-root}
 /*# sourceURL=https://project-skyscraper.com/wp-content/plugins/gutenberg/build/styles/block-library/post-content/style.min.css */
@@ -183,6 +179,10 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <meta property="article:published_time" content="2026-06-06T20:42:00+00:00" />
 <meta property="article:modified_time" content="2026-06-06T20:36:12+00:00" />
 <meta property="og:site_name" content="project-skyscraper" />
+<meta property="og:image" content="https://i0.wp.com/project-skyscraper.com/wp-content/uploads/2026/04/cropped-project-skyscraper.jpg?fit=512%2C512&#038;ssl=1" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+<meta property="og:image:alt" content="" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:text:title" content="Protected: Report: BRUSSELS" />
 <meta name="twitter:card" content="summary" />
@@ -228,10 +228,53 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 </div>
 
 
-<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained"><form action="https://project-skyscraper.com/wp-login.php?action=postpass" class="post-password-form" method="post"><input type="hidden" name="redirect_to" value="https://project-skyscraper.com/report-bru-ent-reunion-peak/" /></p>
-<p>This content is password-protected. To view it, please enter the password below.</p>
-<p><label for="pwbox-1270">Password: <input name="post_password" id="pwbox-1270" type="password" spellcheck="false" required size="20" /></label> <span class="wp-block-button"><input type="submit" name="Submit" class="wp-block-button__link wp-element-button" value="Enter" /></span></p>
-</form>
+<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+<div style="position: relative; width: 100%; max-width: 900px; margin: 40px auto; overflow: hidden; border-radius: 6px;">
+  <img data-recalc-dims="1" decoding="async" id="corruptedImg" src="https://i0.wp.com/iili.io/Cfv2n3b.jpg?ssl=1" style="width: 100%; height: auto; display: block;">
+</div>
+
+<script>
+// ==================== GLITCH N&B - Noir & Blanc ====================
+const img = document.getElementById('corruptedImg');
+
+function triggerGlitch() {
+  const duration = 120 + Math.random() * 160;
+
+  const xShift = (Math.random() - 0.5) * 10;
+  const yShift = (Math.random() - 0.5) * 7;
+
+  img.style.transition = 'none';
+  img.style.transform = `translate(${xShift}px, ${yShift}px)`;
+  
+  img.style.filter = `
+    contrast(1.45) 
+    brightness(1.22) 
+    saturate(0.08) 
+    grayscale(0.95)
+  `;
+
+  setTimeout(() => {
+    img.style.transition = 'all 0.22s ease-out';
+    img.style.transform = 'translate(0, 0)';
+    img.style.filter = 'none';
+  }, duration);
+}
+
+// Rythme ralenti
+setInterval(() => {
+  if (Math.random() < 0.38) {
+    triggerGlitch();
+  }
+}, 380);
+
+// Move
+setInterval(() => {
+  if (Math.random() < 0.20) {
+    triggerGlitch();
+    setTimeout(triggerGlitch, 180);
+  }
+}, 2600);
+</script>
 </div>
 
 
@@ -250,7 +293,7 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://project-skyscraper.com/wp-
 <meta id="bilmur" property="bilmur:data" content="" data-customproperties="{&quot;woo_active&quot;:&quot;0&quot;,&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;perenne&quot;,&quot;wptheme_is_block&quot;:&quot;1&quot;}" data-provider="wordpress.com" data-service="atomic"  data-site-tz="Europe/London"  >
 <script defer src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202645"></script>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-default-filter"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><script id="wp-statistics-tracker-js-extra">
-var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":1270,"search_query":"","signature":"6a6046a0b6cdd9143440fe68e4d09f2c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=a27b0523fd","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":1270,"search_query":"","signature":"6a6046a0b6cdd9143440fe68e4d09f2c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
+var WP_Statistics_Tracker_Object = {"requestUrl":"https://project-skyscraper.com/wp-json/wp-statistics/v2","ajaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":1270,"search_query":"","signature":"6a6046a0b6cdd9143440fe68e4d09f2c","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"isWpConsentApiActive":false},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://project-skyscraper.com/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=be4b2bf59c","onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":1270,"search_query":"","signature":"6a6046a0b6cdd9143440fe68e4d09f2c","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
 //# sourceURL=wp-statistics-tracker-js-extra
 </script>
 <script type='text/javascript'  src='https://project-skyscraper.com/wp-content/plugins/wp-statistics/assets/js/tracker.js?m=1792800695'></script>
