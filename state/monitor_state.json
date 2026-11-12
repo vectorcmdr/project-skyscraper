@@ -28187,7 +28187,7 @@
     "/wp-json/wp/v2/widgets": {}
   },
   "external": {
-    "_wp_pages_last_check": "2026-11-12T00:48:56.411170+00:00",
+    "_wp_pages_last_check": "2026-11-12T01:13:53.101533+00:00",
     "freeimage.host": {
       "dns": {
         "A": [
@@ -28225,10 +28225,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-11-12T00:57:41.356213+00:00",
+        "last_checked": "2026-11-12T01:13:56.906973+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-11-12T00:57:41.356231+00:00",
+      "last_checked": "2026-11-12T01:13:56.906990+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33371,7 +33371,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-11-12T00:57:41.288918+00:00"
+          "last_checked": "2026-11-12T01:13:56.732265+00:00"
         },
         "/wp-json/wp/v2/media": {
           "_pending_removed": [],
@@ -34067,14 +34067,14 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-11-12T00:59:13.532801+00:00",
+      "last_checked": "2026-11-12T01:14:07.217766+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
         "2f2012534c8a20744706b2ae0a511759b6c393e0f88b03363dcbe0a066d9977e": "2026-09-30T17:41:18.557971+00:00"
       },
       "pages": {
-        "_rr_offset": 4,
+        "_rr_offset": 0,
         "https://recalldreams.dev/": {
           "_content_hash": "6f8d4dd2559eaf1ec2712f15b680204f420567ddb92b5fef3ce895d54db7bdca",
           "_notified_at": "2026-08-19T22:31:40.510069+00:00",
@@ -34108,9 +34108,9 @@
           ],
           "_stripped_hash": "64d5e69f415b8e3b422020ca0799a9dbabb22c8a0c73f1e95c38bc4a27d65b00",
           "etag": null,
-          "hash": "3b96fef70fbd829e40f52438ccd365c7",
-          "last_checked": "2026-11-12T00:27:23.916755+00:00",
-          "last_modified": "Wed, 11 Nov 2026 20:57:25 GMT"
+          "hash": "364b617fdcf6d4f80de74fd58b83116e",
+          "last_checked": "2026-11-12T01:13:52.915971+00:00",
+          "last_modified": "Wed, 11 Nov 2026 13:24:39 GMT"
         },
         "https://recalldreams.dev/do-you-know-me-well/": {
           "_content_hash": "cdc8d2a46f80623d840c725b7468bfc6ce4f2bc11e63ca1a9a7007cf8a6e92bf",
@@ -34149,9 +34149,9 @@
           ],
           "_stripped_hash": "04a92c637d314fa08b5aafaee7db1e69713c3cc19314b146fa469d6c0e242cd4",
           "etag": null,
-          "hash": "a0277c0eb40dd53f278a4cd42299365b",
-          "last_checked": "2026-11-12T00:48:56.411155+00:00",
-          "last_modified": null
+          "hash": "239e397d3511924587bbdf57751eb806",
+          "last_checked": "2026-11-12T01:13:53.101518+00:00",
+          "last_modified": "Wed, 11 Nov 2026 22:28:04 GMT"
         },
         "https://recalldreams.dev/home/": {
           "_content_hash": "c6f6482bcdf4ecbf557d272f695a6fc9d3c883f7ab46f125bd7e2593c61cf142",
@@ -34326,9 +34326,9 @@
           ],
           "_stripped_hash": "a2d62875fb3fbbd28e64b17fe0a3399a02575928c58b6c327514b5f0f9c0a239",
           "etag": null,
-          "hash": "485b2bb066d5d565f1136d3c71d6bad7",
-          "last_checked": "2026-11-12T00:27:23.779669+00:00",
-          "last_modified": "Wed, 11 Nov 2026 20:57:25 GMT"
+          "hash": "45afa7df79045032211f51f66c8c1a8d",
+          "last_checked": "2026-11-12T01:13:52.724986+00:00",
+          "last_modified": null
         },
         "https://recalldreams.dev/home/newsletter/": {
           "_content_hash": "1336ca1a864b1fe3a16fb0dd2ddc18f750eb6b6d6a2e2a26f7fc7e53e0cbaa15",
@@ -34373,9 +34373,9 @@
           ],
           "_stripped_hash": "fd8f5d1f97e707383740a25fcb6742c9b3f80c87d69f65f95faa0c948ab14a4e",
           "etag": null,
-          "hash": "d5448ae52fb65b0cbb5fc7a901911046",
-          "last_checked": "2026-11-12T00:27:23.685433+00:00",
-          "last_modified": null
+          "hash": "b234d27864ea32aec91d72b52e3e55e4",
+          "last_checked": "2026-11-12T01:13:52.620516+00:00",
+          "last_modified": "Wed, 11 Nov 2026 22:46:31 GMT"
         },
         "https://recalldreams.dev/home/schrodingers-instagram/": {
           "_content_hash": "6ebba1e0c6d0db60434d8c9f0a042448a1d9e991dfdb9b9f3b4ef31ee10fd81b",
@@ -34457,13 +34457,13 @@
           "_stripped_hash": "5c89772a8013f04fa99449a68569e427b4df69c5b808b561da788a15334d1501",
           "etag": null,
           "hash": "fd81b83f4e964d7d2a47def4cd27ba30",
-          "last_checked": "2026-11-12T00:27:23.963748+00:00",
+          "last_checked": "2026-11-12T01:13:52.967690+00:00",
           "last_modified": null
         }
       },
       "probe": {
-        "last_probed": "2026-11-12T00:59:13.532501+00:00",
-        "position": 763,
+        "last_probed": "2026-11-12T01:14:07.217516+00:00",
+        "position": 793,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34853,7 +34853,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-11-12T00:58:06.466014+00:00",
+      "last_checked": "2026-11-12T01:14:02.172060+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38349,7 +38349,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "45ebeafa6cd6a66c149cdd9edfe4c917",
-      "last_checked": "2026-11-12T00:57:58.548075+00:00",
+      "last_checked": "2026-11-12T01:13:51.859564+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38379,7 +38379,7 @@
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
       "hash": "436562799b9d59c6cc0f71441706cc35",
-      "last_checked": "2026-11-12T00:57:58.517815+00:00",
+      "last_checked": "2026-11-12T01:13:52.373285+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -39314,8 +39314,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-11-12T00:58:06.053248+00:00",
-    "position": 7921,
+    "last_probed": "2026-11-12T01:14:02.171730+00:00",
+    "position": 7951,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39365,12 +39365,12 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 168,
+    "_page_check_offset": 183,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-11-12T00:57:36.971822+00:00",
-    "last_modified": "Thu, 12 Nov 2026 00:27:22 GMT",
+    "last_checked": "2026-11-12T01:13:51.356915+00:00",
+    "last_modified": "Wed, 11 Nov 2026 23:27:13 GMT",
     "urls": {
       "https://project-skyscraper.com/": {
         "lastmod": "2026-08-21T08:55:49Z",
@@ -42135,12 +42135,12 @@
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
     "_youtube_counts_last": 1794445061.5999873,
-    "_youtube_playlist_last": 1794445061.49252,
-    "_youtube_rss_last": 1794445061.360971,
+    "_youtube_playlist_last": 1794446037.232098,
+    "_youtube_rss_last": 1794446036.9100864,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-11-12T00:57:36.768496+00:00",
+    "last_run": "2026-11-12T01:13:50.977558+00:00",
     "total_changes_detected": 83266,
-    "total_checks": 472491
+    "total_checks": 472492
   },
   "version": 3,
   "youtube": {
@@ -42150,14 +42150,14 @@
         "last_updated": "2026-11-12T00:57:41.853842+00:00",
         "public_count": 113
       },
-      "last_checked": "2026-11-12T00:57:41.853861+00:00",
+      "last_checked": "2026-11-12T01:13:57.439505+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-11-12T00:57:41.599966+00:00",
+        "last_updated": "2026-11-12T01:13:57.439478+00:00",
         "total_count": 114
       },
       "rss": {
-        "last_updated": "2026-11-12T00:57:41.492499+00:00",
+        "last_updated": "2026-11-12T01:13:57.232085+00:00",
         "left_public": {
           "2lG2DTjP-_M": {
             "left_at": "2026-10-12T14:26:13.620511+00:00",
