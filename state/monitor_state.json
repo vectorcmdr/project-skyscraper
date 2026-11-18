@@ -28128,7 +28128,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-11-18T02:48:29.472021+00:00",
+      "last_checked": "2026-11-18T02:57:05.481845+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -28180,7 +28180,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-11-18T02:48:29.413683+00:00",
+      "last_checked": "2026-11-18T02:57:05.584996+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -28225,10 +28225,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-11-18T02:48:28.182097+00:00",
+        "last_checked": "2026-11-18T02:57:04.079753+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-11-18T02:48:28.182115+00:00",
+      "last_checked": "2026-11-18T02:57:04.079769+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33371,7 +33371,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-11-18T02:48:27.883483+00:00"
+          "last_checked": "2026-11-18T02:57:03.896758+00:00"
         },
         "/wp-json/wp/v2/media": {
           "_pending_removed": [],
@@ -34067,7 +34067,7 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-11-18T02:49:00.363567+00:00",
+      "last_checked": "2026-11-18T02:57:15.065880+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
@@ -34462,8 +34462,8 @@
         }
       },
       "probe": {
-        "last_probed": "2026-11-18T02:49:00.363343+00:00",
-        "position": 793,
+        "last_probed": "2026-11-18T02:57:15.065634+00:00",
+        "position": 523,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34853,7 +34853,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-11-18T02:48:50.913405+00:00",
+      "last_checked": "2026-11-18T02:57:10.180849+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38349,7 +38349,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "1c05405aa7e1be4ca826ef38a77997b6",
-      "last_checked": "2026-11-18T02:48:44.651124+00:00",
+      "last_checked": "2026-11-18T02:56:59.398730+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38379,7 +38379,7 @@
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
       "hash": "f1654aa599825886901d7507e7b4ef25",
-      "last_checked": "2026-11-18T02:48:44.659154+00:00",
+      "last_checked": "2026-11-18T02:56:59.810833+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -39314,8 +39314,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-11-18T02:48:50.534136+00:00",
-    "position": 7951,
+    "last_probed": "2026-11-18T02:57:10.180312+00:00",
+    "position": 7981,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39365,12 +39365,12 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 109,
+    "_page_check_offset": 124,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-11-18T02:48:21.926515+00:00",
-    "last_modified": "Wed, 18 Nov 2026 02:18:29 GMT",
+    "last_checked": "2026-11-18T02:56:59.026845+00:00",
+    "last_modified": "Wed, 18 Nov 2026 02:39:01 GMT",
     "urls": {
       "https://project-skyscraper.com/": {
         "lastmod": "2026-08-21T08:55:49Z",
@@ -42134,30 +42134,30 @@
     "_noise_version": 17,
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
-    "_youtube_counts_last": 1794968315.2992396,
-    "_youtube_playlist_last": 1794970108.3505185,
-    "_youtube_rss_last": 1794970108.1866984,
+    "_youtube_counts_last": 1794970624.3415968,
+    "_youtube_playlist_last": 1794970624.2289793,
+    "_youtube_rss_last": 1794970624.08414,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-11-18T02:48:21.576722+00:00",
+    "last_run": "2026-11-18T02:56:58.701783+00:00",
     "total_changes_detected": 83896,
-    "total_checks": 473222
+    "total_checks": 473223
   },
   "version": 3,
   "youtube": {
     "hellogames": {
       "counts": {
         "last_mismatch": 1,
-        "last_updated": "2026-11-18T02:18:35.567514+00:00",
+        "last_updated": "2026-11-18T02:57:04.583411+00:00",
         "public_count": 113
       },
-      "last_checked": "2026-11-18T02:48:28.501875+00:00",
+      "last_checked": "2026-11-18T02:57:04.583427+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-11-18T02:48:28.501856+00:00",
+        "last_updated": "2026-11-18T02:57:04.341577+00:00",
         "total_count": 114
       },
       "rss": {
-        "last_updated": "2026-11-18T02:48:28.350505+00:00",
+        "last_updated": "2026-11-18T02:57:04.228960+00:00",
         "left_public": {
           "2lG2DTjP-_M": {
             "left_at": "2026-10-12T14:26:13.620511+00:00",
