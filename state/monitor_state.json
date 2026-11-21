@@ -29,7 +29,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-11-21T04:36:22.225647+00:00",
+      "last_checked": "2026-11-21T04:45:38.882641+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -28180,7 +28180,7 @@
           "type": ""
         }
       ],
-      "last_checked": "2026-11-21T04:36:22.261668+00:00",
+      "last_checked": "2026-11-21T04:45:38.933829+00:00",
       "last_modified": null,
       "total_pages": 1
     },
@@ -28225,10 +28225,10 @@
           "C3q5NYF",
           "CFCOYml"
         ],
-        "last_checked": "2026-11-21T04:36:21.217942+00:00",
+        "last_checked": "2026-11-21T04:45:37.695259+00:00",
         "last_modified": null
       },
-      "last_checked": "2026-11-21T04:36:21.217959+00:00",
+      "last_checked": "2026-11-21T04:45:37.695277+00:00",
       "sitemap": {
         "urls": {}
       }
@@ -33371,7 +33371,7 @@
               "type": "database_entry"
             }
           ],
-          "last_checked": "2026-11-21T04:36:21.146072+00:00"
+          "last_checked": "2026-11-21T04:45:37.394976+00:00"
         },
         "/wp-json/wp/v2/media": {
           "_pending_removed": [],
@@ -34067,7 +34067,7 @@
           "v=spf1 include:_spf.wpcloud.com ~all"
         ]
       },
-      "last_checked": "2026-11-21T04:36:49.710489+00:00",
+      "last_checked": "2026-11-21T04:45:50.379271+00:00",
       "notified_sigs": {
         "0befc94e336bcb6d89f4cd1778169a4cd59c23d7abbe93828e76b04954235036": "2026-09-30T18:52:47.126920+00:00",
         "13f11e2189cea87c15ccf6a2a866d4ff": "2026-09-30T18:20:29.269744+00:00",
@@ -34462,8 +34462,8 @@
         }
       },
       "probe": {
-        "last_probed": "2026-11-21T04:36:49.710271+00:00",
-        "position": 643,
+        "last_probed": "2026-11-21T04:45:50.379055+00:00",
+        "position": 673,
         "recently_published": {},
         "unpublished": {
           "pages": [
@@ -34853,7 +34853,7 @@
           "v=spf1 include:servers.mcsv.net ?all"
         ]
       },
-      "last_checked": "2026-11-21T04:36:40.898646+00:00",
+      "last_checked": "2026-11-21T04:45:45.710574+00:00",
       "pages": {
         "https://wakingtitan.com/": {
           "etag": null,
@@ -38349,7 +38349,7 @@
     "https://project-skyscraper.com/counting/": {
       "etag": null,
       "hash": "aebafa02d4cba1b3b2142c6c0a01d96b",
-      "last_checked": "2026-11-21T04:36:35.422323+00:00",
+      "last_checked": "2026-11-21T04:45:34.110159+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/dd85ac69ae24/": {
@@ -38379,7 +38379,7 @@
     "https://project-skyscraper.com/neural-network-status/": {
       "etag": null,
       "hash": "fb0e2d711d5d006dc9af9fd9a3ca1cb7",
-      "last_checked": "2026-11-21T04:36:35.414604+00:00",
+      "last_checked": "2026-11-21T04:45:33.675030+00:00",
       "last_modified": null
     },
     "https://project-skyscraper.com/no-mans-sky_20260729122721/": {
@@ -39314,8 +39314,8 @@
     }
   },
   "probe": {
-    "last_probed": "2026-11-21T04:36:40.536741+00:00",
-    "position": 8101,
+    "last_probed": "2026-11-21T04:45:45.710139+00:00",
+    "position": 7831,
     "recently_published": {},
     "unpublished": {
       "pages": [
@@ -39365,12 +39365,12 @@
     }
   },
   "sitemap": {
-    "_page_check_offset": 222,
+    "_page_check_offset": 237,
     "_pending_removed": null,
     "etag": null,
     "hash": null,
-    "last_checked": "2026-11-21T04:36:17.213072+00:00",
-    "last_modified": null,
+    "last_checked": "2026-11-21T04:45:33.154379+00:00",
+    "last_modified": "Sat, 21 Nov 2026 03:54:43 GMT",
     "urls": {
       "https://project-skyscraper.com/": {
         "lastmod": "2026-08-21T08:55:49Z",
@@ -42135,12 +42135,12 @@
     "_recalldreams_last_mirror": 1791255335.4603958,
     "_warmup": 0,
     "_youtube_counts_last": 1795235141.129839,
-    "_youtube_playlist_last": 1795235781.2544231,
-    "_youtube_rss_last": 1795235781.2217956,
+    "_youtube_playlist_last": 1795236337.8278995,
+    "_youtube_rss_last": 1795236337.6990833,
     "first_run": "2026-06-06T08:13:07.380580+00:00",
-    "last_run": "2026-11-21T04:36:17.076428+00:00",
+    "last_run": "2026-11-21T04:45:32.928800+00:00",
     "total_changes_detected": 84218,
-    "total_checks": 473597
+    "total_checks": 473598
   },
   "version": 3,
   "youtube": {
@@ -42150,14 +42150,14 @@
         "last_updated": "2026-11-21T04:25:41.407091+00:00",
         "public_count": 113
       },
-      "last_checked": "2026-11-21T04:36:21.351618+00:00",
+      "last_checked": "2026-11-21T04:45:37.975723+00:00",
       "playlist": {
         "hidden_videos": {},
-        "last_updated": "2026-11-21T04:36:21.351597+00:00",
+        "last_updated": "2026-11-21T04:45:37.975703+00:00",
         "total_count": 114
       },
       "rss": {
-        "last_updated": "2026-11-21T04:36:21.254413+00:00",
+        "last_updated": "2026-11-21T04:45:37.827888+00:00",
         "left_public": {
           "2lG2DTjP-_M": {
             "left_at": "2026-10-12T14:26:13.620511+00:00",
